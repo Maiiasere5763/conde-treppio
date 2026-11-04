@@ -72,3 +72,4 @@ if (Test-Path ".git") {
 }
 Pop-Location
 Write-Host "=== Sincronizacao Concluida! ===" -ForegroundColor Cyan
+

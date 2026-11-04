@@ -20,3 +20,4 @@ Execute no PowerShell:
 ```powershell
 powershell -ExecutionPolicy Bypass -File "D:\Conde_Treppio\sync_conde.ps1"
 ```
+
