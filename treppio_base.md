@@ -124,13 +124,14 @@ Regula a substância material e divide-se nos subgrupos **Kor** (*kor*, *mon*, *
 * **10**: **krom** → **Kromta**
 * **Dezenas, Centenas e Milhares**: **Dokrom** (20), **Zelkrom** (30), **Katkom** (40), **Dygum** (100), **Myga** (1000).
 
-### 4.6. Maquinário Derivacional (Sufixos Produtivos)
-* **-ia (Lugar / Topônimo)**: *Treppênia*, *Varkaria*, *Halyvaria*, *Mirypalkia*, *Xerypalkia*, *Vepalkia*.
-* **-te (Agente / Profissão)**: *mir* + *-te* → **mirte** (ourives); *vok* + *-te* → **vocte** (executor); *oxe* + *-te* → **oxte** (guerreiro); *krad-* + *-te* → **Kratte** (Criador, `dt → tt`); *trak-* + *-te* → **Trátte** (Comandante, `kt → tt`); *mollet-* + *-te* → **mollette** (juiz).
-* **-or / -re (Qualidade Abstrata)**: *bel* + *-or* → **belor** (claridade abstrata); *ir* + *dur* → **irdor** (resplendor ancestral); *mobor* (graça abstrata).
-* **-tek (Instrumento)**: *let-* + *-tek* → **lettek** (megafone/instrumento de fala).
-* **-il (Diminutivo / Afetivo)**: *tep* + *-il* → **tepil** (cabana, tenda).
-* **-gar / -ar / -on (Aumentativo / Solene)**: *tep* + *-gar* → **teggar** (palácio, fortaleza, `pg → gg`).
+### 4.6. Maquinário Derivacional (Sufixos Produtivos) e Lei de Composição Diacrônica
+* **-ia (Lugar / Topônimo)**: *Treppênia*, *Varkaria*, *Halyvaria*, *Mirypalkia*, *Xerypalkia*, *Vepalkia*, *feria*, *tepia*, *elfia*, *kosia*, *kitia*, *molletia*.
+* **-te (Agente / Profissão)**: *mir* + *-te* → **mirte** (ourives); *vok* + *-te* → **vocte** (executor); *oxe* + *-te* → **oxte** (guerreiro); *krad-* + *-te* → **Kratte** (Criador, `dt → tt`); *trak-* + *-te* → **Trátte** (Comandante, `kt → tt`); *tok-* + *-te* → **Totte** (Regente/Vala, `kt → tt`); *tek-* + *-te* → **Tette** (Artífice/Aulë, `kt → tt`); *mollet-* + *-te* → **mollette** (juiz); *litr-* + *-te* → **litrte** (cantor).
+* **-or / -re (Qualidade Abstrata / Obra)**: *bel* + *-or* → **belor** (claridade abstrata); *ir* + *dur* → **irdor** (resplendor ancestral); **mobor** (graça abstrata); **litror** (música); **daior** (pensamento); **isor** (sabedoria); **vulor** (propósito); **tekor** (obra).
+* **-tek (Instrumento)**: *let-* + *-tek* → **lettek** (megafone/trombeta); *litr-* + *-tek* → **litrtek** (instrumento musical); *tek-* + *-tek* → **tettek** (malho de forja, `kt → tt`); *sfar-* + *-tek* → **sfartek** (escudo).
+* **-il (Diminutivo / Afetivo)**: *tep* + *-il* → **tepil** (cabana, tenda); *vevar* + *-il* → **vevaril** (riacho).
+* **-gar / -ar / -on (Aumentativo / Solene)**: *tep* + *-gar* → **teggar** (palácio, fortaleza, `pg → gg`); *litr-* + *-gar* → **litrgar** (Grande Música); *oxe* + *-gar* → **oxegar** (globo terrestre/continente); *kare* + *-gar* → **karegar** (trono supremo).
+* **Lei de Composição Nominal Diacrônica (Preferência Clássico-Genitiva por Eufonia)**: Na formação de nomes compostos eruditos e teônimos cosmogônicos, prefere-se a **camada clássico-genitiva** com a vogal **-y-** do primeiro elemento antes de consoante para evitar encontros oclusivos ásperos (**Oratypatte**, **Halylitror**, **Halyteggar**, **Halyvur**, **Ferytrátte**, em simetria com *Koryvela*, *Mirypalkia*, *Xerypalkia* e *Halyvaria*), empregando-se a aglutinação direta antes de vogal (**Oratoxe**, `< orat + oxe`) ou em contatos líquidos/oclusivos eufônicos (**Halvur**, **Halteggar**, **Fertrátte**, **Vétrátte**, **Tektrátte**).
 
 ---
 
@@ -238,6 +239,8 @@ Resultantes de síncope vocálica e monotongação histórica (remoção da voga
   `Mete Pattej, et Feli, et Hali. Ko esba in fili, et santonk, et in atonkrej. Zo es.`
 * **Skorum (O Símbolo dos Apóstolos / O Credo)**:
   `Skorum in Gyosi Pattej, Tráttej in oratom, Kratte xery et oxedy. Et in Jesus Kristus, Feli idda vy, Tráttej ny, ke madet esba ex Hali Hali, kazza ex akuraj Mariaj, fassa ponu Pontius Pilatus, teket in kori, akazet et koset esba, ad Veloxem ynna, okazza in zeltej beli, ad xeros ynna, in dattej Gyosy Pattej esu, ex Kani keladru ad molletur kazetos et akazetos. Skorum in Hali Hali, in Halkelej, in kindrej lexery, in akitur faltedye, in okazur vokory, in kazur atonkrej. Zo es.`
+* **Halylitror (Ainulindalë: A Música dos Espíritos Sagrados)**:
+  Promovido integralmente ao Corpus Canônico (Seção 8.5 de `gramatica_normativa_base.md` e `adendo_edicao_unificada_v8_1.md`) em 12 Movimentos, juntamente com os radicais primários restaurados **orat** (o Todo) e **vur** (fogo/chama) e os 108 vocábulos endógenos (tais como **Oratypatte**, **Halylitror**, **Oratoxe**, **Halo / Elfhalo**, **Daifelo**, **Totter / Rukroro**, **Lanrukra**, **Kurlan**, **Ferytrátte**, **Vétrátte**, **Tektrátte / Tette**, **Halyteggar**, **Halyvur**, **Ittakazeti**, **Dotakazeti**, **litror**, **litrgar**, **leddalitror**, **alitror**, **daior**, **isor**, **mirakosor**, **avur**, **avurvé**, **fervé**, **filoxe**, **vevar**, **karegar**, **tepia**, **illanur**, **alitrur**, **odalitrur**, **daiur / oda'aiur**, **isur**, **inur**, **vurur / avurur** e **atekur**).
 
 ---
 

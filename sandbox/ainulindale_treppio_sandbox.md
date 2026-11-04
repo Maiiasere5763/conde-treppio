@@ -1,7 +1,7 @@
 # *Halylitror* (*Ainulindalë*): Tradução Integral em Tréppio Clássico (V8.1) e Códice Lexicográfico Endógeno para a GNLT
 
 **Autor:** O Conde (Assistente Filológico e Glotopoético do Tréppio)  
-**Estatuto Documental:** Operação em Ambiente de Sandbox (Subordinada à *Gramática Normativa da Língua Tréppia* e ao *Adendo da Edição Unificada V8.1*)
+**Estatuto Documental:** Promovido Oficialmente ao Cânone da *Gramática Normativa da Língua Tréppia (GNLT)* e ao *Adendo da Edição Unificada V8.1* (Seções 6.5, 7.1 a 7.6 e 8.5)
 
 ---
 
