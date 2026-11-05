@@ -35,21 +35,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
-      - name: Configurar Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Instalar Build-Tools e Platform SDK 34
-        run: |
-          sdkmanager "platforms;android-34" "build-tools;34.0.0"
-
-      - name: Instalar Gradle Wrapper
-        working-directory: sandbox/android_apk
-        run: |
-          gradle wrapper --gradle-version 8.2
+          cache: 'gradle'
 
       - name: Compilar APK Android (assembleRelease)
         working-directory: sandbox/android_apk
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
         run: |
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace
