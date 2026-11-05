@@ -654,6 +654,205 @@
       padding-bottom: 0.85rem;
       margin-bottom: 1rem;
     }
+  
+    /* Estilos GNLT (Gramática Normativa da Língua Tréppia) */
+    .gnlt-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .gnlt-top-card {
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+    .gnlt-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      color: var(--gold-bright);
+      margin-bottom: 0.35rem;
+    }
+    .gnlt-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+    .gnlt-controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+    }
+    .gnlt-edition-selector {
+      display: inline-flex;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .gnlt-edition-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .gnlt-edition-btn:hover {
+      color: var(--text-primary);
+      background: var(--bg-hover);
+    }
+    .gnlt-edition-btn.active {
+      background: var(--gold);
+      color: #0b0d13;
+      font-weight: 600;
+    }
+    .gnlt-search-box {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+      position: relative;
+    }
+    .gnlt-search-input {
+      width: 100%;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      border-radius: 8px;
+      padding: 0.55rem 1rem;
+      font-size: 0.9rem;
+    }
+    .gnlt-search-input:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .gnlt-chapter-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .gnlt-chapter-pill {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .gnlt-chapter-pill:hover {
+      border-color: var(--gold);
+      color: var(--text-primary);
+    }
+    .gnlt-chapter-pill.active {
+      background: var(--bg-accent);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+      font-weight: 600;
+    }
+    .gnlt-chapter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s;
+    }
+    .gnlt-chapter-card:hover {
+      border-color: var(--border-gold);
+    }
+    .gnlt-card-header {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .gnlt-card-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--gold-bright);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .gnlt-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      background: var(--bg-accent);
+      color: var(--gold);
+      border: 1px solid var(--border-gold);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+    .gnlt-card-body {
+      padding: 1.5rem 1.75rem;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .gnlt-h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 1.5rem 0 0.5rem 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding-bottom: 0.35rem;
+    }
+    .gnlt-h4 {
+      font-size: 1.02rem;
+      color: var(--emerald);
+      margin: 1.2rem 0 0.4rem 0;
+    }
+    .gnlt-p {
+      margin-bottom: 0.85rem;
+      color: var(--text-primary);
+    }
+    .gnlt-quote {
+      border-left: 3px solid var(--gold);
+      background: var(--bg-accent);
+      padding: 0.75rem 1.25rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+    .gnlt-list {
+      margin: 0.75rem 0 1rem 1.75rem;
+    }
+    .gnlt-list li {
+      margin-bottom: 0.4rem;
+    }
+    .gnlt-divider {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 1.5rem 0;
+    }
+    .treppio-code {
+      font-family: var(--font-mono);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: var(--gold-bright);
+      font-size: 0.88em;
+    }
+
   </style>
 </head>
 <body>
@@ -727,7 +926,10 @@
         <button class="tab-btn" data-tab="corpus" onclick="switchTab('corpus')">
           📖 IX. Corpus & Halylitror Interativo <span class="tab-count">12</span>
         </button>
-        <button class="tab-btn" data-tab="lab" onclick="switchTab('lab')">
+                <button class="tab-btn" data-tab="gnlt" onclick="switchTab('gnlt')">
+          📜 XI. GNLT (Gramática Normativa) <span class="tab-count" id="tab-cnt-gnlt">8 Capítulos</span>
+        </button>
+<button class="tab-btn" data-tab="lab" onclick="switchTab('lab')">
           ⚗️ X. Simulador Morfofonológico V8.1
         </button>
       </nav>
@@ -1212,6 +1414,9 @@
           break;
         case "corpus":
           renderCorpusTab(container);
+          break;
+                case "gnlt":
+          renderGnltTab(container);
           break;
         case "lab":
           renderLabTab(container);
@@ -1864,6 +2069,121 @@
             `).join("")}
           </tbody>
         </table>
+      `;
+    }
+
+
+    // 6.B. Renderização da Aba GNLT (Gramática Normativa da Língua Tréppia)
+    let gnltActiveChapter = 0; // 0 = todos
+    let gnltEdition = "v81";   // 'v81' ou 'base'
+    let gnltQuery = "";
+
+    function setGnltEdition(ed) {
+      gnltEdition = ed;
+      renderActiveTab();
+    }
+
+    function setGnltChapter(num) {
+      gnltActiveChapter = num;
+      renderActiveTab();
+    }
+
+    function handleGnltSearch(q) {
+      gnltQuery = (q || "").trim().toLowerCase();
+      renderActiveTab();
+    }
+
+    function toggleGnltCard(cardId) {
+      const body = document.getElementById(cardId);
+      if (body) {
+        body.style.display = (body.style.display === "none") ? "block" : "none";
+      }
+    }
+
+    function renderGnltTab(container) {
+      const gnlt = DB.gnlt;
+      if (!gnlt) {
+        container.innerHTML = `<div class="empty-state">Gramática Normativa (GNLT) não encontrada no banco de dados.</div>`;
+        return;
+      }
+
+      const chapters = gnlt.capitulos || [];
+      const intro = gnltEdition === "v81" ? (gnlt.intro_v81 || "") : (gnlt.intro_base || "");
+
+      // Filtrar capítulos
+      const filtered = chapters.filter(c => {
+        if (gnltActiveChapter > 0 && c.num !== gnltActiveChapter) return false;
+        if (!gnltQuery) return true;
+        const text = (c.title + " " + (gnltEdition === "v81" ? c.v81_md : c.base_md)).toLowerCase();
+        return text.includes(gnltQuery);
+      });
+
+      const pillsHtml = [
+        `<button class="gnlt-chapter-pill ${gnltActiveChapter === 0 ? "active" : ""}" onclick="setGnltChapter(0)">Todos os Capítulos (8)</button>`
+      ].concat(chapters.map(c => `
+        <button class="gnlt-chapter-pill ${gnltActiveChapter === c.num ? "active" : ""}" onclick="setGnltChapter(${c.num})">
+          Cap. ${c.num}: ${c.title.split(",")[0].split("&")[0].trim()}
+        </button>
+      `)).join("");
+
+      container.innerHTML = `
+        <div class="gnlt-container">
+          <div class="gnlt-top-card">
+            <h2 class="gnlt-title">📜 Gramática Normativa da Língua Tréppia (GNLT)</h2>
+            <p class="gnlt-subtitle">Cânone Filológico e Normativo Oficial do Trepiano Clássico | Chancelaria Imperial do Tréppio</p>
+            
+            <div class="gnlt-controls-bar">
+              <div class="gnlt-edition-selector">
+                <button class="gnlt-edition-btn ${gnltEdition === 'v81' ? 'active' : ''}" onclick="setGnltEdition('v81')">
+                  ✨ Edição Unificada V8.1 (Canônica)
+                </button>
+                <button class="gnlt-edition-btn ${gnltEdition === 'base' ? 'active' : ''}" onclick="setGnltEdition('base')">
+                  🏛️ Documento Base Original
+                </button>
+              </div>
+
+              <div class="gnlt-search-box">
+                <input
+                  type="text"
+                  class="gnlt-search-input"
+                  id="gnlt-search-input"
+                  placeholder="Pesquisar regra, lei de sandi, caso, paradigma..."
+                  value="${gnltQuery}"
+                  oninput="handleGnltSearch(this.value)"
+                />
+              </div>
+            </div>
+
+            <div class="gnlt-chapter-nav">
+              ${pillsHtml}
+            </div>
+          </div>
+
+          ${gnltQuery ? `<div style="font-size:0.9rem;color:var(--gold);margin-top:-0.5rem;">Filtrando GNLT por: "<strong>${gnltQuery}</strong>" (${filtered.length} capítulos encontrados)</div>` : ''}
+
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            ${filtered.map(c => {
+              const htmlContent = gnltEdition === "v81" ? c.v81_html : c.base_html;
+              const cardId = `gnlt-body-${c.num}`;
+              return `
+                <div class="gnlt-chapter-card">
+                  <div class="gnlt-card-header" onclick="toggleGnltCard('${cardId}')">
+                    <h3>
+                      <span>Capítulo ${c.num}.</span> ${c.title}
+                    </h3>
+                    <div style="display:flex;align-items:center;gap:0.75rem;">
+                      <span class="gnlt-badge">${gnltEdition === 'v81' ? 'V8.1 Unificada' : 'Base Canônica'}</span>
+                      <span style="color:var(--text-muted);font-size:0.85rem;">Alternar ▾</span>
+                    </div>
+                  </div>
+                  <div class="gnlt-card-body" id="${cardId}">
+                    ${htmlContent}
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </div>
       `;
     }
 

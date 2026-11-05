@@ -1,3 +1,134 @@
+
+def extract_gnlt_payload(root_dir: str) -> dict:
+    """Extrai e compila a Gramática Normativa da Língua Tréppia (Base e V8.1)."""
+    import html, re
+    base_path = os.path.join(root_dir, "gramatica_normativa_base.md")
+    v81_path = os.path.join(root_dir, "adendo_edicao_unificada_v8_1.md")
+    
+    with open(base_path, "r", encoding="utf-8") as f:
+        t_base = f.read()
+    with open(v81_path, "r", encoding="utf-8") as f:
+        t_v81 = f.read()
+
+    def format_inline(txt: str) -> str:
+        txt = html.escape(txt)
+        txt = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", txt)
+        txt = re.sub(r"\*(.+?)\*", r"<em>\1</em>", txt)
+        txt = re.sub(r"`(.+?)`", r'<code class="treppio-code">\1</code>', txt)
+        return txt
+
+    def render_table(rows):
+        if not rows:
+            return ""
+        html_parts = ['<div class="data-table-wrapper"><table class="data-table">']
+        header_done = False
+        for r in rows:
+            cells = [c.strip() for c in r.strip("|").split("|")]
+            if len(cells) > 0 and all(set(c).issubset({"-", ":", " "}) for c in cells):
+                continue
+            if not header_done:
+                html_parts.append("<thead><tr>" + "".join(f"<th>{format_inline(c)}</th>" for c in cells) + "</tr></thead><tbody>")
+                header_done = True
+            else:
+                html_parts.append("<tr>" + "".join(f"<td>{format_inline(c)}</td>" for c in cells) + "</tr>")
+        if header_done:
+            html_parts.append("</tbody>")
+        html_parts.append("</table></div>")
+        return "\n".join(html_parts)
+
+    def md_to_html(md_text: str) -> str:
+        lines = md_text.strip().split("\n")
+        out = []
+        in_table = False
+        table_rows = []
+        in_list = False
+        for line in lines:
+            line_str = line.strip()
+            if line_str.startswith("|") and line_str.endswith("|"):
+                if in_list:
+                    out.append("</ul>")
+                    in_list = False
+                if not in_table:
+                    in_table = True
+                    table_rows = []
+                table_rows.append(line_str)
+                continue
+            elif in_table:
+                out.append(render_table(table_rows))
+                in_table = False
+                table_rows = []
+
+            if line_str.startswith("- ") or line_str.startswith("* "):
+                if not in_list:
+                    in_list = True
+                    out.append('<ul class="gnlt-list">')
+                out.append(f"<li>{format_inline(line_str[2:].strip())}</li>")
+                continue
+            elif in_list:
+                out.append("</ul>")
+                in_list = False
+
+            if not line_str:
+                continue
+
+            if line_str.startswith("### "):
+                out.append(f'<h3 class="gnlt-h3">{format_inline(line_str[4:])}</h3>')
+            elif line_str.startswith("#### "):
+                out.append(f'<h4 class="gnlt-h4">{format_inline(line_str[5:])}</h4>')
+            elif line_str.startswith("> "):
+                out.append(f'<blockquote class="gnlt-quote">{format_inline(line_str[2:])}</blockquote>')
+            elif line_str.startswith("---"):
+                out.append('<hr class="gnlt-divider" />')
+            else:
+                out.append(f'<p class="gnlt-p">{format_inline(line_str)}</p>')
+
+        if in_table:
+            out.append(render_table(table_rows))
+        if in_list:
+            out.append("</ul>")
+        return "\n".join(out)
+
+    def parse_file(content):
+        raw_blocks = re.split(r"\n(?=## \d+\. )", content)
+        intro = raw_blocks[0].strip()
+        chapters = []
+        for b in raw_blocks[1:]:
+            lines = b.strip().split("\n")
+            header = lines[0].replace("## ", "").strip()
+            num_match = re.match(r"^(\d+)\.\s*(.*)", header)
+            num = int(num_match.group(1)) if num_match else len(chapters) + 1
+            title = num_match.group(2) if num_match else header
+            full_md = "\n".join(lines[1:]).strip()
+            chapters.append({
+                "num": num,
+                "title": title,
+                "md": full_md,
+                "html": md_to_html(full_md)
+            })
+        return intro, chapters
+
+    intro_base, chs_base = parse_file(t_base)
+    intro_v81, chs_v81 = parse_file(t_v81)
+
+    unified_chapters = []
+    for c1, c2 in zip(chs_base, chs_v81):
+        unified_chapters.append({
+            "num": c1["num"],
+            "title": c2["title"] if c2["title"] else c1["title"],
+            "base_md": c1["md"],
+            "v81_md": c2["md"],
+            "base_html": c1["html"],
+            "v81_html": c2["html"]
+        })
+
+    return {
+        "title": "Gramática Normativa da Língua Tréppia (GNLT)",
+        "subtitulo": "Cânone Gramatical da Era Clássica V8.1 | Chancelaria Imperial",
+        "intro_base": intro_base,
+        "intro_v81": intro_v81,
+        "capitulos": unified_chapters
+    }
+
 # -*- coding: utf-8 -*-
 r"""
 gerador_dicionario_integral_sandbox.py
@@ -931,6 +1062,7 @@ DIACHRONIC_AND_VARIANT_ENTRIES = [
 # ==============================================================================
 
 def generate_all_files():
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out_dir = r"D:\Conde_Treppio\sandbox"
     ex_dir = os.path.join(out_dir, "dicionario_exaustivo")
     os.makedirs(ex_dir, exist_ok=True)
@@ -1241,6 +1373,7 @@ def generate_all_files():
     ]
 
     full_json_db["metadata"]["total_expanded_word_forms"] = total_word_forms
+    full_json_db["gnlt"] = extract_gnlt_payload(root_dir)
 
     # Salvar o Dicionário Geral em Sandbox
     sandbox_md_path = os.path.join(out_dir, "dicionario_geral_treppio_sandbox.md")
@@ -1255,6 +1388,9 @@ def generate_all_files():
     # Salvar o JSON estruturado com todas as 37.769 formas expandidas
     json_path = os.path.join(ex_dir, "dicionario_formas_expandidas.json")
     with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(full_json_db, f, ensure_ascii=False, indent=2)
+    root_json_path = os.path.join(root_dir, "dicionario_formas_expandidas.json")
+    with open(root_json_path, "w", encoding="utf-8") as f:
         json.dump(full_json_db, f, ensure_ascii=False, indent=2)
 
     # Salvar o bundle JS direto para alimentar a UI do Dicionário (funciona tanto via servidor quanto via file://)
