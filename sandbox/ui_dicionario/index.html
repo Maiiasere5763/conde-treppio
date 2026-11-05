@@ -667,13 +667,17 @@
       </div>
 
       <div class="header-actions">
+        <span class="stat-badge" id="conn-badge" title="Fonte ativa do banco de dados">📦 <strong id="conn-status">Base Local /conde</strong></span>
         <span class="stat-badge">Substantivos: <strong id="stat-nouns">310</strong></span>
         <span class="stat-badge">Verbos (4 Eixos): <strong id="stat-verbs">272</strong></span>
         <span class="stat-badge">Adjetivos: <strong id="stat-adjs">68</strong></span>
         <span class="stat-badge">Advérbios: <strong id="stat-advs">74</strong></span>
         <span class="stat-badge">Formas Totais: <strong id="stat-forms">37.769</strong></span>
-        <button class="btn btn-gold" id="btn-sync" onclick="syncWithCondeBackend()" title="Recompilar e sincronizar ao vivo com os arquivos de D:\Conde_Treppio">
-          ⟳ Atualizar da Base /conde
+        <button class="btn btn-gold" id="btn-sync" onclick="syncWithCondeBackend()" title="Sincronizar da Nuvem (Git/Google Drive) ou Recompilar da Base Local /conde">
+          ⟳ Sincronizar Base /conde
+        </button>
+        <button class="btn" onclick="openCloudConfigModal()" title="Configurar URL Online do GitHub ou Google Drive">
+          ☁️ Nuvem (Git/Drive)
         </button>
         <button class="btn" onclick="toggleTheme()" id="btn-theme">☀ Modo Pergaminho</button>
       </div>
@@ -917,16 +921,60 @@
       }
     }
 
-    // 3. Inicialização e Atualização de Contadores
+    // Conversor automático de links do Google Drive ou GitHub para link direto de JSON
+    function normalizeCloudUrl(rawUrl) {
+      if (!rawUrl) return "";
+      const u = rawUrl.trim();
+      // Converter link de compartilhamento do Google Drive: https://drive.google.com/file/d/FILE_ID/view...
+      const gdriveMatch = u.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || u.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (gdriveMatch && u.includes("drive.google.com")) {
+        return `https://drive.google.com/uc?export=download&id=${gdriveMatch[1]}`;
+      }
+      // Converter link de blob do GitHub para raw.githubusercontent.com
+      if (u.includes("github.com") && u.includes("/blob/")) {
+        return u.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/");
+      }
+      return u;
+    }
+
+    // 3. Inicialização e Atualização de Contadores (Híbrido: Servidor .exe / GitHub Pages / Nuvem Git-Drive / Offline)
     async function initApp() {
-      // Se estiver rodando no servidor local Python, tenta buscar a versão mais recente de /api/db
+      let sourceLabel = "Embutido Offline";
+      const savedCloudUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
+
+      // 1º: Tentar API local do Launcher .exe ou servidor Python (/api/db)
       try {
         const res = await fetch("/api/db", { cache: "no-store" });
         if (res.ok) {
           DB = await res.json();
+          sourceLabel = "Launcher Local /conde";
         }
-      } catch (_) {
-        // Fallback automático para window.CONDE_DB (modo file:// offline)
+      } catch (_) {}
+
+      // 2º: Se estiver hospedado no GitHub Pages (http/https sem /api/db), buscar ./dicionario_formas_expandidas.json
+      if (sourceLabel === "Embutido Offline" && location.protocol.startsWith("http")) {
+        try {
+          const res = await fetch("./dicionario_formas_expandidas.json", { cache: "no-store" });
+          if (res.ok) {
+            DB = await res.json();
+            sourceLabel = "Site Online (GitHub Pages)";
+          }
+        } catch (_) {}
+      }
+
+      // 3º: Se houver URL de Nuvem (GitHub Raw / Google Drive) configurada, buscar versão mais recente
+      if (savedCloudUrl) {
+        try {
+          const directUrl = normalizeCloudUrl(savedCloudUrl);
+          const res = await fetch(directUrl, { cache: "no-store" });
+          if (res.ok) {
+            const cloudDb = await res.json();
+            if (cloudDb && cloudDb.substantivos) {
+              DB = cloudDb;
+              sourceLabel = "Nuvem Online (Git/Drive)";
+            }
+          }
+        } catch (_) {}
       }
 
       if (!DB) {
@@ -934,6 +982,9 @@
           `<div class="entry-card"><h3>Erro ao carregar a base de dados.</h3><p>Execute <code>gerador_dicionario_integral_sandbox.py</code>.</p></div>`;
         return;
       }
+
+      const connEl = document.getElementById("conn-status");
+      if (connEl) connEl.textContent = sourceLabel;
 
       updateHeaderCounters();
       buildReverseIndex();
@@ -963,11 +1014,11 @@
       document.getElementById("tab-cnt-diac").textContent = dCount;
     }
 
-    // 4. Sincronização ao Vivo com o Backend Python (/conde)
+    // 4. Sincronização ao Vivo com o Backend (.exe / Python) ou Nuvem (GitHub / Google Drive)
     async function syncWithCondeBackend() {
       const btn = document.getElementById("btn-sync");
       const origText = btn.innerHTML;
-      btn.innerHTML = "⏳ Recompilando base /conde...";
+      btn.innerHTML = "⏳ Sincronizando base /conde...";
       try {
         const res = await fetch("/api/recompilar", { method: "POST" });
         if (res.ok) {
@@ -976,13 +1027,84 @@
           updateHeaderCounters();
           buildReverseIndex();
           renderActiveTab();
-          btn.innerHTML = "✓ Base /conde Sincronizada!";
+          const connEl = document.getElementById("conn-status");
+          if (connEl) connEl.textContent = data.source || "Sincronizado (/conde)";
+          btn.innerHTML = "✓ Base /conde Atualizada!";
           setTimeout(() => { btn.innerHTML = origText; }, 2200);
           return;
         }
       } catch (_) {}
-      // Caso aberto diretamente via file://, recarrega o script JS local
+
+      // Tentar sincronizar direto da URL da nuvem (GitHub Raw / Google Drive) se configurada
+      const savedCloudUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
+      if (savedCloudUrl) {
+        try {
+          const res = await fetch(normalizeCloudUrl(savedCloudUrl), { cache: "no-store" });
+          if (res.ok) {
+            const cloudDb = await res.json();
+            if (cloudDb && cloudDb.substantivos) {
+              DB = cloudDb;
+              updateHeaderCounters();
+              buildReverseIndex();
+              renderActiveTab();
+              document.getElementById("conn-status").textContent = "Nuvem Online (Git/Drive)";
+              btn.innerHTML = "✓ Sincronizado da Nuvem!";
+              setTimeout(() => { btn.innerHTML = origText; }, 2200);
+              return;
+            }
+          }
+        } catch (_) {}
+      }
+
       location.reload();
+    }
+
+    function openCloudConfigModal() {
+      const currentUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
+      document.getElementById("modal-title").textContent = "☁️ Configurar Banco de Dados Online (GitHub / Google Drive)";
+      document.getElementById("modal-body").innerHTML = `
+        <p style="margin-bottom:0.85rem;color:var(--text-secondary);">
+          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 37.769 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
+        </p>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">
+            URL Pública do <code>dicionario_formas_expandidas.json</code> (GitHub Raw ou Link do Google Drive):
+          </label>
+          <input
+            type="text"
+            id="cloud-url-input"
+            class="input-field"
+            value="${currentUrl.replace(/"/g, '&quot;')}"
+            placeholder="Ex.: https://raw.githubusercontent.com/SEU_USUARIO/conde-treppio/main/docs/dicionario_formas_expandidas.json"
+          />
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.35rem;">
+            Aceita tanto links diretos do GitHub (<code>raw.githubusercontent.com/...</code>) quanto links de compartilhamento do Google Drive (<code>https://drive.google.com/file/d/.../view</code>).
+          </p>
+        </div>
+        <div style="display:flex;gap:0.65rem;flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="saveCloudConfig()">💾 Salvar e Sincronizar Agora</button>
+          <button class="btn" onclick="localStorage.removeItem('CONDE_CLOUD_URL');closeModal();initApp();">Usar Base Embutida / Local</button>
+        </div>
+      `;
+      document.getElementById("detail-modal").classList.add("open");
+    }
+
+    async function saveCloudConfig() {
+      const val = (document.getElementById("cloud-url-input")?.value || "").trim();
+      if (val) {
+        localStorage.setItem("CONDE_CLOUD_URL", val);
+        try {
+          await fetch("/api/cloud-config", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ cloud_url: normalizeCloudUrl(val) })
+          });
+        } catch (_) {}
+      } else {
+        localStorage.removeItem("CONDE_CLOUD_URL");
+      }
+      closeModal();
+      await initApp();
     }
 
     // 5. Busca Omni e Reconhecimento Morfológico Reverso
@@ -1767,3 +1889,4 @@
   </script>
 </body>
 </html>
+

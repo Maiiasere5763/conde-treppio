@@ -1261,11 +1261,39 @@ def generate_all_files():
     ui_dir = os.path.join(out_dir, "ui_dicionario")
     os.makedirs(ui_dir, exist_ok=True)
     js_bundle_path = os.path.join(ui_dir, "dados_dicionario_conde.js")
+    json_compact_str = json.dumps(full_json_db, ensure_ascii=False)
     with open(js_bundle_path, "w", encoding="utf-8") as f:
         f.write("// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V8.1)\n")
         f.write("window.CONDE_DB = ")
-        json.dump(full_json_db, f, ensure_ascii=False)
+        f.write(json_compact_str)
         f.write(";\n")
+
+    # Gerar diretório docs/ na raiz de D:\Conde_Treppio para publicação direta no GitHub Pages
+    root_dir = r"D:\Conde_Treppio"
+    docs_dir = os.path.join(root_dir, "docs")
+    dist_dir = os.path.join(root_dir, "dist")
+    os.makedirs(docs_dir, exist_ok=True)
+    os.makedirs(dist_dir, exist_ok=True)
+
+    ui_index_path = os.path.join(ui_dir, "index.html")
+    if os.path.exists(ui_index_path):
+        with open(ui_index_path, "r", encoding="utf-8") as f:
+            html_template = f.read()
+
+        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + dicionario_formas_expandidas.json)
+        with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(html_template)
+        with open(os.path.join(docs_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
+            f.write("window.CONDE_DB = " + json_compact_str + ";\n")
+        with open(os.path.join(docs_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
+            f.write(json_compact_str)
+
+        # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) para envio a amigos / Google Drive
+        inline_script = f"<script>window.CONDE_DB = {json_compact_str};</script>"
+        portable_html = html_template.replace('<script src="dados_dicionario_conde.js"></script>', inline_script)
+        portable_html_path = os.path.join(dist_dir, "Codice_Treppio_Portatil.html")
+        with open(portable_html_path, "w", encoding="utf-8") as f:
+            f.write(portable_html)
 
     print(f"=== GERAÇÃO CONCLUÍDA COM SUCESSO ===")
     print(f" -> Dicionário Geral Markdown: {sandbox_md_path} ({os.path.getsize(sandbox_md_path):,} bytes)")

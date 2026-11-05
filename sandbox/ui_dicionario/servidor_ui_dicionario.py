@@ -74,3 +74,4 @@ def run_server(port: int = 8765, open_browser: bool = False):
 if __name__ == "__main__":
     should_open = "--open" in sys.argv
     run_server(port=8765, open_browser=should_open)
+

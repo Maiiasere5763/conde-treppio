@@ -7,6 +7,12 @@ $ErrorActionPreference = 'Continue'
 $SourceDir = "D:\Conde_Treppio"
 $GitExe = if (Test-Path "D:\Outros\Git\cmd\git.exe") { "D:\Outros\Git\cmd\git.exe" } else { "git" }
 
+$BuildScript = Join-Path $SourceDir "sandbox\launcher_exe\compilar_launcher_exe.ps1"
+if (Test-Path $BuildScript) {
+    Write-Host "=== [0/3] Recompilando Launcher .exe, Pacote Web Portatil e GitHub Pages (docs/) ===" -ForegroundColor Cyan
+    powershell -ExecutionPolicy Bypass -File $BuildScript
+}
+
 Write-Host "=== [1/3] Sincronizando com pastas em nuvem (OneDrive & Google Drive) ===" -ForegroundColor Cyan
 
 $CloudTargets = @(
