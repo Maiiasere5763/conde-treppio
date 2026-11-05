@@ -718,3 +718,4 @@ with open(UI_HTML, "w", encoding="utf-8") as f:
     f.write(html)
 
 print("sandbox/ui_dicionario/index.html atualizado com sucesso!")
+
