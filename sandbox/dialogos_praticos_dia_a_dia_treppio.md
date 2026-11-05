@@ -74,3 +74,4 @@
 | **Urgência** | *Adeste! Auxilium postulo!* | [a-des-te au-ksi-li-um pos-tu-lo] | Acudi! Peço ajuda! |
 | **Comida** | *Panna calda placet.* | [pan-na kal-da pla-tset] | O pão quente agrada-me. |
 | **Cansaço** | *Dormire cupio.* | [dor-mi-re ku-pi-o] | Desejo dormir. |
+

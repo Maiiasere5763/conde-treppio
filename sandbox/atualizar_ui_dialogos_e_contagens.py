@@ -163,3 +163,4 @@ with open(UI_INDEX_HTML, "w", encoding="utf-8") as f:
     f.write(src)
 
 print("sandbox/ui_dicionario/index.html atualizado com sucesso com os Diálogos e Novas Contagens!")
+

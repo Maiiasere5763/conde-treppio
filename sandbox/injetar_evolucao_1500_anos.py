@@ -170,3 +170,4 @@ with open(GERADOR_PY, "w", encoding="utf-8") as f:
     f.write(code)
 
 print("Injeção do vocabulário de 1.500 anos (Ecos) concluída com sucesso no gerador!")
+

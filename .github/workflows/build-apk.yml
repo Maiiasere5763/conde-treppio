@@ -67,7 +67,9 @@ jobs:
           body: |
             ### Códice Lexicográfico Imperial da Língua Tréppia (Era Clássica V8.1)
             - **Arquivo**: `Codice_Treppio_Conde.apk`
-            - **Total de Formas**: 37.769 formas flexionadas e derivadas da Matriz Quadripartite.
+            - **Total de Formas**: 46.531 formas flexionadas e derivadas da Matriz Quadripartite.
+            - **Inventário Filológico**: 380 substantivos, 336 verbos quadripartites, 82 adjetivos, 84 advérbios, GNLT (8 capítulos) e Diálogos de Ecos (1.500 anos).
+            - **Design**: Visual Obsidian/Parchment de luxo com tipografia clássica imperial (Cinzel, Playfair Display, Inter, JetBrains Mono).
             - **Compatibilidade**: Android 7.0 até Android 15+.
             - **Offline-First**: Funciona sem internet com sincronização opcional via GitHub / Google Drive.
           files: |

@@ -88,3 +88,4 @@ No Tréppio Moderno, a comunicação diária estrutura-se em padrões diretos e 
 ## 5. Integração com o Cânone da Chancelaria
 
 Esta expansão diacrônica não anula nem substitui a Gramática Normativa da Era Clássica V8.1. Pelo contrário: ela cumpre o propósito da Chancelaria Imperial de demonstrar a vitalidade e a profundidade de um idioma que viveu através dos séculos, adaptando-se às necessidades reais de seus falantes sem perder a elegância de suas raízes.
+
