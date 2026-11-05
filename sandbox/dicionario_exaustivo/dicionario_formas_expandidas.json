@@ -2,12 +2,12 @@
   "metadata": {
     "title": "Dicionário Geral e Códice Morfológico Exaustivo da Língua Tréppia (Era Clássica V8.1)",
     "environment": "Sandbox",
-    "nouns_count": 280,
-    "adjectives_count": 61,
-    "adverbs_count": 67,
-    "verb_roots_count": 66,
-    "verb_stems_quadripartite": 264,
-    "total_expanded_word_forms": 36195
+    "nouns_count": 310,
+    "adjectives_count": 68,
+    "adverbs_count": 74,
+    "verb_roots_count": 68,
+    "verb_stems_quadripartite": 272,
+    "total_expanded_word_forms": 37769
   },
   "substantivos": {
     "aelfor": {
@@ -208,6 +208,31 @@
         "Instrum(-tek)": "akitek",
         "Dimin(-il)": "akittil",
         "Aument(-gar)": "akittgar"
+      }
+    },
+    "akosor": {
+      "declinacao": 2,
+      "significado": "revelação, manifestação visível, desvelamento",
+      "etimologia": "akos- + -or",
+      "formas": {
+        "Nom.Sg": "akosor",
+        "Gen.Sg": "akosory",
+        "Dat.Sg": "akosori",
+        "Acu.Sg": "akosorom",
+        "Nom.Pl": "akosoro",
+        "Gen.Pl": "akosorye",
+        "Dat.Pl": "akosoroi",
+        "Acu.Pl": "akosoros",
+        "Adj(-a)": "akosora",
+        "Adv(-vë)": "akosoravë",
+        "Superl.Sg(-n)": "akosold",
+        "Superl.Pl(-ni)": "akosoldi",
+        "Lugar(-ia)": "akosoria",
+        "Agente(-te)": "akosorte",
+        "Abstrato(-or)": "akosor",
+        "Instrum(-tek)": "akosortek",
+        "Dimin(-il)": "akosoril",
+        "Aument(-gar)": "akosorgar"
       }
     },
     "akrador": {
@@ -885,6 +910,31 @@
         "Aument(-gar)": "Daifelgar"
       }
     },
+    "Daifelo": {
+      "declinacao": 2,
+      "significado": "Os Filhos do Pensamento (plural solene de Daifel)",
+      "etimologia": "dai + felo",
+      "formas": {
+        "Nom.Sg": "Daifel",
+        "Gen.Sg": "Daifely",
+        "Dat.Sg": "Daifeli",
+        "Acu.Sg": "Daifelom",
+        "Nom.Pl": "Daifelo",
+        "Gen.Pl": "Daifelye",
+        "Dat.Pl": "Daifeloi",
+        "Acu.Pl": "Daifelos",
+        "Adj(-a)": "Daifeloa",
+        "Adv(-vë)": "Daifeloavë",
+        "Superl.Sg(-n)": "Daifelon",
+        "Superl.Pl(-ni)": "Daifeloni",
+        "Lugar(-ia)": "Daifeloia",
+        "Agente(-te)": "Daifelote",
+        "Abstrato(-or)": "Daifeloor",
+        "Instrum(-tek)": "Daifelotek",
+        "Dimin(-il)": "Daifeloil",
+        "Aument(-gar)": "Daifelogar"
+      }
+    },
     "daior": {
       "declinacao": 2,
       "significado": "pensamento, mente criadora, meditação",
@@ -958,6 +1008,31 @@
         "Instrum(-tek)": "datek",
         "Dimin(-il)": "dattil",
         "Aument(-gar)": "dattgar"
+      }
+    },
+    "don": {
+      "declinacao": 2,
+      "significado": "dom, dádiva, concessão soberana (Dat. Pl. donoi)",
+      "etimologia": "raiz primária don",
+      "formas": {
+        "Nom.Sg": "don",
+        "Gen.Sg": "dony",
+        "Dat.Sg": "doni",
+        "Acu.Sg": "donom",
+        "Nom.Pl": "dono",
+        "Gen.Pl": "donye",
+        "Dat.Pl": "donoi",
+        "Acu.Pl": "donos",
+        "Adj(-a)": "dona",
+        "Adv(-vë)": "donavë",
+        "Superl.Sg(-n)": "dom",
+        "Superl.Pl(-ni)": "domi",
+        "Lugar(-ia)": "donia",
+        "Agente(-te)": "donte",
+        "Abstrato(-or)": "donor",
+        "Instrum(-tek)": "dontek",
+        "Dimin(-il)": "donil",
+        "Aument(-gar)": "dongar"
       }
     },
     "doote": {
@@ -1535,6 +1610,31 @@
         "Aument(-gar)": "ferigar"
       }
     },
+    "Fertrátte": {
+      "declinacao": 1,
+      "significado": "Manwë, Senhor dos Ventos (forma radical de Ferytrátte)",
+      "etimologia": "fer + Trátte",
+      "formas": {
+        "Nom.Sg": "Fertrátte",
+        "Gen.Sg": "Fertráttedy",
+        "Dat.Sg": "Fertráttej",
+        "Acu.Sg": "Fertráttem",
+        "Nom.Pl": "Fertrátter",
+        "Gen.Pl": "Fertráttedye",
+        "Dat.Pl": "Fertrátterj",
+        "Acu.Pl": "Fertráttes",
+        "Adj(-a)": "Fertrátta",
+        "Adv(-vë)": "Fertráttavë",
+        "Superl.Sg(-n)": "Fertráttn",
+        "Superl.Pl(-ni)": "Fertráttni",
+        "Lugar(-ia)": "Fertráttia",
+        "Agente(-te)": "Fertrátte",
+        "Abstrato(-or)": "Fertráttor",
+        "Instrum(-tek)": "Fertrátek",
+        "Dimin(-il)": "Fertráttil",
+        "Aument(-gar)": "Fertráttgar"
+      }
+    },
     "fervé": {
       "declinacao": 2,
       "significado": "nuvem, névoa, vapor atmosférico",
@@ -1558,6 +1658,31 @@
         "Instrum(-tek)": "ferptek",
         "Dimin(-il)": "fervil",
         "Aument(-gar)": "fervgar"
+      }
+    },
+    "Ferykrope": {
+      "declinacao": 1,
+      "significado": "Campina dos Ventos (feudo da Casa Ferylinde; vulg. Ferychope)",
+      "etimologia": "fery + krope",
+      "formas": {
+        "Nom.Sg": "Ferykrope",
+        "Gen.Sg": "Ferykropedy",
+        "Dat.Sg": "Ferykropej",
+        "Acu.Sg": "Ferykropem",
+        "Nom.Pl": "Ferykroper",
+        "Gen.Pl": "Ferykropedye",
+        "Dat.Pl": "Ferykroperj",
+        "Acu.Pl": "Ferykropes",
+        "Adj(-a)": "Ferykropa",
+        "Adv(-vë)": "Ferykropavë",
+        "Superl.Sg(-n)": "Ferykropn",
+        "Superl.Pl(-ni)": "Ferykropni",
+        "Lugar(-ia)": "Ferykropia",
+        "Agente(-te)": "Ferykropte",
+        "Abstrato(-or)": "Ferykropor",
+        "Instrum(-tek)": "Ferykroptek",
+        "Dimin(-il)": "Ferykropil",
+        "Aument(-gar)": "Ferykroggar"
       }
     },
     "Ferylinde": {
@@ -1760,6 +1885,56 @@
         "Aument(-gar)": "Flibustgar"
       }
     },
+    "font": {
+      "declinacao": 2,
+      "significado": "fonte, manancial, nascente (Acu. fontom)",
+      "etimologia": "raiz primária font",
+      "formas": {
+        "Nom.Sg": "font",
+        "Gen.Sg": "fonty",
+        "Dat.Sg": "fonti",
+        "Acu.Sg": "fontom",
+        "Nom.Pl": "fonto",
+        "Gen.Pl": "fontye",
+        "Dat.Pl": "fontoi",
+        "Acu.Pl": "fontos",
+        "Adj(-a)": "fonta",
+        "Adv(-vë)": "fontavë",
+        "Superl.Sg(-n)": "fontn",
+        "Superl.Pl(-ni)": "fontni",
+        "Lugar(-ia)": "fontia",
+        "Agente(-te)": "fontte",
+        "Abstrato(-or)": "fontor",
+        "Instrum(-tek)": "fonttek",
+        "Dimin(-il)": "fontil",
+        "Aument(-gar)": "fontgar"
+      }
+    },
+    "fratror": {
+      "declinacao": 2,
+      "significado": "irmão, confrade cósmico (Pl. fratroro, Dat. Pl. fratroi)",
+      "etimologia": "raiz fratr-",
+      "formas": {
+        "Nom.Sg": "fratror",
+        "Gen.Sg": "fratrory",
+        "Dat.Sg": "fratrori",
+        "Acu.Sg": "fratrorom",
+        "Nom.Pl": "fratroro",
+        "Gen.Pl": "fratrorye",
+        "Dat.Pl": "fratroroi",
+        "Acu.Pl": "fratroros",
+        "Adj(-a)": "fratrora",
+        "Adv(-vë)": "fratroravë",
+        "Superl.Sg(-n)": "fratrold",
+        "Superl.Pl(-ni)": "fratroldi",
+        "Lugar(-ia)": "fratroria",
+        "Agente(-te)": "fratrorte",
+        "Abstrato(-or)": "fratror",
+        "Instrum(-tek)": "fratrortek",
+        "Dimin(-il)": "fratroril",
+        "Aument(-gar)": "fratrorgar"
+      }
+    },
     "galdia": {
       "declinacao": 1,
       "significado": "guarnição, arsenal, tesouraria fortificada",
@@ -1883,6 +2058,31 @@
         "Instrum(-tek)": "gassfammirtek",
         "Dimin(-il)": "gassfammiril",
         "Aument(-gar)": "gassfammirgar"
+      }
+    },
+    "Giovanni Sprezzatura": {
+      "declinacao": 1,
+      "significado": "Conde de Varkaria, 'O Yamakoz'",
+      "etimologia": "antropônimo condal",
+      "formas": {
+        "Nom.Sg": "Giovanni Sprezzatura",
+        "Gen.Sg": "Giovanni Sprezzaturady",
+        "Dat.Sg": "Giovanni Sprezzaturaj",
+        "Acu.Sg": "Giovanni Sprezzaturam",
+        "Nom.Pl": "Giovanni Sprezzaturar",
+        "Gen.Pl": "Giovanni Sprezzaturadye",
+        "Dat.Pl": "Giovanni Sprezzaturarj",
+        "Acu.Pl": "Giovanni Sprezzaturas",
+        "Adj(-a)": "Giovanni Sprezzatura",
+        "Adv(-vë)": "Giovanni Sprezzaturavë",
+        "Superl.Sg(-n)": "Giovanni Sprezzatuld",
+        "Superl.Pl(-ni)": "Giovanni Sprezzatuldi",
+        "Lugar(-ia)": "Giovanni Sprezzaturia",
+        "Agente(-te)": "Giovanni Sprezzaturte",
+        "Abstrato(-or)": "Giovanni Sprezzaturor",
+        "Instrum(-tek)": "Giovanni Sprezzaturtek",
+        "Dimin(-il)": "Giovanni Sprezzaturil",
+        "Aument(-gar)": "Giovanni Sprezzaturgar"
       }
     },
     "girbel": {
@@ -2085,6 +2285,106 @@
         "Aument(-gar)": "Halkelgar"
       }
     },
+    "Hallitror": {
+      "declinacao": 2,
+      "significado": "Ainulindalë (forma radical assimilada ll de Halylitror)",
+      "etimologia": "hal + litror (nl/ll)",
+      "formas": {
+        "Nom.Sg": "Hallitror",
+        "Gen.Sg": "Hallitrory",
+        "Dat.Sg": "Hallitrori",
+        "Acu.Sg": "Hallitrorom",
+        "Nom.Pl": "Hallitroro",
+        "Gen.Pl": "Hallitrorye",
+        "Dat.Pl": "Hallitroroi",
+        "Acu.Pl": "Hallitroros",
+        "Adj(-a)": "Hallitrora",
+        "Adv(-vë)": "Hallitroravë",
+        "Superl.Sg(-n)": "Hallitrold",
+        "Superl.Pl(-ni)": "Hallitroldi",
+        "Lugar(-ia)": "Hallitroria",
+        "Agente(-te)": "Hallitrorte",
+        "Abstrato(-or)": "Hallitror",
+        "Instrum(-tek)": "Hallitrortek",
+        "Dimin(-il)": "Hallitroril",
+        "Aument(-gar)": "Hallitrorgar"
+      }
+    },
+    "Halo": {
+      "declinacao": 2,
+      "significado": "Os Espíritos Sagrados, Ainur (plural solene de hal)",
+      "etimologia": "hal + -o",
+      "formas": {
+        "Nom.Sg": "Hal",
+        "Gen.Sg": "Haly",
+        "Dat.Sg": "Hali",
+        "Acu.Sg": "Halom",
+        "Nom.Pl": "Halo",
+        "Gen.Pl": "Halye",
+        "Dat.Pl": "Haloi",
+        "Acu.Pl": "Halos",
+        "Adj(-a)": "Haloa",
+        "Adv(-vë)": "Haloavë",
+        "Superl.Sg(-n)": "Halon",
+        "Superl.Pl(-ni)": "Haloni",
+        "Lugar(-ia)": "Haloia",
+        "Agente(-te)": "Halote",
+        "Abstrato(-or)": "Haloor",
+        "Instrum(-tek)": "Halotek",
+        "Dimin(-il)": "Haloil",
+        "Aument(-gar)": "Halogar"
+      }
+    },
+    "Halteggar": {
+      "declinacao": 2,
+      "significado": "Salões Atemporais (forma radical de Halyteggar)",
+      "etimologia": "hal + teggar",
+      "formas": {
+        "Nom.Sg": "Halteggar",
+        "Gen.Sg": "Halteggary",
+        "Dat.Sg": "Halteggari",
+        "Acu.Sg": "Halteggarom",
+        "Nom.Pl": "Halteggaro",
+        "Gen.Pl": "Halteggarye",
+        "Dat.Pl": "Halteggaroi",
+        "Acu.Pl": "Halteggaros",
+        "Adj(-a)": "Halteggara",
+        "Adv(-vë)": "Halteggaravë",
+        "Superl.Sg(-n)": "Halteggald",
+        "Superl.Pl(-ni)": "Halteggaldi",
+        "Lugar(-ia)": "Halteggaria",
+        "Agente(-te)": "Halteggarte",
+        "Abstrato(-or)": "Halteggaror",
+        "Instrum(-tek)": "Halteggartek",
+        "Dimin(-il)": "Halteggaril",
+        "Aument(-gar)": "Halteggar"
+      }
+    },
+    "Halvur": {
+      "declinacao": 2,
+      "significado": "Chama Imperecível, Fogo Secreto (forma radical de Halyvur)",
+      "etimologia": "hal + vur",
+      "formas": {
+        "Nom.Sg": "Halvur",
+        "Gen.Sg": "Halvury",
+        "Dat.Sg": "Halvuri",
+        "Acu.Sg": "Halvurom",
+        "Nom.Pl": "Halvuro",
+        "Gen.Pl": "Halvurye",
+        "Dat.Pl": "Halvuroi",
+        "Acu.Pl": "Halvuros",
+        "Adj(-a)": "Halvura",
+        "Adv(-vë)": "Halvuravë",
+        "Superl.Sg(-n)": "Halvuld",
+        "Superl.Pl(-ni)": "Halvuldi",
+        "Lugar(-ia)": "Halvuria",
+        "Agente(-te)": "Halvurte",
+        "Abstrato(-or)": "Halvuror",
+        "Instrum(-tek)": "Halvurtek",
+        "Dimin(-il)": "Halvuril",
+        "Aument(-gar)": "Halvurgar"
+      }
+    },
     "Halylitror": {
       "declinacao": 2,
       "significado": "Ainulindalë, A Música dos Espíritos Sagrados (var. Hallitror)",
@@ -2208,6 +2508,31 @@
         "Instrum(-tek)": "Halyvurtek",
         "Dimin(-il)": "Halyvuril",
         "Aument(-gar)": "Halyvurgar"
+      }
+    },
+    "harpe": {
+      "declinacao": 1,
+      "significado": "harpa, instrumento de cordas dedilhadas (Pl. harper)",
+      "etimologia": "raiz harp-",
+      "formas": {
+        "Nom.Sg": "harpe",
+        "Gen.Sg": "harpedy",
+        "Dat.Sg": "harpej",
+        "Acu.Sg": "harpem",
+        "Nom.Pl": "harper",
+        "Gen.Pl": "harpedye",
+        "Dat.Pl": "harperj",
+        "Acu.Pl": "harpes",
+        "Adj(-a)": "harpa",
+        "Adv(-vë)": "harpavë",
+        "Superl.Sg(-n)": "harpn",
+        "Superl.Pl(-ni)": "harpni",
+        "Lugar(-ia)": "harpia",
+        "Agente(-te)": "harpte",
+        "Abstrato(-or)": "harpor",
+        "Instrum(-tek)": "harptek",
+        "Dimin(-il)": "harpil",
+        "Aument(-gar)": "harggar"
       }
     },
     "Hállemme": {
@@ -2433,6 +2758,31 @@
         "Instrum(-tek)": "Ittakazetitek",
         "Dimin(-il)": "Ittakazetiil",
         "Aument(-gar)": "Ittakazetigar"
+      }
+    },
+    "Jesus": {
+      "declinacao": 2,
+      "significado": "Jesus (antropônimo litúrgico no Metuses Maria e Skorum)",
+      "etimologia": "antropônimo sagrado",
+      "formas": {
+        "Nom.Sg": "Jesus",
+        "Gen.Sg": "Jesusy",
+        "Dat.Sg": "Jesusi",
+        "Acu.Sg": "Jesusom",
+        "Nom.Pl": "Jesuso",
+        "Gen.Pl": "Jesusye",
+        "Dat.Pl": "Jesusoi",
+        "Acu.Pl": "Jesusos",
+        "Adj(-a)": "Jesusa",
+        "Adv(-vë)": "Jesusavë",
+        "Superl.Sg(-n)": "Jesusn",
+        "Superl.Pl(-ni)": "Jesusni",
+        "Lugar(-ia)": "Jesusia",
+        "Agente(-te)": "Jesuste",
+        "Abstrato(-or)": "Jesusor",
+        "Instrum(-tek)": "Jesustek",
+        "Dimin(-il)": "Jesusil",
+        "Aument(-gar)": "Jesusgar"
       }
     },
     "kade": {
@@ -3108,6 +3458,31 @@
         "Instrum(-tek)": "Kratek",
         "Dimin(-il)": "Krattil",
         "Aument(-gar)": "Krattgar"
+      }
+    },
+    "Kristus": {
+      "declinacao": 2,
+      "significado": "Cristo, o Ungido (epíteto sagrado no Skorum)",
+      "etimologia": "antropônimo sagrado",
+      "formas": {
+        "Nom.Sg": "Kristus",
+        "Gen.Sg": "Kristusy",
+        "Dat.Sg": "Kristusi",
+        "Acu.Sg": "Kristusom",
+        "Nom.Pl": "Kristuso",
+        "Gen.Pl": "Kristusye",
+        "Dat.Pl": "Kristusoi",
+        "Acu.Pl": "Kristusos",
+        "Adj(-a)": "Kristusa",
+        "Adv(-vë)": "Kristusavë",
+        "Superl.Sg(-n)": "Kristusn",
+        "Superl.Pl(-ni)": "Kristusni",
+        "Lugar(-ia)": "Kristusia",
+        "Agente(-te)": "Kristuste",
+        "Abstrato(-or)": "Kristusor",
+        "Instrum(-tek)": "Kristustek",
+        "Dimin(-il)": "Kristusil",
+        "Aument(-gar)": "Kristusgar"
       }
     },
     "kron": {
@@ -3860,6 +4235,31 @@
         "Aument(-gar)": "madgar"
       }
     },
+    "Maria": {
+      "declinacao": 1,
+      "significado": "Santa Maria (antropônimo litúrgico no Metuses Maria e Skorum)",
+      "etimologia": "antropônimo sagrado",
+      "formas": {
+        "Nom.Sg": "Maria",
+        "Gen.Sg": "Mariady",
+        "Dat.Sg": "Mariaj",
+        "Acu.Sg": "Mariam",
+        "Nom.Pl": "Mariar",
+        "Gen.Pl": "Mariadye",
+        "Dat.Pl": "Mariarj",
+        "Acu.Pl": "Marias",
+        "Adj(-a)": "Maria",
+        "Adv(-vë)": "Mariavë",
+        "Superl.Sg(-n)": "Marin",
+        "Superl.Pl(-ni)": "Marini",
+        "Lugar(-ia)": "Maria",
+        "Agente(-te)": "Marite",
+        "Abstrato(-or)": "Marior",
+        "Instrum(-tek)": "Maritek",
+        "Dimin(-il)": "Mariil",
+        "Aument(-gar)": "Marigar"
+      }
+    },
     "massu": {
       "declinacao": 2,
       "significado": "útero, ventre materno",
@@ -4158,6 +4558,31 @@
         "Instrum(-tek)": "mirttek",
         "Dimin(-il)": "mirtil",
         "Aument(-gar)": "mirtgar"
+      }
+    },
+    "Mirypalk": {
+      "declinacao": 2,
+      "significado": "Passo das Joias (forma atemática de Mirypalkia)",
+      "etimologia": "miry + palk",
+      "formas": {
+        "Nom.Sg": "Mirypalk",
+        "Gen.Sg": "Mirypalky",
+        "Dat.Sg": "Mirypalki",
+        "Acu.Sg": "Mirypalkom",
+        "Nom.Pl": "Mirypalko",
+        "Gen.Pl": "Mirypalkye",
+        "Dat.Pl": "Mirypalkoi",
+        "Acu.Pl": "Mirypalkos",
+        "Adj(-a)": "Mirypalka",
+        "Adv(-vë)": "Mirypalkavë",
+        "Superl.Sg(-n)": "Mirypalkn",
+        "Superl.Pl(-ni)": "Mirypalkni",
+        "Lugar(-ia)": "Mirypalkia",
+        "Agente(-te)": "Mirypaltte",
+        "Abstrato(-or)": "Mirypalkor",
+        "Instrum(-tek)": "Mirypalttek",
+        "Dimin(-il)": "Mirypalkil",
+        "Aument(-gar)": "Mirypalkgar"
       }
     },
     "Mirypalkia": {
@@ -4485,6 +4910,31 @@
         "Aument(-gar)": "Nemkurgar"
       }
     },
+    "nemme": {
+      "declinacao": 1,
+      "significado": "memória, lembrança (variante geminada mr -> mm de nemre)",
+      "etimologia": "nemr- (mr -> mm)",
+      "formas": {
+        "Nom.Sg": "nemme",
+        "Gen.Sg": "nemmedy",
+        "Dat.Sg": "nemmej",
+        "Acu.Sg": "nemmem",
+        "Nom.Pl": "nemmer",
+        "Gen.Pl": "nemmedye",
+        "Dat.Pl": "nemmerj",
+        "Acu.Pl": "nemmes",
+        "Adj(-a)": "nemma",
+        "Adv(-vë)": "nemmavë",
+        "Superl.Sg(-n)": "nemmn",
+        "Superl.Pl(-ni)": "nemmni",
+        "Lugar(-ia)": "nemmia",
+        "Agente(-te)": "nemmte",
+        "Abstrato(-or)": "nemmor",
+        "Instrum(-tek)": "nemmtek",
+        "Dimin(-il)": "nemmil",
+        "Aument(-gar)": "nemmgar"
+      }
+    },
     "nemre": {
       "declinacao": 1,
       "significado": "memória, lembrança histórica (var. nemme)",
@@ -4683,6 +5133,31 @@
         "Instrum(-tek)": "Oratoxtek",
         "Dimin(-il)": "Oratoxil",
         "Aument(-gar)": "Oratoxgar"
+      }
+    },
+    "Oratpatte": {
+      "declinacao": 1,
+      "significado": "Ilúvatar, Pai do Todo (forma radical de Oratypatte)",
+      "etimologia": "orat + Patte",
+      "formas": {
+        "Nom.Sg": "Oratpatte",
+        "Gen.Sg": "Oratpattedy",
+        "Dat.Sg": "Oratpattej",
+        "Acu.Sg": "Oratpattem",
+        "Nom.Pl": "Oratpatter",
+        "Gen.Pl": "Oratpattedye",
+        "Dat.Pl": "Oratpatterj",
+        "Acu.Pl": "Oratpattes",
+        "Adj(-a)": "Oratpatta",
+        "Adv(-vë)": "Oratpattavë",
+        "Superl.Sg(-n)": "Oratpattn",
+        "Superl.Pl(-ni)": "Oratpattni",
+        "Lugar(-ia)": "Oratpattia",
+        "Agente(-te)": "Oratpatte",
+        "Abstrato(-or)": "Oratpattor",
+        "Instrum(-tek)": "Oratpatek",
+        "Dimin(-il)": "Oratpattil",
+        "Aument(-gar)": "Oratpattgar"
       }
     },
     "Oratypatte": {
@@ -4958,6 +5433,31 @@
         "Instrum(-tek)": "pottek",
         "Dimin(-il)": "pokil",
         "Aument(-gar)": "pokgar"
+      }
+    },
+    "Pontius Pilatus": {
+      "declinacao": 2,
+      "significado": "Pôncio Pilatos (antropônimo histórico no Skorum)",
+      "etimologia": "antropônimo histórico",
+      "formas": {
+        "Nom.Sg": "Pontius Pilatus",
+        "Gen.Sg": "Pontius Pilatusy",
+        "Dat.Sg": "Pontius Pilatusi",
+        "Acu.Sg": "Pontius Pilatusom",
+        "Nom.Pl": "Pontius Pilatuso",
+        "Gen.Pl": "Pontius Pilatusye",
+        "Dat.Pl": "Pontius Pilatusoi",
+        "Acu.Pl": "Pontius Pilatusos",
+        "Adj(-a)": "Pontius Pilatusa",
+        "Adv(-vë)": "Pontius Pilatusavë",
+        "Superl.Sg(-n)": "Pontius Pilatusn",
+        "Superl.Pl(-ni)": "Pontius Pilatusni",
+        "Lugar(-ia)": "Pontius Pilatusia",
+        "Agente(-te)": "Pontius Pilatuste",
+        "Abstrato(-or)": "Pontius Pilatusor",
+        "Instrum(-tek)": "Pontius Pilatustek",
+        "Dimin(-il)": "Pontius Pilatusil",
+        "Aument(-gar)": "Pontius Pilatusgar"
       }
     },
     "rase": {
@@ -5860,6 +6360,56 @@
         "Aument(-gar)": "tettekgar"
       }
     },
+    "timor": {
+      "declinacao": 2,
+      "significado": "temor, reverência, assombro sagrado (Acu. timorom)",
+      "etimologia": "tim- + -or",
+      "formas": {
+        "Nom.Sg": "timor",
+        "Gen.Sg": "timory",
+        "Dat.Sg": "timori",
+        "Acu.Sg": "timorom",
+        "Nom.Pl": "timoro",
+        "Gen.Pl": "timorye",
+        "Dat.Pl": "timoroi",
+        "Acu.Pl": "timoros",
+        "Adj(-a)": "timora",
+        "Adv(-vë)": "timoravë",
+        "Superl.Sg(-n)": "timold",
+        "Superl.Pl(-ni)": "timoldi",
+        "Lugar(-ia)": "timoria",
+        "Agente(-te)": "timorte",
+        "Abstrato(-or)": "timor",
+        "Instrum(-tek)": "timortek",
+        "Dimin(-il)": "timoril",
+        "Aument(-gar)": "timorgar"
+      }
+    },
+    "todo": {
+      "declinacao": 2,
+      "significado": "totalidade, todos os seres (Pl. todos)",
+      "etimologia": "raiz tod-",
+      "formas": {
+        "Nom.Sg": "todo",
+        "Gen.Sg": "todoy",
+        "Dat.Sg": "todoi",
+        "Acu.Sg": "todoom",
+        "Nom.Pl": "todoo",
+        "Gen.Pl": "todoye",
+        "Dat.Pl": "todooi",
+        "Acu.Pl": "todoos",
+        "Adj(-a)": "todoa",
+        "Adv(-vë)": "todoavë",
+        "Superl.Sg(-n)": "todon",
+        "Superl.Pl(-ni)": "todoni",
+        "Lugar(-ia)": "todoia",
+        "Agente(-te)": "todote",
+        "Abstrato(-or)": "todoor",
+        "Instrum(-tek)": "todotek",
+        "Dimin(-il)": "todoil",
+        "Aument(-gar)": "todogar"
+      }
+    },
     "tokor": {
       "declinacao": 2,
       "significado": "soberania, autoridade de Estado, regência",
@@ -5960,6 +6510,31 @@
         "Aument(-gar)": "Tottgar"
       }
     },
+    "Totter": {
+      "declinacao": 1,
+      "significado": "Os Poderes, Valar, Regentes do Mundo (plural de Totte)",
+      "etimologia": "tok- + -te + -r",
+      "formas": {
+        "Nom.Sg": "Totter",
+        "Gen.Sg": "Totteredy",
+        "Dat.Sg": "Totterej",
+        "Acu.Sg": "Totterem",
+        "Nom.Pl": "Totterer",
+        "Gen.Pl": "Totteredye",
+        "Dat.Pl": "Tottererj",
+        "Acu.Pl": "Totteres",
+        "Adj(-a)": "Tottera",
+        "Adv(-vë)": "Totteravë",
+        "Superl.Sg(-n)": "Totteld",
+        "Superl.Pl(-ni)": "Totteldi",
+        "Lugar(-ia)": "Totteria",
+        "Agente(-te)": "Totterte",
+        "Abstrato(-or)": "Totteror",
+        "Instrum(-tek)": "Tottertek",
+        "Dimin(-il)": "Totteril",
+        "Aument(-gar)": "Tottergar"
+      }
+    },
     "Treppenwitz": {
       "declinacao": 2,
       "significado": "Casa Condal soberana de Treppênia",
@@ -6008,6 +6583,56 @@
         "Instrum(-tek)": "Treppeníntek",
         "Dimin(-il)": "Treppenínil",
         "Aument(-gar)": "Treppeníngar"
+      }
+    },
+    "Treppenína": {
+      "declinacao": 1,
+      "significado": "vassala ou gentílica feminina de Treppenwitz",
+      "etimologia": "Treppen- + -ína",
+      "formas": {
+        "Nom.Sg": "Treppenína",
+        "Gen.Sg": "Treppenínady",
+        "Dat.Sg": "Treppenínaj",
+        "Acu.Sg": "Treppenínam",
+        "Nom.Pl": "Treppenínar",
+        "Gen.Pl": "Treppenínadye",
+        "Dat.Pl": "Treppenínarj",
+        "Acu.Pl": "Treppenínas",
+        "Adj(-a)": "Treppenína",
+        "Adv(-vë)": "Treppenínavë",
+        "Superl.Sg(-n)": "Treppením",
+        "Superl.Pl(-ni)": "Treppeními",
+        "Lugar(-ia)": "Treppenínia",
+        "Agente(-te)": "Treppenínte",
+        "Abstrato(-or)": "Treppenínor",
+        "Instrum(-tek)": "Treppeníntek",
+        "Dimin(-il)": "Treppenínil",
+        "Aument(-gar)": "Treppeníngar"
+      }
+    },
+    "Treppeníno": {
+      "declinacao": 2,
+      "significado": "vassalo ou gentílico masculino de Treppenwitz",
+      "etimologia": "Treppen- + -íno",
+      "formas": {
+        "Nom.Sg": "Treppeníno",
+        "Gen.Sg": "Treppenínoy",
+        "Dat.Sg": "Treppenínoi",
+        "Acu.Sg": "Treppenínoom",
+        "Nom.Pl": "Treppenínoo",
+        "Gen.Pl": "Treppenínoye",
+        "Dat.Pl": "Treppenínooi",
+        "Acu.Pl": "Treppenínoos",
+        "Adj(-a)": "Treppenínoa",
+        "Adv(-vë)": "Treppenínoavë",
+        "Superl.Sg(-n)": "Treppenínon",
+        "Superl.Pl(-ni)": "Treppenínoni",
+        "Lugar(-ia)": "Treppenínoia",
+        "Agente(-te)": "Treppenínote",
+        "Abstrato(-or)": "Treppenínoor",
+        "Instrum(-tek)": "Treppenínotek",
+        "Dimin(-il)": "Treppenínoil",
+        "Aument(-gar)": "Treppenínogar"
       }
     },
     "Treppênia": {
@@ -6510,6 +7135,31 @@
         "Aument(-gar)": "verrgar"
       }
     },
+    "Vetrátte": {
+      "declinacao": 1,
+      "significado": "Ulmo, Senhor das Águas (variante gráfica de Vétrátte)",
+      "etimologia": "ve + Trátte",
+      "formas": {
+        "Nom.Sg": "Vetrátte",
+        "Gen.Sg": "Vetráttedy",
+        "Dat.Sg": "Vetráttej",
+        "Acu.Sg": "Vetráttem",
+        "Nom.Pl": "Vetrátter",
+        "Gen.Pl": "Vetráttedye",
+        "Dat.Pl": "Vetrátterj",
+        "Acu.Pl": "Vetráttes",
+        "Adj(-a)": "Vetrátta",
+        "Adv(-vë)": "Vetráttavë",
+        "Superl.Sg(-n)": "Vetráttn",
+        "Superl.Pl(-ni)": "Vetráttni",
+        "Lugar(-ia)": "Vetráttia",
+        "Agente(-te)": "Vetrátte",
+        "Abstrato(-or)": "Vetráttor",
+        "Instrum(-tek)": "Vetrátek",
+        "Dimin(-il)": "Vetráttil",
+        "Aument(-gar)": "Vetráttgar"
+      }
+    },
     "vevar": {
       "declinacao": 2,
       "significado": "rio, correnteza fluvial, curso de água",
@@ -6558,6 +7208,31 @@
         "Instrum(-tek)": "vevariltek",
         "Dimin(-il)": "vevaril",
         "Aument(-gar)": "vevarilgar"
+      }
+    },
+    "viole": {
+      "declinacao": 1,
+      "significado": "viola, órgão de cordas e arco (Pl. violer)",
+      "etimologia": "raiz viol-",
+      "formas": {
+        "Nom.Sg": "viole",
+        "Gen.Sg": "violedy",
+        "Dat.Sg": "violej",
+        "Acu.Sg": "violem",
+        "Nom.Pl": "violer",
+        "Gen.Pl": "violedye",
+        "Dat.Pl": "violerj",
+        "Acu.Pl": "violes",
+        "Adj(-a)": "viola",
+        "Adv(-vë)": "violavë",
+        "Superl.Sg(-n)": "violl",
+        "Superl.Pl(-ni)": "violli",
+        "Lugar(-ia)": "violia",
+        "Agente(-te)": "violte",
+        "Abstrato(-or)": "violor",
+        "Instrum(-tek)": "violtek",
+        "Dimin(-il)": "violil",
+        "Aument(-gar)": "violgar"
       }
     },
     "vocte": {
@@ -6910,6 +7585,31 @@
         "Aument(-gar)": "Vétráttgar"
       }
     },
+    "Vêpalk": {
+      "declinacao": 2,
+      "significado": "Passo das Águas (forma atemática de Vepalkia)",
+      "etimologia": "Vé + palk",
+      "formas": {
+        "Nom.Sg": "Vêpalk",
+        "Gen.Sg": "Vêpalky",
+        "Dat.Sg": "Vêpalki",
+        "Acu.Sg": "Vêpalkom",
+        "Nom.Pl": "Vêpalko",
+        "Gen.Pl": "Vêpalkye",
+        "Dat.Pl": "Vêpalkoi",
+        "Acu.Pl": "Vêpalkos",
+        "Adj(-a)": "Vêpalka",
+        "Adv(-vë)": "Vêpalkavë",
+        "Superl.Sg(-n)": "Vêpalkn",
+        "Superl.Pl(-ni)": "Vêpalkni",
+        "Lugar(-ia)": "Vêpalkia",
+        "Agente(-te)": "Vêpaltte",
+        "Abstrato(-or)": "Vêpalkor",
+        "Instrum(-tek)": "Vêpalttek",
+        "Dimin(-il)": "Vêpalkil",
+        "Aument(-gar)": "Vêpalkgar"
+      }
+    },
     "xer": {
       "declinacao": 2,
       "significado": "céu, firmamento superior (var. 1ª Decl. xere)",
@@ -6933,6 +7633,56 @@
         "Instrum(-tek)": "xertek",
         "Dimin(-il)": "xeril",
         "Aument(-gar)": "xergar"
+      }
+    },
+    "xere": {
+      "declinacao": 1,
+      "significado": "céu, firmamento (variante temática de 1ª Declinação de xer)",
+      "etimologia": "raiz xer-",
+      "formas": {
+        "Nom.Sg": "xere",
+        "Gen.Sg": "xeredy",
+        "Dat.Sg": "xerej",
+        "Acu.Sg": "xerem",
+        "Nom.Pl": "xerer",
+        "Gen.Pl": "xeredye",
+        "Dat.Pl": "xererj",
+        "Acu.Pl": "xeres",
+        "Adj(-a)": "xera",
+        "Adv(-vë)": "xeravë",
+        "Superl.Sg(-n)": "xeld",
+        "Superl.Pl(-ni)": "xeldi",
+        "Lugar(-ia)": "xeria",
+        "Agente(-te)": "xerte",
+        "Abstrato(-or)": "xeror",
+        "Instrum(-tek)": "xertek",
+        "Dimin(-il)": "xeril",
+        "Aument(-gar)": "xergar"
+      }
+    },
+    "Xerypalk": {
+      "declinacao": 2,
+      "significado": "Passo do Céu (forma atemática de Xerypalkia)",
+      "etimologia": "xery + palk",
+      "formas": {
+        "Nom.Sg": "Xerypalk",
+        "Gen.Sg": "Xerypalky",
+        "Dat.Sg": "Xerypalki",
+        "Acu.Sg": "Xerypalkom",
+        "Nom.Pl": "Xerypalko",
+        "Gen.Pl": "Xerypalkye",
+        "Dat.Pl": "Xerypalkoi",
+        "Acu.Pl": "Xerypalkos",
+        "Adj(-a)": "Xerypalka",
+        "Adv(-vë)": "Xerypalkavë",
+        "Superl.Sg(-n)": "Xerypalkn",
+        "Superl.Pl(-ni)": "Xerypalkni",
+        "Lugar(-ia)": "Xerypalkia",
+        "Agente(-te)": "Xerypaltte",
+        "Abstrato(-or)": "Xerypalkor",
+        "Instrum(-tek)": "Xerypalttek",
+        "Dimin(-il)": "Xerypalkil",
+        "Aument(-gar)": "Xerypalkgar"
       }
     },
     "Xerypalkia": {
@@ -7012,6 +7762,22 @@
     }
   },
   "adjetivos": {
+    "aetika": {
+      "Positivo.Sg": "aetika",
+      "Gen.Sg": "aetikady",
+      "Dat.Sg": "aetikaj",
+      "Acu.Sg": "aetikam",
+      "Nom.Pl": "aetikar",
+      "Gen.Pl": "aetikadye",
+      "Dat.Pl": "aetikarj",
+      "Acu.Pl": "aetikas",
+      "Comparativo": "maer aetika",
+      "Superl.Sg(-n)": "aetikan",
+      "Superl.Pl(-ni)": "aetikani",
+      "Adv.Modal(-vë)": "aetikavë",
+      "Subst.Abstrato(-or)": "aetikor",
+      "Significado": "dissonante, estranho, alheio à harmonia"
+    },
     "akura": {
       "Positivo.Sg": "akura",
       "Gen.Sg": "akurady",
@@ -7075,6 +7841,22 @@
       "Adv.Modal(-vë)": "amygavë",
       "Subst.Abstrato(-or)": "amygor",
       "Significado": "inumerável, incontável (var. amygata)"
+    },
+    "amygata": {
+      "Positivo.Sg": "amygata",
+      "Gen.Sg": "amygatady",
+      "Dat.Sg": "amygataj",
+      "Acu.Sg": "amygatam",
+      "Nom.Pl": "amygatar",
+      "Gen.Pl": "amygatadye",
+      "Dat.Pl": "amygatarj",
+      "Acu.Pl": "amygatas",
+      "Comparativo": "maer amygata",
+      "Superl.Sg(-n)": "amygatan",
+      "Superl.Pl(-ni)": "amygatani",
+      "Adv.Modal(-vë)": "amygatavë",
+      "Subst.Abstrato(-or)": "amygator",
+      "Significado": "inumerável, incontável (forma ordinalizada de Myga)"
     },
     "aruma": {
       "Positivo.Sg": "aruma",
@@ -7155,6 +7937,22 @@
       "Adv.Modal(-vë)": "belavë",
       "Subst.Abstrato(-or)": "belor",
       "Significado": "diurno, claro, relativo ao dia"
+    },
+    "da": {
+      "Positivo.Sg": "da",
+      "Gen.Sg": "dady",
+      "Dat.Sg": "daj",
+      "Acu.Sg": "dam",
+      "Nom.Pl": "dar",
+      "Gen.Pl": "dadye",
+      "Dat.Pl": "darj",
+      "Acu.Pl": "das",
+      "Comparativo": "maer da",
+      "Superl.Sg(-n)": "dan",
+      "Superl.Pl(-ni)": "dani",
+      "Adv.Modal(-vë)": "davë",
+      "Subst.Abstrato(-or)": "dor",
+      "Significado": "ideal, relativo à ideia (forma sincopada de daia em idda/ledda)"
     },
     "daia": {
       "Positivo.Sg": "daia",
@@ -7348,6 +8146,22 @@
       "Subst.Abstrato(-or)": "isor",
       "Significado": "inteligente, sábio, perspicaz"
     },
+    "katro": {
+      "Positivo.Sg": "katro",
+      "Gen.Sg": "katroy",
+      "Dat.Sg": "katroi",
+      "Acu.Sg": "katroom",
+      "Nom.Pl": "katroo",
+      "Gen.Pl": "katroye",
+      "Dat.Pl": "katrooi",
+      "Acu.Pl": "katroos",
+      "Comparativo": "maer katro",
+      "Superl.Sg(-n)": "katron",
+      "Superl.Pl(-ni)": "katroni",
+      "Adv.Modal(-vë)": "katroavë",
+      "Subst.Abstrato(-or)": "katroor",
+      "Significado": "poucos, raros, escassos (plural quantitativo)"
+    },
     "kindra": {
       "Positivo.Sg": "kindra",
       "Gen.Sg": "kindrady",
@@ -7492,6 +8306,22 @@
       "Subst.Abstrato(-or)": "lanor",
       "Significado": "luminoso, cheio, pleno de luz (var. lany)"
     },
+    "lany": {
+      "Positivo.Sg": "lany",
+      "Gen.Sg": "lanyy",
+      "Dat.Sg": "lanyi",
+      "Acu.Sg": "lanyom",
+      "Nom.Pl": "lanyo",
+      "Gen.Pl": "lanyye",
+      "Dat.Pl": "lanyoi",
+      "Acu.Pl": "lanyos",
+      "Comparativo": "maer lany",
+      "Superl.Sg(-n)": "lan'an",
+      "Superl.Pl(-ni)": "lan'ani",
+      "Adv.Modal(-vë)": "lanyavë",
+      "Subst.Abstrato(-or)": "lanyor",
+      "Significado": "cheio de luz, pleno (variante litúrgica de lana)"
+    },
     "laura": {
       "Positivo.Sg": "laura",
       "Gen.Sg": "laurady",
@@ -7571,6 +8401,22 @@
       "Adv.Modal(-vë)": "lotavë",
       "Subst.Abstrato(-or)": "lotor",
       "Significado": "belo, formoso (metátese: tola)"
+    },
+    "luda": {
+      "Positivo.Sg": "luda",
+      "Gen.Sg": "ludady",
+      "Dat.Sg": "ludaj",
+      "Acu.Sg": "ludam",
+      "Nom.Pl": "ludar",
+      "Gen.Pl": "ludadye",
+      "Dat.Pl": "ludarj",
+      "Acu.Pl": "ludas",
+      "Comparativo": "maer luda",
+      "Superl.Sg(-n)": "ludan",
+      "Superl.Pl(-ni)": "ludani",
+      "Adv.Modal(-vë)": "ludavë",
+      "Subst.Abstrato(-or)": "ludor",
+      "Significado": "cheia, plena (adjetivo litúrgico arcaico no Metuses Maria)"
     },
     "meta": {
       "Positivo.Sg": "meta",
@@ -7796,6 +8642,22 @@
       "Subst.Abstrato(-or)": "rukror",
       "Significado": "forte, poderoso, potente"
     },
+    "rukraleta": {
+      "Positivo.Sg": "rukraleta",
+      "Gen.Sg": "rukraletady",
+      "Dat.Sg": "rukraletaj",
+      "Acu.Sg": "rukraletam",
+      "Nom.Pl": "rukraletar",
+      "Gen.Pl": "rukraletadye",
+      "Dat.Pl": "rukraletarj",
+      "Acu.Pl": "rukraletas",
+      "Comparativo": "maer rukraleta",
+      "Superl.Sg(-n)": "rukraletan",
+      "Superl.Pl(-ni)": "rukraletani",
+      "Adv.Modal(-vë)": "rukraletavë",
+      "Subst.Abstrato(-or)": "rukraletor",
+      "Significado": "dotado de voz potente, altissonante, trovejante"
+    },
     "sua": {
       "Positivo.Sg": "sua",
       "Gen.Sg": "suady",
@@ -7990,6 +8852,11 @@
     }
   },
   "adverbios": {
+    "aetikavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "aetika + -vë",
+      "significado": "de modo dissonante"
+    },
     "akuravë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "akura + -vë",
@@ -8009,6 +8876,11 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "amocte + -vë",
       "significado": "de modo esfomeado"
+    },
+    "amygatavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "amygata + -vë",
+      "significado": "de modo inumerável"
     },
     "amygavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -8043,6 +8915,11 @@
     "daiavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "daia + -vë",
+      "significado": "de modo ideal"
+    },
+    "davë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "da + -vë",
       "significado": "de modo ideal"
     },
     "edelavë": {
@@ -8100,6 +8977,11 @@
       "etimologia": "isa + -vë",
       "significado": "de modo inteligente"
     },
+    "katroavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "katro + -vë",
+      "significado": "de modo poucos"
+    },
     "kindravë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "kindra + -vë",
@@ -8145,6 +9027,11 @@
       "etimologia": "lana + -vë",
       "significado": "de modo luminoso"
     },
+    "lanyavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "lany + -vë",
+      "significado": "de modo cheio de luz"
+    },
     "lauravë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "laura + -vë",
@@ -8169,6 +9056,11 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "lota + -vë",
       "significado": "de modo belo"
+    },
+    "ludavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "luda + -vë",
+      "significado": "de modo cheia"
     },
     "metavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -39050,6 +39942,668 @@
         }
       }
     },
+    "oub": {
+      "1. Positivo": {
+        "stem": "oub",
+        "meaning": "entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror)",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "oubum",
+            "oubus",
+            "oubu",
+            "oubun",
+            "oubut"
+          ],
+          "Pres.Ind.Passiva": [
+            "oubusem",
+            "oubuses",
+            "oubuse",
+            "oubusen",
+            "oubuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "oubukem",
+            "oubukes",
+            "oubuke",
+            "oubuken",
+            "oubuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "oubukesem",
+            "oubukeses",
+            "oubukese",
+            "oubukesen",
+            "oubukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "oubram",
+            "oubras",
+            "oubra",
+            "oubran",
+            "oubrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "oubrasem",
+            "oubrases",
+            "oubrase",
+            "oubrasen",
+            "oubraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "oubrakem",
+            "oubrakes",
+            "oubrake",
+            "oubraken",
+            "oubraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "oubrakesem",
+            "oubrakeses",
+            "oubrakese",
+            "oubrakesen",
+            "oubrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "oubaim",
+            "oubais",
+            "oubai",
+            "oubain",
+            "oubait"
+          ],
+          "Dur.Ind.Passiva": [
+            "oubaisem",
+            "oubaises",
+            "oubaise",
+            "oubaisen",
+            "oubaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "oubaikem",
+            "oubaikes",
+            "oubaike",
+            "oubaiken",
+            "oubaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "oubaikesem",
+            "oubaikeses",
+            "oubaikese",
+            "oubaikesen",
+            "oubaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "oubrum",
+            "oubrus",
+            "oubru",
+            "oubrun",
+            "oubrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "oubrusem",
+            "oubruses",
+            "oubruse",
+            "oubrusen",
+            "oubruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "oubrukem",
+            "oubrukes",
+            "oubruke",
+            "oubruken",
+            "oubruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "oubrukesem",
+            "oubrukeses",
+            "oubrukese",
+            "oubrukesen",
+            "oubrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "oubbam",
+            "oubbas",
+            "oubba",
+            "oubban",
+            "oubbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "oubbasem",
+            "oubbases",
+            "oubbase",
+            "oubbasen",
+            "oubbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "oubbakem",
+            "oubbakes",
+            "oubbake",
+            "oubbaken",
+            "oubbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "oubbakesem",
+            "oubbakeses",
+            "oubbakese",
+            "oubbakesen",
+            "oubbakeset"
+          ],
+          "Infinitivo(-ur)": "oubur",
+          "Imperativo(Raiz)": "Oub!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "oubet",
+            "Gen.Sg": "oubety",
+            "Dat.Sg": "oubeti",
+            "Acu.Sg": "oubetom",
+            "Nom.Pl": "oubeti",
+            "Gen.Pl": "oubetye",
+            "Dat.Pl": "oubetoi",
+            "Acu.Pl": "oubetos"
+          },
+          "Interrogativo.2Pl(-ka)": "oubukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "oubte",
+            "Abstrato(-or)": "oubor",
+            "Instrum(-tek)": "oubtek",
+            "Lugar(-ia)": "oubia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "aoub",
+        "meaning": "calar prelúdio",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "aoubum",
+            "aoubus",
+            "aoubu",
+            "aoubun",
+            "aoubut"
+          ],
+          "Pres.Ind.Passiva": [
+            "aoubusem",
+            "aoubuses",
+            "aoubuse",
+            "aoubusen",
+            "aoubuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "aoubukem",
+            "aoubukes",
+            "aoubuke",
+            "aoubuken",
+            "aoubuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "aoubukesem",
+            "aoubukeses",
+            "aoubukese",
+            "aoubukesen",
+            "aoubukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "aoubram",
+            "aoubras",
+            "aoubra",
+            "aoubran",
+            "aoubrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "aoubrasem",
+            "aoubrases",
+            "aoubrase",
+            "aoubrasen",
+            "aoubraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "aoubrakem",
+            "aoubrakes",
+            "aoubrake",
+            "aoubraken",
+            "aoubraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "aoubrakesem",
+            "aoubrakeses",
+            "aoubrakese",
+            "aoubrakesen",
+            "aoubrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "aoubaim",
+            "aoubais",
+            "aoubai",
+            "aoubain",
+            "aoubait"
+          ],
+          "Dur.Ind.Passiva": [
+            "aoubaisem",
+            "aoubaises",
+            "aoubaise",
+            "aoubaisen",
+            "aoubaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "aoubaikem",
+            "aoubaikes",
+            "aoubaike",
+            "aoubaiken",
+            "aoubaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "aoubaikesem",
+            "aoubaikeses",
+            "aoubaikese",
+            "aoubaikesen",
+            "aoubaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "aoubrum",
+            "aoubrus",
+            "aoubru",
+            "aoubrun",
+            "aoubrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "aoubrusem",
+            "aoubruses",
+            "aoubruse",
+            "aoubrusen",
+            "aoubruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "aoubrukem",
+            "aoubrukes",
+            "aoubruke",
+            "aoubruken",
+            "aoubruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "aoubrukesem",
+            "aoubrukeses",
+            "aoubrukese",
+            "aoubrukesen",
+            "aoubrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "aoubbam",
+            "aoubbas",
+            "aoubba",
+            "aoubban",
+            "aoubbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "aoubbasem",
+            "aoubbases",
+            "aoubbase",
+            "aoubbasen",
+            "aoubbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "aoubbakem",
+            "aoubbakes",
+            "aoubbake",
+            "aoubbaken",
+            "aoubbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "aoubbakesem",
+            "aoubbakeses",
+            "aoubbakese",
+            "aoubbakesen",
+            "aoubbakeset"
+          ],
+          "Infinitivo(-ur)": "aoubur",
+          "Imperativo(Raiz)": "Aoub!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "aoubet",
+            "Gen.Sg": "aoubety",
+            "Dat.Sg": "aoubeti",
+            "Acu.Sg": "aoubetom",
+            "Nom.Pl": "aoubeti",
+            "Gen.Pl": "aoubetye",
+            "Dat.Pl": "aoubetoi",
+            "Acu.Pl": "aoubetos"
+          },
+          "Interrogativo.2Pl(-ka)": "aoubukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "aoubte",
+            "Abstrato(-or)": "aoubor",
+            "Instrum(-tek)": "aoubtek",
+            "Lugar(-ia)": "aoubia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "odoub",
+        "meaning": "voltar a entoar prelúdio (odoub-)",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odoubum",
+            "odoubus",
+            "odoubu",
+            "odoubun",
+            "odoubut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odoubusem",
+            "odoubuses",
+            "odoubuse",
+            "odoubusen",
+            "odoubuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odoubukem",
+            "odoubukes",
+            "odoubuke",
+            "odoubuken",
+            "odoubuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odoubukesem",
+            "odoubukeses",
+            "odoubukese",
+            "odoubukesen",
+            "odoubukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odoubram",
+            "odoubras",
+            "odoubra",
+            "odoubran",
+            "odoubrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odoubrasem",
+            "odoubrases",
+            "odoubrase",
+            "odoubrasen",
+            "odoubraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odoubrakem",
+            "odoubrakes",
+            "odoubrake",
+            "odoubraken",
+            "odoubraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odoubrakesem",
+            "odoubrakeses",
+            "odoubrakese",
+            "odoubrakesen",
+            "odoubrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odoubaim",
+            "odoubais",
+            "odoubai",
+            "odoubain",
+            "odoubait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odoubaisem",
+            "odoubaises",
+            "odoubaise",
+            "odoubaisen",
+            "odoubaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odoubaikem",
+            "odoubaikes",
+            "odoubaike",
+            "odoubaiken",
+            "odoubaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odoubaikesem",
+            "odoubaikeses",
+            "odoubaikese",
+            "odoubaikesen",
+            "odoubaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odoubrum",
+            "odoubrus",
+            "odoubru",
+            "odoubrun",
+            "odoubrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odoubrusem",
+            "odoubruses",
+            "odoubruse",
+            "odoubrusen",
+            "odoubruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odoubrukem",
+            "odoubrukes",
+            "odoubruke",
+            "odoubruken",
+            "odoubruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odoubrukesem",
+            "odoubrukeses",
+            "odoubrukese",
+            "odoubrukesen",
+            "odoubrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odoubbam",
+            "odoubbas",
+            "odoubba",
+            "odoubban",
+            "odoubbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odoubbasem",
+            "odoubbases",
+            "odoubbase",
+            "odoubbasen",
+            "odoubbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odoubbakem",
+            "odoubbakes",
+            "odoubbake",
+            "odoubbaken",
+            "odoubbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odoubbakesem",
+            "odoubbakeses",
+            "odoubbakese",
+            "odoubbakesen",
+            "odoubbakeset"
+          ],
+          "Infinitivo(-ur)": "odoubur",
+          "Imperativo(Raiz)": "Odoub!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odoubet",
+            "Gen.Sg": "odoubety",
+            "Dat.Sg": "odoubeti",
+            "Acu.Sg": "odoubetom",
+            "Nom.Pl": "odoubeti",
+            "Gen.Pl": "odoubetye",
+            "Dat.Pl": "odoubetoi",
+            "Acu.Pl": "odoubetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odoubukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odoubte",
+            "Abstrato(-or)": "odoubor",
+            "Instrum(-tek)": "odoubtek",
+            "Lugar(-ia)": "odoubia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "odaoub",
+        "meaning": "voltar a calar prelúdio (odaoub-)",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odaoubum",
+            "odaoubus",
+            "odaoubu",
+            "odaoubun",
+            "odaoubut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odaoubusem",
+            "odaoubuses",
+            "odaoubuse",
+            "odaoubusen",
+            "odaoubuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odaoubukem",
+            "odaoubukes",
+            "odaoubuke",
+            "odaoubuken",
+            "odaoubuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odaoubukesem",
+            "odaoubukeses",
+            "odaoubukese",
+            "odaoubukesen",
+            "odaoubukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odaoubram",
+            "odaoubras",
+            "odaoubra",
+            "odaoubran",
+            "odaoubrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odaoubrasem",
+            "odaoubrases",
+            "odaoubrase",
+            "odaoubrasen",
+            "odaoubraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odaoubrakem",
+            "odaoubrakes",
+            "odaoubrake",
+            "odaoubraken",
+            "odaoubraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odaoubrakesem",
+            "odaoubrakeses",
+            "odaoubrakese",
+            "odaoubrakesen",
+            "odaoubrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odaoubaim",
+            "odaoubais",
+            "odaoubai",
+            "odaoubain",
+            "odaoubait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odaoubaisem",
+            "odaoubaises",
+            "odaoubaise",
+            "odaoubaisen",
+            "odaoubaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odaoubaikem",
+            "odaoubaikes",
+            "odaoubaike",
+            "odaoubaiken",
+            "odaoubaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odaoubaikesem",
+            "odaoubaikeses",
+            "odaoubaikese",
+            "odaoubaikesen",
+            "odaoubaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odaoubrum",
+            "odaoubrus",
+            "odaoubru",
+            "odaoubrun",
+            "odaoubrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odaoubrusem",
+            "odaoubruses",
+            "odaoubruse",
+            "odaoubrusen",
+            "odaoubruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odaoubrukem",
+            "odaoubrukes",
+            "odaoubruke",
+            "odaoubruken",
+            "odaoubruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odaoubrukesem",
+            "odaoubrukeses",
+            "odaoubrukese",
+            "odaoubrukesen",
+            "odaoubrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odaoubbam",
+            "odaoubbas",
+            "odaoubba",
+            "odaoubban",
+            "odaoubbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odaoubbasem",
+            "odaoubbases",
+            "odaoubbase",
+            "odaoubbasen",
+            "odaoubbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odaoubbakem",
+            "odaoubbakes",
+            "odaoubbake",
+            "odaoubbaken",
+            "odaoubbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odaoubbakesem",
+            "odaoubbakeses",
+            "odaoubbakese",
+            "odaoubbakesen",
+            "odaoubbakeset"
+          ],
+          "Infinitivo(-ur)": "odaoubur",
+          "Imperativo(Raiz)": "Odaoub!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odaoubet",
+            "Gen.Sg": "odaoubety",
+            "Dat.Sg": "odaoubeti",
+            "Acu.Sg": "odaoubetom",
+            "Nom.Pl": "odaoubeti",
+            "Gen.Pl": "odaoubetye",
+            "Dat.Pl": "odaoubetoi",
+            "Acu.Pl": "odaoubetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odaoubukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odaoubte",
+            "Abstrato(-or)": "odaoubor",
+            "Instrum(-tek)": "odaoubtek",
+            "Lugar(-ia)": "odaoubia"
+          }
+        }
+      }
+    },
     "ox": {
       "1. Positivo": {
         "stem": "ox",
@@ -45004,6 +46558,668 @@
             "Abstrato(-or)": "odatekor",
             "Instrum(-tek)": "odatettek",
             "Lugar(-ia)": "odatekia"
+          }
+        }
+      }
+    },
+    "tim": {
+      "1. Positivo": {
+        "stem": "tim",
+        "meaning": "temer, reverenciar com assombro sagrado",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "timum",
+            "timus",
+            "timu",
+            "timun",
+            "timut"
+          ],
+          "Pres.Ind.Passiva": [
+            "timusem",
+            "timuses",
+            "timuse",
+            "timusen",
+            "timuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "timukem",
+            "timukes",
+            "timuke",
+            "timuken",
+            "timuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "timukesem",
+            "timukeses",
+            "timukese",
+            "timukesen",
+            "timukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "timmam",
+            "timmas",
+            "timma",
+            "timman",
+            "timmat"
+          ],
+          "Pass.Ind.Passiva": [
+            "timmasem",
+            "timmases",
+            "timmase",
+            "timmasen",
+            "timmaset"
+          ],
+          "Pass.Subj.Ativa": [
+            "timmakem",
+            "timmakes",
+            "timmake",
+            "timmaken",
+            "timmaket"
+          ],
+          "Pass.Subj.Passiva": [
+            "timmakesem",
+            "timmakeses",
+            "timmakese",
+            "timmakesen",
+            "timmakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "timaim",
+            "timais",
+            "timai",
+            "timain",
+            "timait"
+          ],
+          "Dur.Ind.Passiva": [
+            "timaisem",
+            "timaises",
+            "timaise",
+            "timaisen",
+            "timaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "timaikem",
+            "timaikes",
+            "timaike",
+            "timaiken",
+            "timaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "timaikesem",
+            "timaikeses",
+            "timaikese",
+            "timaikesen",
+            "timaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "timmum",
+            "timmus",
+            "timmu",
+            "timmun",
+            "timmut"
+          ],
+          "Fut.Ind.Passiva": [
+            "timmusem",
+            "timmuses",
+            "timmuse",
+            "timmusen",
+            "timmuset"
+          ],
+          "Fut.Subj.Ativa": [
+            "timmukem",
+            "timmukes",
+            "timmuke",
+            "timmuken",
+            "timmuket"
+          ],
+          "Fut.Subj.Passiva": [
+            "timmukesem",
+            "timmukeses",
+            "timmukese",
+            "timmukesen",
+            "timmukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "timbam",
+            "timbas",
+            "timba",
+            "timban",
+            "timbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "timbasem",
+            "timbases",
+            "timbase",
+            "timbasen",
+            "timbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "timbakem",
+            "timbakes",
+            "timbake",
+            "timbaken",
+            "timbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "timbakesem",
+            "timbakeses",
+            "timbakese",
+            "timbakesen",
+            "timbakeset"
+          ],
+          "Infinitivo(-ur)": "timur",
+          "Imperativo(Raiz)": "Tim!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "timet",
+            "Gen.Sg": "timety",
+            "Dat.Sg": "timeti",
+            "Acu.Sg": "timetom",
+            "Nom.Pl": "timeti",
+            "Gen.Pl": "timetye",
+            "Dat.Pl": "timetoi",
+            "Acu.Pl": "timetos"
+          },
+          "Interrogativo.2Pl(-ka)": "timukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "timte",
+            "Abstrato(-or)": "timor",
+            "Instrum(-tek)": "timtek",
+            "Lugar(-ia)": "timia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "atim",
+        "meaning": "perder o temor, ousar",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "atimum",
+            "atimus",
+            "atimu",
+            "atimun",
+            "atimut"
+          ],
+          "Pres.Ind.Passiva": [
+            "atimusem",
+            "atimuses",
+            "atimuse",
+            "atimusen",
+            "atimuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "atimukem",
+            "atimukes",
+            "atimuke",
+            "atimuken",
+            "atimuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "atimukesem",
+            "atimukeses",
+            "atimukese",
+            "atimukesen",
+            "atimukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "atimmam",
+            "atimmas",
+            "atimma",
+            "atimman",
+            "atimmat"
+          ],
+          "Pass.Ind.Passiva": [
+            "atimmasem",
+            "atimmases",
+            "atimmase",
+            "atimmasen",
+            "atimmaset"
+          ],
+          "Pass.Subj.Ativa": [
+            "atimmakem",
+            "atimmakes",
+            "atimmake",
+            "atimmaken",
+            "atimmaket"
+          ],
+          "Pass.Subj.Passiva": [
+            "atimmakesem",
+            "atimmakeses",
+            "atimmakese",
+            "atimmakesen",
+            "atimmakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "atimaim",
+            "atimais",
+            "atimai",
+            "atimain",
+            "atimait"
+          ],
+          "Dur.Ind.Passiva": [
+            "atimaisem",
+            "atimaises",
+            "atimaise",
+            "atimaisen",
+            "atimaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "atimaikem",
+            "atimaikes",
+            "atimaike",
+            "atimaiken",
+            "atimaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "atimaikesem",
+            "atimaikeses",
+            "atimaikese",
+            "atimaikesen",
+            "atimaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "atimmum",
+            "atimmus",
+            "atimmu",
+            "atimmun",
+            "atimmut"
+          ],
+          "Fut.Ind.Passiva": [
+            "atimmusem",
+            "atimmuses",
+            "atimmuse",
+            "atimmusen",
+            "atimmuset"
+          ],
+          "Fut.Subj.Ativa": [
+            "atimmukem",
+            "atimmukes",
+            "atimmuke",
+            "atimmuken",
+            "atimmuket"
+          ],
+          "Fut.Subj.Passiva": [
+            "atimmukesem",
+            "atimmukeses",
+            "atimmukese",
+            "atimmukesen",
+            "atimmukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "atimbam",
+            "atimbas",
+            "atimba",
+            "atimban",
+            "atimbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "atimbasem",
+            "atimbases",
+            "atimbase",
+            "atimbasen",
+            "atimbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "atimbakem",
+            "atimbakes",
+            "atimbake",
+            "atimbaken",
+            "atimbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "atimbakesem",
+            "atimbakeses",
+            "atimbakese",
+            "atimbakesen",
+            "atimbakeset"
+          ],
+          "Infinitivo(-ur)": "atimur",
+          "Imperativo(Raiz)": "Atim!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "atimet",
+            "Gen.Sg": "atimety",
+            "Dat.Sg": "atimeti",
+            "Acu.Sg": "atimetom",
+            "Nom.Pl": "atimeti",
+            "Gen.Pl": "atimetye",
+            "Dat.Pl": "atimetoi",
+            "Acu.Pl": "atimetos"
+          },
+          "Interrogativo.2Pl(-ka)": "atimukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "atimte",
+            "Abstrato(-or)": "atimor",
+            "Instrum(-tek)": "atimtek",
+            "Lugar(-ia)": "atimia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "otim",
+        "meaning": "voltar a temer",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "otimum",
+            "otimus",
+            "otimu",
+            "otimun",
+            "otimut"
+          ],
+          "Pres.Ind.Passiva": [
+            "otimusem",
+            "otimuses",
+            "otimuse",
+            "otimusen",
+            "otimuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "otimukem",
+            "otimukes",
+            "otimuke",
+            "otimuken",
+            "otimuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "otimukesem",
+            "otimukeses",
+            "otimukese",
+            "otimukesen",
+            "otimukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "otimmam",
+            "otimmas",
+            "otimma",
+            "otimman",
+            "otimmat"
+          ],
+          "Pass.Ind.Passiva": [
+            "otimmasem",
+            "otimmases",
+            "otimmase",
+            "otimmasen",
+            "otimmaset"
+          ],
+          "Pass.Subj.Ativa": [
+            "otimmakem",
+            "otimmakes",
+            "otimmake",
+            "otimmaken",
+            "otimmaket"
+          ],
+          "Pass.Subj.Passiva": [
+            "otimmakesem",
+            "otimmakeses",
+            "otimmakese",
+            "otimmakesen",
+            "otimmakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "otimaim",
+            "otimais",
+            "otimai",
+            "otimain",
+            "otimait"
+          ],
+          "Dur.Ind.Passiva": [
+            "otimaisem",
+            "otimaises",
+            "otimaise",
+            "otimaisen",
+            "otimaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "otimaikem",
+            "otimaikes",
+            "otimaike",
+            "otimaiken",
+            "otimaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "otimaikesem",
+            "otimaikeses",
+            "otimaikese",
+            "otimaikesen",
+            "otimaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "otimmum",
+            "otimmus",
+            "otimmu",
+            "otimmun",
+            "otimmut"
+          ],
+          "Fut.Ind.Passiva": [
+            "otimmusem",
+            "otimmuses",
+            "otimmuse",
+            "otimmusen",
+            "otimmuset"
+          ],
+          "Fut.Subj.Ativa": [
+            "otimmukem",
+            "otimmukes",
+            "otimmuke",
+            "otimmuken",
+            "otimmuket"
+          ],
+          "Fut.Subj.Passiva": [
+            "otimmukesem",
+            "otimmukeses",
+            "otimmukese",
+            "otimmukesen",
+            "otimmukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "otimbam",
+            "otimbas",
+            "otimba",
+            "otimban",
+            "otimbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "otimbasem",
+            "otimbases",
+            "otimbase",
+            "otimbasen",
+            "otimbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "otimbakem",
+            "otimbakes",
+            "otimbake",
+            "otimbaken",
+            "otimbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "otimbakesem",
+            "otimbakeses",
+            "otimbakese",
+            "otimbakesen",
+            "otimbakeset"
+          ],
+          "Infinitivo(-ur)": "otimur",
+          "Imperativo(Raiz)": "Otim!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "otimet",
+            "Gen.Sg": "otimety",
+            "Dat.Sg": "otimeti",
+            "Acu.Sg": "otimetom",
+            "Nom.Pl": "otimeti",
+            "Gen.Pl": "otimetye",
+            "Dat.Pl": "otimetoi",
+            "Acu.Pl": "otimetos"
+          },
+          "Interrogativo.2Pl(-ka)": "otimukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "otimte",
+            "Abstrato(-or)": "otimor",
+            "Instrum(-tek)": "otimtek",
+            "Lugar(-ia)": "otimia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "odatim",
+        "meaning": "voltar a perder o temor",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odatimum",
+            "odatimus",
+            "odatimu",
+            "odatimun",
+            "odatimut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odatimusem",
+            "odatimuses",
+            "odatimuse",
+            "odatimusen",
+            "odatimuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odatimukem",
+            "odatimukes",
+            "odatimuke",
+            "odatimuken",
+            "odatimuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odatimukesem",
+            "odatimukeses",
+            "odatimukese",
+            "odatimukesen",
+            "odatimukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odatimmam",
+            "odatimmas",
+            "odatimma",
+            "odatimman",
+            "odatimmat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odatimmasem",
+            "odatimmases",
+            "odatimmase",
+            "odatimmasen",
+            "odatimmaset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odatimmakem",
+            "odatimmakes",
+            "odatimmake",
+            "odatimmaken",
+            "odatimmaket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odatimmakesem",
+            "odatimmakeses",
+            "odatimmakese",
+            "odatimmakesen",
+            "odatimmakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odatimaim",
+            "odatimais",
+            "odatimai",
+            "odatimain",
+            "odatimait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odatimaisem",
+            "odatimaises",
+            "odatimaise",
+            "odatimaisen",
+            "odatimaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odatimaikem",
+            "odatimaikes",
+            "odatimaike",
+            "odatimaiken",
+            "odatimaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odatimaikesem",
+            "odatimaikeses",
+            "odatimaikese",
+            "odatimaikesen",
+            "odatimaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odatimmum",
+            "odatimmus",
+            "odatimmu",
+            "odatimmun",
+            "odatimmut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odatimmusem",
+            "odatimmuses",
+            "odatimmuse",
+            "odatimmusen",
+            "odatimmuset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odatimmukem",
+            "odatimmukes",
+            "odatimmuke",
+            "odatimmuken",
+            "odatimmuket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odatimmukesem",
+            "odatimmukeses",
+            "odatimmukese",
+            "odatimmukesen",
+            "odatimmukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odatimbam",
+            "odatimbas",
+            "odatimba",
+            "odatimban",
+            "odatimbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odatimbasem",
+            "odatimbases",
+            "odatimbase",
+            "odatimbasen",
+            "odatimbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odatimbakem",
+            "odatimbakes",
+            "odatimbake",
+            "odatimbaken",
+            "odatimbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odatimbakesem",
+            "odatimbakeses",
+            "odatimbakese",
+            "odatimbakesen",
+            "odatimbakeset"
+          ],
+          "Infinitivo(-ur)": "odatimur",
+          "Imperativo(Raiz)": "Odatim!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odatimet",
+            "Gen.Sg": "odatimety",
+            "Dat.Sg": "odatimeti",
+            "Acu.Sg": "odatimetom",
+            "Nom.Pl": "odatimeti",
+            "Gen.Pl": "odatimetye",
+            "Dat.Pl": "odatimetoi",
+            "Acu.Pl": "odatimetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odatimukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odatimte",
+            "Abstrato(-or)": "odatimor",
+            "Instrum(-tek)": "odatimtek",
+            "Lugar(-ia)": "odatimia"
           }
         }
       }
@@ -52289,6 +54505,128 @@
           }
         }
       }
+    }
+  },
+  "registro_diacronico_e_variantes": {
+    "Metuses": {
+      "estatuto": "Fórmula Litúrgica Cristalizada (Optativo Arcaico)",
+      "equivalente_canonico": "metur (glorificar)",
+      "analise": "Ave! / Salve! / Sejas glorificada! (abertura solene do Metuses Maria; forma regular moderna: Metse!)."
+    },
+    "Metse": {
+      "estatuto": "Imperativo Médio-Passivo Regular",
+      "equivalente_canonico": "met- + -se",
+      "analise": "Alegra-te! / Sê glorificada! (equivalente regular moderno do arcaísmo Metuses)."
+    },
+    "vox": {
+      "estatuto": "Dativo Sideral / Litúrgico Arcaico",
+      "equivalente_canonico": "vok + -j (kj -> x)",
+      "analise": "ao sangue / no sangue (forma pré-vocalização preservada na poesia sideral; na V8.1 padrão: voki)."
+    },
+    "Durrum": {
+      "estatuto": "Fórmula Sideral Cristalizada",
+      "equivalente_canonico": "dur- + -ru + -m",
+      "analise": "Brilharão / Brilharei (fórmula gnômica em 'Lexer durrum in fily': As estrelas brilharão no cerne)."
+    },
+    "Zo es": {
+      "estatuto": "Fórmula Sacra de Fechamento",
+      "equivalente_canonico": "zo (assim) + es (sê!)",
+      "analise": "Assim sê! / Amém! (fechamento litúrgico canônico das três orações e do Halylitror)."
+    },
+    "Coriceçte": {
+      "estatuto": "Variante Vulgar / Plebeia (C/Ç)",
+      "equivalente_canonico": "Korikeste",
+      "analise": "Grafia e pronúncia plebeia (com ç e c por k) da Grande Casa Nobre Korikeste."
+    },
+    "Coryvela": {
+      "estatuto": "Variante Vulgar / Plebeia",
+      "equivalente_canonico": "Koryvela",
+      "analise": "Grafia plebeia com c inicial para a Floresta de Treppênia (norma culta: Koryvela)."
+    },
+    "façucor": {
+      "estatuto": "Variante Vulgar / Plebeia (Ç)",
+      "equivalente_canonico": "fassukor",
+      "analise": "Forma popular com ç intervocálico por ss para 'tristeza profunda' (norma culta: fassukor)."
+    },
+    "Ferychope": {
+      "estatuto": "Variante Dialetal / Plebeia",
+      "equivalente_canonico": "Ferykrope",
+      "analise": "Forma popular palatalizada para a província de Ferykrope (Campina dos Ventos)."
+    },
+    "mectep": {
+      "estatuto": "Variante Vulgar / Plebeia",
+      "equivalente_canonico": "mektep",
+      "analise": "Grafia popular com ct para 'casebre, choupana' (norma culta: mektep)."
+    },
+    "raçe": {
+      "estatuto": "Variante Vulgar / Plebeia (Ç)",
+      "equivalente_canonico": "rase",
+      "analise": "Pronúncia plebeia com ç para 'língua, idioma' (norma culta: rase)."
+    },
+    "Rixelac": {
+      "estatuto": "Variante Vulgar / Apocopada",
+      "equivalente_canonico": "Rixelaka",
+      "analise": "Forma apocopada com c final para a cordilheira de Rixelaka (Os Picos Gélidos)."
+    },
+    "Vokát": {
+      "estatuto": "Exônimo Plebeu Apocopado",
+      "equivalente_canonico": "Vokátte",
+      "analise": "Designação popular apocopada para o entidade/título Vokátte (O Guia de Sangue)."
+    },
+    "Laurie": {
+      "estatuto": "Forma Arcaica Pré-Síncrese de Celia",
+      "equivalente_canonico": "lauri",
+      "analise": "Forma antiga com ditongo final -ie para 'ouro', reduzida a lauri pela Síncrese de Celia."
+    },
+    "Mixie": {
+      "estatuto": "Forma Arcaica Pré-Síncrese de Celia",
+      "equivalente_canonico": "mixi",
+      "analise": "Forma antiga para 'pessoa, indivíduo', reduzida a mixi pela Síncrese de Celia."
+    },
+    "Sotime": {
+      "estatuto": "Forma Arcaica Pré-Síncrese de Celia",
+      "equivalente_canonico": "sotim",
+      "analise": "Forma antiga de 1ª Declinação para 'rosto, face', apocopada para sotim (2ª Decl.)."
+    },
+    "Xune / xün": {
+      "estatuto": "Forma Arcaica Pré-Síncrese / Grafia Expurgada",
+      "equivalente_canonico": "xun",
+      "analise": "Antigas formas para 'amarelo imperial', padronizadas na Era Clássica V8.1 como xun."
+    },
+    "Theus / vane": {
+      "estatuto": "Termos Arcaicos Expurgados",
+      "equivalente_canonico": "Gyos",
+      "analise": "Designações pré-imperiais para 'Deus', formalmente banidas e substituídas por Gyos."
+    },
+    "nomo": {
+      "estatuto": "Termo Arcaico Expurgado",
+      "equivalente_canonico": "mon",
+      "analise": "Antigo vocábulo para 'nome', expurgado pela Chancelaria em favor da raiz sagrada mon."
+    },
+    "kropé": {
+      "estatuto": "Grafia Arcaica Expurgada",
+      "equivalente_canonico": "krope",
+      "analise": "Grafia com acento agudo final expurgada pela Lei da Restrição Diacrítica (unicidade de Vé)."
+    },
+    "Vé'el": {
+      "estatuto": "Grafia Arcaica Expurgada",
+      "equivalente_canonico": "Ve'el",
+      "analise": "Grafia com acento agudo + apóstrofo expurgada em favor de Ve'el (Domínio das Sombras)."
+    },
+    "duru'u": {
+      "estatuto": "Hiato Arcaico Expurgado",
+      "equivalente_canonico": "durru",
+      "analise": "Antigo futuro com hiato de durur, substituído pela geminação vibrante durru (r+ru -> rru)."
+    },
+    "mobu- / amobu-": {
+      "estatuto": "Tema Verbal Pré-Reforma",
+      "equivalente_canonico": "mob- / amob-",
+      "analise": "Antiga raiz verbal com -u- temático intrínseco, purificada para mob- / amob- (inf. mobur/amobur)."
+    },
+    "dagbam / magbam / togbam / tragbam / tekbam": {
+      "estatuto": "Imperfeitos Pré-Assimilação Labial",
+      "equivalente_canonico": "dabbam / mabbam / tobbam / trabbam / tebbam",
+      "analise": "Estágios fonéticos intermediários de sonorização (kb -> gb) antes da Assimilação Labial Regressiva Total (kb -> bb)."
     }
   }
 }

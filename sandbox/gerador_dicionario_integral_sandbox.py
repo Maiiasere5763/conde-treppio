@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
+r"""
 gerador_dicionario_integral_sandbox.py
 Compilador e Gerador Morfofonológico Exaustivo do Dicionário Geral da Língua Tréppia (Era Clássica V8.1)
 Opera estritamente em ambiente de Sandbox (D:\Conde_Treppio\sandbox\).
@@ -629,17 +629,50 @@ NOUNS = [
     ("vuror", 2, "calor extremo, incandescência, conflagração", "vur + -or"),
     # --- Letra X / Y ---
     ("xer", 2, "céu, firmamento superior (var. 1ª Decl. xere)", "raiz primária xer"),
+    ("xere", 1, "céu, firmamento (variante temática de 1ª Declinação de xer)", "raiz xer-"),
+    ("Xerypalk", 2, "Passo do Céu (forma atemática de Xerypalkia)", "xery + palk"),
     ("Xerypalkia", 1, "Serras do Firmamento (província de Karytírë)", "xery + palk + -ia"),
     ("xun", 2, "cor amarela imperial, dourado solar (expurgado xün)", "raiz primária xun"),
     ("Yamakoz", 2, "Cidade Imortal / título de Giovanni Sprezzatura", "topônimo/título"),
+    # --- Entradas Adicionais Auditadas nos Textos Integrais (Halylitror, Liturgia e Crônicas) ---
+    ("akosor", 2, "revelação, manifestação visível, desvelamento", "akos- + -or"),
+    ("Daifelo", 2, "Os Filhos do Pensamento (plural solene de Daifel)", "dai + felo"),
+    ("don", 2, "dom, dádiva, concessão soberana (Dat. Pl. donoi)", "raiz primária don"),
+    ("Fertrátte", 1, "Manwë, Senhor dos Ventos (forma radical de Ferytrátte)", "fer + Trátte"),
+    ("Ferykrope", 1, "Campina dos Ventos (feudo da Casa Ferylinde; vulg. Ferychope)", "fery + krope"),
+    ("font", 2, "fonte, manancial, nascente (Acu. fontom)", "raiz primária font"),
+    ("fratror", 2, "irmão, confrade cósmico (Pl. fratroro, Dat. Pl. fratroi)", "raiz fratr-"),
+    ("Giovanni Sprezzatura", 1, "Conde de Varkaria, 'O Yamakoz'", "antropônimo condal"),
+    ("Hallitror", 2, "Ainulindalë (forma radical assimilada ll de Halylitror)", "hal + litror (nl/ll)"),
+    ("Halo", 2, "Os Espíritos Sagrados, Ainur (plural solene de hal)", "hal + -o"),
+    ("Halteggar", 2, "Salões Atemporais (forma radical de Halyteggar)", "hal + teggar"),
+    ("Halvur", 2, "Chama Imperecível, Fogo Secreto (forma radical de Halyvur)", "hal + vur"),
+    ("harpe", 1, "harpa, instrumento de cordas dedilhadas (Pl. harper)", "raiz harp-"),
+    ("Jesus", 2, "Jesus (antropônimo litúrgico no Metuses Maria e Skorum)", "antropônimo sagrado"),
+    ("Kristus", 2, "Cristo, o Ungido (epíteto sagrado no Skorum)", "antropônimo sagrado"),
+    ("Maria", 1, "Santa Maria (antropônimo litúrgico no Metuses Maria e Skorum)", "antropônimo sagrado"),
+    ("Mirypalk", 2, "Passo das Joias (forma atemática de Mirypalkia)", "miry + palk"),
+    ("nemme", 1, "memória, lembrança (variante geminada mr -> mm de nemre)", "nemr- (mr -> mm)"),
+    ("Oratpatte", 1, "Ilúvatar, Pai do Todo (forma radical de Oratypatte)", "orat + Patte"),
+    ("Pontius Pilatus", 2, "Pôncio Pilatos (antropônimo histórico no Skorum)", "antropônimo histórico"),
+    ("timor", 2, "temor, reverência, assombro sagrado (Acu. timorom)", "tim- + -or"),
+    ("todo", 2, "totalidade, todos os seres (Pl. todos)", "raiz tod-"),
+    ("Totter", 1, "Os Poderes, Valar, Regentes do Mundo (plural de Totte)", "tok- + -te + -r"),
+    ("Treppenína", 1, "vassala ou gentílica feminina de Treppenwitz", "Treppen- + -ína"),
+    ("Treppeníno", 2, "vassalo ou gentílico masculino de Treppenwitz", "Treppen- + -íno"),
+    ("Vêpalk", 2, "Passo das Águas (forma atemática de Vepalkia)", "Vé + palk"),
+    ("Vetrátte", 1, "Ulmo, Senhor das Águas (variante gráfica de Vétrátte)", "ve + Trátte"),
+    ("viole", 1, "viola, órgão de cordas e arco (Pl. violer)", "raiz viol-"),
 ]
 
 # 2.2. ADJETIVOS PRIMÁRIOS, DERIVADOS E SUPLETIVOS (Adjetivo, Significado, Comparativo, Superlativo Sg)
 ADJECTIVES = [
+    ("aetika", "dissonante, estranho, alheio à harmonia", "maer aetika", "aetikan"),
     ("akura", "virgem, incorrupto, imaculado", "maer akura", "akuran"),
     ("alota", "horrendo, disforme, intolerável", "maer alota", "alotan"),
     ("amocte", "esfomeado, faminto", "maer amocte", "amocten"),
     ("amyga", "inumerável, incontável (var. amygata)", "maer amyga", "amygan"),
+    ("amygata", "inumerável, incontável (forma ordinalizada de Myga)", "maer amygata", "amygatan"),
     ("aruma", "imperial, soberano", "maer aruma", "aruman"),
     ("atola", "feio, desfigurado", "maer atola", "atolan"),
     ("avura", "gélido, glacial, congelante", "maer avura", "avuran"),
@@ -697,6 +730,12 @@ ADJECTIVES = [
     ("vurora", "incandescente, flamejante, ígneo", "maer vurora", "vuroran"),
     ("xera", "celeste, elevado, sideral", "maer xera", "xeld"),
     ("xuna", "loiro, amarelado, flavente", "maer xuna", "xunan"),
+    # --- Adjetivos Adicionais Auditados nos Textos Litúrgicos e no Halylitror ---
+    ("da", "ideal, relativo à ideia (forma sincopada de daia em idda/ledda)", "maer da", "dan"),
+    ("katro", "poucos, raros, escassos (plural quantitativo)", "maer katro", "katron"),
+    ("lany", "cheio de luz, pleno (variante litúrgica de lana)", "maer lany", "lan'an"),
+    ("luda", "cheia, plena (adjetivo litúrgico arcaico no Metuses Maria)", "maer luda", "ludan"),
+    ("rukraleta", "dotado de voz potente, altissonante, trovejante", "maer rukraleta", "rukraletan"),
 ]
 
 # 2.3. RAÍZES VERBAIS PRIMÁRIAS E DERIVADAS (Raiz Positiva sem -ur, Significado Positivo, Significado Privativo, Significado Iterativo, Significado Iterativo-Privativo)
@@ -758,9 +797,7 @@ VERB_ROOTS = [
     ("yn", "andar, caminhar, entrar, descer", "estancar o passo, deter-se", "voltar a caminhar (odyn-)", "voltar a estancar o passo"),
 ]
 
-print(f"Inventário carregado: {len(NOUNS)} substantivos, {len(ADJECTIVES)} adjetivos, {len(VERB_ROOTS)} raízes verbais primárias ({len(VERB_ROOTS)*4} verbos nos 4 eixos).")
-
-# Adição das 11 raízes verbais primárias canônicas (totalizando 66 raízes na Matriz Quadripartite = 264 verbos)
+# Adição das 13 raízes verbais primárias e poéticas canônicas (totalizando 68 raízes na Matriz Quadripartite = 272 verbos)
 VERB_ROOTS.extend([
     ("fain", "piratear, saquear no mar", "proteger comércio naval", "voltar a piratear", "voltar a proteger rota naval"),
     ("far", "cultivar trigo, alimentar com pão", "esterilizar solo", "recultivar seara", "voltar a esterilizar"),
@@ -768,13 +805,17 @@ VERB_ROOTS.extend([
     ("kindr", "unir em comunhão, aliar", "cindir, criar discórdia", "reunificar em aliança", "voltar a cindir"),
     ("mad", "conceber no ventre, gerar (part. madet)", "abortar, tornar estéril", "voltar a conceber", "voltar a tornar estéril"),
     ("nemr", "lembrar, recordar na memória (fut. nemnu, nr -> nn)", "apagar da memória, olvidar", "relembrar, comemorar", "voltar a apagar da memória"),
+    ("oub", "entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror)", "calar prelúdio", "voltar a entoar prelúdio (odoub-)", "voltar a calar prelúdio (odaoub-)"),
     ("ox", "guerrear, combater em campo", "pacificar o campo", "voltar a guerrear", "voltar a pacificar"),
+    ("tim", "temer, reverenciar com assombro sagrado", "perder o temor, ousar", "voltar a temer", "voltar a perder o temor"),
     ("tul", "delirar, perder a razão", "recobrar lucidez", "voltar a delirar", "voltar a recobrar lucidez"),
     ("vel", "sombrear, cobrir de penumbra", "desvelar, dissipar sombra", "voltar a sombrear", "voltar a dissipar sombra"),
     ("vok", "sangrar, verter sangue", "estancar sangue", "voltar a sangrar", "voltar a estancar sangue"),
     ("vul", "querer, determinar pela vontade", "abster-se de querer, renunciar", "voltar a determinar", "voltar a renunciar"),
 ])
 VERB_ROOTS.sort(key=lambda x: x[0])
+
+print(f"Inventário carregado: {len(NOUNS)} substantivos, {len(ADJECTIVES)} adjetivos, {len(VERB_ROOTS)} raízes verbais primárias ({len(VERB_ROOTS)*4} verbos nos 4 eixos).")
 
 # 2.4. ADVÉRBIOS (Temporais, Locativos, Sintáticos e Modais em -vë)
 ADVERBS = [
@@ -852,6 +893,37 @@ PARTICLES_AND_AFFIXES = [
     ("-n / -ni", "Sufixo do Superlativo Absoluto Orgânico", "Acoplado à raiz no singular (-n) e plural (-ni); dispara rn -> ld (mild, kold, feld), ln -> ll (bell, vell, fill) e nn/mn -> m (nemm)."),
     ("-vë", "Sufixo Adverbial Modal com Diérese", "Único morfema com trema diferencial na V8.1; converte adjetivos em advérbios de modo (mobavë, kuravë, elfavë, rukravë)."),
     ("-ta", "Sufixo de Numeral Ordinal", "Converte cardinais em ordinais; dispara dt -> tt (Itta) e vt -> pt (Nepta)."),
+]
+
+# 2.8. REGISTRO DIACRÔNICO, FÓRMULAS LITÚRGICAS CRISTALIZADAS, VARIANTES PLEBEIAS (C/Ç) E FORMAS PRÉ-SÍNCRESE
+DIACHRONIC_AND_VARIANT_ENTRIES = [
+    # Fórmulas Litúrgicas e Siderais Cristalizadas
+    ("Metuses", "Fórmula Litúrgica Cristalizada (Optativo Arcaico)", "metur (glorificar)", "Ave! / Salve! / Sejas glorificada! (abertura solene do Metuses Maria; forma regular moderna: Metse!)."),
+    ("Metse", "Imperativo Médio-Passivo Regular", "met- + -se", "Alegra-te! / Sê glorificada! (equivalente regular moderno do arcaísmo Metuses)."),
+    ("vox", "Dativo Sideral / Litúrgico Arcaico", "vok + -j (kj -> x)", "ao sangue / no sangue (forma pré-vocalização preservada na poesia sideral; na V8.1 padrão: voki)."),
+    ("Durrum", "Fórmula Sideral Cristalizada", "dur- + -ru + -m", "Brilharão / Brilharei (fórmula gnômica em 'Lexer durrum in fily': As estrelas brilharão no cerne)."),
+    ("Zo es", "Fórmula Sacra de Fechamento", "zo (assim) + es (sê!)", "Assim sê! / Amém! (fechamento litúrgico canônico das três orações e do Halylitror)."),
+    # Variantes Plebeias / Vulgares e Dialetais (Estigmatizadas pela Chancelaria Imperial)
+    ("Coriceçte", "Variante Vulgar / Plebeia (C/Ç)", "Korikeste", "Grafia e pronúncia plebeia (com ç e c por k) da Grande Casa Nobre Korikeste."),
+    ("Coryvela", "Variante Vulgar / Plebeia", "Koryvela", "Grafia plebeia com c inicial para a Floresta de Treppênia (norma culta: Koryvela)."),
+    ("façucor", "Variante Vulgar / Plebeia (Ç)", "fassukor", "Forma popular com ç intervocálico por ss para 'tristeza profunda' (norma culta: fassukor)."),
+    ("Ferychope", "Variante Dialetal / Plebeia", "Ferykrope", "Forma popular palatalizada para a província de Ferykrope (Campina dos Ventos)."),
+    ("mectep", "Variante Vulgar / Plebeia", "mektep", "Grafia popular com ct para 'casebre, choupana' (norma culta: mektep)."),
+    ("raçe", "Variante Vulgar / Plebeia (Ç)", "rase", "Pronúncia plebeia com ç para 'língua, idioma' (norma culta: rase)."),
+    ("Rixelac", "Variante Vulgar / Apocopada", "Rixelaka", "Forma apocopada com c final para a cordilheira de Rixelaka (Os Picos Gélidos)."),
+    ("Vokát", "Exônimo Plebeu Apocopado", "Vokátte", "Designação popular apocopada para o entidade/título Vokátte (O Guia de Sangue)."),
+    # Formas Arcaicas Pré-Síncrese de Celia e Termos Expurgados Documentados nos Manuais
+    ("Laurie", "Forma Arcaica Pré-Síncrese de Celia", "lauri", "Forma antiga com ditongo final -ie para 'ouro', reduzida a lauri pela Síncrese de Celia."),
+    ("Mixie", "Forma Arcaica Pré-Síncrese de Celia", "mixi", "Forma antiga para 'pessoa, indivíduo', reduzida a mixi pela Síncrese de Celia."),
+    ("Sotime", "Forma Arcaica Pré-Síncrese de Celia", "sotim", "Forma antiga de 1ª Declinação para 'rosto, face', apocopada para sotim (2ª Decl.)."),
+    ("Xune / xün", "Forma Arcaica Pré-Síncrese / Grafia Expurgada", "xun", "Antigas formas para 'amarelo imperial', padronizadas na Era Clássica V8.1 como xun."),
+    ("Theus / vane", "Termos Arcaicos Expurgados", "Gyos", "Designações pré-imperiais para 'Deus', formalmente banidas e substituídas por Gyos."),
+    ("nomo", "Termo Arcaico Expurgado", "mon", "Antigo vocábulo para 'nome', expurgado pela Chancelaria em favor da raiz sagrada mon."),
+    ("kropé", "Grafia Arcaica Expurgada", "krope", "Grafia com acento agudo final expurgada pela Lei da Restrição Diacrítica (unicidade de Vé)."),
+    ("Vé'el", "Grafia Arcaica Expurgada", "Ve'el", "Grafia com acento agudo + apóstrofo expurgada em favor de Ve'el (Domínio das Sombras)."),
+    ("duru'u", "Hiato Arcaico Expurgado", "durru", "Antigo futuro com hiato de durur, substituído pela geminação vibrante durru (r+ru -> rru)."),
+    ("mobu- / amobu-", "Tema Verbal Pré-Reforma", "mob- / amob-", "Antiga raiz verbal com -u- temático intrínseco, purificada para mob- / amob- (inf. mobur/amobur)."),
+    ("dagbam / magbam / togbam / tragbam / tekbam", "Imperfeitos Pré-Assimilação Labial", "dabbam / mabbam / tobbam / trabbam / tebbam", "Estágios fonéticos intermediários de sonorização (kb -> gb) antes da Assimilação Labial Regressiva Total (kb -> bb)."),
 ]
 
 # ==============================================================================
@@ -1073,6 +1145,25 @@ def generate_all_files():
             verbs_full_md.append("")
 
         md_lines.append("")
+
+    md_lines.append("---\n")
+
+    # --------------------------------------------------------------------------
+    # PARTE VIII: REGISTRO DIACRÔNICO, FÓRMULAS LITÚRGICAS, VARIANTES PLEBEIAS (C/Ç) E FORMAS PRÉ-SÍNCRESE
+    # --------------------------------------------------------------------------
+    md_lines.append(f"## Parte VIII: Registro Diacrônico, Fórmulas Litúrgicas Cristalizadas, Variantes Vulgares (C/Ç) e Formas Pré-Síncrese ({len(DIACHRONIC_AND_VARIANT_ENTRIES)} Entradas)\n")
+    md_lines.append("Para garantir **100% de exaustividade filológica** sobre todos os documentos da base de dados do `/conde` (incluindo as notas históricas da *Gramática Normativa*, do *Adendo V8.1* e dos relatórios de *sandbox*), esta seção cataloga todas as formas litúrgicas cristalizadas, variantes plebeias ou dialetais (`c/ç`) e formas arcaicas pré-Síncrese de Celia ou expurgadas mencionadas nos manuais.\n")
+    md_lines.append("| Forma Documentada | Estatuto Diacrônico / Sociolinguístico | Equivalente Canônico (V8.1) | Análise Filológica e Ocorrência nos Manuais |")
+    md_lines.append("| :--- | :--- | :--- | :--- |")
+    full_json_db["registro_diacronico_e_variantes"] = {}
+    for d_form, d_stat, d_canon, d_desc in DIACHRONIC_AND_VARIANT_ENTRIES:
+        full_json_db["registro_diacronico_e_variantes"][d_form] = {
+            "estatuto": d_stat,
+            "equivalente_canonico": d_canon,
+            "analise": d_desc,
+        }
+        total_word_forms += 1
+        md_lines.append(f"| **{d_form}** | {d_stat} | **{d_canon}** | {d_desc} |")
 
     full_json_db["metadata"]["total_expanded_word_forms"] = total_word_forms
 
