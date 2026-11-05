@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#07090e" />
-  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.1. Edição Filológica Completa com 46.531 formas, Matriz Verbal Quadripartite, GNLT e Diálogos de Ecos." />
+  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.1. Edição Filológica Completa com 44.585 formas, Matriz Verbal Quadripartite, GNLT e Diálogos de Ecos." />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png" href="icon-512.png" />
   <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.1)</title>
@@ -1322,7 +1322,7 @@
         <span class="stat-badge">Verbos: <strong id="stat-verbs">336</strong></span>
         <span class="stat-badge">Adjetivos: <strong id="stat-adjs">82</strong></span>
         <span class="stat-badge">Advérbios: <strong id="stat-advs">84</strong></span>
-        <span class="stat-badge">Formas Totais: <strong id="stat-forms">46.531</strong></span>
+        <span class="stat-badge">Formas Totais: <strong id="stat-forms">44.585</strong></span>
         <button class="btn btn-gold" id="btn-sync" onclick="syncWithCondeBackend()" title="Sincronizar da Nuvem (Git/Google Drive) ou Recompilar da Base Local /conde">
           ⟳ Sincronizar Base /conde
         </button>
@@ -1339,7 +1339,7 @@
         <input
           type="text"
           id="omni-input"
-          placeholder="Busque qualquer verbete em Tréppio, tradução em Português, etimologia ou qualquer uma das 46.531 formas flexionadas (ex.: doobbam, oda'urrum, kranoi, saittek, mild, outono, perdão)..."
+          placeholder="Busque qualquer verbete em Tréppio, tradução em Português, etimologia ou qualquer uma das 44.585 formas flexionadas (ex.: doobbam, oda'urrum, kranoi, saittek, mild, outono, perdão)..."
           oninput="handleOmniSearch(this.value)"
         />
         <button class="btn" onclick="clearSearch()" id="btn-clear-search" style="display:none;">Limpar</button>
@@ -1389,9 +1389,9 @@
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="main-container">
-    <!-- PAINEL DE RECONHECIMENTO MORFOLÓGICO REVERSO (46.531 FORMAS) -->
+    <!-- PAINEL DE RECONHECIMENTO MORFOLÓGICO REVERSO (44.585 FORMAS) -->
     <section class="reverse-parser-box" id="reverse-box">
-      <div class="reverse-parser-title">⚡ Reconhecimento Morfológico Reverso nas 46.531 Formas Flexionadas e Derivadas</div>
+      <div class="reverse-parser-title">⚡ Reconhecimento Morfológico Reverso nas 44.585 Formas Flexionadas e Derivadas</div>
       <div class="reverse-matches-grid" id="reverse-grid"></div>
     </section>
 
@@ -1459,7 +1459,7 @@
       return leftStem + right;
     }
 
-    // 2. Construção do Índice Morfológico Reverso sobre as 46.531 Formas
+    // 2. Construção do Índice Morfológico Reverso sobre as 44.585 Formas
     function buildReverseIndex() {
       reverseIndex.clear();
       if (!DB) return;
@@ -1660,7 +1660,7 @@
       document.getElementById("stat-verbs").textContent = vRoots * 4;
       document.getElementById("stat-adjs").textContent = aCount;
       document.getElementById("stat-advs").textContent = advCount;
-      document.getElementById("stat-forms").textContent = (m.total_expanded_word_forms || 37769).toLocaleString("pt-BR");
+      document.getElementById("stat-forms").textContent = (m.total_expanded_word_forms || 44585).toLocaleString("pt-BR");
 
       document.getElementById("tab-cnt-nouns").textContent = nCount;
       document.getElementById("tab-cnt-verbs").textContent = vRoots * 4;
@@ -1720,7 +1720,7 @@
       document.getElementById("modal-title").textContent = "☁️ Configurar Banco de Dados Online (GitHub / Google Drive)";
       document.getElementById("modal-body").innerHTML = `
         <p style="margin-bottom:0.85rem;color:var(--text-secondary);">
-          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 46.531 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
+          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 44.585 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
         </p>
         <div style="margin-bottom:1rem;">
           <label style="display:block;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">
@@ -2714,7 +2714,7 @@
             💬 Diálogos Práticos e Conversação Cotidiana (Ecos de Uma Vida Perdida)
           </h2>
           <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;">
-            Resultado de <strong>1.500 anos de evolução naturalista</strong> do Tréppio: a língua imperial cerimonial adaptou-se às estalagens, às estradas nevadas e ao calor das lareiras. Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar instantaneamente suas raízes e casos no léxico de 46.531 formas!
+            Resultado de <strong>1.500 anos de evolução naturalista</strong> do Tréppio: a língua imperial cerimonial adaptou-se às estalagens, às estradas nevadas e ao calor das lareiras. Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar instantaneamente suas raízes e casos no léxico de 44.585 formas!
           </p>
         </div>
 
