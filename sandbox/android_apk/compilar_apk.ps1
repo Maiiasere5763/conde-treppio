@@ -113,3 +113,4 @@ if ($BuildSuccess -and $ApkBuiltPath) {
 
 # Espelhar para o Google Drive e OneDrive se existirem
 powershell -ExecutionPolicy Bypass -File (Join-Path $RootDir "sync_conde.ps1") -CommitMessage "chore(android): atualizacao dos assets do APK e configuracoes Gradle"
+

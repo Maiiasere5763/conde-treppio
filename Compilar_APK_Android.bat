@@ -8,3 +8,4 @@ echo.
 powershell -ExecutionPolicy Bypass -File "D:\Conde_Treppio\sandbox\android_apk\compilar_apk.ps1"
 echo.
 pause
+
