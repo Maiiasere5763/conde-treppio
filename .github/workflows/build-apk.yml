@@ -1,0 +1,85 @@
+name: Compilar APK Android (Códice Tréppio V8.1)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'sandbox/**'
+      - 'docs/**'
+      - '.github/workflows/build-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    name: Compilar e Assinar Codice_Treppio_Conde.apk
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Recompilar Léxico e Atualizar Assets do Android
+        run: |
+          python sandbox/gerador_dicionario_integral_sandbox.py
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Instalar Build-Tools e Platform SDK 34
+        run: |
+          sdkmanager "platforms;android-34" "build-tools;34.0.0"
+
+      - name: Instalar Gradle Wrapper
+        working-directory: sandbox/android_apk
+        run: |
+          gradle wrapper --gradle-version 8.2
+
+      - name: Compilar APK Android (assembleRelease)
+        working-directory: sandbox/android_apk
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Preparar Artefato APK Final
+        run: |
+          mkdir -p dist
+          find sandbox/android_apk/app/build/outputs/apk -name "*.apk" -exec cp {} dist/Codice_Treppio_Conde.apk \;
+          ls -la dist/
+
+      - name: Publicar Artefato de Download (GitHub Actions Artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Codice_Treppio_Conde_APK
+          path: dist/Codice_Treppio_Conde.apk
+          if-no-files-found: error
+
+      - name: Criar ou Atualizar Release no GitHub com o APK
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v8.1.0-apk
+          name: "Códice Tréppio V8.1 — APK para Android"
+          body: |
+            ### Códice Lexicográfico Imperial da Língua Tréppia (Era Clássica V8.1)
+            - **Arquivo**: `Codice_Treppio_Conde.apk`
+            - **Total de Formas**: 37.769 formas flexionadas e derivadas da Matriz Quadripartite.
+            - **Compatibilidade**: Android 7.0 até Android 15+.
+            - **Offline-First**: Funciona sem internet com sincronização opcional via GitHub / Google Drive.
+          files: |
+            dist/Codice_Treppio_Conde.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

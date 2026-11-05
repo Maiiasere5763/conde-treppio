@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0b0d13</color>
+    <color name="primary_dark">#05070a</color>
+    <color name="accent">#e2b94b</color>
+    <color name="gold">#e2b94b</color>
+    <color name="gold_bright">#ffd86b</color>
+    <color name="obsidian">#0b0d13</color>
+</resources>

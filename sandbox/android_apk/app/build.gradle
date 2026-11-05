@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.conde.treppio'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.conde.treppio"
+        minSdk 24
+        targetSdk 34
+        versionCode 81
+        versionName "8.1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+}

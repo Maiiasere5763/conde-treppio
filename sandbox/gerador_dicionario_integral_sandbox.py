@@ -1295,6 +1295,16 @@ def generate_all_files():
         with open(portable_html_path, "w", encoding="utf-8") as f:
             f.write(portable_html)
 
+        # 3. Salvar assets embutidos no projeto Android APK (sandbox/android_apk/app/src/main/assets/)
+        android_assets_dir = os.path.join(out_dir, "android_apk", "app", "src", "main", "assets")
+        os.makedirs(android_assets_dir, exist_ok=True)
+        with open(os.path.join(android_assets_dir, "index.html"), "w", encoding="utf-8") as f:
+            f.write(portable_html)
+        with open(os.path.join(android_assets_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
+            f.write("window.CONDE_DB = " + json_compact_str + ";\n")
+        with open(os.path.join(android_assets_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
+            f.write(json_compact_str)
+
     print(f"=== GERAÇÃO CONCLUÍDA COM SUCESSO ===")
     print(f" -> Dicionário Geral Markdown: {sandbox_md_path} ({os.path.getsize(sandbox_md_path):,} bytes)")
     print(f" -> Códice Verbal Exaustivo:   {verbs_md_path} ({os.path.getsize(verbs_md_path):,} bytes)")

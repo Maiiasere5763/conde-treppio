@@ -30,6 +30,7 @@ echo.
 echo ============================================================================
 echo   PUBLICACAO CONCLUIDA!
 echo   -> Site Publico para seus amigos: https://%GH_USER%.github.io/conde-treppio/
+echo   -> Download do APK Android:       https://github.com/%GH_USER%/conde-treppio/releases
 echo   -> URL do Banco JSON Online:      https://raw.githubusercontent.com/%GH_USER%/conde-treppio/main/docs/dicionario_formas_expandidas.json
 echo ============================================================================
 pause
