@@ -647,3 +647,4 @@ with open(UI_INDEX_HTML, "w", encoding="utf-8") as f:
 print(" -> sandbox/ui_dicionario/index.html atualizado com sucesso!")
 
 print("=== Processo de injeção concluído com êxito! ===")
+

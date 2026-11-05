@@ -1,6 +1,138 @@
-# Códice Verbal Exaustivo da Língua Tréppia: 272 Verbos × 114 Formas (31,008 Formas Conjugadas)
+# Códice Verbal Exaustivo da Língua Tréppia: 336 Verbos × 114 Formas (38,304 Formas Conjugadas)
 
-## 1. Raiz `bar-` (irritar, importunar)
+## 1. Raiz `ambul-` (caminhar pela trilha, marchar na neve)
+
+### 1. Positivo: **ambulur** (*caminhar pela trilha, marchar na neve*)
+
+- **Infinitivo:** `ambulur` | **Imperativo:** `Ambul!` | **Interrogativo 2ª Pl:** `ambulukka?`
+- **Particípio (8 Casos):** Nom.Sg `ambulet`, Gen.Sg `ambulety`, Dat.Sg `ambuleti`, Acu.Sg `ambuletom`, Nom.Pl `ambuleti`, Gen.Pl `ambuletye`, Dat.Pl `ambuletoi`, Acu.Pl `ambuletos`
+- **Derivados Nominais:** Agente `ambulte`, Abstrato `ambulor`, Instrumento `ambultek`, Lugar `ambulia`
+  - **Pres.Ind Ativa:** `ambulum, ambulus, ambulu, ambulun, ambulut` | **Passiva:** `ambulusem, ambuluses, ambuluse, ambulusen, ambuluset`
+  - **Pres.Subj Ativa:** `ambulukem, ambulukes, ambuluke, ambuluken, ambuluket` | **Passiva:** `ambulukesem, ambulukeses, ambulukese, ambulukesen, ambulukeset`
+  - **Pass.Ind Ativa:** `ambulram, ambulras, ambulra, ambulran, ambulrat` | **Passiva:** `ambulrasem, ambulrases, ambulrase, ambulrasen, ambulraset`
+  - **Pass.Subj Ativa:** `ambulrakem, ambulrakes, ambulrake, ambulraken, ambulraket` | **Passiva:** `ambulrakesem, ambulrakeses, ambulrakese, ambulrakesen, ambulrakeset`
+  - **Dur.Ind Ativa:** `ambulaim, ambulais, ambulai, ambulain, ambulait` | **Passiva:** `ambulaisem, ambulaises, ambulaise, ambulaisen, ambulaiset`
+  - **Dur.Subj Ativa:** `ambulaikem, ambulaikes, ambulaike, ambulaiken, ambulaiket` | **Passiva:** `ambulaikesem, ambulaikeses, ambulaikese, ambulaikesen, ambulaikeset`
+  - **Fut.Ind Ativa:** `ambulrum, ambulrus, ambulru, ambulrun, ambulrut` | **Passiva:** `ambulrusem, ambulruses, ambulruse, ambulrusen, ambulruset`
+  - **Fut.Subj Ativa:** `ambulrukem, ambulrukes, ambulruke, ambulruken, ambulruket` | **Passiva:** `ambulrukesem, ambulrukeses, ambulrukese, ambulrukesen, ambulrukeset`
+  - **Imperf.Ind Ativa:** `ambulbam, ambulbas, ambulba, ambulban, ambulbat` | **Passiva:** `ambulbasem, ambulbases, ambulbase, ambulbasen, ambulbaset`
+  - **Imperf.Subj Ativa:** `ambulbakem, ambulbakes, ambulbake, ambulbaken, ambulbaket` | **Passiva:** `ambulbakesem, ambulbakeses, ambulbakese, ambulbakesen, ambulbakeset`
+
+### 2. Privativo (a-): **ambulur** (*paralisar o passo, deter-se na geada*)
+
+- **Infinitivo:** `ambulur` | **Imperativo:** `Ambul!` | **Interrogativo 2ª Pl:** `ambulukka?`
+- **Particípio (8 Casos):** Nom.Sg `ambulet`, Gen.Sg `ambulety`, Dat.Sg `ambuleti`, Acu.Sg `ambuletom`, Nom.Pl `ambuleti`, Gen.Pl `ambuletye`, Dat.Pl `ambuletoi`, Acu.Pl `ambuletos`
+- **Derivados Nominais:** Agente `ambulte`, Abstrato `ambulor`, Instrumento `ambultek`, Lugar `ambulia`
+  - **Pres.Ind Ativa:** `ambulum, ambulus, ambulu, ambulun, ambulut` | **Passiva:** `ambulusem, ambuluses, ambuluse, ambulusen, ambuluset`
+  - **Pres.Subj Ativa:** `ambulukem, ambulukes, ambuluke, ambuluken, ambuluket` | **Passiva:** `ambulukesem, ambulukeses, ambulukese, ambulukesen, ambulukeset`
+  - **Pass.Ind Ativa:** `ambulram, ambulras, ambulra, ambulran, ambulrat` | **Passiva:** `ambulrasem, ambulrases, ambulrase, ambulrasen, ambulraset`
+  - **Pass.Subj Ativa:** `ambulrakem, ambulrakes, ambulrake, ambulraken, ambulraket` | **Passiva:** `ambulrakesem, ambulrakeses, ambulrakese, ambulrakesen, ambulrakeset`
+  - **Dur.Ind Ativa:** `ambulaim, ambulais, ambulai, ambulain, ambulait` | **Passiva:** `ambulaisem, ambulaises, ambulaise, ambulaisen, ambulaiset`
+  - **Dur.Subj Ativa:** `ambulaikem, ambulaikes, ambulaike, ambulaiken, ambulaiket` | **Passiva:** `ambulaikesem, ambulaikeses, ambulaikese, ambulaikesen, ambulaikeset`
+  - **Fut.Ind Ativa:** `ambulrum, ambulrus, ambulru, ambulrun, ambulrut` | **Passiva:** `ambulrusem, ambulruses, ambulruse, ambulrusen, ambulruset`
+  - **Fut.Subj Ativa:** `ambulrukem, ambulrukes, ambulruke, ambulruken, ambulruket` | **Passiva:** `ambulrukesem, ambulrukeses, ambulrukese, ambulrukesen, ambulrukeset`
+  - **Imperf.Ind Ativa:** `ambulbam, ambulbas, ambulba, ambulban, ambulbat` | **Passiva:** `ambulbasem, ambulbases, ambulbase, ambulbasen, ambulbaset`
+  - **Imperf.Subj Ativa:** `ambulbakem, ambulbakes, ambulbake, ambulbaken, ambulbaket` | **Passiva:** `ambulbakesem, ambulbakeses, ambulbakese, ambulbakesen, ambulbakeset`
+
+### 3. Iterativo (o-/od-): **odambulur** (*voltar a caminhar, retomar a jornada*)
+
+- **Infinitivo:** `odambulur` | **Imperativo:** `Odambul!` | **Interrogativo 2ª Pl:** `odambulukka?`
+- **Particípio (8 Casos):** Nom.Sg `odambulet`, Gen.Sg `odambulety`, Dat.Sg `odambuleti`, Acu.Sg `odambuletom`, Nom.Pl `odambuleti`, Gen.Pl `odambuletye`, Dat.Pl `odambuletoi`, Acu.Pl `odambuletos`
+- **Derivados Nominais:** Agente `odambulte`, Abstrato `odambulor`, Instrumento `odambultek`, Lugar `odambulia`
+  - **Pres.Ind Ativa:** `odambulum, odambulus, odambulu, odambulun, odambulut` | **Passiva:** `odambulusem, odambuluses, odambuluse, odambulusen, odambuluset`
+  - **Pres.Subj Ativa:** `odambulukem, odambulukes, odambuluke, odambuluken, odambuluket` | **Passiva:** `odambulukesem, odambulukeses, odambulukese, odambulukesen, odambulukeset`
+  - **Pass.Ind Ativa:** `odambulram, odambulras, odambulra, odambulran, odambulrat` | **Passiva:** `odambulrasem, odambulrases, odambulrase, odambulrasen, odambulraset`
+  - **Pass.Subj Ativa:** `odambulrakem, odambulrakes, odambulrake, odambulraken, odambulraket` | **Passiva:** `odambulrakesem, odambulrakeses, odambulrakese, odambulrakesen, odambulrakeset`
+  - **Dur.Ind Ativa:** `odambulaim, odambulais, odambulai, odambulain, odambulait` | **Passiva:** `odambulaisem, odambulaises, odambulaise, odambulaisen, odambulaiset`
+  - **Dur.Subj Ativa:** `odambulaikem, odambulaikes, odambulaike, odambulaiken, odambulaiket` | **Passiva:** `odambulaikesem, odambulaikeses, odambulaikese, odambulaikesen, odambulaikeset`
+  - **Fut.Ind Ativa:** `odambulrum, odambulrus, odambulru, odambulrun, odambulrut` | **Passiva:** `odambulrusem, odambulruses, odambulruse, odambulrusen, odambulruset`
+  - **Fut.Subj Ativa:** `odambulrukem, odambulrukes, odambulruke, odambulruken, odambulruket` | **Passiva:** `odambulrukesem, odambulrukeses, odambulrukese, odambulrukesen, odambulrukeset`
+  - **Imperf.Ind Ativa:** `odambulbam, odambulbas, odambulba, odambulban, odambulbat` | **Passiva:** `odambulbasem, odambulbases, odambulbase, odambulbasen, odambulbaset`
+  - **Imperf.Subj Ativa:** `odambulbakem, odambulbakes, odambulbake, odambulbaken, odambulbaket` | **Passiva:** `odambulbakesem, odambulbakeses, odambulbakese, odambulbakesen, odambulbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odambulur** (*interromper a paralisia, recomeçar a andar*)
+
+- **Infinitivo:** `odambulur` | **Imperativo:** `Odambul!` | **Interrogativo 2ª Pl:** `odambulukka?`
+- **Particípio (8 Casos):** Nom.Sg `odambulet`, Gen.Sg `odambulety`, Dat.Sg `odambuleti`, Acu.Sg `odambuletom`, Nom.Pl `odambuleti`, Gen.Pl `odambuletye`, Dat.Pl `odambuletoi`, Acu.Pl `odambuletos`
+- **Derivados Nominais:** Agente `odambulte`, Abstrato `odambulor`, Instrumento `odambultek`, Lugar `odambulia`
+  - **Pres.Ind Ativa:** `odambulum, odambulus, odambulu, odambulun, odambulut` | **Passiva:** `odambulusem, odambuluses, odambuluse, odambulusen, odambuluset`
+  - **Pres.Subj Ativa:** `odambulukem, odambulukes, odambuluke, odambuluken, odambuluket` | **Passiva:** `odambulukesem, odambulukeses, odambulukese, odambulukesen, odambulukeset`
+  - **Pass.Ind Ativa:** `odambulram, odambulras, odambulra, odambulran, odambulrat` | **Passiva:** `odambulrasem, odambulrases, odambulrase, odambulrasen, odambulraset`
+  - **Pass.Subj Ativa:** `odambulrakem, odambulrakes, odambulrake, odambulraken, odambulraket` | **Passiva:** `odambulrakesem, odambulrakeses, odambulrakese, odambulrakesen, odambulrakeset`
+  - **Dur.Ind Ativa:** `odambulaim, odambulais, odambulai, odambulain, odambulait` | **Passiva:** `odambulaisem, odambulaises, odambulaise, odambulaisen, odambulaiset`
+  - **Dur.Subj Ativa:** `odambulaikem, odambulaikes, odambulaike, odambulaiken, odambulaiket` | **Passiva:** `odambulaikesem, odambulaikeses, odambulaikese, odambulaikesen, odambulaikeset`
+  - **Fut.Ind Ativa:** `odambulrum, odambulrus, odambulru, odambulrun, odambulrut` | **Passiva:** `odambulrusem, odambulruses, odambulruse, odambulrusen, odambulruset`
+  - **Fut.Subj Ativa:** `odambulrukem, odambulrukes, odambulruke, odambulruken, odambulruket` | **Passiva:** `odambulrukesem, odambulrukeses, odambulrukese, odambulrukesen, odambulrukeset`
+  - **Imperf.Ind Ativa:** `odambulbam, odambulbas, odambulba, odambulban, odambulbat` | **Passiva:** `odambulbasem, odambulbases, odambulbase, odambulbasen, odambulbaset`
+  - **Imperf.Subj Ativa:** `odambulbakem, odambulbakes, odambulbake, odambulbaken, odambulbaket` | **Passiva:** `odambulbakesem, odambulbakeses, odambulbakese, odambulbakesen, odambulbakeset`
+
+## 2. Raiz `aud-` (escutar com atenção, ouvir os passos)
+
+### 1. Positivo: **audur** (*escutar com atenção, ouvir os passos*)
+
+- **Infinitivo:** `audur` | **Imperativo:** `Aud!` | **Interrogativo 2ª Pl:** `audukka?`
+- **Particípio (8 Casos):** Nom.Sg `audet`, Gen.Sg `audety`, Dat.Sg `audeti`, Acu.Sg `audetom`, Nom.Pl `audeti`, Gen.Pl `audetye`, Dat.Pl `audetoi`, Acu.Pl `audetos`
+- **Derivados Nominais:** Agente `autte`, Abstrato `audor`, Instrumento `auttek`, Lugar `audia`
+  - **Pres.Ind Ativa:** `audum, audus, audu, audun, audut` | **Passiva:** `audusem, auduses, auduse, audusen, auduset`
+  - **Pres.Subj Ativa:** `audukem, audukes, auduke, auduken, auduket` | **Passiva:** `audukesem, audukeses, audukese, audukesen, audukeset`
+  - **Pass.Ind Ativa:** `audram, audras, audra, audran, audrat` | **Passiva:** `audrasem, audrases, audrase, audrasen, audraset`
+  - **Pass.Subj Ativa:** `audrakem, audrakes, audrake, audraken, audraket` | **Passiva:** `audrakesem, audrakeses, audrakese, audrakesen, audrakeset`
+  - **Dur.Ind Ativa:** `audaim, audais, audai, audain, audait` | **Passiva:** `audaisem, audaises, audaise, audaisen, audaiset`
+  - **Dur.Subj Ativa:** `audaikem, audaikes, audaike, audaiken, audaiket` | **Passiva:** `audaikesem, audaikeses, audaikese, audaikesen, audaikeset`
+  - **Fut.Ind Ativa:** `audrum, audrus, audru, audrun, audrut` | **Passiva:** `audrusem, audruses, audruse, audrusen, audruset`
+  - **Fut.Subj Ativa:** `audrukem, audrukes, audruke, audruken, audruket` | **Passiva:** `audrukesem, audrukeses, audrukese, audrukesen, audrukeset`
+  - **Imperf.Ind Ativa:** `audbam, audbas, audba, audban, audbat` | **Passiva:** `audbasem, audbases, audbase, audbasen, audbaset`
+  - **Imperf.Subj Ativa:** `audbakem, audbakes, audbake, audbaken, audbaket` | **Passiva:** `audbakesem, audbakeses, audbakese, audbakesen, audbakeset`
+
+### 2. Privativo (a-): **audur** (*ensurdecer, fazer-se desentendido*)
+
+- **Infinitivo:** `audur` | **Imperativo:** `Aud!` | **Interrogativo 2ª Pl:** `audukka?`
+- **Particípio (8 Casos):** Nom.Sg `audet`, Gen.Sg `audety`, Dat.Sg `audeti`, Acu.Sg `audetom`, Nom.Pl `audeti`, Gen.Pl `audetye`, Dat.Pl `audetoi`, Acu.Pl `audetos`
+- **Derivados Nominais:** Agente `autte`, Abstrato `audor`, Instrumento `auttek`, Lugar `audia`
+  - **Pres.Ind Ativa:** `audum, audus, audu, audun, audut` | **Passiva:** `audusem, auduses, auduse, audusen, auduset`
+  - **Pres.Subj Ativa:** `audukem, audukes, auduke, auduken, auduket` | **Passiva:** `audukesem, audukeses, audukese, audukesen, audukeset`
+  - **Pass.Ind Ativa:** `audram, audras, audra, audran, audrat` | **Passiva:** `audrasem, audrases, audrase, audrasen, audraset`
+  - **Pass.Subj Ativa:** `audrakem, audrakes, audrake, audraken, audraket` | **Passiva:** `audrakesem, audrakeses, audrakese, audrakesen, audrakeset`
+  - **Dur.Ind Ativa:** `audaim, audais, audai, audain, audait` | **Passiva:** `audaisem, audaises, audaise, audaisen, audaiset`
+  - **Dur.Subj Ativa:** `audaikem, audaikes, audaike, audaiken, audaiket` | **Passiva:** `audaikesem, audaikeses, audaikese, audaikesen, audaikeset`
+  - **Fut.Ind Ativa:** `audrum, audrus, audru, audrun, audrut` | **Passiva:** `audrusem, audruses, audruse, audrusen, audruset`
+  - **Fut.Subj Ativa:** `audrukem, audrukes, audruke, audruken, audruket` | **Passiva:** `audrukesem, audrukeses, audrukese, audrukesen, audrukeset`
+  - **Imperf.Ind Ativa:** `audbam, audbas, audba, audban, audbat` | **Passiva:** `audbasem, audbases, audbase, audbasen, audbaset`
+  - **Imperf.Subj Ativa:** `audbakem, audbakes, audbake, audbaken, audbaket` | **Passiva:** `audbakesem, audbakeses, audbakese, audbakesen, audbakeset`
+
+### 3. Iterativo (o-/od-): **odaudur** (*ouvir novamente, reescutar os ecos*)
+
+- **Infinitivo:** `odaudur` | **Imperativo:** `Odaud!` | **Interrogativo 2ª Pl:** `odaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaudet`, Gen.Sg `odaudety`, Dat.Sg `odaudeti`, Acu.Sg `odaudetom`, Nom.Pl `odaudeti`, Gen.Pl `odaudetye`, Dat.Pl `odaudetoi`, Acu.Pl `odaudetos`
+- **Derivados Nominais:** Agente `odautte`, Abstrato `odaudor`, Instrumento `odauttek`, Lugar `odaudia`
+  - **Pres.Ind Ativa:** `odaudum, odaudus, odaudu, odaudun, odaudut` | **Passiva:** `odaudusem, odauduses, odauduse, odaudusen, odauduset`
+  - **Pres.Subj Ativa:** `odaudukem, odaudukes, odauduke, odauduken, odauduket` | **Passiva:** `odaudukesem, odaudukeses, odaudukese, odaudukesen, odaudukeset`
+  - **Pass.Ind Ativa:** `odaudram, odaudras, odaudra, odaudran, odaudrat` | **Passiva:** `odaudrasem, odaudrases, odaudrase, odaudrasen, odaudraset`
+  - **Pass.Subj Ativa:** `odaudrakem, odaudrakes, odaudrake, odaudraken, odaudraket` | **Passiva:** `odaudrakesem, odaudrakeses, odaudrakese, odaudrakesen, odaudrakeset`
+  - **Dur.Ind Ativa:** `odaudaim, odaudais, odaudai, odaudain, odaudait` | **Passiva:** `odaudaisem, odaudaises, odaudaise, odaudaisen, odaudaiset`
+  - **Dur.Subj Ativa:** `odaudaikem, odaudaikes, odaudaike, odaudaiken, odaudaiket` | **Passiva:** `odaudaikesem, odaudaikeses, odaudaikese, odaudaikesen, odaudaikeset`
+  - **Fut.Ind Ativa:** `odaudrum, odaudrus, odaudru, odaudrun, odaudrut` | **Passiva:** `odaudrusem, odaudruses, odaudruse, odaudrusen, odaudruset`
+  - **Fut.Subj Ativa:** `odaudrukem, odaudrukes, odaudruke, odaudruken, odaudruket` | **Passiva:** `odaudrukesem, odaudrukeses, odaudrukese, odaudrukesen, odaudrukeset`
+  - **Imperf.Ind Ativa:** `odaudbam, odaudbas, odaudba, odaudban, odaudbat` | **Passiva:** `odaudbasem, odaudbases, odaudbase, odaudbasen, odaudbaset`
+  - **Imperf.Subj Ativa:** `odaudbakem, odaudbakes, odaudbake, odaudbaken, odaudbaket` | **Passiva:** `odaudbakesem, odaudbakeses, odaudbakese, odaudbakesen, odaudbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odaudur** (*voltar a ouvir após o silêncio*)
+
+- **Infinitivo:** `odaudur` | **Imperativo:** `Odaud!` | **Interrogativo 2ª Pl:** `odaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaudet`, Gen.Sg `odaudety`, Dat.Sg `odaudeti`, Acu.Sg `odaudetom`, Nom.Pl `odaudeti`, Gen.Pl `odaudetye`, Dat.Pl `odaudetoi`, Acu.Pl `odaudetos`
+- **Derivados Nominais:** Agente `odautte`, Abstrato `odaudor`, Instrumento `odauttek`, Lugar `odaudia`
+  - **Pres.Ind Ativa:** `odaudum, odaudus, odaudu, odaudun, odaudut` | **Passiva:** `odaudusem, odauduses, odauduse, odaudusen, odauduset`
+  - **Pres.Subj Ativa:** `odaudukem, odaudukes, odauduke, odauduken, odauduket` | **Passiva:** `odaudukesem, odaudukeses, odaudukese, odaudukesen, odaudukeset`
+  - **Pass.Ind Ativa:** `odaudram, odaudras, odaudra, odaudran, odaudrat` | **Passiva:** `odaudrasem, odaudrases, odaudrase, odaudrasen, odaudraset`
+  - **Pass.Subj Ativa:** `odaudrakem, odaudrakes, odaudrake, odaudraken, odaudraket` | **Passiva:** `odaudrakesem, odaudrakeses, odaudrakese, odaudrakesen, odaudrakeset`
+  - **Dur.Ind Ativa:** `odaudaim, odaudais, odaudai, odaudain, odaudait` | **Passiva:** `odaudaisem, odaudaises, odaudaise, odaudaisen, odaudaiset`
+  - **Dur.Subj Ativa:** `odaudaikem, odaudaikes, odaudaike, odaudaiken, odaudaiket` | **Passiva:** `odaudaikesem, odaudaikeses, odaudaikese, odaudaikesen, odaudaikeset`
+  - **Fut.Ind Ativa:** `odaudrum, odaudrus, odaudru, odaudrun, odaudrut` | **Passiva:** `odaudrusem, odaudruses, odaudruse, odaudrusen, odaudruset`
+  - **Fut.Subj Ativa:** `odaudrukem, odaudrukes, odaudruke, odaudruken, odaudruket` | **Passiva:** `odaudrukesem, odaudrukeses, odaudrukese, odaudrukesen, odaudrukeset`
+  - **Imperf.Ind Ativa:** `odaudbam, odaudbas, odaudba, odaudban, odaudbat` | **Passiva:** `odaudbasem, odaudbases, odaudbase, odaudbasen, odaudbaset`
+  - **Imperf.Subj Ativa:** `odaudbakem, odaudbakes, odaudbake, odaudbaken, odaudbaket` | **Passiva:** `odaudbakesem, odaudbakeses, odaudbakese, odaudbakesen, odaudbakeset`
+
+## 3. Raiz `bar-` (irritar, importunar)
 
 ### 1. Positivo: **barur** (*irritar, importunar*)
 
@@ -66,7 +198,73 @@
   - **Imperf.Ind Ativa:** `odabarbam, odabarbas, odabarba, odabarban, odabarbat` | **Passiva:** `odabarbasem, odabarbases, odabarbase, odabarbasen, odabarbaset`
   - **Imperf.Subj Ativa:** `odabarbakem, odabarbakes, odabarbake, odabarbaken, odabarbaket` | **Passiva:** `odabarbakesem, odabarbakeses, odabarbakese, odabarbakesen, odabarbakeset`
 
-## 2. Raiz `dai-` (pensar, conceber na mente)
+## 4. Raiz `bib-` (beber, saciar a sede)
+
+### 1. Positivo: **bibur** (*beber, saciar a sede*)
+
+- **Infinitivo:** `bibur` | **Imperativo:** `Bib!` | **Interrogativo 2ª Pl:** `bibukka?`
+- **Particípio (8 Casos):** Nom.Sg `bibet`, Gen.Sg `bibety`, Dat.Sg `bibeti`, Acu.Sg `bibetom`, Nom.Pl `bibeti`, Gen.Pl `bibetye`, Dat.Pl `bibetoi`, Acu.Pl `bibetos`
+- **Derivados Nominais:** Agente `bibte`, Abstrato `bibor`, Instrumento `bibtek`, Lugar `bibia`
+  - **Pres.Ind Ativa:** `bibum, bibus, bibu, bibun, bibut` | **Passiva:** `bibusem, bibuses, bibuse, bibusen, bibuset`
+  - **Pres.Subj Ativa:** `bibukem, bibukes, bibuke, bibuken, bibuket` | **Passiva:** `bibukesem, bibukeses, bibukese, bibukesen, bibukeset`
+  - **Pass.Ind Ativa:** `bibram, bibras, bibra, bibran, bibrat` | **Passiva:** `bibrasem, bibrases, bibrase, bibrasen, bibraset`
+  - **Pass.Subj Ativa:** `bibrakem, bibrakes, bibrake, bibraken, bibraket` | **Passiva:** `bibrakesem, bibrakeses, bibrakese, bibrakesen, bibrakeset`
+  - **Dur.Ind Ativa:** `bibaim, bibais, bibai, bibain, bibait` | **Passiva:** `bibaisem, bibaises, bibaise, bibaisen, bibaiset`
+  - **Dur.Subj Ativa:** `bibaikem, bibaikes, bibaike, bibaiken, bibaiket` | **Passiva:** `bibaikesem, bibaikeses, bibaikese, bibaikesen, bibaikeset`
+  - **Fut.Ind Ativa:** `bibrum, bibrus, bibru, bibrun, bibrut` | **Passiva:** `bibrusem, bibruses, bibruse, bibrusen, bibruset`
+  - **Fut.Subj Ativa:** `bibrukem, bibrukes, bibruke, bibruken, bibruket` | **Passiva:** `bibrukesem, bibrukeses, bibrukese, bibrukesen, bibrukeset`
+  - **Imperf.Ind Ativa:** `bibbam, bibbas, bibba, bibban, bibbat` | **Passiva:** `bibbasem, bibbases, bibbase, bibbasen, bibbaset`
+  - **Imperf.Subj Ativa:** `bibbakem, bibbakes, bibbake, bibbaken, bibbaket` | **Passiva:** `bibbakesem, bibbakeses, bibbakese, bibbakesen, bibbakeset`
+
+### 2. Privativo (a-): **abibur** (*abster-se de beber, passar sede*)
+
+- **Infinitivo:** `abibur` | **Imperativo:** `Abib!` | **Interrogativo 2ª Pl:** `abibukka?`
+- **Particípio (8 Casos):** Nom.Sg `abibet`, Gen.Sg `abibety`, Dat.Sg `abibeti`, Acu.Sg `abibetom`, Nom.Pl `abibeti`, Gen.Pl `abibetye`, Dat.Pl `abibetoi`, Acu.Pl `abibetos`
+- **Derivados Nominais:** Agente `abibte`, Abstrato `abibor`, Instrumento `abibtek`, Lugar `abibia`
+  - **Pres.Ind Ativa:** `abibum, abibus, abibu, abibun, abibut` | **Passiva:** `abibusem, abibuses, abibuse, abibusen, abibuset`
+  - **Pres.Subj Ativa:** `abibukem, abibukes, abibuke, abibuken, abibuket` | **Passiva:** `abibukesem, abibukeses, abibukese, abibukesen, abibukeset`
+  - **Pass.Ind Ativa:** `abibram, abibras, abibra, abibran, abibrat` | **Passiva:** `abibrasem, abibrases, abibrase, abibrasen, abibraset`
+  - **Pass.Subj Ativa:** `abibrakem, abibrakes, abibrake, abibraken, abibraket` | **Passiva:** `abibrakesem, abibrakeses, abibrakese, abibrakesen, abibrakeset`
+  - **Dur.Ind Ativa:** `abibaim, abibais, abibai, abibain, abibait` | **Passiva:** `abibaisem, abibaises, abibaise, abibaisen, abibaiset`
+  - **Dur.Subj Ativa:** `abibaikem, abibaikes, abibaike, abibaiken, abibaiket` | **Passiva:** `abibaikesem, abibaikeses, abibaikese, abibaikesen, abibaikeset`
+  - **Fut.Ind Ativa:** `abibrum, abibrus, abibru, abibrun, abibrut` | **Passiva:** `abibrusem, abibruses, abibruse, abibrusen, abibruset`
+  - **Fut.Subj Ativa:** `abibrukem, abibrukes, abibruke, abibruken, abibruket` | **Passiva:** `abibrukesem, abibrukeses, abibrukese, abibrukesen, abibrukeset`
+  - **Imperf.Ind Ativa:** `abibbam, abibbas, abibba, abibban, abibbat` | **Passiva:** `abibbasem, abibbases, abibbase, abibbasen, abibbaset`
+  - **Imperf.Subj Ativa:** `abibbakem, abibbakes, abibbake, abibbaken, abibbaket` | **Passiva:** `abibbakesem, abibbakeses, abibbakese, abibbakesen, abibbakeset`
+
+### 3. Iterativo (o-/od-): **obibur** (*voltar a beber, bebericar socialmente*)
+
+- **Infinitivo:** `obibur` | **Imperativo:** `Obib!` | **Interrogativo 2ª Pl:** `obibukka?`
+- **Particípio (8 Casos):** Nom.Sg `obibet`, Gen.Sg `obibety`, Dat.Sg `obibeti`, Acu.Sg `obibetom`, Nom.Pl `obibeti`, Gen.Pl `obibetye`, Dat.Pl `obibetoi`, Acu.Pl `obibetos`
+- **Derivados Nominais:** Agente `obibte`, Abstrato `obibor`, Instrumento `obibtek`, Lugar `obibia`
+  - **Pres.Ind Ativa:** `obibum, obibus, obibu, obibun, obibut` | **Passiva:** `obibusem, obibuses, obibuse, obibusen, obibuset`
+  - **Pres.Subj Ativa:** `obibukem, obibukes, obibuke, obibuken, obibuket` | **Passiva:** `obibukesem, obibukeses, obibukese, obibukesen, obibukeset`
+  - **Pass.Ind Ativa:** `obibram, obibras, obibra, obibran, obibrat` | **Passiva:** `obibrasem, obibrases, obibrase, obibrasen, obibraset`
+  - **Pass.Subj Ativa:** `obibrakem, obibrakes, obibrake, obibraken, obibraket` | **Passiva:** `obibrakesem, obibrakeses, obibrakese, obibrakesen, obibrakeset`
+  - **Dur.Ind Ativa:** `obibaim, obibais, obibai, obibain, obibait` | **Passiva:** `obibaisem, obibaises, obibaise, obibaisen, obibaiset`
+  - **Dur.Subj Ativa:** `obibaikem, obibaikes, obibaike, obibaiken, obibaiket` | **Passiva:** `obibaikesem, obibaikeses, obibaikese, obibaikesen, obibaikeset`
+  - **Fut.Ind Ativa:** `obibrum, obibrus, obibru, obibrun, obibrut` | **Passiva:** `obibrusem, obibruses, obibruse, obibrusen, obibruset`
+  - **Fut.Subj Ativa:** `obibrukem, obibrukes, obibruke, obibruken, obibruket` | **Passiva:** `obibrukesem, obibrukeses, obibrukese, obibrukesen, obibrukeset`
+  - **Imperf.Ind Ativa:** `obibbam, obibbas, obibba, obibban, obibbat` | **Passiva:** `obibbasem, obibbases, obibbase, obibbasen, obibbaset`
+  - **Imperf.Subj Ativa:** `obibbakem, obibbakes, obibbake, obibbaken, obibbaket` | **Passiva:** `obibbakesem, obibbakeses, obibbakese, obibbakesen, obibbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odabibur** (*cessar a sede extrema, recobrar sobriedade*)
+
+- **Infinitivo:** `odabibur` | **Imperativo:** `Odabib!` | **Interrogativo 2ª Pl:** `odabibukka?`
+- **Particípio (8 Casos):** Nom.Sg `odabibet`, Gen.Sg `odabibety`, Dat.Sg `odabibeti`, Acu.Sg `odabibetom`, Nom.Pl `odabibeti`, Gen.Pl `odabibetye`, Dat.Pl `odabibetoi`, Acu.Pl `odabibetos`
+- **Derivados Nominais:** Agente `odabibte`, Abstrato `odabibor`, Instrumento `odabibtek`, Lugar `odabibia`
+  - **Pres.Ind Ativa:** `odabibum, odabibus, odabibu, odabibun, odabibut` | **Passiva:** `odabibusem, odabibuses, odabibuse, odabibusen, odabibuset`
+  - **Pres.Subj Ativa:** `odabibukem, odabibukes, odabibuke, odabibuken, odabibuket` | **Passiva:** `odabibukesem, odabibukeses, odabibukese, odabibukesen, odabibukeset`
+  - **Pass.Ind Ativa:** `odabibram, odabibras, odabibra, odabibran, odabibrat` | **Passiva:** `odabibrasem, odabibrases, odabibrase, odabibrasen, odabibraset`
+  - **Pass.Subj Ativa:** `odabibrakem, odabibrakes, odabibrake, odabibraken, odabibraket` | **Passiva:** `odabibrakesem, odabibrakeses, odabibrakese, odabibrakesen, odabibrakeset`
+  - **Dur.Ind Ativa:** `odabibaim, odabibais, odabibai, odabibain, odabibait` | **Passiva:** `odabibaisem, odabibaises, odabibaise, odabibaisen, odabibaiset`
+  - **Dur.Subj Ativa:** `odabibaikem, odabibaikes, odabibaike, odabibaiken, odabibaiket` | **Passiva:** `odabibaikesem, odabibaikeses, odabibaikese, odabibaikesen, odabibaikeset`
+  - **Fut.Ind Ativa:** `odabibrum, odabibrus, odabibru, odabibrun, odabibrut` | **Passiva:** `odabibrusem, odabibruses, odabibruse, odabibrusen, odabibruset`
+  - **Fut.Subj Ativa:** `odabibrukem, odabibrukes, odabibruke, odabibruken, odabibruket` | **Passiva:** `odabibrukesem, odabibrukeses, odabibrukese, odabibrukesen, odabibrukeset`
+  - **Imperf.Ind Ativa:** `odabibbam, odabibbas, odabibba, odabibban, odabibbat` | **Passiva:** `odabibbasem, odabibbases, odabibbase, odabibbasen, odabibbaset`
+  - **Imperf.Subj Ativa:** `odabibbakem, odabibbakes, odabibbake, odabibbaken, odabibbaket` | **Passiva:** `odabibbakesem, odabibbakeses, odabibbakese, odabibbakesen, odabibbakeset`
+
+## 5. Raiz `dai-` (pensar, conceber na mente)
 
 ### 1. Positivo: **daiur** (*pensar, conceber na mente*)
 
@@ -132,7 +330,7 @@
   - **Imperf.Ind Ativa:** `oda'aibam, oda'aibas, oda'aiba, oda'aiban, oda'aibat` | **Passiva:** `oda'aibasem, oda'aibases, oda'aibase, oda'aibasen, oda'aibaset`
   - **Imperf.Subj Ativa:** `oda'aibakem, oda'aibakes, oda'aibake, oda'aibaken, oda'aibaket` | **Passiva:** `oda'aibakesem, oda'aibakeses, oda'aibakese, oda'aibakesen, oda'aibakeset`
 
-## 3. Raiz `dak-` (flanquear à direita, ordenar ala destra)
+## 6. Raiz `dak-` (flanquear à direita, ordenar ala destra)
 
 ### 1. Positivo: **dakur** (*flanquear à direita, ordenar ala destra*)
 
@@ -198,7 +396,7 @@
   - **Imperf.Ind Ativa:** `oda'abbam, oda'abbas, oda'abba, oda'abban, oda'abbat` | **Passiva:** `oda'abbasem, oda'abbases, oda'abbase, oda'abbasen, oda'abbaset`
   - **Imperf.Subj Ativa:** `oda'abbakem, oda'abbakes, oda'abbake, oda'abbaken, oda'abbaket` | **Passiva:** `oda'abbakesem, oda'abbakeses, oda'abbakese, oda'abbakesen, oda'abbakeset`
 
-## 4. Raiz `doot-` (entediar-se, enfadar-se)
+## 7. Raiz `doot-` (entediar-se, enfadar-se)
 
 ### 1. Positivo: **dootur** (*entediar-se, enfadar-se*)
 
@@ -264,7 +462,73 @@
   - **Imperf.Ind Ativa:** `oda'oobbam, oda'oobbas, oda'oobba, oda'oobban, oda'oobbat` | **Passiva:** `oda'oobbasem, oda'oobbases, oda'oobbase, oda'oobbasen, oda'oobbaset`
   - **Imperf.Subj Ativa:** `oda'oobbakem, oda'oobbakes, oda'oobbake, oda'oobbaken, oda'oobbaket` | **Passiva:** `oda'oobbakesem, oda'oobbakeses, oda'oobbakese, oda'oobbakesen, oda'oobbakeset`
 
-## 5. Raiz `dur-` (brilhar, resplandecer)
+## 8. Raiz `dorm-` (dormir, repousar no leito)
+
+### 1. Positivo: **dormur** (*dormir, repousar no leito*)
+
+- **Infinitivo:** `dormur` | **Imperativo:** `Dorm!` | **Interrogativo 2ª Pl:** `dormukka?`
+- **Particípio (8 Casos):** Nom.Sg `dormet`, Gen.Sg `dormety`, Dat.Sg `dormeti`, Acu.Sg `dormetom`, Nom.Pl `dormeti`, Gen.Pl `dormetye`, Dat.Pl `dormetoi`, Acu.Pl `dormetos`
+- **Derivados Nominais:** Agente `dormte`, Abstrato `dormor`, Instrumento `dormtek`, Lugar `dormia`
+  - **Pres.Ind Ativa:** `dormum, dormus, dormu, dormun, dormut` | **Passiva:** `dormusem, dormuses, dormuse, dormusen, dormuset`
+  - **Pres.Subj Ativa:** `dormukem, dormukes, dormuke, dormuken, dormuket` | **Passiva:** `dormukesem, dormukeses, dormukese, dormukesen, dormukeset`
+  - **Pass.Ind Ativa:** `dormmam, dormmas, dormma, dormman, dormmat` | **Passiva:** `dormmasem, dormmases, dormmase, dormmasen, dormmaset`
+  - **Pass.Subj Ativa:** `dormmakem, dormmakes, dormmake, dormmaken, dormmaket` | **Passiva:** `dormmakesem, dormmakeses, dormmakese, dormmakesen, dormmakeset`
+  - **Dur.Ind Ativa:** `dormaim, dormais, dormai, dormain, dormait` | **Passiva:** `dormaisem, dormaises, dormaise, dormaisen, dormaiset`
+  - **Dur.Subj Ativa:** `dormaikem, dormaikes, dormaike, dormaiken, dormaiket` | **Passiva:** `dormaikesem, dormaikeses, dormaikese, dormaikesen, dormaikeset`
+  - **Fut.Ind Ativa:** `dormmum, dormmus, dormmu, dormmun, dormmut` | **Passiva:** `dormmusem, dormmuses, dormmuse, dormmusen, dormmuset`
+  - **Fut.Subj Ativa:** `dormmukem, dormmukes, dormmuke, dormmuken, dormmuket` | **Passiva:** `dormmukesem, dormmukeses, dormmukese, dormmukesen, dormmukeset`
+  - **Imperf.Ind Ativa:** `dormbam, dormbas, dormba, dormban, dormbat` | **Passiva:** `dormbasem, dormbases, dormbase, dormbasen, dormbaset`
+  - **Imperf.Subj Ativa:** `dormbakem, dormbakes, dormbake, dormbaken, dormbaket` | **Passiva:** `dormbakesem, dormbakeses, dormbakese, dormbakesen, dormbakeset`
+
+### 2. Privativo (a-): **adormur** (*vigiar à noite, sofrer de insônia*)
+
+- **Infinitivo:** `adormur` | **Imperativo:** `Adorm!` | **Interrogativo 2ª Pl:** `adormukka?`
+- **Particípio (8 Casos):** Nom.Sg `adormet`, Gen.Sg `adormety`, Dat.Sg `adormeti`, Acu.Sg `adormetom`, Nom.Pl `adormeti`, Gen.Pl `adormetye`, Dat.Pl `adormetoi`, Acu.Pl `adormetos`
+- **Derivados Nominais:** Agente `adormte`, Abstrato `adormor`, Instrumento `adormtek`, Lugar `adormia`
+  - **Pres.Ind Ativa:** `adormum, adormus, adormu, adormun, adormut` | **Passiva:** `adormusem, adormuses, adormuse, adormusen, adormuset`
+  - **Pres.Subj Ativa:** `adormukem, adormukes, adormuke, adormuken, adormuket` | **Passiva:** `adormukesem, adormukeses, adormukese, adormukesen, adormukeset`
+  - **Pass.Ind Ativa:** `adormmam, adormmas, adormma, adormman, adormmat` | **Passiva:** `adormmasem, adormmases, adormmase, adormmasen, adormmaset`
+  - **Pass.Subj Ativa:** `adormmakem, adormmakes, adormmake, adormmaken, adormmaket` | **Passiva:** `adormmakesem, adormmakeses, adormmakese, adormmakesen, adormmakeset`
+  - **Dur.Ind Ativa:** `adormaim, adormais, adormai, adormain, adormait` | **Passiva:** `adormaisem, adormaises, adormaise, adormaisen, adormaiset`
+  - **Dur.Subj Ativa:** `adormaikem, adormaikes, adormaike, adormaiken, adormaiket` | **Passiva:** `adormaikesem, adormaikeses, adormaikese, adormaikesen, adormaikeset`
+  - **Fut.Ind Ativa:** `adormmum, adormmus, adormmu, adormmun, adormmut` | **Passiva:** `adormmusem, adormmuses, adormmuse, adormmusen, adormmuset`
+  - **Fut.Subj Ativa:** `adormmukem, adormmukes, adormmuke, adormmuken, adormmuket` | **Passiva:** `adormmukesem, adormmukeses, adormmukese, adormmukesen, adormmukeset`
+  - **Imperf.Ind Ativa:** `adormbam, adormbas, adormba, adormban, adormbat` | **Passiva:** `adormbasem, adormbases, adormbase, adormbasen, adormbaset`
+  - **Imperf.Subj Ativa:** `adormbakem, adormbakes, adormbake, adormbaken, adormbaket` | **Passiva:** `adormbakesem, adormbakeses, adormbakese, adormbakesen, adormbakeset`
+
+### 3. Iterativo (o-/od-): **odormur** (*voltar a dormir, tirar um cochilo*)
+
+- **Infinitivo:** `odormur` | **Imperativo:** `Odorm!` | **Interrogativo 2ª Pl:** `odormukka?`
+- **Particípio (8 Casos):** Nom.Sg `odormet`, Gen.Sg `odormety`, Dat.Sg `odormeti`, Acu.Sg `odormetom`, Nom.Pl `odormeti`, Gen.Pl `odormetye`, Dat.Pl `odormetoi`, Acu.Pl `odormetos`
+- **Derivados Nominais:** Agente `odormte`, Abstrato `odormor`, Instrumento `odormtek`, Lugar `odormia`
+  - **Pres.Ind Ativa:** `odormum, odormus, odormu, odormun, odormut` | **Passiva:** `odormusem, odormuses, odormuse, odormusen, odormuset`
+  - **Pres.Subj Ativa:** `odormukem, odormukes, odormuke, odormuken, odormuket` | **Passiva:** `odormukesem, odormukeses, odormukese, odormukesen, odormukeset`
+  - **Pass.Ind Ativa:** `odormmam, odormmas, odormma, odormman, odormmat` | **Passiva:** `odormmasem, odormmases, odormmase, odormmasen, odormmaset`
+  - **Pass.Subj Ativa:** `odormmakem, odormmakes, odormmake, odormmaken, odormmaket` | **Passiva:** `odormmakesem, odormmakeses, odormmakese, odormmakesen, odormmakeset`
+  - **Dur.Ind Ativa:** `odormaim, odormais, odormai, odormain, odormait` | **Passiva:** `odormaisem, odormaises, odormaise, odormaisen, odormaiset`
+  - **Dur.Subj Ativa:** `odormaikem, odormaikes, odormaike, odormaiken, odormaiket` | **Passiva:** `odormaikesem, odormaikeses, odormaikese, odormaikesen, odormaikeset`
+  - **Fut.Ind Ativa:** `odormmum, odormmus, odormmu, odormmun, odormmut` | **Passiva:** `odormmusem, odormmuses, odormmuse, odormmusen, odormmuset`
+  - **Fut.Subj Ativa:** `odormmukem, odormmukes, odormmuke, odormmuken, odormmuket` | **Passiva:** `odormmukesem, odormmukeses, odormmukese, odormmukesen, odormmukeset`
+  - **Imperf.Ind Ativa:** `odormbam, odormbas, odormba, odormban, odormbat` | **Passiva:** `odormbasem, odormbases, odormbase, odormbasen, odormbaset`
+  - **Imperf.Subj Ativa:** `odormbakem, odormbakes, odormbake, odormbaken, odormbaket` | **Passiva:** `odormbakesem, odormbakeses, odormbakese, odormbakesen, odormbakeset`
+
+### 4. Iter.-Privativo (od-a-): **oda'ormur** (*despertar da insônia prolongada*)
+
+- **Infinitivo:** `oda'ormur` | **Imperativo:** `Oda'orm!` | **Interrogativo 2ª Pl:** `oda'ormukka?`
+- **Particípio (8 Casos):** Nom.Sg `oda'ormet`, Gen.Sg `oda'ormety`, Dat.Sg `oda'ormeti`, Acu.Sg `oda'ormetom`, Nom.Pl `oda'ormeti`, Gen.Pl `oda'ormetye`, Dat.Pl `oda'ormetoi`, Acu.Pl `oda'ormetos`
+- **Derivados Nominais:** Agente `oda'ormte`, Abstrato `oda'ormor`, Instrumento `oda'ormtek`, Lugar `oda'ormia`
+  - **Pres.Ind Ativa:** `oda'ormum, oda'ormus, oda'ormu, oda'ormun, oda'ormut` | **Passiva:** `oda'ormusem, oda'ormuses, oda'ormuse, oda'ormusen, oda'ormuset`
+  - **Pres.Subj Ativa:** `oda'ormukem, oda'ormukes, oda'ormuke, oda'ormuken, oda'ormuket` | **Passiva:** `oda'ormukesem, oda'ormukeses, oda'ormukese, oda'ormukesen, oda'ormukeset`
+  - **Pass.Ind Ativa:** `oda'ormmam, oda'ormmas, oda'ormma, oda'ormman, oda'ormmat` | **Passiva:** `oda'ormmasem, oda'ormmases, oda'ormmase, oda'ormmasen, oda'ormmaset`
+  - **Pass.Subj Ativa:** `oda'ormmakem, oda'ormmakes, oda'ormmake, oda'ormmaken, oda'ormmaket` | **Passiva:** `oda'ormmakesem, oda'ormmakeses, oda'ormmakese, oda'ormmakesen, oda'ormmakeset`
+  - **Dur.Ind Ativa:** `oda'ormaim, oda'ormais, oda'ormai, oda'ormain, oda'ormait` | **Passiva:** `oda'ormaisem, oda'ormaises, oda'ormaise, oda'ormaisen, oda'ormaiset`
+  - **Dur.Subj Ativa:** `oda'ormaikem, oda'ormaikes, oda'ormaike, oda'ormaiken, oda'ormaiket` | **Passiva:** `oda'ormaikesem, oda'ormaikeses, oda'ormaikese, oda'ormaikesen, oda'ormaikeset`
+  - **Fut.Ind Ativa:** `oda'ormmum, oda'ormmus, oda'ormmu, oda'ormmun, oda'ormmut` | **Passiva:** `oda'ormmusem, oda'ormmuses, oda'ormmuse, oda'ormmusen, oda'ormmuset`
+  - **Fut.Subj Ativa:** `oda'ormmukem, oda'ormmukes, oda'ormmuke, oda'ormmuken, oda'ormmuket` | **Passiva:** `oda'ormmukesem, oda'ormmukeses, oda'ormmukese, oda'ormmukesen, oda'ormmukeset`
+  - **Imperf.Ind Ativa:** `oda'ormbam, oda'ormbas, oda'ormba, oda'ormban, oda'ormbat` | **Passiva:** `oda'ormbasem, oda'ormbases, oda'ormbase, oda'ormbasen, oda'ormbaset`
+  - **Imperf.Subj Ativa:** `oda'ormbakem, oda'ormbakes, oda'ormbake, oda'ormbaken, oda'ormbaket` | **Passiva:** `oda'ormbakesem, oda'ormbakeses, oda'ormbakese, oda'ormbakesen, oda'ormbakeset`
+
+## 9. Raiz `dur-` (brilhar, resplandecer)
 
 ### 1. Positivo: **durur** (*brilhar, resplandecer*)
 
@@ -330,7 +594,7 @@
   - **Imperf.Ind Ativa:** `oda'urbam, oda'urbas, oda'urba, oda'urban, oda'urbat` | **Passiva:** `oda'urbasem, oda'urbases, oda'urbase, oda'urbasen, oda'urbaset`
   - **Imperf.Subj Ativa:** `oda'urbakem, oda'urbakes, oda'urbake, oda'urbaken, oda'urbaket` | **Passiva:** `oda'urbakesem, oda'urbakeses, oda'urbakese, oda'urbakesen, oda'urbakeset`
 
-## 6. Raiz `elf-` (sacralizar, consagrar, santificar)
+## 10. Raiz `elf-` (sacralizar, consagrar, santificar)
 
 ### 1. Positivo: **elfur** (*sacralizar, consagrar, santificar*)
 
@@ -396,7 +660,7 @@
   - **Imperf.Ind Ativa:** `odaelbbam, odaelbbas, odaelbba, odaelbban, odaelbbat` | **Passiva:** `odaelbbasem, odaelbbases, odaelbbase, odaelbbasen, odaelbbaset`
   - **Imperf.Subj Ativa:** `odaelbbakem, odaelbbakes, odaelbbake, odaelbbaken, odaelbbaket` | **Passiva:** `odaelbbakesem, odaelbbakeses, odaelbbakese, odaelbbakesen, odaelbbakeset`
 
-## 7. Raiz `es-` (ser, estar, existir)
+## 11. Raiz `es-` (ser, estar, existir)
 
 ### 1. Positivo: **esur** (*ser, estar, existir*)
 
@@ -462,7 +726,7 @@
   - **Imperf.Ind Ativa:** `odaesbam, odaesbas, odaesba, odaesban, odaesbat` | **Passiva:** `odaesbasem, odaesbases, odaesbase, odaesbasen, odaesbaset`
   - **Imperf.Subj Ativa:** `odaesbakem, odaesbakes, odaesbake, odaesbaken, odaesbaket` | **Passiva:** `odaesbakesem, odaesbakeses, odaesbakese, odaesbakesen, odaesbakeset`
 
-## 8. Raiz `fain-` (piratear, saquear no mar)
+## 12. Raiz `fain-` (piratear, saquear no mar)
 
 ### 1. Positivo: **fainur** (*piratear, saquear no mar*)
 
@@ -528,7 +792,7 @@
   - **Imperf.Ind Ativa:** `odafaimbam, odafaimbas, odafaimba, odafaimban, odafaimbat` | **Passiva:** `odafaimbasem, odafaimbases, odafaimbase, odafaimbasen, odafaimbaset`
   - **Imperf.Subj Ativa:** `odafaimbakem, odafaimbakes, odafaimbake, odafaimbaken, odafaimbaket` | **Passiva:** `odafaimbakesem, odafaimbakeses, odafaimbakese, odafaimbakesen, odafaimbakeset`
 
-## 9. Raiz `far-` (cultivar trigo, alimentar com pão)
+## 13. Raiz `far-` (cultivar trigo, alimentar com pão)
 
 ### 1. Positivo: **farur** (*cultivar trigo, alimentar com pão*)
 
@@ -594,7 +858,7 @@
   - **Imperf.Ind Ativa:** `odafarbam, odafarbas, odafarba, odafarban, odafarbat` | **Passiva:** `odafarbasem, odafarbases, odafarbase, odafarbasen, odafarbaset`
   - **Imperf.Subj Ativa:** `odafarbakem, odafarbakes, odafarbake, odafarbaken, odafarbaket` | **Passiva:** `odafarbakesem, odafarbakeses, odafarbakese, odafarbakesen, odafarbakeset`
 
-## 10. Raiz `fas-` (padecer, sofrer dor)
+## 14. Raiz `fas-` (padecer, sofrer dor)
 
 ### 1. Positivo: **fasur** (*padecer, sofrer dor*)
 
@@ -660,7 +924,7 @@
   - **Imperf.Ind Ativa:** `odafasbam, odafasbas, odafasba, odafasban, odafasbat` | **Passiva:** `odafasbasem, odafasbases, odafasbase, odafasbasen, odafasbaset`
   - **Imperf.Subj Ativa:** `odafasbakem, odafasbakes, odafasbake, odafasbaken, odafasbaket` | **Passiva:** `odafasbakesem, odafasbakeses, odafasbakese, odafasbakesen, odafasbakeset`
 
-## 11. Raiz `fer-` (soprar (o vento), ventar)
+## 15. Raiz `fer-` (soprar (o vento), ventar)
 
 ### 1. Positivo: **ferur** (*soprar (o vento), ventar*)
 
@@ -726,7 +990,73 @@
   - **Imperf.Ind Ativa:** `odaferbam, odaferbas, odaferba, odaferban, odaferbat` | **Passiva:** `odaferbasem, odaferbases, odaferbase, odaferbasen, odaferbaset`
   - **Imperf.Subj Ativa:** `odaferbakem, odaferbakes, odaferbake, odaferbaken, odaferbaket` | **Passiva:** `odaferbakesem, odaferbakeses, odaferbakese, odaferbakesen, odaferbakeset`
 
-## 12. Raiz `gald-` (guardar, carregar, custodiar)
+## 16. Raiz `fok-` (acender o fogo, avivar a lareira)
+
+### 1. Positivo: **fokur** (*acender o fogo, avivar a lareira*)
+
+- **Infinitivo:** `fokur` | **Imperativo:** `Fok!` | **Interrogativo 2ª Pl:** `fokukka?`
+- **Particípio (8 Casos):** Nom.Sg `foket`, Gen.Sg `fokety`, Dat.Sg `foketi`, Acu.Sg `foketom`, Nom.Pl `foketi`, Gen.Pl `foketye`, Dat.Pl `foketoi`, Acu.Pl `foketos`
+- **Derivados Nominais:** Agente `fotte`, Abstrato `fokor`, Instrumento `fottek`, Lugar `fokia`
+  - **Pres.Ind Ativa:** `fokum, fokus, foku, fokun, fokut` | **Passiva:** `fokusem, fokuses, fokuse, fokusen, fokuset`
+  - **Pres.Subj Ativa:** `fokukem, fokukes, fokuke, fokuken, fokuket` | **Passiva:** `fokukesem, fokukeses, fokukese, fokukesen, fokukeset`
+  - **Pass.Ind Ativa:** `fokram, fokras, fokra, fokran, fokrat` | **Passiva:** `fokrasem, fokrases, fokrase, fokrasen, fokraset`
+  - **Pass.Subj Ativa:** `fokrakem, fokrakes, fokrake, fokraken, fokraket` | **Passiva:** `fokrakesem, fokrakeses, fokrakese, fokrakesen, fokrakeset`
+  - **Dur.Ind Ativa:** `fokaim, fokais, fokai, fokain, fokait` | **Passiva:** `fokaisem, fokaises, fokaise, fokaisen, fokaiset`
+  - **Dur.Subj Ativa:** `fokaikem, fokaikes, fokaike, fokaiken, fokaiket` | **Passiva:** `fokaikesem, fokaikeses, fokaikese, fokaikesen, fokaikeset`
+  - **Fut.Ind Ativa:** `fokrum, fokrus, fokru, fokrun, fokrut` | **Passiva:** `fokrusem, fokruses, fokruse, fokrusen, fokruset`
+  - **Fut.Subj Ativa:** `fokrukem, fokrukes, fokruke, fokruken, fokruket` | **Passiva:** `fokrukesem, fokrukeses, fokrukese, fokrukesen, fokrukeset`
+  - **Imperf.Ind Ativa:** `fobbam, fobbas, fobba, fobban, fobbat` | **Passiva:** `fobbasem, fobbases, fobbase, fobbasen, fobbaset`
+  - **Imperf.Subj Ativa:** `fobbakem, fobbakes, fobbake, fobbaken, fobbaket` | **Passiva:** `fobbakesem, fobbakeses, fobbakese, fobbakesen, fobbakeset`
+
+### 2. Privativo (a-): **afokur** (*apagar o fogo, extinguir as chamas*)
+
+- **Infinitivo:** `afokur` | **Imperativo:** `Afok!` | **Interrogativo 2ª Pl:** `afokukka?`
+- **Particípio (8 Casos):** Nom.Sg `afoket`, Gen.Sg `afokety`, Dat.Sg `afoketi`, Acu.Sg `afoketom`, Nom.Pl `afoketi`, Gen.Pl `afoketye`, Dat.Pl `afoketoi`, Acu.Pl `afoketos`
+- **Derivados Nominais:** Agente `afotte`, Abstrato `afokor`, Instrumento `afottek`, Lugar `afokia`
+  - **Pres.Ind Ativa:** `afokum, afokus, afoku, afokun, afokut` | **Passiva:** `afokusem, afokuses, afokuse, afokusen, afokuset`
+  - **Pres.Subj Ativa:** `afokukem, afokukes, afokuke, afokuken, afokuket` | **Passiva:** `afokukesem, afokukeses, afokukese, afokukesen, afokukeset`
+  - **Pass.Ind Ativa:** `afokram, afokras, afokra, afokran, afokrat` | **Passiva:** `afokrasem, afokrases, afokrase, afokrasen, afokraset`
+  - **Pass.Subj Ativa:** `afokrakem, afokrakes, afokrake, afokraken, afokraket` | **Passiva:** `afokrakesem, afokrakeses, afokrakese, afokrakesen, afokrakeset`
+  - **Dur.Ind Ativa:** `afokaim, afokais, afokai, afokain, afokait` | **Passiva:** `afokaisem, afokaises, afokaise, afokaisen, afokaiset`
+  - **Dur.Subj Ativa:** `afokaikem, afokaikes, afokaike, afokaiken, afokaiket` | **Passiva:** `afokaikesem, afokaikeses, afokaikese, afokaikesen, afokaikeset`
+  - **Fut.Ind Ativa:** `afokrum, afokrus, afokru, afokrun, afokrut` | **Passiva:** `afokrusem, afokruses, afokruse, afokrusen, afokruset`
+  - **Fut.Subj Ativa:** `afokrukem, afokrukes, afokruke, afokruken, afokruket` | **Passiva:** `afokrukesem, afokrukeses, afokrukese, afokrukesen, afokrukeset`
+  - **Imperf.Ind Ativa:** `afobbam, afobbas, afobba, afobban, afobbat` | **Passiva:** `afobbasem, afobbases, afobbase, afobbasen, afobbaset`
+  - **Imperf.Subj Ativa:** `afobbakem, afobbakes, afobbake, afobbaken, afobbaket` | **Passiva:** `afobbakesem, afobbakeses, afobbakese, afobbakesen, afobbakeset`
+
+### 3. Iterativo (o-/od-): **ofokur** (*reacender a lareira, soprar as brasas*)
+
+- **Infinitivo:** `ofokur` | **Imperativo:** `Ofok!` | **Interrogativo 2ª Pl:** `ofokukka?`
+- **Particípio (8 Casos):** Nom.Sg `ofoket`, Gen.Sg `ofokety`, Dat.Sg `ofoketi`, Acu.Sg `ofoketom`, Nom.Pl `ofoketi`, Gen.Pl `ofoketye`, Dat.Pl `ofoketoi`, Acu.Pl `ofoketos`
+- **Derivados Nominais:** Agente `ofotte`, Abstrato `ofokor`, Instrumento `ofottek`, Lugar `ofokia`
+  - **Pres.Ind Ativa:** `ofokum, ofokus, ofoku, ofokun, ofokut` | **Passiva:** `ofokusem, ofokuses, ofokuse, ofokusen, ofokuset`
+  - **Pres.Subj Ativa:** `ofokukem, ofokukes, ofokuke, ofokuken, ofokuket` | **Passiva:** `ofokukesem, ofokukeses, ofokukese, ofokukesen, ofokukeset`
+  - **Pass.Ind Ativa:** `ofokram, ofokras, ofokra, ofokran, ofokrat` | **Passiva:** `ofokrasem, ofokrases, ofokrase, ofokrasen, ofokraset`
+  - **Pass.Subj Ativa:** `ofokrakem, ofokrakes, ofokrake, ofokraken, ofokraket` | **Passiva:** `ofokrakesem, ofokrakeses, ofokrakese, ofokrakesen, ofokrakeset`
+  - **Dur.Ind Ativa:** `ofokaim, ofokais, ofokai, ofokain, ofokait` | **Passiva:** `ofokaisem, ofokaises, ofokaise, ofokaisen, ofokaiset`
+  - **Dur.Subj Ativa:** `ofokaikem, ofokaikes, ofokaike, ofokaiken, ofokaiket` | **Passiva:** `ofokaikesem, ofokaikeses, ofokaikese, ofokaikesen, ofokaikeset`
+  - **Fut.Ind Ativa:** `ofokrum, ofokrus, ofokru, ofokrun, ofokrut` | **Passiva:** `ofokrusem, ofokruses, ofokruse, ofokrusen, ofokruset`
+  - **Fut.Subj Ativa:** `ofokrukem, ofokrukes, ofokruke, ofokruken, ofokruket` | **Passiva:** `ofokrukesem, ofokrukeses, ofokrukese, ofokrukesen, ofokrukeset`
+  - **Imperf.Ind Ativa:** `ofobbam, ofobbas, ofobba, ofobban, ofobbat` | **Passiva:** `ofobbasem, ofobbases, ofobbase, ofobbasen, ofobbaset`
+  - **Imperf.Subj Ativa:** `ofobbakem, ofobbakes, ofobbake, ofobbaken, ofobbaket` | **Passiva:** `ofobbakesem, ofobbakeses, ofobbakese, ofobbakesen, ofobbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odafokur** (*evitar que as brasas se apaguem*)
+
+- **Infinitivo:** `odafokur` | **Imperativo:** `Odafok!` | **Interrogativo 2ª Pl:** `odafokukka?`
+- **Particípio (8 Casos):** Nom.Sg `odafoket`, Gen.Sg `odafokety`, Dat.Sg `odafoketi`, Acu.Sg `odafoketom`, Nom.Pl `odafoketi`, Gen.Pl `odafoketye`, Dat.Pl `odafoketoi`, Acu.Pl `odafoketos`
+- **Derivados Nominais:** Agente `odafotte`, Abstrato `odafokor`, Instrumento `odafottek`, Lugar `odafokia`
+  - **Pres.Ind Ativa:** `odafokum, odafokus, odafoku, odafokun, odafokut` | **Passiva:** `odafokusem, odafokuses, odafokuse, odafokusen, odafokuset`
+  - **Pres.Subj Ativa:** `odafokukem, odafokukes, odafokuke, odafokuken, odafokuket` | **Passiva:** `odafokukesem, odafokukeses, odafokukese, odafokukesen, odafokukeset`
+  - **Pass.Ind Ativa:** `odafokram, odafokras, odafokra, odafokran, odafokrat` | **Passiva:** `odafokrasem, odafokrases, odafokrase, odafokrasen, odafokraset`
+  - **Pass.Subj Ativa:** `odafokrakem, odafokrakes, odafokrake, odafokraken, odafokraket` | **Passiva:** `odafokrakesem, odafokrakeses, odafokrakese, odafokrakesen, odafokrakeset`
+  - **Dur.Ind Ativa:** `odafokaim, odafokais, odafokai, odafokain, odafokait` | **Passiva:** `odafokaisem, odafokaises, odafokaise, odafokaisen, odafokaiset`
+  - **Dur.Subj Ativa:** `odafokaikem, odafokaikes, odafokaike, odafokaiken, odafokaiket` | **Passiva:** `odafokaikesem, odafokaikeses, odafokaikese, odafokaikesen, odafokaikeset`
+  - **Fut.Ind Ativa:** `odafokrum, odafokrus, odafokru, odafokrun, odafokrut` | **Passiva:** `odafokrusem, odafokruses, odafokruse, odafokrusen, odafokruset`
+  - **Fut.Subj Ativa:** `odafokrukem, odafokrukes, odafokruke, odafokruken, odafokruket` | **Passiva:** `odafokrukesem, odafokrukeses, odafokrukese, odafokrukesen, odafokrukeset`
+  - **Imperf.Ind Ativa:** `odafobbam, odafobbas, odafobba, odafobban, odafobbat` | **Passiva:** `odafobbasem, odafobbases, odafobbase, odafobbasen, odafobbaset`
+  - **Imperf.Subj Ativa:** `odafobbakem, odafobbakes, odafobbake, odafobbaken, odafobbaket` | **Passiva:** `odafobbakesem, odafobbakeses, odafobbakese, odafobbakesen, odafobbakeset`
+
+## 17. Raiz `gald-` (guardar, carregar, custodiar)
 
 ### 1. Positivo: **galdur** (*guardar, carregar, custodiar*)
 
@@ -792,7 +1122,7 @@
   - **Imperf.Ind Ativa:** `odagalbbam, odagalbbas, odagalbba, odagalbban, odagalbbat` | **Passiva:** `odagalbbasem, odagalbbases, odagalbbase, odagalbbasen, odagalbbaset`
   - **Imperf.Subj Ativa:** `odagalbbakem, odagalbbakes, odagalbbake, odagalbbaken, odagalbbaket` | **Passiva:** `odagalbbakesem, odagalbbakeses, odagalbbakese, odagalbbakesen, odagalbbakeset`
 
-## 13. Raiz `galdex-` (sacar, desembainhar lâmina)
+## 18. Raiz `galdex-` (sacar, desembainhar lâmina)
 
 ### 1. Positivo: **galdexur** (*sacar, desembainhar lâmina*)
 
@@ -858,7 +1188,7 @@
   - **Imperf.Ind Ativa:** `odagaldexbam, odagaldexbas, odagaldexba, odagaldexban, odagaldexbat` | **Passiva:** `odagaldexbasem, odagaldexbases, odagaldexbase, odagaldexbasen, odagaldexbaset`
   - **Imperf.Subj Ativa:** `odagaldexbakem, odagaldexbakes, odagaldexbake, odagaldexbaken, odagaldexbaket` | **Passiva:** `odagaldexbakesem, odagaldexbakeses, odagaldexbakese, odagaldexbakesen, odagaldexbakeset`
 
-## 14. Raiz `gel-` (transladar, levar, conduzir)
+## 19. Raiz `gel-` (transladar, levar, conduzir)
 
 ### 1. Positivo: **gelur** (*transladar, levar, conduzir*)
 
@@ -924,7 +1254,7 @@
   - **Imperf.Ind Ativa:** `odagelbam, odagelbas, odagelba, odagelban, odagelbat` | **Passiva:** `odagelbasem, odagelbases, odagelbase, odagelbasen, odagelbaset`
   - **Imperf.Subj Ativa:** `odagelbakem, odagelbakes, odagelbake, odagelbaken, odagelbaket` | **Passiva:** `odagelbakesem, odagelbakeses, odagelbakese, odagelbakesen, odagelbakeset`
 
-## 15. Raiz `gir-` (crescer, erguer-se, brotar)
+## 20. Raiz `gir-` (crescer, erguer-se, brotar)
 
 ### 1. Positivo: **girur** (*crescer, erguer-se, brotar*)
 
@@ -990,7 +1320,7 @@
   - **Imperf.Ind Ativa:** `odagirbam, odagirbas, odagirba, odagirban, odagirbat` | **Passiva:** `odagirbasem, odagirbases, odagirbase, odagirbasen, odagirbaset`
   - **Imperf.Subj Ativa:** `odagirbakem, odagirbakes, odagirbake, odagirbaken, odagirbaket` | **Passiva:** `odagirbakesem, odagirbakeses, odagirbakese, odagirbakesen, odagirbakeset`
 
-## 16. Raiz `giz-` (amar, estimar com devoção)
+## 21. Raiz `giz-` (amar, estimar com devoção)
 
 ### 1. Positivo: **gizur** (*amar, estimar com devoção*)
 
@@ -1056,7 +1386,7 @@
   - **Imperf.Ind Ativa:** `odagizbam, odagizbas, odagizba, odagizban, odagizbat` | **Passiva:** `odagizbasem, odagizbases, odagizbase, odagizbasen, odagizbaset`
   - **Imperf.Subj Ativa:** `odagizbakem, odagizbakes, odagizbake, odagizbaken, odagizbaket` | **Passiva:** `odagizbakesem, odagizbakeses, odagizbakese, odagizbakesen, odagizbakeset`
 
-## 17. Raiz `illan-` (iluminar por dentro, inspirar luz (in+lan))
+## 22. Raiz `illan-` (iluminar por dentro, inspirar luz (in+lan))
 
 ### 1. Positivo: **illanur** (*iluminar por dentro, inspirar luz (in+lan)*)
 
@@ -1122,7 +1452,7 @@
   - **Imperf.Ind Ativa:** `odaillambam, odaillambas, odaillamba, odaillamban, odaillambat` | **Passiva:** `odaillambasem, odaillambases, odaillambase, odaillambasen, odaillambaset`
   - **Imperf.Subj Ativa:** `odaillambakem, odaillambakes, odaillambake, odaillambaken, odaillambaket` | **Passiva:** `odaillambakesem, odaillambakeses, odaillambakese, odaillambakesen, odaillambakeset`
 
-## 18. Raiz `illot-` (embelezar, adornar (in+lota))
+## 23. Raiz `illot-` (embelezar, adornar (in+lota))
 
 ### 1. Positivo: **illotur** (*embelezar, adornar (in+lota)*)
 
@@ -1188,7 +1518,7 @@
   - **Imperf.Ind Ativa:** `odaillobbam, odaillobbas, odaillobba, odaillobban, odaillobbat` | **Passiva:** `odaillobbasem, odaillobbases, odaillobbase, odaillobbasen, odaillobbaset`
   - **Imperf.Subj Ativa:** `odaillobbakem, odaillobbakes, odaillobbake, odaillobbaken, odaillobbaket` | **Passiva:** `odaillobbakesem, odaillobbakeses, odaillobbakese, odaillobbakesen, odaillobbakeset`
 
-## 19. Raiz `in-` (iniciar, dar princípio a)
+## 24. Raiz `in-` (iniciar, dar princípio a)
 
 ### 1. Positivo: **inur** (*iniciar, dar princípio a*)
 
@@ -1254,7 +1584,7 @@
   - **Imperf.Ind Ativa:** `odaimbam, odaimbas, odaimba, odaimban, odaimbat` | **Passiva:** `odaimbasem, odaimbases, odaimbase, odaimbasen, odaimbaset`
   - **Imperf.Subj Ativa:** `odaimbakem, odaimbakes, odaimbake, odaimbaken, odaimbaket` | **Passiva:** `odaimbakesem, odaimbakeses, odaimbakese, odaimbakesen, odaimbakeset`
 
-## 20. Raiz `intul-` (enlouquecer, inflamar-se em furor)
+## 25. Raiz `intul-` (enlouquecer, inflamar-se em furor)
 
 ### 1. Positivo: **intulur** (*enlouquecer, inflamar-se em furor*)
 
@@ -1320,7 +1650,7 @@
   - **Imperf.Ind Ativa:** `odaintulbam, odaintulbas, odaintulba, odaintulban, odaintulbat` | **Passiva:** `odaintulbasem, odaintulbases, odaintulbase, odaintulbasen, odaintulbaset`
   - **Imperf.Subj Ativa:** `odaintulbakem, odaintulbakes, odaintulbake, odaintulbaken, odaintulbaket` | **Passiva:** `odaintulbakesem, odaintulbakeses, odaintulbakese, odaintulbakesen, odaintulbakeset`
 
-## 21. Raiz `is-` (compreender, saber, conhecer)
+## 26. Raiz `is-` (compreender, saber, conhecer)
 
 ### 1. Positivo: **isur** (*compreender, saber, conhecer*)
 
@@ -1386,7 +1716,7 @@
   - **Imperf.Ind Ativa:** `odaisbam, odaisbas, odaisba, odaisban, odaisbat` | **Passiva:** `odaisbasem, odaisbases, odaisbase, odaisbasen, odaisbaset`
   - **Imperf.Subj Ativa:** `odaisbakem, odaisbakes, odaisbake, odaisbaken, odaisbaket` | **Passiva:** `odaisbakesem, odaisbakeses, odaisbakese, odaisbakesen, odaisbakeset`
 
-## 22. Raiz `kam-` (embriagar, inebriar)
+## 27. Raiz `kam-` (embriagar, inebriar)
 
 ### 1. Positivo: **kamur** (*embriagar, inebriar*)
 
@@ -1452,7 +1782,7 @@
   - **Imperf.Ind Ativa:** `odakambam, odakambas, odakamba, odakamban, odakambat` | **Passiva:** `odakambasem, odakambases, odakambase, odakambasen, odakambaset`
   - **Imperf.Subj Ativa:** `odakambakem, odakambakes, odakambake, odakambaken, odakambaket` | **Passiva:** `odakambakesem, odakambakeses, odakambakese, odakambakesen, odakambakeset`
 
-## 23. Raiz `kaz-` (viver, nascer, habitar)
+## 28. Raiz `kaz-` (viver, nascer, habitar)
 
 ### 1. Positivo: **kazur** (*viver, nascer, habitar*)
 
@@ -1518,7 +1848,7 @@
   - **Imperf.Ind Ativa:** `odakazbam, odakazbas, odakazba, odakazban, odakazbat` | **Passiva:** `odakazbasem, odakazbases, odakazbase, odakazbasen, odakazbaset`
   - **Imperf.Subj Ativa:** `odakazbakem, odakazbakes, odakazbake, odakazbaken, odakazbaket` | **Passiva:** `odakazbakesem, odakazbakeses, odakazbakese, odakazbakesen, odakazbakeset`
 
-## 24. Raiz `kel-` (mover em conjunto, manobrar)
+## 29. Raiz `kel-` (mover em conjunto, manobrar)
 
 ### 1. Positivo: **kelur** (*mover em conjunto, manobrar*)
 
@@ -1584,7 +1914,7 @@
   - **Imperf.Ind Ativa:** `odakelbam, odakelbas, odakelba, odakelban, odakelbat` | **Passiva:** `odakelbasem, odakelbases, odakelbase, odakelbasen, odakelbaset`
   - **Imperf.Subj Ativa:** `odakelbakem, odakelbakes, odakelbake, odakelbaken, odakelbaket` | **Passiva:** `odakelbakesem, odakelbakeses, odakelbakese, odakelbakesen, odakelbakeset`
 
-## 25. Raiz `kel'un-` (escoltar, acompanhar em guarda)
+## 30. Raiz `kel'un-` (escoltar, acompanhar em guarda)
 
 ### 1. Positivo: **kel'unur** (*escoltar, acompanhar em guarda*)
 
@@ -1650,7 +1980,7 @@
   - **Imperf.Ind Ativa:** `odakel'umbam, odakel'umbas, odakel'umba, odakel'umban, odakel'umbat` | **Passiva:** `odakel'umbasem, odakel'umbases, odakel'umbase, odakel'umbasen, odakel'umbaset`
   - **Imperf.Subj Ativa:** `odakel'umbakem, odakel'umbakes, odakel'umbake, odakel'umbaken, odakel'umbaket` | **Passiva:** `odakel'umbakesem, odakel'umbakeses, odakel'umbakese, odakel'umbakesen, odakel'umbakeset`
 
-## 26. Raiz `kelad-` (aproximar-se, vir, convocar)
+## 31. Raiz `kelad-` (aproximar-se, vir, convocar)
 
 ### 1. Positivo: **keladur** (*aproximar-se, vir, convocar*)
 
@@ -1716,7 +2046,7 @@
   - **Imperf.Ind Ativa:** `odakeladbam, odakeladbas, odakeladba, odakeladban, odakeladbat` | **Passiva:** `odakeladbasem, odakeladbases, odakeladbase, odakeladbasen, odakeladbaset`
   - **Imperf.Subj Ativa:** `odakeladbakem, odakeladbakes, odakeladbake, odakeladbaken, odakeladbaket` | **Passiva:** `odakeladbakesem, odakeladbakeses, odakeladbakese, odakeladbakesen, odakeladbakeset`
 
-## 27. Raiz `kelex-` (escapar, evadir-se)
+## 32. Raiz `kelex-` (escapar, evadir-se)
 
 ### 1. Positivo: **kelexur** (*escapar, evadir-se*)
 
@@ -1782,7 +2112,7 @@
   - **Imperf.Ind Ativa:** `odakelexbam, odakelexbas, odakelexba, odakelexban, odakelexbat` | **Passiva:** `odakelexbasem, odakelexbases, odakelexbase, odakelexbasen, odakelexbaset`
   - **Imperf.Subj Ativa:** `odakelexbakem, odakelexbakes, odakelexbake, odakelexbaken, odakelexbaket` | **Passiva:** `odakelexbakesem, odakelexbakeses, odakelexbakese, odakelexbakesen, odakelexbakeset`
 
-## 28. Raiz `kellitr-` (cantar em coro, harmonizar em conjunto)
+## 33. Raiz `kellitr-` (cantar em coro, harmonizar em conjunto)
 
 ### 1. Positivo: **kellitrur** (*cantar em coro, harmonizar em conjunto*)
 
@@ -1848,7 +2178,7 @@
   - **Imperf.Ind Ativa:** `odakellitrbam, odakellitrbas, odakellitrba, odakellitrban, odakellitrbat` | **Passiva:** `odakellitrbasem, odakellitrbases, odakellitrbase, odakellitrbasen, odakellitrbaset`
   - **Imperf.Subj Ativa:** `odakellitrbakem, odakellitrbakes, odakellitrbake, odakellitrbaken, odakellitrbaket` | **Passiva:** `odakellitrbakesem, odakellitrbakeses, odakellitrbakese, odakellitrbakesen, odakellitrbakeset`
 
-## 29. Raiz `kindr-` (unir em comunhão, aliar)
+## 34. Raiz `kindr-` (unir em comunhão, aliar)
 
 ### 1. Positivo: **kindrur** (*unir em comunhão, aliar*)
 
@@ -1914,7 +2244,7 @@
   - **Imperf.Ind Ativa:** `odakindrbam, odakindrbas, odakindrba, odakindrban, odakindrbat` | **Passiva:** `odakindrbasem, odakindrbases, odakindrbase, odakindrbasen, odakindrbaset`
   - **Imperf.Subj Ativa:** `odakindrbakem, odakindrbakes, odakindrbake, odakindrbaken, odakindrbaket` | **Passiva:** `odakindrbakesem, odakindrbakeses, odakindrbakese, odakindrbakesen, odakindrbakeset`
 
-## 30. Raiz `kit-` (escrever, lavrar em registro)
+## 35. Raiz `kit-` (escrever, lavrar em registro)
 
 ### 1. Positivo: **kitur** (*escrever, lavrar em registro*)
 
@@ -1980,7 +2310,139 @@
   - **Imperf.Ind Ativa:** `odakibbam, odakibbas, odakibba, odakibban, odakibbat` | **Passiva:** `odakibbasem, odakibbases, odakibbase, odakibbasen, odakibbaset`
   - **Imperf.Subj Ativa:** `odakibbakem, odakibbakes, odakibbake, odakibbaken, odakibbaket` | **Passiva:** `odakibbakesem, odakibbakeses, odakibbakese, odakibbakesen, odakibbakeset`
 
-## 31. Raiz `kom-` (beber, sorver)
+## 36. Raiz `klaud-` (fechar a porta ou janela contra o vento)
+
+### 1. Positivo: **klaudur** (*fechar a porta ou janela contra o vento*)
+
+- **Infinitivo:** `klaudur` | **Imperativo:** `Klaud!` | **Interrogativo 2ª Pl:** `klaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `klaudet`, Gen.Sg `klaudety`, Dat.Sg `klaudeti`, Acu.Sg `klaudetom`, Nom.Pl `klaudeti`, Gen.Pl `klaudetye`, Dat.Pl `klaudetoi`, Acu.Pl `klaudetos`
+- **Derivados Nominais:** Agente `klautte`, Abstrato `klaudor`, Instrumento `klauttek`, Lugar `klaudia`
+  - **Pres.Ind Ativa:** `klaudum, klaudus, klaudu, klaudun, klaudut` | **Passiva:** `klaudusem, klauduses, klauduse, klaudusen, klauduset`
+  - **Pres.Subj Ativa:** `klaudukem, klaudukes, klauduke, klauduken, klauduket` | **Passiva:** `klaudukesem, klaudukeses, klaudukese, klaudukesen, klaudukeset`
+  - **Pass.Ind Ativa:** `klaudram, klaudras, klaudra, klaudran, klaudrat` | **Passiva:** `klaudrasem, klaudrases, klaudrase, klaudrasen, klaudraset`
+  - **Pass.Subj Ativa:** `klaudrakem, klaudrakes, klaudrake, klaudraken, klaudraket` | **Passiva:** `klaudrakesem, klaudrakeses, klaudrakese, klaudrakesen, klaudrakeset`
+  - **Dur.Ind Ativa:** `klaudaim, klaudais, klaudai, klaudain, klaudait` | **Passiva:** `klaudaisem, klaudaises, klaudaise, klaudaisen, klaudaiset`
+  - **Dur.Subj Ativa:** `klaudaikem, klaudaikes, klaudaike, klaudaiken, klaudaiket` | **Passiva:** `klaudaikesem, klaudaikeses, klaudaikese, klaudaikesen, klaudaikeset`
+  - **Fut.Ind Ativa:** `klaudrum, klaudrus, klaudru, klaudrun, klaudrut` | **Passiva:** `klaudrusem, klaudruses, klaudruse, klaudrusen, klaudruset`
+  - **Fut.Subj Ativa:** `klaudrukem, klaudrukes, klaudruke, klaudruken, klaudruket` | **Passiva:** `klaudrukesem, klaudrukeses, klaudrukese, klaudrukesen, klaudrukeset`
+  - **Imperf.Ind Ativa:** `klaudbam, klaudbas, klaudba, klaudban, klaudbat` | **Passiva:** `klaudbasem, klaudbases, klaudbase, klaudbasen, klaudbaset`
+  - **Imperf.Subj Ativa:** `klaudbakem, klaudbakes, klaudbake, klaudbaken, klaudbaket` | **Passiva:** `klaudbakesem, klaudbakeses, klaudbakese, klaudbakesen, klaudbakeset`
+
+### 2. Privativo (a-): **aklaudur** (*abrir, escancarar a porta para o sol*)
+
+- **Infinitivo:** `aklaudur` | **Imperativo:** `Aklaud!` | **Interrogativo 2ª Pl:** `aklaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `aklaudet`, Gen.Sg `aklaudety`, Dat.Sg `aklaudeti`, Acu.Sg `aklaudetom`, Nom.Pl `aklaudeti`, Gen.Pl `aklaudetye`, Dat.Pl `aklaudetoi`, Acu.Pl `aklaudetos`
+- **Derivados Nominais:** Agente `aklautte`, Abstrato `aklaudor`, Instrumento `aklauttek`, Lugar `aklaudia`
+  - **Pres.Ind Ativa:** `aklaudum, aklaudus, aklaudu, aklaudun, aklaudut` | **Passiva:** `aklaudusem, aklauduses, aklauduse, aklaudusen, aklauduset`
+  - **Pres.Subj Ativa:** `aklaudukem, aklaudukes, aklauduke, aklauduken, aklauduket` | **Passiva:** `aklaudukesem, aklaudukeses, aklaudukese, aklaudukesen, aklaudukeset`
+  - **Pass.Ind Ativa:** `aklaudram, aklaudras, aklaudra, aklaudran, aklaudrat` | **Passiva:** `aklaudrasem, aklaudrases, aklaudrase, aklaudrasen, aklaudraset`
+  - **Pass.Subj Ativa:** `aklaudrakem, aklaudrakes, aklaudrake, aklaudraken, aklaudraket` | **Passiva:** `aklaudrakesem, aklaudrakeses, aklaudrakese, aklaudrakesen, aklaudrakeset`
+  - **Dur.Ind Ativa:** `aklaudaim, aklaudais, aklaudai, aklaudain, aklaudait` | **Passiva:** `aklaudaisem, aklaudaises, aklaudaise, aklaudaisen, aklaudaiset`
+  - **Dur.Subj Ativa:** `aklaudaikem, aklaudaikes, aklaudaike, aklaudaiken, aklaudaiket` | **Passiva:** `aklaudaikesem, aklaudaikeses, aklaudaikese, aklaudaikesen, aklaudaikeset`
+  - **Fut.Ind Ativa:** `aklaudrum, aklaudrus, aklaudru, aklaudrun, aklaudrut` | **Passiva:** `aklaudrusem, aklaudruses, aklaudruse, aklaudrusen, aklaudruset`
+  - **Fut.Subj Ativa:** `aklaudrukem, aklaudrukes, aklaudruke, aklaudruken, aklaudruket` | **Passiva:** `aklaudrukesem, aklaudrukeses, aklaudrukese, aklaudrukesen, aklaudrukeset`
+  - **Imperf.Ind Ativa:** `aklaudbam, aklaudbas, aklaudba, aklaudban, aklaudbat` | **Passiva:** `aklaudbasem, aklaudbases, aklaudbase, aklaudbasen, aklaudbaset`
+  - **Imperf.Subj Ativa:** `aklaudbakem, aklaudbakes, aklaudbake, aklaudbaken, aklaudbaket` | **Passiva:** `aklaudbakesem, aklaudbakeses, aklaudbakese, aklaudbakesen, aklaudbakeset`
+
+### 3. Iterativo (o-/od-): **oklaudur** (*fechar de novo, trancar com ferrolho*)
+
+- **Infinitivo:** `oklaudur` | **Imperativo:** `Oklaud!` | **Interrogativo 2ª Pl:** `oklaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `oklaudet`, Gen.Sg `oklaudety`, Dat.Sg `oklaudeti`, Acu.Sg `oklaudetom`, Nom.Pl `oklaudeti`, Gen.Pl `oklaudetye`, Dat.Pl `oklaudetoi`, Acu.Pl `oklaudetos`
+- **Derivados Nominais:** Agente `oklautte`, Abstrato `oklaudor`, Instrumento `oklauttek`, Lugar `oklaudia`
+  - **Pres.Ind Ativa:** `oklaudum, oklaudus, oklaudu, oklaudun, oklaudut` | **Passiva:** `oklaudusem, oklauduses, oklauduse, oklaudusen, oklauduset`
+  - **Pres.Subj Ativa:** `oklaudukem, oklaudukes, oklauduke, oklauduken, oklauduket` | **Passiva:** `oklaudukesem, oklaudukeses, oklaudukese, oklaudukesen, oklaudukeset`
+  - **Pass.Ind Ativa:** `oklaudram, oklaudras, oklaudra, oklaudran, oklaudrat` | **Passiva:** `oklaudrasem, oklaudrases, oklaudrase, oklaudrasen, oklaudraset`
+  - **Pass.Subj Ativa:** `oklaudrakem, oklaudrakes, oklaudrake, oklaudraken, oklaudraket` | **Passiva:** `oklaudrakesem, oklaudrakeses, oklaudrakese, oklaudrakesen, oklaudrakeset`
+  - **Dur.Ind Ativa:** `oklaudaim, oklaudais, oklaudai, oklaudain, oklaudait` | **Passiva:** `oklaudaisem, oklaudaises, oklaudaise, oklaudaisen, oklaudaiset`
+  - **Dur.Subj Ativa:** `oklaudaikem, oklaudaikes, oklaudaike, oklaudaiken, oklaudaiket` | **Passiva:** `oklaudaikesem, oklaudaikeses, oklaudaikese, oklaudaikesen, oklaudaikeset`
+  - **Fut.Ind Ativa:** `oklaudrum, oklaudrus, oklaudru, oklaudrun, oklaudrut` | **Passiva:** `oklaudrusem, oklaudruses, oklaudruse, oklaudrusen, oklaudruset`
+  - **Fut.Subj Ativa:** `oklaudrukem, oklaudrukes, oklaudruke, oklaudruken, oklaudruket` | **Passiva:** `oklaudrukesem, oklaudrukeses, oklaudrukese, oklaudrukesen, oklaudrukeset`
+  - **Imperf.Ind Ativa:** `oklaudbam, oklaudbas, oklaudba, oklaudban, oklaudbat` | **Passiva:** `oklaudbasem, oklaudbases, oklaudbase, oklaudbasen, oklaudbaset`
+  - **Imperf.Subj Ativa:** `oklaudbakem, oklaudbakes, oklaudbake, oklaudbaken, oklaudbaket` | **Passiva:** `oklaudbakesem, oklaudbakeses, oklaudbakese, oklaudbakesen, oklaudbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odaklaudur** (*destrancar a porta, reabrir a morada*)
+
+- **Infinitivo:** `odaklaudur` | **Imperativo:** `Odaklaud!` | **Interrogativo 2ª Pl:** `odaklaudukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaklaudet`, Gen.Sg `odaklaudety`, Dat.Sg `odaklaudeti`, Acu.Sg `odaklaudetom`, Nom.Pl `odaklaudeti`, Gen.Pl `odaklaudetye`, Dat.Pl `odaklaudetoi`, Acu.Pl `odaklaudetos`
+- **Derivados Nominais:** Agente `odaklautte`, Abstrato `odaklaudor`, Instrumento `odaklauttek`, Lugar `odaklaudia`
+  - **Pres.Ind Ativa:** `odaklaudum, odaklaudus, odaklaudu, odaklaudun, odaklaudut` | **Passiva:** `odaklaudusem, odaklauduses, odaklauduse, odaklaudusen, odaklauduset`
+  - **Pres.Subj Ativa:** `odaklaudukem, odaklaudukes, odaklauduke, odaklauduken, odaklauduket` | **Passiva:** `odaklaudukesem, odaklaudukeses, odaklaudukese, odaklaudukesen, odaklaudukeset`
+  - **Pass.Ind Ativa:** `odaklaudram, odaklaudras, odaklaudra, odaklaudran, odaklaudrat` | **Passiva:** `odaklaudrasem, odaklaudrases, odaklaudrase, odaklaudrasen, odaklaudraset`
+  - **Pass.Subj Ativa:** `odaklaudrakem, odaklaudrakes, odaklaudrake, odaklaudraken, odaklaudraket` | **Passiva:** `odaklaudrakesem, odaklaudrakeses, odaklaudrakese, odaklaudrakesen, odaklaudrakeset`
+  - **Dur.Ind Ativa:** `odaklaudaim, odaklaudais, odaklaudai, odaklaudain, odaklaudait` | **Passiva:** `odaklaudaisem, odaklaudaises, odaklaudaise, odaklaudaisen, odaklaudaiset`
+  - **Dur.Subj Ativa:** `odaklaudaikem, odaklaudaikes, odaklaudaike, odaklaudaiken, odaklaudaiket` | **Passiva:** `odaklaudaikesem, odaklaudaikeses, odaklaudaikese, odaklaudaikesen, odaklaudaikeset`
+  - **Fut.Ind Ativa:** `odaklaudrum, odaklaudrus, odaklaudru, odaklaudrun, odaklaudrut` | **Passiva:** `odaklaudrusem, odaklaudruses, odaklaudruse, odaklaudrusen, odaklaudruset`
+  - **Fut.Subj Ativa:** `odaklaudrukem, odaklaudrukes, odaklaudruke, odaklaudruken, odaklaudruket` | **Passiva:** `odaklaudrukesem, odaklaudrukeses, odaklaudrukese, odaklaudrukesen, odaklaudrukeset`
+  - **Imperf.Ind Ativa:** `odaklaudbam, odaklaudbas, odaklaudba, odaklaudban, odaklaudbat` | **Passiva:** `odaklaudbasem, odaklaudbases, odaklaudbase, odaklaudbasen, odaklaudbaset`
+  - **Imperf.Subj Ativa:** `odaklaudbakem, odaklaudbakes, odaklaudbake, odaklaudbaken, odaklaudbaket` | **Passiva:** `odaklaudbakesem, odaklaudbakeses, odaklaudbakese, odaklaudbakesen, odaklaudbakeset`
+
+## 37. Raiz `kok-` (cozinhar na panela, assar na brasa)
+
+### 1. Positivo: **kokur** (*cozinhar na panela, assar na brasa*)
+
+- **Infinitivo:** `kokur` | **Imperativo:** `Kok!` | **Interrogativo 2ª Pl:** `kokukka?`
+- **Particípio (8 Casos):** Nom.Sg `koket`, Gen.Sg `kokety`, Dat.Sg `koketi`, Acu.Sg `koketom`, Nom.Pl `koketi`, Gen.Pl `koketye`, Dat.Pl `koketoi`, Acu.Pl `koketos`
+- **Derivados Nominais:** Agente `kotte`, Abstrato `kokor`, Instrumento `kottek`, Lugar `kokia`
+  - **Pres.Ind Ativa:** `kokum, kokus, koku, kokun, kokut` | **Passiva:** `kokusem, kokuses, kokuse, kokusen, kokuset`
+  - **Pres.Subj Ativa:** `kokukem, kokukes, kokuke, kokuken, kokuket` | **Passiva:** `kokukesem, kokukeses, kokukese, kokukesen, kokukeset`
+  - **Pass.Ind Ativa:** `kokram, kokras, kokra, kokran, kokrat` | **Passiva:** `kokrasem, kokrases, kokrase, kokrasen, kokraset`
+  - **Pass.Subj Ativa:** `kokrakem, kokrakes, kokrake, kokraken, kokraket` | **Passiva:** `kokrakesem, kokrakeses, kokrakese, kokrakesen, kokrakeset`
+  - **Dur.Ind Ativa:** `kokaim, kokais, kokai, kokain, kokait` | **Passiva:** `kokaisem, kokaises, kokaise, kokaisen, kokaiset`
+  - **Dur.Subj Ativa:** `kokaikem, kokaikes, kokaike, kokaiken, kokaiket` | **Passiva:** `kokaikesem, kokaikeses, kokaikese, kokaikesen, kokaikeset`
+  - **Fut.Ind Ativa:** `kokrum, kokrus, kokru, kokrun, kokrut` | **Passiva:** `kokrusem, kokruses, kokruse, kokrusen, kokruset`
+  - **Fut.Subj Ativa:** `kokrukem, kokrukes, kokruke, kokruken, kokruket` | **Passiva:** `kokrukesem, kokrukeses, kokrukese, kokrukesen, kokrukeset`
+  - **Imperf.Ind Ativa:** `kobbam, kobbas, kobba, kobban, kobbat` | **Passiva:** `kobbasem, kobbases, kobbase, kobbasen, kobbaset`
+  - **Imperf.Subj Ativa:** `kobbakem, kobbakes, kobbake, kobbaken, kobbaket` | **Passiva:** `kobbakesem, kobbakeses, kobbakese, kobbakesen, kobbakeset`
+
+### 2. Privativo (a-): **akokur** (*deixar a carne crua, não cozinhar*)
+
+- **Infinitivo:** `akokur` | **Imperativo:** `Akok!` | **Interrogativo 2ª Pl:** `akokukka?`
+- **Particípio (8 Casos):** Nom.Sg `akoket`, Gen.Sg `akokety`, Dat.Sg `akoketi`, Acu.Sg `akoketom`, Nom.Pl `akoketi`, Gen.Pl `akoketye`, Dat.Pl `akoketoi`, Acu.Pl `akoketos`
+- **Derivados Nominais:** Agente `akotte`, Abstrato `akokor`, Instrumento `akottek`, Lugar `akokia`
+  - **Pres.Ind Ativa:** `akokum, akokus, akoku, akokun, akokut` | **Passiva:** `akokusem, akokuses, akokuse, akokusen, akokuset`
+  - **Pres.Subj Ativa:** `akokukem, akokukes, akokuke, akokuken, akokuket` | **Passiva:** `akokukesem, akokukeses, akokukese, akokukesen, akokukeset`
+  - **Pass.Ind Ativa:** `akokram, akokras, akokra, akokran, akokrat` | **Passiva:** `akokrasem, akokrases, akokrase, akokrasen, akokraset`
+  - **Pass.Subj Ativa:** `akokrakem, akokrakes, akokrake, akokraken, akokraket` | **Passiva:** `akokrakesem, akokrakeses, akokrakese, akokrakesen, akokrakeset`
+  - **Dur.Ind Ativa:** `akokaim, akokais, akokai, akokain, akokait` | **Passiva:** `akokaisem, akokaises, akokaise, akokaisen, akokaiset`
+  - **Dur.Subj Ativa:** `akokaikem, akokaikes, akokaike, akokaiken, akokaiket` | **Passiva:** `akokaikesem, akokaikeses, akokaikese, akokaikesen, akokaikeset`
+  - **Fut.Ind Ativa:** `akokrum, akokrus, akokru, akokrun, akokrut` | **Passiva:** `akokrusem, akokruses, akokruse, akokrusen, akokruset`
+  - **Fut.Subj Ativa:** `akokrukem, akokrukes, akokruke, akokruken, akokruket` | **Passiva:** `akokrukesem, akokrukeses, akokrukese, akokrukesen, akokrukeset`
+  - **Imperf.Ind Ativa:** `akobbam, akobbas, akobba, akobban, akobbat` | **Passiva:** `akobbasem, akobbases, akobbase, akobbasen, akobbaset`
+  - **Imperf.Subj Ativa:** `akobbakem, akobbakes, akobbake, akobbaken, akobbaket` | **Passiva:** `akobbakesem, akobbakeses, akobbakese, akobbakesen, akobbakeset`
+
+### 3. Iterativo (o-/od-): **okokur** (*reaquecer o caldo, cozinhar de novo*)
+
+- **Infinitivo:** `okokur` | **Imperativo:** `Okok!` | **Interrogativo 2ª Pl:** `okokukka?`
+- **Particípio (8 Casos):** Nom.Sg `okoket`, Gen.Sg `okokety`, Dat.Sg `okoketi`, Acu.Sg `okoketom`, Nom.Pl `okoketi`, Gen.Pl `okoketye`, Dat.Pl `okoketoi`, Acu.Pl `okoketos`
+- **Derivados Nominais:** Agente `okotte`, Abstrato `okokor`, Instrumento `okottek`, Lugar `okokia`
+  - **Pres.Ind Ativa:** `okokum, okokus, okoku, okokun, okokut` | **Passiva:** `okokusem, okokuses, okokuse, okokusen, okokuset`
+  - **Pres.Subj Ativa:** `okokukem, okokukes, okokuke, okokuken, okokuket` | **Passiva:** `okokukesem, okokukeses, okokukese, okokukesen, okokukeset`
+  - **Pass.Ind Ativa:** `okokram, okokras, okokra, okokran, okokrat` | **Passiva:** `okokrasem, okokrases, okokrase, okokrasen, okokraset`
+  - **Pass.Subj Ativa:** `okokrakem, okokrakes, okokrake, okokraken, okokraket` | **Passiva:** `okokrakesem, okokrakeses, okokrakese, okokrakesen, okokrakeset`
+  - **Dur.Ind Ativa:** `okokaim, okokais, okokai, okokain, okokait` | **Passiva:** `okokaisem, okokaises, okokaise, okokaisen, okokaiset`
+  - **Dur.Subj Ativa:** `okokaikem, okokaikes, okokaike, okokaiken, okokaiket` | **Passiva:** `okokaikesem, okokaikeses, okokaikese, okokaikesen, okokaikeset`
+  - **Fut.Ind Ativa:** `okokrum, okokrus, okokru, okokrun, okokrut` | **Passiva:** `okokrusem, okokruses, okokruse, okokrusen, okokruset`
+  - **Fut.Subj Ativa:** `okokrukem, okokrukes, okokruke, okokruken, okokruket` | **Passiva:** `okokrukesem, okokrukeses, okokrukese, okokrukesen, okokrukeset`
+  - **Imperf.Ind Ativa:** `okobbam, okobbas, okobba, okobban, okobbat` | **Passiva:** `okobbasem, okobbases, okobbase, okobbasen, okobbaset`
+  - **Imperf.Subj Ativa:** `okobbakem, okobbakes, okobbake, okobbaken, okobbaket` | **Passiva:** `okobbakesem, okobbakeses, okobbakese, okobbakesen, okobbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odakokur** (*tirar a comida do fogo antes de queimar*)
+
+- **Infinitivo:** `odakokur` | **Imperativo:** `Odakok!` | **Interrogativo 2ª Pl:** `odakokukka?`
+- **Particípio (8 Casos):** Nom.Sg `odakoket`, Gen.Sg `odakokety`, Dat.Sg `odakoketi`, Acu.Sg `odakoketom`, Nom.Pl `odakoketi`, Gen.Pl `odakoketye`, Dat.Pl `odakoketoi`, Acu.Pl `odakoketos`
+- **Derivados Nominais:** Agente `odakotte`, Abstrato `odakokor`, Instrumento `odakottek`, Lugar `odakokia`
+  - **Pres.Ind Ativa:** `odakokum, odakokus, odakoku, odakokun, odakokut` | **Passiva:** `odakokusem, odakokuses, odakokuse, odakokusen, odakokuset`
+  - **Pres.Subj Ativa:** `odakokukem, odakokukes, odakokuke, odakokuken, odakokuket` | **Passiva:** `odakokukesem, odakokukeses, odakokukese, odakokukesen, odakokukeset`
+  - **Pass.Ind Ativa:** `odakokram, odakokras, odakokra, odakokran, odakokrat` | **Passiva:** `odakokrasem, odakokrases, odakokrase, odakokrasen, odakokraset`
+  - **Pass.Subj Ativa:** `odakokrakem, odakokrakes, odakokrake, odakokraken, odakokraket` | **Passiva:** `odakokrakesem, odakokrakeses, odakokrakese, odakokrakesen, odakokrakeset`
+  - **Dur.Ind Ativa:** `odakokaim, odakokais, odakokai, odakokain, odakokait` | **Passiva:** `odakokaisem, odakokaises, odakokaise, odakokaisen, odakokaiset`
+  - **Dur.Subj Ativa:** `odakokaikem, odakokaikes, odakokaike, odakokaiken, odakokaiket` | **Passiva:** `odakokaikesem, odakokaikeses, odakokaikese, odakokaikesen, odakokaikeset`
+  - **Fut.Ind Ativa:** `odakokrum, odakokrus, odakokru, odakokrun, odakokrut` | **Passiva:** `odakokrusem, odakokruses, odakokruse, odakokrusen, odakokruset`
+  - **Fut.Subj Ativa:** `odakokrukem, odakokrukes, odakokruke, odakokruken, odakokruket` | **Passiva:** `odakokrukesem, odakokrukeses, odakokrukese, odakokrukesen, odakokrukeset`
+  - **Imperf.Ind Ativa:** `odakobbam, odakobbas, odakobba, odakobban, odakobbat` | **Passiva:** `odakobbasem, odakobbases, odakobbase, odakobbasen, odakobbaset`
+  - **Imperf.Subj Ativa:** `odakobbakem, odakobbakes, odakobbake, odakobbaken, odakobbaket` | **Passiva:** `odakobbakesem, odakobbakeses, odakobbakese, odakobbakesen, odakobbakeset`
+
+## 38. Raiz `kom-` (beber, sorver)
 
 ### 1. Positivo: **komur** (*beber, sorver*)
 
@@ -2046,7 +2508,73 @@
   - **Imperf.Ind Ativa:** `odakombam, odakombas, odakomba, odakomban, odakombat` | **Passiva:** `odakombasem, odakombases, odakombase, odakombasen, odakombaset`
   - **Imperf.Subj Ativa:** `odakombakem, odakombakes, odakombake, odakombaken, odakombaket` | **Passiva:** `odakombakesem, odakombakeses, odakombakese, odakombakesen, odakombakeset`
 
-## 32. Raiz `kos-` (esconder, sepultar, escavar)
+## 39. Raiz `kompr-` (comprar mantimentos, adquirir na feira)
+
+### 1. Positivo: **komprur** (*comprar mantimentos, adquirir na feira*)
+
+- **Infinitivo:** `komprur` | **Imperativo:** `Kompr!` | **Interrogativo 2ª Pl:** `komprukka?`
+- **Particípio (8 Casos):** Nom.Sg `kompret`, Gen.Sg `komprety`, Dat.Sg `kompreti`, Acu.Sg `kompretom`, Nom.Pl `kompreti`, Gen.Pl `kompretye`, Dat.Pl `kompretoi`, Acu.Pl `kompretos`
+- **Derivados Nominais:** Agente `komprte`, Abstrato `kompror`, Instrumento `komprtek`, Lugar `kompria`
+  - **Pres.Ind Ativa:** `komprum, komprus, kompru, komprun, komprut` | **Passiva:** `komprusem, kompruses, kompruse, komprusen, kompruset`
+  - **Pres.Subj Ativa:** `komprukem, komprukes, kompruke, kompruken, kompruket` | **Passiva:** `komprukesem, komprukeses, komprukese, komprukesen, komprukeset`
+  - **Pass.Ind Ativa:** `komprram, komprras, komprra, komprran, komprrat` | **Passiva:** `komprrasem, komprrases, komprrase, komprrasen, komprraset`
+  - **Pass.Subj Ativa:** `komprrakem, komprrakes, komprrake, komprraken, komprraket` | **Passiva:** `komprrakesem, komprrakeses, komprrakese, komprrakesen, komprrakeset`
+  - **Dur.Ind Ativa:** `kompraim, komprais, komprai, komprain, komprait` | **Passiva:** `kompraisem, kompraises, kompraise, kompraisen, kompraiset`
+  - **Dur.Subj Ativa:** `kompraikem, kompraikes, kompraike, kompraiken, kompraiket` | **Passiva:** `kompraikesem, kompraikeses, kompraikese, kompraikesen, kompraikeset`
+  - **Fut.Ind Ativa:** `komprrum, komprrus, komprru, komprrun, komprrut` | **Passiva:** `komprrusem, komprruses, komprruse, komprrusen, komprruset`
+  - **Fut.Subj Ativa:** `komprrukem, komprrukes, komprruke, komprruken, komprruket` | **Passiva:** `komprrukesem, komprrukeses, komprrukese, komprrukesen, komprrukeset`
+  - **Imperf.Ind Ativa:** `komprbam, komprbas, komprba, komprban, komprbat` | **Passiva:** `komprbasem, komprbases, komprbase, komprbasen, komprbaset`
+  - **Imperf.Subj Ativa:** `komprbakem, komprbakes, komprbake, komprbaken, komprbaket` | **Passiva:** `komprbakesem, komprbakeses, komprbakese, komprbakesen, komprbakeset`
+
+### 2. Privativo (a-): **akomprur** (*recusar a compra, não adquirir*)
+
+- **Infinitivo:** `akomprur` | **Imperativo:** `Akompr!` | **Interrogativo 2ª Pl:** `akomprukka?`
+- **Particípio (8 Casos):** Nom.Sg `akompret`, Gen.Sg `akomprety`, Dat.Sg `akompreti`, Acu.Sg `akompretom`, Nom.Pl `akompreti`, Gen.Pl `akompretye`, Dat.Pl `akompretoi`, Acu.Pl `akompretos`
+- **Derivados Nominais:** Agente `akomprte`, Abstrato `akompror`, Instrumento `akomprtek`, Lugar `akompria`
+  - **Pres.Ind Ativa:** `akomprum, akomprus, akompru, akomprun, akomprut` | **Passiva:** `akomprusem, akompruses, akompruse, akomprusen, akompruset`
+  - **Pres.Subj Ativa:** `akomprukem, akomprukes, akompruke, akompruken, akompruket` | **Passiva:** `akomprukesem, akomprukeses, akomprukese, akomprukesen, akomprukeset`
+  - **Pass.Ind Ativa:** `akomprram, akomprras, akomprra, akomprran, akomprrat` | **Passiva:** `akomprrasem, akomprrases, akomprrase, akomprrasen, akomprraset`
+  - **Pass.Subj Ativa:** `akomprrakem, akomprrakes, akomprrake, akomprraken, akomprraket` | **Passiva:** `akomprrakesem, akomprrakeses, akomprrakese, akomprrakesen, akomprrakeset`
+  - **Dur.Ind Ativa:** `akompraim, akomprais, akomprai, akomprain, akomprait` | **Passiva:** `akompraisem, akompraises, akompraise, akompraisen, akompraiset`
+  - **Dur.Subj Ativa:** `akompraikem, akompraikes, akompraike, akompraiken, akompraiket` | **Passiva:** `akompraikesem, akompraikeses, akompraikese, akompraikesen, akompraikeset`
+  - **Fut.Ind Ativa:** `akomprrum, akomprrus, akomprru, akomprrun, akomprrut` | **Passiva:** `akomprrusem, akomprruses, akomprruse, akomprrusen, akomprruset`
+  - **Fut.Subj Ativa:** `akomprrukem, akomprrukes, akomprruke, akomprruken, akomprruket` | **Passiva:** `akomprrukesem, akomprrukeses, akomprrukese, akomprrukesen, akomprrukeset`
+  - **Imperf.Ind Ativa:** `akomprbam, akomprbas, akomprba, akomprban, akomprbat` | **Passiva:** `akomprbasem, akomprbases, akomprbase, akomprbasen, akomprbaset`
+  - **Imperf.Subj Ativa:** `akomprbakem, akomprbakes, akomprbake, akomprbaken, akomprbaket` | **Passiva:** `akomprbakesem, akomprbakeses, akomprbakese, akomprbakesen, akomprbakeset`
+
+### 3. Iterativo (o-/od-): **okomprur** (*comprar de novo, reabastecer a despensa*)
+
+- **Infinitivo:** `okomprur` | **Imperativo:** `Okompr!` | **Interrogativo 2ª Pl:** `okomprukka?`
+- **Particípio (8 Casos):** Nom.Sg `okompret`, Gen.Sg `okomprety`, Dat.Sg `okompreti`, Acu.Sg `okompretom`, Nom.Pl `okompreti`, Gen.Pl `okompretye`, Dat.Pl `okompretoi`, Acu.Pl `okompretos`
+- **Derivados Nominais:** Agente `okomprte`, Abstrato `okompror`, Instrumento `okomprtek`, Lugar `okompria`
+  - **Pres.Ind Ativa:** `okomprum, okomprus, okompru, okomprun, okomprut` | **Passiva:** `okomprusem, okompruses, okompruse, okomprusen, okompruset`
+  - **Pres.Subj Ativa:** `okomprukem, okomprukes, okompruke, okompruken, okompruket` | **Passiva:** `okomprukesem, okomprukeses, okomprukese, okomprukesen, okomprukeset`
+  - **Pass.Ind Ativa:** `okomprram, okomprras, okomprra, okomprran, okomprrat` | **Passiva:** `okomprrasem, okomprrases, okomprrase, okomprrasen, okomprraset`
+  - **Pass.Subj Ativa:** `okomprrakem, okomprrakes, okomprrake, okomprraken, okomprraket` | **Passiva:** `okomprrakesem, okomprrakeses, okomprrakese, okomprrakesen, okomprrakeset`
+  - **Dur.Ind Ativa:** `okompraim, okomprais, okomprai, okomprain, okomprait` | **Passiva:** `okompraisem, okompraises, okompraise, okompraisen, okompraiset`
+  - **Dur.Subj Ativa:** `okompraikem, okompraikes, okompraike, okompraiken, okompraiket` | **Passiva:** `okompraikesem, okompraikeses, okompraikese, okompraikesen, okompraikeset`
+  - **Fut.Ind Ativa:** `okomprrum, okomprrus, okomprru, okomprrun, okomprrut` | **Passiva:** `okomprrusem, okomprruses, okomprruse, okomprrusen, okomprruset`
+  - **Fut.Subj Ativa:** `okomprrukem, okomprrukes, okomprruke, okomprruken, okomprruket` | **Passiva:** `okomprrukesem, okomprrukeses, okomprrukese, okomprrukesen, okomprrukeset`
+  - **Imperf.Ind Ativa:** `okomprbam, okomprbas, okomprba, okomprban, okomprbat` | **Passiva:** `okomprbasem, okomprbases, okomprbase, okomprbasen, okomprbaset`
+  - **Imperf.Subj Ativa:** `okomprbakem, okomprbakes, okomprbake, okomprbaken, okomprbaket` | **Passiva:** `okomprbakesem, okomprbakeses, okomprbakese, okomprbakesen, okomprbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odakomprur** (*desfazer a compra, devolver a mercadoria*)
+
+- **Infinitivo:** `odakomprur` | **Imperativo:** `Odakompr!` | **Interrogativo 2ª Pl:** `odakomprukka?`
+- **Particípio (8 Casos):** Nom.Sg `odakompret`, Gen.Sg `odakomprety`, Dat.Sg `odakompreti`, Acu.Sg `odakompretom`, Nom.Pl `odakompreti`, Gen.Pl `odakompretye`, Dat.Pl `odakompretoi`, Acu.Pl `odakompretos`
+- **Derivados Nominais:** Agente `odakomprte`, Abstrato `odakompror`, Instrumento `odakomprtek`, Lugar `odakompria`
+  - **Pres.Ind Ativa:** `odakomprum, odakomprus, odakompru, odakomprun, odakomprut` | **Passiva:** `odakomprusem, odakompruses, odakompruse, odakomprusen, odakompruset`
+  - **Pres.Subj Ativa:** `odakomprukem, odakomprukes, odakompruke, odakompruken, odakompruket` | **Passiva:** `odakomprukesem, odakomprukeses, odakomprukese, odakomprukesen, odakomprukeset`
+  - **Pass.Ind Ativa:** `odakomprram, odakomprras, odakomprra, odakomprran, odakomprrat` | **Passiva:** `odakomprrasem, odakomprrases, odakomprrase, odakomprrasen, odakomprraset`
+  - **Pass.Subj Ativa:** `odakomprrakem, odakomprrakes, odakomprrake, odakomprraken, odakomprraket` | **Passiva:** `odakomprrakesem, odakomprrakeses, odakomprrakese, odakomprrakesen, odakomprrakeset`
+  - **Dur.Ind Ativa:** `odakompraim, odakomprais, odakomprai, odakomprain, odakomprait` | **Passiva:** `odakompraisem, odakompraises, odakompraise, odakompraisen, odakompraiset`
+  - **Dur.Subj Ativa:** `odakompraikem, odakompraikes, odakompraike, odakompraiken, odakompraiket` | **Passiva:** `odakompraikesem, odakompraikeses, odakompraikese, odakompraikesen, odakompraikeset`
+  - **Fut.Ind Ativa:** `odakomprrum, odakomprrus, odakomprru, odakomprrun, odakomprrut` | **Passiva:** `odakomprrusem, odakomprruses, odakomprruse, odakomprrusen, odakomprruset`
+  - **Fut.Subj Ativa:** `odakomprrukem, odakomprrukes, odakomprruke, odakomprruken, odakomprruket` | **Passiva:** `odakomprrukesem, odakomprrukeses, odakomprrukese, odakomprrukesen, odakomprrukeset`
+  - **Imperf.Ind Ativa:** `odakomprbam, odakomprbas, odakomprba, odakomprban, odakomprbat` | **Passiva:** `odakomprbasem, odakomprbases, odakomprbase, odakomprbasen, odakomprbaset`
+  - **Imperf.Subj Ativa:** `odakomprbakem, odakomprbakes, odakomprbake, odakomprbaken, odakomprbaket` | **Passiva:** `odakomprbakesem, odakomprbakeses, odakomprbakese, odakomprbakesen, odakomprbakeset`
+
+## 40. Raiz `kos-` (esconder, sepultar, escavar)
 
 ### 1. Positivo: **kosur** (*esconder, sepultar, escavar*)
 
@@ -2112,7 +2640,7 @@
   - **Imperf.Ind Ativa:** `odakosbam, odakosbas, odakosba, odakosban, odakosbat` | **Passiva:** `odakosbasem, odakosbases, odakosbase, odakosbasen, odakosbaset`
   - **Imperf.Subj Ativa:** `odakosbakem, odakosbakes, odakosbake, odakosbaken, odakosbaket` | **Passiva:** `odakosbakesem, odakosbakeses, odakosbakese, odakosbakesen, odakosbakeset`
 
-## 33. Raiz `krad-` (criar, dar existência)
+## 41. Raiz `krad-` (criar, dar existência)
 
 ### 1. Positivo: **kradur** (*criar, dar existência*)
 
@@ -2178,7 +2706,73 @@
   - **Imperf.Ind Ativa:** `odakradbam, odakradbas, odakradba, odakradban, odakradbat` | **Passiva:** `odakradbasem, odakradbases, odakradbase, odakradbasen, odakradbaset`
   - **Imperf.Subj Ativa:** `odakradbakem, odakradbakes, odakradbake, odakradbaken, odakradbaket` | **Passiva:** `odakradbakesem, odakradbakeses, odakradbakese, odakradbakesen, odakradbakeset`
 
-## 34. Raiz `lakanav-` (amaldiçoar, votar ao mal)
+## 42. Raiz `kurr-` (correr, apressar o passo na tempestade)
+
+### 1. Positivo: **kurrur** (*correr, apressar o passo na tempestade*)
+
+- **Infinitivo:** `kurrur` | **Imperativo:** `Kurr!` | **Interrogativo 2ª Pl:** `kurrukka?`
+- **Particípio (8 Casos):** Nom.Sg `kurret`, Gen.Sg `kurrety`, Dat.Sg `kurreti`, Acu.Sg `kurretom`, Nom.Pl `kurreti`, Gen.Pl `kurretye`, Dat.Pl `kurretoi`, Acu.Pl `kurretos`
+- **Derivados Nominais:** Agente `kurrte`, Abstrato `kurror`, Instrumento `kurrtek`, Lugar `kurria`
+  - **Pres.Ind Ativa:** `kurrum, kurrus, kurru, kurrun, kurrut` | **Passiva:** `kurrusem, kurruses, kurruse, kurrusen, kurruset`
+  - **Pres.Subj Ativa:** `kurrukem, kurrukes, kurruke, kurruken, kurruket` | **Passiva:** `kurrukesem, kurrukeses, kurrukese, kurrukesen, kurrukeset`
+  - **Pass.Ind Ativa:** `kurrram, kurrras, kurrra, kurrran, kurrrat` | **Passiva:** `kurrrasem, kurrrases, kurrrase, kurrrasen, kurrraset`
+  - **Pass.Subj Ativa:** `kurrrakem, kurrrakes, kurrrake, kurrraken, kurrraket` | **Passiva:** `kurrrakesem, kurrrakeses, kurrrakese, kurrrakesen, kurrrakeset`
+  - **Dur.Ind Ativa:** `kurraim, kurrais, kurrai, kurrain, kurrait` | **Passiva:** `kurraisem, kurraises, kurraise, kurraisen, kurraiset`
+  - **Dur.Subj Ativa:** `kurraikem, kurraikes, kurraike, kurraiken, kurraiket` | **Passiva:** `kurraikesem, kurraikeses, kurraikese, kurraikesen, kurraikeset`
+  - **Fut.Ind Ativa:** `kurrrum, kurrrus, kurrru, kurrrun, kurrrut` | **Passiva:** `kurrrusem, kurrruses, kurrruse, kurrrusen, kurrruset`
+  - **Fut.Subj Ativa:** `kurrrukem, kurrrukes, kurrruke, kurrruken, kurrruket` | **Passiva:** `kurrrukesem, kurrrukeses, kurrrukese, kurrrukesen, kurrrukeset`
+  - **Imperf.Ind Ativa:** `kurrbam, kurrbas, kurrba, kurrban, kurrbat` | **Passiva:** `kurrbasem, kurrbases, kurrbase, kurrbasen, kurrbaset`
+  - **Imperf.Subj Ativa:** `kurrbakem, kurrbakes, kurrbake, kurrbaken, kurrbaket` | **Passiva:** `kurrbakesem, kurrbakeses, kurrbakese, kurrbakesen, kurrbakeset`
+
+### 2. Privativo (a-): **akurrur** (*desacelerar o passo, parar a corrida*)
+
+- **Infinitivo:** `akurrur` | **Imperativo:** `Akurr!` | **Interrogativo 2ª Pl:** `akurrukka?`
+- **Particípio (8 Casos):** Nom.Sg `akurret`, Gen.Sg `akurrety`, Dat.Sg `akurreti`, Acu.Sg `akurretom`, Nom.Pl `akurreti`, Gen.Pl `akurretye`, Dat.Pl `akurretoi`, Acu.Pl `akurretos`
+- **Derivados Nominais:** Agente `akurrte`, Abstrato `akurror`, Instrumento `akurrtek`, Lugar `akurria`
+  - **Pres.Ind Ativa:** `akurrum, akurrus, akurru, akurrun, akurrut` | **Passiva:** `akurrusem, akurruses, akurruse, akurrusen, akurruset`
+  - **Pres.Subj Ativa:** `akurrukem, akurrukes, akurruke, akurruken, akurruket` | **Passiva:** `akurrukesem, akurrukeses, akurrukese, akurrukesen, akurrukeset`
+  - **Pass.Ind Ativa:** `akurrram, akurrras, akurrra, akurrran, akurrrat` | **Passiva:** `akurrrasem, akurrrases, akurrrase, akurrrasen, akurrraset`
+  - **Pass.Subj Ativa:** `akurrrakem, akurrrakes, akurrrake, akurrraken, akurrraket` | **Passiva:** `akurrrakesem, akurrrakeses, akurrrakese, akurrrakesen, akurrrakeset`
+  - **Dur.Ind Ativa:** `akurraim, akurrais, akurrai, akurrain, akurrait` | **Passiva:** `akurraisem, akurraises, akurraise, akurraisen, akurraiset`
+  - **Dur.Subj Ativa:** `akurraikem, akurraikes, akurraike, akurraiken, akurraiket` | **Passiva:** `akurraikesem, akurraikeses, akurraikese, akurraikesen, akurraikeset`
+  - **Fut.Ind Ativa:** `akurrrum, akurrrus, akurrru, akurrrun, akurrrut` | **Passiva:** `akurrrusem, akurrruses, akurrruse, akurrrusen, akurrruset`
+  - **Fut.Subj Ativa:** `akurrrukem, akurrrukes, akurrruke, akurrruken, akurrruket` | **Passiva:** `akurrrukesem, akurrrukeses, akurrrukese, akurrrukesen, akurrrukeset`
+  - **Imperf.Ind Ativa:** `akurrbam, akurrbas, akurrba, akurrban, akurrbat` | **Passiva:** `akurrbasem, akurrbases, akurrbase, akurrbasen, akurrbaset`
+  - **Imperf.Subj Ativa:** `akurrbakem, akurrbakes, akurrbake, akurrbaken, akurrbaket` | **Passiva:** `akurrbakesem, akurrbakeses, akurrbakese, akurrbakesen, akurrbakeset`
+
+### 3. Iterativo (o-/od-): **okurrur** (*correr de novo, disparar em marcha rápida*)
+
+- **Infinitivo:** `okurrur` | **Imperativo:** `Okurr!` | **Interrogativo 2ª Pl:** `okurrukka?`
+- **Particípio (8 Casos):** Nom.Sg `okurret`, Gen.Sg `okurrety`, Dat.Sg `okurreti`, Acu.Sg `okurretom`, Nom.Pl `okurreti`, Gen.Pl `okurretye`, Dat.Pl `okurretoi`, Acu.Pl `okurretos`
+- **Derivados Nominais:** Agente `okurrte`, Abstrato `okurror`, Instrumento `okurrtek`, Lugar `okurria`
+  - **Pres.Ind Ativa:** `okurrum, okurrus, okurru, okurrun, okurrut` | **Passiva:** `okurrusem, okurruses, okurruse, okurrusen, okurruset`
+  - **Pres.Subj Ativa:** `okurrukem, okurrukes, okurruke, okurruken, okurruket` | **Passiva:** `okurrukesem, okurrukeses, okurrukese, okurrukesen, okurrukeset`
+  - **Pass.Ind Ativa:** `okurrram, okurrras, okurrra, okurrran, okurrrat` | **Passiva:** `okurrrasem, okurrrases, okurrrase, okurrrasen, okurrraset`
+  - **Pass.Subj Ativa:** `okurrrakem, okurrrakes, okurrrake, okurrraken, okurrraket` | **Passiva:** `okurrrakesem, okurrrakeses, okurrrakese, okurrrakesen, okurrrakeset`
+  - **Dur.Ind Ativa:** `okurraim, okurrais, okurrai, okurrain, okurrait` | **Passiva:** `okurraisem, okurraises, okurraise, okurraisen, okurraiset`
+  - **Dur.Subj Ativa:** `okurraikem, okurraikes, okurraike, okurraiken, okurraiket` | **Passiva:** `okurraikesem, okurraikeses, okurraikese, okurraikesen, okurraikeset`
+  - **Fut.Ind Ativa:** `okurrrum, okurrrus, okurrru, okurrrun, okurrrut` | **Passiva:** `okurrrusem, okurrruses, okurrruse, okurrrusen, okurrruset`
+  - **Fut.Subj Ativa:** `okurrrukem, okurrrukes, okurrruke, okurrruken, okurrruket` | **Passiva:** `okurrrukesem, okurrrukeses, okurrrukese, okurrrukesen, okurrrukeset`
+  - **Imperf.Ind Ativa:** `okurrbam, okurrbas, okurrba, okurrban, okurrbat` | **Passiva:** `okurrbasem, okurrbases, okurrbase, okurrbasen, okurrbaset`
+  - **Imperf.Subj Ativa:** `okurrbakem, okurrbakes, okurrbake, okurrbaken, okurrbaket` | **Passiva:** `okurrbakesem, okurrbakeses, okurrbakese, okurrbakesen, okurrbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odakurrur** (*cessar a correria repentina*)
+
+- **Infinitivo:** `odakurrur` | **Imperativo:** `Odakurr!` | **Interrogativo 2ª Pl:** `odakurrukka?`
+- **Particípio (8 Casos):** Nom.Sg `odakurret`, Gen.Sg `odakurrety`, Dat.Sg `odakurreti`, Acu.Sg `odakurretom`, Nom.Pl `odakurreti`, Gen.Pl `odakurretye`, Dat.Pl `odakurretoi`, Acu.Pl `odakurretos`
+- **Derivados Nominais:** Agente `odakurrte`, Abstrato `odakurror`, Instrumento `odakurrtek`, Lugar `odakurria`
+  - **Pres.Ind Ativa:** `odakurrum, odakurrus, odakurru, odakurrun, odakurrut` | **Passiva:** `odakurrusem, odakurruses, odakurruse, odakurrusen, odakurruset`
+  - **Pres.Subj Ativa:** `odakurrukem, odakurrukes, odakurruke, odakurruken, odakurruket` | **Passiva:** `odakurrukesem, odakurrukeses, odakurrukese, odakurrukesen, odakurrukeset`
+  - **Pass.Ind Ativa:** `odakurrram, odakurrras, odakurrra, odakurrran, odakurrrat` | **Passiva:** `odakurrrasem, odakurrrases, odakurrrase, odakurrrasen, odakurrraset`
+  - **Pass.Subj Ativa:** `odakurrrakem, odakurrrakes, odakurrrake, odakurrraken, odakurrraket` | **Passiva:** `odakurrrakesem, odakurrrakeses, odakurrrakese, odakurrrakesen, odakurrrakeset`
+  - **Dur.Ind Ativa:** `odakurraim, odakurrais, odakurrai, odakurrain, odakurrait` | **Passiva:** `odakurraisem, odakurraises, odakurraise, odakurraisen, odakurraiset`
+  - **Dur.Subj Ativa:** `odakurraikem, odakurraikes, odakurraike, odakurraiken, odakurraiket` | **Passiva:** `odakurraikesem, odakurraikeses, odakurraikese, odakurraikesen, odakurraikeset`
+  - **Fut.Ind Ativa:** `odakurrrum, odakurrrus, odakurrru, odakurrrun, odakurrrut` | **Passiva:** `odakurrrusem, odakurrruses, odakurrruse, odakurrrusen, odakurrruset`
+  - **Fut.Subj Ativa:** `odakurrrukem, odakurrrukes, odakurrruke, odakurrruken, odakurrruket` | **Passiva:** `odakurrrukesem, odakurrrukeses, odakurrrukese, odakurrrukesen, odakurrrukeset`
+  - **Imperf.Ind Ativa:** `odakurrbam, odakurrbas, odakurrba, odakurrban, odakurrbat` | **Passiva:** `odakurrbasem, odakurrbases, odakurrbase, odakurrbasen, odakurrbaset`
+  - **Imperf.Subj Ativa:** `odakurrbakem, odakurrbakes, odakurrbake, odakurrbaken, odakurrbaket` | **Passiva:** `odakurrbakesem, odakurrbakeses, odakurrbakese, odakurrbakesen, odakurrbakeset`
+
+## 43. Raiz `lakanav-` (amaldiçoar, votar ao mal)
 
 ### 1. Positivo: **lakanavur** (*amaldiçoar, votar ao mal*)
 
@@ -2244,7 +2838,7 @@
   - **Imperf.Ind Ativa:** `odalakanavbam, odalakanavbas, odalakanavba, odalakanavban, odalakanavbat` | **Passiva:** `odalakanavbasem, odalakanavbases, odalakanavbase, odalakanavbasen, odalakanavbaset`
   - **Imperf.Subj Ativa:** `odalakanavbakem, odalakanavbakes, odalakanavbake, odalakanavbaken, odalakanavbaket` | **Passiva:** `odalakanavbakesem, odalakanavbakeses, odalakanavbakese, odalakanavbakesen, odalakanavbakeset`
 
-## 35. Raiz `lan-` (emanar luz, alumiar)
+## 44. Raiz `lan-` (emanar luz, alumiar)
 
 ### 1. Positivo: **lanur** (*emanar luz, alumiar*)
 
@@ -2310,7 +2904,7 @@
   - **Imperf.Ind Ativa:** `odalambam, odalambas, odalamba, odalamban, odalambat` | **Passiva:** `odalambasem, odalambases, odalambase, odalambasen, odalambaset`
   - **Imperf.Subj Ativa:** `odalambakem, odalambakes, odalambake, odalambaken, odalambaket` | **Passiva:** `odalambakesem, odalambakeses, odalambakese, odalambakesen, odalambakeset`
 
-## 36. Raiz `let-` (falar, dizer, proferir, chamar)
+## 45. Raiz `let-` (falar, dizer, proferir, chamar)
 
 ### 1. Positivo: **letur** (*falar, dizer, proferir, chamar*)
 
@@ -2376,7 +2970,7 @@
   - **Imperf.Ind Ativa:** `odalebbam, odalebbas, odalebba, odalebban, odalebbat` | **Passiva:** `odalebbasem, odalebbases, odalebbase, odalebbasen, odalebbaset`
   - **Imperf.Subj Ativa:** `odalebbakem, odalebbakes, odalebbake, odalebbaken, odalebbaket` | **Passiva:** `odalebbakesem, odalebbakeses, odalebbakese, odalebbakesen, odalebbakeset`
 
-## 37. Raiz `litr-` (vibrar, cantar, soar em música)
+## 46. Raiz `litr-` (vibrar, cantar, soar em música)
 
 ### 1. Positivo: **litrur** (*vibrar, cantar, soar em música*)
 
@@ -2442,7 +3036,7 @@
   - **Imperf.Ind Ativa:** `odalitrbam, odalitrbas, odalitrba, odalitrban, odalitrbat` | **Passiva:** `odalitrbasem, odalitrbases, odalitrbase, odalitrbasen, odalitrbaset`
   - **Imperf.Subj Ativa:** `odalitrbakem, odalitrbakes, odalitrbake, odalitrbaken, odalitrbaket` | **Passiva:** `odalitrbakesem, odalitrbakeses, odalitrbakese, odalitrbakesen, odalitrbakeset`
 
-## 38. Raiz `mad-` (conceber no ventre, gerar (part. madet))
+## 47. Raiz `mad-` (conceber no ventre, gerar (part. madet))
 
 ### 1. Positivo: **madur** (*conceber no ventre, gerar (part. madet)*)
 
@@ -2508,7 +3102,7 @@
   - **Imperf.Ind Ativa:** `odamadbam, odamadbas, odamadba, odamadban, odamadbat` | **Passiva:** `odamadbasem, odamadbases, odamadbase, odamadbasen, odamadbaset`
   - **Imperf.Subj Ativa:** `odamadbakem, odamadbakes, odamadbake, odamadbaken, odamadbaket` | **Passiva:** `odamadbakesem, odamadbakeses, odamadbakese, odamadbakesen, odamadbakeset`
 
-## 39. Raiz `mak-` (comer, alimentar-se)
+## 48. Raiz `mak-` (comer, alimentar-se)
 
 ### 1. Positivo: **makur** (*comer, alimentar-se*)
 
@@ -2574,7 +3168,73 @@
   - **Imperf.Ind Ativa:** `odamabbam, odamabbas, odamabba, odamabban, odamabbat` | **Passiva:** `odamabbasem, odamabbases, odamabbase, odamabbasen, odamabbaset`
   - **Imperf.Subj Ativa:** `odamabbakem, odamabbakes, odamabbake, odamabbaken, odamabbaket` | **Passiva:** `odamabbakesem, odamabbakeses, odamabbakese, odamabbakesen, odamabbakeset`
 
-## 40. Raiz `met-` (glorificar, regozijar-se, exaltar)
+## 49. Raiz `mand-` (comer, alimentar-se)
+
+### 1. Positivo: **mandur** (*comer, alimentar-se*)
+
+- **Infinitivo:** `mandur` | **Imperativo:** `Mand!` | **Interrogativo 2ª Pl:** `mandukka?`
+- **Particípio (8 Casos):** Nom.Sg `mandet`, Gen.Sg `mandety`, Dat.Sg `mandeti`, Acu.Sg `mandetom`, Nom.Pl `mandeti`, Gen.Pl `mandetye`, Dat.Pl `mandetoi`, Acu.Pl `mandetos`
+- **Derivados Nominais:** Agente `mantte`, Abstrato `mandor`, Instrumento `manttek`, Lugar `mandia`
+  - **Pres.Ind Ativa:** `mandum, mandus, mandu, mandun, mandut` | **Passiva:** `mandusem, manduses, manduse, mandusen, manduset`
+  - **Pres.Subj Ativa:** `mandukem, mandukes, manduke, manduken, manduket` | **Passiva:** `mandukesem, mandukeses, mandukese, mandukesen, mandukeset`
+  - **Pass.Ind Ativa:** `mandram, mandras, mandra, mandran, mandrat` | **Passiva:** `mandrasem, mandrases, mandrase, mandrasen, mandraset`
+  - **Pass.Subj Ativa:** `mandrakem, mandrakes, mandrake, mandraken, mandraket` | **Passiva:** `mandrakesem, mandrakeses, mandrakese, mandrakesen, mandrakeset`
+  - **Dur.Ind Ativa:** `mandaim, mandais, mandai, mandain, mandait` | **Passiva:** `mandaisem, mandaises, mandaise, mandaisen, mandaiset`
+  - **Dur.Subj Ativa:** `mandaikem, mandaikes, mandaike, mandaiken, mandaiket` | **Passiva:** `mandaikesem, mandaikeses, mandaikese, mandaikesen, mandaikeset`
+  - **Fut.Ind Ativa:** `mandrum, mandrus, mandru, mandrun, mandrut` | **Passiva:** `mandrusem, mandruses, mandruse, mandrusen, mandruset`
+  - **Fut.Subj Ativa:** `mandrukem, mandrukes, mandruke, mandruken, mandruket` | **Passiva:** `mandrukesem, mandrukeses, mandrukese, mandrukesen, mandrukeset`
+  - **Imperf.Ind Ativa:** `mandbam, mandbas, mandba, mandban, mandbat` | **Passiva:** `mandbasem, mandbases, mandbase, mandbasen, mandbaset`
+  - **Imperf.Subj Ativa:** `mandbakem, mandbakes, mandbake, mandbaken, mandbaket` | **Passiva:** `mandbakesem, mandbakeses, mandbakese, mandbakesen, mandbakeset`
+
+### 2. Privativo (a-): **amandur** (*jejuar, ficar sem comer*)
+
+- **Infinitivo:** `amandur` | **Imperativo:** `Amand!` | **Interrogativo 2ª Pl:** `amandukka?`
+- **Particípio (8 Casos):** Nom.Sg `amandet`, Gen.Sg `amandety`, Dat.Sg `amandeti`, Acu.Sg `amandetom`, Nom.Pl `amandeti`, Gen.Pl `amandetye`, Dat.Pl `amandetoi`, Acu.Pl `amandetos`
+- **Derivados Nominais:** Agente `amantte`, Abstrato `amandor`, Instrumento `amanttek`, Lugar `amandia`
+  - **Pres.Ind Ativa:** `amandum, amandus, amandu, amandun, amandut` | **Passiva:** `amandusem, amanduses, amanduse, amandusen, amanduset`
+  - **Pres.Subj Ativa:** `amandukem, amandukes, amanduke, amanduken, amanduket` | **Passiva:** `amandukesem, amandukeses, amandukese, amandukesen, amandukeset`
+  - **Pass.Ind Ativa:** `amandram, amandras, amandra, amandran, amandrat` | **Passiva:** `amandrasem, amandrases, amandrase, amandrasen, amandraset`
+  - **Pass.Subj Ativa:** `amandrakem, amandrakes, amandrake, amandraken, amandraket` | **Passiva:** `amandrakesem, amandrakeses, amandrakese, amandrakesen, amandrakeset`
+  - **Dur.Ind Ativa:** `amandaim, amandais, amandai, amandain, amandait` | **Passiva:** `amandaisem, amandaises, amandaise, amandaisen, amandaiset`
+  - **Dur.Subj Ativa:** `amandaikem, amandaikes, amandaike, amandaiken, amandaiket` | **Passiva:** `amandaikesem, amandaikeses, amandaikese, amandaikesen, amandaikeset`
+  - **Fut.Ind Ativa:** `amandrum, amandrus, amandru, amandrun, amandrut` | **Passiva:** `amandrusem, amandruses, amandruse, amandrusen, amandruset`
+  - **Fut.Subj Ativa:** `amandrukem, amandrukes, amandruke, amandruken, amandruket` | **Passiva:** `amandrukesem, amandrukeses, amandrukese, amandrukesen, amandrukeset`
+  - **Imperf.Ind Ativa:** `amandbam, amandbas, amandba, amandban, amandbat` | **Passiva:** `amandbasem, amandbases, amandbase, amandbasen, amandbaset`
+  - **Imperf.Subj Ativa:** `amandbakem, amandbakes, amandbake, amandbaken, amandbaket` | **Passiva:** `amandbakesem, amandbakeses, amandbakese, amandbakesen, amandbakeset`
+
+### 3. Iterativo (o-/od-): **omandur** (*voltar a comer, merendar habitualmente*)
+
+- **Infinitivo:** `omandur` | **Imperativo:** `Omand!` | **Interrogativo 2ª Pl:** `omandukka?`
+- **Particípio (8 Casos):** Nom.Sg `omandet`, Gen.Sg `omandety`, Dat.Sg `omandeti`, Acu.Sg `omandetom`, Nom.Pl `omandeti`, Gen.Pl `omandetye`, Dat.Pl `omandetoi`, Acu.Pl `omandetos`
+- **Derivados Nominais:** Agente `omantte`, Abstrato `omandor`, Instrumento `omanttek`, Lugar `omandia`
+  - **Pres.Ind Ativa:** `omandum, omandus, omandu, omandun, omandut` | **Passiva:** `omandusem, omanduses, omanduse, omandusen, omanduset`
+  - **Pres.Subj Ativa:** `omandukem, omandukes, omanduke, omanduken, omanduket` | **Passiva:** `omandukesem, omandukeses, omandukese, omandukesen, omandukeset`
+  - **Pass.Ind Ativa:** `omandram, omandras, omandra, omandran, omandrat` | **Passiva:** `omandrasem, omandrases, omandrase, omandrasen, omandraset`
+  - **Pass.Subj Ativa:** `omandrakem, omandrakes, omandrake, omandraken, omandraket` | **Passiva:** `omandrakesem, omandrakeses, omandrakese, omandrakesen, omandrakeset`
+  - **Dur.Ind Ativa:** `omandaim, omandais, omandai, omandain, omandait` | **Passiva:** `omandaisem, omandaises, omandaise, omandaisen, omandaiset`
+  - **Dur.Subj Ativa:** `omandaikem, omandaikes, omandaike, omandaiken, omandaiket` | **Passiva:** `omandaikesem, omandaikeses, omandaikese, omandaikesen, omandaikeset`
+  - **Fut.Ind Ativa:** `omandrum, omandrus, omandru, omandrun, omandrut` | **Passiva:** `omandrusem, omandruses, omandruse, omandrusen, omandruset`
+  - **Fut.Subj Ativa:** `omandrukem, omandrukes, omandruke, omandruken, omandruket` | **Passiva:** `omandrukesem, omandrukeses, omandrukese, omandrukesen, omandrukeset`
+  - **Imperf.Ind Ativa:** `omandbam, omandbas, omandba, omandban, omandbat` | **Passiva:** `omandbasem, omandbases, omandbase, omandbasen, omandbaset`
+  - **Imperf.Subj Ativa:** `omandbakem, omandbakes, omandbake, omandbaken, omandbaket` | **Passiva:** `omandbakesem, omandbakeses, omandbakese, omandbakesen, omandbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odamandur** (*quebrar o jejum, voltar a alimentar-se*)
+
+- **Infinitivo:** `odamandur` | **Imperativo:** `Odamand!` | **Interrogativo 2ª Pl:** `odamandukka?`
+- **Particípio (8 Casos):** Nom.Sg `odamandet`, Gen.Sg `odamandety`, Dat.Sg `odamandeti`, Acu.Sg `odamandetom`, Nom.Pl `odamandeti`, Gen.Pl `odamandetye`, Dat.Pl `odamandetoi`, Acu.Pl `odamandetos`
+- **Derivados Nominais:** Agente `odamantte`, Abstrato `odamandor`, Instrumento `odamanttek`, Lugar `odamandia`
+  - **Pres.Ind Ativa:** `odamandum, odamandus, odamandu, odamandun, odamandut` | **Passiva:** `odamandusem, odamanduses, odamanduse, odamandusen, odamanduset`
+  - **Pres.Subj Ativa:** `odamandukem, odamandukes, odamanduke, odamanduken, odamanduket` | **Passiva:** `odamandukesem, odamandukeses, odamandukese, odamandukesen, odamandukeset`
+  - **Pass.Ind Ativa:** `odamandram, odamandras, odamandra, odamandran, odamandrat` | **Passiva:** `odamandrasem, odamandrases, odamandrase, odamandrasen, odamandraset`
+  - **Pass.Subj Ativa:** `odamandrakem, odamandrakes, odamandrake, odamandraken, odamandraket` | **Passiva:** `odamandrakesem, odamandrakeses, odamandrakese, odamandrakesen, odamandrakeset`
+  - **Dur.Ind Ativa:** `odamandaim, odamandais, odamandai, odamandain, odamandait` | **Passiva:** `odamandaisem, odamandaises, odamandaise, odamandaisen, odamandaiset`
+  - **Dur.Subj Ativa:** `odamandaikem, odamandaikes, odamandaike, odamandaiken, odamandaiket` | **Passiva:** `odamandaikesem, odamandaikeses, odamandaikese, odamandaikesen, odamandaikeset`
+  - **Fut.Ind Ativa:** `odamandrum, odamandrus, odamandru, odamandrun, odamandrut` | **Passiva:** `odamandrusem, odamandruses, odamandruse, odamandrusen, odamandruset`
+  - **Fut.Subj Ativa:** `odamandrukem, odamandrukes, odamandruke, odamandruken, odamandruket` | **Passiva:** `odamandrukesem, odamandrukeses, odamandrukese, odamandrukesen, odamandrukeset`
+  - **Imperf.Ind Ativa:** `odamandbam, odamandbas, odamandba, odamandban, odamandbat` | **Passiva:** `odamandbasem, odamandbases, odamandbase, odamandbasen, odamandbaset`
+  - **Imperf.Subj Ativa:** `odamandbakem, odamandbakes, odamandbake, odamandbaken, odamandbaket` | **Passiva:** `odamandbakesem, odamandbakeses, odamandbakese, odamandbakesen, odamandbakeset`
+
+## 50. Raiz `met-` (glorificar, regozijar-se, exaltar)
 
 ### 1. Positivo: **metur** (*glorificar, regozijar-se, exaltar*)
 
@@ -2640,7 +3300,7 @@
   - **Imperf.Ind Ativa:** `odamebbam, odamebbas, odamebba, odamebban, odamebbat` | **Passiva:** `odamebbasem, odamebbases, odamebbase, odamebbasen, odamebbaset`
   - **Imperf.Subj Ativa:** `odamebbakem, odamebbakes, odamebbake, odamebbaken, odamebbaket` | **Passiva:** `odamebbakesem, odamebbakeses, odamebbakese, odamebbakesen, odamebbakeset`
 
-## 41. Raiz `mir-` (ver, olhar, vigiar, contemplar)
+## 51. Raiz `mir-` (ver, olhar, vigiar, contemplar)
 
 ### 1. Positivo: **mirur** (*ver, olhar, vigiar, contemplar*)
 
@@ -2706,7 +3366,7 @@
   - **Imperf.Ind Ativa:** `odamirbam, odamirbas, odamirba, odamirban, odamirbat` | **Passiva:** `odamirbasem, odamirbases, odamirbase, odamirbasen, odamirbaset`
   - **Imperf.Subj Ativa:** `odamirbakem, odamirbakes, odamirbake, odamirbaken, odamirbaket` | **Passiva:** `odamirbakesem, odamirbakeses, odamirbakese, odamirbakesen, odamirbakeset`
 
-## 42. Raiz `mob-` (beneficiar, dar, conceder)
+## 52. Raiz `mob-` (beneficiar, dar, conceder)
 
 ### 1. Positivo: **mobur** (*beneficiar, dar, conceder*)
 
@@ -2772,7 +3432,7 @@
   - **Imperf.Ind Ativa:** `odamobbam, odamobbas, odamobba, odamobban, odamobbat` | **Passiva:** `odamobbasem, odamobbases, odamobbase, odamobbasen, odamobbaset`
   - **Imperf.Subj Ativa:** `odamobbakem, odamobbakes, odamobbake, odamobbaken, odamobbaket` | **Passiva:** `odamobbakesem, odamobbakeses, odamobbakese, odamobbakesen, odamobbakeset`
 
-## 43. Raiz `mobanav-` (bendizer, abençoar)
+## 53. Raiz `mobanav-` (bendizer, abençoar)
 
 ### 1. Positivo: **mobanavur** (*bendizer, abençoar*)
 
@@ -2838,7 +3498,7 @@
   - **Imperf.Ind Ativa:** `odamobanavbam, odamobanavbas, odamobanavba, odamobanavban, odamobanavbat` | **Passiva:** `odamobanavbasem, odamobanavbases, odamobanavbase, odamobanavbasen, odamobanavbaset`
   - **Imperf.Subj Ativa:** `odamobanavbakem, odamobanavbakes, odamobanavbake, odamobanavbaken, odamobanavbaket` | **Passiva:** `odamobanavbakesem, odamobanavbakeses, odamobanavbakese, odamobanavbakesen, odamobanavbakeset`
 
-## 44. Raiz `mollet-` (julgar, sentenciar (mon+let))
+## 54. Raiz `mollet-` (julgar, sentenciar (mon+let))
 
 ### 1. Positivo: **molletur** (*julgar, sentenciar (mon+let)*)
 
@@ -2904,7 +3564,7 @@
   - **Imperf.Ind Ativa:** `odamollebbam, odamollebbas, odamollebba, odamollebban, odamollebbat` | **Passiva:** `odamollebbasem, odamollebbases, odamollebbase, odamollebbasen, odamollebbaset`
   - **Imperf.Subj Ativa:** `odamollebbakem, odamollebbakes, odamollebbake, odamollebbaken, odamollebbaket` | **Passiva:** `odamollebbakesem, odamollebbakeses, odamollebbakese, odamollebbakesen, odamollebbakeset`
 
-## 45. Raiz `nav-` (transformar, tornar-se, converter)
+## 55. Raiz `nav-` (transformar, tornar-se, converter)
 
 ### 1. Positivo: **navur** (*transformar, tornar-se, converter*)
 
@@ -2970,7 +3630,7 @@
   - **Imperf.Ind Ativa:** `odanavbam, odanavbas, odanavba, odanavban, odanavbat` | **Passiva:** `odanavbasem, odanavbases, odanavbase, odanavbasen, odanavbaset`
   - **Imperf.Subj Ativa:** `odanavbakem, odanavbakes, odanavbake, odanavbaken, odanavbaket` | **Passiva:** `odanavbakesem, odanavbakeses, odanavbakese, odanavbakesen, odanavbakeset`
 
-## 46. Raiz `nemr-` (lembrar, recordar na memória (fut. nemnu, nr -> nn))
+## 56. Raiz `nemr-` (lembrar, recordar na memória (fut. nemnu, nr -> nn))
 
 ### 1. Positivo: **nemrur** (*lembrar, recordar na memória (fut. nemnu, nr -> nn)*)
 
@@ -3036,7 +3696,7 @@
   - **Imperf.Ind Ativa:** `odanemrbam, odanemrbas, odanemrba, odanemrban, odanemrbat` | **Passiva:** `odanemrbasem, odanemrbases, odanemrbase, odanemrbasen, odanemrbaset`
   - **Imperf.Subj Ativa:** `odanemrbakem, odanemrbakes, odanemrbake, odanemrbaken, odanemrbaket` | **Passiva:** `odanemrbakesem, odanemrbakeses, odanemrbakese, odanemrbakesen, odanemrbakeset`
 
-## 47. Raiz `oub-` (entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror))
+## 57. Raiz `oub-` (entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror))
 
 ### 1. Positivo: **oubur** (*entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror)*)
 
@@ -3102,7 +3762,7 @@
   - **Imperf.Ind Ativa:** `odaoubbam, odaoubbas, odaoubba, odaoubban, odaoubbat` | **Passiva:** `odaoubbasem, odaoubbases, odaoubbase, odaoubbasen, odaoubbaset`
   - **Imperf.Subj Ativa:** `odaoubbakem, odaoubbakes, odaoubbake, odaoubbaken, odaoubbaket` | **Passiva:** `odaoubbakesem, odaoubbakeses, odaoubbakese, odaoubbakesen, odaoubbakeset`
 
-## 48. Raiz `ox-` (guerrear, combater em campo)
+## 58. Raiz `ox-` (guerrear, combater em campo)
 
 ### 1. Positivo: **oxur** (*guerrear, combater em campo*)
 
@@ -3168,7 +3828,73 @@
   - **Imperf.Ind Ativa:** `odaoxbam, odaoxbas, odaoxba, odaoxban, odaoxbat` | **Passiva:** `odaoxbasem, odaoxbases, odaoxbase, odaoxbasen, odaoxbaset`
   - **Imperf.Subj Ativa:** `odaoxbakem, odaoxbakes, odaoxbake, odaoxbaken, odaoxbaket` | **Passiva:** `odaoxbakesem, odaoxbakeses, odaoxbakese, odaoxbakesen, odaoxbakeset`
 
-## 49. Raiz `par-` (merecer, ser digno, ter parte em)
+## 59. Raiz `pag-` (pagar a despesa, quitar moedas de prata)
+
+### 1. Positivo: **pagur** (*pagar a despesa, quitar moedas de prata*)
+
+- **Infinitivo:** `pagur` | **Imperativo:** `Pag!` | **Interrogativo 2ª Pl:** `pagukka?`
+- **Particípio (8 Casos):** Nom.Sg `paget`, Gen.Sg `pagety`, Dat.Sg `pageti`, Acu.Sg `pagetom`, Nom.Pl `pageti`, Gen.Pl `pagetye`, Dat.Pl `pagetoi`, Acu.Pl `pagetos`
+- **Derivados Nominais:** Agente `pagte`, Abstrato `pagor`, Instrumento `pagtek`, Lugar `pagia`
+  - **Pres.Ind Ativa:** `pagum, pagus, pagu, pagun, pagut` | **Passiva:** `pagusem, paguses, paguse, pagusen, paguset`
+  - **Pres.Subj Ativa:** `pagukem, pagukes, paguke, paguken, paguket` | **Passiva:** `pagukesem, pagukeses, pagukese, pagukesen, pagukeset`
+  - **Pass.Ind Ativa:** `pagram, pagras, pagra, pagran, pagrat` | **Passiva:** `pagrasem, pagrases, pagrase, pagrasen, pagraset`
+  - **Pass.Subj Ativa:** `pagrakem, pagrakes, pagrake, pagraken, pagraket` | **Passiva:** `pagrakesem, pagrakeses, pagrakese, pagrakesen, pagrakeset`
+  - **Dur.Ind Ativa:** `pagaim, pagais, pagai, pagain, pagait` | **Passiva:** `pagaisem, pagaises, pagaise, pagaisen, pagaiset`
+  - **Dur.Subj Ativa:** `pagaikem, pagaikes, pagaike, pagaiken, pagaiket` | **Passiva:** `pagaikesem, pagaikeses, pagaikese, pagaikesen, pagaikeset`
+  - **Fut.Ind Ativa:** `pagrum, pagrus, pagru, pagrun, pagrut` | **Passiva:** `pagrusem, pagruses, pagruse, pagrusen, pagruset`
+  - **Fut.Subj Ativa:** `pagrukem, pagrukes, pagruke, pagruken, pagruket` | **Passiva:** `pagrukesem, pagrukeses, pagrukese, pagrukesen, pagrukeset`
+  - **Imperf.Ind Ativa:** `pagbam, pagbas, pagba, pagban, pagbat` | **Passiva:** `pagbasem, pagbases, pagbase, pagbasen, pagbaset`
+  - **Imperf.Subj Ativa:** `pagbakem, pagbakes, pagbake, pagbaken, pagbaket` | **Passiva:** `pagbakesem, pagbakeses, pagbakese, pagbakesen, pagbakeset`
+
+### 2. Privativo (a-): **apagur** (*ficar em débito, postergar o pagamento*)
+
+- **Infinitivo:** `apagur` | **Imperativo:** `Apag!` | **Interrogativo 2ª Pl:** `apagukka?`
+- **Particípio (8 Casos):** Nom.Sg `apaget`, Gen.Sg `apagety`, Dat.Sg `apageti`, Acu.Sg `apagetom`, Nom.Pl `apageti`, Gen.Pl `apagetye`, Dat.Pl `apagetoi`, Acu.Pl `apagetos`
+- **Derivados Nominais:** Agente `apagte`, Abstrato `apagor`, Instrumento `apagtek`, Lugar `apagia`
+  - **Pres.Ind Ativa:** `apagum, apagus, apagu, apagun, apagut` | **Passiva:** `apagusem, apaguses, apaguse, apagusen, apaguset`
+  - **Pres.Subj Ativa:** `apagukem, apagukes, apaguke, apaguken, apaguket` | **Passiva:** `apagukesem, apagukeses, apagukese, apagukesen, apagukeset`
+  - **Pass.Ind Ativa:** `apagram, apagras, apagra, apagran, apagrat` | **Passiva:** `apagrasem, apagrases, apagrase, apagrasen, apagraset`
+  - **Pass.Subj Ativa:** `apagrakem, apagrakes, apagrake, apagraken, apagraket` | **Passiva:** `apagrakesem, apagrakeses, apagrakese, apagrakesen, apagrakeset`
+  - **Dur.Ind Ativa:** `apagaim, apagais, apagai, apagain, apagait` | **Passiva:** `apagaisem, apagaises, apagaise, apagaisen, apagaiset`
+  - **Dur.Subj Ativa:** `apagaikem, apagaikes, apagaike, apagaiken, apagaiket` | **Passiva:** `apagaikesem, apagaikeses, apagaikese, apagaikesen, apagaikeset`
+  - **Fut.Ind Ativa:** `apagrum, apagrus, apagru, apagrun, apagrut` | **Passiva:** `apagrusem, apagruses, apagruse, apagrusen, apagruset`
+  - **Fut.Subj Ativa:** `apagrukem, apagrukes, apagruke, apagruken, apagruket` | **Passiva:** `apagrukesem, apagrukeses, apagrukese, apagrukesen, apagrukeset`
+  - **Imperf.Ind Ativa:** `apagbam, apagbas, apagba, apagban, apagbat` | **Passiva:** `apagbasem, apagbases, apagbase, apagbasen, apagbaset`
+  - **Imperf.Subj Ativa:** `apagbakem, apagbakes, apagbake, apagbaken, apagbaket` | **Passiva:** `apagbakesem, apagbakeses, apagbakese, apagbakesen, apagbakeset`
+
+### 3. Iterativo (o-/od-): **opagur** (*repagar, saldar dívidas antigas*)
+
+- **Infinitivo:** `opagur` | **Imperativo:** `Opag!` | **Interrogativo 2ª Pl:** `opagukka?`
+- **Particípio (8 Casos):** Nom.Sg `opaget`, Gen.Sg `opagety`, Dat.Sg `opageti`, Acu.Sg `opagetom`, Nom.Pl `opageti`, Gen.Pl `opagetye`, Dat.Pl `opagetoi`, Acu.Pl `opagetos`
+- **Derivados Nominais:** Agente `opagte`, Abstrato `opagor`, Instrumento `opagtek`, Lugar `opagia`
+  - **Pres.Ind Ativa:** `opagum, opagus, opagu, opagun, opagut` | **Passiva:** `opagusem, opaguses, opaguse, opagusen, opaguset`
+  - **Pres.Subj Ativa:** `opagukem, opagukes, opaguke, opaguken, opaguket` | **Passiva:** `opagukesem, opagukeses, opagukese, opagukesen, opagukeset`
+  - **Pass.Ind Ativa:** `opagram, opagras, opagra, opagran, opagrat` | **Passiva:** `opagrasem, opagrases, opagrase, opagrasen, opagraset`
+  - **Pass.Subj Ativa:** `opagrakem, opagrakes, opagrake, opagraken, opagraket` | **Passiva:** `opagrakesem, opagrakeses, opagrakese, opagrakesen, opagrakeset`
+  - **Dur.Ind Ativa:** `opagaim, opagais, opagai, opagain, opagait` | **Passiva:** `opagaisem, opagaises, opagaise, opagaisen, opagaiset`
+  - **Dur.Subj Ativa:** `opagaikem, opagaikes, opagaike, opagaiken, opagaiket` | **Passiva:** `opagaikesem, opagaikeses, opagaikese, opagaikesen, opagaikeset`
+  - **Fut.Ind Ativa:** `opagrum, opagrus, opagru, opagrun, opagrut` | **Passiva:** `opagrusem, opagruses, opagruse, opagrusen, opagruset`
+  - **Fut.Subj Ativa:** `opagrukem, opagrukes, opagruke, opagruken, opagruket` | **Passiva:** `opagrukesem, opagrukeses, opagrukese, opagrukesen, opagrukeset`
+  - **Imperf.Ind Ativa:** `opagbam, opagbas, opagba, opagban, opagbat` | **Passiva:** `opagbasem, opagbases, opagbase, opagbasen, opagbaset`
+  - **Imperf.Subj Ativa:** `opagbakem, opagbakes, opagbake, opagbaken, opagbaket` | **Passiva:** `opagbakesem, opagbakeses, opagbakese, opagbakesen, opagbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odapagur** (*receber de volta o pagamento feito*)
+
+- **Infinitivo:** `odapagur` | **Imperativo:** `Odapag!` | **Interrogativo 2ª Pl:** `odapagukka?`
+- **Particípio (8 Casos):** Nom.Sg `odapaget`, Gen.Sg `odapagety`, Dat.Sg `odapageti`, Acu.Sg `odapagetom`, Nom.Pl `odapageti`, Gen.Pl `odapagetye`, Dat.Pl `odapagetoi`, Acu.Pl `odapagetos`
+- **Derivados Nominais:** Agente `odapagte`, Abstrato `odapagor`, Instrumento `odapagtek`, Lugar `odapagia`
+  - **Pres.Ind Ativa:** `odapagum, odapagus, odapagu, odapagun, odapagut` | **Passiva:** `odapagusem, odapaguses, odapaguse, odapagusen, odapaguset`
+  - **Pres.Subj Ativa:** `odapagukem, odapagukes, odapaguke, odapaguken, odapaguket` | **Passiva:** `odapagukesem, odapagukeses, odapagukese, odapagukesen, odapagukeset`
+  - **Pass.Ind Ativa:** `odapagram, odapagras, odapagra, odapagran, odapagrat` | **Passiva:** `odapagrasem, odapagrases, odapagrase, odapagrasen, odapagraset`
+  - **Pass.Subj Ativa:** `odapagrakem, odapagrakes, odapagrake, odapagraken, odapagraket` | **Passiva:** `odapagrakesem, odapagrakeses, odapagrakese, odapagrakesen, odapagrakeset`
+  - **Dur.Ind Ativa:** `odapagaim, odapagais, odapagai, odapagain, odapagait` | **Passiva:** `odapagaisem, odapagaises, odapagaise, odapagaisen, odapagaiset`
+  - **Dur.Subj Ativa:** `odapagaikem, odapagaikes, odapagaike, odapagaiken, odapagaiket` | **Passiva:** `odapagaikesem, odapagaikeses, odapagaikese, odapagaikesen, odapagaikeset`
+  - **Fut.Ind Ativa:** `odapagrum, odapagrus, odapagru, odapagrun, odapagrut` | **Passiva:** `odapagrusem, odapagruses, odapagruse, odapagrusen, odapagruset`
+  - **Fut.Subj Ativa:** `odapagrukem, odapagrukes, odapagruke, odapagruken, odapagruket` | **Passiva:** `odapagrukesem, odapagrukeses, odapagrukese, odapagrukesen, odapagrukeset`
+  - **Imperf.Ind Ativa:** `odapagbam, odapagbas, odapagba, odapagban, odapagbat` | **Passiva:** `odapagbasem, odapagbases, odapagbase, odapagbasen, odapagbaset`
+  - **Imperf.Subj Ativa:** `odapagbakem, odapagbakes, odapagbake, odapagbaken, odapagbaket` | **Passiva:** `odapagbakesem, odapagbakeses, odapagbakese, odapagbakesen, odapagbakeset`
+
+## 60. Raiz `par-` (merecer, ser digno, ter parte em)
 
 ### 1. Positivo: **parur** (*merecer, ser digno, ter parte em*)
 
@@ -3234,7 +3960,7 @@
   - **Imperf.Ind Ativa:** `odaparbam, odaparbas, odaparba, odaparban, odaparbat` | **Passiva:** `odaparbasem, odaparbases, odaparbase, odaparbasen, odaparbaset`
   - **Imperf.Subj Ativa:** `odaparbakem, odaparbakes, odaparbake, odaparbaken, odaparbaket` | **Passiva:** `odaparbakesem, odaparbakeses, odaparbakese, odaparbakesen, odaparbakeset`
 
-## 50. Raiz `pas-` (precisar, necessitar, desejar)
+## 61. Raiz `pas-` (precisar, necessitar, desejar)
 
 ### 1. Positivo: **pasur** (*precisar, necessitar, desejar*)
 
@@ -3300,7 +4026,73 @@
   - **Imperf.Ind Ativa:** `odapasbam, odapasbas, odapasba, odapasban, odapasbat` | **Passiva:** `odapasbasem, odapasbases, odapasbase, odapasbasen, odapasbaset`
   - **Imperf.Subj Ativa:** `odapasbakem, odapasbakes, odapasbake, odapasbaken, odapasbaket` | **Passiva:** `odapasbakesem, odapasbakeses, odapasbakese, odapasbakesen, odapasbakeset`
 
-## 51. Raiz `said-` (afiar, amolar, esculpir na rocha)
+## 62. Raiz `resp-` (descansar na lareira, respirar aliviado)
+
+### 1. Positivo: **respur** (*descansar na lareira, respirar aliviado*)
+
+- **Infinitivo:** `respur` | **Imperativo:** `Resp!` | **Interrogativo 2ª Pl:** `respukka?`
+- **Particípio (8 Casos):** Nom.Sg `respet`, Gen.Sg `respety`, Dat.Sg `respeti`, Acu.Sg `respetom`, Nom.Pl `respeti`, Gen.Pl `respetye`, Dat.Pl `respetoi`, Acu.Pl `respetos`
+- **Derivados Nominais:** Agente `respte`, Abstrato `respor`, Instrumento `resptek`, Lugar `respia`
+  - **Pres.Ind Ativa:** `respum, respus, respu, respun, resput` | **Passiva:** `respusem, respuses, respuse, respusen, respuset`
+  - **Pres.Subj Ativa:** `respukem, respukes, respuke, respuken, respuket` | **Passiva:** `respukesem, respukeses, respukese, respukesen, respukeset`
+  - **Pass.Ind Ativa:** `respram, respras, respra, respran, resprat` | **Passiva:** `resprasem, resprases, resprase, resprasen, respraset`
+  - **Pass.Subj Ativa:** `resprakem, resprakes, resprake, respraken, respraket` | **Passiva:** `resprakesem, resprakeses, resprakese, resprakesen, resprakeset`
+  - **Dur.Ind Ativa:** `respaim, respais, respai, respain, respait` | **Passiva:** `respaisem, respaises, respaise, respaisen, respaiset`
+  - **Dur.Subj Ativa:** `respaikem, respaikes, respaike, respaiken, respaiket` | **Passiva:** `respaikesem, respaikeses, respaikese, respaikesen, respaikeset`
+  - **Fut.Ind Ativa:** `resprum, resprus, respru, resprun, resprut` | **Passiva:** `resprusem, respruses, respruse, resprusen, respruset`
+  - **Fut.Subj Ativa:** `resprukem, resprukes, respruke, respruken, respruket` | **Passiva:** `resprukesem, resprukeses, resprukese, resprukesen, resprukeset`
+  - **Imperf.Ind Ativa:** `respbam, respbas, respba, respban, respbat` | **Passiva:** `respbasem, respbases, respbase, respbasen, respbaset`
+  - **Imperf.Subj Ativa:** `respbakem, respbakes, respbake, respbaken, respbaket` | **Passiva:** `respbakesem, respbakeses, respbakese, respbakesen, respbakeset`
+
+### 2. Privativo (a-): **arespur** (*fatigar-se na subida, afobar-se*)
+
+- **Infinitivo:** `arespur` | **Imperativo:** `Aresp!` | **Interrogativo 2ª Pl:** `arespukka?`
+- **Particípio (8 Casos):** Nom.Sg `arespet`, Gen.Sg `arespety`, Dat.Sg `arespeti`, Acu.Sg `arespetom`, Nom.Pl `arespeti`, Gen.Pl `arespetye`, Dat.Pl `arespetoi`, Acu.Pl `arespetos`
+- **Derivados Nominais:** Agente `arespte`, Abstrato `arespor`, Instrumento `aresptek`, Lugar `arespia`
+  - **Pres.Ind Ativa:** `arespum, arespus, arespu, arespun, aresput` | **Passiva:** `arespusem, arespuses, arespuse, arespusen, arespuset`
+  - **Pres.Subj Ativa:** `arespukem, arespukes, arespuke, arespuken, arespuket` | **Passiva:** `arespukesem, arespukeses, arespukese, arespukesen, arespukeset`
+  - **Pass.Ind Ativa:** `arespram, arespras, arespra, arespran, aresprat` | **Passiva:** `aresprasem, aresprases, aresprase, aresprasen, arespraset`
+  - **Pass.Subj Ativa:** `aresprakem, aresprakes, aresprake, arespraken, arespraket` | **Passiva:** `aresprakesem, aresprakeses, aresprakese, aresprakesen, aresprakeset`
+  - **Dur.Ind Ativa:** `arespaim, arespais, arespai, arespain, arespait` | **Passiva:** `arespaisem, arespaises, arespaise, arespaisen, arespaiset`
+  - **Dur.Subj Ativa:** `arespaikem, arespaikes, arespaike, arespaiken, arespaiket` | **Passiva:** `arespaikesem, arespaikeses, arespaikese, arespaikesen, arespaikeset`
+  - **Fut.Ind Ativa:** `aresprum, aresprus, arespru, aresprun, aresprut` | **Passiva:** `aresprusem, arespruses, arespruse, aresprusen, arespruset`
+  - **Fut.Subj Ativa:** `aresprukem, aresprukes, arespruke, arespruken, arespruket` | **Passiva:** `aresprukesem, aresprukeses, aresprukese, aresprukesen, aresprukeset`
+  - **Imperf.Ind Ativa:** `arespbam, arespbas, arespba, arespban, arespbat` | **Passiva:** `arespbasem, arespbases, arespbase, arespbasen, arespbaset`
+  - **Imperf.Subj Ativa:** `arespbakem, arespbakes, arespbake, arespbaken, arespbaket` | **Passiva:** `arespbakesem, arespbakeses, arespbakese, arespbakesen, arespbakeset`
+
+### 3. Iterativo (o-/od-): **orespur** (*descansar mais uma vez, repousar na jornada*)
+
+- **Infinitivo:** `orespur` | **Imperativo:** `Oresp!` | **Interrogativo 2ª Pl:** `orespukka?`
+- **Particípio (8 Casos):** Nom.Sg `orespet`, Gen.Sg `orespety`, Dat.Sg `orespeti`, Acu.Sg `orespetom`, Nom.Pl `orespeti`, Gen.Pl `orespetye`, Dat.Pl `orespetoi`, Acu.Pl `orespetos`
+- **Derivados Nominais:** Agente `orespte`, Abstrato `orespor`, Instrumento `oresptek`, Lugar `orespia`
+  - **Pres.Ind Ativa:** `orespum, orespus, orespu, orespun, oresput` | **Passiva:** `orespusem, orespuses, orespuse, orespusen, orespuset`
+  - **Pres.Subj Ativa:** `orespukem, orespukes, orespuke, orespuken, orespuket` | **Passiva:** `orespukesem, orespukeses, orespukese, orespukesen, orespukeset`
+  - **Pass.Ind Ativa:** `orespram, orespras, orespra, orespran, oresprat` | **Passiva:** `oresprasem, oresprases, oresprase, oresprasen, orespraset`
+  - **Pass.Subj Ativa:** `oresprakem, oresprakes, oresprake, orespraken, orespraket` | **Passiva:** `oresprakesem, oresprakeses, oresprakese, oresprakesen, oresprakeset`
+  - **Dur.Ind Ativa:** `orespaim, orespais, orespai, orespain, orespait` | **Passiva:** `orespaisem, orespaises, orespaise, orespaisen, orespaiset`
+  - **Dur.Subj Ativa:** `orespaikem, orespaikes, orespaike, orespaiken, orespaiket` | **Passiva:** `orespaikesem, orespaikeses, orespaikese, orespaikesen, orespaikeset`
+  - **Fut.Ind Ativa:** `oresprum, oresprus, orespru, oresprun, oresprut` | **Passiva:** `oresprusem, orespruses, orespruse, oresprusen, orespruset`
+  - **Fut.Subj Ativa:** `oresprukem, oresprukes, orespruke, orespruken, orespruket` | **Passiva:** `oresprukesem, oresprukeses, oresprukese, oresprukesen, oresprukeset`
+  - **Imperf.Ind Ativa:** `orespbam, orespbas, orespba, orespban, orespbat` | **Passiva:** `orespbasem, orespbases, orespbase, orespbasen, orespbaset`
+  - **Imperf.Subj Ativa:** `orespbakem, orespbakes, orespbake, orespbaken, orespbaket` | **Passiva:** `orespbakesem, orespbakeses, orespbakese, orespbakesen, orespbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odarespur** (*recuperar o fôlego após cansaço extremo*)
+
+- **Infinitivo:** `odarespur` | **Imperativo:** `Odaresp!` | **Interrogativo 2ª Pl:** `odarespukka?`
+- **Particípio (8 Casos):** Nom.Sg `odarespet`, Gen.Sg `odarespety`, Dat.Sg `odarespeti`, Acu.Sg `odarespetom`, Nom.Pl `odarespeti`, Gen.Pl `odarespetye`, Dat.Pl `odarespetoi`, Acu.Pl `odarespetos`
+- **Derivados Nominais:** Agente `odarespte`, Abstrato `odarespor`, Instrumento `odaresptek`, Lugar `odarespia`
+  - **Pres.Ind Ativa:** `odarespum, odarespus, odarespu, odarespun, odaresput` | **Passiva:** `odarespusem, odarespuses, odarespuse, odarespusen, odarespuset`
+  - **Pres.Subj Ativa:** `odarespukem, odarespukes, odarespuke, odarespuken, odarespuket` | **Passiva:** `odarespukesem, odarespukeses, odarespukese, odarespukesen, odarespukeset`
+  - **Pass.Ind Ativa:** `odarespram, odarespras, odarespra, odarespran, odaresprat` | **Passiva:** `odaresprasem, odaresprases, odaresprase, odaresprasen, odarespraset`
+  - **Pass.Subj Ativa:** `odaresprakem, odaresprakes, odaresprake, odarespraken, odarespraket` | **Passiva:** `odaresprakesem, odaresprakeses, odaresprakese, odaresprakesen, odaresprakeset`
+  - **Dur.Ind Ativa:** `odarespaim, odarespais, odarespai, odarespain, odarespait` | **Passiva:** `odarespaisem, odarespaises, odarespaise, odarespaisen, odarespaiset`
+  - **Dur.Subj Ativa:** `odarespaikem, odarespaikes, odarespaike, odarespaiken, odarespaiket` | **Passiva:** `odarespaikesem, odarespaikeses, odarespaikese, odarespaikesen, odarespaikeset`
+  - **Fut.Ind Ativa:** `odaresprum, odaresprus, odarespru, odaresprun, odaresprut` | **Passiva:** `odaresprusem, odarespruses, odarespruse, odaresprusen, odarespruset`
+  - **Fut.Subj Ativa:** `odaresprukem, odaresprukes, odarespruke, odarespruken, odarespruket` | **Passiva:** `odaresprukesem, odaresprukeses, odaresprukese, odaresprukesen, odaresprukeset`
+  - **Imperf.Ind Ativa:** `odarespbam, odarespbas, odarespba, odarespban, odarespbat` | **Passiva:** `odarespbasem, odarespbases, odarespbase, odarespbasen, odarespbaset`
+  - **Imperf.Subj Ativa:** `odarespbakem, odarespbakes, odarespbake, odarespbaken, odarespbaket` | **Passiva:** `odarespbakesem, odarespbakeses, odarespbakese, odarespbakesen, odarespbakeset`
+
+## 63. Raiz `said-` (afiar, amolar, esculpir na rocha)
 
 ### 1. Positivo: **saidur** (*afiar, amolar, esculpir na rocha*)
 
@@ -3366,7 +4158,139 @@
   - **Imperf.Ind Ativa:** `odasaidbam, odasaidbas, odasaidba, odasaidban, odasaidbat` | **Passiva:** `odasaidbasem, odasaidbases, odasaidbase, odasaidbasen, odasaidbaset`
   - **Imperf.Subj Ativa:** `odasaidbakem, odasaidbakes, odasaidbake, odasaidbaken, odasaidbaket` | **Passiva:** `odasaidbakesem, odasaidbakeses, odasaidbakese, odasaidbakesen, odasaidbakeset`
 
-## 52. Raiz `sfar-` (proteger, defender, livrar)
+## 64. Raiz `salut-` (saudar fraternalmente, desejar bom dia)
+
+### 1. Positivo: **salutur** (*saudar fraternalmente, desejar bom dia*)
+
+- **Infinitivo:** `salutur` | **Imperativo:** `Salut!` | **Interrogativo 2ª Pl:** `salutukka?`
+- **Particípio (8 Casos):** Nom.Sg `salutet`, Gen.Sg `salutety`, Dat.Sg `saluteti`, Acu.Sg `salutetom`, Nom.Pl `saluteti`, Gen.Pl `salutetye`, Dat.Pl `salutetoi`, Acu.Pl `salutetos`
+- **Derivados Nominais:** Agente `salutte`, Abstrato `salutor`, Instrumento `saluttek`, Lugar `salutia`
+  - **Pres.Ind Ativa:** `salutum, salutus, salutu, salutun, salutut` | **Passiva:** `salutusem, salutuses, salutuse, salutusen, salutuset`
+  - **Pres.Subj Ativa:** `salutukem, salutukes, salutuke, salutuken, salutuket` | **Passiva:** `salutukesem, salutukeses, salutukese, salutukesen, salutukeset`
+  - **Pass.Ind Ativa:** `salutram, salutras, salutra, salutran, salutrat` | **Passiva:** `salutrasem, salutrases, salutrase, salutrasen, salutraset`
+  - **Pass.Subj Ativa:** `salutrakem, salutrakes, salutrake, salutraken, salutraket` | **Passiva:** `salutrakesem, salutrakeses, salutrakese, salutrakesen, salutrakeset`
+  - **Dur.Ind Ativa:** `salutaim, salutais, salutai, salutain, salutait` | **Passiva:** `salutaisem, salutaises, salutaise, salutaisen, salutaiset`
+  - **Dur.Subj Ativa:** `salutaikem, salutaikes, salutaike, salutaiken, salutaiket` | **Passiva:** `salutaikesem, salutaikeses, salutaikese, salutaikesen, salutaikeset`
+  - **Fut.Ind Ativa:** `salutrum, salutrus, salutru, salutrun, salutrut` | **Passiva:** `salutrusem, salutruses, salutruse, salutrusen, salutruset`
+  - **Fut.Subj Ativa:** `salutrukem, salutrukes, salutruke, salutruken, salutruket` | **Passiva:** `salutrukesem, salutrukeses, salutrukese, salutrukesen, salutrukeset`
+  - **Imperf.Ind Ativa:** `salubbam, salubbas, salubba, salubban, salubbat` | **Passiva:** `salubbasem, salubbases, salubbase, salubbasen, salubbaset`
+  - **Imperf.Subj Ativa:** `salubbakem, salubbakes, salubbake, salubbaken, salubbaket` | **Passiva:** `salubbakesem, salubbakeses, salubbakese, salubbakesen, salubbakeset`
+
+### 2. Privativo (a-): **asalutur** (*passar em silêncio, ignorar o viajante*)
+
+- **Infinitivo:** `asalutur` | **Imperativo:** `Asalut!` | **Interrogativo 2ª Pl:** `asalutukka?`
+- **Particípio (8 Casos):** Nom.Sg `asalutet`, Gen.Sg `asalutety`, Dat.Sg `asaluteti`, Acu.Sg `asalutetom`, Nom.Pl `asaluteti`, Gen.Pl `asalutetye`, Dat.Pl `asalutetoi`, Acu.Pl `asalutetos`
+- **Derivados Nominais:** Agente `asalutte`, Abstrato `asalutor`, Instrumento `asaluttek`, Lugar `asalutia`
+  - **Pres.Ind Ativa:** `asalutum, asalutus, asalutu, asalutun, asalutut` | **Passiva:** `asalutusem, asalutuses, asalutuse, asalutusen, asalutuset`
+  - **Pres.Subj Ativa:** `asalutukem, asalutukes, asalutuke, asalutuken, asalutuket` | **Passiva:** `asalutukesem, asalutukeses, asalutukese, asalutukesen, asalutukeset`
+  - **Pass.Ind Ativa:** `asalutram, asalutras, asalutra, asalutran, asalutrat` | **Passiva:** `asalutrasem, asalutrases, asalutrase, asalutrasen, asalutraset`
+  - **Pass.Subj Ativa:** `asalutrakem, asalutrakes, asalutrake, asalutraken, asalutraket` | **Passiva:** `asalutrakesem, asalutrakeses, asalutrakese, asalutrakesen, asalutrakeset`
+  - **Dur.Ind Ativa:** `asalutaim, asalutais, asalutai, asalutain, asalutait` | **Passiva:** `asalutaisem, asalutaises, asalutaise, asalutaisen, asalutaiset`
+  - **Dur.Subj Ativa:** `asalutaikem, asalutaikes, asalutaike, asalutaiken, asalutaiket` | **Passiva:** `asalutaikesem, asalutaikeses, asalutaikese, asalutaikesen, asalutaikeset`
+  - **Fut.Ind Ativa:** `asalutrum, asalutrus, asalutru, asalutrun, asalutrut` | **Passiva:** `asalutrusem, asalutruses, asalutruse, asalutrusen, asalutruset`
+  - **Fut.Subj Ativa:** `asalutrukem, asalutrukes, asalutruke, asalutruken, asalutruket` | **Passiva:** `asalutrukesem, asalutrukeses, asalutrukese, asalutrukesen, asalutrukeset`
+  - **Imperf.Ind Ativa:** `asalubbam, asalubbas, asalubba, asalubban, asalubbat` | **Passiva:** `asalubbasem, asalubbases, asalubbase, asalubbasen, asalubbaset`
+  - **Imperf.Subj Ativa:** `asalubbakem, asalubbakes, asalubbake, asalubbaken, asalubbaket` | **Passiva:** `asalubbakesem, asalubbakeses, asalubbakese, asalubbakesen, asalubbakeset`
+
+### 3. Iterativo (o-/od-): **osalutur** (*retribuir a saudação, responder ao cumprimento*)
+
+- **Infinitivo:** `osalutur` | **Imperativo:** `Osalut!` | **Interrogativo 2ª Pl:** `osalutukka?`
+- **Particípio (8 Casos):** Nom.Sg `osalutet`, Gen.Sg `osalutety`, Dat.Sg `osaluteti`, Acu.Sg `osalutetom`, Nom.Pl `osaluteti`, Gen.Pl `osalutetye`, Dat.Pl `osalutetoi`, Acu.Pl `osalutetos`
+- **Derivados Nominais:** Agente `osalutte`, Abstrato `osalutor`, Instrumento `osaluttek`, Lugar `osalutia`
+  - **Pres.Ind Ativa:** `osalutum, osalutus, osalutu, osalutun, osalutut` | **Passiva:** `osalutusem, osalutuses, osalutuse, osalutusen, osalutuset`
+  - **Pres.Subj Ativa:** `osalutukem, osalutukes, osalutuke, osalutuken, osalutuket` | **Passiva:** `osalutukesem, osalutukeses, osalutukese, osalutukesen, osalutukeset`
+  - **Pass.Ind Ativa:** `osalutram, osalutras, osalutra, osalutran, osalutrat` | **Passiva:** `osalutrasem, osalutrases, osalutrase, osalutrasen, osalutraset`
+  - **Pass.Subj Ativa:** `osalutrakem, osalutrakes, osalutrake, osalutraken, osalutraket` | **Passiva:** `osalutrakesem, osalutrakeses, osalutrakese, osalutrakesen, osalutrakeset`
+  - **Dur.Ind Ativa:** `osalutaim, osalutais, osalutai, osalutain, osalutait` | **Passiva:** `osalutaisem, osalutaises, osalutaise, osalutaisen, osalutaiset`
+  - **Dur.Subj Ativa:** `osalutaikem, osalutaikes, osalutaike, osalutaiken, osalutaiket` | **Passiva:** `osalutaikesem, osalutaikeses, osalutaikese, osalutaikesen, osalutaikeset`
+  - **Fut.Ind Ativa:** `osalutrum, osalutrus, osalutru, osalutrun, osalutrut` | **Passiva:** `osalutrusem, osalutruses, osalutruse, osalutrusen, osalutruset`
+  - **Fut.Subj Ativa:** `osalutrukem, osalutrukes, osalutruke, osalutruken, osalutruket` | **Passiva:** `osalutrukesem, osalutrukeses, osalutrukese, osalutrukesen, osalutrukeset`
+  - **Imperf.Ind Ativa:** `osalubbam, osalubbas, osalubba, osalubban, osalubbat` | **Passiva:** `osalubbasem, osalubbases, osalubbase, osalubbasen, osalubbaset`
+  - **Imperf.Subj Ativa:** `osalubbakem, osalubbakes, osalubbake, osalubbaken, osalubbaket` | **Passiva:** `osalubbakesem, osalubbakeses, osalubbakese, osalubbakesen, osalubbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odasalutur** (*quebrar a frieza inicial com um abraço*)
+
+- **Infinitivo:** `odasalutur` | **Imperativo:** `Odasalut!` | **Interrogativo 2ª Pl:** `odasalutukka?`
+- **Particípio (8 Casos):** Nom.Sg `odasalutet`, Gen.Sg `odasalutety`, Dat.Sg `odasaluteti`, Acu.Sg `odasalutetom`, Nom.Pl `odasaluteti`, Gen.Pl `odasalutetye`, Dat.Pl `odasalutetoi`, Acu.Pl `odasalutetos`
+- **Derivados Nominais:** Agente `odasalutte`, Abstrato `odasalutor`, Instrumento `odasaluttek`, Lugar `odasalutia`
+  - **Pres.Ind Ativa:** `odasalutum, odasalutus, odasalutu, odasalutun, odasalutut` | **Passiva:** `odasalutusem, odasalutuses, odasalutuse, odasalutusen, odasalutuset`
+  - **Pres.Subj Ativa:** `odasalutukem, odasalutukes, odasalutuke, odasalutuken, odasalutuket` | **Passiva:** `odasalutukesem, odasalutukeses, odasalutukese, odasalutukesen, odasalutukeset`
+  - **Pass.Ind Ativa:** `odasalutram, odasalutras, odasalutra, odasalutran, odasalutrat` | **Passiva:** `odasalutrasem, odasalutrases, odasalutrase, odasalutrasen, odasalutraset`
+  - **Pass.Subj Ativa:** `odasalutrakem, odasalutrakes, odasalutrake, odasalutraken, odasalutraket` | **Passiva:** `odasalutrakesem, odasalutrakeses, odasalutrakese, odasalutrakesen, odasalutrakeset`
+  - **Dur.Ind Ativa:** `odasalutaim, odasalutais, odasalutai, odasalutain, odasalutait` | **Passiva:** `odasalutaisem, odasalutaises, odasalutaise, odasalutaisen, odasalutaiset`
+  - **Dur.Subj Ativa:** `odasalutaikem, odasalutaikes, odasalutaike, odasalutaiken, odasalutaiket` | **Passiva:** `odasalutaikesem, odasalutaikeses, odasalutaikese, odasalutaikesen, odasalutaikeset`
+  - **Fut.Ind Ativa:** `odasalutrum, odasalutrus, odasalutru, odasalutrun, odasalutrut` | **Passiva:** `odasalutrusem, odasalutruses, odasalutruse, odasalutrusen, odasalutruset`
+  - **Fut.Subj Ativa:** `odasalutrukem, odasalutrukes, odasalutruke, odasalutruken, odasalutruket` | **Passiva:** `odasalutrukesem, odasalutrukeses, odasalutrukese, odasalutrukesen, odasalutrukeset`
+  - **Imperf.Ind Ativa:** `odasalubbam, odasalubbas, odasalubba, odasalubban, odasalubbat` | **Passiva:** `odasalubbasem, odasalubbases, odasalubbase, odasalubbasen, odasalubbaset`
+  - **Imperf.Subj Ativa:** `odasalubbakem, odasalubbakes, odasalubbake, odasalubbaken, odasalubbaket` | **Passiva:** `odasalubbakesem, odasalubbakeses, odasalubbakese, odasalubbakesen, odasalubbakeset`
+
+## 65. Raiz `sed-` (sentar-se à mesa ou junto ao fogo)
+
+### 1. Positivo: **sedur** (*sentar-se à mesa ou junto ao fogo*)
+
+- **Infinitivo:** `sedur` | **Imperativo:** `Sed!` | **Interrogativo 2ª Pl:** `sedukka?`
+- **Particípio (8 Casos):** Nom.Sg `sedet`, Gen.Sg `sedety`, Dat.Sg `sedeti`, Acu.Sg `sedetom`, Nom.Pl `sedeti`, Gen.Pl `sedetye`, Dat.Pl `sedetoi`, Acu.Pl `sedetos`
+- **Derivados Nominais:** Agente `sette`, Abstrato `sedor`, Instrumento `settek`, Lugar `sedia`
+  - **Pres.Ind Ativa:** `sedum, sedus, sedu, sedun, sedut` | **Passiva:** `sedusem, seduses, seduse, sedusen, seduset`
+  - **Pres.Subj Ativa:** `sedukem, sedukes, seduke, seduken, seduket` | **Passiva:** `sedukesem, sedukeses, sedukese, sedukesen, sedukeset`
+  - **Pass.Ind Ativa:** `sedram, sedras, sedra, sedran, sedrat` | **Passiva:** `sedrasem, sedrases, sedrase, sedrasen, sedraset`
+  - **Pass.Subj Ativa:** `sedrakem, sedrakes, sedrake, sedraken, sedraket` | **Passiva:** `sedrakesem, sedrakeses, sedrakese, sedrakesen, sedrakeset`
+  - **Dur.Ind Ativa:** `sedaim, sedais, sedai, sedain, sedait` | **Passiva:** `sedaisem, sedaises, sedaise, sedaisen, sedaiset`
+  - **Dur.Subj Ativa:** `sedaikem, sedaikes, sedaike, sedaiken, sedaiket` | **Passiva:** `sedaikesem, sedaikeses, sedaikese, sedaikesen, sedaikeset`
+  - **Fut.Ind Ativa:** `sedrum, sedrus, sedru, sedrun, sedrut` | **Passiva:** `sedrusem, sedruses, sedruse, sedrusen, sedruset`
+  - **Fut.Subj Ativa:** `sedrukem, sedrukes, sedruke, sedruken, sedruket` | **Passiva:** `sedrukesem, sedrukeses, sedrukese, sedrukesen, sedrukeset`
+  - **Imperf.Ind Ativa:** `sedbam, sedbas, sedba, sedban, sedbat` | **Passiva:** `sedbasem, sedbases, sedbase, sedbasen, sedbaset`
+  - **Imperf.Subj Ativa:** `sedbakem, sedbakes, sedbake, sedbaken, sedbaket` | **Passiva:** `sedbakesem, sedbakeses, sedbakese, sedbakesen, sedbakeset`
+
+### 2. Privativo (a-): **asedur** (*levantar-se do assento, ficar em pé*)
+
+- **Infinitivo:** `asedur` | **Imperativo:** `Ased!` | **Interrogativo 2ª Pl:** `asedukka?`
+- **Particípio (8 Casos):** Nom.Sg `asedet`, Gen.Sg `asedety`, Dat.Sg `asedeti`, Acu.Sg `asedetom`, Nom.Pl `asedeti`, Gen.Pl `asedetye`, Dat.Pl `asedetoi`, Acu.Pl `asedetos`
+- **Derivados Nominais:** Agente `asette`, Abstrato `asedor`, Instrumento `asettek`, Lugar `asedia`
+  - **Pres.Ind Ativa:** `asedum, asedus, asedu, asedun, asedut` | **Passiva:** `asedusem, aseduses, aseduse, asedusen, aseduset`
+  - **Pres.Subj Ativa:** `asedukem, asedukes, aseduke, aseduken, aseduket` | **Passiva:** `asedukesem, asedukeses, asedukese, asedukesen, asedukeset`
+  - **Pass.Ind Ativa:** `asedram, asedras, asedra, asedran, asedrat` | **Passiva:** `asedrasem, asedrases, asedrase, asedrasen, asedraset`
+  - **Pass.Subj Ativa:** `asedrakem, asedrakes, asedrake, asedraken, asedraket` | **Passiva:** `asedrakesem, asedrakeses, asedrakese, asedrakesen, asedrakeset`
+  - **Dur.Ind Ativa:** `asedaim, asedais, asedai, asedain, asedait` | **Passiva:** `asedaisem, asedaises, asedaise, asedaisen, asedaiset`
+  - **Dur.Subj Ativa:** `asedaikem, asedaikes, asedaike, asedaiken, asedaiket` | **Passiva:** `asedaikesem, asedaikeses, asedaikese, asedaikesen, asedaikeset`
+  - **Fut.Ind Ativa:** `asedrum, asedrus, asedru, asedrun, asedrut` | **Passiva:** `asedrusem, asedruses, asedruse, asedrusen, asedruset`
+  - **Fut.Subj Ativa:** `asedrukem, asedrukes, asedruke, asedruken, asedruket` | **Passiva:** `asedrukesem, asedrukeses, asedrukese, asedrukesen, asedrukeset`
+  - **Imperf.Ind Ativa:** `asedbam, asedbas, asedba, asedban, asedbat` | **Passiva:** `asedbasem, asedbases, asedbase, asedbasen, asedbaset`
+  - **Imperf.Subj Ativa:** `asedbakem, asedbakes, asedbake, asedbaken, asedbaket` | **Passiva:** `asedbakesem, asedbakeses, asedbakese, asedbakesen, asedbakeset`
+
+### 3. Iterativo (o-/od-): **osedur** (*sentar-se de novo, reacomodar-se no banco*)
+
+- **Infinitivo:** `osedur` | **Imperativo:** `Osed!` | **Interrogativo 2ª Pl:** `osedukka?`
+- **Particípio (8 Casos):** Nom.Sg `osedet`, Gen.Sg `osedety`, Dat.Sg `osedeti`, Acu.Sg `osedetom`, Nom.Pl `osedeti`, Gen.Pl `osedetye`, Dat.Pl `osedetoi`, Acu.Pl `osedetos`
+- **Derivados Nominais:** Agente `osette`, Abstrato `osedor`, Instrumento `osettek`, Lugar `osedia`
+  - **Pres.Ind Ativa:** `osedum, osedus, osedu, osedun, osedut` | **Passiva:** `osedusem, oseduses, oseduse, osedusen, oseduset`
+  - **Pres.Subj Ativa:** `osedukem, osedukes, oseduke, oseduken, oseduket` | **Passiva:** `osedukesem, osedukeses, osedukese, osedukesen, osedukeset`
+  - **Pass.Ind Ativa:** `osedram, osedras, osedra, osedran, osedrat` | **Passiva:** `osedrasem, osedrases, osedrase, osedrasen, osedraset`
+  - **Pass.Subj Ativa:** `osedrakem, osedrakes, osedrake, osedraken, osedraket` | **Passiva:** `osedrakesem, osedrakeses, osedrakese, osedrakesen, osedrakeset`
+  - **Dur.Ind Ativa:** `osedaim, osedais, osedai, osedain, osedait` | **Passiva:** `osedaisem, osedaises, osedaise, osedaisen, osedaiset`
+  - **Dur.Subj Ativa:** `osedaikem, osedaikes, osedaike, osedaiken, osedaiket` | **Passiva:** `osedaikesem, osedaikeses, osedaikese, osedaikesen, osedaikeset`
+  - **Fut.Ind Ativa:** `osedrum, osedrus, osedru, osedrun, osedrut` | **Passiva:** `osedrusem, osedruses, osedruse, osedrusen, osedruset`
+  - **Fut.Subj Ativa:** `osedrukem, osedrukes, osedruke, osedruken, osedruket` | **Passiva:** `osedrukesem, osedrukeses, osedrukese, osedrukesen, osedrukeset`
+  - **Imperf.Ind Ativa:** `osedbam, osedbas, osedba, osedban, osedbat` | **Passiva:** `osedbasem, osedbases, osedbase, osedbasen, osedbaset`
+  - **Imperf.Subj Ativa:** `osedbakem, osedbakes, osedbake, osedbaken, osedbaket` | **Passiva:** `osedbakesem, osedbakeses, osedbakese, osedbakesen, osedbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odasedur** (*desistir de levantar, permanecer sentado*)
+
+- **Infinitivo:** `odasedur` | **Imperativo:** `Odased!` | **Interrogativo 2ª Pl:** `odasedukka?`
+- **Particípio (8 Casos):** Nom.Sg `odasedet`, Gen.Sg `odasedety`, Dat.Sg `odasedeti`, Acu.Sg `odasedetom`, Nom.Pl `odasedeti`, Gen.Pl `odasedetye`, Dat.Pl `odasedetoi`, Acu.Pl `odasedetos`
+- **Derivados Nominais:** Agente `odasette`, Abstrato `odasedor`, Instrumento `odasettek`, Lugar `odasedia`
+  - **Pres.Ind Ativa:** `odasedum, odasedus, odasedu, odasedun, odasedut` | **Passiva:** `odasedusem, odaseduses, odaseduse, odasedusen, odaseduset`
+  - **Pres.Subj Ativa:** `odasedukem, odasedukes, odaseduke, odaseduken, odaseduket` | **Passiva:** `odasedukesem, odasedukeses, odasedukese, odasedukesen, odasedukeset`
+  - **Pass.Ind Ativa:** `odasedram, odasedras, odasedra, odasedran, odasedrat` | **Passiva:** `odasedrasem, odasedrases, odasedrase, odasedrasen, odasedraset`
+  - **Pass.Subj Ativa:** `odasedrakem, odasedrakes, odasedrake, odasedraken, odasedraket` | **Passiva:** `odasedrakesem, odasedrakeses, odasedrakese, odasedrakesen, odasedrakeset`
+  - **Dur.Ind Ativa:** `odasedaim, odasedais, odasedai, odasedain, odasedait` | **Passiva:** `odasedaisem, odasedaises, odasedaise, odasedaisen, odasedaiset`
+  - **Dur.Subj Ativa:** `odasedaikem, odasedaikes, odasedaike, odasedaiken, odasedaiket` | **Passiva:** `odasedaikesem, odasedaikeses, odasedaikese, odasedaikesen, odasedaikeset`
+  - **Fut.Ind Ativa:** `odasedrum, odasedrus, odasedru, odasedrun, odasedrut` | **Passiva:** `odasedrusem, odasedruses, odasedruse, odasedrusen, odasedruset`
+  - **Fut.Subj Ativa:** `odasedrukem, odasedrukes, odasedruke, odasedruken, odasedruket` | **Passiva:** `odasedrukesem, odasedrukeses, odasedrukese, odasedrukesen, odasedrukeset`
+  - **Imperf.Ind Ativa:** `odasedbam, odasedbas, odasedba, odasedban, odasedbat` | **Passiva:** `odasedbasem, odasedbases, odasedbase, odasedbasen, odasedbaset`
+  - **Imperf.Subj Ativa:** `odasedbakem, odasedbakes, odasedbake, odasedbaken, odasedbaket` | **Passiva:** `odasedbakesem, odasedbakeses, odasedbakese, odasedbakesen, odasedbakeset`
+
+## 66. Raiz `sfar-` (proteger, defender, livrar)
 
 ### 1. Positivo: **sfarur** (*proteger, defender, livrar*)
 
@@ -3432,7 +4356,7 @@
   - **Imperf.Ind Ativa:** `odasfarbam, odasfarbas, odasfarba, odasfarban, odasfarbat` | **Passiva:** `odasfarbasem, odasfarbases, odasfarbase, odasfarbasen, odasfarbaset`
   - **Imperf.Subj Ativa:** `odasfarbakem, odasfarbakes, odasfarbake, odasfarbaken, odasfarbaket` | **Passiva:** `odasfarbakesem, odasfarbakeses, odasfarbakese, odasfarbakesen, odasfarbakeset`
 
-## 53. Raiz `sif-` (contar histórias, narrar crônica)
+## 67. Raiz `sif-` (contar histórias, narrar crônica)
 
 ### 1. Positivo: **sifur** (*contar histórias, narrar crônica*)
 
@@ -3498,7 +4422,7 @@
   - **Imperf.Ind Ativa:** `odasibbam, odasibbas, odasibba, odasibban, odasibbat` | **Passiva:** `odasibbasem, odasibbases, odasibbase, odasibbasen, odasibbaset`
   - **Imperf.Subj Ativa:** `odasibbakem, odasibbakes, odasibbake, odasibbaken, odasibbaket` | **Passiva:** `odasibbakesem, odasibbakeses, odasibbakese, odasibbakesen, odasibbakeset`
 
-## 54. Raiz `sin-` (flanquear à esquerda)
+## 68. Raiz `sin-` (flanquear à esquerda)
 
 ### 1. Positivo: **sinur** (*flanquear à esquerda*)
 
@@ -3564,7 +4488,7 @@
   - **Imperf.Ind Ativa:** `odasimbam, odasimbas, odasimba, odasimban, odasimbat` | **Passiva:** `odasimbasem, odasimbases, odasimbase, odasimbasen, odasimbaset`
   - **Imperf.Subj Ativa:** `odasimbakem, odasimbakes, odasimbake, odasimbaken, odasimbaket` | **Passiva:** `odasimbakesem, odasimbakeses, odasimbakese, odasimbakesen, odasimbakeset`
 
-## 55. Raiz `skor-` (crer, professar fé)
+## 69. Raiz `skor-` (crer, professar fé)
 
 ### 1. Positivo: **skorur** (*crer, professar fé*)
 
@@ -3630,7 +4554,7 @@
   - **Imperf.Ind Ativa:** `odaskorbam, odaskorbas, odaskorba, odaskorban, odaskorbat` | **Passiva:** `odaskorbasem, odaskorbases, odaskorbase, odaskorbasen, odaskorbaset`
   - **Imperf.Subj Ativa:** `odaskorbakem, odaskorbakes, odaskorbake, odaskorbaken, odaskorbaket` | **Passiva:** `odaskorbakesem, odaskorbakeses, odaskorbakese, odaskorbakesen, odaskorbakeset`
 
-## 56. Raiz `tek-` (fazer, fabricar, construir, forjar)
+## 70. Raiz `tek-` (fazer, fabricar, construir, forjar)
 
 ### 1. Positivo: **tekur** (*fazer, fabricar, construir, forjar*)
 
@@ -3696,7 +4620,7 @@
   - **Imperf.Ind Ativa:** `odatebbam, odatebbas, odatebba, odatebban, odatebbat` | **Passiva:** `odatebbasem, odatebbases, odatebbase, odatebbasen, odatebbaset`
   - **Imperf.Subj Ativa:** `odatebbakem, odatebbakes, odatebbake, odatebbaken, odatebbaket` | **Passiva:** `odatebbakesem, odatebbakeses, odatebbakese, odatebbakesen, odatebbakeset`
 
-## 57. Raiz `tim-` (temer, reverenciar com assombro sagrado)
+## 71. Raiz `tim-` (temer, reverenciar com assombro sagrado)
 
 ### 1. Positivo: **timur** (*temer, reverenciar com assombro sagrado*)
 
@@ -3762,7 +4686,7 @@
   - **Imperf.Ind Ativa:** `odatimbam, odatimbas, odatimba, odatimban, odatimbat` | **Passiva:** `odatimbasem, odatimbases, odatimbase, odatimbasen, odatimbaset`
   - **Imperf.Subj Ativa:** `odatimbakem, odatimbakes, odatimbake, odatimbaken, odatimbaket` | **Passiva:** `odatimbakesem, odatimbakeses, odatimbakese, odatimbakesen, odatimbakeset`
 
-## 58. Raiz `tok-` (governar, reger com soberania)
+## 72. Raiz `tok-` (governar, reger com soberania)
 
 ### 1. Positivo: **tokur** (*governar, reger com soberania*)
 
@@ -3828,7 +4752,7 @@
   - **Imperf.Ind Ativa:** `odatobbam, odatobbas, odatobba, odatobban, odatobbat` | **Passiva:** `odatobbasem, odatobbases, odatobbase, odatobbasen, odatobbaset`
   - **Imperf.Subj Ativa:** `odatobbakem, odatobbakes, odatobbake, odatobbaken, odatobbaket` | **Passiva:** `odatobbakesem, odatobbakeses, odatobbakese, odatobbakesen, odatobbakeset`
 
-## 59. Raiz `tol-` (formar com beleza, aformosear)
+## 73. Raiz `tol-` (formar com beleza, aformosear)
 
 ### 1. Positivo: **tolur** (*formar com beleza, aformosear*)
 
@@ -3894,7 +4818,7 @@
   - **Imperf.Ind Ativa:** `odatolbam, odatolbas, odatolba, odatolban, odatolbat` | **Passiva:** `odatolbasem, odatolbases, odatolbase, odatolbasen, odatolbaset`
   - **Imperf.Subj Ativa:** `odatolbakem, odatolbakes, odatolbake, odatolbaken, odatolbaket` | **Passiva:** `odatolbakesem, odatolbakeses, odatolbakese, odatolbakesen, odatolbakeset`
 
-## 60. Raiz `tor-` (possuir, deter, agarrar)
+## 74. Raiz `tor-` (possuir, deter, agarrar)
 
 ### 1. Positivo: **torur** (*possuir, deter, agarrar*)
 
@@ -3960,7 +4884,7 @@
   - **Imperf.Ind Ativa:** `odatorbam, odatorbas, odatorba, odatorban, odatorbat` | **Passiva:** `odatorbasem, odatorbases, odatorbase, odatorbasen, odatorbaset`
   - **Imperf.Subj Ativa:** `odatorbakem, odatorbakes, odatorbake, odatorbaken, odatorbaket` | **Passiva:** `odatorbakesem, odatorbakeses, odatorbakese, odatorbakesen, odatorbakeset`
 
-## 61. Raiz `torex-` (tomar à força, conquistar)
+## 75. Raiz `torex-` (tomar à força, conquistar)
 
 ### 1. Positivo: **torexur** (*tomar à força, conquistar*)
 
@@ -4026,7 +4950,7 @@
   - **Imperf.Ind Ativa:** `odatorexbam, odatorexbas, odatorexba, odatorexban, odatorexbat` | **Passiva:** `odatorexbasem, odatorexbases, odatorexbase, odatorexbasen, odatorexbaset`
   - **Imperf.Subj Ativa:** `odatorexbakem, odatorexbakes, odatorexbake, odatorexbaken, odatorexbaket` | **Passiva:** `odatorexbakesem, odatorexbakeses, odatorexbakese, odatorexbakesen, odatorexbakeset`
 
-## 62. Raiz `trak-` (marchar, comandar vanguarda)
+## 76. Raiz `trak-` (marchar, comandar vanguarda)
 
 ### 1. Positivo: **trakur** (*marchar, comandar vanguarda*)
 
@@ -4092,7 +5016,7 @@
   - **Imperf.Ind Ativa:** `odatrabbam, odatrabbas, odatrabba, odatrabban, odatrabbat` | **Passiva:** `odatrabbasem, odatrabbases, odatrabbase, odatrabbasen, odatrabbaset`
   - **Imperf.Subj Ativa:** `odatrabbakem, odatrabbakes, odatrabbake, odatrabbaken, odatrabbaket` | **Passiva:** `odatrabbakesem, odatrabbakeses, odatrabbakese, odatrabbakesen, odatrabbakeset`
 
-## 63. Raiz `tul-` (delirar, perder a razão)
+## 77. Raiz `tul-` (delirar, perder a razão)
 
 ### 1. Positivo: **tulur** (*delirar, perder a razão*)
 
@@ -4158,7 +5082,7 @@
   - **Imperf.Ind Ativa:** `odatulbam, odatulbas, odatulba, odatulban, odatulbat` | **Passiva:** `odatulbasem, odatulbases, odatulbase, odatulbasen, odatulbaset`
   - **Imperf.Subj Ativa:** `odatulbakem, odatulbakes, odatulbake, odatulbaken, odatulbaket` | **Passiva:** `odatulbakesem, odatulbakeses, odatulbakese, odatulbakesen, odatulbakeset`
 
-## 64. Raiz `vel-` (sombrear, cobrir de penumbra)
+## 78. Raiz `vel-` (sombrear, cobrir de penumbra)
 
 ### 1. Positivo: **velur** (*sombrear, cobrir de penumbra*)
 
@@ -4224,7 +5148,139 @@
   - **Imperf.Ind Ativa:** `odavelbam, odavelbas, odavelba, odavelban, odavelbat` | **Passiva:** `odavelbasem, odavelbases, odavelbase, odavelbasen, odavelbaset`
   - **Imperf.Subj Ativa:** `odavelbakem, odavelbakes, odavelbake, odavelbaken, odavelbaket` | **Passiva:** `odavelbakesem, odavelbakeses, odavelbakese, odavelbakesen, odavelbakeset`
 
-## 65. Raiz `vok-` (sangrar, verter sangue)
+## 79. Raiz `vend-` (vender mercadorias, comercializar bens)
+
+### 1. Positivo: **vendur** (*vender mercadorias, comercializar bens*)
+
+- **Infinitivo:** `vendur` | **Imperativo:** `Vend!` | **Interrogativo 2ª Pl:** `vendukka?`
+- **Particípio (8 Casos):** Nom.Sg `vendet`, Gen.Sg `vendety`, Dat.Sg `vendeti`, Acu.Sg `vendetom`, Nom.Pl `vendeti`, Gen.Pl `vendetye`, Dat.Pl `vendetoi`, Acu.Pl `vendetos`
+- **Derivados Nominais:** Agente `ventte`, Abstrato `vendor`, Instrumento `venttek`, Lugar `vendia`
+  - **Pres.Ind Ativa:** `vendum, vendus, vendu, vendun, vendut` | **Passiva:** `vendusem, venduses, venduse, vendusen, venduset`
+  - **Pres.Subj Ativa:** `vendukem, vendukes, venduke, venduken, venduket` | **Passiva:** `vendukesem, vendukeses, vendukese, vendukesen, vendukeset`
+  - **Pass.Ind Ativa:** `vendram, vendras, vendra, vendran, vendrat` | **Passiva:** `vendrasem, vendrases, vendrase, vendrasen, vendraset`
+  - **Pass.Subj Ativa:** `vendrakem, vendrakes, vendrake, vendraken, vendraket` | **Passiva:** `vendrakesem, vendrakeses, vendrakese, vendrakesen, vendrakeset`
+  - **Dur.Ind Ativa:** `vendaim, vendais, vendai, vendain, vendait` | **Passiva:** `vendaisem, vendaises, vendaise, vendaisen, vendaiset`
+  - **Dur.Subj Ativa:** `vendaikem, vendaikes, vendaike, vendaiken, vendaiket` | **Passiva:** `vendaikesem, vendaikeses, vendaikese, vendaikesen, vendaikeset`
+  - **Fut.Ind Ativa:** `vendrum, vendrus, vendru, vendrun, vendrut` | **Passiva:** `vendrusem, vendruses, vendruse, vendrusen, vendruset`
+  - **Fut.Subj Ativa:** `vendrukem, vendrukes, vendruke, vendruken, vendruket` | **Passiva:** `vendrukesem, vendrukeses, vendrukese, vendrukesen, vendrukeset`
+  - **Imperf.Ind Ativa:** `vendbam, vendbas, vendba, vendban, vendbat` | **Passiva:** `vendbasem, vendbases, vendbase, vendbasen, vendbaset`
+  - **Imperf.Subj Ativa:** `vendbakem, vendbakes, vendbake, vendbaken, vendbaket` | **Passiva:** `vendbakesem, vendbakeses, vendbakese, vendbakesen, vendbakeset`
+
+### 2. Privativo (a-): **avendur** (*reter a posse, recusar a venda*)
+
+- **Infinitivo:** `avendur` | **Imperativo:** `Avend!` | **Interrogativo 2ª Pl:** `avendukka?`
+- **Particípio (8 Casos):** Nom.Sg `avendet`, Gen.Sg `avendety`, Dat.Sg `avendeti`, Acu.Sg `avendetom`, Nom.Pl `avendeti`, Gen.Pl `avendetye`, Dat.Pl `avendetoi`, Acu.Pl `avendetos`
+- **Derivados Nominais:** Agente `aventte`, Abstrato `avendor`, Instrumento `aventtek`, Lugar `avendia`
+  - **Pres.Ind Ativa:** `avendum, avendus, avendu, avendun, avendut` | **Passiva:** `avendusem, avenduses, avenduse, avendusen, avenduset`
+  - **Pres.Subj Ativa:** `avendukem, avendukes, avenduke, avenduken, avenduket` | **Passiva:** `avendukesem, avendukeses, avendukese, avendukesen, avendukeset`
+  - **Pass.Ind Ativa:** `avendram, avendras, avendra, avendran, avendrat` | **Passiva:** `avendrasem, avendrases, avendrase, avendrasen, avendraset`
+  - **Pass.Subj Ativa:** `avendrakem, avendrakes, avendrake, avendraken, avendraket` | **Passiva:** `avendrakesem, avendrakeses, avendrakese, avendrakesen, avendrakeset`
+  - **Dur.Ind Ativa:** `avendaim, avendais, avendai, avendain, avendait` | **Passiva:** `avendaisem, avendaises, avendaise, avendaisen, avendaiset`
+  - **Dur.Subj Ativa:** `avendaikem, avendaikes, avendaike, avendaiken, avendaiket` | **Passiva:** `avendaikesem, avendaikeses, avendaikese, avendaikesen, avendaikeset`
+  - **Fut.Ind Ativa:** `avendrum, avendrus, avendru, avendrun, avendrut` | **Passiva:** `avendrusem, avendruses, avendruse, avendrusen, avendruset`
+  - **Fut.Subj Ativa:** `avendrukem, avendrukes, avendruke, avendruken, avendruket` | **Passiva:** `avendrukesem, avendrukeses, avendrukese, avendrukesen, avendrukeset`
+  - **Imperf.Ind Ativa:** `avendbam, avendbas, avendba, avendban, avendbat` | **Passiva:** `avendbasem, avendbases, avendbase, avendbasen, avendbaset`
+  - **Imperf.Subj Ativa:** `avendbakem, avendbakes, avendbake, avendbaken, avendbaket` | **Passiva:** `avendbakesem, avendbakeses, avendbakese, avendbakesen, avendbakeset`
+
+### 3. Iterativo (o-/od-): **ovendur** (*revender com lucro, negociar novamente*)
+
+- **Infinitivo:** `ovendur` | **Imperativo:** `Ovend!` | **Interrogativo 2ª Pl:** `ovendukka?`
+- **Particípio (8 Casos):** Nom.Sg `ovendet`, Gen.Sg `ovendety`, Dat.Sg `ovendeti`, Acu.Sg `ovendetom`, Nom.Pl `ovendeti`, Gen.Pl `ovendetye`, Dat.Pl `ovendetoi`, Acu.Pl `ovendetos`
+- **Derivados Nominais:** Agente `oventte`, Abstrato `ovendor`, Instrumento `oventtek`, Lugar `ovendia`
+  - **Pres.Ind Ativa:** `ovendum, ovendus, ovendu, ovendun, ovendut` | **Passiva:** `ovendusem, ovenduses, ovenduse, ovendusen, ovenduset`
+  - **Pres.Subj Ativa:** `ovendukem, ovendukes, ovenduke, ovenduken, ovenduket` | **Passiva:** `ovendukesem, ovendukeses, ovendukese, ovendukesen, ovendukeset`
+  - **Pass.Ind Ativa:** `ovendram, ovendras, ovendra, ovendran, ovendrat` | **Passiva:** `ovendrasem, ovendrases, ovendrase, ovendrasen, ovendraset`
+  - **Pass.Subj Ativa:** `ovendrakem, ovendrakes, ovendrake, ovendraken, ovendraket` | **Passiva:** `ovendrakesem, ovendrakeses, ovendrakese, ovendrakesen, ovendrakeset`
+  - **Dur.Ind Ativa:** `ovendaim, ovendais, ovendai, ovendain, ovendait` | **Passiva:** `ovendaisem, ovendaises, ovendaise, ovendaisen, ovendaiset`
+  - **Dur.Subj Ativa:** `ovendaikem, ovendaikes, ovendaike, ovendaiken, ovendaiket` | **Passiva:** `ovendaikesem, ovendaikeses, ovendaikese, ovendaikesen, ovendaikeset`
+  - **Fut.Ind Ativa:** `ovendrum, ovendrus, ovendru, ovendrun, ovendrut` | **Passiva:** `ovendrusem, ovendruses, ovendruse, ovendrusen, ovendruset`
+  - **Fut.Subj Ativa:** `ovendrukem, ovendrukes, ovendruke, ovendruken, ovendruket` | **Passiva:** `ovendrukesem, ovendrukeses, ovendrukese, ovendrukesen, ovendrukeset`
+  - **Imperf.Ind Ativa:** `ovendbam, ovendbas, ovendba, ovendban, ovendbat` | **Passiva:** `ovendbasem, ovendbases, ovendbase, ovendbasen, ovendbaset`
+  - **Imperf.Subj Ativa:** `ovendbakem, ovendbakes, ovendbake, ovendbaken, ovendbaket` | **Passiva:** `ovendbakesem, ovendbakeses, ovendbakese, ovendbakesen, ovendbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odavendur** (*recomprar aquilo que foi vendido*)
+
+- **Infinitivo:** `odavendur` | **Imperativo:** `Odavend!` | **Interrogativo 2ª Pl:** `odavendukka?`
+- **Particípio (8 Casos):** Nom.Sg `odavendet`, Gen.Sg `odavendety`, Dat.Sg `odavendeti`, Acu.Sg `odavendetom`, Nom.Pl `odavendeti`, Gen.Pl `odavendetye`, Dat.Pl `odavendetoi`, Acu.Pl `odavendetos`
+- **Derivados Nominais:** Agente `odaventte`, Abstrato `odavendor`, Instrumento `odaventtek`, Lugar `odavendia`
+  - **Pres.Ind Ativa:** `odavendum, odavendus, odavendu, odavendun, odavendut` | **Passiva:** `odavendusem, odavenduses, odavenduse, odavendusen, odavenduset`
+  - **Pres.Subj Ativa:** `odavendukem, odavendukes, odavenduke, odavenduken, odavenduket` | **Passiva:** `odavendukesem, odavendukeses, odavendukese, odavendukesen, odavendukeset`
+  - **Pass.Ind Ativa:** `odavendram, odavendras, odavendra, odavendran, odavendrat` | **Passiva:** `odavendrasem, odavendrases, odavendrase, odavendrasen, odavendraset`
+  - **Pass.Subj Ativa:** `odavendrakem, odavendrakes, odavendrake, odavendraken, odavendraket` | **Passiva:** `odavendrakesem, odavendrakeses, odavendrakese, odavendrakesen, odavendrakeset`
+  - **Dur.Ind Ativa:** `odavendaim, odavendais, odavendai, odavendain, odavendait` | **Passiva:** `odavendaisem, odavendaises, odavendaise, odavendaisen, odavendaiset`
+  - **Dur.Subj Ativa:** `odavendaikem, odavendaikes, odavendaike, odavendaiken, odavendaiket` | **Passiva:** `odavendaikesem, odavendaikeses, odavendaikese, odavendaikesen, odavendaikeset`
+  - **Fut.Ind Ativa:** `odavendrum, odavendrus, odavendru, odavendrun, odavendrut` | **Passiva:** `odavendrusem, odavendruses, odavendruse, odavendrusen, odavendruset`
+  - **Fut.Subj Ativa:** `odavendrukem, odavendrukes, odavendruke, odavendruken, odavendruket` | **Passiva:** `odavendrukesem, odavendrukeses, odavendrukese, odavendrukesen, odavendrukeset`
+  - **Imperf.Ind Ativa:** `odavendbam, odavendbas, odavendba, odavendban, odavendbat` | **Passiva:** `odavendbasem, odavendbases, odavendbase, odavendbasen, odavendbaset`
+  - **Imperf.Subj Ativa:** `odavendbakem, odavendbakes, odavendbake, odavendbaken, odavendbaket` | **Passiva:** `odavendbakesem, odavendbakeses, odavendbakese, odavendbakesen, odavendbakeset`
+
+## 80. Raiz `vig-` (acordar, despertar para o dia)
+
+### 1. Positivo: **vigur** (*acordar, despertar para o dia*)
+
+- **Infinitivo:** `vigur` | **Imperativo:** `Vig!` | **Interrogativo 2ª Pl:** `vigukka?`
+- **Particípio (8 Casos):** Nom.Sg `viget`, Gen.Sg `vigety`, Dat.Sg `vigeti`, Acu.Sg `vigetom`, Nom.Pl `vigeti`, Gen.Pl `vigetye`, Dat.Pl `vigetoi`, Acu.Pl `vigetos`
+- **Derivados Nominais:** Agente `vigte`, Abstrato `vigor`, Instrumento `vigtek`, Lugar `vigia`
+  - **Pres.Ind Ativa:** `vigum, vigus, vigu, vigun, vigut` | **Passiva:** `vigusem, viguses, viguse, vigusen, viguset`
+  - **Pres.Subj Ativa:** `vigukem, vigukes, viguke, viguken, viguket` | **Passiva:** `vigukesem, vigukeses, vigukese, vigukesen, vigukeset`
+  - **Pass.Ind Ativa:** `vigram, vigras, vigra, vigran, vigrat` | **Passiva:** `vigrasem, vigrases, vigrase, vigrasen, vigraset`
+  - **Pass.Subj Ativa:** `vigrakem, vigrakes, vigrake, vigraken, vigraket` | **Passiva:** `vigrakesem, vigrakeses, vigrakese, vigrakesen, vigrakeset`
+  - **Dur.Ind Ativa:** `vigaim, vigais, vigai, vigain, vigait` | **Passiva:** `vigaisem, vigaises, vigaise, vigaisen, vigaiset`
+  - **Dur.Subj Ativa:** `vigaikem, vigaikes, vigaike, vigaiken, vigaiket` | **Passiva:** `vigaikesem, vigaikeses, vigaikese, vigaikesen, vigaikeset`
+  - **Fut.Ind Ativa:** `vigrum, vigrus, vigru, vigrun, vigrut` | **Passiva:** `vigrusem, vigruses, vigruse, vigrusen, vigruset`
+  - **Fut.Subj Ativa:** `vigrukem, vigrukes, vigruke, vigruken, vigruket` | **Passiva:** `vigrukesem, vigrukeses, vigrukese, vigrukesen, vigrukeset`
+  - **Imperf.Ind Ativa:** `vigbam, vigbas, vigba, vigban, vigbat` | **Passiva:** `vigbasem, vigbases, vigbase, vigbasen, vigbaset`
+  - **Imperf.Subj Ativa:** `vigbakem, vigbakes, vigbake, vigbaken, vigbaket` | **Passiva:** `vigbakesem, vigbakeses, vigbakese, vigbakesen, vigbakeset`
+
+### 2. Privativo (a-): **avigur** (*adormecer pesadamente, cair no sono*)
+
+- **Infinitivo:** `avigur` | **Imperativo:** `Avig!` | **Interrogativo 2ª Pl:** `avigukka?`
+- **Particípio (8 Casos):** Nom.Sg `aviget`, Gen.Sg `avigety`, Dat.Sg `avigeti`, Acu.Sg `avigetom`, Nom.Pl `avigeti`, Gen.Pl `avigetye`, Dat.Pl `avigetoi`, Acu.Pl `avigetos`
+- **Derivados Nominais:** Agente `avigte`, Abstrato `avigor`, Instrumento `avigtek`, Lugar `avigia`
+  - **Pres.Ind Ativa:** `avigum, avigus, avigu, avigun, avigut` | **Passiva:** `avigusem, aviguses, aviguse, avigusen, aviguset`
+  - **Pres.Subj Ativa:** `avigukem, avigukes, aviguke, aviguken, aviguket` | **Passiva:** `avigukesem, avigukeses, avigukese, avigukesen, avigukeset`
+  - **Pass.Ind Ativa:** `avigram, avigras, avigra, avigran, avigrat` | **Passiva:** `avigrasem, avigrases, avigrase, avigrasen, avigraset`
+  - **Pass.Subj Ativa:** `avigrakem, avigrakes, avigrake, avigraken, avigraket` | **Passiva:** `avigrakesem, avigrakeses, avigrakese, avigrakesen, avigrakeset`
+  - **Dur.Ind Ativa:** `avigaim, avigais, avigai, avigain, avigait` | **Passiva:** `avigaisem, avigaises, avigaise, avigaisen, avigaiset`
+  - **Dur.Subj Ativa:** `avigaikem, avigaikes, avigaike, avigaiken, avigaiket` | **Passiva:** `avigaikesem, avigaikeses, avigaikese, avigaikesen, avigaikeset`
+  - **Fut.Ind Ativa:** `avigrum, avigrus, avigru, avigrun, avigrut` | **Passiva:** `avigrusem, avigruses, avigruse, avigrusen, avigruset`
+  - **Fut.Subj Ativa:** `avigrukem, avigrukes, avigruke, avigruken, avigruket` | **Passiva:** `avigrukesem, avigrukeses, avigrukese, avigrukesen, avigrukeset`
+  - **Imperf.Ind Ativa:** `avigbam, avigbas, avigba, avigban, avigbat` | **Passiva:** `avigbasem, avigbases, avigbase, avigbasen, avigbaset`
+  - **Imperf.Subj Ativa:** `avigbakem, avigbakes, avigbake, avigbaken, avigbaket` | **Passiva:** `avigbakesem, avigbakeses, avigbakese, avigbakesen, avigbakeset`
+
+### 3. Iterativo (o-/od-): **ovigur** (*despertar novamente, reassumir vigilância*)
+
+- **Infinitivo:** `ovigur` | **Imperativo:** `Ovig!` | **Interrogativo 2ª Pl:** `ovigukka?`
+- **Particípio (8 Casos):** Nom.Sg `oviget`, Gen.Sg `ovigety`, Dat.Sg `ovigeti`, Acu.Sg `ovigetom`, Nom.Pl `ovigeti`, Gen.Pl `ovigetye`, Dat.Pl `ovigetoi`, Acu.Pl `ovigetos`
+- **Derivados Nominais:** Agente `ovigte`, Abstrato `ovigor`, Instrumento `ovigtek`, Lugar `ovigia`
+  - **Pres.Ind Ativa:** `ovigum, ovigus, ovigu, ovigun, ovigut` | **Passiva:** `ovigusem, oviguses, oviguse, ovigusen, oviguset`
+  - **Pres.Subj Ativa:** `ovigukem, ovigukes, oviguke, oviguken, oviguket` | **Passiva:** `ovigukesem, ovigukeses, ovigukese, ovigukesen, ovigukeset`
+  - **Pass.Ind Ativa:** `ovigram, ovigras, ovigra, ovigran, ovigrat` | **Passiva:** `ovigrasem, ovigrases, ovigrase, ovigrasen, ovigraset`
+  - **Pass.Subj Ativa:** `ovigrakem, ovigrakes, ovigrake, ovigraken, ovigraket` | **Passiva:** `ovigrakesem, ovigrakeses, ovigrakese, ovigrakesen, ovigrakeset`
+  - **Dur.Ind Ativa:** `ovigaim, ovigais, ovigai, ovigain, ovigait` | **Passiva:** `ovigaisem, ovigaises, ovigaise, ovigaisen, ovigaiset`
+  - **Dur.Subj Ativa:** `ovigaikem, ovigaikes, ovigaike, ovigaiken, ovigaiket` | **Passiva:** `ovigaikesem, ovigaikeses, ovigaikese, ovigaikesen, ovigaikeset`
+  - **Fut.Ind Ativa:** `ovigrum, ovigrus, ovigru, ovigrun, ovigrut` | **Passiva:** `ovigrusem, ovigruses, ovigruse, ovigrusen, ovigruset`
+  - **Fut.Subj Ativa:** `ovigrukem, ovigrukes, ovigruke, ovigruken, ovigruket` | **Passiva:** `ovigrukesem, ovigrukeses, ovigrukese, ovigrukesen, ovigrukeset`
+  - **Imperf.Ind Ativa:** `ovigbam, ovigbas, ovigba, ovigban, ovigbat` | **Passiva:** `ovigbasem, ovigbases, ovigbase, ovigbasen, ovigbaset`
+  - **Imperf.Subj Ativa:** `ovigbakem, ovigbakes, ovigbake, ovigbaken, ovigbaket` | **Passiva:** `ovigbakesem, ovigbakeses, ovigbakese, ovigbakesen, ovigbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odavigur** (*cessar o despertar súbito*)
+
+- **Infinitivo:** `odavigur` | **Imperativo:** `Odavig!` | **Interrogativo 2ª Pl:** `odavigukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaviget`, Gen.Sg `odavigety`, Dat.Sg `odavigeti`, Acu.Sg `odavigetom`, Nom.Pl `odavigeti`, Gen.Pl `odavigetye`, Dat.Pl `odavigetoi`, Acu.Pl `odavigetos`
+- **Derivados Nominais:** Agente `odavigte`, Abstrato `odavigor`, Instrumento `odavigtek`, Lugar `odavigia`
+  - **Pres.Ind Ativa:** `odavigum, odavigus, odavigu, odavigun, odavigut` | **Passiva:** `odavigusem, odaviguses, odaviguse, odavigusen, odaviguset`
+  - **Pres.Subj Ativa:** `odavigukem, odavigukes, odaviguke, odaviguken, odaviguket` | **Passiva:** `odavigukesem, odavigukeses, odavigukese, odavigukesen, odavigukeset`
+  - **Pass.Ind Ativa:** `odavigram, odavigras, odavigra, odavigran, odavigrat` | **Passiva:** `odavigrasem, odavigrases, odavigrase, odavigrasen, odavigraset`
+  - **Pass.Subj Ativa:** `odavigrakem, odavigrakes, odavigrake, odavigraken, odavigraket` | **Passiva:** `odavigrakesem, odavigrakeses, odavigrakese, odavigrakesen, odavigrakeset`
+  - **Dur.Ind Ativa:** `odavigaim, odavigais, odavigai, odavigain, odavigait` | **Passiva:** `odavigaisem, odavigaises, odavigaise, odavigaisen, odavigaiset`
+  - **Dur.Subj Ativa:** `odavigaikem, odavigaikes, odavigaike, odavigaiken, odavigaiket` | **Passiva:** `odavigaikesem, odavigaikeses, odavigaikese, odavigaikesen, odavigaikeset`
+  - **Fut.Ind Ativa:** `odavigrum, odavigrus, odavigru, odavigrun, odavigrut` | **Passiva:** `odavigrusem, odavigruses, odavigruse, odavigrusen, odavigruset`
+  - **Fut.Subj Ativa:** `odavigrukem, odavigrukes, odavigruke, odavigruken, odavigruket` | **Passiva:** `odavigrukesem, odavigrukeses, odavigrukese, odavigrukesen, odavigrukeset`
+  - **Imperf.Ind Ativa:** `odavigbam, odavigbas, odavigba, odavigban, odavigbat` | **Passiva:** `odavigbasem, odavigbases, odavigbase, odavigbasen, odavigbaset`
+  - **Imperf.Subj Ativa:** `odavigbakem, odavigbakes, odavigbake, odavigbaken, odavigbaket` | **Passiva:** `odavigbakesem, odavigbakeses, odavigbakese, odavigbakesen, odavigbakeset`
+
+## 81. Raiz `vok-` (sangrar, verter sangue)
 
 ### 1. Positivo: **vokur** (*sangrar, verter sangue*)
 
@@ -4290,7 +5346,7 @@
   - **Imperf.Ind Ativa:** `odavobbam, odavobbas, odavobba, odavobban, odavobbat` | **Passiva:** `odavobbasem, odavobbases, odavobbase, odavobbasen, odavobbaset`
   - **Imperf.Subj Ativa:** `odavobbakem, odavobbakes, odavobbake, odavobbaken, odavobbaket` | **Passiva:** `odavobbakesem, odavobbakeses, odavobbakese, odavobbakesen, odavobbakeset`
 
-## 66. Raiz `vul-` (querer, determinar pela vontade)
+## 82. Raiz `vul-` (querer, determinar pela vontade)
 
 ### 1. Positivo: **vulur** (*querer, determinar pela vontade*)
 
@@ -4356,7 +5412,7 @@
   - **Imperf.Ind Ativa:** `odavulbam, odavulbas, odavulba, odavulban, odavulbat` | **Passiva:** `odavulbasem, odavulbases, odavulbase, odavulbasen, odavulbaset`
   - **Imperf.Subj Ativa:** `odavulbakem, odavulbakes, odavulbake, odavulbaken, odavulbaket` | **Passiva:** `odavulbakesem, odavulbakeses, odavulbakese, odavulbakesen, odavulbakeset`
 
-## 67. Raiz `vur-` (arder, queimar em chama)
+## 83. Raiz `vur-` (arder, queimar em chama)
 
 ### 1. Positivo: **vurur** (*arder, queimar em chama*)
 
@@ -4422,7 +5478,7 @@
   - **Imperf.Ind Ativa:** `odavurbam, odavurbas, odavurba, odavurban, odavurbat` | **Passiva:** `odavurbasem, odavurbases, odavurbase, odavurbasen, odavurbaset`
   - **Imperf.Subj Ativa:** `odavurbakem, odavurbakes, odavurbake, odavurbaken, odavurbaket` | **Passiva:** `odavurbakesem, odavurbakeses, odavurbakese, odavurbakesen, odavurbakeset`
 
-## 68. Raiz `yn-` (andar, caminhar, entrar, descer)
+## 84. Raiz `yn-` (andar, caminhar, entrar, descer)
 
 ### 1. Positivo: **ynur** (*andar, caminhar, entrar, descer*)
 
