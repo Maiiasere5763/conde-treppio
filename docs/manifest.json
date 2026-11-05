@@ -1,7 +1,7 @@
 {
   "name": "Códice Lexicográfico Imperial da Língua Tréppia (V8.1)",
   "short_name": "Códice Tréppio",
-  "description": "Dicionário Geral da Língua Tréppia com 44.585 formas, conjugador da Matriz Quadripartite e leitor filológico.",
+  "description": "Dicionário Geral da Língua Tréppia com 56.342 formas, conjugador da Matriz Quadripartite e leitor filológico.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b0d13",

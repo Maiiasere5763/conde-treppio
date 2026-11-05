@@ -13,43 +13,45 @@ A fala coloquial do Tréppio Clássico não relaxa as exigências fonotáticas d
 2. **Lei do Pro-Drop Compulsório**: Pronomes retos de 1ª e 2ª pessoa (*eo*, *to*) são elididos na conversação comum, manifestando-se apenas nas desinências verbais (`-m`, `-s`, `-n`, `-t`).
 3. **Rigidez de Casos**: O objeto direto recebe obrigatoriamente a desinência acusativa (*-m* / *-om* / *-em* / *-es* / *-os*), o destinatário e o locativo com *in* exigem dativo (*-i* / *-oi* na 2ª declinação e *-ej* / *-erj* na 1ª declinação), e a direção com *ad* exige acusativo.
 4. **Aplicação Sistemática do Sandi Consonantal**:
-   - `rn → ld`: *far- + -ne → falde* (pão); *vur + nir → vildor* (brasas).
-   - `dt / kt → tt`: *tek- + -te → Tette* (o mestre forjador / artífice); *tek- + -tek → tettek* (malho de forja).
+   - `rn → ld`: *far- + -ne → falde* (pão); *vur + nir → vildor* (brasas); *mar- + -n → mald* (montaria/corcel).
+   - `ln → ll`: *tal- + nes- → talles* (estalagem/albergue); *bel + -n → bell* (diurníssimo).
+   - `dt / kt → tt`: *tek- + -te → Tette* (o mestre forjador / artífice); *tek- + -tek → tettek* (malho de forja); *kerd- + -tek → kerttek* (machado).
    - `sr → ss`: *fas- + -ra → fassa* (castigou/atormentou); *kos- + -ra → kossa* (perdeu/ocultou); *pas- + -ra → passa* (precisou).
    - `pg → gg`: *tep + -gar → teggar* (fortaleza / castelo).
    - `r + ru → rru`: *par- + -ru → parru* (custará / valerá).
-   - `kb → bb`: *mak- + -ba → mabbam* (comia).
+   - `kb → bb`: *mak- + -ba → mabbam* (comia); *nyk- + -ba → nybbam* (abria).
+   - `Lei 6.5 (Camada Clássico-Genitiva)`: *tepy + Patte → Tepypatte* (pai da casa / senhor da estalagem).
 
 ---
 
-## Diálogo 1: Chegada à Estalagem sob a Nevasca (*Talnes in Rixi*)
+## Diálogo 1: Chegada à Estalagem sob a Nevasca (*Talles in Rixej*)
 
-*Um viajante cansado empurra a pesada porta de madeira da estalagem montanhesa. Do lado de fora uiva a nevasca glacial; no interior, a lareira de pedra crepita com brasas ardentes e cheiro de carvalho.*
+*Um andarilho empurra a pesada porta de madeira da estalagem montanhesa. Do lado de fora uiva a nevasca glacial; no interior, a lareira de pedra crepita com brasas ardentes e cheiro de carvalho.*
 
-- **Estalajadeiro (`Tepatte`)**:
-  - *Tréppio*: `Moba'el ad ti, trakte! Avurvé et fer in rixi vurba. Tep ny vuran esu!`
-  - *Glosa*: Bom-dia(SAUD) a ti(DAT), caminhante(VOC)! Gelo(NOM) e vento(NOM) em montanha-DAT rugia-IMPF(3SG). Casa(NOM) nossa(POSS) aquecida(ADJ) está(COP).
-  - *Português*: "Bom dia a ti, viajante! Gelo e vento rugiam na montanha. Nossa casa está aquecida!"
+- **Estalajadeiro (`Tepypatte`)**:
+  - *Tréppio*: `Moba'el ad ti, ynte! Avurvé et fer in rixej vurba. Tep ny vuran esu!`
+  - *Glosa*: Bom-dia(SAUD) a ti(DAT), andarilho(VOC)! Gelo(NOM) e vento(NOM) em montanha-DAT rugia-IMPF(3SG). Casa(NOM) nossa(POSS) aquecida(ADJ) está(COP).
+  - *Português*: "Bom dia a ti, viajante! Gelo e vento rugiam na serra. Nossa casa está aquecida!"
 
-- **Viajante (`Trakte`)**:
-  - *Tréppio*: `Moba'el, Tepatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.`
-  - *Glosa*: Bom-dia(SAUD), hospedeiro(VOC)! Pão(ACC) e carne-assada(ACC) quente(ACC) preciso-PRES(1SG). Frio(NOM) em caminho-DAT me(ACC) castigou-AOR(3SG).
+- **Viajante (`Ynte`)**:
+  - *Tréppio*: `Moba'el, Tepypatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.`
+  - *Glosa*: Bom-dia(SAUD), senhor-da-casa(VOC)! Pão(ACC) e carne-assada(ACC) quente(ACC) preciso-PRES(1SG). Frio(NOM) em caminho-DAT me(ACC) castigou-AOR(3SG).
   - *Português*: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me."
 
-- **Estalajadeiro (`Tepatte`)**:
+- **Estalajadeiro (`Tepypatte`)**:
   - *Tréppio*: `In takej faldem et garvokom mobum! In vurrexi karem tor!`
   - *Glosa*: Em mesa-DAT pão(ACC) e caneca-de-bebida(ACC) sirvo-PRES(1SG)! Junto-à-lareira cadeira(ACC) toma-IMPER(2SG)!
   - *Português*: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!"
 
-- **Viajante (`Trakte`)**:
-  - *Tréppio*: `Mobavë letum: faletom in tepi toruska? Post vesdakom falur pasum.`
-  - *Glosa*: Cortêsmente(ADV) peço-PRES(1SG): leito(ACC) em casa-DAT tens-PRES(2SG)-INTERR? Após ceia(ACC) dormir-INF preciso-PRES(1SG).
+- **Viajante (`Ynte`)**:
+  - *Tréppio*: `Mobavë letum: faletom in tepi toruska? Vesdakoi falur pasum.`
+  - *Glosa*: Cortêsmente(ADV) peço-PRES(1SG): leito(ACC) em casa-DAT tens-PRES(2SG)-INTERR? Na-ceia(DAT) dormir-INF preciso-PRES(1SG).
   - *Português*: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso."
 
-- **Estalajadeiro (`Tepatte`)**:
-  - *Tréppio*: `Torum! Falet vuran in kardi esu. Zelta verreoi paror parru.`
-  - *Glosa*: Tenho-PRES(1SG)! Leito(NOM) aquecido(ADJ) em aposento-alto-DAT está(COP). Três(NUM) bronzes-DAT preço(ACC) valer-FUT(3SG).
-  - *Português*: "Tenho-o! Um leito aquecido aguarda no aposento superior. Por três moedas de bronze acertaremos o valor."
+- **Estalajadeiro (`Tepypatte`)**:
+  - *Tréppio*: `Torum! Falet vuran in faliaj esu. Zelta verreoi paror parru.`
+  - *Glosa*: Tenho-PRES(1SG)! Leito(NOM) aquecido(ADJ) em aposento-DAT está(COP). Três(NUM) bronzes-DAT preço(ACC) valer-FUT(3SG).
+  - *Português*: "Tenho-o! Um leito aquecido aguarda no aposento. Por três moedas de bronze acertaremos o valor."
 
 ---
 
@@ -57,19 +59,19 @@ A fala coloquial do Tréppio Clássico não relaxa as exigências fonotáticas d
 
 *O viajante leva sua montaria à forja do vale. O malho de ferro ressoa sobre a bigorna, soltando faíscas douradas no ar gélido.*
 
-- **Viajante (`Trakte`)**:
-  - *Tréppio*: `Mobor ad ti, Tette! Poke ey in vari poketekom kossa. Tettek ty tekba ne?`
+- **Viajante (`Ynte`)**:
+  - *Tréppio*: `Mobor ad ti, Tette! Mald ey in vari poketekom kossa. Tettek ty tekba ne?`
   - *Glosa*: Graça(NOM) a ti(DAT), forjador(VOC)! Montaria(NOM) minha(POSS) em caminho-DAT ferradura(ACC) perdeu-AOR(3SG). Malho(NOM) teu(POSS) trabalhava-IMPF(3SG) INTERR?
   - *Português*: "Graça e paz a ti, mestre forjador! Minha montaria perdeu a ferradura no caminho pedregoso. Teu martelo está ativo?"
 
 - **Ferreiro (`Tette`)**:
-  - *Tréppio*: `Vurrex tekba et verre vurran esu! Pokem in tepi tekur rukrum.`
+  - *Tréppio*: `Vurrex tekba et verre vurran esu! Maldom in tepi tekur rukrum.`
   - *Glosa*: Forja(NOM) trabalhava-IMPF(3SG) e ferro(NOM) incandescente(ADJ) está(COP)! Montaria(ACC) em oficina-DAT ferrar-INF posso-PRES(1SG).
-  - *Português*: "A forja trabalhava e o metal está incandescente! Posso ferrar o animal aqui na oficina."
+  - *Português*: "A forja trabalhava e o metal está incandescente! Posso ferrar o corcel aqui na oficina."
 
-- **Viajante (`Trakte`)**:
-  - *Tréppio*: `Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Paror kanto esu?`
-  - *Glosa*: Espada(ACC) afiada(ADJ) e escudo(ACC) preciso-PRES(1SG), pois montanhas(NOM) sombrias(ADJ) são(COP). Preço(NOM) quanto é(COP)?
+- **Viajante (`Ynte`)**:
+  - *Tréppio*: `Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Kemyga paror esu?`
+  - *Glosa*: Espada(ACC) afiada(ADJ) e escudo(ACC) preciso-PRES(1SG), pois montanhas(NOM) sombrias(ADJ) são(COP). Quanto(INTERR) preço(NOM) é(COP)?
   - *Português*: "Preciso também de uma espada afiada e um escudo, pois as serras são perigosas e sombrias. Quanto custará?"
 
 - **Ferreiro (`Tette`)**:
@@ -83,17 +85,17 @@ A fala coloquial do Tréppio Clássico não relaxa as exigências fonotáticas d
 
 *No silêncio gélido de Ecos de Uma Vida Perdida, um cão de pelo loiro dourado surge entre os carvalhos cobertos de neve, guiando os passos do viajante com olhos sábios e compassivos.*
 
-- **Viajante (`Trakte`)**:
+- **Viajante (`Ynte`)**:
   - *Tréppio*: `Poke xuna! Alim ynus? In fervei lanom ty mirum.`
   - *Glosa*: Animal(VOC) loiro(ADJ)! Para-onde andas-PRES(2SG)? Em névoa-DAT luz(ACC) tua(POSS) contemplo-PRES(1SG).
   - *Português*: "Cão loiro e luminoso! Para onde andas? Através da névoa contemplo a tua aura luminosa."
 
 - **(O animal late suavemente e corre à frente, abrindo trilha na neve virgem)**:
-  - *Tréppio*: `Poke in filoxi keladba, et halkvestos ty in avurvéi ynnan.`
-  - *Glosa*: Animal(NOM) em bosque-DAT avançava-IMPF(3SG), e pegadas(ACC) tuas(POSS) em gelo-DAT seguimos-PRES(1PL).
-  - *Português*: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão gelado."
+  - *Tréppio*: `Poke in filoxi keladba, et halkvestos ty in xelvéi ynnan.`
+  - *Glosa*: Animal(NOM) em bosque-DAT avançava-IMPF(3SG), e pegadas(ACC) tuas(POSS) em neve-DAT seguimos-PRES(1PL).
+  - *Português*: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão nevado."
 
-- **Viajante (`Trakte`)**:
+- **Viajante (`Ynte`)**:
   - *Tréppio*: `Teggarom rixa mirum! In kadi kan durba, kora et avura. Litror kanye sukori ey keladu!`
   - *Glosa*: Fortaleza(ACC) montanhesa(ACC) avisto-PRES(1SG)! Em colina-DAT aquela(DEM) brilhava-IMPF(3SG), vetusta(ADJ) e gélida(ADJ). Ecos(NOM) dela(GEN) coração-DAT meu(POSS) chegam-PRES(3SG)!
   - *Português*: "Avisto a fortaleza da montanha! No alto da colina ela resplandecia, antiga e coroada de gelo. A ressonância de seus ecos toca o meu coração!"
@@ -126,6 +128,7 @@ A fala coloquial do Tréppio Clássico não relaxa as exigências fonotáticas d
 | **Confirmação Absoluta**| `Zo es!` | Imperativo Cósmico Litúrgico | "Assim seja! / De acordo!" |
 | **Pedido de Alimento** | `Faldem et Véom pasum.` | Acusativos regulares (*falde* `rn→ld`, *Vé*) | "Preciso de pão e água." |
 | **Pedido de Calor** | `Vurem in vurrexi pasum.` | Locativo dativo (*vurrex + -i*) | "Preciso do calor da lareira." |
+| **Interrogação de Preço**| `Kemyga paror esu?` | Interrogativo de quantidade (*ke + myga*) | "Quanto custa isto?" |
 | **Orientação Geográfica**| `Alim var ad teggarom ynnu?`| *ad* com acusativo (*teggar* `pg→gg`) | "Onde a estrada conduz à fortaleza?" |
 | **Interrogação de Posse**| `Sanom toruska?` | Clítico interrogativo *-ka* com pro-drop | "Tens isto contigo?" |
 | **Gratidão Solene** | `Hallen ad ti!` / `Mete ad ti!` | Dissimilação líquida (*hal + -n*) | "Obrigado a ti! / Honra a ti!" |

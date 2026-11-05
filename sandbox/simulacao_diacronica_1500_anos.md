@@ -3,7 +3,7 @@
 **Autor**: Conde (Chancelaria Imperial e Laboratório Glotopoético de Sandbox)  
 **Ambiente Documental**: Universo de *Ecos de Uma Vida Perdida* (João M. M. Zamboni)  
 **Período Simulado**: Ano -1500 (Proto-Tréppio / Era Antiga) ao Ano 0 (Cristalização do Trepiano Clássico V8.1)  
-**Status**: Canônico Oficial (Integrado ao Léxico Exaustivo das 44.585+ Formas)
+**Status**: Canônico Oficial (Integrado ao Léxico Exaustivo das 56.342+ Formas)
 
 ---
 

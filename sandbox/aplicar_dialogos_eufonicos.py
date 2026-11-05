@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 aplicar_dialogos_eufonicos.py
-Substitui os diálogos nos 4 arquivos HTML pelo texto em Tréppio Clássico V8.1 puro e eufônico.
+Substitui os diálogos nos 4 arquivos HTML pelo texto em Tréppio Clássico V8.1 puro e eufônico (revisado sem anomalias).
 """
 
 import os
@@ -11,14 +11,14 @@ new_dialogues_js = """    // --- ABA XII: DIÁLOGOS PRÁTICOS E CONVERSAÇÃO CO
     const ECOS_DIALOGUES = [
       {
         id: 1,
-        titulo: "Cena I: Chegada à Estalagem sob a Nevasca (Talnes in Rixi)",
+        titulo: "Cena I: Chegada à Estalagem sob a Nevasca (Talles in Rixej)",
         subtitulo: "Diálogo de acolhida no calor da lareira de pedra após travessia na nevasca",
         falas: [
-          { autor: "Tepatte (Estalajadeiro)", treppio: "Moba'el ad ti, trakte! Avurvé et fer in rixi vurba. Tep ny vuran esu!", pt: "Bom dia a ti, viajante! Gelo e vento rugiam na montanha. Nossa casa está aquecida!" },
-          { autor: "Trakte (Viajante)", treppio: "Moba'el, Tepatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.", pt: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me." },
-          { autor: "Tepatte (Estalajadeiro)", treppio: "In takej faldem et garvokom mobum! In vurrexi karem tor!", pt: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!" },
-          { autor: "Trakte (Viajante)", treppio: "Mobavë letum: faletom in tepi toruska? Post vesdakom falur pasum.", pt: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso." },
-          { autor: "Tepatte (Estalajadeiro)", treppio: "Torum! Falet vuran in kardi esu. Zelta verreoi paror parru.", pt: "Tenho-o! Um leito aquecido aguarda no aposento superior. Por três moedas de bronze acertaremos o valor." }
+          { autor: "Tepypatte (Estalajadeiro)", treppio: "Moba'el ad ti, ynte! Avurvé et fer in rixej vurba. Tep ny vuran esu!", pt: "Bom dia a ti, viajante! Gelo e vento rugiam na serra. Nossa casa está aquecida!" },
+          { autor: "Ynte (Viajante)", treppio: "Moba'el, Tepypatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.", pt: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me." },
+          { autor: "Tepypatte (Estalajadeiro)", treppio: "In takej faldem et garvokom mobum! In vurrexi karem tor!", pt: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!" },
+          { autor: "Ynte (Viajante)", treppio: "Mobavë letum: faletom in tepi toruska? Vesdakoi falur pasum.", pt: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso." },
+          { autor: "Tepypatte (Estalajadeiro)", treppio: "Torum! Falet vuran in faliaj esu. Zelta verreoi paror parru.", pt: "Tenho-o! Um leito aquecido aguarda no aposento. Por três moedas de bronze acertaremos o valor." }
         ]
       },
       {
@@ -26,9 +26,9 @@ new_dialogues_js = """    // --- ABA XII: DIÁLOGOS PRÁTICOS E CONVERSAÇÃO CO
         titulo: "Cena II: Na Forja do Mestre Artífice (In Tekiai Tettey)",
         subtitulo: "Reparo da ferradura da montaria e encomenda de lâmina afiada",
         falas: [
-          { autor: "Trakte (Viajante)", treppio: "Mobor ad ti, Tette! Poke ey in vari poketekom kossa. Tettek ty tekba ne?", pt: "Graça e paz a ti, mestre forjador! Minha montaria perdeu a ferradura no caminho pedregoso. Teu martelo está ativo?" },
-          { autor: "Tette (Ferreiro)", treppio: "Vurrex tekba et verre vurran esu! Pokem in tepi tekur rukrum.", pt: "A forja trabalhava e o metal está incandescente! Posso ferrar o animal aqui na oficina." },
-          { autor: "Trakte (Viajante)", treppio: "Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Paror kanto esu?", pt: "Preciso também de uma espada afiada e um escudo, pois as serras são perigosas e sombrias. Quanto custará?" },
+          { autor: "Ynte (Viajante)", treppio: "Mobor ad ti, Tette! Mald ey in vari poketekom kossa. Tettek ty tekba ne?", pt: "Graça e paz a ti, mestre forjador! Minha montaria perdeu a ferradura no caminho pedregoso. Teu martelo está ativo?" },
+          { autor: "Tette (Ferreiro)", treppio: "Vurrex tekba et verre vurran esu! Maldom in tepi tekur rukrum.", pt: "A forja trabalhava e o metal está incandescente! Posso ferrar o corcel aqui na oficina." },
+          { autor: "Ynte (Viajante)", treppio: "Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Kemyga paror esu?", pt: "Preciso também de uma espada afiada e um escudo, pois as serras são perigosas e sombrias. Quanto custará?" },
           { autor: "Tette (Ferreiro)", treppio: "Vexta verreoi sfammirom saidrum. Mobavë tekorom tekum!", pt: "Por cinco moedas de bronze afiarei a lâmina. Trabalho com lealdade e precisão!" }
         ]
       },
@@ -37,9 +37,9 @@ new_dialogues_js = """    // --- ABA XII: DIÁLOGOS PRÁTICOS E CONVERSAÇÃO CO
         titulo: "Cena III: A Travessia da Floresta com o Cão Loiro (Poke Xuna in Ecos)",
         subtitulo: "O encontro místico com o animal-guia luminoso através da bruma e do gelo",
         falas: [
-          { autor: "Trakte (Viajante)", treppio: "Poke xuna! Alim ynus? In fervei lanom ty mirum.", pt: "Cão loiro e sagrado! Para onde andas? Através da névoa contemplo a tua aura luminosa." },
-          { autor: "Interação", treppio: "Poke in filoxi keladba, et halkvestos ty in avurvéi ynnan.", pt: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão gelado." },
-          { autor: "Trakte (Viajante)", treppio: "Teggarom rixa mirum! In kadi kan durba, kora et avura. Litror kanye sukori ey keladu!", pt: "Avisto a fortaleza da montanha! No alto da colina ela resplandecia, antiga e coroada de gelo. A ressonância de seus ecos toca o meu coração!" }
+          { autor: "Ynte (Viajante)", treppio: "Poke xuna! Alim ynus? In fervei lanom ty mirum.", pt: "Cão loiro e sagrado! Para onde andas? Através da névoa contemplo a tua aura luminosa." },
+          { autor: "Interação", treppio: "Poke in filoxi keladba, et halkvestos ty in xelvéi ynnan.", pt: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão nevado." },
+          { autor: "Ynte (Viajante)", treppio: "Teggarom rixa mirum! In kadi kan durba, kora et avura. Litror kanye sukori ey keladu!", pt: "Avisto a fortaleza da montanha! No alto da colina ela resplandecia, antiga e coroada de gelo. A ressonância de seus ecos toca o meu coração!" }
         ]
       },
       {
@@ -82,12 +82,10 @@ for fpath in html_files:
     
     if pattern.search(content):
         content = pattern.sub(new_dialogues_js + "\n", content)
-        content = content.replace(">Tréppio Moderno<", ">Trepiano Clássico V8.1<")
-        content = content.replace("💬 XII. Diálogos Práticos (Ecos 1.500 Anos)", "💬 XII. Diálogos Práticos (Era Clássica V8.1)")
-        content = content.replace("Resultado de <strong>1.500 anos de evolução naturalista</strong> do Tréppio: a língua imperial cerimonial adaptou-se às estalagens, às estradas nevadas e ao calor das lareiras.", "Resultado de <strong>1.500 anos de evolução da Era Antiga para a Clássica V8.1</strong>: a linguagem prática do dia a dia no cenário de <em>Ecos de Uma Vida Perdida</em> com sintaxe V2, dativo vocalizado e rigor eufônico canônico.")
+        content = content.replace("44.585", "56.342")
+        content = content.replace("44585", "56342")
         with open(fpath, "w", encoding="utf-8") as f:
             f.write(content)
         print("Updated com sucesso:", fpath)
     else:
         print("Padrão de diálogo não encontrado em:", fpath)
-
