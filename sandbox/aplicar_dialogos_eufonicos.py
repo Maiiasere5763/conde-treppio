@@ -90,3 +90,4 @@ for fpath in html_files:
         print("Updated com sucesso:", fpath)
     else:
         print("Padrão de diálogo não encontrado em:", fpath)
+
