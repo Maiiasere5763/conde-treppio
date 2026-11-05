@@ -1378,7 +1378,7 @@
           📜 XI. GNLT (Gramática Normativa) <span class="tab-count" id="tab-cnt-gnlt">8 Capítulos</span>
         </button>
         <button class="tab-btn" data-tab="dialogues" onclick="switchTab('dialogues')">
-          💬 XII. Diálogos Práticos (Ecos 1.500 Anos) <span class="tab-count">5 Cenas</span>
+          💬 XII. Diálogos Práticos (Era Clássica V8.1) <span class="tab-count">5 Cenas</span>
         </button>
         <button class="tab-btn" data-tab="lab" onclick="switchTab('lab')">
           ⚗️ X. Simulador Morfofonológico V8.1
@@ -2642,67 +2642,59 @@
     }
 
     
-    // --- ABA XII: DIÁLOGOS PRÁTICOS E CONVERSAÇÃO COTIDIANA (ECOS 1.500 ANOS) ---
+    // --- ABA XII: DIÁLOGOS PRÁTICOS E CONVERSAÇÃO COTIDIANA (ECOS DA ERA ANTIGA À CLÁSSICA) ---
     const ECOS_DIALOGUES = [
       {
         id: 1,
-        titulo: "Cena I: O Encontro na Neve e o Cão Dourado Guia",
-        subtitulo: "Diálogo de aproximação nas florestas de coníferas de Ecos de Uma Vida Perdida",
+        titulo: "Cena I: Chegada à Estalagem sob a Nevasca (Talnes in Rixi)",
+        subtitulo: "Diálogo de acolhida no calor da lareira de pedra após travessia na nevasca",
         falas: [
-          { autor: "Viajante", treppio: "Alen, amiko! Fessan esum, et in nive erram. Sano kastar lonta es?", pt: "Olá, amigo! Estou exausto e perdido na neve. Aquele castelo fica longe?" },
-          { autor: "Caçador", treppio: "Alen! Ne, lonta ne es. Kanis lauri mirate: kan stradam isan is!", pt: "Olá! Não, não fica longe. Olha o cão dourado: ele conhece o caminho!" },
-          { autor: "Viajante", treppio: "Kanis sani kurrur vult? Ad me venit et cauda movet.", pt: "O cachorro quer correr para cá? Ele vem até mim e abana a cauda." },
-          { autor: "Caçador", treppio: "Yo, to gizzat! Kan hospitos amet. Ko no ambulate, antequam nox veniat.", pt: "Sim, ele gosta de ti! Ele ama os hóspedes. Caminha conosco, antes que a noite caia." },
-          { autor: "Viajante", treppio: "Hallen to! Frigor me ferit, sed kordis meus calescit.", pt: "Obrigado! O frio me castiga, mas meu coração se aquece." }
+          { autor: "Tepatte (Estalajadeiro)", treppio: "Moba'el ad ti, trakte! Avurvé et fer in rixi vurba. Tep ny vuran esu!", pt: "Bom dia a ti, viajante! Gelo e vento rugiam na montanha. Nossa casa está aquecida!" },
+          { autor: "Trakte (Viajante)", treppio: "Moba'el, Tepatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.", pt: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me." },
+          { autor: "Tepatte (Estalajadeiro)", treppio: "In takej faldem et garvokom mobum! In vurrexi karem tor!", pt: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!" },
+          { autor: "Trakte (Viajante)", treppio: "Mobavë letum: faletom in tepi toruska? Post vesdakom falur pasum.", pt: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso." },
+          { autor: "Tepatte (Estalajadeiro)", treppio: "Torum! Falet vuran in kardi esu. Zelta verreoi paror parru.", pt: "Tenho-o! Um leito aquecido aguarda no aposento superior. Por três moedas de bronze acertaremos o valor." }
         ]
       },
       {
         id: 2,
-        titulo: "Cena II: Na Estalagem e ao Redor da Lareira Crepitante",
-        subtitulo: "Ceia quente, vinho com especiarias e reserva de aposento aquecido",
+        titulo: "Cena II: Na Forja do Mestre Artífice (In Tekiai Tettey)",
+        subtitulo: "Reparo da ferradura da montaria e encomenda de lâmina afiada",
         falas: [
-          { autor: "Estalajadeiro", treppio: "Vesen, hospit! Ad kamin kaldan sedute. Quid mandur et bibur vulte?", pt: "Boa noite, hóspede! Senta-te junto à lareira quente. O que queres comer e beber?" },
-          { autor: "Viajante", treppio: "Doban, fammor grando habeum. Broda calida, panna et vinor ruber dote.", pt: "Por favor, tenho muita fome. Dá-me caldo quente, pão e vinho tinto." },
-          { autor: "Estalajadeiro", treppio: "Optime! Karna assada et kaso de capra quoque habeo. Cito serviam.", pt: "Excelente! Também tenho carne assada e queijo de cabra. Servirei depressa." },
-          { autor: "Viajante", treppio: "Et lektar pro nocte reservatum habeo? Vellum spissum postulo.", pt: "E tenho um leito reservado para a noite? Peço um cobertor grosso." },
-          { autor: "Estalajadeiro", treppio: "Stuba supera pura et calda est. In argen duo pagas.", pt: "O quarto de cima é limpo e aquecido. Pagas duas moedas de prata." },
-          { autor: "Viajante", treppio: "Argeneos duos dobo. Clavem mihi concede.", pt: "Dou-te duas moedas de prata. Concede-me a chave." }
+          { autor: "Trakte (Viajante)", treppio: "Mobor ad ti, Tette! Poke ey in vari poketekom kossa. Tettek ty tekba ne?", pt: "Graça e paz a ti, mestre forjador! Minha montaria perdeu a ferradura no caminho pedregoso. Teu martelo está ativo?" },
+          { autor: "Tette (Ferreiro)", treppio: "Vurrex tekba et verre vurran esu! Pokem in tepi tekur rukrum.", pt: "A forja trabalhava e o metal está incandescente! Posso ferrar o animal aqui na oficina." },
+          { autor: "Trakte (Viajante)", treppio: "Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Paror kanto esu?", pt: "Preciso também de uma espada afiada e um escudo, pois as serras são perigosas e sombrias. Quanto custará?" },
+          { autor: "Tette (Ferreiro)", treppio: "Vexta verreoi sfammirom saidrum. Mobavë tekorom tekum!", pt: "Por cinco moedas de bronze afiarei a lâmina. Trabalho com lealdade e precisão!" }
         ]
       },
       {
         id: 3,
-        titulo: "Cena III: Negociando com o Ferreiro da Aldeia",
-        subtitulo: "Ferraduras para o cavalo e forja de lâmina resistente",
+        titulo: "Cena III: A Travessia da Floresta com o Cão Loiro (Poke Xuna in Ecos)",
+        subtitulo: "O encontro místico com o animal-guia luminoso através da bruma e do gelo",
         falas: [
-          { autor: "Comprador", treppio: "Alen, ferrar! Equo meo novum ferrum postulo, et cultam fortem.", pt: "Olá, ferreiro! Preciso de ferro novo para o meu cavalo, e de uma faca forte." },
-          { autor: "Ferreiro", treppio: "Hanc cultam ferream mirate: solida est, et in lapide non frangitur.", pt: "Olha esta faca de ferro: é sólida, e não se quebra na pedra." },
-          { autor: "Comprador", treppio: "Kanto preti est? Nimis cara ne sit!", pt: "Quanto custa? Que não seja cara demais!" },
-          { autor: "Ferreiro", treppio: "Quinque kupros pro culta, et decem pro ferratura equi.", pt: "Cinco moedas de cobre pela faca, e dez pela ferradura do cavalo." },
-          { autor: "Comprador", treppio: "Quattuordecim kupros offero, et statim in manu trado.", pt: "Ofereço catorze cobres, e entrego-os imediatamente na tua mão." },
-          { autor: "Ferreiro", treppio: "Concordia est! Accipio, et opus hodie finiam.", pt: "De acordo! Aceito, e terminarei o trabalho ainda hoje." }
+          { autor: "Trakte (Viajante)", treppio: "Poke xuna! Alim ynus? In fervei lanom ty mirum.", pt: "Cão loiro e sagrado! Para onde andas? Através da névoa contemplo a tua aura luminosa." },
+          { autor: "Interação", treppio: "Poke in filoxi keladba, et halkvestos ty in avurvéi ynnan.", pt: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão gelado." },
+          { autor: "Trakte (Viajante)", treppio: "Teggarom rixa mirum! In kadi kan durba, kora et avura. Litror kanye sukori ey keladu!", pt: "Avisto a fortaleza da montanha! No alto da colina ela resplandecia, antiga e coroada de gelo. A ressonância de seus ecos toca o meu coração!" }
         ]
       },
       {
         id: 4,
-        titulo: "Cena IV: Madrugada e Reflexão junto às Brasas",
-        subtitulo: "Memória, nostalgia de tempos idos e a promessa da aurora boreal",
+        titulo: "Cena IV: À Beira das Brasas na Vigília da Noite (In Vildori)",
+        subtitulo: "Diálogo meditativo entre dois companheiros de jornada no silêncio invernal",
         falas: [
-          { autor: "Viajante 1", treppio: "Non dormis, frater? Ventus foris per pineta sibilat.", pt: "Não dormes, meu irmão? O vento lá fora sibila por entre os pinheiros." },
-          { autor: "Viajante 2", treppio: "Nostal me tenet. De patria et de temporibus antiquis cogito.", pt: "A nostalgia me prende. Penso na pátria e nos tempos antigos." },
-          { autor: "Viajante 1", treppio: "Memoria dulce et amara est. Sed aurora cito veniet.", pt: "A memória é doce e amarga. Mas a aurora logo virá." },
-          { autor: "Viajante 2", treppio: "Yo. Stella matutina jam in caelo lucet. Spes non moritur.", pt: "Sim. A estrela da manhã já brilha no céu. A esperança não morre." },
-          { autor: "Viajante 1", treppio: "Esu! Brandorem ultimum suscitemus, et ad iter nos paremus.", pt: "Que assim seja! Reavivemos a última brasa, e preparemo-nos para a jornada." }
+          { autor: "Fratror (Companheiro 1)", treppio: "Mobanir ad ti, fratr. Avura fer in filoxi vurba, ta vurrex kan vildorom mobu.", pt: "Boa noite a ti, companheiro. O vento gélido rugia no vale, mas esta lareira nos concede brasas acolhedoras." },
+          { autor: "Zenor (Companheiro 2)", treppio: "Zo es! Sambel falur pasum, ad ke beloroi in varom trakan. Mobor ad tepi san!", pt: "Assim é! Esta noite preciso repousar, para que na alvorada marchemos pela estrada. Que a paz permaneça nesta casa!" }
         ]
       },
       {
         id: 5,
-        titulo: "Cena V: Guia Rápido de Sobrevivência e Expressões Usuais",
-        subtitulo: "Comandos imediatos, saudações e pedidos cotidianos",
+        titulo: "Cena V: Repertório e Fórmulas de Sobrevivência (Lete Pratika)",
+        subtitulo: "Expressões usuais imediatas, comandos de estrada e pedidos na estalagem",
         falas: [
-          { autor: "Saudação", treppio: "Alen omnibus! / In pace vadite!", pt: "Olá a todos! / Ide em paz!" },
-          { autor: "Gratidão", treppio: "Hallen multam to dote! / Doban, aquam dote.", pt: "Muito obrigado a ti! / Por favor, dai-me água." },
-          { autor: "Localização", treppio: "Ubi stuba est? / Nivis cadit cito.", pt: "Onde fica o quarto? / A neve está caindo depressa." },
-          { autor: "Sentimento", treppio: "Kordis meus laetus est. / Dormire cupio.", pt: "Meu coração está alegre. / Desejo dormir." }
+          { autor: "Saudação Canônica", treppio: "Moba'el ad ti! / Mobanir! / Lamir!", pt: "Bom dia a ti! / Boa noite! / Noite clara de luar!" },
+          { autor: "Bênção e Voto", treppio: "Mobor ad ti! / Zo es!", pt: "Paz e graça a ti! / Assim seja! (De acordo)" },
+          { autor: "Alimento e Fogo", treppio: "Faldem et Véom pasum. / Vurem in vurrexi mob!", pt: "Preciso de pão e água pura. / Dá-nos o calor da lareira!" },
+          { autor: "Orientação e Direção", treppio: "Alim var ad teggarom ynnu? / In vari trakan.", pt: "Onde o caminho conduz à fortaleza? / Marchemos pela estrada." }
         ]
       }
     ];
@@ -2714,7 +2706,7 @@
             💬 Diálogos Práticos e Conversação Cotidiana (Ecos de Uma Vida Perdida)
           </h2>
           <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;">
-            Resultado de <strong>1.500 anos de evolução naturalista</strong> do Tréppio: a língua imperial cerimonial adaptou-se às estalagens, às estradas nevadas e ao calor das lareiras. Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar instantaneamente suas raízes e casos no léxico de 44.585 formas!
+            Resultado de <strong>1.500 anos de evolução da Era Antiga para a Clássica V8.1</strong>: a linguagem prática do dia a dia no cenário de <em>Ecos de Uma Vida Perdida</em> com sintaxe V2, dativo vocalizado e rigor eufônico canônico. Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar instantaneamente suas raízes e casos no léxico de 44.585 formas!
           </p>
         </div>
 
@@ -2726,7 +2718,7 @@
                   <h3 style="font-size:1.2rem;color:var(--gold-bright);">${d.titulo}</h3>
                   <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.2rem;">${d.subtitulo}</div>
                 </div>
-                <span class="gnlt-badge">Tréppio Moderno</span>
+                <span class="gnlt-badge">Trepiano Clássico V8.1</span>
               </div>
               <div class="gnlt-card-body" style="display:flex;flex-direction:column;gap:1rem;">
                 ${d.falas.map(f => {

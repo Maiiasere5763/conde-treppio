@@ -1,99 +1,131 @@
 # Diálogos Práticos do Dia a Dia no Tréppio Canônico (Era Clássica V8.1)
 
 **Cenário**: Terras Boreais e Montanhosas (Universo de *Ecos de Uma Vida Perdida*)  
-**Morfologia**: Trepiano Clássico V8.1 (Sintaxe V2 estrita, 21 Leis de Sandi, Dativo Vocalizado)  
-**Propósito**: Demonstrar a vitalidade funcional e coloquial da língua em conversações reais do cotidiano.
+**Morfologia**: Trepiano Clássico V8.1 canônico, em estrita consonância com a [`gramatica_normativa_base.md`](file:///c:/Users/Usuário/.gemini/config/skills/conde/gramatica_normativa_base.md), o [`treppio_base.md`](file:///c:/Users/Usuário/.gemini/config/skills/conde/treppio_base.md), o [`adendo_edicao_unificada_v8_1.md`](file:///c:/Users/Usuário/.gemini/config/skills/conde/adendo_edicao_unificada_v8_1.md) e as fontes do [`caderno_treppio_notebook.md`](file:///c:/Users/Usuário/.gemini/config/skills/conde/caderno_treppio_notebook.md).  
+**Propósito**: Demonstrar a vitalidade funcional e coloquial da língua em conversações reais do cotidiano, respeitando a eufonia percussiva, a sintaxe V2 / SVO cotidiana, a vocalização dos dativos e as 21 Leis de Sandi Consonantal.
 
 ---
 
-## Diálogo 1: Chegada à Estalagem na Nevasca
+## 1. Fundamentos da Eufonia Tréppia nas Conversações Cotidianas
 
-*Um viajante exausto entra em uma estalagem de montanha com a capa coberta de neve fresca. O calor da lareira de pedra preenche o aposento.*
-
-- **Estalajadeiro**:
-  - *Tréppio*: `Alen to, halkor! Kildanvë fer ferba in rixmonti. Nesor kan vuran es.`
-  - *Glosa*: Luz(NOM) a-ti(DAT), viajante(VOC)! Gélidamente(ADV) vento(NOM) soprar-IMPF(3SG) em montanha-LOC. Lar(NOM) aquele(DEM) aquecido(ADJ) é(COP).
-  - *Português*: "Bom dia a ti, viajante! Gélidamente o vento soprava na montanha. Este lar está aquecido."
-
-- **Viajante**:
-  - *Tréppio*: `Hallen to, nespatr! Dakkor et brenor kaldan vulum. Fessan in kildari halkram.`
-  - *Glosa*: Gratidão(NOM) a-ti(DAT), pai-do-lar(VOC)! Alimento(ACC) e caldo(ACC) quente(ADJ) desejar-PRES(1SG). Fatigado(ADJ) em neve-LOC caminhar-PRET(1SG).
-  - *Português*: "Obrigado a ti, hospedeiro! Alimento e um caldo quente eu desejo. Fatigado na neve caminhei."
-
-- **Estalajadeiro**:
-  - *Tréppio*: `Oxedak brenoroi et garva dakkur pote. Vurrexe falstol dote!`
-  - *Glosa*: Pão-de-centeio(ACC) caldo-INST e água(ACC) comer-INF poder-PRES(2SG). Junto-à-lareira banco-de-madeira(ACC) dar-IMPER(2SG)!
-  - *Português*: "Podes comer pão de centeio com caldo e água fresca. Toma um assento junto à lareira!"
-
-- **Viajante**:
-  - *Tréppio*: `Doobbam, falet kildtoroi vuram es ne? In talnesye vesdakoi falur vulum.`
-  - *Glosa*: Por-favor(ADV), leito(NOM) manta-INST aquecido(ADJ) é(COP) Q-PTCL? Em estalagem-DAT ceia-INST dormir-INF desejar-PRES(1SG).
-  - *Português*: "Por favor, há um leito aquecido com manta de lã? Na estalagem, após a ceia, dormir desejo."
-
-- **Estalajadeiro**:
-  - *Tréppio*: `Yo! In drintavli luttor et keldas sfarre. Rixskeloi talor talun.`
-  - *Glosa*: Sim(AFF)! Em mesa-LOC carne-de-caça(ACC) e queijo-curado(ACC) ver-IMPER(2SG). Prata-moeda-INST preço-ACC pagar-FUT(1PL).
-  - *Português*: "Sim! Na mesa de carvalho carne assada e queijo curado verás. Em moedas de prata o preço acertaremos."
+A fala coloquial do Tréppio Clássico não relaxa as exigências fonotáticas do registro culto, mas as aplica com naturalidade fluida:
+1. **Saudações por Haplologia**: A saudação matinal canônica é invariavelmente **Moba'el** (*moba bel*, "bom dia"), aplicando a síncope com apóstrofo que expurga a redundância labial (*b-b*). A despedida noturna é **Mobanir** (*moba nir*, "boa noite") ou **Lamir** (*lan nir*, "noite de luar").
+2. **Lei do Pro-Drop Compulsório**: Pronomes retos de 1ª e 2ª pessoa (*eo*, *to*) são elididos na conversação comum, manifestando-se apenas nas desinências verbais (`-m`, `-s`, `-n`, `-t`).
+3. **Rigidez de Casos**: O objeto direto recebe obrigatoriamente a desinência acusativa (*-m* / *-om* / *-em* / *-es* / *-os*), o destinatário e o locativo com *in* exigem dativo (*-i* / *-oi* na 2ª declinação e *-ej* / *-erj* na 1ª declinação), e a direção com *ad* exige acusativo.
+4. **Aplicação Sistemática do Sandi Consonantal**:
+   - `rn → ld`: *far- + -ne → falde* (pão); *vur + nir → vildor* (brasas).
+   - `dt / kt → tt`: *tek- + -te → Tette* (o mestre forjador / artífice); *tek- + -tek → tettek* (malho de forja).
+   - `sr → ss`: *fas- + -ra → fassa* (castigou/atormentou); *kos- + -ra → kossa* (perdeu/ocultou); *pas- + -ra → passa* (precisou).
+   - `pg → gg`: *tep + -gar → teggar* (fortaleza / castelo).
+   - `r + ru → rru`: *par- + -ru → parru* (custará / valerá).
+   - `kb → bb`: *mak- + -ba → mabbam* (comia).
 
 ---
 
-## Diálogo 2: No Ferreiro da Montanha
+## Diálogo 1: Chegada à Estalagem sob a Nevasca (*Talnes in Rixi*)
 
-*O viajante visita a forja local para reparar sua montaria e adquirir ferramentas para a travessia das serras.*
+*Um viajante cansado empurra a pesada porta de madeira da estalagem montanhesa. Do lado de fora uiva a nevasca glacial; no interior, a lareira de pedra crepita com brasas ardentes e cheiro de carvalho.*
 
-- **Viajante**:
-  - *Tréppio*: `Alen to, tekskel! Marn zenan in rixtorri skelkit kossra. Durtek toye durba ne?`
-  - *Glosa*: Luz(NOM) a-ti(DAT), mestre-ferreiro(VOC)! Cavalo(NOM) leal(ADJ) em ponte-LOC ferradura(ACC) quebrar-PRET(3SG). Martelo(NOM) teu(GEN) operar-IMPF(3SG) Q-PTCL?
-  - *Português*: "Bom dia a ti, ferreiro! Meu cavalo leal na ponte de pedra perdeu a ferradura. Teu martelo está em atividade?"
+- **Estalajadeiro (`Tepatte`)**:
+  - *Tréppio*: `Moba'el ad ti, trakte! Avurvé et fer in rixi vurba. Tep ny vuran esu!`
+  - *Glosa*: Bom-dia(SAUD) a ti(DAT), caminhante(VOC)! Gelo(NOM) e vento(NOM) em montanha-DAT rugia-IMPF(3SG). Casa(NOM) nossa(POSS) aquecida(ADJ) está(COP).
+  - *Português*: "Bom dia a ti, viajante! Gelo e vento rugiam na montanha. Nossa casa está aquecida!"
 
-- **Ferreiro**:
-  - *Tréppio*: `Vurrex tekba et skel vuran es! Marn kan in nesori tekur pote.`
-  - *Glosa*: Forja(NOM) trabalhar-IMPF(3SG) e ferro(NOM) aquecido(ADJ) é(COP)! Cavalo(ACC) aquele(DEM) em abrigo-LOC forjar-INF poder-PRES(1SG).
-  - *Português*: "A forja trabalhava e o ferro está aquecido! Posso ferrar este cavalo na oficina."
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Moba'el, Tepatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.`
+  - *Glosa*: Bom-dia(SAUD), hospedeiro(VOC)! Pão(ACC) e carne-assada(ACC) quente(ACC) preciso-PRES(1SG). Frio(NOM) em caminho-DAT me(ACC) castigou-AOR(3SG).
+  - *Português*: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me."
 
-- **Viajante**:
-  - *Tréppio*: `Skelskel kitan et kladdor rixtorye talur vulum. Talor kan kanto es?`
-  - *Glosa*: Lâmina-de-aço(ACC) afiada(ADJ) e ferrolho(ACC) castelo-DAT pagar-INF desejar-PRES(1SG). Valor(NOM) aquele(DEM) quanto é(COP)?
-  - *Português*: "Uma lâmina de aço afiada e um ferrolho para a fortaleza comprar desejo. Qual é o preço justo disto?"
+- **Estalajadeiro (`Tepatte`)**:
+  - *Tréppio*: `In takej faldem et garvokom mobum! In vurrexi karem tor!`
+  - *Glosa*: Em mesa-DAT pão(ACC) e caneca-de-bebida(ACC) sirvo-PRES(1SG)! Junto-à-lareira cadeira(ACC) toma-IMPER(2SG)!
+  - *Português*: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!"
 
-- **Ferreiro**:
-  - *Tréppio*: `Zelt rixskeli talor talun. Talanvë durum!`
-  - *Glosa*: Três(NUM) prata-moedas-INST valor(ACC) acertar-PRES(1PL). Honestamente(ADV) trabalhar-PRES(1SG)!
-  - *Português*: "Por três moedas de prata o preço acertaremos. Trabalho com honestidade!"
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Mobavë letum: faletom in tepi toruska? Post vesdakom falur pasum.`
+  - *Glosa*: Cortêsmente(ADV) peço-PRES(1SG): leito(ACC) em casa-DAT tens-PRES(2SG)-INTERR? Após ceia(ACC) dormir-INF preciso-PRES(1SG).
+  - *Português*: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso."
 
----
-
-## Diálogo 3: A Travessia da Floresta com o Cão Loiro
-
-*No cenário emblemático de Ecos de Uma Vida Perdida, o viajante segue o cão loiro luminoso através da névoa e das flores albinas sobre a neve.*
-
-- **Viajante**:
-  - *Tréppio*: `Hundo zenan! Alim halkus? In veksuni alor toye sfarum.`
-  - *Glosa*: Cão(VOC) leal(ADJ)! Para-onde caminhar-PRES(2SG)? Em névoa-LOC luz(ACC) tua(GEN) contemplar-PRES(1SG).
-  - *Português*: "Cão leal! Para onde caminhas? Na bruma gélida tua aura luminosa eu contemplo."
-
-- **(O Cão late alegremente e corre à frente, indicando a trilha)**:
-  - *Tréppio*: `Hundo in filoxi halkba, et halkvestos toye kildari ynnan.`
-  - *Glosa*: Cão(NOM) em bosque-LOC caminhar-IMPF(3SG), e pegadas-ABL tuas(GEN) neve-LOC seguir-PRES(1PL).
-  - *Português*: "O cão no bosque caminhava, e através de tuas pegadas na neve seguimos."
-
-- **Viajante**:
-  - *Tréppio*: `Rixtor sfarum! In rixmonti castel kan esba, muskoi et kildrixoi toran. Ecos kan nesui girra!`
-  - *Glosa*: Fortaleza-de-pedra(ACC) avistar-PRES(1SG)! Em montanha-LOC castelo(NOM) aquele(DEM) estar-IMPF(3SG), musgo-INST e gelo-INST coberto(ADJ). Ecos(NOM) aqueles(DEM) alma-DAT acordar-PRET(3PL)!
-  - *Português*: "Avisto a fortaleza de pedra! Na montanha aquele castelo estava, coberto de musgo e gelo. Aqueles ecos acordaram minha alma!"
+- **Estalajadeiro (`Tepatte`)**:
+  - *Tréppio*: `Torum! Falet vuran in kardi esu. Zelta verreoi paror parru.`
+  - *Glosa*: Tenho-PRES(1SG)! Leito(NOM) aquecido(ADJ) em aposento-alto-DAT está(COP). Três(NUM) bronzes-DAT preço(ACC) valer-FUT(3SG).
+  - *Português*: "Tenho-o! Um leito aquecido aguarda no aposento superior. Por três moedas de bronze acertaremos o valor."
 
 ---
 
-## Diálogo 4: À Beira da Lareira na Calada da Noite
+## Diálogo 2: Na Forja do Mestre Artífice (*In Tekiai Tettey*)
 
-*Dois viajantes conversam no silêncio da noite enquanto as brasas crepitam.*
+*O viajante leva sua montaria à forja do vale. O malho de ferro ressoa sobre a bigorna, soltando faíscas douradas no ar gélido.*
 
-- **Viajante 1**:
-  - *Tréppio*: `Vesen esu, zenor. Kildanvë veksun in filoxi torra, ta vurrex kan vuranvë vildur tekba.`
-  - *Glosa*: Boa-noite(NOM) seja(OPT), amigo(VOC). Gélidamente(ADV) névoa(NOM) em bosque-LOC cobrir-PRET(3SG), mas lareira(NOM) aquela(DEM) calorosamente(ADV) brasas(ACC) forjar-IMPF(3SG).
-  - *Português*: "Boa noite seja, amigo. Gélidamente a névoa o bosque cobriu, mas esta lareira calorosamente as brasas mantinha vivas."
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Mobor ad ti, Tette! Poke ey in vari poketekom kossa. Tettek ty tekba ne?`
+  - *Glosa*: Graça(NOM) a ti(DAT), forjador(VOC)! Montaria(NOM) minha(POSS) em caminho-DAT ferradura(ACC) perdeu-AOR(3SG). Malho(NOM) teu(POSS) trabalhava-IMPF(3SG) INTERR?
+  - *Português*: "Graça e paz a ti, mestre forjador! Minha montaria perdeu a ferradura no caminho pedregoso. Teu martelo está ativo?"
 
-- **Viajante 2**:
-  - *Tréppio*: `Zo es! In faleti falur vulum, ad ke sambel alenvë halkex kan ynnan. Hallen toye nesori!`
-  - *Glosa*: Assim é(COP)! Em leito-LOC dormir-INF desejar-PRES(1SG), para que hoje matinalmente(ADV) estrada(ACC) aquela(DEM) trilhar-PRES(1PL). Bênção(NOM) tua(GEN) lar-DAT!
-  - *Português*: "Assim é! No leito repousar desejo, para que amanhã ao raiar do sol aquela estrada trilhemos. Que a bênção esteja com este lar!"
+- **Ferreiro (`Tette`)**:
+  - *Tréppio*: `Vurrex tekba et verre vurran esu! Pokem in tepi tekur rukrum.`
+  - *Glosa*: Forja(NOM) trabalhava-IMPF(3SG) e ferro(NOM) incandescente(ADJ) está(COP)! Montaria(ACC) em oficina-DAT ferrar-INF posso-PRES(1SG).
+  - *Português*: "A forja trabalhava e o metal está incandescente! Posso ferrar o animal aqui na oficina."
+
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Sfammirom saidet et sfartekom pasum, nam rixer vela esu. Paror kanto esu?`
+  - *Glosa*: Espada(ACC) afiada(ADJ) e escudo(ACC) preciso-PRES(1SG), pois montanhas(NOM) sombrias(ADJ) são(COP). Preço(NOM) quanto é(COP)?
+  - *Português*: "Preciso também de uma espada afiada e um escudo, pois as serras são perigosas e sombrias. Quanto custará?"
+
+- **Ferreiro (`Tette`)**:
+  - *Tréppio*: `Vexta verreoi sfammirom saidrum. Mobavë tekorom tekum!`
+  - *Glosa*: Cinco(NUM) bronzes-DAT espada(ACC) afiarei-FUT(1SG). Lealmente(ADV) obra(ACC) forjo-PRES(1SG)!
+  - *Português*: "Por cinco moedas de bronze afiarei a lâmina. Trabalho com lealdade e precisão!"
+
+---
+
+## Diálogo 3: A Travessia da Floresta com o Cão Loiro (*Poke Xuna in Ecos*)
+
+*No silêncio gélido de Ecos de Uma Vida Perdida, um cão de pelo loiro dourado surge entre os carvalhos cobertos de neve, guiando os passos do viajante com olhos sábios e compassivos.*
+
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Poke xuna! Alim ynus? In fervei lanom ty mirum.`
+  - *Glosa*: Animal(VOC) loiro(ADJ)! Para-onde andas-PRES(2SG)? Em névoa-DAT luz(ACC) tua(POSS) contemplo-PRES(1SG).
+  - *Português*: "Cão loiro e luminoso! Para onde andas? Através da névoa contemplo a tua aura luminosa."
+
+- **(O animal late suavemente e corre à frente, abrindo trilha na neve virgem)**:
+  - *Tréppio*: `Poke in filoxi keladba, et halkvestos ty in avurvéi ynnan.`
+  - *Glosa*: Animal(NOM) em bosque-DAT avançava-IMPF(3SG), e pegadas(ACC) tuas(POSS) em gelo-DAT seguimos-PRES(1PL).
+  - *Português*: "O animal avançava pelo vale profundo, e nós seguimos tuas pegadas no chão gelado."
+
+- **Viajante (`Trakte`)**:
+  - *Tréppio*: `Teggarom rixa mirum! In kadi kan durba, kora et avura. Litror kanye sukori ey keladu!`
+  - *Glosa*: Fortaleza(ACC) montanhesa(ACC) avisto-PRES(1SG)! Em colina-DAT aquela(DEM) brilhava-IMPF(3SG), vetusta(ADJ) e gélida(ADJ). Ecos(NOM) dela(GEN) coração-DAT meu(POSS) chegam-PRES(3SG)!
+  - *Português*: "Avisto a fortaleza da montanha! No alto da colina ela resplandecia, antiga e coroada de gelo. A ressonância de seus ecos toca o meu coração!"
+
+---
+
+## Diálogo 4: À Beira das Brasas na Vigília da Noite (*In Vildori*)
+
+*Dois companheiros de jornada conversam em voz serena enquanto as chamas da lareira baixam e o vento sopra lá fora.*
+
+- **Viajante 1 (`Fratror`)**:
+  - *Tréppio*: `Mobanir ad ti, fratr. Avura fer in filoxi vurba, ta vurrex kan vildorom mobu.`
+  - *Glosa*: Boa-noite(SAUD) a ti(DAT), irmão(VOC). Gélido(NOM) vento(NOM) em vale-DAT rugia-IMPF(3SG), mas lareira(NOM) aquela(DEM) brasas(ACC) concede-PRES(3SG).
+  - *Português*: "Boa noite a ti, companheiro. O vento gélido rugia no vale, mas esta lareira nos concede brasas acolhedoras."
+
+- **Viajante 2 (`Zenor`)**:
+  - *Tréppio*: `Zo es! Sambel falur pasum, ad ke beloroi in varom trakan. Mobor ad tepi san!`
+  - *Glosa*: Assim é(COP)! Hoje repousar-INF preciso-PRES(1SG), para que ao-alvorecer(DAT) em caminho-ACC marchemos-PRES(1PL). Bênção(NOM) a casa-DAT esta(DEM)!
+  - *Português*: "Assim é! Esta noite preciso repousar, para que na alvorada marchemos pela estrada. Que a paz permaneça nesta casa!"
+
+---
+
+## Diálogo 5: Repertório de Fórmulas Práticas de Sobrevivência (*Lete Pratika*)
+
+| Função Prática | Fórmula em Tréppio Canônico | Eufonia e Regra de Contato | Significado em Português |
+| :--- | :--- | :--- | :--- |
+| **Saudação Matutina** | `Moba'el!` / `Moba'el ad ti!` | Haplologia obrigatória: *moba + bel → moba'el* | "Bom dia!" / "Bom dia a ti!" |
+| **Saudação Noturna** | `Mobanir!` / `Lamir!` | Assimilação nasal: *lan + nir → lamir* | "Boa noite!" / "Noite clara de luar!" |
+| **Bênção / Cortesia** | `Mobor ad ti!` | Substantivação abstrata: *moba + -or* | "Paz / Graça a ti!" |
+| **Confirmação Absoluta**| `Zo es!` | Imperativo Cósmico Litúrgico | "Assim seja! / De acordo!" |
+| **Pedido de Alimento** | `Faldem et Véom pasum.` | Acusativos regulares (*falde* `rn→ld`, *Vé*) | "Preciso de pão e água." |
+| **Pedido de Calor** | `Vurem in vurrexi pasum.` | Locativo dativo (*vurrex + -i*) | "Preciso do calor da lareira." |
+| **Orientação Geográfica**| `Alim var ad teggarom ynnu?`| *ad* com acusativo (*teggar* `pg→gg`) | "Onde a estrada conduz à fortaleza?" |
+| **Interrogação de Posse**| `Sanom toruska?` | Clítico interrogativo *-ka* com pro-drop | "Tens isto contigo?" |
+| **Gratidão Solene** | `Hallen ad ti!` / `Mete ad ti!` | Dissimilação líquida (*hal + -n*) | "Obrigado a ti! / Honra a ti!" |
