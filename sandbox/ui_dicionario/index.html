@@ -1547,7 +1547,269 @@
       }
     }
 
+
+    /* ==========================================================================
+       NOVA ERGONOMIA: STATS PILL, QUICK CHIPS, SUB-HUBS E MOBILE BOTTOM NAV
+       ========================================================================== */
+    .stats-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+      user-select: none;
+    }
+
+    .pill-sep {
+      color: var(--border-gold);
+      opacity: 0.6;
+    }
+
+    .stats-pill strong {
+      color: var(--gold-bright);
+      font-family: var(--font-mono);
+    }
+
+    .search-quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      margin-top: 0.25rem;
+      padding: 0 0.25rem;
+    }
+
+    .quick-chip-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-right: 0.2rem;
+    }
+
+    .quick-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .quick-chip:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--gold);
+      color: var(--gold-bright);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Sub-Hub Filter Bar */
+    .subhub-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      background: var(--bg-secondary);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .subhub-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .subhub-chip:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+
+    .subhub-chip.active {
+      background: var(--gold);
+      color: #0c0e14;
+      border-color: var(--gold-bright);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(226, 185, 75, 0.35);
+    }
+
+    /* Alternador de Modo de Cards (Resumido / Detalhado) */
+    .card-view-toggle {
+      display: inline-flex;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .card-view-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .card-view-btn.active {
+      background: var(--bg-card-elevated);
+      color: var(--gold-bright);
+      font-weight: 700;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Botão de Expansão no Card Resumido */
+    .btn-expand-forms {
+      margin-top: 0.65rem;
+      width: 100%;
+      background: var(--bg-secondary);
+      border: 1px dashed var(--border-color);
+      color: var(--gold-bright);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-expand-forms:hover {
+      background: var(--bg-accent-hover);
+      border-color: var(--gold);
+      color: var(--text-primary);
+    }
+
+    /* Mobile Bottom Navigation Bar (Fixo para telas < 768px) */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(12, 16, 26, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1.5px solid var(--border-gold);
+      z-index: 9999;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 0.5rem;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    [data-theme="light"] .mobile-bottom-nav {
+      background: rgba(250, 246, 236, 0.96);
+    }
+
+    .mobile-nav-btn {
+      flex: 1;
+      height: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      user-select: none;
+    }
+
+    .mobile-nav-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .mobile-nav-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      letter-spacing: 0.02em;
+    }
+
+    .mobile-nav-btn.active {
+      color: var(--gold-bright);
+    }
+
+    .mobile-nav-btn.active .mobile-nav-icon {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 8px rgba(226, 185, 75, 0.6));
+    }
+
+    @media (max-width: 768px) {
+      .mobile-bottom-nav {
+        display: flex;
+      }
+      body {
+        padding-bottom: 72px; /* espaço para não cobrir conteúdo */
+      }
+      .nav-tabs {
+        display: none; /* oculta tabs redundantes no topo móvel */
+      }
+      .stats-pill {
+        display: none; /* cabeçalho super compacto */
+      }
+      .search-quick-chips {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.25rem;
+        scrollbar-width: none;
+      }
+      .search-quick-chips::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
   </style>
+  <script>
+    // Expurgar imediatamente caches legados que prendem o HTML antigo
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        names.forEach(function(name) {
+          if (name !== 'treppio-v8-1-cache-v2-intuitivo') {
+            console.log('[CacheBuster] Purgando cache legado:', name);
+            caches.delete(name);
+          }
+        });
+      });
+    }
+  </script>
 </head>
 <body>
 
@@ -1565,7 +1827,7 @@
         </div>
       </div>
 
-            <div class="header-actions">
+                  <div class="header-actions">
         <div class="stats-pill" title="Total de Formas e Classes Gramaticais Oficiais">
           <span class="pulse-dot"></span>
           <span><strong id="stat-forms">56.342</strong> Formas</span>
@@ -1657,7 +1919,7 @@
   </div>
 
   <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE -->
-  <script src="dados_dicionario_conde.js"></script>
+  <script src="dados_dicionario_conde.js?v=8.1.1"></script>
   <script>
     // Estado Global da Aplicação
     let DB = window.CONDE_DB || null;
@@ -2130,7 +2392,63 @@
       }
     }
 
+    
+    function quickSearch(term) {
+      const inp = document.getElementById("omni-input");
+      if (!inp) return;
+      inp.value = term;
+      handleOmniSearch(term);
+      switchHub("dict");
+      inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function switchHub(hubId, optionalSubtab) {
+      currentHub = hubId;
+      if (optionalSubtab) {
+        if (hubId === "dict") dictSubtab = optionalSubtab;
+        if (hubId === "grammar") grammarSubtab = optionalSubtab;
+      }
+      // Atualizar botões desktop
+      document.querySelectorAll(".tab-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.hub === hubId);
+      });
+      // Atualizar botões mobile
+      document.querySelectorAll(".mobile-nav-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.mobileHub === hubId);
+      });
+      renderActiveTab();
+    }
+
+    function setDictSubtab(sub) {
+      dictSubtab = sub;
+      renderActiveTab();
+    }
+
+    function setGrammarSubtab(sub) {
+      grammarSubtab = sub;
+      renderActiveTab();
+    }
+
+    function setCardViewMode(mode) {
+      cardViewMode = mode;
+      renderActiveTab();
+    }
+
+    function toggleCardForms(cardId) {
+      const el = document.getElementById(cardId);
+      const btn = document.getElementById('btn-toggle-' + cardId);
+      if (!el) return;
+      if (el.style.display === "none" || !el.style.display) {
+        el.style.display = "block";
+        if (btn) btn.innerHTML = "▲ Ocultar 18 Formas";
+      } else {
+        el.style.display = "none";
+        if (btn) btn.innerHTML = "📋 Ver 18 Formas & Derivações";
+      }
+    }
+
     function switchTab(tabId) { switchHub(tabId); }
+    function old_switchTab(tabId) { switchHub(tabId); }
     function old_switchTab(tabId) {
       currentTab = tabId;
       document.querySelectorAll(".tab-btn").forEach(b => {
@@ -2269,6 +2587,10 @@
 
       container.innerHTML = `
         <div class="filter-bar">
+          <div class="card-view-toggle" title="Modo de exibição dos cartões">
+            <button class="card-view-btn ${cardViewMode==='compact'?'active':''}" onclick="setCardViewMode('compact')">📱 Resumido</button>
+            <button class="card-view-btn ${cardViewMode==='full'?'active':''}" onclick="setCardViewMode('full')">📋 Detalhado</button>
+          </div>
           <div class="card-view-toggle" title="Modo de exibição dos cartões">
             <button class="card-view-btn ${cardViewMode==='compact'?'active':''}" onclick="setCardViewMode('compact')">📱 Resumido</button>
             <button class="card-view-btn ${cardViewMode==='full'?'active':''}" onclick="setCardViewMode('full')">📋 Detalhado</button>
@@ -3147,10 +3469,23 @@
 
     window.addEventListener("DOMContentLoaded", initApp);
 
-    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {});
-      });
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+        navigator.serviceWorker.register('sw.js?v=8.1.1', { updateViaCache: 'none' })
+            .then(function(reg) {
+                reg.update();
+                reg.addEventListener('updatefound', function() {
+                    var newWorker = reg.installing;
+                    if (newWorker) {
+                        newWorker.addEventListener('statechange', function() {
+                            if (newWorker.state === 'activated') {
+                                console.log('[SW] Novo Service Worker ativado.');
+                            }
+                        });
+                    }
+                });
+            })
+            .catch(function() {});
+    });
     }
   
     // 8. Utilitários Interativos Modernos: Toast e Síntese Fonética do Tréppio
@@ -3188,6 +3523,31 @@
       }, 2200);
     }
   </script>
+
+  <!-- BARRA DE NAVEGAÇÃO INFERIOR PARA DISPOSITIVOS MÓVEIS (ANDROID APK / PWA) -->
+  <nav class="mobile-bottom-nav">
+    <button class="mobile-nav-btn active" data-mobile-hub="dict" onclick="switchHub('dict')">
+      <span class="mobile-nav-icon">🔍</span>
+      <span class="mobile-nav-label">Dicionário</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="verbs" onclick="switchHub('verbs')">
+      <span class="mobile-nav-icon">⚔️</span>
+      <span class="mobile-nav-label">Conjugador</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="dialogues" onclick="switchHub('dialogues')">
+      <span class="mobile-nav-icon">💬</span>
+      <span class="mobile-nav-label">Diálogos</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="grammar" onclick="switchHub('grammar')">
+      <span class="mobile-nav-icon">📜</span>
+      <span class="mobile-nav-label">Gramática</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="lab" onclick="switchHub('lab')">
+      <span class="mobile-nav-icon">⚗️</span>
+      <span class="mobile-nav-label">Lab Sandi</span>
+    </button>
+  </nav>
+
 
   <!-- BARRA DE NAVEGAÇÃO INFERIOR PARA DISPOSITIVOS MÓVEIS (ANDROID APK / PWA) -->
   <nav class="mobile-bottom-nav">

@@ -1,3 +1,4 @@
+import re
 
 def extract_gnlt_payload(root_dir: str) -> dict:
     """Extrai e compila a Gramática Normativa da Língua Tréppia (Base e V8.1)."""
@@ -1677,7 +1678,7 @@ def generate_all_files():
 
         # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) para envio a amigos / Google Drive
         inline_script = f"<script>window.CONDE_DB = {json_compact_str};</script>"
-        portable_html = html_template.replace('<script src="dados_dicionario_conde.js"></script>', inline_script)
+        portable_html = re.sub(r'<script src="dados_dicionario_conde\.js[^"]*"></script>', inline_script, html_template)
         portable_html_path = os.path.join(dist_dir, "Codice_Treppio_Portatil.html")
         with open(portable_html_path, "w", encoding="utf-8") as f:
             f.write(portable_html)
