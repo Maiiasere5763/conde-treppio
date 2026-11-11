@@ -2250,13 +2250,13 @@
       <div class="header-actions">
         <div class="stats-pill" title="Total de Formas e Classes Gramaticais Oficiais">
           <span class="pulse-dot"></span>
-          <span><strong id="stat-forms">187.572</strong> Formas</span>
+          <span><strong id="stat-forms">196.247</strong> Formas</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-nouns">1602</strong> Nomes</span>
+          <span><strong id="stat-nouns">1692</strong> Nomes</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-verbs">1348</strong> Verbos</span>
+          <span><strong id="stat-verbs">1408</strong> Verbos</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-adjs">341</strong> Adjs</span>
+          <span><strong id="stat-adjs">356</strong> Adjs</span>
         </div>
         <button class="btn" id="btn-toggle-hero" onclick="toggleHeroBanner()" title="Mostrar ou recolher o Painel Filológico Imperial">
           📊 Painel
@@ -2277,7 +2277,7 @@
         <input
           type="text"
           id="omni-input"
-          placeholder="Buscar em 187.572 formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)..."
+          placeholder="Buscar em 196.247 formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)..."
           oninput="handleOmniSearch(this.value)"
         />
         <button class="btn-voice-search" id="btn-voice-omni" onclick="startVoiceSearch()" title="Pesquisar falando pelo microfone">
@@ -2290,7 +2290,7 @@
       <!-- 5 HUBS PRINCIPAIS E COESOS -->
       <nav class="nav-tabs" id="main-tabs">
         <button class="tab-btn active" data-hub="dict" onclick="switchHub('dict')">
-          🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">187.572</span>
+          🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">196.247</span>
         </button>
         <button class="tab-btn" data-hub="verbs" onclick="switchHub('verbs')">
           ⚔️ II. Conjugador Verbal <span class="tab-count" id="hub-cnt-verbs">1048 Verbos</span>
@@ -2640,7 +2640,7 @@
       const advCount = Object.keys(DB.adverbios || {}).length;
       const pCount = Object.keys(DB.particulas_e_afixos || {}).length;
       const dCount = Object.keys(DB.registro_diacronico_e_variantes || {}).length;
-      const totalForms = (m.total_expanded_word_forms || 187572).toLocaleString("pt-BR");
+      const totalForms = (m.total_expanded_word_forms || 196247).toLocaleString("pt-BR");
 
       const setTxt = (id, val) => {
         const el = document.getElementById(id);
