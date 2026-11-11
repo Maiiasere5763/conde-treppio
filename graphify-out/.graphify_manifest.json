@@ -1,0 +1,314 @@
+{
+  ".github/workflows/build-apk.yml": {
+    "mtime": 1793847709.1472278,
+    "seen": 1793924633.4726686,
+    "ast_hash": "3dd1e60e05dc17c44adb742ee8d968cc",
+    "semantic_hash": "3dd1e60e05dc17c44adb742ee8d968cc"
+  },
+  "dicionario_formas_expandidas.json": {
+    "mtime": 1793878433.893504,
+    "seen": 1793924633.4726686,
+    "ast_hash": "8b3adfcfa759752da7087079f0c24666",
+    "semantic_hash": "8b3adfcfa759752da7087079f0c24666"
+  },
+  "docs/dados_dicionario_conde.js": {
+    "mtime": 1793878433.9204645,
+    "seen": 1793924633.4726686,
+    "ast_hash": "0f442d5c8c88b204dc3c62181ffe1ea1",
+    "semantic_hash": "0f442d5c8c88b204dc3c62181ffe1ea1"
+  },
+  "docs/dicionario_formas_expandidas.json": {
+    "mtime": 1793878433.9244654,
+    "seen": 1793924633.4726686,
+    "ast_hash": "aea5cce5fb8c3397837c6e53b16d8afd",
+    "semantic_hash": "aea5cce5fb8c3397837c6e53b16d8afd"
+  },
+  "docs/manifest.json": {
+    "mtime": 1793876052.7137358,
+    "seen": 1793924633.4726686,
+    "ast_hash": "d4a05cc20534b9ecafd4ab73b6de9419",
+    "semantic_hash": "d4a05cc20534b9ecafd4ab73b6de9419"
+  },
+  "docs/sw.js": {
+    "mtime": 1793878267.4498644,
+    "seen": 1793924633.4726686,
+    "ast_hash": "b1c31293b66d5b9df43143baf9c45899",
+    "semantic_hash": "b1c31293b66d5b9df43143baf9c45899"
+  },
+  "sandbox/_run_graphify_step1.py": {
+    "mtime": 1793924238.3253877,
+    "seen": 1793924633.4726686,
+    "ast_hash": "eab15d2c150cabc643ec3001833deecc",
+    "semantic_hash": "eab15d2c150cabc643ec3001833deecc"
+  },
+  "sandbox/_run_graphify_step2.py": {
+    "mtime": 1793924266.1113932,
+    "seen": 1793924633.4726686,
+    "ast_hash": "8cce7e3d48600c2125f8a74532257167",
+    "semantic_hash": "8cce7e3d48600c2125f8a74532257167"
+  },
+  "sandbox/ainulindale_sandbox.py": {
+    "mtime": 1793834811.9769278,
+    "seen": 1793924633.4726686,
+    "ast_hash": "41239a0b632d52c12f40efff62d26cd1",
+    "semantic_hash": "41239a0b632d52c12f40efff62d26cd1"
+  },
+  "sandbox/analise_e_expansao_sandbox.py": {
+    "mtime": 1793827498.0708952,
+    "seen": 1793924633.4726686,
+    "ast_hash": "360a9862bb9a1d8672c68a31dfc57914",
+    "semantic_hash": "360a9862bb9a1d8672c68a31dfc57914"
+  },
+  "sandbox/android_apk/app/build.gradle": {
+    "mtime": 1793842959.7856832,
+    "seen": 1793924633.4726686,
+    "ast_hash": "ac6622282733dc37295425197777becf",
+    "semantic_hash": "ac6622282733dc37295425197777becf"
+  },
+  "sandbox/android_apk/app/src/main/assets/dados_dicionario_conde.js": {
+    "mtime": 1793878434.3134336,
+    "seen": 1793924633.4726686,
+    "ast_hash": "0f442d5c8c88b204dc3c62181ffe1ea1",
+    "semantic_hash": "0f442d5c8c88b204dc3c62181ffe1ea1"
+  },
+  "sandbox/android_apk/app/src/main/assets/dicionario_formas_expandidas.json": {
+    "mtime": 1793878434.3174348,
+    "seen": 1793924633.4726686,
+    "ast_hash": "aea5cce5fb8c3397837c6e53b16d8afd",
+    "semantic_hash": "aea5cce5fb8c3397837c6e53b16d8afd"
+  },
+  "sandbox/android_apk/app/src/main/java/com/conde/treppio/MainActivity.java": {
+    "mtime": 1793842959.8800092,
+    "seen": 1793924633.4726686,
+    "ast_hash": "d583fbfd53c041718c3580b6d1058a34",
+    "semantic_hash": "d583fbfd53c041718c3580b6d1058a34"
+  },
+  "sandbox/android_apk/build.gradle": {
+    "mtime": 1793842960.2729065,
+    "seen": 1793924633.4726686,
+    "ast_hash": "77aa8730c549ae4a13981732268b473a",
+    "semantic_hash": "77aa8730c549ae4a13981732268b473a"
+  },
+  "sandbox/android_apk/compilar_apk.ps1": {
+    "mtime": 1793842960.3195727,
+    "seen": 1793924633.4726686,
+    "ast_hash": "c4cb0202e6476770882de3f8fed6206b",
+    "semantic_hash": "c4cb0202e6476770882de3f8fed6206b"
+  },
+  "sandbox/android_apk/gradlew": {
+    "mtime": 1793842960.4647954,
+    "seen": 1793924633.4726686,
+    "ast_hash": "341727f0d714b53dddacb4a016352bc5",
+    "semantic_hash": "341727f0d714b53dddacb4a016352bc5"
+  },
+  "sandbox/android_apk/settings.gradle": {
+    "mtime": 1793842960.535333,
+    "seen": 1793924633.4726686,
+    "ast_hash": "25050a4f46ff1a541a0185529be7e0a3",
+    "semantic_hash": "25050a4f46ff1a541a0185529be7e0a3"
+  },
+  "sandbox/aplicar_dialogos_eufonicos.py": {
+    "mtime": 1793875998.1158993,
+    "seen": 1793924633.4726686,
+    "ast_hash": "a0dafed27322d33ef5a3f266940f7978",
+    "semantic_hash": "a0dafed27322d33ef5a3f266940f7978"
+  },
+  "sandbox/aplicar_evolucao_antiga_classica_pura.py": {
+    "mtime": 1793850080.939198,
+    "seen": 1793924633.4726686,
+    "ast_hash": "985c398c429356e9c0c2d6e4cebeb589",
+    "semantic_hash": "985c398c429356e9c0c2d6e4cebeb589"
+  },
+  "sandbox/atualizar_gnlt_no_sistema.py": {
+    "mtime": 1793849280.0007868,
+    "seen": 1793924633.4726686,
+    "ast_hash": "cbaba5dd58405e9e4285746d72fedc1e",
+    "semantic_hash": "cbaba5dd58405e9e4285746d72fedc1e"
+  },
+  "sandbox/atualizar_ui_dialogos_e_contagens.py": {
+    "mtime": 1793876018.1548002,
+    "seen": 1793924633.4726686,
+    "ast_hash": "c62a477191f203186447064cf6953f45",
+    "semantic_hash": "c62a477191f203186447064cf6953f45"
+  },
+  "sandbox/atualizar_ui_intuitiva.py": {
+    "mtime": 1793877336.411227,
+    "seen": 1793924633.4726686,
+    "ast_hash": "5ede267b49beea461924d51559c0df23",
+    "semantic_hash": "5ede267b49beea461924d51559c0df23"
+  },
+  "sandbox/build_modern_ui.py": {
+    "mtime": 1793847680.179875,
+    "seen": 1793924633.4726686,
+    "ast_hash": "553f947b3bf8946f862d45bdb0f7ce2a",
+    "semantic_hash": "553f947b3bf8946f862d45bdb0f7ce2a"
+  },
+  "sandbox/dicionario_exaustivo/dicionario_formas_expandidas.json": {
+    "mtime": 1793878433.8146453,
+    "seen": 1793924633.4726686,
+    "ast_hash": "8b3adfcfa759752da7087079f0c24666",
+    "semantic_hash": "8b3adfcfa759752da7087079f0c24666"
+  },
+  "sandbox/expandir_lexico_v8_1_eufonico.py": {
+    "mtime": 1793875798.3616495,
+    "seen": 1793924633.4726686,
+    "ast_hash": "56ebdebc78deb7d8500a5f81154c648c",
+    "semantic_hash": "56ebdebc78deb7d8500a5f81154c648c"
+  },
+  "sandbox/gerador_dicionario_integral_sandbox.py": {
+    "mtime": 1793878385.8939083,
+    "seen": 1793924633.4726686,
+    "ast_hash": "8059b2596349108b3b89286bc6a71e8a",
+    "semantic_hash": "8059b2596349108b3b89286bc6a71e8a"
+  },
+  "sandbox/launcher_exe/LauncherConde.cs": {
+    "mtime": 1793841088.0068078,
+    "seen": 1793924633.4726686,
+    "ast_hash": "bc56cd0a5840463a883346f6cf539b72",
+    "semantic_hash": "bc56cd0a5840463a883346f6cf539b72"
+  },
+  "sandbox/launcher_exe/compilar_launcher_exe.ps1": {
+    "mtime": 1793841090.192517,
+    "seen": 1793924633.4726686,
+    "ast_hash": "9e04e941d64d5ba16232cf735ef4b4ba",
+    "semantic_hash": "9e04e941d64d5ba16232cf735ef4b4ba"
+  },
+  "sandbox/ui_dicionario/dados_dicionario_conde.js": {
+    "mtime": 1793878433.9114642,
+    "seen": 1793924633.4726686,
+    "ast_hash": "b01a8a4454e898af68920aa19076c898",
+    "semantic_hash": "b01a8a4454e898af68920aa19076c898"
+  },
+  "sandbox/ui_dicionario/manifest.json": {
+    "mtime": 1793876052.7147367,
+    "seen": 1793924633.4726686,
+    "ast_hash": "0eed9e68d4ea928d153889bdfb975d97",
+    "semantic_hash": "0eed9e68d4ea928d153889bdfb975d97"
+  },
+  "sandbox/ui_dicionario/servidor_ui_dicionario.py": {
+    "mtime": 1793840280.234502,
+    "seen": 1793924633.4726686,
+    "ast_hash": "0212679617570d6281068d44dbdbf9a5",
+    "semantic_hash": "0212679617570d6281068d44dbdbf9a5"
+  },
+  "sandbox/ui_dicionario/sw.js": {
+    "mtime": 1793878276.3972688,
+    "seen": 1793924633.4726686,
+    "ast_hash": "b1c31293b66d5b9df43143baf9c45899",
+    "semantic_hash": "b1c31293b66d5b9df43143baf9c45899"
+  },
+  "sync_conde.ps1": {
+    "mtime": 1793841138.792897,
+    "seen": 1793924633.4726686,
+    "ast_hash": "06edaf5f5d394e1546b21ad75d7b4884",
+    "semantic_hash": "06edaf5f5d394e1546b21ad75d7b4884"
+  },
+  "README.md": {
+    "mtime": 1793876052.7137358,
+    "seen": 1793924633.4726686,
+    "ast_hash": "02f766ec7432bc9f87e71847ca514e71",
+    "semantic_hash": "02f766ec7432bc9f87e71847ca514e71"
+  },
+  "SKILL.md": {
+    "mtime": 1793743497.790553,
+    "seen": 1793924633.4726686,
+    "ast_hash": "bf23b5b4dc0733f3509b74c697cab76a",
+    "semantic_hash": "bf23b5b4dc0733f3509b74c697cab76a"
+  },
+  "adendo_edicao_unificada_v8_1.md": {
+    "mtime": 1793836127.4744492,
+    "seen": 1793924633.4726686,
+    "ast_hash": "f2d4bb8ddb1a4a4096584b47e5374a94",
+    "semantic_hash": "f2d4bb8ddb1a4a4096584b47e5374a94"
+  },
+  "caderno_treppio_notebook.md": {
+    "mtime": 1793743497.8480885,
+    "seen": 1793924633.4726686,
+    "ast_hash": "4ef80059df7673b7e4f16629c15fca04",
+    "semantic_hash": "4ef80059df7673b7e4f16629c15fca04"
+  },
+  "docs/index.html": {
+    "mtime": 1793878433.913467,
+    "seen": 1793924633.4726686,
+    "ast_hash": "f64492ad3d6dc611fa5ed27316fc03a0",
+    "semantic_hash": "f64492ad3d6dc611fa5ed27316fc03a0"
+  },
+  "gramatica_normativa_base.md": {
+    "mtime": 1793835951.876056,
+    "seen": 1793924633.4726686,
+    "ast_hash": "bb3b7c0df0a782840d8669b3e0882e16",
+    "semantic_hash": "bb3b7c0df0a782840d8669b3e0882e16"
+  },
+  "sandbox/ainulindale_treppio_sandbox.md": {
+    "mtime": 1793836174.3356643,
+    "seen": 1793924633.4726686,
+    "ast_hash": "4a7eab2448dbcfc29a300703956e3fd8",
+    "semantic_hash": "4a7eab2448dbcfc29a300703956e3fd8"
+  },
+  "sandbox/android_apk/app/src/main/assets/index.html": {
+    "mtime": 1793878434.307431,
+    "seen": 1793924633.4726686,
+    "ast_hash": "be2548e7a8260546fe745e0bc6facc3d",
+    "semantic_hash": "be2548e7a8260546fe745e0bc6facc3d"
+  },
+  "sandbox/dialogos_praticos_dia_a_dia_treppio.md": {
+    "mtime": 1793875959.199977,
+    "seen": 1793924633.4726686,
+    "ast_hash": "55643cd56a017561967afbdaf8196f3c",
+    "semantic_hash": "55643cd56a017561967afbdaf8196f3c"
+  },
+  "sandbox/dicionario_exaustivo/verbos_matriz_quadripartite_completa.md": {
+    "mtime": 1793878433.7336054,
+    "seen": 1793924633.4726686,
+    "ast_hash": "e85df6dec4c5cac953ab09f82b4d0ff9",
+    "semantic_hash": "e85df6dec4c5cac953ab09f82b4d0ff9"
+  },
+  "sandbox/dicionario_geral_treppio_sandbox.md": {
+    "mtime": 1793878433.731604,
+    "seen": 1793924633.4726686,
+    "ast_hash": "2201532884022e4246805936596f1349",
+    "semantic_hash": "2201532884022e4246805936596f1349"
+  },
+  "sandbox/ecos_contexto_extraido.txt": {
+    "mtime": 1793846597.3452022,
+    "seen": 1793924633.4726686,
+    "ast_hash": "7e0846841306247a40f8973459de890b",
+    "semantic_hash": "7e0846841306247a40f8973459de890b"
+  },
+  "sandbox/relatorio_conde_sandbox_treppio.md": {
+    "mtime": 1793747260.0074499,
+    "seen": 1793924633.4726686,
+    "ast_hash": "a71589ed3cf233dc8d8c6d059eff4518",
+    "semantic_hash": "a71589ed3cf233dc8d8c6d059eff4518"
+  },
+  "sandbox/simulacao_diacronica_1500_anos.md": {
+    "mtime": 1793876052.7215471,
+    "seen": 1793924633.4726686,
+    "ast_hash": "0d1bbd4e894dd49b037cd1b03f8e6ee3",
+    "semantic_hash": "0d1bbd4e894dd49b037cd1b03f8e6ee3"
+  },
+  "sandbox/ui_dicionario/index.html": {
+    "mtime": 1793878339.73805,
+    "seen": 1793924633.4726686,
+    "ast_hash": "f64492ad3d6dc611fa5ed27316fc03a0",
+    "semantic_hash": "f64492ad3d6dc611fa5ed27316fc03a0"
+  },
+  "treppio_base.md": {
+    "mtime": 1793836157.5592716,
+    "seen": 1793924633.4726686,
+    "ast_hash": "a2061b8c36755067d8433bbede516d4d",
+    "semantic_hash": "a2061b8c36755067d8433bbede516d4d"
+  },
+  "docs/icon-512.png": {
+    "mtime": 1793842600.2893648,
+    "seen": 1793924633.4726686,
+    "ast_hash": "dc4ea0fa92dd05871d881385d969b975",
+    "semantic_hash": "dc4ea0fa92dd05871d881385d969b975"
+  },
+  "sandbox/ui_dicionario/icon-512.png": {
+    "mtime": 1793842600.2893648,
+    "seen": 1793924633.4726686,
+    "ast_hash": "dc4ea0fa92dd05871d881385d969b975",
+    "semantic_hash": "dc4ea0fa92dd05871d881385d969b975"
+  }
+}

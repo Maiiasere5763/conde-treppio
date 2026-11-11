@@ -1,0 +1,481 @@
+{
+  "communities": {
+    "0": [
+      "graphify_detect",
+      "graphify_watch",
+      "html",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "sandbox_analise_e_expansao_sandbox",
+      "sandbox_analise_e_expansao_sandbox_rationale_2",
+      "sandbox_aplicar_dialogos_eufonicos",
+      "sandbox_aplicar_dialogos_eufonicos_rationale_2",
+      "sandbox_aplicar_evolucao_antiga_classica_pura",
+      "sandbox_aplicar_evolucao_antiga_classica_pura_rationale_2",
+      "sandbox_atualizar_gnlt_no_sistema",
+      "sandbox_atualizar_gnlt_no_sistema_md_to_html",
+      "sandbox_atualizar_gnlt_no_sistema_md_to_html_format_inline",
+      "sandbox_atualizar_gnlt_no_sistema_md_to_html_render_table",
+      "sandbox_atualizar_gnlt_no_sistema_parse_chapters",
+      "sandbox_atualizar_gnlt_no_sistema_rationale_2",
+      "sandbox_atualizar_ui_dialogos_e_contagens",
+      "sandbox_atualizar_ui_dialogos_e_contagens_rationale_2",
+      "sandbox_atualizar_ui_intuitiva",
+      "sandbox_atualizar_ui_intuitiva_rationale_2",
+      "sandbox_build_modern_ui",
+      "sandbox_build_modern_ui_build_modern_ui",
+      "sandbox_build_modern_ui_rationale_1",
+      "sandbox_expandir_lexico_v8_1_eufonico",
+      "sandbox_expandir_lexico_v8_1_eufonico_inject",
+      "sandbox_expandir_lexico_v8_1_eufonico_literal",
+      "sandbox_expandir_lexico_v8_1_eufonico_main",
+      "sandbox_expandir_lexico_v8_1_eufonico_rationale_2",
+      "sandbox_run_graphify_step1",
+      "sandbox_run_graphify_step2",
+      "subprocess",
+      "sys"
+    ],
+    "1": [
+      "android_annotation_suppresslint",
+      "android_app_activity",
+      "android_graphics_color",
+      "android_net_uri",
+      "android_os_bundle",
+      "android_webkit_consolemessage",
+      "android_webkit_webresourcerequest",
+      "android_webkit_webview",
+      "build",
+      "intent",
+      "override",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_onbackpressed",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_onbackpressed_object_valuecallback_string_l127",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_onbackpressed_object_valuecallback_string_l127_onreceivevalue",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate_object_webchromeclient_l99",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate_object_webchromeclient_l99_onconsolemessage",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate_object_webviewclient_l66",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate_object_webviewclient_l66_handleuri",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_oncreate_object_webviewclient_l66_shouldoverrideurlloading",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_ondestroy",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_onpause",
+      "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity_onresume",
+      "toast",
+      "valuecallback",
+      "view",
+      "webchromeclient",
+      "websettings",
+      "webviewclient",
+      "window",
+      "windowmanager"
+    ],
+    "2": [
+      "any",
+      "http_server",
+      "sandbox_gerador_dicionario_integral_sandbox",
+      "sandbox_gerador_dicionario_integral_sandbox_build_four_stems",
+      "sandbox_gerador_dicionario_integral_sandbox_conjugate_stem_all_109",
+      "sandbox_gerador_dicionario_integral_sandbox_decline_noun",
+      "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload",
+      "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload_format_inline",
+      "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload_md_to_html",
+      "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload_parse_file",
+      "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload_render_table",
+      "sandbox_gerador_dicionario_integral_sandbox_generate_all_files",
+      "sandbox_gerador_dicionario_integral_sandbox_inflect_adjective",
+      "sandbox_gerador_dicionario_integral_sandbox_join_morphemes",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_150",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_246",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_353",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_380",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_4",
+      "sandbox_gerador_dicionario_integral_sandbox_rationale_402",
+      "sandbox_ui_dicionario_servidor_ui_dicionario",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_condedictionaryhandler",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_condedictionaryhandler_do_get",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_condedictionaryhandler_do_post",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_condedictionaryhandler_init",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_rationale_2",
+      "sandbox_ui_dicionario_servidor_ui_dicionario_run_server",
+      "simplehttprequesthandler",
+      "webbrowser"
+    ],
+    "3": [
+      "eventargs",
+      "form",
+      "label",
+      "networkstream",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_activesource",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_cloudurl",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_escapejson",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_handleclient",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_listenloop",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_normalizecloudurl",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_port",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_readembeddedresource",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_recompilelocalconde",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_reloadpayloads",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_sendresponse",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_start",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_stop",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver_syncfromcloud",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform_launchdedicatedwindow",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform_onrecompileclick",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform_onsynccloudclick",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_program",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_program_main",
+      "stathread",
+      "tcplistener",
+      "textbox",
+      "thread"
+    ],
+    "4": [
+      "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "adendo_edicao_unificada_v8_1_mutacao_kt_dt_para_tt",
+      "adendo_edicao_unificada_v8_1_mutacao_liquidas_rn_ln",
+      "gramatica_normativa_base_clivagem_sociolinguistica",
+      "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "gramatica_normativa_base_sincrese_de_treppenia",
+      "gramatica_normativa_base_sistema_casual_quatro_casos",
+      "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "gramatica_normativa_base_sistema_numerico_tripartite",
+      "readme_ecossistema_unificado_codice_treppio",
+      "sandbox_ainulindale_halylitror_musica_dos_ainur",
+      "sandbox_dialogos_praticos_mercado_e_compras",
+      "sandbox_dialogos_praticos_saudacoes_e_etiqueta",
+      "sandbox_dialogos_praticos_taberna_e_hospedaria",
+      "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "sandbox_ecos_vida_perdida_contexto_lore",
+      "sandbox_relatorio_conde_auditoria_filologica",
+      "sandbox_simulacao_diacronica_evolucao_1500_anos",
+      "sandbox_ui_dicionario_chips_de_acesso_rapido",
+      "sandbox_ui_dicionario_interface_cinco_hubs",
+      "sandbox_ui_dicionario_mobile_bottom_nav_bar",
+      "skill_conde_assistente_filologico",
+      "software_apk_android_distribuicao_offline",
+      "software_launcher_desktop_windows_cs_webview",
+      "treppio_base_proibicao_de_hifens"
+    ],
+    "5": [
+      "github_workflows_build_apk_build_apk_steps",
+      "github_workflows_build_apk_env_android_home",
+      "github_workflows_build_apk_env_github_token",
+      "github_workflows_build_apk_steps_env",
+      "github_workflows_build_apk_steps_if",
+      "github_workflows_build_apk_steps_name",
+      "github_workflows_build_apk_steps_run",
+      "github_workflows_build_apk_steps_uses",
+      "github_workflows_build_apk_steps_with",
+      "github_workflows_build_apk_steps_working_directory",
+      "github_workflows_build_apk_with_body",
+      "github_workflows_build_apk_with_cache",
+      "github_workflows_build_apk_with_distribution",
+      "github_workflows_build_apk_with_files",
+      "github_workflows_build_apk_with_if_no_files_found",
+      "github_workflows_build_apk_with_java_version",
+      "github_workflows_build_apk_with_name",
+      "github_workflows_build_apk_with_path",
+      "github_workflows_build_apk_with_python_version",
+      "github_workflows_build_apk_with_tag_name"
+    ],
+    "6": [
+      "csharp_namespace:307bdabf74f5904b",
+      "sandbox_launcher_exe_launcherconde",
+      "system",
+      "system_diagnostics",
+      "system_drawing",
+      "system_io",
+      "system_net",
+      "system_net_sockets",
+      "system_reflection",
+      "system_text",
+      "system_text_regularexpressions",
+      "system_threading",
+      "system_windows_forms"
+    ],
+    "7": [
+      "github_workflows_build_apk",
+      "github_workflows_build_apk_build_apk_name",
+      "github_workflows_build_apk_build_apk_runs_on",
+      "github_workflows_build_apk_jobs",
+      "github_workflows_build_apk_jobs_build_apk",
+      "github_workflows_build_apk_name",
+      "github_workflows_build_apk_on",
+      "github_workflows_build_apk_on_push",
+      "github_workflows_build_apk_on_workflow_dispatch",
+      "github_workflows_build_apk_permissions",
+      "github_workflows_build_apk_permissions_contents",
+      "github_workflows_build_apk_push_branches",
+      "github_workflows_build_apk_push_paths"
+    ],
+    "8": [
+      "docs_manifest",
+      "docs_manifest_background_color",
+      "docs_manifest_description",
+      "docs_manifest_display",
+      "docs_manifest_icons",
+      "docs_manifest_name",
+      "docs_manifest_orientation",
+      "docs_manifest_short_name",
+      "docs_manifest_start_url",
+      "docs_manifest_theme_color"
+    ],
+    "9": [
+      "sandbox_ui_dicionario_manifest",
+      "sandbox_ui_dicionario_manifest_background_color",
+      "sandbox_ui_dicionario_manifest_description",
+      "sandbox_ui_dicionario_manifest_display",
+      "sandbox_ui_dicionario_manifest_icons",
+      "sandbox_ui_dicionario_manifest_name",
+      "sandbox_ui_dicionario_manifest_orientation",
+      "sandbox_ui_dicionario_manifest_short_name",
+      "sandbox_ui_dicionario_manifest_start_url",
+      "sandbox_ui_dicionario_manifest_theme_color"
+    ],
+    "10": [
+      "button",
+      "color",
+      "point",
+      "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform_createstyledbutton",
+      "size"
+    ],
+    "11": [
+      "sandbox_ainulindale_sandbox",
+      "sandbox_ainulindale_sandbox_apply_sandhi",
+      "sandbox_ainulindale_sandbox_rationale_2",
+      "sandbox_ainulindale_sandbox_rationale_9"
+    ],
+    "12": [
+      "sandbox_android_apk_gradlew",
+      "sandbox_android_apk_gradlew__entry",
+      "sandbox_android_apk_gradlew_die",
+      "sandbox_android_apk_gradlew_warn"
+    ],
+    "13": [
+      "docs_sw",
+      "docs_sw_assets_to_cache"
+    ],
+    "14": [
+      "sandbox_ui_dicionario_sw",
+      "sandbox_ui_dicionario_sw_assets_to_cache"
+    ],
+    "15": [
+      "caderno_treppio_notebook_notas_filologicas_de_campo"
+    ],
+    "16": [
+      "docs_dados_dicionario_conde"
+    ],
+    "17": [
+      "gramatica_normativa_base_fonologia_grafema_x"
+    ],
+    "18": [
+      "sandbox_android_apk_app_build"
+    ],
+    "19": [
+      "sandbox_android_apk_app_src_main_assets_dados_dicionario_conde"
+    ],
+    "20": [
+      "sandbox_android_apk_build"
+    ],
+    "21": [
+      "sandbox_android_apk_compilar_apk"
+    ],
+    "22": [
+      "sandbox_android_apk_settings"
+    ],
+    "23": [
+      "sandbox_dialogos_praticos_caminhos_e_direcoes"
+    ],
+    "24": [
+      "sandbox_launcher_exe_compilar_launcher_exe"
+    ],
+    "25": [
+      "sandbox_ui_dicionario_dados_dicionario_conde"
+    ],
+    "26": [
+      "sync_conde"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07899159663865546,
+    "1": 0.0928030303030303,
+    "2": 0.10837438423645321,
+    "3": 0.10591133004926108,
+    "4": 0.07692307692307693,
+    "5": 0.1,
+    "6": 0.15384615384615385,
+    "7": 0.15384615384615385,
+    "8": 0.2,
+    "9": 0.2,
+    "10": 0.4,
+    "11": 0.5,
+    "12": 0.6666666666666666,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0
+  },
+  "gods": [
+    {
+      "id": "sandbox_launcher_exe_launcherconde_condetreppiolauncher_embeddedserver",
+      "label": "EmbeddedServer",
+      "degree": 19
+    },
+    {
+      "id": "sandbox_gerador_dicionario_integral_sandbox_generate_all_files",
+      "label": "generate_all_files()",
+      "degree": 12
+    },
+    {
+      "id": "github_workflows_build_apk_steps_with",
+      "label": "with",
+      "degree": 11
+    },
+    {
+      "id": "sandbox_launcher_exe_launcherconde_condetreppiolauncher_launcherform",
+      "label": "LauncherForm",
+      "degree": 10
+    },
+    {
+      "id": "github_workflows_build_apk_build_apk_steps",
+      "label": "steps",
+      "degree": 8
+    },
+    {
+      "id": "sandbox_android_apk_app_src_main_java_com_conde_treppio_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 8
+    },
+    {
+      "id": "sandbox_gerador_dicionario_integral_sandbox_extract_gnlt_payload",
+      "label": "extract_gnlt_payload()",
+      "degree": 7
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "label": "As 21 Leis de Sandi do Tréppio V8.1",
+      "degree": 6
+    },
+    {
+      "id": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "label": "Interface Unificada de 5 Hubs (Dicionário, Verbos, Diálogos, Gramática, Lab)",
+      "degree": 6
+    },
+    {
+      "id": "sandbox_gerador_dicionario_integral_sandbox_join_morphemes",
+      "label": "join_morphemes()",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Halylitror Ainuron (Ainulindalë em Tréppio Litúrgico Monumental)",
+      "target": "Ontologia Sintético-Aglutinante do Tréppio",
+      "source_files": [
+        "sandbox/ainulindale_treppio_sandbox.md",
+        "gramatica_normativa_base.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "connects across different repos/directories; peripheral node `Halylitror Ainuron (Ainulindalë em Tréppio Litúrgico Monumental)` unexpectedly reaches hub `Ontologia Sintético-Aglutinante do Tréppio`"
+    },
+    {
+      "source": "Diálogos de Saudação e Etiqueta Social (V8.1)",
+      "target": "As 21 Leis de Sandi do Tréppio V8.1",
+      "source_files": [
+        "sandbox/dialogos_praticos_dia_a_dia_treppio.md",
+        "adendo_edicao_unificada_v8_1.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "connects across different repos/directories; peripheral node `Diálogos de Saudação e Etiqueta Social (V8.1)` unexpectedly reaches hub `As 21 Leis de Sandi do Tréppio V8.1`"
+    },
+    {
+      "source": "Léxico Integral do Tréppio (56.342 Formas Expandidas)",
+      "target": "As 21 Leis de Sandi do Tréppio V8.1",
+      "source_files": [
+        "sandbox/dicionario_geral_treppio_sandbox.md",
+        "adendo_edicao_unificada_v8_1.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "connects across different repos/directories; peripheral node `Léxico Integral do Tréppio (56.342 Formas Expandidas)` unexpectedly reaches hub `As 21 Leis de Sandi do Tréppio V8.1`"
+    },
+    {
+      "source": "Relatório de Auditoria Filológica e Sanidade Lexical",
+      "target": "Conde (Assistente Filológico e Glotopoético)",
+      "source_files": [
+        "sandbox/relatorio_conde_sandbox_treppio.md",
+        "SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Simulação Diacrônica de 1500 Anos (Deriva Natural e Eufonia)",
+      "target": "Síncrese de Treppênia (ou Síncrese de Celia)",
+      "source_files": [
+        "sandbox/simulacao_diacronica_1500_anos.md",
+        "gramatica_normativa_base.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `EmbeddedServer` connect `Community 3` to `Community 6`?",
+      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Port`, `ActiveSource`, `CloudUrl` to the rest of the system?",
+      "why": "20 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07899159663865546 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `generate_all_files()` connect `Community 2` to `Community 0`?",
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0928030303030303 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `LauncherForm` connect `Community 3` to `Community 10`, `Community 6`?",
+      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10837438423645321 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

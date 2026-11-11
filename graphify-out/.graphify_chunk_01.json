@@ -1,0 +1,317 @@
+{
+  "nodes": [
+    {
+      "id": "skill_conde_assistente_filologico",
+      "label": "Conde (Assistente Filológico e Glotopoético)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L1-L26",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "label": "Ontologia Sintético-Aglutinante do Tréppio",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L3-L16",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sincrese_de_treppenia",
+      "label": "Síncrese de Treppênia (ou Síncrese de Celia)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L18-L30",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_clivagem_sociolinguistica",
+      "label": "Clivagem Sociolinguística (Registro Culto K/S vs Registro Popular C/Ç)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L32-L45",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_fonologia_grafema_x",
+      "label": "Estatuto Fonético do Grafema X (/x/ gutural)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L46-L60",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "label": "As 21 Leis de Sandi do Tréppio V8.1",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L40-L120",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_mutacao_kt_dt_para_tt",
+      "label": "Leis de Assimilação Regressiva Oclusiva (kt/dt -> tt)",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L85-L105",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_mutacao_liquidas_rn_ln",
+      "label": "Leis de Transmutação de Líquidas e Nasais (rn -> ld, ln -> ll)",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L106-L125",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "label": "Sistema Nominal de Cinco Declinações",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L70-L115",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_casual_quatro_casos",
+      "label": "Sistema Casual Tréppio (Nominativo, Acusativo, Genitivo, Dativo)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L72-L95",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_numerico_tripartite",
+      "label": "Sistema Numérico Tripartite (Singular, Plural, Paucal)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L96-L110",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "treppio_base_proibicao_de_hifens",
+      "label": "Princípio da Aglutinação Pura sem Hífens",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\treppio_base.md",
+      "source_location": "L8-L15",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "label": "Matriz Verbal Quadripartite (Básico, Causativo, Frequentativo, Estativo)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L150-L210",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "caderno_treppio_notebook_notas_filologicas_de_campo",
+      "label": "Caderno de Notas Filológicas e Diacronia Viva",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\caderno_treppio_notebook.md",
+      "source_location": "L1-L25",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "readme_ecossistema_unificado_codice_treppio",
+      "label": "Ecossistema Unificado do Códice Tréppio",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\README.md",
+      "source_location": "L1-L33",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "skill_conde_assistente_filologico",
+      "target": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L6-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "skill_conde_assistente_filologico",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L11-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "gramatica_normativa_base_sincrese_de_treppenia",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L18-L30",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sincrese_de_treppenia",
+      "target": "gramatica_normativa_base_clivagem_sociolinguistica",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L32-L45",
+      "weight": 1.0
+    },
+    {
+      "source": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "target": "adendo_edicao_unificada_v8_1_mutacao_kt_dt_para_tt",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L85-L105",
+      "weight": 1.0
+    },
+    {
+      "source": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "target": "adendo_edicao_unificada_v8_1_mutacao_liquidas_rn_ln",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L106-L125",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L70-L115",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "target": "gramatica_normativa_base_sistema_casual_quatro_casos",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L72-L95",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "target": "gramatica_normativa_base_sistema_numerico_tripartite",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L96-L110",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L150-L210",
+      "weight": 1.0
+    },
+    {
+      "source": "treppio_base_proibicao_de_hifens",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\treppio_base.md",
+      "source_location": "L8-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_ecossistema_unificado_codice_treppio",
+      "target": "skill_conde_assistente_filologico",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\README.md",
+      "source_location": "L1-L33",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "nucleo_filologico_chancelaria",
+      "label": "Núcleo Filológico da Chancelaria de Treppênia",
+      "nodes": [
+        "skill_conde_assistente_filologico",
+        "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+        "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+        "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md"
+    }
+  ],
+  "input_tokens": 12500,
+  "output_tokens": 3200,
+  "coverage": {
+    "D:\\Conde_Treppio\\README.md": 33,
+    "D:\\Conde_Treppio\\SKILL.md": 26,
+    "D:\\Conde_Treppio\\gramatica_normativa_base.md": 193,
+    "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md": 429,
+    "D:\\Conde_Treppio\\caderno_treppio_notebook.md": 25,
+    "D:\\Conde_Treppio\\treppio_base.md": 251
+  }
+}

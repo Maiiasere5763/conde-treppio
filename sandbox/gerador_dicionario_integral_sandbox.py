@@ -1174,6 +1174,37 @@ VERB_ROOTS.extend([
     ("vok", "sangrar, verter sangue", "estancar sangue", "voltar a sangrar", "voltar a estancar sangue"),
     ("vul", "querer, determinar pela vontade", "abster-se de querer, renunciar", "voltar a determinar", "voltar a renunciar"),
 ])
+
+# Integração da Expansão Lexical de Grande Escala V8.1 (O Conde)
+import sys as _sys
+_sandbox_dir = os.path.dirname(os.path.abspath(__file__))
+if _sandbox_dir not in _sys.path:
+    _sys.path.insert(0, _sandbox_dir)
+from lexico_expansao_v8_1 import (
+    EXPANSAO_VERB_ROOTS,
+    EXPANSAO_NOUNS,
+    EXPANSAO_ADJECTIVES,
+    EXPANSAO_ADVERBS,
+)
+
+NOUNS.extend(EXPANSAO_NOUNS)
+ADJECTIVES.extend(EXPANSAO_ADJECTIVES)
+VERB_ROOTS.extend(EXPANSAO_VERB_ROOTS)
+
+# Deduplicação canônica preservando a primeira ocorrência
+def _dedup_by_first(items):
+    seen = set()
+    out = []
+    for item in items:
+        k = item[0]
+        if k not in seen:
+            seen.add(k)
+            out.append(item)
+    return out
+
+NOUNS = _dedup_by_first(NOUNS)
+ADJECTIVES = _dedup_by_first(ADJECTIVES)
+VERB_ROOTS = _dedup_by_first(VERB_ROOTS)
 VERB_ROOTS.sort(key=lambda x: x[0])
 
 print(f"Inventário carregado: {len(NOUNS)} substantivos, {len(ADJECTIVES)} adjetivos, {len(VERB_ROOTS)} raízes verbais primárias ({len(VERB_ROOTS)*4} verbos nos 4 eixos).")
@@ -1215,8 +1246,10 @@ for adj, meaning, _, _ in ADJECTIVES:
     adv_form = f"{adj}vë" if adj.endswith("a") else f"{stem}avë"
     ADVERBS.append((adv_form, "Modal Regulado (-vë com diérese)", f"{adj} + -vë", f"de modo {meaning.split(',')[0]}"))
 
-# Adicionar advérbios especiais do Halylitror
+# Adicionar advérbios especiais do Halylitror e da Expansão V8.1
 ADVERBS.append(("rukraletavë", "Modal Composto (-vë)", "rukraleta + -vë", "em altíssima voz, com clamor trovejante"))
+ADVERBS.extend(EXPANSAO_ADVERBS)
+ADVERBS = _dedup_by_first(ADVERBS)
 ADVERBS.sort(key=lambda x: x[0])
 
 # 2.5. PRONOMES (Pessoais Retos, Possessivos, Oblíquos e Demonstrativos Dêiticos)
@@ -1683,15 +1716,19 @@ def generate_all_files():
         with open(portable_html_path, "w", encoding="utf-8") as f:
             f.write(portable_html)
 
-        # 3. Salvar assets embutidos no projeto Android APK (sandbox/android_apk/app/src/main/assets/)
+        # 3. Salvar asset único autocontido no projeto Android APK (sandbox/android_apk/app/src/main/assets/)
+        # Deduplicado: evita triplicar ~3.6 MB x 3 no pacote APK
         android_assets_dir = os.path.join(out_dir, "android_apk", "app", "src", "main", "assets")
         os.makedirs(android_assets_dir, exist_ok=True)
         with open(os.path.join(android_assets_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(portable_html)
-        with open(os.path.join(android_assets_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
-            f.write("window.CONDE_DB = " + json_compact_str + ";\n")
-        with open(os.path.join(android_assets_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
-            f.write(json_compact_str)
+        for redundant_asset in ("dados_dicionario_conde.js", "dicionario_formas_expandidas.json"):
+            redundant_path = os.path.join(android_assets_dir, redundant_asset)
+            if os.path.exists(redundant_path):
+                try:
+                    os.remove(redundant_path)
+                except OSError:
+                    pass
 
     print(f"=== GERAÇÃO CONCLUÍDA COM SUCESSO ===")
     print(f" -> Dicionário Geral Markdown: {sandbox_md_path} ({os.path.getsize(sandbox_md_path):,} bytes)")

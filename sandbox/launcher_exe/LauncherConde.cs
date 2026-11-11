@@ -1,20 +1,22 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
-[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.1)")]
-[assembly: AssemblyDescription("Launcher Executavel e Servidor Embarcado do Dicionario Treppio (/conde)")]
+[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.2)")]
+[assembly: AssemblyDescription("Launcher Executavel, Servidor Embarcado e Central de Voz Whisper do Dicionario Treppio (/conde)")]
 [assembly: AssemblyCompany("Chancelaria Imperial de Treppenia")]
-[assembly: AssemblyProduct("Codice Treppio Conde V8.1")]
-[assembly: AssemblyVersion("8.1.0.0")]
+[assembly: AssemblyProduct("Codice Treppio Conde V8.2")]
+[assembly: AssemblyVersion("8.2.0.0")]
 
 namespace CondeTreppioLauncher
 {
@@ -27,11 +29,18 @@ namespace CondeTreppioLauncher
         public string ActiveSource { get; set; }
         public string CloudUrl { get; set; }
 
+        public int TotalForms { get; private set; }
+        public int NounsCount { get; private set; }
+        public int VerbsCount { get; private set; }
+        public int AdjsCount { get; private set; }
+        public int AdvsCount { get; private set; }
+
         private readonly string _appDataDir;
         private readonly string _cachedDbPath;
         private readonly string _cloudConfigPath;
         private readonly string _localCondeDbPath = @"D:\Conde_Treppio\sandbox\dicionario_exaustivo\dicionario_formas_expandidas.json";
         private readonly string _localCondeHtmlPath = @"D:\Conde_Treppio\sandbox\ui_dicionario\index.html";
+        private readonly string _localUiDir = @"D:\Conde_Treppio\sandbox\ui_dicionario";
 
         private byte[] _cachedHtmlBytes;
         private byte[] _cachedJsonBytes;
@@ -57,7 +66,6 @@ namespace CondeTreppioLauncher
 
         public void ReloadPayloads()
         {
-            // 1. Carregar HTML (prioriza arquivo local do /conde se existir, senão usa recurso embutido no .exe)
             if (File.Exists(_localCondeHtmlPath))
             {
                 _cachedHtmlBytes = File.ReadAllBytes(_localCondeHtmlPath);
@@ -67,7 +75,6 @@ namespace CondeTreppioLauncher
                 _cachedHtmlBytes = ReadEmbeddedResource("index.html");
             }
 
-            // 2. Carregar Banco de Dados JSON (prioriza Nuvem sincronizada se mais recente, ou D:\Conde_Treppio, ou Embutido no .exe)
             if (File.Exists(_localCondeDbPath))
             {
                 _cachedJsonBytes = File.ReadAllBytes(_localCondeDbPath);
@@ -83,6 +90,49 @@ namespace CondeTreppioLauncher
                 _cachedJsonBytes = ReadEmbeddedResource("dicionario_formas_expandidas.json");
                 ActiveSource = "Banco Embutido no Executavel (Offline)";
             }
+
+            ParseMetadataMetrics();
+        }
+
+        private void ParseMetadataMetrics()
+        {
+            TotalForms = 153005;
+            NounsCount = 1248;
+            VerbsCount = 1108;
+            AdjsCount = 281;
+            AdvsCount = 603;
+
+            try
+            {
+                if (_cachedJsonBytes == null || _cachedJsonBytes.Length == 0) return;
+                int scanLen = Math.Min(_cachedJsonBytes.Length, 4096);
+                string head = Encoding.UTF8.GetString(_cachedJsonBytes, 0, scanLen);
+
+                TotalForms = ExtractIntMetric(head, "total_expanded_word_forms", TotalForms);
+                NounsCount = ExtractIntMetric(head, "nouns_count", NounsCount);
+                VerbsCount = ExtractIntMetric(head, "verb_stems_quadripartite", VerbsCount);
+                AdjsCount = ExtractIntMetric(head, "adjectives_count", AdjsCount);
+                AdvsCount = ExtractIntMetric(head, "adverbs_count", AdvsCount);
+
+                // Caso total_expanded_word_forms esteja no final do JSON, inspecionar os últimos 4 KB
+                if (TotalForms == 153005 && _cachedJsonBytes.Length > 4096)
+                {
+                    string tail = Encoding.UTF8.GetString(_cachedJsonBytes, _cachedJsonBytes.Length - 4096, 4096);
+                    TotalForms = ExtractIntMetric(tail, "total_expanded_word_forms", TotalForms);
+                }
+            }
+            catch { }
+        }
+
+        private static int ExtractIntMetric(string text, string key, int fallback)
+        {
+            Match m = Regex.Match(text, "\"" + key + "\"\\s*:\\s*(\\d+)");
+            if (m.Success)
+            {
+                int val;
+                if (int.TryParse(m.Groups[1].Value, out val)) return val;
+            }
+            return fallback;
         }
 
         private byte[] ReadEmbeddedResource(string resourceName)
@@ -131,7 +181,7 @@ namespace CondeTreppioLauncher
                 using (WebClient wc = new WebClient())
                 {
                     wc.Encoding = Encoding.UTF8;
-                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/8.1");
+                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/8.2");
                     string json = wc.DownloadString(directUrl);
                     if (!json.Contains("\"substantivos\""))
                     {
@@ -142,8 +192,9 @@ namespace CondeTreppioLauncher
                     File.WriteAllText(_cloudConfigPath, directUrl, Encoding.UTF8);
                     CloudUrl = directUrl;
                     _cachedJsonBytes = Encoding.UTF8.GetBytes(json);
+                    ParseMetadataMetrics();
                     ActiveSource = "Nuvem Sincronizada (Git/Google Drive)";
-                    message = "Banco de dados atualizado com sucesso da nuvem!";
+                    message = "Banco de dados atualizado com sucesso da nuvem (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas)!";
                     return true;
                 }
             }
@@ -164,7 +215,7 @@ namespace CondeTreppioLauncher
                     return SyncFromCloud(CloudUrl, out message);
                 }
                 ReloadPayloads();
-                message = "Base embutida recarregada.";
+                message = "Base embutida recarregada (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas).";
                 return true;
             }
 
@@ -179,11 +230,11 @@ namespace CondeTreppioLauncher
                 };
                 using (Process p = Process.Start(psi))
                 {
-                    p.WaitForExit(15000);
+                    p.WaitForExit(20000);
                 }
                 ReloadPayloads();
                 ActiveSource = "Base Local /conde Recompilada";
-                message = "Base local D:\\Conde_Treppio recompilada com sucesso!";
+                message = "Base local D:\\Conde_Treppio recompilada (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas)!";
                 return true;
             }
             catch (Exception ex)
@@ -258,20 +309,21 @@ namespace CondeTreppioLauncher
                     string[] firstLine = lines[0].Split(' ');
                     if (firstLine.Length < 2) return;
                     string method = firstLine[0].ToUpperInvariant();
-                    string path = firstLine[1];
+                    string rawPath = firstLine[1];
+                    string cleanPath = rawPath.Split('?')[0];
 
-                    if (path.StartsWith("/api/db"))
+                    if (cleanPath.StartsWith("/api/db") || cleanPath.EndsWith("/dicionario_formas_expandidas.json"))
                     {
                         SendResponse(stream, "200 OK", "application/json; charset=utf-8", _cachedJsonBytes);
                     }
-                    else if (path.StartsWith("/api/recompilar") && method == "POST")
+                    else if (cleanPath.StartsWith("/api/recompilar") && method == "POST")
                     {
                         string msg;
                         RecompileLocalConde(out msg);
                         string body = "{\"status\":\"ok\",\"source\":\"" + EscapeJson(ActiveSource) + "\",\"db\":" + Encoding.UTF8.GetString(_cachedJsonBytes) + "}";
                         SendResponse(stream, "200 OK", "application/json; charset=utf-8", Encoding.UTF8.GetBytes(body));
                     }
-                    else if (path.StartsWith("/api/cloud-config") && method == "POST")
+                    else if (cleanPath.StartsWith("/api/cloud-config") && method == "POST")
                     {
                         int bodyIdx = requestText.IndexOf("\r\n\r\n");
                         if (bodyIdx >= 0)
@@ -286,10 +338,26 @@ namespace CondeTreppioLauncher
                         }
                         SendResponse(stream, "200 OK", "application/json; charset=utf-8", Encoding.UTF8.GetBytes("{\"status\":\"ok\"}"));
                     }
-                    else if (path.StartsWith("/dados_dicionario_conde.js"))
+                    else if (cleanPath.StartsWith("/dados_dicionario_conde.js"))
                     {
                         string js = "window.CONDE_DB = " + Encoding.UTF8.GetString(_cachedJsonBytes) + ";";
                         SendResponse(stream, "200 OK", "application/javascript; charset=utf-8", Encoding.UTF8.GetBytes(js));
+                    }
+                    else if (cleanPath == "/manifest.json" || cleanPath == "/sw.js" || cleanPath == "/icon-512.png")
+                    {
+                        string fileName = cleanPath.TrimStart('/');
+                        string localAsset = Path.Combine(_localUiDir, fileName);
+                        if (File.Exists(localAsset))
+                        {
+                            string mime = fileName.EndsWith(".json") ? "application/manifest+json; charset=utf-8"
+                                        : fileName.EndsWith(".js") ? "application/javascript; charset=utf-8"
+                                        : "image/png";
+                            SendResponse(stream, "200 OK", mime, File.ReadAllBytes(localAsset));
+                        }
+                        else
+                        {
+                            SendResponse(stream, "404 Not Found", "text/plain; charset=utf-8", Encoding.UTF8.GetBytes("Not found"));
+                        }
                     }
                     else
                     {
@@ -324,103 +392,160 @@ namespace CondeTreppioLauncher
     public class LauncherForm : Form
     {
         private readonly EmbeddedServer _server;
+        private readonly CultureInfo _ptBr = new CultureInfo("pt-BR");
+        private Label _lblSubtitle;
         private Label _lblStatus;
         private Label _lblUrl;
+        private Label _valForms;
+        private Label _valNouns;
+        private Label _valVerbs;
+        private Label _valAdjs;
         private TextBox _txtCloudUrl;
         private Label _lblFeedback;
+        private Button _btnSyncCloud;
+        private Button _btnRecompileLocal;
 
         public LauncherForm(EmbeddedServer server)
         {
             _server = server;
-            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.1 | /conde)";
-            Size = new Size(700, 450);
+            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.2 | /conde)";
+            ClientSize = new Size(820, 560);
             StartPosition = FormStartPosition.CenterScreen;
-            BackColor = Color.FromArgb(11, 13, 19);
-            ForeColor = Color.FromArgb(238, 241, 248);
+            BackColor = Color.FromArgb(6, 8, 13);
+            ForeColor = Color.FromArgb(242, 245, 252);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
             Font titleFont = new Font("Georgia", 15f, FontStyle.Bold);
             Font subFont = new Font("Segoe UI", 9.5f, FontStyle.Regular);
             Font boldFont = new Font("Segoe UI", 9.5f, FontStyle.Bold);
-            Font monoFont = new Font("Consolas", 9f, FontStyle.Regular);
+            Font monoFont = new Font("Consolas", 9.5f, FontStyle.Regular);
 
+            // Filete Superior Ouro Imperial
+            Panel goldTopBar = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 3,
+                BackColor = Color.FromArgb(212, 175, 55)
+            };
+
+            // Header Imperial
             Panel headerPanel = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 82,
-                BackColor = Color.FromArgb(18, 22, 33),
-                Padding = new Padding(20, 14, 20, 10)
+                Height = 86,
+                BackColor = Color.FromArgb(15, 20, 34),
+                Padding = new Padding(24, 14, 24, 12)
+            };
+
+            Label lblCrest = new Label
+            {
+                Text = "𝓣",
+                Font = new Font("Georgia", 22f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(253, 226, 142),
+                BackColor = Color.FromArgb(26, 33, 54),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Size = new Size(52, 52),
+                Location = new Point(24, 17)
             };
 
             Label lblTitle = new Label
             {
-                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.1)",
+                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.2)",
                 Font = titleFont,
-                ForeColor = Color.FromArgb(255, 216, 107),
+                ForeColor = Color.FromArgb(253, 226, 142),
                 AutoSize = true,
-                Location = new Point(20, 14)
+                Location = new Point(88, 16)
             };
 
-            Label lblSubtitle = new Label
+            _lblSubtitle = new Label
             {
-                Text = "310 Substantivos • 272 Verbos Quadripartites • 68 Adjetivos • 74 Advérbios • 37.769 Formas",
+                Text = FormatSubtitleText(),
                 Font = subFont,
-                ForeColor = Color.FromArgb(166, 176, 201),
+                ForeColor = Color.FromArgb(157, 169, 197),
                 AutoSize = true,
-                Location = new Point(22, 46)
+                Location = new Point(90, 46)
             };
 
+            headerPanel.Controls.Add(lblCrest);
             headerPanel.Controls.Add(lblTitle);
-            headerPanel.Controls.Add(lblSubtitle);
+            headerPanel.Controls.Add(_lblSubtitle);
             Controls.Add(headerPanel);
+            Controls.Add(goldTopBar);
 
+            // 4 Cards Bento de Telemetria ao Vivo
+            int cardY = 104;
+            int cardW = 184;
+            int cardGap = 12;
+            Controls.Add(CreateTelemetryCard("FORMAS VALIDADAS", _server.TotalForms.ToString("N0", _ptBr), "0 Colisões • 21 Leis Sandi", new Point(24, cardY), cardW, out _valForms));
+            Controls.Add(CreateTelemetryCard("SUBSTANTIVOS", _server.NounsCount.ToString("N0", _ptBr), "8 Casos + 10 Sufixos", new Point(24 + (cardW + cardGap) * 1, cardY), cardW, out _valNouns));
+            Controls.Add(CreateTelemetryCard("VERBOS (4 EIXOS)", _server.VerbsCount.ToString("N0", _ptBr), "114 Formas por Verbo", new Point(24 + (cardW + cardGap) * 2, cardY), cardW, out _valVerbs));
+            Controls.Add(CreateTelemetryCard("ADJS & ADVÉRBIOS", _server.AdjsCount + " / " + _server.AdvsCount, "Superl. -n & Modal -vë", new Point(24 + (cardW + cardGap) * 3, cardY), cardW, out _valAdjs));
+
+            // Status e Servidor Local
             _lblStatus = new Label
             {
-                Text = "Fonte Ativa: " + _server.ActiveSource,
+                Text = "● Fonte Ativa: " + _server.ActiveSource,
                 Font = boldFont,
-                ForeColor = Color.FromArgb(56, 184, 135),
+                ForeColor = Color.FromArgb(52, 199, 135),
                 AutoSize = true,
-                Location = new Point(24, 100)
+                Location = new Point(24, 198)
             };
             Controls.Add(_lblStatus);
 
             _lblUrl = new Label
             {
-                Text = "Servidor Local Embarcado: http://127.0.0.1:" + _server.Port,
+                Text = "Servidor Local Embarcado: http://127.0.0.1:" + _server.Port + "  |  Fila Autônoma: 200 Temas (30 min)",
                 Font = monoFont,
-                ForeColor = Color.FromArgb(88, 153, 245),
+                ForeColor = Color.FromArgb(87, 156, 248),
                 AutoSize = true,
-                Location = new Point(24, 124)
+                Location = new Point(24, 222)
             };
             Controls.Add(_lblUrl);
 
+            // Botão Principal: Abrir Dicionário
             Button btnOpenApp = CreateStyledButton(
-                "📖 ABRIR DICIONÁRIO TRÉPPIO (JANELA DEDICADA)",
-                new Point(24, 158),
-                new Size(636, 48),
-                Color.FromArgb(46, 39, 20),
-                Color.FromArgb(255, 216, 107)
+                "📖 ABRIR CÓDICE TRÉPPIO (JANELA DEDICADA)",
+                new Point(24, 254),
+                new Size(772, 48),
+                Color.FromArgb(42, 34, 16),
+                Color.FromArgb(253, 226, 142)
             );
-            btnOpenApp.Font = new Font("Segoe UI", 11f, FontStyle.Bold);
+            btnOpenApp.Font = new Font("Segoe UI", 11.5f, FontStyle.Bold);
+            btnOpenApp.FlatAppearance.BorderColor = Color.FromArgb(212, 175, 55);
+            btnOpenApp.FlatAppearance.BorderSize = 2;
             btnOpenApp.Click += (s, e) => LaunchDedicatedWindow();
             Controls.Add(btnOpenApp);
 
+            // Botão Dedicado: Conversar por Voz com o Conde (Whisper + Voz Neural)
+            Button btnVoiceWhisper = CreateStyledButton(
+                "🎙️ CONVERSAR POR VOZ COM O CONDE (WHISPER STT + VOZ NEURAL)",
+                new Point(24, 312),
+                new Size(772, 44),
+                Color.FromArgb(18, 34, 46),
+                Color.FromArgb(115, 220, 175)
+            );
+            btnVoiceWhisper.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
+            btnVoiceWhisper.FlatAppearance.BorderColor = Color.FromArgb(52, 199, 135);
+            btnVoiceWhisper.Click += (s, e) => LaunchWhisperVoiceGui();
+            Controls.Add(btnVoiceWhisper);
+
+            // Configuração de Nuvem
             Label lblCloud = new Label
             {
                 Text = "URL do Banco de Dados Online (GitHub Raw ou Link Público do Google Drive):",
                 Font = subFont,
-                ForeColor = Color.FromArgb(226, 185, 75),
+                ForeColor = Color.FromArgb(212, 175, 55),
                 AutoSize = true,
-                Location = new Point(24, 224)
+                Location = new Point(24, 372)
             };
             Controls.Add(lblCloud);
 
             _txtCloudUrl = new TextBox
             {
-                Location = new Point(24, 248),
-                Size = new Size(636, 28),
-                BackColor = Color.FromArgb(23, 28, 43),
+                Location = new Point(24, 396),
+                Size = new Size(772, 28),
+                BackColor = Color.FromArgb(15, 20, 34),
                 ForeColor = Color.White,
                 BorderStyle = BorderStyle.FixedSingle,
                 Font = monoFont,
@@ -428,38 +553,112 @@ namespace CondeTreppioLauncher
             };
             Controls.Add(_txtCloudUrl);
 
-            Button btnSyncCloud = CreateStyledButton(
+            _btnSyncCloud = CreateStyledButton(
                 "☁️ Sincronizar da Nuvem (Git / Drive)",
-                new Point(24, 286),
-                new Size(310, 38),
-                Color.FromArgb(23, 28, 43),
-                Color.FromArgb(238, 241, 248)
+                new Point(24, 434),
+                new Size(378, 40),
+                Color.FromArgb(20, 26, 44),
+                Color.FromArgb(242, 245, 252)
             );
-            btnSyncCloud.Click += OnSyncCloudClick;
-            Controls.Add(btnSyncCloud);
+            _btnSyncCloud.Click += OnSyncCloudClick;
+            Controls.Add(_btnSyncCloud);
 
-            Button btnRecompileLocal = CreateStyledButton(
+            _btnRecompileLocal = CreateStyledButton(
                 "🔨 Recompilar e Sincronizar Base /conde",
-                new Point(350, 286),
-                new Size(310, 38),
-                Color.FromArgb(23, 28, 43),
-                Color.FromArgb(226, 185, 75)
+                new Point(418, 434),
+                new Size(378, 40),
+                Color.FromArgb(20, 26, 44),
+                Color.FromArgb(253, 226, 142)
             );
-            btnRecompileLocal.Click += OnRecompileClick;
-            Controls.Add(btnRecompileLocal);
+            _btnRecompileLocal.Click += OnRecompileClick;
+            Controls.Add(_btnRecompileLocal);
 
             _lblFeedback = new Label
             {
-                Text = "Pronto. O dicionário funciona 100% offline e também sincroniza via GitHub ou Google Drive.",
+                Text = "Pronto. O Códice funciona 100% offline, sincroniza via nuvem e inclui audiência vocal bidirecional via Whisper.",
                 Font = subFont,
-                ForeColor = Color.FromArgb(166, 176, 201),
+                ForeColor = Color.FromArgb(157, 169, 197),
                 AutoSize = false,
-                Size = new Size(636, 45),
-                Location = new Point(24, 338)
+                Size = new Size(772, 44),
+                Location = new Point(24, 488)
             };
             Controls.Add(_lblFeedback);
 
             Shown += (s, e) => LaunchDedicatedWindow();
+        }
+
+        private string FormatSubtitleText()
+        {
+            return string.Format(
+                _ptBr,
+                "{0:N0} Substantivos • {1:N0} Verbos Quadripartites • {2:N0} Adjetivos • {3:N0} Advérbios • {4:N0} Formas",
+                _server.NounsCount,
+                _server.VerbsCount,
+                _server.AdjsCount,
+                _server.AdvsCount,
+                _server.TotalForms
+            );
+        }
+
+        private void RefreshMetricsUi()
+        {
+            _lblSubtitle.Text = FormatSubtitleText();
+            _lblStatus.Text = "● Fonte Ativa: " + _server.ActiveSource;
+            _valForms.Text = _server.TotalForms.ToString("N0", _ptBr);
+            _valNouns.Text = _server.NounsCount.ToString("N0", _ptBr);
+            _valVerbs.Text = _server.VerbsCount.ToString("N0", _ptBr);
+            _valAdjs.Text = _server.AdjsCount + " / " + _server.AdvsCount;
+        }
+
+        private Panel CreateTelemetryCard(string title, string value, string sub, Point loc, int width, out Label valueLabel)
+        {
+            Panel card = new Panel
+            {
+                Location = loc,
+                Size = new Size(width, 78),
+                BackColor = Color.FromArgb(15, 20, 34),
+                BorderStyle = BorderStyle.FixedSingle
+            };
+
+            Panel leftAccent = new Panel
+            {
+                Dock = DockStyle.Left,
+                Width = 3,
+                BackColor = Color.FromArgb(212, 175, 55)
+            };
+
+            Label lblCardTitle = new Label
+            {
+                Text = title,
+                Font = new Font("Segoe UI", 7.5f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(157, 169, 197),
+                AutoSize = true,
+                Location = new Point(10, 8)
+            };
+
+            valueLabel = new Label
+            {
+                Text = value,
+                Font = new Font("Consolas", 13.5f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(253, 226, 142),
+                AutoSize = true,
+                Location = new Point(10, 25)
+            };
+
+            Label lblSub = new Label
+            {
+                Text = sub,
+                Font = new Font("Segoe UI", 7.5f, FontStyle.Regular),
+                ForeColor = Color.FromArgb(98, 111, 141),
+                AutoSize = true,
+                Location = new Point(10, 52)
+            };
+
+            card.Controls.Add(lblCardTitle);
+            card.Controls.Add(valueLabel);
+            card.Controls.Add(lblSub);
+            card.Controls.Add(leftAccent);
+            return card;
         }
 
         private Button CreateStyledButton(string text, Point loc, Size sz, Color back, Color fore)
@@ -475,35 +674,84 @@ namespace CondeTreppioLauncher
                 Cursor = Cursors.Hand,
                 Font = new Font("Segoe UI", 9.5f, FontStyle.Bold)
             };
-            b.FlatAppearance.BorderColor = Color.FromArgb(226, 185, 75);
+            b.FlatAppearance.BorderColor = Color.FromArgb(212, 175, 55);
             b.FlatAppearance.BorderSize = 1;
             return b;
         }
 
         private void OnSyncCloudClick(object sender, EventArgs e)
         {
-            _lblFeedback.ForeColor = Color.FromArgb(255, 216, 107);
-            _lblFeedback.Text = "Conectando à nuvem para baixar dicionario_formas_expandidas.json...";
-            Application.DoEvents();
+            string url = _txtCloudUrl.Text;
+            _btnSyncCloud.Enabled = false;
+            _lblFeedback.ForeColor = Color.FromArgb(253, 226, 142);
+            _lblFeedback.Text = "⏳ Conectando à nuvem em background para baixar dicionario_formas_expandidas.json...";
 
-            string msg;
-            bool ok = _server.SyncFromCloud(_txtCloudUrl.Text, out msg);
-            _lblStatus.Text = "Fonte Ativa: " + _server.ActiveSource;
-            _lblFeedback.ForeColor = ok ? Color.FromArgb(56, 184, 135) : Color.FromArgb(217, 78, 90);
-            _lblFeedback.Text = msg;
+            ThreadPool.QueueUserWorkItem(_ =>
+            {
+                string msg;
+                bool ok = _server.SyncFromCloud(url, out msg);
+                BeginInvoke((Action)(() =>
+                {
+                    _btnSyncCloud.Enabled = true;
+                    RefreshMetricsUi();
+                    _lblFeedback.ForeColor = ok ? Color.FromArgb(52, 199, 135) : Color.FromArgb(226, 92, 104);
+                    _lblFeedback.Text = msg;
+                }));
+            });
         }
 
         private void OnRecompileClick(object sender, EventArgs e)
         {
-            _lblFeedback.ForeColor = Color.FromArgb(255, 216, 107);
-            _lblFeedback.Text = "Recompilando base morfológica do /conde (37.769 formas)...";
-            Application.DoEvents();
+            _btnRecompileLocal.Enabled = false;
+            _lblFeedback.ForeColor = Color.FromArgb(253, 226, 142);
+            _lblFeedback.Text = "⏳ Recompilando base morfológica do /conde em background...";
 
-            string msg;
-            bool ok = _server.RecompileLocalConde(out msg);
-            _lblStatus.Text = "Fonte Ativa: " + _server.ActiveSource;
-            _lblFeedback.ForeColor = ok ? Color.FromArgb(56, 184, 135) : Color.FromArgb(217, 78, 90);
-            _lblFeedback.Text = msg;
+            ThreadPool.QueueUserWorkItem(_ =>
+            {
+                string msg;
+                bool ok = _server.RecompileLocalConde(out msg);
+                BeginInvoke((Action)(() =>
+                {
+                    _btnRecompileLocal.Enabled = true;
+                    RefreshMetricsUi();
+                    _lblFeedback.ForeColor = ok ? Color.FromArgb(52, 199, 135) : Color.FromArgb(226, 92, 104);
+                    _lblFeedback.Text = msg;
+                }));
+            });
+        }
+
+        public void LaunchWhisperVoiceGui()
+        {
+            string scriptPath = @"D:\Conde_Treppio\sandbox\interface_voz_whisper.py";
+            if (!File.Exists(scriptPath))
+            {
+                _lblFeedback.ForeColor = Color.FromArgb(226, 92, 104);
+                _lblFeedback.Text = "Script de voz não encontrado em: " + scriptPath;
+                return;
+            }
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo("pythonw", "\"" + scriptPath + "\"")
+                {
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+                Process.Start(psi);
+                _lblFeedback.ForeColor = Color.FromArgb(52, 199, 135);
+                _lblFeedback.Text = "🎙️ Interface de Conversação por Voz (Whisper + Voz Neural) iniciada!";
+            }
+            catch
+            {
+                try
+                {
+                    Process.Start("python", "\"" + scriptPath + "\"");
+                }
+                catch (Exception ex)
+                {
+                    _lblFeedback.ForeColor = Color.FromArgb(226, 92, 104);
+                    _lblFeedback.Text = "Erro ao abrir interface de voz: " + ex.Message;
+                }
+            }
         }
 
         public void LaunchDedicatedWindow()
@@ -511,7 +759,6 @@ namespace CondeTreppioLauncher
             string url = "http://127.0.0.1:" + _server.Port;
             try
             {
-                // Tentar abrir em modo Aplicativo dedicado via Microsoft Edge ou Google Chrome
                 string[] edgePaths = new[]
                 {
                     @"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
@@ -521,7 +768,7 @@ namespace CondeTreppioLauncher
                 {
                     if (File.Exists(ep))
                     {
-                        Process.Start(ep, "--app=" + url + " --window-size=1440,900");
+                        Process.Start(ep, "--app=" + url + " --window-size=1480,920");
                         return;
                     }
                 }
@@ -536,13 +783,17 @@ namespace CondeTreppioLauncher
 
     internal static class Program
     {
+        [DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+
         [STAThread]
         private static int Main(string[] args)
         {
+            try { SetProcessDPIAware(); } catch { }
+
             EmbeddedServer server = new EmbeddedServer();
             server.Start();
 
-            // Modo de verificação automatizada (--test-headless)
             if (args != null && args.Length > 0 && args[0] == "--test-headless")
             {
                 try
@@ -552,7 +803,7 @@ namespace CondeTreppioLauncher
                         wc.Encoding = Encoding.UTF8;
                         string dbJson = wc.DownloadString("http://127.0.0.1:" + server.Port + "/api/db");
                         bool valid = dbJson.Contains("\"substantivos\"") && dbJson.Contains("\"verbos_quadripartite\"");
-                        string msg = "TEST_HEADLESS_OK=" + valid + " PORT=" + server.Port + " BYTES=" + dbJson.Length + " SOURCE=" + server.ActiveSource;
+                        string msg = "TEST_HEADLESS_OK=" + valid + " PORT=" + server.Port + " BYTES=" + dbJson.Length + " FORMS=" + server.TotalForms + " SOURCE=" + server.ActiveSource;
                         Console.WriteLine(msg);
                         try
                         {
@@ -572,7 +823,6 @@ namespace CondeTreppioLauncher
                 }
             }
 
-            // Se houver URL da nuvem salva, sincroniza silenciosamente em background ao abrir
             if (!string.IsNullOrEmpty(server.CloudUrl))
             {
                 ThreadPool.QueueUserWorkItem(_ =>

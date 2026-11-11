@@ -1,0 +1,1070 @@
+{
+  "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.1) pelo Conde",
+  "ultimo_indice_executado": 5,
+  "historico_execucoes": [
+    {
+      "indice": 0,
+      "tema_id": 1,
+      "titulo": "Astronomia, Cosmologia e Calendário Sideral",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 85,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 117598
+    },
+    {
+      "indice": 1,
+      "tema_id": 2,
+      "titulo": "Botânica, Herbologia e Flora dos Ermos",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 85,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 126183
+    },
+    {
+      "indice": 2,
+      "tema_id": 3,
+      "titulo": "Zoologia, Fauna Selvagem e Bestiário do Norte",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 85,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 134768
+    },
+    {
+      "indice": 3,
+      "tema_id": 4,
+      "titulo": "Anatomia Humana, Medicina e Arte da Cura",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 85,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 143353
+    },
+    {
+      "indice": 4,
+      "tema_id": 5,
+      "titulo": "Arquitetura Sacra, Cantaria Monumental e Fortificações",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 75,
+      "substantivos_primarios_concretos": 60,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 147058
+    },
+    {
+      "indice": 5,
+      "tema_id": 6,
+      "titulo": "Música, Organologia e Acústica Coral",
+      "raizes_adicionadas": 10,
+      "substantivos_adicionados": 70,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 10,
+      "total_formas_apos_lote": 153005
+    }
+  ],
+  "temas": [
+    {
+      "id": 1,
+      "titulo": "Astronomia, Cosmologia e Calendário Sideral",
+      "escopo": "Constelações de Ecos, fases lunares, solstícios, equinócios, eclipses, cometas, órbitas celestes e medição do tempo astral."
+    },
+    {
+      "id": 2,
+      "titulo": "Botânica, Herbologia e Flora dos Ermos",
+      "escopo": "Árvores coníferas e caducifólias, ervas medicinais, raízes curativas, fungos, líquens da tundra, resinas, flores alpinas e venenos vegetais."
+    },
+    {
+      "id": 3,
+      "titulo": "Zoologia, Fauna Selvagem e Bestiário do Norte",
+      "escopo": "Predadores da taiga, aves de rapina, cervídeos, animais de toca, peixes de rios gelados, insetos, rastros, pelagens e hábitos animais."
+    },
+    {
+      "id": 4,
+      "titulo": "Anatomia Humana, Medicina e Arte da Cura",
+      "escopo": "Órgãos internos, ossos, articulações, sentidos, febres, cataplasmas, suturas, cauterização, convalescença e longevidade."
+    },
+    {
+      "id": 5,
+      "titulo": "Arquitetura Sacra, Cantaria Monumental e Fortificações",
+      "escopo": "Abóbadas, colunas, capitéis, criptas, contrafortes, pontes de arco, aquedutos, portões encouraçados, torres de vigia e salões reais."
+    },
+    {
+      "id": 6,
+      "titulo": "Música, Organologia e Acústica Coral",
+      "escopo": "Instrumentos de corda, sopro e percussão, modos musicais, intervalos, ressonância, polifonia, cadências e cânticos de gesta."
+    },
+    {
+      "id": 7,
+      "titulo": "Tecelagem, Tinturaria, Bordado e Indumentária Nobre",
+      "escopo": "Fibras têxteis, pigmentos minerais e vegetais, teares, brocados, peles nobres, insígnias, bainhas, bordados heráldicos e adereços."
+    },
+    {
+      "id": 8,
+      "titulo": "Comércio, Moedas, Pesos, Medidas e Mercados",
+      "escopo": "Balanças de precisão, cunhagem de moedas, câmbio, caravanas mercantes, impostos de passagem, armazéns, contratos e fianças."
+    },
+    {
+      "id": 9,
+      "titulo": "Agricultura de Vale, Irrigação, Pomares e Colheita",
+      "escopo": "Arados, sulcos, adubação, enxertia, poda, canais de rega, celeiros, debulha, feno, silos e conservação de sementes."
+    },
+    {
+      "id": 10,
+      "titulo": "Direito Imperial, Magistratura, Chancelaria e Diplomacia",
+      "escopo": "Editos, selos imperiais, embaixadas, tratados de aliança, tributos, apelações, testemunhos, penas, banimento e anistia."
+    },
+    {
+      "id": 11,
+      "titulo": "Geologia, Mineração Profunda, Gemologia e Cristais",
+      "escopo": "Veios metálicos, galerias subterrâneas, escoramento de minas, pedras preciosas, lapidação, mármores, basalto, enxofre e carvão."
+    },
+    {
+      "id": 12,
+      "titulo": "Vidraria, Cerâmica, Alquimia e Destilação",
+      "escopo": "Fornos de alta temperatura, sopro de vidro, esmaltes, porcelana, alambiques, elixires, ácidos, sais, cadinhos e transmutação."
+    },
+    {
+      "id": 13,
+      "titulo": "Marinha, Construção Naval e Meteorologia Oceânica",
+      "escopo": "Quilhas, mastros, cordame, lemes, marés, correntes marinhas, trombas d'água, recifes, faróis, naufrágios e portos de abrigo."
+    },
+    {
+      "id": 14,
+      "titulo": "Genealogia, Parentesco, Casamento e Ritos de Passagem",
+      "escopo": "Graus de consanguinidade, dotes, alianças matrimoniais, adoção, maioridade, bênçãos de berço, heranças e linhagens dinásticas."
+    },
+    {
+      "id": 15,
+      "titulo": "Retórica, Filologia, Caligrafia e Iluminura de Códices",
+      "escopo": "Pergaminhos, tintas de galha, penas de cálamo, encadernação, glosas, tropos poéticos, métrica, silogismos e debate filosófico."
+    },
+    {
+      "id": 16,
+      "titulo": "Cavalaria, Falcoaria, Cinofilia e Caça Real",
+      "escopo": "Adestramento de corcéis, selaria, esporas, falcões de caça, matilhas de rastreamento, armadilhas, trompas de caça e coutadas."
+    },
+    {
+      "id": 17,
+      "titulo": "Gastronomia de Corte, Panificação Fina e Vinicultura",
+      "escopo": "Banquetes reais, especiarias, assados, pastelaria, queijos maturados, vindima, prensas de vinho, tonéis de carvalho e hidromel."
+    },
+    {
+      "id": 18,
+      "titulo": "Psicologia, Sonhos, Memória, Intuição e Presságios",
+      "escopo": "Visões oníricas, melancolia, êxtase, remorso, pressentimento, discernimento, temperamentos da alma e meditação."
+    },
+    {
+      "id": 19,
+      "titulo": "Tática Militar de Campanha, Engenharia de Cerco e Logística",
+      "escopo": "Catapultas, aríetes, torres móveis, minas de sapa, comboios de suprimentos, sinais de fogo, formações em cunha e fortificações de campanha."
+    },
+    {
+      "id": 20,
+      "titulo": "Hidráulica, Moinhos, Relojoaria e Mecanismos Antigos",
+      "escopo": "Rodas d'água, engrenagens, polias, alavancas, clepsidras, relógios de sol, comportas, represas e autômatos de forja."
+    },
+    {
+      "id": 21,
+      "titulo": "Fenômenos Ópticos, Cores, Luz, Sombra e Pintura Mural",
+      "escopo": "Matizes cromáticos, refração, espelhos, afrescos, mosaicos, claro-escuro, auroras polares, miragens e pigmentação."
+    },
+    {
+      "id": 22,
+      "titulo": "Geografia Política, Fronteiras, Toponímia e Cartografia",
+      "escopo": "Mapas em pergaminho, bússolas, marcos miliários, províncias, enclaves, desfiladeiros estratégicos, rotas reais e postos de muda."
+    },
+    {
+      "id": 23,
+      "titulo": "Ética, Virtudes Cardeais, Honra e Filosofia Moral",
+      "escopo": "Magnanimidade, temperança, justiça distributiva, lealdade feudal, hospitalidade sagrada, piedade filial e sabedoria prática."
+    },
+    {
+      "id": 24,
+      "titulo": "Escatologia, Cosmogonia Profunda e Mistérios do Halylitror",
+      "escopo": "Salões Atemporais, Chama Imperecível, acordes primordiais, destino dos povos, renovação do mundo e coros angélicos."
+    },
+    {
+      "id": 25,
+      "titulo": "Glaciologia, Campos de Neve, Avalanches e Criosfera",
+      "escopo": "Banquisas, seracs, fendas glaciais, nevascas uivantes, geada cristalina, pontes de gelo e degelo de altitude."
+    },
+    {
+      "id": 26,
+      "titulo": "Espeleologia, Cavernas Abissais e Rios Subterrâneos",
+      "escopo": "Estalactites, estalagmites, galerias kársticas, lagos cegos, ecos de caverna, vapores termais e ressonância subterrânea."
+    },
+    {
+      "id": 27,
+      "titulo": "Vulcanismo, Fontes Termais e Geotermia Primordial",
+      "escopo": "Crateras fumegantes, fumarolas, gêiseres, obsidiana vítrea, cinza vulcânica, enxofre ardente e tremores de terra."
+    },
+    {
+      "id": 28,
+      "titulo": "Limnologia, Lagos Alpinos, Pântanos e Turfeiras",
+      "escopo": "Águas paradas, juncais, nenúfares, turfa escura, gás dos pântanos, lodo fértil e espelhos d'água glaciais."
+    },
+    {
+      "id": 29,
+      "titulo": "Potamologia, Cachoeiras, Corredeiras e Estuários",
+      "escopo": "Meandros, cheias sazonais, redemoinhos, bancos de cascalho, deltas, confluências, vaus pedregosos e represamentos naturais."
+    },
+    {
+      "id": 30,
+      "titulo": "Oceanografia Costeira, Falésias, Fiordes e Marés",
+      "escopo": "Canais glaciais profundos, arrebentação, espuma marinha, cavernas de maré, ressacas, brisas salinas e praias de seixos."
+    },
+    {
+      "id": 31,
+      "titulo": "Anemologia, Rosa dos Ventos e Tempestades Continentais",
+      "escopo": "Ventos boreais, brisas de vale, ciclones, rajadas descendentes, redemoinhos de poeira e calmarias carregadas."
+    },
+    {
+      "id": 32,
+      "titulo": "Nefologia, Nuvens, Nevoeiros e Precipitações",
+      "escopo": "Cirros altos, cúmulos de trovoada, cerração matinal, garoa fria, saraiva, orvalho congelado e arco-íris duplo."
+    },
+    {
+      "id": 33,
+      "titulo": "Silvicultura Antiga, Bosques Sagrados e Árvores Seculares",
+      "escopo": "Carvalhos ancestrais, teixos longevos, bétulas brancas, abetos gigantes, anéis de crescimento, copas fechadas e clareiras."
+    },
+    {
+      "id": 34,
+      "titulo": "Micologia, Fermentos Naturais, Líquens e Musgos",
+      "escopo": "Esporos, micélios subterrâneos, cogumelos luminescentes, bolores nobres, leveduras selvagens e tapetes de musgo."
+    },
+    {
+      "id": 35,
+      "titulo": "Entomologia, Abelhas, Borboletas e Insetos da Floresta",
+      "escopo": "Colmeias silvestres, casulos, metamorfose, besouros de casca, libélulas de rio, formigueiros e vaga-lumes."
+    },
+    {
+      "id": 36,
+      "titulo": "Ornitologia, Aves Canoras, Migrações e Ninhos",
+      "escopo": "Canto matinal, plumagens nupciais, rotas migratórias, ninhos em penhascos, corujas noturnas, corvos e cisnes."
+    },
+    {
+      "id": 37,
+      "titulo": "Ictiologia, Pesca de Rio, Cardumes e Vida Aquática",
+      "escopo": "Desova do salmão, trutas prateadas, enguias, esturjões, escamas, guelras, águas oxigenadas e armadilhas de vime."
+    },
+    {
+      "id": 38,
+      "titulo": "Herpetologia e Anfíbios de Charco e Pedra",
+      "escopo": "Salamandras de fogo e água, rãs de lagoa, serpentes de urzal, muda de pele, hibernação no lodo e venenos."
+    },
+    {
+      "id": 39,
+      "titulo": "Mastozoologia da Tundra: Ursos, Lobos e Grandes Herbívoros",
+      "escopo": "Alces, renas, bisões da estepe, ursos pardos e brancos, linces, tocas de inverno, chifres e disputas de bando."
+    },
+    {
+      "id": 40,
+      "titulo": "Pedologia, Solos, Argilas, Areias e Fertilidade da Terra",
+      "escopo": "Húmus florestal, barro de oleiro, areia quartzosa, cascalho de rio, terras calcárias, erosão e terraços agrícolas."
+    },
+    {
+      "id": 41,
+      "titulo": "Osteologia, Esqueleto, Crânio e Articulações",
+      "escopo": "Vértebras, costelas, medula óssea, ligamentos, tendões, cartilagens, consolidação de fraturas e postura corporal."
+    },
+    {
+      "id": 42,
+      "titulo": "Cardiologia Antiga, Sangue, Pulso e Circulação Vital",
+      "escopo": "Batimentos cardíacos, veias, artérias, estancamento de hemorragias, calor vital, palidez e rubor sanguíneo."
+    },
+    {
+      "id": 43,
+      "titulo": "Pneumologia, Respiração, Voz e Fôlego Poético",
+      "escopo": "Pulmões, traqueia, diafragma, suspiros, fôlego de canto, ar rarefeito das montanhas e vapores balsâmicos."
+    },
+    {
+      "id": 44,
+      "titulo": "Neurologia Clássica, Sentidos, Visão e Audição",
+      "escopo": "Pupila, foco visual, labirinto auditivo, tato fino, olfato, paladar, reflexos rápidos e equilíbrio."
+    },
+    {
+      "id": 45,
+      "titulo": "Odontologia, Mastigação e Saúde Bucal Antiga",
+      "escopo": "Dentes, esmalte, gengivas, ervas antissépticas, cravo medicinal, extrações e elixires bucais."
+    },
+    {
+      "id": 46,
+      "titulo": "Obstetrícia, Gestação, Parto e Primeiros Cuidados",
+      "escopo": "Parteiras sábias, berços, amamentação, cordão umbilical, proteção materna, cantigas de ninar e crescimento infantil."
+    },
+    {
+      "id": 47,
+      "titulo": "Pediatria Tradicional, Infância, Jogos e Aprendizado",
+      "escopo": "Primeiros passos, aquisição da fala, brinquedos de madeira, contos educativos, imunidade e vigor juvenil."
+    },
+    {
+      "id": 48,
+      "titulo": "Gerontologia, Sabedoria Senil, Memória e Longevidade",
+      "escopo": "Cabelos prateados, rugas de expressão, conselho de anciãos, bastões de apoio, preservação da mente e serenidade."
+    },
+    {
+      "id": 49,
+      "titulo": "Epidemiologia, Quarentena, Higiene e Banhos Termais",
+      "escopo": "Purificação da água, vapores de enxofre, casas de banho, sabões de cinza e ervas, isolamento e limpeza pública."
+    },
+    {
+      "id": 50,
+      "titulo": "Toxicologia, Venenos, Peçonhas e Antídotos",
+      "escopo": "Contraveneos, triaga, carvão ativado, lavagens, picadas, plantas alcaloides, imunização gradual e diagnóstico."
+    },
+    {
+      "id": 51,
+      "titulo": "Cirurgia de Campanha, Instrumentos Médicos e Anestesia",
+      "escopo": "Bisturis de aço e obsidiana, pinças, agulhas curvas, fios de seda, esponjas soporíferas e cautérios."
+    },
+    {
+      "id": 52,
+      "titulo": "Oftalmologia, Colírios, Lentes de Cristal e Visão",
+      "escopo": "Águas florais para os olhos, fadiga de leitura em códices, cristais de aumento, proteção contra o brilho da neve."
+    },
+    {
+      "id": 53,
+      "titulo": "Dermatologia, Cicatrizes, Unguentos e Queimaduras",
+      "escopo": "Bálsamos de calêndula e mel, regeneração da epiderme, queimaduras de frio, proteção solar e óleos essenciais."
+    },
+    {
+      "id": 54,
+      "titulo": "Ortopedia, Massagens, Trações e Reabilitação Física",
+      "escopo": "Alinhamento de membros, talas anatômicas, muletas, banhos quentes de sal, fortalecimento muscular e marcha."
+    },
+    {
+      "id": 55,
+      "titulo": "Nutrição, Dietética, Jejuns e Equilíbrio dos Humores",
+      "escopo": "Alimentos quentes e frios, caldos restauradores, hidratação, reserva energética de inverno e digestão."
+    },
+    {
+      "id": 56,
+      "titulo": "Fisiologia do Sono, Repouso, Vigília e Ritmos Circadianos",
+      "escopo": "Sono profundo, fases da noite, despertar matinal, insônia, chás calmantes e restauração das forças."
+    },
+    {
+      "id": 57,
+      "titulo": "Psiquiatria Clássica, Serenidade, Melancolia e Musicoterapia",
+      "escopo": "Cura pela música de harpa, passeios em jardins, equilíbrio emocional, alívio da angústia e clareza mental."
+    },
+    {
+      "id": 58,
+      "titulo": "Farmacotécnica, Almofarizes, Pílulas, Xaropes e Tinturas",
+      "escopo": "Maceração, decocção, destilação de essências, pesagem em grãos, conservação em potes de cerâmica esmaltada."
+    },
+    {
+      "id": 59,
+      "titulo": "Anatomia Comparada e Medicina Veterinária de Corcéis",
+      "escopo": "Cuidado de cascos, ferraduras ortopédicas, cura de montarias, saúde do rebanho e vigor de cães de guarda."
+    },
+    {
+      "id": 60,
+      "titulo": "Embalsamamento, Aromas Sacros e Conservação Memorial",
+      "escopo": "Resinas de cedro, mirra, linho puro, câmaras frias de rocha, máscaras mortuárias e preservação histórica."
+    },
+    {
+      "id": 61,
+      "titulo": "Siderurgia, Altos-Fornos, Carvão Mineral e Aço Damasco",
+      "escopo": "Redução do minério de ferro, escória, lupas incandescentes, dobramento de lâminas, têmpera seletiva e aço nobre."
+    },
+    {
+      "id": 62,
+      "titulo": "Ourivesaria, Filigrana, Cravação de Gemas e Coroas",
+      "escopo": "Fios de ouro e prata, granulação, engastes, cinzelamento microscópico, polimento com ágata e joias reais."
+    },
+    {
+      "id": 63,
+      "titulo": "Fundição de Bronze, Sinos Monumentais e Estatuária",
+      "escopo": "Cera perdida, moldes de barro e areia, liga de cobre e estanho, afinação acústica de sinos e pátina."
+    },
+    {
+      "id": 64,
+      "titulo": "Armaria Defensiva: Cotas de Malha, Couraças e Elmos",
+      "escopo": "Anéis de ferro rebitados, placas articuladas, viseiras, grevas, manoplas, forros de couro acolchoado e escudos."
+    },
+    {
+      "id": 65,
+      "titulo": "Cutelaria e Forja de Espadas, Lanças e Machados",
+      "escopo": "Espigas, guardas, pomos equilibrados, gumes duplos, sulcos de alívio, pedras de amolar e bainhas."
+    },
+    {
+      "id": 66,
+      "titulo": "Serralheria Artística, Fechaduras, Chaves e Grades",
+      "escopo": "Mecanismos de segredo, ferrolhos, dobradiças forjadas, cofres de ferro, portões ornamentais e cadeados."
+    },
+    {
+      "id": 67,
+      "titulo": "Cantaria de Precisão, Estereotomia e Arcos Góticos",
+      "escopo": "Pedras de fecho, aduelas, mísulas, rosáceas de pedra, gárgulas, escadas helicoidais e encaixes secos."
+    },
+    {
+      "id": 68,
+      "titulo": "Carpintaria Naval e de Grandes Tesouras de Telhado",
+      "escopo": "Vigas mestras, encaixes de malhete, cavilhas de carvalho, curvatura de madeira a vapor e zimbórios."
+    },
+    {
+      "id": 69,
+      "titulo": "Marcenaria Fina, Ebanisteria, Marchetaria e Mobiliário",
+      "escopo": "Tronos entalhados, arcas de casamento, escrivaninhas de escribas, incrustações de marfim e vernizes naturais."
+    },
+    {
+      "id": 70,
+      "titulo": "Tanoaria, Barricas, Tonéis e Cubas de Fermentação",
+      "escopo": "Aduelas de carvalho curvadas ao fogo, arcos de ferro, vedação com junco, torneiras de madeira e envelhecimento."
+    },
+    {
+      "id": 71,
+      "titulo": "Olaria, Porcelana Imperial, Azulejaria e Terracota",
+      "escopo": "Roda de oleiro, argila decantada, vidrados coloridos, queima em mufla, ânforas, telhas e ladrilhos."
+    },
+    {
+      "id": 72,
+      "titulo": "Sopro de Vidro, Vitrais Coloridos, Lentes e Espelhos",
+      "escopo": "Cana de vidreiro, óxidos metálicos corantes, chumbo de vitral, espelhos de prata polida e frascos alquímicos."
+    },
+    {
+      "id": 73,
+      "titulo": "Engenharia de Pontes, Viadutos, Calçadas e Estradas Reais",
+      "escopo": "Fundações subaquáticas com ensecadeiras, arcos de alvenaria, pavimentação em lajes de basalto e drenagem."
+    },
+    {
+      "id": 74,
+      "titulo": "Engenharia Hidráulica: Aquedutos, Cisternas e Fontes",
+      "escopo": "Sifões invertidos, decantadores, canais cobertos, chafarizes públicos, comportas de bronze e distribuição."
+    },
+    {
+      "id": 75,
+      "titulo": "Relojoaria Mecânica, Engrenagens, Pêndulos e Astrolábios",
+      "escopo": "Escapamentos, rodas dentadas de latão, pesos motores, mostradores astronômicos e autômatos sonoros."
+    },
+    {
+      "id": 76,
+      "titulo": "Óptica Instrumental: Lunetas, Sextantes, Prismas eCâmaras",
+      "escopo": "Polimento de lentes côncavas e convexas, tubos de latão, medição de ângulos estrelares e projeção de luz."
+    },
+    {
+      "id": 77,
+      "titulo": "Fabricação de Papel, Pergaminho, Velino e Papiro",
+      "escopo": "Banho de cal, raspagem com faca lunar, pedra-pomes, polpa de trapos de linho, formas de arame e prensagem."
+    },
+    {
+      "id": 78,
+      "titulo": "Química de Pigmentos, Tintas, Vernizes e Lacas",
+      "escopo": "Azul ultramarino de lápis-lazúli, vermelhão, ocre dourado, tinta ferrogálica, goma-arábica e óleo de linhaça."
+    },
+    {
+      "id": 79,
+      "titulo": "Cordoaria, Cabos Navais, Redes,Polias e Guindastes",
+      "escopo": "Torção de cânhamo e linho, alcatroamento de cabos, cadernais de múltiplos gornes, cabrestantes e içamento."
+    },
+    {
+      "id": 80,
+      "titulo": "Engenharia Térmica: Hipocaustos, Lareiras, Chaminés e Estufas",
+      "escopo": "Pisos aquecidos por dutos de ar quente, fornos de alvenaria, tiragem de fumaça, braseiros e isolamento térmico."
+    },
+    {
+      "id": 81,
+      "titulo": "Cerealicultura: Trigo, Cevada, Centeio e Aveia",
+      "escopo": "Lavra, semeadura a lanço, monda, ceifa com foice, feixes, eira de debulha, ciranda e armazenamento."
+    },
+    {
+      "id": 82,
+      "titulo": "Viticultura, Enologia, Vindima e Caves Subterrâneas",
+      "escopo": "Cepas de encosta, poda de inverno, lagares, mosto, fermentação malolática, trasfega e vinhos de guarda."
+    },
+    {
+      "id": 83,
+      "titulo": "Olivicultura, Prensas de Azeite e Óleos Vegetais",
+      "escopo": "Colheita de outono, moinhos de pedra, prensas de fuso, decantação do azeite virgem, óleo de noz e linhaça."
+    },
+    {
+      "id": 84,
+      "titulo": "Pomicultura: Macieiras, Pereiras, Cerejeiras e Enxertia",
+      "escopo": "Enxerto de garfo e borbulha, florada de primavera, colheita de frutas, cidra, secagem de frutos e geleias."
+    },
+    {
+      "id": 85,
+      "titulo": "Horticultura, Raízes Comestíveis, Leguminosas e Estufas",
+      "escopo": "Canteiros elevados, rotação de culturas, lentilhas, favas, nabos, alhos, cebolas e proteção contra geada."
+    },
+    {
+      "id": 86,
+      "titulo": "Apicultura, Mel, Cera Virgem, Própolis e Hidromel",
+      "escopo": "Cortiços, fumigadores de ervas, favos hexagonais, centrifugação do mel, velas de cera pura e fermentação de mel."
+    },
+    {
+      "id": 87,
+      "titulo": "Ovinocultura, Pastoreio de Altitude, Tosquia e Laticínios",
+      "escopo": "Transumância entre vales e picos, cães pastores, redil de pedra, tosquia de primavera, coalho e queijos curados."
+    },
+    {
+      "id": 88,
+      "titulo": "Bovinocultura, Tração Pesada, Jugos, Arados e Couros",
+      "escopo": "Bois de canga, pastagens de várzea, feno de inverno, estábulos aquecidos, ordenha, manteiga e curtimento."
+    },
+    {
+      "id": 89,
+      "titulo": "Equinocultura, Haras Reais, Linhagens de Corcéis eDoma",
+      "escopo": "Potros, redondel de doma, passo, trote, galope, ferrageamento, ração de aveia e genealogia equestre."
+    },
+    {
+      "id": 90,
+      "titulo": "Avicultura, Pombais de Correio, Patos, Gansos e Plumas",
+      "escopo": "Pombos-correio treinados, anilhas de mensagem, penas de escrita, édredons de pluma de ganso e postura."
+    },
+    {
+      "id": 91,
+      "titulo": "Cunicultura, Criação de Pequenos Animais e Pelaria",
+      "escopo": "Coelheiras, manejo de inverno, peles macias para forro de mantos, alimentação de raízes e reprodução."
+    },
+    {
+      "id": 92,
+      "titulo": "Piscicultura em Tanques, Açudes, Viveiros e Defumação",
+      "escopo": "Tanques de pedra com água corrente, criação de trutas e carpas, comportas de tela, salga e defumadouros."
+    },
+    {
+      "id": 93,
+      "titulo": "Caça Maior e Menor, Armadilhas, Rastreamento e Coutadas",
+      "escopo": "Leis de proteção da fauna na estação de cria, arcos de caça, lanças de javali, redes e conservação da presa."
+    },
+    {
+      "id": 94,
+      "titulo": "Coleta Florestal: Castanhas, Nozes, Pinhões, Bagas e Trufas",
+      "escopo": "Outono nos bosques, cestos de dorso, secagem de castanhas em caniços, farinha de bolota e cogumelos secos."
+    },
+    {
+      "id": 95,
+      "titulo": "Moagem Hidráulica e Eólica: Mós, Farinhas e Sêmolas",
+      "escopo": "Mós dormentes e corredoras, picagem da pedra, regulagem da granulometria, peneiras de seda e farelo."
+    },
+    {
+      "id": 96,
+      "titulo": "Panificação Tradicional: Fermento Natural, Fornos e Pães",
+      "escopo": "Levain ancestral, amassadura, fermentação lenta, pães de centeio, broas, biscoitos de viagem e fornos a lenha."
+    },
+    {
+      "id": 97,
+      "titulo": "Charcutaria, Salga, Cura no Frio e Provisões de Inverno",
+      "escopo": "Salmouras aromáticas, câmaras de vento gélido, embutidos, carne seca, banha conservante e despensas."
+    },
+    {
+      "id": 98,
+      "titulo": "Laticínios Finos: Maturação em Cavernas, Manteigas e Soros",
+      "escopo": "Coalhadas, prensagem em formas de madeira, lavagem de casca com salmoura e vinho, cura em grutas frias."
+    },
+    {
+      "id": 99,
+      "titulo": "Arte Culinária: Caldeirões, Assados no Espeto, Caldos e Molhos",
+      "escopo": "Fundos aromáticos, reduções, ervas finas, espetos giratórios, panelas de barro e ferro, e serviço de mesa."
+    },
+    {
+      "id": 100,
+      "titulo": "Destilaria, Cervejaria, Maltagem, Lúpulo e Infusões",
+      "escopo": "Germinação da cevada, secagem do malte, brassagem, mostura, lúpulo aromático, alambiques de cobre e licores."
+    },
+    {
+      "id": 101,
+      "titulo": "Fiação de Lã, Linho, Cânhamo e Seda: Rocas e Fusos",
+      "escopo": "Cardagem, penteadura, maceração do linho no rio, espadelagem, fuso de peso, roda de fiar e meadas."
+    },
+    {
+      "id": 102,
+      "titulo": "Tecelagem em Tear de Alto e Baixo Liço: Sarja, Cetim e Damasco",
+      "escopo": "Urdidura, trama, navetas, liços, pedais, pentes de tear, padrões geométricos e tecidos adamascados."
+    },
+    {
+      "id": 103,
+      "titulo": "Tinturaria Natural: Índigo, Garança, Pastel, Açafrão ePúrpura",
+      "escopo": "Mordentes de alúmen e ferro, cubas de tingimento a quente, fixação de cor, lavagem em água corrente e secagem."
+    },
+    {
+      "id": 104,
+      "titulo": "Feltragem, Pisões Hidráulicos, Capas Impermeáveis e Tapetes",
+      "escopo": "Lã prensada com água quente e sabão, martelos de pisão, feltros densos para tendas, botas e mantos de neve."
+    },
+    {
+      "id": 105,
+      "titulo": "Alfaiataria Imperial: Mantos, Túnicas, Pelotes e Capuzes",
+      "escopo": "Moldes, corte em viés, costuras invisíveis, forros de arminho e marta, golas altas, mangas e caimento."
+    },
+    {
+      "id": 106,
+      "titulo": "Bordado de Ouro, Prata, Seda e Pérolas (Arte Plumária e Têxtil)",
+      "escopo": "Bastidores, pontos de matiz, fios metálicos, aplicação de gemas, estandartes reais e paramentos litúrgicos."
+    },
+    {
+      "id": 107,
+      "titulo": "Tapeçaria Historiada, Arraiolos, Cortinados e Dosséis",
+      "escopo": "Cartões de pintores, tecelagem de cenas épicas para aquecer muralhas de pedra, franjas e cordões."
+    },
+    {
+      "id": 108,
+      "titulo": "Curtume Vegetal e Mineral: Pelica, Camurça, Pergaminho e Sola",
+      "escopo": "Tanino de casca de carvalho, banho de cal, descarne, engraxe com óleos, cilindragem e tingimento de couro."
+    },
+    {
+      "id": 109,
+      "titulo": "Sapataria, Botas de Marcha na Neve,Polainas e Raquetes",
+      "escopo": "Formas de madeira, solas cravejadas, costura encerada, botas altas impermeáveis e raquetes de freixo e couro."
+    },
+    {
+      "id": 110,
+      "titulo": "Selaria, Arreios, Estribos, Brigas, Alforjes eBainhas",
+      "escopo": "Selas de guerra e viagem, cabeçadas lavradas, peitorais, alforjes de couro cru e coldres."
+    },
+    {
+      "id": 111,
+      "titulo": "Peleteria de Inverno: Casacos, Gorros, Luvas e Mantas",
+      "escopo": "Costura de peles de raposa, lobo, castor e ovelha, conservação do pelo, luvas forradas e cobertores."
+    },
+    {
+      "id": 112,
+      "titulo": "Cestaria, Trançado de Vime, Junco, Palha e Esteiras",
+      "escopo": "Cestos de vindima e carga, berços de vime, chapéus, esteiras de piso, balaios e armadilhas de pesca."
+    },
+    {
+      "id": 113,
+      "titulo": "Passamanaria, Rendas de Bilros, Galões, Fitas e Borlas",
+      "escopo": "Almofadas de bilros, agulhas de rede, cordões de sinete, cintos trançados, fechos e alamares."
+    },
+    {
+      "id": 114,
+      "titulo": "Perfumaria, Águas de Cheiro, Incensos, Saboaria e Óleos",
+      "escopo": "Extração por enfleurage, água de rosas e lavanda, resinas de olíbano e pinho, sabões finos e unguentos."
+    },
+    {
+      "id": 115,
+      "titulo": "Iluminação Doméstica e Urbana: Candeias, Tochas, Velas e Lustres",
+      "escopo": "Candeias de azeite, velas de cera de abelha, arandelas de ferro, lustres de roda, lanternas de chifre e vidro."
+    },
+    {
+      "id": 116,
+      "titulo": "Mobiliário Doméstico: Camas de Dossel, Arcas, Mesas e Bancos",
+      "escopo": "Colchões de lã e plumas, travesseiros, baús ferrados, mesas de cavalete, cadeiras de braços e estantes."
+    },
+    {
+      "id": 117,
+      "titulo": "Utensílios de Mesa e Cozinha: Baixelas, Cálices, Talheres e Caldeirões",
+      "escopo": "Taças de prata e estanho, pratos de cerâmica, colheres de chifre e madeira, facas de mesa e saleiros."
+    },
+    {
+      "id": 118,
+      "titulo": "Organização da Casa, Chaves, Despensas, Adegas e Sótãos",
+      "escopo": "Economia doméstica, conservação de roupas com lavanda e cedro, controle de estoque de lenha e víveres."
+    },
+    {
+      "id": 119,
+      "titulo": "Jogos de Salão, Xadrez Imperial, Dados, Enigmas e Passatempos",
+      "escopo": "Tabuleiros marchetados, peças esculpidas em marfim e ébano, estratégias, charadas poéticas e convívio."
+    },
+    {
+      "id": 120,
+      "titulo": "Hospitalidade, Etiqueta de Corte, Saudações, Presentes e Banquetes",
+      "escopo": "Ritos de recepção ao viajante, lavagem de mãos, lugares à mesa por precedência, brindes e despedidas."
+    },
+    {
+      "id": 121,
+      "titulo": "Arquitetura Naval: Galés, Dracares, Cocas e Caravelas",
+      "escopo": "Cavername, sobrequilha, castelos de proa e popa, escotilhas, porões de carga, figuras de proa e calado."
+    },
+    {
+      "id": 122,
+      "titulo": "Aparelho de Velas, Mastreação, Vergas, Maçame e Manobras",
+      "escopo": "Velas latinas e redondas, adriças, escotas, estais, enxárcias, rizes, cambar e bordejar contra o vento."
+    },
+    {
+      "id": 123,
+      "titulo": "Navegação Astronômica, Cartas Náuticas, Prumo e Bússola",
+      "escopo": "Rosa dos ventos, linha de barquinha, ampulhetas de quarto, declinação magnética, faróis e balizas."
+    },
+    {
+      "id": 124,
+      "titulo": "Portos, Molhes, Diques Secos, Estaleiros e Alfândegas",
+      "escopo": "Quebra-mares de cantaria, guindastes portuários, carreiras de lançamento, armazéns reais e quarentena naval."
+    },
+    {
+      "id": 125,
+      "titulo": "Navegação Fluvial: Barcaças, Balsas, Eclusas e Caminhos de Sirga",
+      "escopo": "Reboque por parelhas nas margens, canais navegáveis, pontes levadiças, travessia de corredeiras e pedágios."
+    },
+    {
+      "id": 126,
+      "titulo": "Transporte de Inverno: Trenós, Esquis, Parelhas de Cães e Renas",
+      "escopo": "Patins de madeira ferrada, trenós de carga e correio, esquis de bétula, arreios de neve e abrigos de montanha."
+    },
+    {
+      "id": 127,
+      "titulo": "Carruagens, Carroças de Quatro Rodas, Eixos, Raios e Suspensão",
+      "escopo": "Rodas com aros de ferro a quente, cubos engraxados, lanças de atrelagem, freios de alavanca e liteiras."
+    },
+    {
+      "id": 128,
+      "titulo": "Pontes, Vaus, Barcas de Passagem, Pontões e Túneis",
+      "escopo": "Pontes pênseis de corda, pontes de barcas, galerias escavadas na rocha viva, guarda-corpos e marcos."
+    },
+    {
+      "id": 129,
+      "titulo": "Estalagens, Albergues de Montanha, Mudas de Cavalos e Postas",
+      "escopo": "Pátios de carruagens, cavalariças de troca rápida, salões aquecidos, quartos de viajantes e segurança de estrada."
+    },
+    {
+      "id": 130,
+      "titulo": "Correio Imperial, Mensageiros a Cavalo, Pombos e Torres de Sinal",
+      "escopo": "Estafetas reais, bolsas seladas, código de fachos luminosos e fumaça entre picos, tambores e trompas."
+    },
+    {
+      "id": 131,
+      "titulo": "Caravanas Mercantes, Rotas da Seda, do Âmbar, do Sal e das Peles",
+      "escopo": "Comboios escoltados, pousos fortificados, guias de montanha, fardos impermeáveis e feiras anuais."
+    },
+    {
+      "id": 132,
+      "titulo": "Pesos e Medidas Oficiais: Côvados, Braças, Talentos, Minas e Ânforas",
+      "escopo": "Padrões de bronze guardados na Chancelaria, balanças de braços iguais, medidas de grãos e líquidos."
+    },
+    {
+      "id": 133,
+      "titulo": "Numismática, Cunhagem de Ouro e Prata, Ensaio de Metais e Câmbio",
+      "escopo": "Cunhos gravados, discos monetários, toque na pedra de lídia, cambistas, cartas de crédito e letras."
+    },
+    {
+      "id": 134,
+      "titulo": "Contabilidade, Livros de Razão, Ábacos, Quitações e Arquivos",
+      "escopo": "Tábuas de cálculo, registro de entradas e saídas, recibos selados, inventários de bens e auditoria real."
+    },
+    {
+      "id": 135,
+      "titulo": "Sociedades Mercantis, Guildas de Ofícios, Corporações e Aprendizes",
+      "escopo": "Mestres artesãos, companheiros, obras-primas de exame, estatutos de guilda, insígnias e auxílio mútuo."
+    },
+    {
+      "id": 136,
+      "titulo": "Feiras Francas, Mercados Cobertos, Leilões, Preços e Regulação",
+      "escopo": "Bancas de mercadores, pregões, fiscais de qualidade e peso, tabelamento em tempos de escassez e câmbio."
+    },
+    {
+      "id": 137,
+      "titulo": "Direito Marítimo e Comercial: Fretes, Seguros, Avarias e Salvados",
+      "escopo": "Contratos de fretamento, divisão de risco em tempestades, alijamento de carga e direito de naufrágio."
+    },
+    {
+      "id": 138,
+      "titulo": "Armazenagem: Silos Subterrâneos, Celeiros Elevados e Gelo Estival",
+      "escopo": "Poços de neve compactada com palha para conservar alimentos no verão, celeiros ventilados e adegas."
+    },
+    {
+      "id": 139,
+      "titulo": "Cartografia Terrestre, Agrimensura, Groma, Cordas e Marcos de Divisa",
+      "escopo": "Medição de terras, triangulação visual, plantas cadastrais, limites de municípios e desenhos topográficos."
+    },
+    {
+      "id": 140,
+      "titulo": "Exploração de Terras Incógnitas, Expedições, Diários de Bordo e Relatos",
+      "escopo": "Preparação de expedições, contato com povos distantes, coleta de espécimes, mapas de rota e crônicas."
+    },
+    {
+      "id": 141,
+      "titulo": "Arquitetura Militar: Muralhas Duplas, Barbacãs, Torres e Fossos",
+      "escopo": "Ameias, seteiras, matacães, pontes levadiças, rastrilhos de ferro, poternas secretas e cidadelas."
+    },
+    {
+      "id": 142,
+      "titulo": "Poliorcética (Arte do Cerco): Aríetes, Trabucos, Balistas e Minas",
+      "escopo": "Contra-baterias, galerias de solapamento, manteletes de proteção, escadas de assalto, fogo grego e defesa."
+    },
+    {
+      "id": 143,
+      "titulo": "Infantaria Pesada e Leve: Falanges, Parede de Escudos e Piqueiros",
+      "escopo": "Formações cerradas, carga de lanças, combate aproximado, escudeiros, revezamento de linhas e disciplina."
+    },
+    {
+      "id": 144,
+      "titulo": "Arquearia e Besteiros: Arcos Longos, Compostos, Aljavas e Virotes",
+      "escopo": "Arcos de teixo e chifre, cordas de linho encerado, flechas emplumadas, bestas de polia, mira e cadência."
+    },
+    {
+      "id": 145,
+      "titulo": "Cavalaria de Choque e Ligeira: Lanceiros, Couraceiros e Batedores",
+      "escopo": "Carga em cunha, lanças em riste, ginetes de flanco, reconhecimento de terreno e perseguição."
+    },
+    {
+      "id": 146,
+      "titulo": "Esgrima Histórica, Combate Singular, Guardas, Estocadas e Paradas",
+      "escopo": "Posturas de combate, fintas, contra-ataques, desarme, honra de duelo, mestres de armas e treino."
+    },
+    {
+      "id": 147,
+      "titulo": "Logística de Exército: Comboios, Forrageamento, Acampamentos e Pontes",
+      "escopo": "Tendas de comando, cozinhas de campanha, ferradores móveis, hospitais de sangue e linhas de suprimento."
+    },
+    {
+      "id": 148,
+      "titulo": "Sinais de Comando: Estandartes, Flâmulas, Clarins, Tambores e Senhas",
+      "escopo": "Toques de alvorada, carga, reagrupamento e retirada, senhas noturnas de sentinela e insígnias de legião."
+    },
+    {
+      "id": 149,
+      "titulo": "Marinha de Guerra: Abordagem, Esporões, Brulotes eBatalhas Navais",
+      "escopo": "Manobras de flanqueamento no mar, arpéus de abordagem, arqueiros de gávea, defesa costeira e bloqueio."
+    },
+    {
+      "id": 150,
+      "titulo": "Diplomacia de Guerra: Arautos, Tréguas, Reféns, Resgates e Tratados",
+      "escopo": "Imunidade de parlamentares, bandeiras de parlamento, troca de prisioneiros, indenizações e paz jurada."
+    },
+    {
+      "id": 151,
+      "titulo": "Soberania Imperial: Coroação, Cetro, Orbe, Trono e Conselho de Estado",
+      "escopo": "Insígnias imperiais, juramento de fidelidade, ministros, chanceleres, audiências solenes e sucessão."
+    },
+    {
+      "id": 152,
+      "titulo": "Administração Provincial: Governadores, Fronteiras, Censos e Tributos",
+      "escopo": "Divisão territorial, recenseamento de fogos, coleta equitativa, manutenção de estradas e ordem pública."
+    },
+    {
+      "id": 153,
+      "titulo": "Processo Judicial: Petições, Citações, Provas, Testemunhas e Sentenças",
+      "escopo": "Juízes togados, contraditório, documentos autênticos, perícias, deliberação do tribunal e recursos."
+    },
+    {
+      "id": 154,
+      "titulo": "Direito Civil: Propriedade, Posse, Servidões, Contratos e Obrigações",
+      "escopo": "Compra e venda, locação, empréstimo, depósito, fiança, penhor, hipoteca, usucapião e vizinhança."
+    },
+    {
+      "id": 155,
+      "titulo": "Direito de Família e Sucessões: Testamentos, Legados, Tutela e Curatela",
+      "escopo": "Partilha de herança, proteção de órfãos e viúvas, codicilos, administração de patrimônio familiar."
+    },
+    {
+      "id": 156,
+      "titulo": "Direito Penal e Equidade: Delitos, Penas, Circunstâncias, Indulto e Asilo",
+      "escopo": "Proporcionalidade da pena, reparação do dano, exílio, perdão imperial, santuários de asilo e reabilitação."
+    },
+    {
+      "id": 157,
+      "titulo": "Chancelaria e Diplomática: Bulas, Cartas-Patentes, Selos de Cera e Chumbo",
+      "escopo": "Fórmulas de abertura e fecho, validação de documentos, arquivos imperiais, criptografia e copistas."
+    },
+    {
+      "id": 158,
+      "titulo": "Heráldica Imperial: Brasões, Esmaltes, Metais, Timbres e Divisas",
+      "escopo": "Escudos esquartelados, leões, águias, estrelas, árvores, lemas em Tréppio Clássico e livros de armaria."
+    },
+    {
+      "id": 159,
+      "titulo": "Ordem Pública, Guarda Urbana, Vigias Noturnos e Combate a Incêndios",
+      "escopo": "Rondas de lanterna, toque de recolher, bombas manuais de água, baldes de couro, ganchos e prevenção."
+    },
+    {
+      "id": 160,
+      "titulo": "Cidadania, Direitos Municipais, Assembleias, Magistrados Locais e Obras",
+      "escopo": "Forais de cidade livre, conselhos de cidadãos, eleição de alcaides, manutenção de fontes e muralhas."
+    },
+    {
+      "id": 161,
+      "titulo": "Metafísica e Ontologia: Ser, Essência, Substância, Causa e Fim",
+      "escopo": "Primeiros princípios, ato e potência, necessidade e contingência, unidade, verdade, bondade e beleza."
+    },
+    {
+      "id": 162,
+      "titulo": "Lógica Formal, Dialética, Silogismos, Definições e Argumentação",
+      "escopo": "Premissas, termos, dedução, indução, refutação de sofismas, categorias do pensamento e demonstração."
+    },
+    {
+      "id": 163,
+      "titulo": "Epistemologia: Conhecimento, Percepção, Razão, Intuição e Ciência",
+      "escopo": "Graus de certeza, evidência, memória intelectiva, abstração, método investigativo e sabedoria."
+    },
+    {
+      "id": 164,
+      "titulo": "Filosofia da Natureza: Tempo, Espaço, Movimento, Elementos e Cosmos",
+      "escopo": "Ciclos naturais, harmonia das esferas, transformação da matéria, leis físicas e ordem universal."
+    },
+    {
+      "id": 165,
+      "titulo": "Retórica e Oratória: Exórdio, Narração, Provas, Peroração e Eloquência",
+      "escopo": "Gêneros deliberativo, judicial e epidítico, figuras de linguagem, cadência da frase, voz e gesto."
+    },
+    {
+      "id": 166,
+      "titulo": "Gramática, Filologia, Etimologia, Fonologia e Crítica Textual",
+      "escopo": "Sandi consonantal, haplologia, raízes, declinações, matriz verbal, colação de manuscritos e glosas."
+    },
+    {
+      "id": 167,
+      "titulo": "Poética, Métrica, Ritmo, Aliteração, Assonância e Gêneros Literários",
+      "escopo": "Epopéias, hinos sagrados, elegias, odes, baladas, pés métricos, cesuras, estrofes e rima toante."
+    },
+    {
+      "id": 168,
+      "titulo": "Historiografia, Anais, Crônicas, Genealogias e Método Histórico",
+      "escopo": "Fontes primárias, crítica de testemunhos, sucessão de eras, memória dos reis e lições da história."
+    },
+    {
+      "id": 169,
+      "titulo": "Pedagogia, Escolas, Academias, Trivium, Quadrivium e Disputatio",
+      "escopo": "Relação mestre-discípulo, leitura comentada, exercícios de estilo, matemática, música, astronomia e graus."
+    },
+    {
+      "id": 170,
+      "titulo": "Biblioteconomia, Scriptoria, Catálogos, Conservação e Encadernação",
+      "escopo": "Estantes de códices, correntes de segurança, capas de couro lavrado com fechos de bronze e restauração."
+    },
+    {
+      "id": 171,
+      "titulo": "Caligrafia e Paleografia: Escritas Uncial, Chanceleresca e Glífica",
+      "escopo": "Ductus da pena, proporção das letras, capitulares historiadas, abreviaturas, rúbricas em vermelhão e ouro."
+    },
+    {
+      "id": 172,
+      "titulo": "Iluminura e Pintura de Cavalete: Folha de Ouro, Têmpera e Afresco",
+      "escopo": "Brunimento de ouro sobre bolo armênio, têmpera de ovo, preparação de gesso, perspectiva e retrato."
+    },
+    {
+      "id": 173,
+      "titulo": "Escultura em Mármore, Pedra, Madeira Policromada e Marfim",
+      "escopo": "Desbaste com ponteiro, escopro, gradina, polimento com areia fina, panejamento, relevo e proporção áurea."
+    },
+    {
+      "id": 174,
+      "titulo": "Teoria Musical: Modos, Contraponto, Harmonia, Consonância e Notação",
+      "escopo": "Tetracordes, intervalos justos, quintas e oitavas, neumas, pautas musicais, cânones e coros a quatro vozes."
+    },
+    {
+      "id": 175,
+      "titulo": "Instrumentos de Corda: Harpas, Alaúdes, Violas, Saltérios eLiras",
+      "escopo": "Tampas harmônicas de abeto, cordas de tripa e prata, cravelhas, cavaletes, arcos de crina e dedilhado."
+    },
+    {
+      "id": 176,
+      "titulo": "Instrumentos de Sopro e Percussão: Órgãos, Flautas, Trompas e Tímpanos",
+      "escopo": "Tubos de estanho e madeira, foles de órgão, palhetas, trombetas de prata, tambores de pele e carrilhões."
+    },
+    {
+      "id": 177,
+      "titulo": "Arte Dramática, Teatro, Tragédia, Comédia, Coro e Cenografia",
+      "escopo": "Anfiteatros, acústica, máscaras expressivas, diálogo dramático, catarse, figurinos e representação."
+    },
+    {
+      "id": 178,
+      "titulo": "Dança de Corte e Tradicional: Coreografia, Compasso, Roda e Solenidade",
+      "escopo": "Passos medidos, reverências, danças de roda nas festas de colheita, danças de espadas e cortejos."
+    },
+    {
+      "id": 179,
+      "titulo": "Aritmética, Álgebra, Proporções, Frações e Teoria dos Números",
+      "escopo": "Operações fundamentais, números primos, razões harmônicas, progressões, raízes e cálculo prático."
+    },
+    {
+      "id": 180,
+      "titulo": "Geometria Plana e Espacial, Trigonometria, Compasso e Simetria",
+      "escopo": "Polígonos regulares, sólidos platônicos, seção áurea, medição de alturas por sombras e abóbadas."
+    },
+    {
+      "id": 181,
+      "titulo": "Afetos Luminosos: Amor, Amizade, Gratidão, Compaixão e Júbilo",
+      "escopo": "Benevolência, ternura familiar, concórdia fraterna, entusiasmo criador, paz interior e admiração."
+    },
+    {
+      "id": 182,
+      "titulo": "Afetos Sombrios e Luta Interior: Ira, Medo, Inveja, Orgulho e Remorso",
+      "escopo": "Arrependimento sincero, superação do temor, domínio da paixão, humildade verdadeira e perdão."
+    },
+    {
+      "id": 183,
+      "titulo": "Vontade, Liberdade, Escolha, Deliberação, Firmeza e Perseverança",
+      "escopo": "Propósito inabalável, coragem moral, paciência nas adversidades, autodomínio e cumprimento do dever."
+    },
+    {
+      "id": 184,
+      "titulo": "Imaginação, Criatividade, Inspiração Poética, Visão e Genialidade",
+      "escopo": "Fantasia construtiva, síntese de imagens, iluminação súbita do artista, beleza ideal e obra-prima."
+    },
+    {
+      "id": 185,
+      "titulo": "Onirologia: Sonhos Proféticos, Pesadelos, Símbolos e Interpretação",
+      "escopo": "Vigilância da alma durante o sono, mensagens veladas, paz noturna e discernimento de visões."
+    },
+    {
+      "id": 186,
+      "titulo": "Teologia Tréppia: Oratypatte (O Pai do Todo), Gyos e os Atributos Divinos",
+      "escopo": "Onipotência, eternidade, providência, bondade infinita, criação pelo Verbo Musical e transcendência."
+    },
+    {
+      "id": 187,
+      "titulo": "Angelologia de Ecos: Os Halo (Ainur), Ferytrátte, Vétrátte e Tektrátte",
+      "escopo": "Espíritos do pensamento, potências regentes dos ventos, das águas e da forja da terra, e harmonia."
+    },
+    {
+      "id": 188,
+      "titulo": "Cosmogonia Musical: O Halylitror, Os Três Grandes Temas e a Visão",
+      "escopo": "Prelúdio nos Salões Atemporais, dissonância de Kurlan, vitória do Terceiro Tema e o decreto Esu!"
+    },
+    {
+      "id": 189,
+      "titulo": "Antropologia Sacra: Ittakazeti (Primeiros Nascidos) e Dotakazeti (Homens)",
+      "escopo": "Dons dos filhos de Ilúvatar, imortalidade e mortalidade, destino além dos círculos do mundo e aliança."
+    },
+    {
+      "id": 190,
+      "titulo": "Liturgia Imperial: Oração, Hinos, Bênçãos, Procissões e Ano Litúrgico",
+      "escopo": "Ofício das horas, incensação, cânticos antifonais, festas das estações, vigílias de luz e consagração."
+    },
+    {
+      "id": 191,
+      "titulo": "Arquitetura e Espaço do Templo: Altar, Nave, Coro, Batistério e Sacristia",
+      "escopo": "Orientação solar do santuário, lâmpada perpétua, vasos sagrados, véus, relíquias e silêncio reverente."
+    },
+    {
+      "id": 192,
+      "titulo": "Vida Monástica e Eremítica: Votos, Regra, Contemplação, Trabalho e Estudo",
+      "escopo": "Mosteiros de montanha, claustros, leitura espiritual, cópia de manuscritos, hospitalidade e oração contínua."
+    },
+    {
+      "id": 193,
+      "titulo": "Sacramentos, Juramentos Sagrados, Alianças, Votos e Expiar de Faltas",
+      "escopo": "Confissão de culpa, penitência medicinal, reconciliação, unção dos enfermos e fidelidade até a morte."
+    },
+    {
+      "id": 194,
+      "titulo": "Ritos Funerários, Mausoléus, Epitáfios, Sufrágios e Memória dos Mortos",
+      "escopo": "Velório com cânticos de esperança, sepultamento em rocha, estelas gravadas e comunhão dos ancestrais."
+    },
+    {
+      "id": 195,
+      "titulo": "Tradição Oral das Casas Nobres: Korikeste, Linhagens e Crônicas de Clã",
+      "escopo": "Genealogias recitadas, relíquias de família, espadas ancestrais, dever de honra e hospitalidade da Casa."
+    },
+    {
+      "id": 196,
+      "titulo": "Topografia Sagrada de Ecos: Treppênia, Koryvela, Rixelaka e Ferykrope",
+      "escopo": "Geografia mítica e histórica do Império, picos gélidos, florestas ancestrais, campinas dos ventos e cidades."
+    },
+    {
+      "id": 197,
+      "titulo": "Sociolinguística Tréppia: Norma Culta da Chancelaria vs. Dialetos Plebeus",
+      "escopo": "Pureza da Era Clássica V8.1, Síncrese de Celia, estigmatização de variantes vulgares e preservação da língua."
+    },
+    {
+      "id": 198,
+      "titulo": "Simbolismo dos Números, das Pedras, das Árvores e dos Astros em Ecos",
+      "escopo": "Significado místico do sete e do doze, virtudes das gemas, emblemas reais e correspondências cósmicas."
+    },
+    {
+      "id": 199,
+      "titulo": "Profecias, Esperança Escatológica, A Última Batalha e a Segunda Música",
+      "escopo": "Cura final das feridas de Arda/Oratoxe, derrota definitiva de Kurlan e sinfonia plena dos filhos de Deus."
+    },
+    {
+      "id": 200,
+      "titulo": "Síntese Filológica Suprema: O Códice Perpétuo e a Arte da Glotopoiese",
+      "escopo": "Perfeição morfofonológica, eufonia das 21 leis, plenitude lexical e imortalidade da língua Tréppia."
+    }
+  ],
+  "intervalo_cron": "*/30 * * * *",
+  "total_temas_planejados": 200
+}

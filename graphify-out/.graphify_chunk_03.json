@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "id": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "label": "Interface Unificada de 5 Hubs (Dicionário, Verbos, Diálogos, Gramática, Lab)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ui_dicionario_mobile_bottom_nav_bar",
+      "label": "Barra de Navegação Móvel Ergonômica (Mobile Bottom Nav)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1350-L1400",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ui_dicionario_chips_de_acesso_rapido",
+      "label": "Barra de Acesso Rápido com Chips de 1 Toque",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1200-L1250",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "label": "Léxico Integral do Tréppio (56.342 Formas Expandidas)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_geral_treppio_sandbox.md",
+      "source_location": "L1-L1748",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "label": "Códice Verbal Exaustivo (408 Verbos nos 4 Eixos Paradigmáticos)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_exaustivo\\verbos_matriz_quadripartite_completa.md",
+      "source_location": "L1-L6733",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "software_launcher_desktop_windows_cs_webview",
+      "label": "Launcher Desktop Nativo Windows (Codice_Treppio_Conde.exe)",
+      "file_type": "code",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1-L50",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "software_apk_android_distribuicao_offline",
+      "label": "Aplicativo Nativo Android APK (Codice_Treppio_Conde.apk)",
+      "file_type": "code",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\assets\\index.html",
+      "source_location": "L1-L50",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "target": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "target": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_mobile_bottom_nav_bar",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1350-L1400",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_chips_de_acesso_rapido",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1200-L1250",
+      "weight": 1.0
+    },
+    {
+      "source": "software_launcher_desktop_windows_cs_webview",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1-L50",
+      "weight": 1.0
+    },
+    {
+      "source": "software_apk_android_distribuicao_offline",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\assets\\index.html",
+      "source_location": "L1-L50",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_geral_treppio_sandbox.md",
+      "source_location": "L1-L1748",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "target": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_exaustivo\\verbos_matriz_quadripartite_completa.md",
+      "source_location": "L1-L6733",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "plataforma_tripla_codice_treppio",
+      "label": "Plataforma Tripla do Códice Tréppio (Web, Windows .exe, Android APK)",
+      "nodes": [
+        "sandbox_ui_dicionario_interface_cinco_hubs",
+        "software_launcher_desktop_windows_cs_webview",
+        "software_apk_android_distribuicao_offline"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html"
+    }
+  ],
+  "input_tokens": 18000,
+  "output_tokens": 4200,
+  "coverage": {
+    "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html": 3577,
+    "D:\\Conde_Treppio\\docs\\index.html": 3577,
+    "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\assets\\index.html": 4707,
+    "D:\\Conde_Treppio\\sandbox\\dicionario_geral_treppio_sandbox.md": 1748,
+    "D:\\Conde_Treppio\\sandbox\\dicionario_exaustivo\\verbos_matriz_quadripartite_completa.md": 6733
+  }
+}

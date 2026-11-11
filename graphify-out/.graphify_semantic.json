@@ -1,0 +1,650 @@
+{
+  "nodes": [
+    {
+      "id": "skill_conde_assistente_filologico",
+      "label": "Conde (Assistente Filológico e Glotopoético)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L1-L26",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "label": "Ontologia Sintético-Aglutinante do Tréppio",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L3-L16",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sincrese_de_treppenia",
+      "label": "Síncrese de Treppênia (ou Síncrese de Celia)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L18-L30",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_clivagem_sociolinguistica",
+      "label": "Clivagem Sociolinguística (Registro Culto K/S vs Registro Popular C/Ç)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L32-L45",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_fonologia_grafema_x",
+      "label": "Estatuto Fonético do Grafema X (/x/ gutural)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L46-L60",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "label": "As 21 Leis de Sandi do Tréppio V8.1",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L40-L120",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_mutacao_kt_dt_para_tt",
+      "label": "Leis de Assimilação Regressiva Oclusiva (kt/dt -> tt)",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L85-L105",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_mutacao_liquidas_rn_ln",
+      "label": "Leis de Transmutação de Líquidas e Nasais (rn -> ld, ln -> ll)",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L106-L125",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "label": "Sistema Nominal de Cinco Declinações",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L70-L115",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_casual_quatro_casos",
+      "label": "Sistema Casual Tréppio (Nominativo, Acusativo, Genitivo, Dativo)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L72-L95",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "gramatica_normativa_base_sistema_numerico_tripartite",
+      "label": "Sistema Numérico Tripartite (Singular, Plural, Paucal)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L96-L110",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "treppio_base_proibicao_de_hifens",
+      "label": "Princípio da Aglutinação Pura sem Hífens",
+      "file_type": "rationale",
+      "source_file": "D:\\Conde_Treppio\\treppio_base.md",
+      "source_location": "L8-L15",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "label": "Matriz Verbal Quadripartite (Básico, Causativo, Frequentativo, Estativo)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L150-L210",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "caderno_treppio_notebook_notas_filologicas_de_campo",
+      "label": "Caderno de Notas Filológicas e Diacronia Viva",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\caderno_treppio_notebook.md",
+      "source_location": "L1-L25",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "readme_ecossistema_unificado_codice_treppio",
+      "label": "Ecossistema Unificado do Códice Tréppio",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\README.md",
+      "source_location": "L1-L33",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dialogos_praticos_saudacoes_e_etiqueta",
+      "label": "Diálogos de Saudação e Etiqueta Social (V8.1)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L5-L35",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dialogos_praticos_mercado_e_compras",
+      "label": "Diálogo da Feira e Comércio (Pão, Farinha e Moedas)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L36-L65",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dialogos_praticos_taberna_e_hospedaria",
+      "label": "Diálogo da Taberna e Pernoite (Vinho, Fogo e Aposento)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L66-L100",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dialogos_praticos_caminhos_e_direcoes",
+      "label": "Diálogo de Estrada e Itinerário (Castelo e Cidade)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L101-L134",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ainulindale_halylitror_musica_dos_ainur",
+      "label": "Halylitror Ainuron (Ainulindalë em Tréppio Litúrgico Monumental)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ainulindale_treppio_sandbox.md",
+      "source_location": "L1-L288",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_simulacao_diacronica_evolucao_1500_anos",
+      "label": "Simulação Diacrônica de 1500 Anos (Deriva Natural e Eufonia)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\simulacao_diacronica_1500_anos.md",
+      "source_location": "L1-L97",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ecos_vida_perdida_contexto_lore",
+      "label": "Ecos de Uma Vida Perdida (Cenário Literário Canônico)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ecos_contexto_extraido.txt",
+      "source_location": "L1-L1129",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Chancelaria Imperial",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_relatorio_conde_auditoria_filologica",
+      "label": "Relatório de Auditoria Filológica e Sanidade Lexical",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\relatorio_conde_sandbox_treppio.md",
+      "source_location": "L1-L218",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "label": "Interface Unificada de 5 Hubs (Dicionário, Verbos, Diálogos, Gramática, Lab)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ui_dicionario_mobile_bottom_nav_bar",
+      "label": "Barra de Navegação Móvel Ergonômica (Mobile Bottom Nav)",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1350-L1400",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_ui_dicionario_chips_de_acesso_rapido",
+      "label": "Barra de Acesso Rápido com Chips de 1 Toque",
+      "file_type": "concept",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1200-L1250",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "label": "Léxico Integral do Tréppio (56.342 Formas Expandidas)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_geral_treppio_sandbox.md",
+      "source_location": "L1-L1748",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "label": "Códice Verbal Exaustivo (408 Verbos nos 4 Eixos Paradigmáticos)",
+      "file_type": "document",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_exaustivo\\verbos_matriz_quadripartite_completa.md",
+      "source_location": "L1-L6733",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "software_launcher_desktop_windows_cs_webview",
+      "label": "Launcher Desktop Nativo Windows (Codice_Treppio_Conde.exe)",
+      "file_type": "code",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1-L50",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    },
+    {
+      "id": "software_apk_android_distribuicao_offline",
+      "label": "Aplicativo Nativo Android APK (Codice_Treppio_Conde.apk)",
+      "file_type": "code",
+      "source_file": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\assets\\index.html",
+      "source_location": "L1-L50",
+      "source_url": null,
+      "captured_at": null,
+      "author": "Conde",
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "skill_conde_assistente_filologico",
+      "target": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L6-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "skill_conde_assistente_filologico",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md",
+      "source_location": "L11-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "gramatica_normativa_base_sincrese_de_treppenia",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L18-L30",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sincrese_de_treppenia",
+      "target": "gramatica_normativa_base_clivagem_sociolinguistica",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L32-L45",
+      "weight": 1.0
+    },
+    {
+      "source": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "target": "adendo_edicao_unificada_v8_1_mutacao_kt_dt_para_tt",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L85-L105",
+      "weight": 1.0
+    },
+    {
+      "source": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "target": "adendo_edicao_unificada_v8_1_mutacao_liquidas_rn_ln",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L106-L125",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L70-L115",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "target": "gramatica_normativa_base_sistema_casual_quatro_casos",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L72-L95",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "target": "gramatica_normativa_base_sistema_numerico_tripartite",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\gramatica_normativa_base.md",
+      "source_location": "L96-L110",
+      "weight": 1.0
+    },
+    {
+      "source": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "target": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\adendo_edicao_unificada_v8_1.md",
+      "source_location": "L150-L210",
+      "weight": 1.0
+    },
+    {
+      "source": "treppio_base_proibicao_de_hifens",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\treppio_base.md",
+      "source_location": "L8-L15",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_ecossistema_unificado_codice_treppio",
+      "target": "skill_conde_assistente_filologico",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\README.md",
+      "source_location": "L1-L33",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dialogos_praticos_saudacoes_e_etiqueta",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L5-L35",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dialogos_praticos_mercado_e_compras",
+      "target": "gramatica_normativa_base_sistema_de_cinco_declinacoes",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L36-L65",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dialogos_praticos_taberna_e_hospedaria",
+      "target": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md",
+      "source_location": "L66-L100",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ainulindale_halylitror_musica_dos_ainur",
+      "target": "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ainulindale_treppio_sandbox.md",
+      "source_location": "L1-L288",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ainulindale_halylitror_musica_dos_ainur",
+      "target": "sandbox_ecos_vida_perdida_contexto_lore",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ainulindale_treppio_sandbox.md",
+      "source_location": "L1-L288",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_simulacao_diacronica_evolucao_1500_anos",
+      "target": "gramatica_normativa_base_sincrese_de_treppenia",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\simulacao_diacronica_1500_anos.md",
+      "source_location": "L1-L97",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_relatorio_conde_auditoria_filologica",
+      "target": "skill_conde_assistente_filologico",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\relatorio_conde_sandbox_treppio.md",
+      "source_location": "L1-L218",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "target": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "target": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1100-L1350",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_mobile_bottom_nav_bar",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1350-L1400",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_ui_dicionario_chips_de_acesso_rapido",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1200-L1250",
+      "weight": 1.0
+    },
+    {
+      "source": "software_launcher_desktop_windows_cs_webview",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html",
+      "source_location": "L1-L50",
+      "weight": 1.0
+    },
+    {
+      "source": "software_apk_android_distribuicao_offline",
+      "target": "sandbox_ui_dicionario_interface_cinco_hubs",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\assets\\index.html",
+      "source_location": "L1-L50",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dicionario_geral_lexico_integral_56342_formas",
+      "target": "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_geral_treppio_sandbox.md",
+      "source_location": "L1-L1748",
+      "weight": 1.0
+    },
+    {
+      "source": "sandbox_dicionario_exaustivo_quadro_quadripartite_408_verbos",
+      "target": "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dicionario_exaustivo\\verbos_matriz_quadripartite_completa.md",
+      "source_location": "L1-L6733",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "nucleo_filologico_chancelaria",
+      "label": "Núcleo Filológico da Chancelaria de Treppênia",
+      "nodes": [
+        "skill_conde_assistente_filologico",
+        "gramatica_normativa_base_ontologia_sintetico_aglutinante",
+        "adendo_edicao_unificada_v8_1_as_21_leis_de_sandi",
+        "adendo_edicao_unificada_v8_1_matriz_verbal_quadripartite"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\SKILL.md"
+    },
+    {
+      "id": "corpus_textual_vivo_treppio",
+      "label": "Corpus Textual e Literário Vivo do Tréppio",
+      "nodes": [
+        "sandbox_dialogos_praticos_saudacoes_e_etiqueta",
+        "sandbox_ainulindale_halylitror_musica_dos_ainur",
+        "sandbox_ecos_vida_perdida_contexto_lore"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\dialogos_praticos_dia_a_dia_treppio.md"
+    },
+    {
+      "id": "plataforma_tripla_codice_treppio",
+      "label": "Plataforma Tripla do Códice Tréppio (Web, Windows .exe, Android APK)",
+      "nodes": [
+        "sandbox_ui_dicionario_interface_cinco_hubs",
+        "software_launcher_desktop_windows_cs_webview",
+        "software_apk_android_distribuicao_offline"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\Conde_Treppio\\sandbox\\ui_dicionario\\index.html"
+    }
+  ],
+  "input_tokens": 45500,
+  "output_tokens": 11200
+}
