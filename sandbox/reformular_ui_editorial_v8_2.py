@@ -1055,3 +1055,4 @@ def upgrade_index_html():
 
 if __name__ == "__main__":
     upgrade_index_html()
+

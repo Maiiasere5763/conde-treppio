@@ -23,3 +23,4 @@ for idx, code in enumerate(scripts, 1):
         raise SystemExit(1)
     else:
         print(f"[OK] Bloco <script> #{idx} validado com 0 erros de sintaxe ({len(code):,} chars)!")
+
