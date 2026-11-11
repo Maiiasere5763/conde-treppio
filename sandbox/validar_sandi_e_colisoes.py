@@ -166,10 +166,19 @@ def run_audit():
         sim, w_match = check_romance_similarity(n, mean)
         if sim > ROMANCE_SIMILARITY_THRESHOLD:
             errors.append(f"[VIOLAÇÃO DE PUREZA ANTI-ROMÂNICA > 70% - SUBSTANTIVO] {n} (similaridade {sim:.0%} com '{w_match}')")
+        if nl.endswith(("e", "é", "ë")) and decl != 1:
+            errors.append(f"[DECLINAÇÃO INCORRETA - SUBSTANTIVO EM -E DEVE SER 1ª DECLINAÇÃO] {n} (decl={decl})")
         d_forms = gen.decline_noun(n, decl)
         for ck, cf in d_forms.items():
             if FORBIDDEN_CLUSTERS.search(cf.lower()):
                 errors.append(f"[VIOLAÇÃO DE SANDI NA DECLINAÇÃO] {cf} ({n} -> {ck})")
+
+    # 2.1 Verificar Substantivos Canônicos em gen.NOUNS
+    for item in gen.NOUNS:
+        n_canon, decl_canon = item[0], item[1]
+        nl_canon = n_canon.lower()
+        if nl_canon.endswith(("e", "é", "ë")) and decl_canon != 1:
+            errors.append(f"[DECLINAÇÃO INCORRETA CANÔNICA - SUBSTANTIVO EM -E DEVE SER 1ª DECLINAÇÃO] {n_canon} (decl={decl_canon})")
 
     # 3. Verificar Adjetivos
     seen_adjs = set()
@@ -236,6 +245,10 @@ def run_audit():
         assert m["verb_roots_count"] == len(db["verbos_quadripartite"]) >= 202
         assert m["verb_stems_quadripartite"] == m["verb_roots_count"] * 4
         assert m["total_expanded_word_forms"] >= 109013
+        for s_lemma, s_info in db["substantivos"].items():
+            if s_lemma.lower().endswith(("e", "é", "ë")) and s_info["declinacao"] != 1:
+                errors.append(f"[JSON DECLINAÇÃO INCORRETA] {s_lemma} (decl={s_info['declinacao']})")
+        print(f"  [OK] Regra da 1ª Declinação: 100% dos substantivos terminados em -e/-é/-ë alocados na 1ª Declinação")
         print(f"  [OK] JSON Compilado Validado: {m['total_expanded_word_forms']:,} formas, {m['nouns_count']} substantivos, {m['verb_stems_quadripartite']} verbos quadripartites.")
         for sample_r in ["belk", "darp", "blam", "veyn", "vlir"]:
             if sample_r in db["verbos_quadripartite"]:

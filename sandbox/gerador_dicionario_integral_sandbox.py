@@ -248,10 +248,10 @@ def join_morphemes(left: str, right: str) -> str:
 def decline_noun(lemma: str, decl: int) -> dict[str, str]:
     """Declina um substantivo nos 8 casos/números canônicos e gera suas derivações sufixais."""
     if decl == 1:
-        # 1ª Declinação: Temas em -e (ou -a/-i)
-        if lemma.endswith("e") or lemma.endswith("a"):
+        # 1ª Declinação: Temas em -e (ou -a/-i) e variantes tônicas (-é/-ë)
+        if lemma.endswith("e") or lemma.endswith("a") or lemma.endswith("é") or lemma.endswith("ë"):
             stem = lemma[:-1]
-            v = lemma[-1]
+            v = "e" if lemma[-1] in ("e", "é", "ë") else lemma[-1]
         else:
             stem = lemma
             v = "e"
@@ -322,7 +322,7 @@ def decline_noun(lemma: str, decl: int) -> dict[str, str]:
         base_stem = stem
 
     # Transformações Derivacionais Potenciais do Radical Nominal
-    clean_root = "ve" if base_stem == "Vé" else base_stem.replace("vé", "ve")
+    clean_root = "v" if lemma.lower() in ("vé", "ve") else base_stem.replace("vé", "v").lower()
     if lemma in ("fea", "le"):
         clean_root = lemma
     elif clean_root.endswith("e") or clean_root.endswith("a"):
@@ -494,7 +494,7 @@ NOUNS = [
     # --- Alimento, Bebida e a Mesa da Estalagem ---
     ("dakkor", 2, "alimento diário, refeição farta, sustento", "raiz dak- (consumir/alimentar) + -or"),
     ("oxedak", 2, "pão de centeio rústico, broa de pedra, cereal cozido", "oxe- (terra/cereal) + dak- (alimento)"),
-    ("ruxvé", 2, "caldo quente, sopa nutritiva de raízes e legumes", "rux- (cozer) + Vé (água)"),
+    ("ruxvé", 1, "caldo quente, sopa nutritiva de raízes e legumes", "rux- (cozer) + Vé (água)"),
     ("luttor", 2, "carne assada na brasa, provisão de caça", "raiz lut- (caça/animal silvestre) + -or"),
     ("garvlut", 2, "peixe de rio gélido, pesca das montanhas", "garv- (água viva/rio) + lut- (pesca/caça)"),
     ("keldas", 2, "queijo curado de cabra das serras", "raiz keld- (coalhar/prensar) + -as"),
@@ -569,7 +569,7 @@ NOUNS = [
     ("atonkre", 1, "eternidade, sempiternidade, fora do tempo", "a- + tonkre"),
     ("atotte", 1, "usurpador, tirano ilegítimo, rebelde", "atok- + -te (kt -> tt)"),
     ("avur", 2, "frio extremo, geada amarga, algidez", "a- + vur"),
-    ("avurvé", 2, "gelo, água congelada, cristal de geada", "avur + Vé"),
+    ("avurvé", 1, "gelo, água congelada, cristal de geada", "avur + Vé"),
     # --- Letra B ---
     ("xunkorfel", 2, "fruto dourado meridional (coloquial: Banánna)", "xun (amarelo) + kor (árvore) + fel (fruto)"),
     ("baxi", 1, "gato, felino doméstico", "raiz bax-"),
@@ -609,19 +609,19 @@ NOUNS = [
     ("feldir", 2, "outono, estação dos ventos noturnos", "fer + nir (rn -> ld)"),
     ("fer", 2, "vento, ar em movimento, sopro atmosférico", "raiz primária fer"),
     ("feria", 1, "atmosfera, regiões superiores do ar, éter", "fer + -ia"),
-    ("fervé", 2, "nuvem, névoa, vapor atmosférico", "fer + Vé (Pl. ferveo)"),
+    ("fervé", 1, "nuvem, névoa, vapor atmosférico", "fer + Vé (Pl. ferveo)"),
     ("Ferylinde", 1, "Casa do Vento (regentes de Ferykrope)", "fery + linde"),
     ("Ferytrátte", 1, "Manwë, Senhor dos Ventos (var. Fertrátte)", "fery + Trátte"),
     ("fil", 2, "cerne, abismo, princípio primordial", "raiz primária fil"),
     ("fila", 1, "tristeza ancestral proto-tréppia", "fil + -a"),
     ("filia", 1, "profundidade abissal, âmago", "fil + -ia"),
     ("filoxe", 1, "vale profundo, cavidade da terra, depressão", "fil + oxe"),
-    ("filvé", 2, "abismo marinho, profundezas das águas", "fil + Vé"),
+    ("filvé", 1, "abismo marinho, profundezas das águas", "fil + Vé"),
     ("Flibuste", 1, "Casa de Celia (senhores da navegação)", "linhagem nobre"),
     # --- Letra G ---
     ("galdia", 1, "guarnição, arsenal, tesouraria fortificada", "gald- + -ia"),
     ("galtte", 1, "custódio secular, intendente de fortaleza", "gald- + -te (dt -> tt)"),
-    ("garvé", 2, "oceano, mar aberto, grande massa de água", "gar + Vé"),
+    ("garvé", 1, "oceano, mar aberto, grande massa de água", "gar + Vé"),
     ("garvelitror", 2, "música dos oceanos, sinfonia das águas", "garvé + litror"),
     ("gassfammir", 2, "espada longa de guerra, montante", "gar + sfammir"),
     ("girbel", 2, "primavera, estação do crescimento diurno", "gir- + bel"),
@@ -810,7 +810,7 @@ NOUNS = [
     ("var", 2, "caminho, estrada, via", "raiz primária var"),
     ("Varkaria", 1, "Labirinto de Encruzilhadas (feudo de Sprezzatura)", "var + kar + -ia"),
     ("varte", 1, "encontro, cruzamento de vias", "var + -te"),
-    ("Vé", 2, "água (único substantivo com acento agudo diferencial)", "raiz primária Vé"),
+    ("Vé", 1, "água (único substantivo com acento agudo diferencial)", "raiz primária Vé"),
     ("Ve'el", 2, "Domínio das Sombras (expurgado Vé'el)", "vel + el (haplologia)"),
     ("veike", 1, "jardim, horto fechado", "raiz veik-"),
     ("veksixi", 1, "chuva, tempestade costeira, aguaceiro", "ve + ksixi"),
@@ -819,7 +819,7 @@ NOUNS = [
     ("vellir", 2, "noite sem estrelas, trevas absolutas", "vel + nir (ln -> ll)"),
     ("Veloxe", 1, "Submundo, Infernos, mansão dos mortos", "vel + oxe"),
     ("Velsu", 2, "O Exânime (entidade abissal)", "vel + su"),
-    ("velvé", 2, "águas sombrias, Porto das Sombras", "vel + Vé"),
+    ("velvé", 1, "águas sombrias, Porto das Sombras", "vel + Vé"),
     ("Vepalkia", 1, "Faixa dos Vaus (província fluvial)", "Vé + palk + -ia"),
     ("Véporos", 2, "Casa das Águas (Grande Casa Nobre)", "Vé + poros"),
     ("verre", 1, "bronze, liga metálica militar", "raiz verr-"),
@@ -946,12 +946,12 @@ NOUNS = [
     ('lyror', 2, 'esperança, espera', 'lyr- + -or'),
     ('alyror', 2, 'desespero', 'a- + lyr- + -or'),
     ('sulvor', 2, 'cantiga, canção de ninar', 'sulv- + -or'),
-    ('xelvé', 2, 'neve', 'xel- + Vé'),
+    ('xelvé', 1, 'neve', 'xel- + Vé'),
     ('xelor', 2, 'nevada, tempestade de neve', 'xel- + -or'),
     ('nirlan', 2, 'lua', 'nir + lan'),
-    ('mirvé', 2, 'lágrima', 'mir + Vé'),
-    ('korvé', 2, 'seiva, resina', 'kor + Vé'),
-    ('farvé', 2, 'cerveja de trigo', 'far- + Vé'),
+    ('mirvé', 1, 'lágrima', 'mir + Vé'),
+    ('korvé', 1, 'seiva, resina', 'kor + Vé'),
+    ('farvé', 1, 'cerveja de trigo', 'far- + Vé'),
     ('korgar', 2, 'floresta densa, bosque ancestral', 'kor + -gar'),
     ('rixil', 2, 'seixo, pedrinha', 'rixe + -il'),
     ('varil', 2, 'trilha, atalho', 'var + -il'),
