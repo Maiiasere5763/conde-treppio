@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 7,
+  "ultimo_indice_executado": 8,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -81,6 +81,16 @@
       "substantivos_primarios_concretos": 40,
       "adjetivos_adicionados": 15,
       "total_formas_apos_lote": 170294
+    },
+    {
+      "indice": 8,
+      "tema_id": 9,
+      "titulo": "Agricultura de Vale, Irrigação, Pomares e Colheita",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 85,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 178879
     }
   ],
   "temas": [
