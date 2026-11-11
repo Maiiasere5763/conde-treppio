@@ -12,11 +12,11 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
-[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.2)")]
+[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.3)")]
 [assembly: AssemblyDescription("Launcher Executavel, Servidor Embarcado e Central de Voz Whisper do Dicionario Treppio (/conde)")]
 [assembly: AssemblyCompany("Chancelaria Imperial de Treppenia")]
-[assembly: AssemblyProduct("Codice Treppio Conde V8.2")]
-[assembly: AssemblyVersion("8.2.0.0")]
+[assembly: AssemblyProduct("Codice Treppio Conde V8.3")]
+[assembly: AssemblyVersion("8.3.0.0")]
 
 namespace CondeTreppioLauncher
 {
@@ -96,11 +96,11 @@ namespace CondeTreppioLauncher
 
         private void ParseMetadataMetrics()
         {
-            TotalForms = 153005;
-            NounsCount = 1248;
-            VerbsCount = 1108;
-            AdjsCount = 281;
-            AdvsCount = 603;
+            TotalForms = 170294;
+            NounsCount = 1426;
+            VerbsCount = 1228;
+            AdjsCount = 311;
+            AdvsCount = 249;
 
             try
             {
@@ -115,7 +115,7 @@ namespace CondeTreppioLauncher
                 AdvsCount = ExtractIntMetric(head, "adverbs_count", AdvsCount);
 
                 // Caso total_expanded_word_forms esteja no final do JSON, inspecionar os últimos 4 KB
-                if (TotalForms == 153005 && _cachedJsonBytes.Length > 4096)
+                if (TotalForms == 170294 && _cachedJsonBytes.Length > 4096)
                 {
                     string tail = Encoding.UTF8.GetString(_cachedJsonBytes, _cachedJsonBytes.Length - 4096, 4096);
                     TotalForms = ExtractIntMetric(tail, "total_expanded_word_forms", TotalForms);
