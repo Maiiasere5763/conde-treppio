@@ -391,6 +391,31 @@ namespace CondeTreppioLauncher
 
     public class LauncherForm : Form
     {
+        [DllImport("dwmapi.dll")]
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19;
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
+
+        public static void EnableDarkMode(IntPtr handle)
+        {
+            try
+            {
+                int trueValue = 1;
+                if (DwmSetWindowAttribute(handle, DWMWA_USE_IMMERSIVE_DARK_MODE, ref trueValue, sizeof(int)) != 0)
+                {
+                    DwmSetWindowAttribute(handle, DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1, ref trueValue, sizeof(int));
+                }
+            }
+            catch { }
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            EnableDarkMode(Handle);
+        }
+
         private readonly EmbeddedServer _server;
         private readonly CultureInfo _ptBr = new CultureInfo("pt-BR");
         private Label _lblSubtitle;
@@ -408,63 +433,63 @@ namespace CondeTreppioLauncher
         public LauncherForm(EmbeddedServer server)
         {
             _server = server;
-            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.2 | /conde)";
+            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.3 | /conde)";
             ClientSize = new Size(820, 560);
             StartPosition = FormStartPosition.CenterScreen;
-            BackColor = Color.FromArgb(6, 8, 13);
-            ForeColor = Color.FromArgb(242, 245, 252);
+            BackColor = Color.FromArgb(9, 9, 11);
+            ForeColor = Color.FromArgb(244, 244, 245);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
-            Font titleFont = new Font("Georgia", 15f, FontStyle.Bold);
-            Font subFont = new Font("Segoe UI", 9.5f, FontStyle.Regular);
+            Font titleFont = new Font("Segoe UI", 13.5f, FontStyle.Bold);
+            Font subFont = new Font("Segoe UI", 9f, FontStyle.Regular);
             Font boldFont = new Font("Segoe UI", 9.5f, FontStyle.Bold);
             Font monoFont = new Font("Consolas", 9.5f, FontStyle.Regular);
 
-            // Filete Superior Ouro Imperial
+            // Filete Superior Ouro Imperial Hairline
             Panel goldTopBar = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 3,
+                Height = 2,
                 BackColor = Color.FromArgb(212, 175, 55)
             };
 
-            // Header Imperial
+            // Header Imperial Tonal Minimalist
             Panel headerPanel = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 86,
-                BackColor = Color.FromArgb(15, 20, 34),
+                Height = 82,
+                BackColor = Color.FromArgb(17, 17, 21),
                 Padding = new Padding(24, 14, 24, 12)
             };
 
             Label lblCrest = new Label
             {
                 Text = "𝓣",
-                Font = new Font("Georgia", 22f, FontStyle.Bold),
-                ForeColor = Color.FromArgb(253, 226, 142),
-                BackColor = Color.FromArgb(26, 33, 54),
+                Font = new Font("Segoe UI", 18f, FontStyle.Bold),
+                ForeColor = Color.White,
+                BackColor = Color.FromArgb(26, 26, 32),
                 TextAlign = ContentAlignment.MiddleCenter,
-                Size = new Size(52, 52),
-                Location = new Point(24, 17)
+                Size = new Size(48, 48),
+                Location = new Point(24, 16)
             };
 
             Label lblTitle = new Label
             {
-                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.2)",
+                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.3)",
                 Font = titleFont,
-                ForeColor = Color.FromArgb(253, 226, 142),
+                ForeColor = Color.White,
                 AutoSize = true,
-                Location = new Point(88, 16)
+                Location = new Point(84, 16)
             };
 
             _lblSubtitle = new Label
             {
                 Text = FormatSubtitleText(),
                 Font = subFont,
-                ForeColor = Color.FromArgb(157, 169, 197),
+                ForeColor = Color.FromArgb(161, 161, 170),
                 AutoSize = true,
-                Location = new Point(90, 46)
+                Location = new Point(86, 44)
             };
 
             headerPanel.Controls.Add(lblCrest);
@@ -473,11 +498,11 @@ namespace CondeTreppioLauncher
             Controls.Add(headerPanel);
             Controls.Add(goldTopBar);
 
-            // 4 Cards Bento de Telemetria ao Vivo
-            int cardY = 104;
+            // 4 Cards Bento de Telemetria ao Vivo (Tonal Precision Grid)
+            int cardY = 98;
             int cardW = 184;
             int cardGap = 12;
-            Controls.Add(CreateTelemetryCard("FORMAS VALIDADAS", _server.TotalForms.ToString("N0", _ptBr), "0 Colisões • 21 Leis Sandi", new Point(24, cardY), cardW, out _valForms));
+            Controls.Add(CreateTelemetryCard("FORMAS VALIDADAS", _server.TotalForms.ToString("N0", _ptBr), "0 Colisões • 22 Leis Sândi", new Point(24, cardY), cardW, out _valForms));
             Controls.Add(CreateTelemetryCard("SUBSTANTIVOS", _server.NounsCount.ToString("N0", _ptBr), "8 Casos + 10 Sufixos", new Point(24 + (cardW + cardGap) * 1, cardY), cardW, out _valNouns));
             Controls.Add(CreateTelemetryCard("VERBOS (4 EIXOS)", _server.VerbsCount.ToString("N0", _ptBr), "114 Formas por Verbo", new Point(24 + (cardW + cardGap) * 2, cardY), cardW, out _valVerbs));
             Controls.Add(CreateTelemetryCard("ADJS & ADVÉRBIOS", _server.AdjsCount + " / " + _server.AdvsCount, "Superl. -n & Modal -vë", new Point(24 + (cardW + cardGap) * 3, cardY), cardW, out _valAdjs));
@@ -487,9 +512,9 @@ namespace CondeTreppioLauncher
             {
                 Text = "● Fonte Ativa: " + _server.ActiveSource,
                 Font = boldFont,
-                ForeColor = Color.FromArgb(52, 199, 135),
+                ForeColor = Color.FromArgb(52, 211, 153),
                 AutoSize = true,
-                Location = new Point(24, 198)
+                Location = new Point(24, 194)
             };
             Controls.Add(_lblStatus);
 
@@ -497,36 +522,36 @@ namespace CondeTreppioLauncher
             {
                 Text = "Servidor Local Embarcado: http://127.0.0.1:" + _server.Port + "  |  Fila Autônoma: 200 Temas (30 min)",
                 Font = monoFont,
-                ForeColor = Color.FromArgb(87, 156, 248),
+                ForeColor = Color.FromArgb(161, 161, 170),
                 AutoSize = true,
-                Location = new Point(24, 222)
+                Location = new Point(24, 218)
             };
             Controls.Add(_lblUrl);
 
-            // Botão Principal: Abrir Dicionário
+            // Botão Principal: Abrir Dicionário (Pure White Inverted Pill Tonal)
             Button btnOpenApp = CreateStyledButton(
                 "📖 ABRIR CÓDICE TRÉPPIO (JANELA DEDICADA)",
-                new Point(24, 254),
+                new Point(24, 250),
                 new Size(772, 48),
-                Color.FromArgb(42, 34, 16),
-                Color.FromArgb(253, 226, 142)
+                Color.White,
+                Color.FromArgb(9, 9, 11)
             );
-            btnOpenApp.Font = new Font("Segoe UI", 11.5f, FontStyle.Bold);
-            btnOpenApp.FlatAppearance.BorderColor = Color.FromArgb(212, 175, 55);
-            btnOpenApp.FlatAppearance.BorderSize = 2;
+            btnOpenApp.Font = new Font("Segoe UI", 11f, FontStyle.Bold);
+            btnOpenApp.FlatAppearance.BorderColor = Color.White;
+            btnOpenApp.FlatAppearance.BorderSize = 0;
             btnOpenApp.Click += (s, e) => LaunchDedicatedWindow();
             Controls.Add(btnOpenApp);
 
             // Botão Dedicado: Conversar por Voz com o Conde (Whisper + Voz Neural)
             Button btnVoiceWhisper = CreateStyledButton(
                 "🎙️ CONVERSAR POR VOZ COM O CONDE (WHISPER STT + VOZ NEURAL)",
-                new Point(24, 312),
+                new Point(24, 308),
                 new Size(772, 44),
-                Color.FromArgb(18, 34, 46),
-                Color.FromArgb(115, 220, 175)
+                Color.FromArgb(18, 24, 22),
+                Color.FromArgb(52, 211, 153)
             );
-            btnVoiceWhisper.Font = new Font("Segoe UI", 10.5f, FontStyle.Bold);
-            btnVoiceWhisper.FlatAppearance.BorderColor = Color.FromArgb(52, 199, 135);
+            btnVoiceWhisper.Font = new Font("Segoe UI", 10f, FontStyle.Bold);
+            btnVoiceWhisper.FlatAppearance.BorderColor = Color.FromArgb(52, 211, 153);
             btnVoiceWhisper.Click += (s, e) => LaunchWhisperVoiceGui();
             Controls.Add(btnVoiceWhisper);
 
@@ -535,17 +560,17 @@ namespace CondeTreppioLauncher
             {
                 Text = "URL do Banco de Dados Online (GitHub Raw ou Link Público do Google Drive):",
                 Font = subFont,
-                ForeColor = Color.FromArgb(212, 175, 55),
+                ForeColor = Color.FromArgb(161, 161, 170),
                 AutoSize = true,
-                Location = new Point(24, 372)
+                Location = new Point(24, 366)
             };
             Controls.Add(lblCloud);
 
             _txtCloudUrl = new TextBox
             {
-                Location = new Point(24, 396),
+                Location = new Point(24, 390),
                 Size = new Size(772, 28),
-                BackColor = Color.FromArgb(15, 20, 34),
+                BackColor = Color.FromArgb(17, 17, 21),
                 ForeColor = Color.White,
                 BorderStyle = BorderStyle.FixedSingle,
                 Font = monoFont,
@@ -555,21 +580,23 @@ namespace CondeTreppioLauncher
 
             _btnSyncCloud = CreateStyledButton(
                 "☁️ Sincronizar da Nuvem (Git / Drive)",
-                new Point(24, 434),
+                new Point(24, 428),
                 new Size(378, 40),
-                Color.FromArgb(20, 26, 44),
-                Color.FromArgb(242, 245, 252)
+                Color.FromArgb(24, 24, 28),
+                Color.FromArgb(244, 244, 245)
             );
+            _btnSyncCloud.FlatAppearance.BorderColor = Color.FromArgb(63, 63, 70);
             _btnSyncCloud.Click += OnSyncCloudClick;
             Controls.Add(_btnSyncCloud);
 
             _btnRecompileLocal = CreateStyledButton(
                 "🔨 Recompilar e Sincronizar Base /conde",
-                new Point(418, 434),
+                new Point(418, 428),
                 new Size(378, 40),
-                Color.FromArgb(20, 26, 44),
-                Color.FromArgb(253, 226, 142)
+                Color.FromArgb(24, 24, 28),
+                Color.FromArgb(244, 244, 245)
             );
+            _btnRecompileLocal.FlatAppearance.BorderColor = Color.FromArgb(63, 63, 70);
             _btnRecompileLocal.Click += OnRecompileClick;
             Controls.Add(_btnRecompileLocal);
 
@@ -577,10 +604,10 @@ namespace CondeTreppioLauncher
             {
                 Text = "Pronto. O Códice funciona 100% offline, sincroniza via nuvem e inclui audiência vocal bidirecional via Whisper.",
                 Font = subFont,
-                ForeColor = Color.FromArgb(157, 169, 197),
+                ForeColor = Color.FromArgb(161, 161, 170),
                 AutoSize = false,
                 Size = new Size(772, 44),
-                Location = new Point(24, 488)
+                Location = new Point(24, 482)
             };
             Controls.Add(_lblFeedback);
 
@@ -615,8 +642,8 @@ namespace CondeTreppioLauncher
             Panel card = new Panel
             {
                 Location = loc,
-                Size = new Size(width, 78),
-                BackColor = Color.FromArgb(15, 20, 34),
+                Size = new Size(width, 82),
+                BackColor = Color.FromArgb(18, 18, 22),
                 BorderStyle = BorderStyle.FixedSingle
             };
 
@@ -630,8 +657,8 @@ namespace CondeTreppioLauncher
             Label lblCardTitle = new Label
             {
                 Text = title,
-                Font = new Font("Segoe UI", 7.5f, FontStyle.Bold),
-                ForeColor = Color.FromArgb(157, 169, 197),
+                Font = new Font("Segoe UI", 7.2f, FontStyle.Bold),
+                ForeColor = Color.FromArgb(113, 113, 122),
                 AutoSize = true,
                 Location = new Point(10, 8)
             };
@@ -639,19 +666,19 @@ namespace CondeTreppioLauncher
             valueLabel = new Label
             {
                 Text = value,
-                Font = new Font("Consolas", 13.5f, FontStyle.Bold),
-                ForeColor = Color.FromArgb(253, 226, 142),
+                Font = new Font("Segoe UI", 14.5f, FontStyle.Bold),
+                ForeColor = Color.White,
                 AutoSize = true,
-                Location = new Point(10, 25)
+                Location = new Point(10, 26)
             };
 
             Label lblSub = new Label
             {
                 Text = sub,
-                Font = new Font("Segoe UI", 7.5f, FontStyle.Regular),
-                ForeColor = Color.FromArgb(98, 111, 141),
+                Font = new Font("Segoe UI", 7.2f, FontStyle.Regular),
+                ForeColor = Color.FromArgb(161, 161, 170),
                 AutoSize = true,
-                Location = new Point(10, 52)
+                Location = new Point(10, 56)
             };
 
             card.Controls.Add(lblCardTitle);
@@ -674,7 +701,7 @@ namespace CondeTreppioLauncher
                 Cursor = Cursors.Hand,
                 Font = new Font("Segoe UI", 9.5f, FontStyle.Bold)
             };
-            b.FlatAppearance.BorderColor = Color.FromArgb(212, 175, 55);
+            b.FlatAppearance.BorderColor = Color.FromArgb(63, 63, 70);
             b.FlatAppearance.BorderSize = 1;
             return b;
         }
