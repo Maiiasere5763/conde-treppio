@@ -40,6 +40,7 @@ A arquitetura fonotática do Tréppio não é apenas um sistema de regulação s
 | zr → zz | Mutação Fricativa Vozeada | kaz- → kazza; agiz- → agizza |
 | kb → bb | Assimilação Labial Regressiva | mak- + -ba → mabbam; atok- + -ba → atobbam |
 | nl → ll | Assimilação Lateral | mon + let- → mollet- |
+| bp → bb | Assimilação Labial Oclusiva Total | gob- + paror → gobbaror; gob + pilk → gobbilk |
 
 O sistema é aprofundado por mutações severas induzidas pelo sufixo do pretérito imperfeito *-ba*, que exige o Vozeamento Velar (kb → gb), a Assimilação Labial Regressiva Total (tb/fb → bb), a Harmonização Nasal-Labial (nb → mb) e a Assimilação Labial de Cluster (ldb → lbb). No que concerne ao tratamento morfoestratigráfico do tempo aoristo, a Lei da Isoglossa Velar-Vibrante (xr → rr) e a Geminação Vibrante Absoluta (r + ru → rru) estabilizam as terminações em vibrante, impedindo a lenição.
 

@@ -9,102 +9,105 @@
   <link rel="icon" type="image/png" href="icon-512.png" />
   <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.2)</title>
 
-  <!-- Google Fonts: Cinzel (Imperial Serif), Playfair Display (Editorial), Inter (UI Sans), JetBrains Mono (Philology/Code) -->
+  <!-- Google Fonts: Inter (UI Sans & Display), Cinzel (Imperial Serif), Playfair Display (Editorial), JetBrains Mono (Philology/Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <style>
     /* ==========================================================================
-       DESIGN SYSTEM: CÓDICE IMPERIAL TRÉPPIO (ERA CLÁSSICA V8.1)
-       Inspirado em Apple Human Interface Guidelines, Design Editorial Clássico
-       e Tokens Glassmorphic de Luxo (Modo Obsidiana Soberana & Pergaminho Imperial)
+       DESIGN SYSTEM: CÓDICE IMPERIAL TRÉPPIO (ERA CLÁSSICA V8.3)
+       Estética Tonal.com: Obsidiana Pura, Precisão Industrial, Minimalismo
+       Monocromático de Alto Contraste, Pílulas Ergonômicas e Micro-Bordas Hairline
        ========================================================================== */
 
     :root {
-      /* Modo Obsidiana Soberana (Dark Luxury) */
-      --bg-deep: #06080d;
-      --bg-primary: #0a0d15;
-      --bg-secondary: #0f1422;
-      --bg-surface: #141a2c;
-      --bg-card: rgba(18, 24, 39, 0.82);
-      --bg-card-hover: rgba(25, 33, 53, 0.92);
-      --bg-card-elevated: #161d31;
-      --bg-accent: rgba(226, 185, 75, 0.12);
-      --bg-accent-hover: rgba(226, 185, 75, 0.2);
+      /* Modo Obsidiana Pura (Tonal Minimalist Luxury) */
+      --bg-deep: #000000;
+      --bg-primary: #09090b;
+      --bg-secondary: #111115;
+      --bg-surface: #16161c;
+      --bg-card: rgba(18, 18, 22, 0.85);
+      --bg-card-hover: rgba(26, 26, 32, 0.95);
+      --bg-card-elevated: #1e1e26;
+      --bg-accent: rgba(255, 255, 255, 0.08);
+      --bg-accent-hover: rgba(255, 255, 255, 0.14);
 
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-color: #232c45;
-      --border-gold: rgba(226, 185, 75, 0.36);
+      --border-color: rgba(255, 255, 255, 0.12);
+      --border-gold: rgba(212, 175, 55, 0.45);
       --border-gold-bright: #ffd86b;
+      --border-white: rgba(255, 255, 255, 0.35);
 
-      --text-primary: #f2f5fc;
-      --text-secondary: #9da9c5;
-      --text-muted: #626f8d;
+      --text-primary: #ffffff;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
 
       --gold: #d4af37;
-      --gold-bright: #fde28e;
-      --gold-glow: 0 0 24px rgba(226, 185, 75, 0.24);
+      --gold-bright: #ffffff;
+      --gold-glow: 0 0 24px rgba(255, 255, 255, 0.12);
 
-      --crimson: #e25c68;
-      --emerald: #34c787;
-      --azure: #579cf8;
-      --violet: #af85fc;
-      --amber: #f59e0b;
+      --crimson: #f87171;
+      --emerald: #34d399;
+      --azure: #60a5fa;
+      --violet: #c084fc;
+      --amber: #fbbf24;
 
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-      --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.65);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.75);
+      --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.9);
 
-      --font-display: "Cinzel", "Georgia", "Palatino Linotype", "Book Antiqua", serif;
-      --font-serif: "Playfair Display", "Georgia", serif;
+      --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: "Cinzel", "Georgia", serif;
       --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: "JetBrains Mono", "Cascadia Code", "Consolas", monospace;
 
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 14px;
-      --radius-xl: 20px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 9999px;
 
-      --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-      --transition-normal: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-      --glass-blur: blur(18px);
+      --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      --glass-blur: blur(24px) saturate(180%);
     }
 
     [data-theme="light"] {
-      /* Modo Pergaminho Imperial (Light Luxury) */
-      --bg-deep: #f3ede0;
-      --bg-primary: #fbf8f1;
-      --bg-secondary: #f2ebd9;
-      --bg-surface: #ffffff;
-      --bg-card: rgba(255, 255, 255, 0.94);
+      /* Modo Pergaminho Minimalista de Alta Precisão */
+      --bg-deep: #f4f4f5;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f0f0f2;
+      --bg-surface: #e4e4e7;
+      --bg-card: rgba(255, 255, 255, 0.96);
       --bg-card-hover: #ffffff;
-      --bg-card-elevated: #faf6ec;
-      --bg-accent: rgba(160, 115, 12, 0.1);
-      --bg-accent-hover: rgba(160, 115, 12, 0.18);
+      --bg-card-elevated: #f9f9fb;
+      --bg-accent: rgba(0, 0, 0, 0.05);
+      --bg-accent-hover: rgba(0, 0, 0, 0.09);
 
-      --border-subtle: rgba(0, 0, 0, 0.08);
-      --border-color: #dcd0b7;
-      --border-gold: rgba(160, 115, 12, 0.45);
+      --border-subtle: rgba(0, 0, 0, 0.07);
+      --border-color: rgba(0, 0, 0, 0.12);
+      --border-gold: rgba(160, 115, 12, 0.4);
       --border-gold-bright: #9a6e0a;
+      --border-white: rgba(0, 0, 0, 0.2);
 
-      --text-primary: #191610;
-      --text-secondary: #4f4534;
-      --text-muted: #7b6f59;
+      --text-primary: #09090b;
+      --text-secondary: #52525b;
+      --text-muted: #71717a;
 
       --gold: #9a6e0a;
-      --gold-bright: #785303;
-      --gold-glow: 0 0 20px rgba(160, 115, 12, 0.16);
+      --gold-bright: #18181b;
+      --gold-glow: 0 0 20px rgba(0, 0, 0, 0.08);
 
-      --crimson: #a6202e;
-      --emerald: #14754e;
-      --azure: #1a5ab3;
-      --violet: #6334b0;
-      --amber: #b45309;
+      --crimson: #dc2626;
+      --emerald: #059669;
+      --azure: #2563eb;
+      --violet: #7c3aed;
+      --amber: #d97706;
 
-      --shadow-sm: 0 2px 6px rgba(50, 35, 10, 0.06);
-      --shadow-md: 0 6px 20px rgba(50, 35, 10, 0.11);
-      --shadow-lg: 0 16px 40px rgba(50, 35, 10, 0.16);
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12);
     }
 
     /* Reset & Base */
@@ -1865,13 +1868,13 @@
       <div class="header-actions">
         <div class="stats-pill" title="Total de Formas e Classes Gramaticais Oficiais">
           <span class="pulse-dot"></span>
-          <span><strong id="stat-forms">153.005</strong> Formas</span>
+          <span><strong id="stat-forms">170.294</strong> Formas</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-nouns">1248</strong> Nomes</span>
+          <span><strong id="stat-nouns">1426</strong> Nomes</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-verbs">1108</strong> Verbos</span>
+          <span><strong id="stat-verbs">1228</strong> Verbos</span>
           <span class="pill-sep">•</span>
-          <span><strong id="stat-adjs">281</strong> Adjs</span>
+          <span><strong id="stat-adjs">311</strong> Adjs</span>
         </div>
         <button class="btn" id="btn-toggle-hero" onclick="toggleHeroBanner()" title="Mostrar ou recolher o Painel Filológico Imperial">
           📊 Painel
@@ -1892,7 +1895,7 @@
         <input
           type="text"
           id="omni-input"
-          placeholder="Buscar em 153.005 formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)..."
+          placeholder="Buscar em 170.294 formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)..."
           oninput="handleOmniSearch(this.value)"
         />
         <button class="btn-voice-search" id="btn-voice-omni" onclick="startVoiceSearch()" title="Pesquisar falando pelo microfone">
@@ -1905,7 +1908,7 @@
       <!-- 5 HUBS PRINCIPAIS E COESOS -->
       <nav class="nav-tabs" id="main-tabs">
         <button class="tab-btn active" data-hub="dict" onclick="switchHub('dict')">
-          🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">153.005</span>
+          🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">170.294</span>
         </button>
         <button class="tab-btn" data-hub="verbs" onclick="switchHub('verbs')">
           ⚔️ II. Conjugador Verbal <span class="tab-count" id="hub-cnt-verbs">1048 Verbos</span>
@@ -2254,7 +2257,7 @@
       const advCount = Object.keys(DB.adverbios || {}).length;
       const pCount = Object.keys(DB.particulas_e_afixos || {}).length;
       const dCount = Object.keys(DB.registro_diacronico_e_variantes || {}).length;
-      const totalForms = (m.total_expanded_word_forms || 153005).toLocaleString("pt-BR");
+      const totalForms = (m.total_expanded_word_forms || 170294).toLocaleString("pt-BR");
 
       const setTxt = (id, val) => {
         const el = document.getElementById(id);
