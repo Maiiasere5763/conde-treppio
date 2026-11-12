@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 10,
+  "ultimo_indice_executado": 17,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -91,6 +91,102 @@
       "substantivos_primarios_concretos": 40,
       "adjetivos_adicionados": 15,
       "total_formas_apos_lote": 178879
+    },
+    {
+      "indice": 9,
+      "tema_id": 10,
+      "titulo": "Direito Imperial, Magistratura, Chancelaria e Diplomacia",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 91,
+      "substantivos_primarios_concretos": 46,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 187572
+    },
+    {
+      "indice": 10,
+      "tema_id": 11,
+      "titulo": "Geologia, Mineração Profunda, Gemologia e Cristais",
+      "raizes_adicionadas": 15,
+      "substantivos_adicionados": 75,
+      "substantivos_primarios_concretos": 30,
+      "adjetivos_adicionados": 15,
+      "total_formas_apos_lote": 196247
+    },
+    {
+      "indice": 11,
+      "tema_id": 12,
+      "titulo": "Vidraria, Cerâmica, Alquimia e Destilação",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 49,
+      "substantivos_primarios_concretos": 34,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 199484
+    },
+    {
+      "indice": 12,
+      "tema_id": 13,
+      "titulo": "Marinha, Construção Naval e Meteorologia Oceânica",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 55,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 202829,
+      "concluido_em": "2026-11-11T23:37:22.915029+00:00"
+    },
+    {
+      "indice": 13,
+      "tema_id": 14,
+      "titulo": "Genealogia, Parentesco, Casamento e Ritos de Passagem",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 55,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 206174,
+      "concluido_em": "2026-11-12T00:02:16.561282+00:00"
+    },
+    {
+      "indice": 14,
+      "tema_id": 15,
+      "titulo": "Retórica, Filologia, Caligrafia e Iluminura de Códices",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 48,
+      "substantivos_primarios_concretos": 33,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 209393,
+      "concluido_em": "2026-11-12T00:10:55.819076+00:00"
+    },
+    {
+      "indice": 15,
+      "tema_id": 16,
+      "titulo": "Cavalaria, Falcoaria, Cinofilia e Caça Real",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 55,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 212058,
+      "concluido_em": "2026-11-12T00:34:12.046498+00:00"
+    },
+    {
+      "indice": 16,
+      "tema_id": 17,
+      "titulo": "Gastronomia de Corte, Panificação Fina e Vinicultura",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 55,
+      "substantivos_primarios_concretos": 40,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 214723,
+      "concluido_em": "2026-11-12T01:02:47.412094+00:00"
+    },
+    {
+      "indice": 17,
+      "tema_id": 18,
+      "titulo": "Psicologia, Sonhos, Memória, Intuição e Presságios",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 58,
+      "substantivos_primarios_concretos": 43,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 217386,
+      "concluido_em": "2026-11-12T01:08:08.764727+00:00"
     }
   ],
   "temas": [
