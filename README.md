@@ -16,7 +16,6 @@ Este repositório centraliza a documentação normativa, o léxico canônico, o 
   - `Codice_Treppio_Portatil.html`: Edição web portátil autocontida em arquivo único.
 - [`docs/`](./docs/): Portal web público e Progressive Web App (PWA) hospedado no GitHub Pages ([https://maiiasere5763.github.io/conde-treppio/](https://maiiasere5763.github.io/conde-treppio/)).
 - [`sandbox/`](./sandbox/): Ambiente de experimentação filológica, simulação diacrônica e expansão lexical naturalista:
-  - [`sandbox/simulacao_diacronica_1500_anos.md`](./sandbox/simulacao_diacronica_1500_anos.md): Tratado Filológico da Evolução de 1.500 Anos (Do Tréppio Imperial ao Neo-Trepiano de *Ecos de Uma Vida Perdida*, com as 5 Leis Fonéticas Diacrônicas e a secularização da cópula).
   - [`sandbox/dialogos_praticos_dia_a_dia_treppio.md`](./sandbox/dialogos_praticos_dia_a_dia_treppio.md): Guia de Diálogos Práticos e Conversação Cotidiana (O cão dourado na neve, a estalagem acolhedora, o ferreiro e a noite de inverno).
   - [`sandbox/dicionario_exaustivo/`](./sandbox/dicionario_exaustivo/): Gerador filológico e compilação do léxico com todas as terminações morfológicas.
   - [`sandbox/analise_e_expansao_sandbox.py`](./sandbox/analise_e_expansao_sandbox.py): Validador fonotático e gerador morfológico da Matriz Quadripartida.
