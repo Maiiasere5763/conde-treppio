@@ -5,7 +5,7 @@ Este repositório centraliza a documentação normativa, o léxico canônico, o 
 ## Estrutura do Repositório (`D:\Conde_Treppio`)
 
 - [`SKILL.md`](./SKILL.md): Diretrizes operacionais da persona e assistente filológico **Conde**.
-- [`dicionario_formas_expandidas.json`](./dicionario_formas_expandidas.json): Banco de dados lexicográfico estruturado (JSON) com **228.058 formas flexionadas e derivadas**, contendo todas as classes gramaticais (2004 substantivos, 1628 verbos da matriz quadripartida, 411 adjetivos, 828 advérbios, pronomes, numerais, partículas e os 8 capítulos canônicos da GNLT).
+- [`dicionario_formas_expandidas.json`](./dicionario_formas_expandidas.json): Banco de dados lexicográfico estruturado (JSON) com **230.726 formas flexionadas e derivadas**, contendo todas as classes gramaticais (2019 substantivos, 1648 verbos da matriz quadripartida, 416 adjetivos, 881 advérbios, pronomes, numerais, partículas e os 8 capítulos canônicos da GNLT).
 - [`gramatica_normativa_base.md`](./gramatica_normativa_base.md): Gramática Normativa do Trepiano Clássico (Fonologia, Matriz Verbal Quadripartida, Sintaxe V2, Declinações e Posposições).
 - [`treppio_base.md`](./treppio_base.md): Compêndio Gramatical, Filológico e Lexicográfico Completo.
 - [`adendo_edicao_unificada_v8_1.md`](./adendo_edicao_unificada_v8_1.md): Edição Unificada V8.1 (Chancelaria Imperial, Doutrina das Quatro Valências e Léxico Consolidado).
