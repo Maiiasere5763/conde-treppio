@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 22,
+  "ultimo_indice_executado": 23,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -1247,5 +1247,13 @@
     }
   ],
   "intervalo_cron": "*/30 * * * *",
-  "total_temas_planejados": 200
+  "total_temas_planejados": 200,
+  "execucoes_realizadas": [
+    {
+      "id": 24,
+      "titulo": "Escatologia, Cosmogonia Profunda e Mistérios do Halylitror",
+      "data_hora": "2026-11-12T15:59:56.306915",
+      "total_formas": 233394
+    }
+  ]
 }
