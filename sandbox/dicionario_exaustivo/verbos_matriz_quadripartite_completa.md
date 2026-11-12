@@ -1,4 +1,4 @@
-# Códice Verbal Exaustivo da Língua Tréppia: 1708 Verbos × 114 Formas (194,712 Formas Conjugadas)
+# Códice Verbal Exaustivo da Língua Tréppia: 1728 Verbos × 114 Formas (196,992 Formas Conjugadas)
 
 ## 1. Raiz `balk-` (palpitar o coração, pulsar forte)
 
@@ -5148,7 +5148,73 @@
   - **Imperf.Ind Ativa:** `odafulbbam, odafulbbas, odafulbba, odafulbban, odafulbbat` | **Passiva:** `odafulbbasem, odafulbbases, odafulbbase, odafulbbasen, odafulbbaset`
   - **Imperf.Subj Ativa:** `odafulbbakem, odafulbbakes, odafulbbake, odafulbbaken, odafulbbaket` | **Passiva:** `odafulbbakesem, odafulbbakeses, odafulbbakese, odafulbbakesen, odafulbbakeset`
 
-## 79. Raiz `furk-` (arar a terra, abrir sulco no solo)
+## 79. Raiz `fulv-` (jorrar jatos de vapor escaldante em geiseres ritmicos)
+
+### 1. Positivo: **fulvur** (*jorrar jatos de vapor escaldante em geiseres ritmicos*)
+
+- **Infinitivo:** `fulvur` | **Imperativo:** `Fulv!` | **Interrogativo 2ª Pl:** `fulvukka?`
+- **Particípio (8 Casos):** Nom.Sg `fulvet`, Gen.Sg `fulvety`, Dat.Sg `fulveti`, Acu.Sg `fulvetom`, Nom.Pl `fulveti`, Gen.Pl `fulvetye`, Dat.Pl `fulvetoi`, Acu.Pl `fulvetos`
+- **Derivados Nominais:** Agente `fulpte`, Abstrato `fulvor`, Instrumento `fulptek`, Lugar `fulvia`
+  - **Pres.Ind Ativa:** `fulvum, fulvus, fulvu, fulvun, fulvut` | **Passiva:** `fulvusem, fulvuses, fulvuse, fulvusen, fulvuset`
+  - **Pres.Subj Ativa:** `fulvukem, fulvukes, fulvuke, fulvuken, fulvuket` | **Passiva:** `fulvukesem, fulvukeses, fulvukese, fulvukesen, fulvukeset`
+  - **Pass.Ind Ativa:** `fulvram, fulvras, fulvra, fulvran, fulvrat` | **Passiva:** `fulvrasem, fulvrases, fulvrase, fulvrasen, fulvraset`
+  - **Pass.Subj Ativa:** `fulvrakem, fulvrakes, fulvrake, fulvraken, fulvraket` | **Passiva:** `fulvrakesem, fulvrakeses, fulvrakese, fulvrakesen, fulvrakeset`
+  - **Dur.Ind Ativa:** `fulvaim, fulvais, fulvai, fulvain, fulvait` | **Passiva:** `fulvaisem, fulvaises, fulvaise, fulvaisen, fulvaiset`
+  - **Dur.Subj Ativa:** `fulvaikem, fulvaikes, fulvaike, fulvaiken, fulvaiket` | **Passiva:** `fulvaikesem, fulvaikeses, fulvaikese, fulvaikesen, fulvaikeset`
+  - **Fut.Ind Ativa:** `fulvrum, fulvrus, fulvru, fulvrun, fulvrut` | **Passiva:** `fulvrusem, fulvruses, fulvruse, fulvrusen, fulvruset`
+  - **Fut.Subj Ativa:** `fulvrukem, fulvrukes, fulvruke, fulvruken, fulvruket` | **Passiva:** `fulvrukesem, fulvrukeses, fulvrukese, fulvrukesen, fulvrukeset`
+  - **Imperf.Ind Ativa:** `fulvbam, fulvbas, fulvba, fulvban, fulvbat` | **Passiva:** `fulvbasem, fulvbases, fulvbase, fulvbasen, fulvbaset`
+  - **Imperf.Subj Ativa:** `fulvbakem, fulvbakes, fulvbake, fulvbaken, fulvbaket` | **Passiva:** `fulvbakesem, fulvbakeses, fulvbakese, fulvbakesen, fulvbakeset`
+
+### 2. Privativo (a-): **afulvur** (*silenciar o respiradouro esfriando a coluna hidrotermal*)
+
+- **Infinitivo:** `afulvur` | **Imperativo:** `Afulv!` | **Interrogativo 2ª Pl:** `afulvukka?`
+- **Particípio (8 Casos):** Nom.Sg `afulvet`, Gen.Sg `afulvety`, Dat.Sg `afulveti`, Acu.Sg `afulvetom`, Nom.Pl `afulveti`, Gen.Pl `afulvetye`, Dat.Pl `afulvetoi`, Acu.Pl `afulvetos`
+- **Derivados Nominais:** Agente `afulpte`, Abstrato `afulvor`, Instrumento `afulptek`, Lugar `afulvia`
+  - **Pres.Ind Ativa:** `afulvum, afulvus, afulvu, afulvun, afulvut` | **Passiva:** `afulvusem, afulvuses, afulvuse, afulvusen, afulvuset`
+  - **Pres.Subj Ativa:** `afulvukem, afulvukes, afulvuke, afulvuken, afulvuket` | **Passiva:** `afulvukesem, afulvukeses, afulvukese, afulvukesen, afulvukeset`
+  - **Pass.Ind Ativa:** `afulvram, afulvras, afulvra, afulvran, afulvrat` | **Passiva:** `afulvrasem, afulvrases, afulvrase, afulvrasen, afulvraset`
+  - **Pass.Subj Ativa:** `afulvrakem, afulvrakes, afulvrake, afulvraken, afulvraket` | **Passiva:** `afulvrakesem, afulvrakeses, afulvrakese, afulvrakesen, afulvrakeset`
+  - **Dur.Ind Ativa:** `afulvaim, afulvais, afulvai, afulvain, afulvait` | **Passiva:** `afulvaisem, afulvaises, afulvaise, afulvaisen, afulvaiset`
+  - **Dur.Subj Ativa:** `afulvaikem, afulvaikes, afulvaike, afulvaiken, afulvaiket` | **Passiva:** `afulvaikesem, afulvaikeses, afulvaikese, afulvaikesen, afulvaikeset`
+  - **Fut.Ind Ativa:** `afulvrum, afulvrus, afulvru, afulvrun, afulvrut` | **Passiva:** `afulvrusem, afulvruses, afulvruse, afulvrusen, afulvruset`
+  - **Fut.Subj Ativa:** `afulvrukem, afulvrukes, afulvruke, afulvruken, afulvruket` | **Passiva:** `afulvrukesem, afulvrukeses, afulvrukese, afulvrukesen, afulvrukeset`
+  - **Imperf.Ind Ativa:** `afulvbam, afulvbas, afulvba, afulvban, afulvbat` | **Passiva:** `afulvbasem, afulvbases, afulvbase, afulvbasen, afulvbaset`
+  - **Imperf.Subj Ativa:** `afulvbakem, afulvbakes, afulvbake, afulvbaken, afulvbaket` | **Passiva:** `afulvbakesem, afulvbakeses, afulvbakese, afulvbakesen, afulvbakeset`
+
+### 3. Iterativo (o-/od-): **ofulvur** (*pulsar em erupcoes termicas periodicas cobrindo o campo*)
+
+- **Infinitivo:** `ofulvur` | **Imperativo:** `Ofulv!` | **Interrogativo 2ª Pl:** `ofulvukka?`
+- **Particípio (8 Casos):** Nom.Sg `ofulvet`, Gen.Sg `ofulvety`, Dat.Sg `ofulveti`, Acu.Sg `ofulvetom`, Nom.Pl `ofulveti`, Gen.Pl `ofulvetye`, Dat.Pl `ofulvetoi`, Acu.Pl `ofulvetos`
+- **Derivados Nominais:** Agente `ofulpte`, Abstrato `ofulvor`, Instrumento `ofulptek`, Lugar `ofulvia`
+  - **Pres.Ind Ativa:** `ofulvum, ofulvus, ofulvu, ofulvun, ofulvut` | **Passiva:** `ofulvusem, ofulvuses, ofulvuse, ofulvusen, ofulvuset`
+  - **Pres.Subj Ativa:** `ofulvukem, ofulvukes, ofulvuke, ofulvuken, ofulvuket` | **Passiva:** `ofulvukesem, ofulvukeses, ofulvukese, ofulvukesen, ofulvukeset`
+  - **Pass.Ind Ativa:** `ofulvram, ofulvras, ofulvra, ofulvran, ofulvrat` | **Passiva:** `ofulvrasem, ofulvrases, ofulvrase, ofulvrasen, ofulvraset`
+  - **Pass.Subj Ativa:** `ofulvrakem, ofulvrakes, ofulvrake, ofulvraken, ofulvraket` | **Passiva:** `ofulvrakesem, ofulvrakeses, ofulvrakese, ofulvrakesen, ofulvrakeset`
+  - **Dur.Ind Ativa:** `ofulvaim, ofulvais, ofulvai, ofulvain, ofulvait` | **Passiva:** `ofulvaisem, ofulvaises, ofulvaise, ofulvaisen, ofulvaiset`
+  - **Dur.Subj Ativa:** `ofulvaikem, ofulvaikes, ofulvaike, ofulvaiken, ofulvaiket` | **Passiva:** `ofulvaikesem, ofulvaikeses, ofulvaikese, ofulvaikesen, ofulvaikeset`
+  - **Fut.Ind Ativa:** `ofulvrum, ofulvrus, ofulvru, ofulvrun, ofulvrut` | **Passiva:** `ofulvrusem, ofulvruses, ofulvruse, ofulvrusen, ofulvruset`
+  - **Fut.Subj Ativa:** `ofulvrukem, ofulvrukes, ofulvruke, ofulvruken, ofulvruket` | **Passiva:** `ofulvrukesem, ofulvrukeses, ofulvrukese, ofulvrukesen, ofulvrukeset`
+  - **Imperf.Ind Ativa:** `ofulvbam, ofulvbas, ofulvba, ofulvban, ofulvbat` | **Passiva:** `ofulvbasem, ofulvbases, ofulvbase, ofulvbasen, ofulvbaset`
+  - **Imperf.Subj Ativa:** `ofulvbakem, ofulvbakes, ofulvbake, ofulvbaken, ofulvbaket` | **Passiva:** `ofulvbakesem, ofulvbakeses, ofulvbakese, ofulvbakesen, ofulvbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odafulvur** (*reter temporariamente a pressao subterranea antes do jorro*)
+
+- **Infinitivo:** `odafulvur` | **Imperativo:** `Odafulv!` | **Interrogativo 2ª Pl:** `odafulvukka?`
+- **Particípio (8 Casos):** Nom.Sg `odafulvet`, Gen.Sg `odafulvety`, Dat.Sg `odafulveti`, Acu.Sg `odafulvetom`, Nom.Pl `odafulveti`, Gen.Pl `odafulvetye`, Dat.Pl `odafulvetoi`, Acu.Pl `odafulvetos`
+- **Derivados Nominais:** Agente `odafulpte`, Abstrato `odafulvor`, Instrumento `odafulptek`, Lugar `odafulvia`
+  - **Pres.Ind Ativa:** `odafulvum, odafulvus, odafulvu, odafulvun, odafulvut` | **Passiva:** `odafulvusem, odafulvuses, odafulvuse, odafulvusen, odafulvuset`
+  - **Pres.Subj Ativa:** `odafulvukem, odafulvukes, odafulvuke, odafulvuken, odafulvuket` | **Passiva:** `odafulvukesem, odafulvukeses, odafulvukese, odafulvukesen, odafulvukeset`
+  - **Pass.Ind Ativa:** `odafulvram, odafulvras, odafulvra, odafulvran, odafulvrat` | **Passiva:** `odafulvrasem, odafulvrases, odafulvrase, odafulvrasen, odafulvraset`
+  - **Pass.Subj Ativa:** `odafulvrakem, odafulvrakes, odafulvrake, odafulvraken, odafulvraket` | **Passiva:** `odafulvrakesem, odafulvrakeses, odafulvrakese, odafulvrakesen, odafulvrakeset`
+  - **Dur.Ind Ativa:** `odafulvaim, odafulvais, odafulvai, odafulvain, odafulvait` | **Passiva:** `odafulvaisem, odafulvaises, odafulvaise, odafulvaisen, odafulvaiset`
+  - **Dur.Subj Ativa:** `odafulvaikem, odafulvaikes, odafulvaike, odafulvaiken, odafulvaiket` | **Passiva:** `odafulvaikesem, odafulvaikeses, odafulvaikese, odafulvaikesen, odafulvaikeset`
+  - **Fut.Ind Ativa:** `odafulvrum, odafulvrus, odafulvru, odafulvrun, odafulvrut` | **Passiva:** `odafulvrusem, odafulvruses, odafulvruse, odafulvrusen, odafulvruset`
+  - **Fut.Subj Ativa:** `odafulvrukem, odafulvrukes, odafulvruke, odafulvruken, odafulvruket` | **Passiva:** `odafulvrukesem, odafulvrukeses, odafulvrukese, odafulvrukesen, odafulvrukeset`
+  - **Imperf.Ind Ativa:** `odafulvbam, odafulvbas, odafulvba, odafulvban, odafulvbat` | **Passiva:** `odafulvbasem, odafulvbases, odafulvbase, odafulvbasen, odafulvbaset`
+  - **Imperf.Subj Ativa:** `odafulvbakem, odafulvbakes, odafulvbake, odafulvbaken, odafulvbaket` | **Passiva:** `odafulvbakesem, odafulvbakeses, odafulvbakese, odafulvbakesen, odafulvbakeset`
+
+## 80. Raiz `furk-` (arar a terra, abrir sulco no solo)
 
 ### 1. Positivo: **furkur** (*arar a terra, abrir sulco no solo*)
 
@@ -5214,7 +5280,7 @@
   - **Imperf.Ind Ativa:** `odafurbbam, odafurbbas, odafurbba, odafurbban, odafurbbat` | **Passiva:** `odafurbbasem, odafurbbases, odafurbbase, odafurbbasen, odafurbbaset`
   - **Imperf.Subj Ativa:** `odafurbbakem, odafurbbakes, odafurbbake, odafurbbaken, odafurbbaket` | **Passiva:** `odafurbbakesem, odafurbbakeses, odafurbbakese, odafurbbakesen, odafurbbakeset`
 
-## 80. Raiz `furp-` (arrendar terras da Coroa)
+## 81. Raiz `furp-` (arrendar terras da Coroa)
 
 ### 1. Positivo: **furpur** (*arrendar terras da Coroa*)
 
@@ -5280,7 +5346,7 @@
   - **Imperf.Ind Ativa:** `odafurpbam, odafurpbas, odafurpba, odafurpban, odafurpbat` | **Passiva:** `odafurpbasem, odafurpbases, odafurpbase, odafurpbasen, odafurpbaset`
   - **Imperf.Subj Ativa:** `odafurpbakem, odafurpbakes, odafurpbake, odafurpbaken, odafurpbaket` | **Passiva:** `odafurpbakesem, odafurpbakeses, odafurpbakese, odafurpbakesen, odafurpbakeset`
 
-## 81. Raiz `gald-` (guardar, carregar, custodiar)
+## 82. Raiz `gald-` (guardar, carregar, custodiar)
 
 ### 1. Positivo: **galdur** (*guardar, carregar, custodiar*)
 
@@ -5346,7 +5412,7 @@
   - **Imperf.Ind Ativa:** `odagalbbam, odagalbbas, odagalbba, odagalbban, odagalbbat` | **Passiva:** `odagalbbasem, odagalbbases, odagalbbase, odagalbbasen, odagalbbaset`
   - **Imperf.Subj Ativa:** `odagalbbakem, odagalbbakes, odagalbbake, odagalbbaken, odagalbbaket` | **Passiva:** `odagalbbakesem, odagalbbakeses, odagalbbakese, odagalbbakesen, odagalbbakeset`
 
-## 82. Raiz `galdex-` (sacar, desembainhar lâmina)
+## 83. Raiz `galdex-` (sacar, desembainhar lâmina)
 
 ### 1. Positivo: **galdexur** (*sacar, desembainhar lâmina*)
 
@@ -5412,7 +5478,7 @@
   - **Imperf.Ind Ativa:** `odagaldexbam, odagaldexbas, odagaldexba, odagaldexban, odagaldexbat` | **Passiva:** `odagaldexbasem, odagaldexbases, odagaldexbase, odagaldexbasen, odagaldexbaset`
   - **Imperf.Subj Ativa:** `odagaldexbakem, odagaldexbakes, odagaldexbake, odagaldexbaken, odagaldexbaket` | **Passiva:** `odagaldexbakesem, odagaldexbakeses, odagaldexbakese, odagaldexbakesen, odagaldexbakeset`
 
-## 83. Raiz `galp-` (operar aríete e maquinismos pesados de quebra de muralhas)
+## 84. Raiz `galp-` (operar aríete e maquinismos pesados de quebra de muralhas)
 
 ### 1. Positivo: **galpur** (*operar aríete e maquinismos pesados de quebra de muralhas*)
 
@@ -5478,7 +5544,7 @@
   - **Imperf.Ind Ativa:** `odagalpbam, odagalpbas, odagalpba, odagalpban, odagalpbat` | **Passiva:** `odagalpbasem, odagalpbases, odagalpbase, odagalpbasen, odagalpbaset`
   - **Imperf.Subj Ativa:** `odagalpbakem, odagalpbakes, odagalpbake, odagalpbaken, odagalpbaket` | **Passiva:** `odagalpbakesem, odagalpbakeses, odagalpbakese, odagalpbakesen, odagalpbakeset`
 
-## 84. Raiz `garv-` (beber água pura, saciar a sede)
+## 85. Raiz `garv-` (beber água pura, saciar a sede)
 
 ### 1. Positivo: **garvur** (*beber água pura, saciar a sede*)
 
@@ -5544,7 +5610,7 @@
   - **Imperf.Ind Ativa:** `odagarvbam, odagarvbas, odagarvba, odagarvban, odagarvbat` | **Passiva:** `odagarvbasem, odagarvbases, odagarvbase, odagarvbasen, odagarvbaset`
   - **Imperf.Subj Ativa:** `odagarvbakem, odagarvbakes, odagarvbake, odagarvbaken, odagarvbaket` | **Passiva:** `odagarvbakesem, odagarvbakeses, odagarvbakese, odagarvbakesen, odagarvbakeset`
 
-## 85. Raiz `gas-` (enfardar peças de veludo para a viagem)
+## 86. Raiz `gas-` (enfardar peças de veludo para a viagem)
 
 ### 1. Positivo: **gasur** (*enfardar peças de veludo para a viagem*)
 
@@ -5610,7 +5676,7 @@
   - **Imperf.Ind Ativa:** `odagasbam, odagasbas, odagasba, odagasban, odagasbat` | **Passiva:** `odagasbasem, odagasbases, odagasbase, odagasbasen, odagasbaset`
   - **Imperf.Subj Ativa:** `odagasbakem, odagasbakes, odagasbake, odagasbaken, odagasbaket` | **Passiva:** `odagasbakesem, odagasbakeses, odagasbakese, odagasbakesen, odagasbakeset`
 
-## 86. Raiz `gasp-` (celebrar banquete de noivado entre clãs aliados)
+## 87. Raiz `gasp-` (celebrar banquete de noivado entre clãs aliados)
 
 ### 1. Positivo: **gaspur** (*celebrar banquete de noivado entre clãs aliados*)
 
@@ -5676,7 +5742,7 @@
   - **Imperf.Ind Ativa:** `odagaspbam, odagaspbas, odagaspba, odagaspban, odagaspbat` | **Passiva:** `odagaspbasem, odagaspbases, odagaspbase, odagaspbasen, odagaspbaset`
   - **Imperf.Subj Ativa:** `odagaspbakem, odagaspbakes, odagaspbake, odagaspbaken, odagaspbaket` | **Passiva:** `odagaspbakesem, odagaspbakeses, odagaspbakese, odagaspbakesen, odagaspbakeset`
 
-## 87. Raiz `gel-` (transladar, levar, conduzir)
+## 88. Raiz `gel-` (transladar, levar, conduzir)
 
 ### 1. Positivo: **gelur** (*transladar, levar, conduzir*)
 
@@ -5742,7 +5808,7 @@
   - **Imperf.Ind Ativa:** `odagelbam, odagelbas, odagelba, odagelban, odagelbat` | **Passiva:** `odagelbasem, odagelbases, odagelbase, odagelbasen, odagelbaset`
   - **Imperf.Subj Ativa:** `odagelbakem, odagelbakes, odagelbake, odagelbaken, odagelbaket` | **Passiva:** `odagelbakesem, odagelbakeses, odagelbakese, odagelbakesen, odagelbakeset`
 
-## 88. Raiz `gelm-` (acender a candeia, atear fogo à mecha)
+## 89. Raiz `gelm-` (acender a candeia, atear fogo à mecha)
 
 ### 1. Positivo: **gelmur** (*acender a candeia, atear fogo à mecha*)
 
@@ -5808,7 +5874,7 @@
   - **Imperf.Ind Ativa:** `odagelmbam, odagelmbas, odagelmba, odagelmban, odagelmbat` | **Passiva:** `odagelmbasem, odagelmbases, odagelmbase, odagelmbasen, odagelmbaset`
   - **Imperf.Subj Ativa:** `odagelmbakem, odagelmbakes, odagelmbake, odagelmbaken, odagelmbaket` | **Passiva:** `odagelmbakesem, odagelmbakeses, odagelmbakese, odagelmbakesen, odagelmbakeset`
 
-## 89. Raiz `gev-` (remar contra a correnteza)
+## 90. Raiz `gev-` (remar contra a correnteza)
 
 ### 1. Positivo: **gevur** (*remar contra a correnteza*)
 
@@ -5874,7 +5940,7 @@
   - **Imperf.Ind Ativa:** `odagevbam, odagevbas, odagevba, odagevban, odagevbat` | **Passiva:** `odagevbasem, odagevbases, odagevbase, odagevbasen, odagevbaset`
   - **Imperf.Subj Ativa:** `odagevbakem, odagevbakes, odagevbake, odagevbaken, odagevbaket` | **Passiva:** `odagevbakesem, odagevbakeses, odagevbakese, odagevbakesen, odagevbakeset`
 
-## 90. Raiz `gik-` (abotoar o manto com fivela de prata)
+## 91. Raiz `gik-` (abotoar o manto com fivela de prata)
 
 ### 1. Positivo: **gikur** (*abotoar o manto com fivela de prata*)
 
@@ -5940,7 +6006,7 @@
   - **Imperf.Ind Ativa:** `odagibbam, odagibbas, odagibba, odagibban, odagibbat` | **Passiva:** `odagibbasem, odagibbases, odagibbase, odagibbasen, odagibbaset`
   - **Imperf.Subj Ativa:** `odagibbakem, odagibbakes, odagibbake, odagibbaken, odagibbaket` | **Passiva:** `odagibbakesem, odagibbakeses, odagibbakese, odagibbakesen, odagibbakeset`
 
-## 91. Raiz `gikx-` (prensar bagas silvestres para vinho)
+## 92. Raiz `gikx-` (prensar bagas silvestres para vinho)
 
 ### 1. Positivo: **gikxur** (*prensar bagas silvestres para vinho*)
 
@@ -6006,7 +6072,7 @@
   - **Imperf.Ind Ativa:** `odagikxbam, odagikxbas, odagikxba, odagikxban, odagikxbat` | **Passiva:** `odagikxbasem, odagikxbases, odagikxbase, odagikxbasen, odagikxbaset`
   - **Imperf.Subj Ativa:** `odagikxbakem, odagikxbakes, odagikxbake, odagikxbaken, odagikxbaket` | **Passiva:** `odagikxbakesem, odagikxbakeses, odagikxbakese, odagikxbakesen, odagikxbakeset`
 
-## 92. Raiz `gilk-` (piscar os olhos, pestanejar)
+## 93. Raiz `gilk-` (piscar os olhos, pestanejar)
 
 ### 1. Positivo: **gilkur** (*piscar os olhos, pestanejar*)
 
@@ -6072,7 +6138,7 @@
   - **Imperf.Ind Ativa:** `odagilbbam, odagilbbas, odagilbba, odagilbban, odagilbbat` | **Passiva:** `odagilbbasem, odagilbbases, odagilbbase, odagilbbasen, odagilbbaset`
   - **Imperf.Subj Ativa:** `odagilbbakem, odagilbbakes, odagilbbake, odagilbbaken, odagilbbaket` | **Passiva:** `odagilbbakesem, odagilbbakeses, odagilbbakese, odagilbbakesen, odagilbbakeset`
 
-## 93. Raiz `gilp-` (escalar escarpa ou muralha com gancho)
+## 94. Raiz `gilp-` (escalar escarpa ou muralha com gancho)
 
 ### 1. Positivo: **gilpur** (*escalar escarpa ou muralha com gancho*)
 
@@ -6138,7 +6204,7 @@
   - **Imperf.Ind Ativa:** `odagilpbam, odagilpbas, odagilpba, odagilpban, odagilpbat` | **Passiva:** `odagilpbasem, odagilpbases, odagilpbase, odagilpbasen, odagilpbaset`
   - **Imperf.Subj Ativa:** `odagilpbakem, odagilpbakes, odagilpbake, odagilpbaken, odagilpbaket` | **Passiva:** `odagilpbakesem, odagilpbakeses, odagilpbakese, odagilpbakesen, odagilpbakeset`
 
-## 94. Raiz `gim-` (contemplar a harmonia das esferas)
+## 95. Raiz `gim-` (contemplar a harmonia das esferas)
 
 ### 1. Positivo: **gimur** (*contemplar a harmonia das esferas*)
 
@@ -6204,7 +6270,7 @@
   - **Imperf.Ind Ativa:** `odagimbam, odagimbas, odagimba, odagimban, odagimbat` | **Passiva:** `odagimbasem, odagimbases, odagimbase, odagimbasen, odagimbaset`
   - **Imperf.Subj Ativa:** `odagimbakem, odagimbakes, odagimbake, odagimbaken, odagimbaket` | **Passiva:** `odagimbakesem, odagimbakeses, odagimbakese, odagimbakesen, odagimbakeset`
 
-## 95. Raiz `gir-` (crescer, erguer-se, brotar)
+## 96. Raiz `gir-` (crescer, erguer-se, brotar)
 
 ### 1. Positivo: **girur** (*crescer, erguer-se, brotar*)
 
@@ -6270,7 +6336,7 @@
   - **Imperf.Ind Ativa:** `odagirbam, odagirbas, odagirba, odagirban, odagirbat` | **Passiva:** `odagirbasem, odagirbases, odagirbase, odagirbasen, odagirbaset`
   - **Imperf.Subj Ativa:** `odagirbakem, odagirbakes, odagirbake, odagirbaken, odagirbaket` | **Passiva:** `odagirbakesem, odagirbakeses, odagirbakese, odagirbakesen, odagirbakeset`
 
-## 96. Raiz `girk-` (cinzelar inscrição na lápide)
+## 97. Raiz `girk-` (cinzelar inscrição na lápide)
 
 ### 1. Positivo: **girkur** (*cinzelar inscrição na lápide*)
 
@@ -6336,7 +6402,7 @@
   - **Imperf.Ind Ativa:** `odagirbbam, odagirbbas, odagirbba, odagirbban, odagirbbat` | **Passiva:** `odagirbbasem, odagirbbases, odagirbbase, odagirbbasen, odagirbbaset`
   - **Imperf.Subj Ativa:** `odagirbbakem, odagirbbakes, odagirbbake, odagirbbaken, odagirbbaket` | **Passiva:** `odagirbbakesem, odagirbbakeses, odagirbbakese, odagirbbakesen, odagirbbakeset`
 
-## 97. Raiz `girp-` (dedilhar as cordas da harpa)
+## 98. Raiz `girp-` (dedilhar as cordas da harpa)
 
 ### 1. Positivo: **girpur** (*dedilhar as cordas da harpa*)
 
@@ -6402,7 +6468,7 @@
   - **Imperf.Ind Ativa:** `odagirpbam, odagirpbas, odagirpba, odagirpban, odagirpbat` | **Passiva:** `odagirpbasem, odagirpbases, odagirpbase, odagirpbasen, odagirpbaset`
   - **Imperf.Subj Ativa:** `odagirpbakem, odagirpbakes, odagirpbake, odagirpbaken, odagirpbaket` | **Passiva:** `odagirpbakesem, odagirpbakeses, odagirpbakese, odagirpbakesen, odagirpbakeset`
 
-## 98. Raiz `giz-` (amar, estimar com devoção)
+## 99. Raiz `giz-` (amar, estimar com devoção)
 
 ### 1. Positivo: **gizur** (*amar, estimar com devoção*)
 
@@ -6468,7 +6534,7 @@
   - **Imperf.Ind Ativa:** `odagizbam, odagizbas, odagizba, odagizban, odagizbat` | **Passiva:** `odagizbasem, odagizbases, odagizbase, odagizbasen, odagizbaset`
   - **Imperf.Subj Ativa:** `odagizbakem, odagizbakes, odagizbake, odagizbaken, odagizbaket` | **Passiva:** `odagizbakesem, odagizbakeses, odagizbakese, odagizbakesen, odagizbakeset`
 
-## 99. Raiz `gob-` (trocar, negociar, mercadejar)
+## 100. Raiz `gob-` (trocar, negociar, mercadejar)
 
 ### 1. Positivo: **gobur** (*trocar, negociar, mercadejar*)
 
@@ -6534,7 +6600,7 @@
   - **Imperf.Ind Ativa:** `odagobbam, odagobbas, odagobba, odagobban, odagobbat` | **Passiva:** `odagobbasem, odagobbases, odagobbase, odagobbasen, odagobbaset`
   - **Imperf.Subj Ativa:** `odagobbakem, odagobbakes, odagobbake, odagobbaken, odagobbaket` | **Passiva:** `odagobbakesem, odagobbakeses, odagobbakese, odagobbakesen, odagobbakeset`
 
-## 100. Raiz `golk-` (congelar a superfície, formar geada)
+## 101. Raiz `golk-` (congelar a superfície, formar geada)
 
 ### 1. Positivo: **golkur** (*congelar a superfície, formar geada*)
 
@@ -6600,7 +6666,7 @@
   - **Imperf.Ind Ativa:** `odagolbbam, odagolbbas, odagolbba, odagolbban, odagolbbat` | **Passiva:** `odagolbbasem, odagolbbases, odagolbbase, odagolbbasen, odagolbbaset`
   - **Imperf.Subj Ativa:** `odagolbbakem, odagolbbakes, odagolbbake, odagolbbaken, odagolbbaket` | **Passiva:** `odagolbbakesem, odagolbbakeses, odagolbbakese, odagolbbakesen, odagolbbakeset`
 
-## 101. Raiz `golp-` (fundir metal no cadinho ardente)
+## 102. Raiz `golp-` (fundir metal no cadinho ardente)
 
 ### 1. Positivo: **golpur** (*fundir metal no cadinho ardente*)
 
@@ -6666,7 +6732,7 @@
   - **Imperf.Ind Ativa:** `odagolpbam, odagolpbas, odagolpba, odagolpban, odagolpbat` | **Passiva:** `odagolpbasem, odagolpbases, odagolpbase, odagolpbasen, odagolpbaset`
   - **Imperf.Subj Ativa:** `odagolpbakem, odagolpbakes, odagolpbake, odagolpbaken, odagolpbaket` | **Passiva:** `odagolpbakesem, odagolpbakeses, odagolpbakese, odagolpbakesen, odagolpbakeset`
 
-## 102. Raiz `gond-` (enxertar ramo frutífero em cavalo vigoroso)
+## 103. Raiz `gond-` (enxertar ramo frutífero em cavalo vigoroso)
 
 ### 1. Positivo: **gondur** (*enxertar ramo frutífero em cavalo vigoroso*)
 
@@ -6732,7 +6798,7 @@
   - **Imperf.Ind Ativa:** `odagondbam, odagondbas, odagondba, odagondban, odagondbat` | **Passiva:** `odagondbasem, odagondbases, odagondbase, odagondbasen, odagondbaset`
   - **Imperf.Subj Ativa:** `odagondbakem, odagondbakes, odagondbake, odagondbaken, odagondbaket` | **Passiva:** `odagondbakesem, odagondbakeses, odagondbakese, odagondbakesen, odagondbakeset`
 
-## 103. Raiz `gork-` (erodir a pedra pela água ou vento)
+## 104. Raiz `gork-` (erodir a pedra pela água ou vento)
 
 ### 1. Positivo: **gorkur** (*erodir a pedra pela água ou vento*)
 
@@ -6798,7 +6864,7 @@
   - **Imperf.Ind Ativa:** `odagorbbam, odagorbbas, odagorbba, odagorbban, odagorbbat` | **Passiva:** `odagorbbasem, odagorbbases, odagorbbase, odagorbbasen, odagorbbaset`
   - **Imperf.Subj Ativa:** `odagorbbakem, odagorbbakes, odagorbbake, odagorbbaken, odagorbbaket` | **Passiva:** `odagorbbakesem, odagorbbakeses, odagorbbakese, odagorbbakesen, odagorbbakeset`
 
-## 104. Raiz `gorp-` (extrair minério da rocha com ponteira)
+## 105. Raiz `gorp-` (extrair minério da rocha com ponteira)
 
 ### 1. Positivo: **gorpur** (*extrair minério da rocha com ponteira*)
 
@@ -6864,7 +6930,7 @@
   - **Imperf.Ind Ativa:** `odagorpbam, odagorpbas, odagorpba, odagorpban, odagorpbat` | **Passiva:** `odagorpbasem, odagorpbases, odagorpbase, odagorpbasen, odagorpbaset`
   - **Imperf.Subj Ativa:** `odagorpbakem, odagorpbakes, odagorpbake, odagorpbaken, odagorpbaket` | **Passiva:** `odagorpbakesem, odagorpbakeses, odagorpbakese, odagorpbakesen, odagorpbakeset`
 
-## 105. Raiz `gulk-` (notificar oficialmente por arauto)
+## 106. Raiz `gulk-` (notificar oficialmente por arauto)
 
 ### 1. Positivo: **gulkur** (*notificar oficialmente por arauto*)
 
@@ -6930,7 +6996,7 @@
   - **Imperf.Ind Ativa:** `odagulbbam, odagulbbas, odagulbba, odagulbban, odagulbbat` | **Passiva:** `odagulbbasem, odagulbbases, odagulbbase, odagulbbasen, odagulbbaset`
   - **Imperf.Subj Ativa:** `odagulbbakem, odagulbbakes, odagulbbake, odagulbbaken, odagulbbaket` | **Passiva:** `odagulbbakesem, odagulbbakeses, odagulbbakese, odagulbbakesen, odagulbbakeset`
 
-## 106. Raiz `gurk-` (emancipar servo ou vassalo)
+## 107. Raiz `gurk-` (emancipar servo ou vassalo)
 
 ### 1. Positivo: **gurkur** (*emancipar servo ou vassalo*)
 
@@ -6996,7 +7062,7 @@
   - **Imperf.Ind Ativa:** `odagurbbam, odagurbbas, odagurbba, odagurbban, odagurbbat` | **Passiva:** `odagurbbasem, odagurbbases, odagurbbase, odagurbbasen, odagurbbaset`
   - **Imperf.Subj Ativa:** `odagurbbakem, odagurbbakes, odagurbbake, odagurbbaken, odagurbbaket` | **Passiva:** `odagurbbakesem, odagurbbakeses, odagurbbakese, odagurbbakesen, odagurbbakeset`
 
-## 107. Raiz `hab-` (acolher, hospedar o viajante)
+## 108. Raiz `hab-` (acolher, hospedar o viajante)
 
 ### 1. Positivo: **habur** (*acolher, hospedar o viajante*)
 
@@ -7062,7 +7128,7 @@
   - **Imperf.Ind Ativa:** `odahabbam, odahabbas, odahabba, odahabban, odahabbat` | **Passiva:** `odahabbasem, odahabbases, odahabbase, odahabbasen, odahabbaset`
   - **Imperf.Subj Ativa:** `odahabbakem, odahabbakes, odahabbake, odahabbaken, odahabbaket` | **Passiva:** `odahabbakesem, odahabbakeses, odahabbakese, odahabbakesen, odahabbakeset`
 
-## 108. Raiz `halk-` (caminhar pela trilha, marchar na neve)
+## 109. Raiz `halk-` (caminhar pela trilha, marchar na neve)
 
 ### 1. Positivo: **halkur** (*caminhar pela trilha, marchar na neve*)
 
@@ -7128,7 +7194,7 @@
   - **Imperf.Ind Ativa:** `odahalbbam, odahalbbas, odahalbba, odahalbban, odahalbbat` | **Passiva:** `odahalbbasem, odahalbbases, odahalbbase, odahalbbasen, odahalbbaset`
   - **Imperf.Subj Ativa:** `odahalbbakem, odahalbbakes, odahalbbake, odahalbbaken, odahalbbaket` | **Passiva:** `odahalbbakesem, odahalbbakeses, odahalbbakese, odahalbbakesen, odahalbbakeset`
 
-## 109. Raiz `halx-` (interpretar presságio sideral)
+## 110. Raiz `halx-` (interpretar presságio sideral)
 
 ### 1. Positivo: **halxur** (*interpretar presságio sideral*)
 
@@ -7194,7 +7260,7 @@
   - **Imperf.Ind Ativa:** `odahalxbam, odahalxbas, odahalxba, odahalxban, odahalxbat` | **Passiva:** `odahalxbasem, odahalxbases, odahalxbase, odahalxbasen, odahalxbaset`
   - **Imperf.Subj Ativa:** `odahalxbakem, odahalxbakes, odahalxbake, odahalxbaken, odahalxbaket` | **Passiva:** `odahalxbakesem, odahalxbakeses, odahalxbakese, odahalxbakesen, odahalxbakeset`
 
-## 110. Raiz `helv-` (contemplar a quietude eterna nos Salões Atemporais do Criador)
+## 111. Raiz `helv-` (contemplar a quietude eterna nos Salões Atemporais do Criador)
 
 ### 1. Positivo: **helvur** (*contemplar a quietude eterna nos Salões Atemporais do Criador*)
 
@@ -7260,7 +7326,7 @@
   - **Imperf.Ind Ativa:** `odahelvbam, odahelvbas, odahelvba, odahelvban, odahelvbat` | **Passiva:** `odahelvbasem, odahelvbases, odahelvbase, odahelvbasen, odahelvbaset`
   - **Imperf.Subj Ativa:** `odahelvbakem, odahelvbakes, odahelvbake, odahelvbaken, odahelvbaket` | **Passiva:** `odahelvbakesem, odahelvbakeses, odahelvbakese, odahelvbakesen, odahelvbakeset`
 
-## 111. Raiz `hesk-` (perguntar, indagar)
+## 112. Raiz `hesk-` (perguntar, indagar)
 
 ### 1. Positivo: **heskur** (*perguntar, indagar*)
 
@@ -7326,7 +7392,7 @@
   - **Imperf.Ind Ativa:** `odahesbbam, odahesbbas, odahesbba, odahesbban, odahesbbat` | **Passiva:** `odahesbbasem, odahesbbases, odahesbbase, odahesbbasen, odahesbbaset`
   - **Imperf.Subj Ativa:** `odahesbbakem, odahesbbakes, odahesbbake, odahesbbaken, odahesbbaket` | **Passiva:** `odahesbbakesem, odahesbbakeses, odahesbbakese, odahesbbakesen, odahesbbakeset`
 
-## 112. Raiz `holk-` (rachar o manto sob tensao formando fendas profundas)
+## 113. Raiz `holk-` (rachar o manto sob tensao formando fendas profundas)
 
 ### 1. Positivo: **holkur** (*rachar o manto sob tensao formando fendas profundas*)
 
@@ -7392,7 +7458,7 @@
   - **Imperf.Ind Ativa:** `odaholbbam, odaholbbas, odaholbba, odaholbban, odaholbbat` | **Passiva:** `odaholbbasem, odaholbbases, odaholbbase, odaholbbasen, odaholbbaset`
   - **Imperf.Subj Ativa:** `odaholbbakem, odaholbbakes, odaholbbake, odaholbbaken, odaholbbaket` | **Passiva:** `odaholbbakesem, odaholbbakeses, odaholbbakese, odaholbbakesen, odaholbbakeset`
 
-## 113. Raiz `holp-` (mergulhar em sono profundo com visões oníricas)
+## 114. Raiz `holp-` (mergulhar em sono profundo com visões oníricas)
 
 ### 1. Positivo: **holpur** (*mergulhar em sono profundo com visões oníricas*)
 
@@ -7458,7 +7524,7 @@
   - **Imperf.Ind Ativa:** `odaholpbam, odaholpbas, odaholpba, odaholpban, odaholpbat` | **Passiva:** `odaholpbasem, odaholpbases, odaholpbase, odaholpbasen, odaholpbaset`
   - **Imperf.Subj Ativa:** `odaholpbakem, odaholpbakes, odaholpbake, odaholpbaken, odaholpbaket` | **Passiva:** `odaholpbakesem, odaholpbakeses, odaholpbakese, odaholpbakesen, odaholpbakeset`
 
-## 114. Raiz `hulb-` (sitiar fortaleza erguendo trincheiras e circunvalação de cerco)
+## 115. Raiz `hulb-` (sitiar fortaleza erguendo trincheiras e circunvalação de cerco)
 
 ### 1. Positivo: **hulbur** (*sitiar fortaleza erguendo trincheiras e circunvalação de cerco*)
 
@@ -7524,7 +7590,7 @@
   - **Imperf.Ind Ativa:** `odahulbbam, odahulbbas, odahulbba, odahulbban, odahulbbat` | **Passiva:** `odahulbbasem, odahulbbases, odahulbbase, odahulbbasen, odahulbbaset`
   - **Imperf.Subj Ativa:** `odahulbbakem, odahulbbakes, odahulbbake, odahulbbaken, odahulbbaket` | **Passiva:** `odahulbbakesem, odahulbbakeses, odahulbbakese, odahulbbakesen, odahulbbakeset`
 
-## 115. Raiz `hurv-` (ecoar e ressoar em abobadas subterraneas profundas)
+## 116. Raiz `hurv-` (ecoar e ressoar em abobadas subterraneas profundas)
 
 ### 1. Positivo: **hurvur** (*ecoar e ressoar em abobadas subterraneas profundas*)
 
@@ -7590,7 +7656,7 @@
   - **Imperf.Ind Ativa:** `odahurvbam, odahurvbas, odahurvba, odahurvban, odahurvbat` | **Passiva:** `odahurvbasem, odahurvbases, odahurvbase, odahurvbasen, odahurvbaset`
   - **Imperf.Subj Ativa:** `odahurvbakem, odahurvbakes, odahurvbake, odahurvbaken, odahurvbaket` | **Passiva:** `odahurvbakesem, odahurvbakeses, odahurvbakese, odahurvbakesen, odahurvbakeset`
 
-## 116. Raiz `hux-` (vestir, cobrir com roupa)
+## 117. Raiz `hux-` (vestir, cobrir com roupa)
 
 ### 1. Positivo: **huxur** (*vestir, cobrir com roupa*)
 
@@ -7656,7 +7722,7 @@
   - **Imperf.Ind Ativa:** `odahuxbam, odahuxbas, odahuxba, odahuxban, odahuxbat` | **Passiva:** `odahuxbasem, odahuxbases, odahuxbase, odahuxbasen, odahuxbaset`
   - **Imperf.Subj Ativa:** `odahuxbakem, odahuxbakes, odahuxbake, odahuxbaken, odahuxbaket` | **Passiva:** `odahuxbakesem, odahuxbakeses, odahuxbakese, odahuxbakesen, odahuxbakeset`
 
-## 117. Raiz `huxp-` (dobrar os linhos e cobertas na arca)
+## 118. Raiz `huxp-` (dobrar os linhos e cobertas na arca)
 
 ### 1. Positivo: **huxpur** (*dobrar os linhos e cobertas na arca*)
 
@@ -7722,7 +7788,7 @@
   - **Imperf.Ind Ativa:** `odahuxpbam, odahuxpbas, odahuxpba, odahuxpban, odahuxpbat` | **Passiva:** `odahuxpbasem, odahuxpbases, odahuxpbase, odahuxpbasen, odahuxpbaset`
   - **Imperf.Subj Ativa:** `odahuxpbakem, odahuxpbakes, odahuxpbake, odahuxpbaken, odahuxpbaket` | **Passiva:** `odahuxpbakesem, odahuxpbakeses, odahuxpbakese, odahuxpbakesen, odahuxpbakeset`
 
-## 118. Raiz `illan-` (iluminar por dentro, inspirar luz (in+lan))
+## 119. Raiz `illan-` (iluminar por dentro, inspirar luz (in+lan))
 
 ### 1. Positivo: **illanur** (*iluminar por dentro, inspirar luz (in+lan)*)
 
@@ -7788,7 +7854,7 @@
   - **Imperf.Ind Ativa:** `odaillambam, odaillambas, odaillamba, odaillamban, odaillambat` | **Passiva:** `odaillambasem, odaillambases, odaillambase, odaillambasen, odaillambaset`
   - **Imperf.Subj Ativa:** `odaillambakem, odaillambakes, odaillambake, odaillambaken, odaillambaket` | **Passiva:** `odaillambakesem, odaillambakeses, odaillambakese, odaillambakesen, odaillambakeset`
 
-## 119. Raiz `illot-` (embelezar, adornar (in+lota))
+## 120. Raiz `illot-` (embelezar, adornar (in+lota))
 
 ### 1. Positivo: **illotur** (*embelezar, adornar (in+lota)*)
 
@@ -7854,7 +7920,7 @@
   - **Imperf.Ind Ativa:** `odaillobbam, odaillobbas, odaillobba, odaillobban, odaillobbat` | **Passiva:** `odaillobbasem, odaillobbases, odaillobbase, odaillobbasen, odaillobbaset`
   - **Imperf.Subj Ativa:** `odaillobbakem, odaillobbakes, odaillobbake, odaillobbaken, odaillobbaket` | **Passiva:** `odaillobbakesem, odaillobbakeses, odaillobbakese, odaillobbakesen, odaillobbakeset`
 
-## 120. Raiz `in-` (iniciar, dar princípio a)
+## 121. Raiz `in-` (iniciar, dar princípio a)
 
 ### 1. Positivo: **inur** (*iniciar, dar princípio a*)
 
@@ -7920,7 +7986,7 @@
   - **Imperf.Ind Ativa:** `odaimbam, odaimbas, odaimba, odaimban, odaimbat` | **Passiva:** `odaimbasem, odaimbases, odaimbase, odaimbasen, odaimbaset`
   - **Imperf.Subj Ativa:** `odaimbakem, odaimbakes, odaimbake, odaimbaken, odaimbaket` | **Passiva:** `odaimbakesem, odaimbakeses, odaimbakese, odaimbakesen, odaimbakeset`
 
-## 121. Raiz `intul-` (enlouquecer, inflamar-se em furor)
+## 122. Raiz `intul-` (enlouquecer, inflamar-se em furor)
 
 ### 1. Positivo: **intulur** (*enlouquecer, inflamar-se em furor*)
 
@@ -7986,7 +8052,7 @@
   - **Imperf.Ind Ativa:** `odaintulbam, odaintulbas, odaintulba, odaintulban, odaintulbat` | **Passiva:** `odaintulbasem, odaintulbases, odaintulbase, odaintulbasen, odaintulbaset`
   - **Imperf.Subj Ativa:** `odaintulbakem, odaintulbakes, odaintulbake, odaintulbaken, odaintulbaket` | **Passiva:** `odaintulbakesem, odaintulbakeses, odaintulbakese, odaintulbakesen, odaintulbakeset`
 
-## 122. Raiz `is-` (compreender, saber, conhecer)
+## 123. Raiz `is-` (compreender, saber, conhecer)
 
 ### 1. Positivo: **isur** (*compreender, saber, conhecer*)
 
@@ -8052,7 +8118,7 @@
   - **Imperf.Ind Ativa:** `odaisbam, odaisbas, odaisba, odaisban, odaisbat` | **Passiva:** `odaisbasem, odaisbases, odaisbase, odaisbasen, odaisbaset`
   - **Imperf.Subj Ativa:** `odaisbakem, odaisbakes, odaisbake, odaisbaken, odaisbaket` | **Passiva:** `odaisbakesem, odaisbakeses, odaisbakese, odaisbakesen, odaisbakeset`
 
-## 123. Raiz `kadp-` (medir a distância angular até o topo do céu)
+## 124. Raiz `kadp-` (medir a distância angular até o topo do céu)
 
 ### 1. Positivo: **kadpur** (*medir a distância angular até o topo do céu*)
 
@@ -8118,7 +8184,7 @@
   - **Imperf.Ind Ativa:** `odakadpbam, odakadpbas, odakadpba, odakadpban, odakadpbat` | **Passiva:** `odakadpbasem, odakadpbases, odakadpbase, odakadpbasen, odakadpbaset`
   - **Imperf.Subj Ativa:** `odakadpbakem, odakadpbakes, odakadpbake, odakadpbaken, odakadpbaket` | **Passiva:** `odakadpbakesem, odakadpbakeses, odakadpbakese, odakadpbakesen, odakadpbakeset`
 
-## 124. Raiz `kam-` (embriagar, inebriar)
+## 125. Raiz `kam-` (embriagar, inebriar)
 
 ### 1. Positivo: **kamur** (*embriagar, inebriar*)
 
@@ -8184,7 +8250,7 @@
   - **Imperf.Ind Ativa:** `odakambam, odakambas, odakamba, odakamban, odakambat` | **Passiva:** `odakambasem, odakambases, odakambase, odakambasen, odakambaset`
   - **Imperf.Subj Ativa:** `odakambakem, odakambakes, odakambake, odakambaken, odakambaket` | **Passiva:** `odakambakesem, odakambakeses, odakambakese, odakambakesen, odakambakeset`
 
-## 125. Raiz `kamb-` (adubar o solo com composto e cinzas)
+## 126. Raiz `kamb-` (adubar o solo com composto e cinzas)
 
 ### 1. Positivo: **kambur** (*adubar o solo com composto e cinzas*)
 
@@ -8250,7 +8316,7 @@
   - **Imperf.Ind Ativa:** `odakambbam, odakambbas, odakambba, odakambban, odakambbat` | **Passiva:** `odakambbasem, odakambbases, odakambbase, odakambbasen, odakambbaset`
   - **Imperf.Subj Ativa:** `odakambbakem, odakambbakes, odakambbake, odakambbaken, odakambbaket` | **Passiva:** `odakambbakesem, odakambbakeses, odakambbakese, odakambbakesen, odakambbakeset`
 
-## 126. Raiz `karp-` (firmar aliança diplomática)
+## 127. Raiz `karp-` (firmar aliança diplomática)
 
 ### 1. Positivo: **karpur** (*firmar aliança diplomática*)
 
@@ -8316,7 +8382,7 @@
   - **Imperf.Ind Ativa:** `odakarpbam, odakarpbas, odakarpba, odakarpban, odakarpbat` | **Passiva:** `odakarpbasem, odakarpbases, odakarpbase, odakarpbasen, odakarpbaset`
   - **Imperf.Subj Ativa:** `odakarpbakem, odakarpbakes, odakarpbake, odakarpbaken, odakarpbaket` | **Passiva:** `odakarpbakesem, odakarpbakeses, odakarpbakese, odakarpbakesen, odakarpbakeset`
 
-## 127. Raiz `kas-` (brotar manancial da rocha viva)
+## 128. Raiz `kas-` (brotar manancial da rocha viva)
 
 ### 1. Positivo: **kasur** (*brotar manancial da rocha viva*)
 
@@ -8382,7 +8448,7 @@
   - **Imperf.Ind Ativa:** `odakasbam, odakasbas, odakasba, odakasban, odakasbat` | **Passiva:** `odakasbasem, odakasbases, odakasbase, odakasbasen, odakasbaset`
   - **Imperf.Subj Ativa:** `odakasbakem, odakasbakes, odakasbake, odakasbaken, odakasbaket` | **Passiva:** `odakasbakesem, odakasbakeses, odakasbakese, odakasbakesen, odakasbakeset`
 
-## 128. Raiz `kask-` (coser, costurar)
+## 129. Raiz `kask-` (coser, costurar)
 
 ### 1. Positivo: **kaskur** (*coser, costurar*)
 
@@ -8448,7 +8514,7 @@
   - **Imperf.Ind Ativa:** `odakasbbam, odakasbbas, odakasbba, odakasbban, odakasbbat` | **Passiva:** `odakasbbasem, odakasbbases, odakasbbase, odakasbbasen, odakasbbaset`
   - **Imperf.Subj Ativa:** `odakasbbakem, odakasbbakes, odakasbbake, odakasbbaken, odakasbbaket` | **Passiva:** `odakasbbakesem, odakasbbakeses, odakasbbakese, odakasbbakesen, odakasbbakeset`
 
-## 129. Raiz `kasp-` (traçar letras caligráficas com pena de cálamo)
+## 130. Raiz `kasp-` (traçar letras caligráficas com pena de cálamo)
 
 ### 1. Positivo: **kaspur** (*traçar letras caligráficas com pena de cálamo*)
 
@@ -8514,7 +8580,7 @@
   - **Imperf.Ind Ativa:** `odakaspbam, odakaspbas, odakaspba, odakaspban, odakaspbat` | **Passiva:** `odakaspbasem, odakaspbases, odakaspbase, odakaspbasen, odakaspbaset`
   - **Imperf.Subj Ativa:** `odakaspbakem, odakaspbakes, odakaspbake, odakaspbaken, odakaspbaket` | **Passiva:** `odakaspbakesem, odakaspbakeses, odakaspbakese, odakaspbakesen, odakaspbakeset`
 
-## 130. Raiz `kaz-` (viver, nascer, habitar)
+## 131. Raiz `kaz-` (viver, nascer, habitar)
 
 ### 1. Positivo: **kazur** (*viver, nascer, habitar*)
 
@@ -8580,7 +8646,7 @@
   - **Imperf.Ind Ativa:** `odakazbam, odakazbas, odakazba, odakazban, odakazbat` | **Passiva:** `odakazbasem, odakazbases, odakazbase, odakazbasen, odakazbaset`
   - **Imperf.Subj Ativa:** `odakazbakem, odakazbakes, odakazbake, odakazbaken, odakazbaket` | **Passiva:** `odakazbakesem, odakazbakeses, odakazbakese, odakazbakesen, odakazbakeset`
 
-## 131. Raiz `kel-` (mover em conjunto, manobrar)
+## 132. Raiz `kel-` (mover em conjunto, manobrar)
 
 ### 1. Positivo: **kelur** (*mover em conjunto, manobrar*)
 
@@ -8646,7 +8712,7 @@
   - **Imperf.Ind Ativa:** `odakelbam, odakelbas, odakelba, odakelban, odakelbat` | **Passiva:** `odakelbasem, odakelbases, odakelbase, odakelbasen, odakelbaset`
   - **Imperf.Subj Ativa:** `odakelbakem, odakelbakes, odakelbake, odakelbaken, odakelbaket` | **Passiva:** `odakelbakesem, odakelbakeses, odakelbakese, odakelbakesen, odakelbakeset`
 
-## 132. Raiz `kel'un-` (escoltar, acompanhar em guarda)
+## 133. Raiz `kel'un-` (escoltar, acompanhar em guarda)
 
 ### 1. Positivo: **kel'unur** (*escoltar, acompanhar em guarda*)
 
@@ -8712,7 +8778,7 @@
   - **Imperf.Ind Ativa:** `odakel'umbam, odakel'umbas, odakel'umba, odakel'umban, odakel'umbat` | **Passiva:** `odakel'umbasem, odakel'umbases, odakel'umbase, odakel'umbasen, odakel'umbaset`
   - **Imperf.Subj Ativa:** `odakel'umbakem, odakel'umbakes, odakel'umbake, odakel'umbaken, odakel'umbaket` | **Passiva:** `odakel'umbakesem, odakel'umbakeses, odakel'umbakese, odakel'umbakesen, odakel'umbakeset`
 
-## 133. Raiz `kelad-` (aproximar-se, vir, convocar)
+## 134. Raiz `kelad-` (aproximar-se, vir, convocar)
 
 ### 1. Positivo: **keladur** (*aproximar-se, vir, convocar*)
 
@@ -8778,7 +8844,7 @@
   - **Imperf.Ind Ativa:** `odakeladbam, odakeladbas, odakeladba, odakeladban, odakeladbat` | **Passiva:** `odakeladbasem, odakeladbases, odakeladbase, odakeladbasen, odakeladbaset`
   - **Imperf.Subj Ativa:** `odakeladbakem, odakeladbakes, odakeladbake, odakeladbaken, odakeladbaket` | **Passiva:** `odakeladbakesem, odakeladbakeses, odakeladbakese, odakeladbakesen, odakeladbakeset`
 
-## 134. Raiz `kelb-` (tingir o estofo na tina de pigmento)
+## 135. Raiz `kelb-` (tingir o estofo na tina de pigmento)
 
 ### 1. Positivo: **kelbur** (*tingir o estofo na tina de pigmento*)
 
@@ -8844,7 +8910,7 @@
   - **Imperf.Ind Ativa:** `odakelbbam, odakelbbas, odakelbba, odakelbban, odakelbbat` | **Passiva:** `odakelbbasem, odakelbbases, odakelbbase, odakelbbasen, odakelbbaset`
   - **Imperf.Subj Ativa:** `odakelbbakem, odakelbbakes, odakelbbake, odakelbbaken, odakelbbaket` | **Passiva:** `odakelbbakesem, odakelbbakeses, odakelbbakese, odakelbbakesen, odakelbbakeset`
 
-## 135. Raiz `keld-` (lapidar facetas de cristais no rebolo)
+## 136. Raiz `keld-` (lapidar facetas de cristais no rebolo)
 
 ### 1. Positivo: **keldur** (*lapidar facetas de cristais no rebolo*)
 
@@ -8910,7 +8976,7 @@
   - **Imperf.Ind Ativa:** `odakelbbam, odakelbbas, odakelbba, odakelbban, odakelbbat` | **Passiva:** `odakelbbasem, odakelbbases, odakelbbase, odakelbbasen, odakelbbaset`
   - **Imperf.Subj Ativa:** `odakelbbakem, odakelbbakes, odakelbbake, odakelbbaken, odakelbbaket` | **Passiva:** `odakelbbakesem, odakelbbakeses, odakelbbakese, odakelbbakesen, odakelbbakeset`
 
-## 136. Raiz `kelex-` (escapar, evadir-se)
+## 137. Raiz `kelex-` (escapar, evadir-se)
 
 ### 1. Positivo: **kelexur** (*escapar, evadir-se*)
 
@@ -8976,7 +9042,7 @@
   - **Imperf.Ind Ativa:** `odakelexbam, odakelexbas, odakelexba, odakelexban, odakelexbat` | **Passiva:** `odakelexbasem, odakelexbases, odakelexbase, odakelexbasen, odakelexbaset`
   - **Imperf.Subj Ativa:** `odakelexbakem, odakelexbakes, odakelexbake, odakelexbaken, odakelexbaket` | **Passiva:** `odakelexbakesem, odakelexbakeses, odakelexbakese, odakelexbakesen, odakelexbakeset`
 
-## 137. Raiz `kellitr-` (cantar em coro, harmonizar em conjunto)
+## 138. Raiz `kellitr-` (cantar em coro, harmonizar em conjunto)
 
 ### 1. Positivo: **kellitrur** (*cantar em coro, harmonizar em conjunto*)
 
@@ -9042,7 +9108,7 @@
   - **Imperf.Ind Ativa:** `odakellitrbam, odakellitrbas, odakellitrba, odakellitrban, odakellitrbat` | **Passiva:** `odakellitrbasem, odakellitrbases, odakellitrbase, odakellitrbasen, odakellitrbaset`
   - **Imperf.Subj Ativa:** `odakellitrbakem, odakellitrbakes, odakellitrbake, odakellitrbaken, odakellitrbaket` | **Passiva:** `odakellitrbakesem, odakellitrbakeses, odakellitrbakese, odakellitrbakesen, odakellitrbakeset`
 
-## 138. Raiz `kelp-` (alinhar dois astros no mesmo grau sideral)
+## 139. Raiz `kelp-` (alinhar dois astros no mesmo grau sideral)
 
 ### 1. Positivo: **kelpur** (*alinhar dois astros no mesmo grau sideral*)
 
@@ -9108,7 +9174,7 @@
   - **Imperf.Ind Ativa:** `odakelpbam, odakelpbas, odakelpba, odakelpban, odakelpbat` | **Passiva:** `odakelpbasem, odakelpbases, odakelpbase, odakelpbasen, odakelpbaset`
   - **Imperf.Subj Ativa:** `odakelpbakem, odakelpbakes, odakelpbake, odakelpbaken, odakelpbaket` | **Passiva:** `odakelpbakesem, odakelpbakeses, odakelpbakese, odakelpbakesen, odakelpbakeset`
 
-## 139. Raiz `kerb-` (revelar o desígnio soberano e o destino glorioso dos povos livres)
+## 140. Raiz `kerb-` (revelar o desígnio soberano e o destino glorioso dos povos livres)
 
 ### 1. Positivo: **kerbur** (*revelar o desígnio soberano e o destino glorioso dos povos livres*)
 
@@ -9174,7 +9240,7 @@
   - **Imperf.Ind Ativa:** `odakerbbam, odakerbbas, odakerbba, odakerbban, odakerbbat` | **Passiva:** `odakerbbasem, odakerbbases, odakerbbase, odakerbbasen, odakerbbaset`
   - **Imperf.Subj Ativa:** `odakerbbakem, odakerbbakes, odakerbbake, odakerbbaken, odakerbbaket` | **Passiva:** `odakerbbakesem, odakerbbakeses, odakerbbakese, odakerbbakesen, odakerbbakeset`
 
-## 140. Raiz `kerd-` (cortar lenha, talhar madeira)
+## 141. Raiz `kerd-` (cortar lenha, talhar madeira)
 
 ### 1. Positivo: **kerdur** (*cortar lenha, talhar madeira*)
 
@@ -9240,7 +9306,7 @@
   - **Imperf.Ind Ativa:** `odakerdbam, odakerdbas, odakerdba, odakerdban, odakerdbat` | **Passiva:** `odakerdbasem, odakerdbases, odakerdbase, odakerdbasen, odakerdbaset`
   - **Imperf.Subj Ativa:** `odakerdbakem, odakerdbakes, odakerdbake, odakerdbaken, odakerdbaket` | **Passiva:** `odakerdbakesem, odakerdbakeses, odakerdbakese, odakerdbakesen, odakerdbakeset`
 
-## 141. Raiz `kerp-` (granizar, chover pedras de gelo)
+## 142. Raiz `kerp-` (granizar, chover pedras de gelo)
 
 ### 1. Positivo: **kerpur** (*granizar, chover pedras de gelo*)
 
@@ -9306,7 +9372,7 @@
   - **Imperf.Ind Ativa:** `odakerpbam, odakerpbas, odakerpba, odakerpban, odakerpbat` | **Passiva:** `odakerpbasem, odakerpbases, odakerpbase, odakerpbasen, odakerpbaset`
   - **Imperf.Subj Ativa:** `odakerpbakem, odakerpbakes, odakerpbake, odakerpbaken, odakerpbaket` | **Passiva:** `odakerpbakesem, odakerpbakeses, odakerpbakese, odakerpbakesen, odakerpbakeset`
 
-## 142. Raiz `kev-` (escoltar caravana pelos passos alpinos)
+## 143. Raiz `kev-` (escoltar caravana pelos passos alpinos)
 
 ### 1. Positivo: **kevur** (*escoltar caravana pelos passos alpinos*)
 
@@ -9372,7 +9438,7 @@
   - **Imperf.Ind Ativa:** `odakevbam, odakevbas, odakevba, odakevban, odakevbat` | **Passiva:** `odakevbasem, odakevbases, odakevbase, odakevbasen, odakevbaset`
   - **Imperf.Subj Ativa:** `odakevbakem, odakevbakes, odakevbake, odakevbaken, odakevbaket` | **Passiva:** `odakevbakesem, odakevbakeses, odakevbakese, odakevbakesen, odakevbakeset`
 
-## 143. Raiz `kil-` (engomar a gola plissada de Chancelaria)
+## 144. Raiz `kil-` (engomar a gola plissada de Chancelaria)
 
 ### 1. Positivo: **kilur** (*engomar a gola plissada de Chancelaria*)
 
@@ -9438,7 +9504,7 @@
   - **Imperf.Ind Ativa:** `odakilbam, odakilbas, odakilba, odakilban, odakilbat` | **Passiva:** `odakilbasem, odakilbases, odakilbase, odakilbasen, odakilbaset`
   - **Imperf.Subj Ativa:** `odakilbakem, odakilbakes, odakilbake, odakilbaken, odakilbaket` | **Passiva:** `odakilbakesem, odakilbakeses, odakilbakese, odakilbakesen, odakilbakeset`
 
-## 144. Raiz `kilk-` (ouvir com nitidez, escutar atento)
+## 145. Raiz `kilk-` (ouvir com nitidez, escutar atento)
 
 ### 1. Positivo: **kilkur** (*ouvir com nitidez, escutar atento*)
 
@@ -9504,7 +9570,7 @@
   - **Imperf.Ind Ativa:** `odakilbbam, odakilbbas, odakilbba, odakilbban, odakilbbat` | **Passiva:** `odakilbbasem, odakilbbases, odakilbbase, odakilbbasen, odakilbbaset`
   - **Imperf.Subj Ativa:** `odakilbbakem, odakilbbakes, odakilbbake, odakilbbaken, odakilbbaket` | **Passiva:** `odakilbbakesem, odakilbbakeses, odakilbbakese, odakilbbakesen, odakilbbakeset`
 
-## 145. Raiz `kindr-` (unir em comunhão, aliar)
+## 146. Raiz `kindr-` (unir em comunhão, aliar)
 
 ### 1. Positivo: **kindrur** (*unir em comunhão, aliar*)
 
@@ -9570,7 +9636,7 @@
   - **Imperf.Ind Ativa:** `odakindrbam, odakindrbas, odakindrba, odakindrban, odakindrbat` | **Passiva:** `odakindrbasem, odakindrbases, odakindrbase, odakindrbasen, odakindrbaset`
   - **Imperf.Subj Ativa:** `odakindrbakem, odakindrbakes, odakindrbake, odakindrbaken, odakindrbaket` | **Passiva:** `odakindrbakesem, odakindrbakeses, odakindrbakese, odakindrbakesen, odakindrbakeset`
 
-## 146. Raiz `kir-` (transcrever códice em pergaminho limpo)
+## 147. Raiz `kir-` (transcrever códice em pergaminho limpo)
 
 ### 1. Positivo: **kirur** (*transcrever códice em pergaminho limpo*)
 
@@ -9636,7 +9702,7 @@
   - **Imperf.Ind Ativa:** `odakirbam, odakirbas, odakirba, odakirban, odakirbat` | **Passiva:** `odakirbasem, odakirbases, odakirbase, odakirbasen, odakirbaset`
   - **Imperf.Subj Ativa:** `odakirbakem, odakirbakes, odakirbake, odakirbaken, odakirbaket` | **Passiva:** `odakirbakesem, odakirbakeses, odakirbakese, odakirbakesen, odakirbakeset`
 
-## 147. Raiz `kirb-` (refratar a luz do sol em leque policromático através de cristal)
+## 148. Raiz `kirb-` (refratar a luz do sol em leque policromático através de cristal)
 
 ### 1. Positivo: **kirbur** (*refratar a luz do sol em leque policromático através de cristal*)
 
@@ -9702,7 +9768,7 @@
   - **Imperf.Ind Ativa:** `odakirbbam, odakirbbas, odakirbba, odakirbban, odakirbbat` | **Passiva:** `odakirbbasem, odakirbbases, odakirbbase, odakirbbasen, odakirbbaset`
   - **Imperf.Subj Ativa:** `odakirbbakem, odakirbbakes, odakirbbake, odakirbbaken, odakirbbaket` | **Passiva:** `odakirbbakesem, odakirbbakeses, odakirbbakese, odakirbbakesen, odakirbbakeset`
 
-## 148. Raiz `kirk-` (temperar o aço em água gélida)
+## 149. Raiz `kirk-` (temperar o aço em água gélida)
 
 ### 1. Positivo: **kirkur** (*temperar o aço em água gélida*)
 
@@ -9768,7 +9834,7 @@
   - **Imperf.Ind Ativa:** `odakirbbam, odakirbbas, odakirbba, odakirbban, odakirbbat` | **Passiva:** `odakirbbasem, odakirbbases, odakirbbase, odakirbbasen, odakirbbaset`
   - **Imperf.Subj Ativa:** `odakirbbakem, odakirbbakes, odakirbbake, odakirbbaken, odakirbbaket` | **Passiva:** `odakirbbakesem, odakirbbakeses, odakirbbakese, odakirbbakesen, odakirbbakeset`
 
-## 149. Raiz `kirp-` (transmitir o anel de sinete ao primogênito)
+## 150. Raiz `kirp-` (transmitir o anel de sinete ao primogênito)
 
 ### 1. Positivo: **kirpur** (*transmitir o anel de sinete ao primogênito*)
 
@@ -9834,7 +9900,7 @@
   - **Imperf.Ind Ativa:** `odakirpbam, odakirpbas, odakirpba, odakirpban, odakirpbat` | **Passiva:** `odakirpbasem, odakirpbases, odakirpbase, odakirpbasen, odakirpbaset`
   - **Imperf.Subj Ativa:** `odakirpbakem, odakirpbakes, odakirpbake, odakirpbaken, odakirpbaket` | **Passiva:** `odakirpbakesem, odakirpbakeses, odakirpbakese, odakirpbakesen, odakirpbakeset`
 
-## 150. Raiz `kit-` (escrever, lavrar em registro)
+## 151. Raiz `kit-` (escrever, lavrar em registro)
 
 ### 1. Positivo: **kitur** (*escrever, lavrar em registro*)
 
@@ -9900,7 +9966,7 @@
   - **Imperf.Ind Ativa:** `odakibbam, odakibbas, odakibba, odakibban, odakibbat` | **Passiva:** `odakibbasem, odakibbases, odakibbase, odakibbasen, odakibbaset`
   - **Imperf.Subj Ativa:** `odakibbakem, odakibbakes, odakibbake, odakibbaken, odakibbaket` | **Passiva:** `odakibbakesem, odakibbakeses, odakibbakese, odakibbakesen, odakibbakeset`
 
-## 151. Raiz `klad-` (trancar a porta com ferrolho contra a tempestade)
+## 152. Raiz `klad-` (trancar a porta com ferrolho contra a tempestade)
 
 ### 1. Positivo: **kladur** (*trancar a porta com ferrolho contra a tempestade*)
 
@@ -9966,7 +10032,7 @@
   - **Imperf.Ind Ativa:** `odakladbam, odakladbas, odakladba, odakladban, odakladbat` | **Passiva:** `odakladbasem, odakladbases, odakladbase, odakladbasen, odakladbaset`
   - **Imperf.Subj Ativa:** `odakladbakem, odakladbakes, odakladbake, odakladbaken, odakladbaket` | **Passiva:** `odakladbakesem, odakladbakeses, odakladbakese, odakladbakesen, odakladbakeset`
 
-## 152. Raiz `kolb-` (lançar tributo régio sobre feudos vassalos)
+## 153. Raiz `kolb-` (lançar tributo régio sobre feudos vassalos)
 
 ### 1. Positivo: **kolbur** (*lançar tributo régio sobre feudos vassalos*)
 
@@ -10032,7 +10098,7 @@
   - **Imperf.Ind Ativa:** `odakolbbam, odakolbbas, odakolbba, odakolbban, odakolbbat` | **Passiva:** `odakolbbasem, odakolbbases, odakolbbase, odakolbbasen, odakolbbaset`
   - **Imperf.Subj Ativa:** `odakolbbakem, odakolbbakes, odakolbbake, odakolbbaken, odakolbbaket` | **Passiva:** `odakolbbakesem, odakolbbakeses, odakolbbakese, odakolbbakesen, odakolbbakeset`
 
-## 153. Raiz `kolm-` (polir lajes de mármore com areia)
+## 154. Raiz `kolm-` (polir lajes de mármore com areia)
 
 ### 1. Positivo: **kolmur** (*polir lajes de mármore com areia*)
 
@@ -10098,7 +10164,7 @@
   - **Imperf.Ind Ativa:** `odakolmbam, odakolmbas, odakolmba, odakolmban, odakolmbat` | **Passiva:** `odakolmbasem, odakolmbases, odakolmbase, odakolmbasen, odakolmbaset`
   - **Imperf.Subj Ativa:** `odakolmbakem, odakolmbakes, odakolmbake, odakolmbaken, odakolmbaket` | **Passiva:** `odakolmbakesem, odakolmbakeses, odakolmbakese, odakolmbakesen, odakolmbakeset`
 
-## 154. Raiz `kom-` (beber, sorver)
+## 155. Raiz `kom-` (beber, sorver)
 
 ### 1. Positivo: **komur** (*beber, sorver*)
 
@@ -10164,7 +10230,7 @@
   - **Imperf.Ind Ativa:** `odakombam, odakombas, odakomba, odakomban, odakombat` | **Passiva:** `odakombasem, odakombases, odakombase, odakombasen, odakombaset`
   - **Imperf.Subj Ativa:** `odakombakem, odakombakes, odakombake, odakombaken, odakombaket` | **Passiva:** `odakombakesem, odakombakeses, odakombakese, odakombakesen, odakombakeset`
 
-## 155. Raiz `korb-` (engrenar dentes e pinhões de bronze em mecanismo de relojoaria)
+## 156. Raiz `korb-` (engrenar dentes e pinhões de bronze em mecanismo de relojoaria)
 
 ### 1. Positivo: **korbur** (*engrenar dentes e pinhões de bronze em mecanismo de relojoaria*)
 
@@ -10230,7 +10296,7 @@
   - **Imperf.Ind Ativa:** `odakorbbam, odakorbbas, odakorbba, odakorbban, odakorbbat` | **Passiva:** `odakorbbasem, odakorbbases, odakorbbase, odakorbbasen, odakorbbaset`
   - **Imperf.Subj Ativa:** `odakorbbakem, odakorbbakes, odakorbbake, odakorbbaken, odakorbbaket` | **Passiva:** `odakorbbakesem, odakorbbakeses, odakorbbakese, odakorbbakesen, odakorbbakeset`
 
-## 156. Raiz `korp-` (fermentar levedura viva em massa de farinha fina)
+## 157. Raiz `korp-` (fermentar levedura viva em massa de farinha fina)
 
 ### 1. Positivo: **korpur** (*fermentar levedura viva em massa de farinha fina*)
 
@@ -10296,7 +10362,7 @@
   - **Imperf.Ind Ativa:** `odakorpbam, odakorpbas, odakorpba, odakorpban, odakorpbat` | **Passiva:** `odakorpbasem, odakorpbases, odakorpbase, odakorpbasen, odakorpbaset`
   - **Imperf.Subj Ativa:** `odakorpbakem, odakorpbakes, odakorpbake, odakorpbaken, odakorpbaket` | **Passiva:** `odakorpbakesem, odakorpbakeses, odakorpbakese, odakorpbakesen, odakorpbakeset`
 
-## 157. Raiz `kos-` (esconder, sepultar, escavar)
+## 158. Raiz `kos-` (esconder, sepultar, escavar)
 
 ### 1. Positivo: **kosur** (*esconder, sepultar, escavar*)
 
@@ -10362,7 +10428,7 @@
   - **Imperf.Ind Ativa:** `odakosbam, odakosbas, odakosba, odakosban, odakosbat` | **Passiva:** `odakosbasem, odakosbases, odakosbase, odakosbasen, odakosbaset`
   - **Imperf.Subj Ativa:** `odakosbakem, odakosbakes, odakosbake, odakosbaken, odakosbaket` | **Passiva:** `odakosbakesem, odakosbakeses, odakosbakese, odakosbakesen, odakosbakeset`
 
-## 158. Raiz `krad-` (criar, dar existência)
+## 159. Raiz `krad-` (criar, dar existência)
 
 ### 1. Positivo: **kradur** (*criar, dar existência*)
 
@@ -10428,7 +10494,7 @@
   - **Imperf.Ind Ativa:** `odakradbam, odakradbas, odakradba, odakradban, odakradbat` | **Passiva:** `odakradbasem, odakradbases, odakradbase, odakradbasen, odakradbaset`
   - **Imperf.Subj Ativa:** `odakradbakem, odakradbakes, odakradbake, odakradbaken, odakradbaket` | **Passiva:** `odakradbakesem, odakradbakeses, odakradbakese, odakradbakesen, odakradbakeset`
 
-## 159. Raiz `kraz-` (rir, alegrar-se)
+## 160. Raiz `kraz-` (rir, alegrar-se)
 
 ### 1. Positivo: **krazur** (*rir, alegrar-se*)
 
@@ -10494,7 +10560,7 @@
   - **Imperf.Ind Ativa:** `odakrazbam, odakrazbas, odakrazba, odakrazban, odakrazbat` | **Passiva:** `odakrazbasem, odakrazbases, odakrazbase, odakrazbasen, odakrazbaset`
   - **Imperf.Subj Ativa:** `odakrazbakem, odakrazbakes, odakrazbake, odakrazbaken, odakrazbaket` | **Passiva:** `odakrazbakesem, odakrazbakeses, odakrazbakese, odakrazbakesen, odakrazbakeset`
 
-## 160. Raiz `kuex-` (corar a face de pudor ou rubor)
+## 161. Raiz `kuex-` (corar a face de pudor ou rubor)
 
 ### 1. Positivo: **kuexur** (*corar a face de pudor ou rubor*)
 
@@ -10560,7 +10626,7 @@
   - **Imperf.Ind Ativa:** `odakuexbam, odakuexbas, odakuexba, odakuexban, odakuexbat` | **Passiva:** `odakuexbasem, odakuexbases, odakuexbase, odakuexbasen, odakuexbaset`
   - **Imperf.Subj Ativa:** `odakuexbakem, odakuexbakes, odakuexbake, odakuexbaken, odakuexbaket` | **Passiva:** `odakuexbakesem, odakuexbakeses, odakuexbakese, odakuexbakesen, odakuexbakeset`
 
-## 161. Raiz `kulk-` (encastoar gema em anel ou coroa)
+## 162. Raiz `kulk-` (encastoar gema em anel ou coroa)
 
 ### 1. Positivo: **kulkur** (*encastoar gema em anel ou coroa*)
 
@@ -10626,7 +10692,7 @@
   - **Imperf.Ind Ativa:** `odakulbbam, odakulbbas, odakulbba, odakulbban, odakulbbat` | **Passiva:** `odakulbbasem, odakulbbases, odakulbbase, odakulbbasen, odakulbbaset`
   - **Imperf.Subj Ativa:** `odakulbbakem, odakulbbakes, odakulbbake, odakulbbaken, odakulbbaket` | **Passiva:** `odakulbbakesem, odakulbbakeses, odakulbbakese, odakulbbakesen, odakulbbakeset`
 
-## 162. Raiz `kulp-` (ajustar frete com os tropeiros da caravana)
+## 163. Raiz `kulp-` (ajustar frete com os tropeiros da caravana)
 
 ### 1. Positivo: **kulpur** (*ajustar frete com os tropeiros da caravana*)
 
@@ -10692,7 +10758,7 @@
   - **Imperf.Ind Ativa:** `odakulpbam, odakulpbas, odakulpba, odakulpban, odakulpbat` | **Passiva:** `odakulpbasem, odakulpbases, odakulpbase, odakulpbasen, odakulpbaset`
   - **Imperf.Subj Ativa:** `odakulpbakem, odakulpbakes, odakulpbake, odakulpbaken, odakulpbaket` | **Passiva:** `odakulpbakesem, odakulpbakeses, odakulpbakese, odakulpbakesen, odakulpbakeset`
 
-## 163. Raiz `kurk-` (coroar o soberano no santuário)
+## 164. Raiz `kurk-` (coroar o soberano no santuário)
 
 ### 1. Positivo: **kurkur** (*coroar o soberano no santuário*)
 
@@ -10758,7 +10824,7 @@
   - **Imperf.Ind Ativa:** `odakurbbam, odakurbbas, odakurbba, odakurbban, odakurbbat` | **Passiva:** `odakurbbasem, odakurbbases, odakurbbase, odakurbbasen, odakurbbaset`
   - **Imperf.Subj Ativa:** `odakurbbakem, odakurbbakes, odakurbbake, odakurbbaken, odakurbbaket` | **Passiva:** `odakurbbakesem, odakurbbakeses, odakurbbakese, odakurbbakesen, odakurbbakeset`
 
-## 164. Raiz `kusk-` (pleitear imunidade sob proteção de estandarte)
+## 165. Raiz `kusk-` (pleitear imunidade sob proteção de estandarte)
 
 ### 1. Positivo: **kuskur** (*pleitear imunidade sob proteção de estandarte*)
 
@@ -10824,7 +10890,7 @@
   - **Imperf.Ind Ativa:** `odakusbbam, odakusbbas, odakusbba, odakusbban, odakusbbat` | **Passiva:** `odakusbbasem, odakusbbases, odakusbbase, odakusbbasen, odakusbbaset`
   - **Imperf.Subj Ativa:** `odakusbbakem, odakusbbakes, odakusbbake, odakusbbaken, odakusbbaket` | **Passiva:** `odakusbbakesem, odakusbbakeses, odakusbbakese, odakusbbakesen, odakusbbakeset`
 
-## 165. Raiz `lakanav-` (amaldiçoar, votar ao mal)
+## 166. Raiz `lakanav-` (amaldiçoar, votar ao mal)
 
 ### 1. Positivo: **lakanavur** (*amaldiçoar, votar ao mal*)
 
@@ -10890,7 +10956,7 @@
   - **Imperf.Ind Ativa:** `odalakanavbam, odalakanavbas, odalakanavba, odalakanavban, odalakanavbat` | **Passiva:** `odalakanavbasem, odalakanavbases, odalakanavbase, odalakanavbasen, odalakanavbaset`
   - **Imperf.Subj Ativa:** `odalakanavbakem, odalakanavbakes, odalakanavbake, odalakanavbaken, odalakanavbaket` | **Passiva:** `odalakanavbakesem, odalakanavbakeses, odalakanavbakese, odalakanavbakesen, odalakanavbakeset`
 
-## 166. Raiz `lan-` (emanar luz, alumiar)
+## 167. Raiz `lan-` (emanar luz, alumiar)
 
 ### 1. Positivo: **lanur** (*emanar luz, alumiar*)
 
@@ -10956,7 +11022,7 @@
   - **Imperf.Ind Ativa:** `odalambam, odalambas, odalamba, odalamban, odalambat` | **Passiva:** `odalambasem, odalambases, odalambase, odalambasen, odalambaset`
   - **Imperf.Subj Ativa:** `odalambakem, odalambakes, odalambake, odalambaken, odalambaket` | **Passiva:** `odalambakesem, odalambakeses, odalambakese, odalambakesen, odalambakeset`
 
-## 167. Raiz `lart-` (cozer cerâmica e barro em alta temperatura)
+## 168. Raiz `lart-` (cozer cerâmica e barro em alta temperatura)
 
 ### 1. Positivo: **lartur** (*cozer cerâmica e barro em alta temperatura*)
 
@@ -11022,7 +11088,7 @@
   - **Imperf.Ind Ativa:** `odalarbbam, odalarbbas, odalarbba, odalarbban, odalarbbat` | **Passiva:** `odalarbbasem, odalarbbases, odalarbbase, odalarbbasen, odalarbbaset`
   - **Imperf.Subj Ativa:** `odalarbbakem, odalarbbakes, odalarbbake, odalarbbaken, odalarbbaket` | **Passiva:** `odalarbbakesem, odalarbbakeses, odalarbbakese, odalarbbakesen, odalarbbakeset`
 
-## 168. Raiz `larv-` (erigir marcos miliários de cantaria na linha divisória dos reinos)
+## 169. Raiz `larv-` (erigir marcos miliários de cantaria na linha divisória dos reinos)
 
 ### 1. Positivo: **larvur** (*erigir marcos miliários de cantaria na linha divisória dos reinos*)
 
@@ -11088,7 +11154,7 @@
   - **Imperf.Ind Ativa:** `odalarvbam, odalarvbas, odalarvba, odalarvban, odalarvbat` | **Passiva:** `odalarvbasem, odalarvbases, odalarvbase, odalarvbasen, odalarvbaset`
   - **Imperf.Subj Ativa:** `odalarvbakem, odalarvbakes, odalarvbake, odalarvbaken, odalarvbaket` | **Passiva:** `odalarvbakesem, odalarvbakeses, odalarvbakese, odalarvbakesen, odalarvbakeset`
 
-## 169. Raiz `lerk-` (fiar a lã ou o linho no fuso)
+## 170. Raiz `lerk-` (fiar a lã ou o linho no fuso)
 
 ### 1. Positivo: **lerkur** (*fiar a lã ou o linho no fuso*)
 
@@ -11154,7 +11220,7 @@
   - **Imperf.Ind Ativa:** `odalerbbam, odalerbbas, odalerbba, odalerbban, odalerbbat` | **Passiva:** `odalerbbasem, odalerbbases, odalerbbase, odalerbbasen, odalerbbaset`
   - **Imperf.Subj Ativa:** `odalerbbakem, odalerbbakes, odalerbbake, odalerbbaken, odalerbbaket` | **Passiva:** `odalerbbakesem, odalerbbakeses, odalerbbakese, odalerbbakesen, odalerbbakeset`
 
-## 170. Raiz `lerp-` (indultar prisioneiro por clemência do soberano)
+## 171. Raiz `lerp-` (indultar prisioneiro por clemência do soberano)
 
 ### 1. Positivo: **lerpur** (*indultar prisioneiro por clemência do soberano*)
 
@@ -11220,7 +11286,7 @@
   - **Imperf.Ind Ativa:** `odalerpbam, odalerpbas, odalerpba, odalerpban, odalerpbat` | **Passiva:** `odalerpbasem, odalerpbases, odalerpbase, odalerpbasen, odalerpbaset`
   - **Imperf.Subj Ativa:** `odalerpbakem, odalerpbakes, odalerpbake, odalerpbaken, odalerpbaket` | **Passiva:** `odalerpbakesem, odalerpbakeses, odalerpbakese, odalerpbakesen, odalerpbakeset`
 
-## 171. Raiz `let-` (falar, dizer, proferir, chamar)
+## 172. Raiz `let-` (falar, dizer, proferir, chamar)
 
 ### 1. Positivo: **letur** (*falar, dizer, proferir, chamar*)
 
@@ -11286,7 +11352,7 @@
   - **Imperf.Ind Ativa:** `odalebbam, odalebbas, odalebba, odalebban, odalebbat` | **Passiva:** `odalebbasem, odalebbases, odalebbase, odalebbasen, odalebbaset`
   - **Imperf.Subj Ativa:** `odalebbakem, odalebbakes, odalebbake, odalebbaken, odalebbaket` | **Passiva:** `odalebbakesem, odalebbakeses, odalebbakese, odalebbakesen, odalebbakeset`
 
-## 172. Raiz `lexp-` (alinhar o quadrante com o meridiano)
+## 173. Raiz `lexp-` (alinhar o quadrante com o meridiano)
 
 ### 1. Positivo: **lexpur** (*alinhar o quadrante com o meridiano*)
 
@@ -11352,7 +11418,7 @@
   - **Imperf.Ind Ativa:** `odalexpbam, odalexpbas, odalexpba, odalexpban, odalexpbat` | **Passiva:** `odalexpbasem, odalexpbases, odalexpbase, odalexpbasen, odalexpbaset`
   - **Imperf.Subj Ativa:** `odalexpbakem, odalexpbakes, odalexpbake, odalexpbaken, odalexpbaket` | **Passiva:** `odalexpbakesem, odalexpbakeses, odalexpbakese, odalexpbakesen, odalexpbakeset`
 
-## 173. Raiz `libk-` (balançar a face visível da lua)
+## 174. Raiz `libk-` (balançar a face visível da lua)
 
 ### 1. Positivo: **libkur** (*balançar a face visível da lua*)
 
@@ -11418,7 +11484,7 @@
   - **Imperf.Ind Ativa:** `odalibbbam, odalibbbas, odalibbba, odalibbban, odalibbbat` | **Passiva:** `odalibbbasem, odalibbbases, odalibbbase, odalibbbasen, odalibbbaset`
   - **Imperf.Subj Ativa:** `odalibbbakem, odalibbbakes, odalibbbake, odalibbbaken, odalibbbaket` | **Passiva:** `odalibbbakesem, odalibbbakeses, odalibbbakese, odalibbbakesen, odalibbbakeset`
 
-## 174. Raiz `lik-` (defumar carnes no fumeiro de pinho)
+## 175. Raiz `lik-` (defumar carnes no fumeiro de pinho)
 
 ### 1. Positivo: **likur** (*defumar carnes no fumeiro de pinho*)
 
@@ -11484,7 +11550,7 @@
   - **Imperf.Ind Ativa:** `odalibbam, odalibbas, odalibba, odalibban, odalibbat` | **Passiva:** `odalibbasem, odalibbases, odalibbase, odalibbasen, odalibbaset`
   - **Imperf.Subj Ativa:** `odalibbakem, odalibbakes, odalibbake, odalibbaken, odalibbaket` | **Passiva:** `odalibbakesem, odalibbakeses, odalibbakese, odalibbakesen, odalibbakeset`
 
-## 175. Raiz `lim-` (hastear o estandarte imperial)
+## 176. Raiz `lim-` (hastear o estandarte imperial)
 
 ### 1. Positivo: **limur** (*hastear o estandarte imperial*)
 
@@ -11550,7 +11616,7 @@
   - **Imperf.Ind Ativa:** `odalimbam, odalimbas, odalimba, odalimban, odalimbat` | **Passiva:** `odalimbasem, odalimbases, odalimbase, odalimbasen, odalimbaset`
   - **Imperf.Subj Ativa:** `odalimbakem, odalimbakes, odalimbake, odalimbaken, odalimbaket` | **Passiva:** `odalimbakesem, odalimbakeses, odalimbakese, odalimbakesen, odalimbakeset`
 
-## 176. Raiz `lir-` (modular a voz para o registro grave)
+## 177. Raiz `lir-` (modular a voz para o registro grave)
 
 ### 1. Positivo: **lirur** (*modular a voz para o registro grave*)
 
@@ -11616,7 +11682,7 @@
   - **Imperf.Ind Ativa:** `odalirbam, odalirbas, odalirba, odalirban, odalirbat` | **Passiva:** `odalirbasem, odalirbases, odalirbase, odalirbasen, odalirbaset`
   - **Imperf.Subj Ativa:** `odalirbakem, odalirbakes, odalirbake, odalirbaken, odalirbaket` | **Passiva:** `odalirbakesem, odalirbakeses, odalirbakese, odalirbakesen, odalirbakeset`
 
-## 177. Raiz `lirk-` (iluminar manuscrito com ouro e carmim)
+## 178. Raiz `lirk-` (iluminar manuscrito com ouro e carmim)
 
 ### 1. Positivo: **lirkur** (*iluminar manuscrito com ouro e carmim*)
 
@@ -11682,7 +11748,7 @@
   - **Imperf.Ind Ativa:** `odalirbbam, odalirbbas, odalirbba, odalirbban, odalirbbat` | **Passiva:** `odalirbbasem, odalirbbases, odalirbbase, odalirbbasen, odalirbbaset`
   - **Imperf.Subj Ativa:** `odalirbbakem, odalirbbakes, odalirbbake, odalirbbaken, odalirbbaket` | **Passiva:** `odalirbbakesem, odalirbbakeses, odalirbbakese, odalirbbakesen, odalirbbakeset`
 
-## 178. Raiz `lisk-` (lamber, provar com a língua)
+## 179. Raiz `lisk-` (lamber, provar com a língua)
 
 ### 1. Positivo: **liskur** (*lamber, provar com a língua*)
 
@@ -11748,7 +11814,7 @@
   - **Imperf.Ind Ativa:** `odalisbbam, odalisbbas, odalisbba, odalisbban, odalisbbat` | **Passiva:** `odalisbbasem, odalisbbases, odalisbbase, odalisbbasen, odalisbbaset`
   - **Imperf.Subj Ativa:** `odalisbbakem, odalisbbakes, odalisbbake, odalisbbaken, odalisbbaket` | **Passiva:** `odalisbbakesem, odalisbbakeses, odalisbbakese, odalisbbakesen, odalisbbakeset`
 
-## 179. Raiz `litr-` (vibrar, cantar, soar em música)
+## 180. Raiz `litr-` (vibrar, cantar, soar em música)
 
 ### 1. Positivo: **litrur** (*vibrar, cantar, soar em música*)
 
@@ -11814,7 +11880,7 @@
   - **Imperf.Ind Ativa:** `odalitrbam, odalitrbas, odalitrba, odalitrban, odalitrbat` | **Passiva:** `odalitrbasem, odalitrbases, odalitrbase, odalitrbasen, odalitrbaset`
   - **Imperf.Subj Ativa:** `odalitrbakem, odalitrbakes, odalitrbake, odalitrbaken, odalitrbaket` | **Passiva:** `odalitrbakesem, odalitrbakeses, odalitrbakese, odalitrbakesen, odalitrbakeset`
 
-## 180. Raiz `lix-` (lavar, limpar com água)
+## 181. Raiz `lix-` (lavar, limpar com água)
 
 ### 1. Positivo: **lixur** (*lavar, limpar com água*)
 
@@ -11880,7 +11946,7 @@
   - **Imperf.Ind Ativa:** `odalixbam, odalixbas, odalixba, odalixban, odalixbat` | **Passiva:** `odalixbasem, odalixbases, odalixbase, odalixbasen, odalixbaset`
   - **Imperf.Subj Ativa:** `odalixbakem, odalixbakes, odalixbake, odalixbaken, odalixbaket` | **Passiva:** `odalixbakesem, odalixbakeses, odalixbakese, odalixbakesen, odalixbakeset`
 
-## 181. Raiz `lorb-` (incrustar tésseras de vidro colorido e ouro em mosaico bizantino)
+## 182. Raiz `lorb-` (incrustar tésseras de vidro colorido e ouro em mosaico bizantino)
 
 ### 1. Positivo: **lorbur** (*incrustar tésseras de vidro colorido e ouro em mosaico bizantino*)
 
@@ -11946,7 +12012,7 @@
   - **Imperf.Ind Ativa:** `odalorbbam, odalorbbas, odalorbba, odalorbban, odalorbbat` | **Passiva:** `odalorbbasem, odalorbbases, odalorbbase, odalorbbasen, odalorbbaset`
   - **Imperf.Subj Ativa:** `odalorbbakem, odalorbbakes, odalorbbake, odalorbbaken, odalorbbaket` | **Passiva:** `odalorbbakesem, odalorbbakeses, odalorbbakese, odalorbbakesen, odalorbbakeset`
 
-## 182. Raiz `lur-` (encobrir de neblina espessa)
+## 183. Raiz `lur-` (encobrir de neblina espessa)
 
 ### 1. Positivo: **lurur** (*encobrir de neblina espessa*)
 
@@ -12012,7 +12078,7 @@
   - **Imperf.Ind Ativa:** `odalurbam, odalurbas, odalurba, odalurban, odalurbat` | **Passiva:** `odalurbasem, odalurbases, odalurbase, odalurbasen, odalurbaset`
   - **Imperf.Subj Ativa:** `odalurbakem, odalurbakes, odalurbake, odalurbaken, odalurbaket` | **Passiva:** `odalurbakesem, odalurbakeses, odalurbakese, odalurbakesen, odalurbakeset`
 
-## 183. Raiz `lurk-` (confiscar bens para o erário)
+## 184. Raiz `lurk-` (confiscar bens para o erário)
 
 ### 1. Positivo: **lurkur** (*confiscar bens para o erário*)
 
@@ -12078,7 +12144,7 @@
   - **Imperf.Ind Ativa:** `odalurbbam, odalurbbas, odalurbba, odalurbban, odalurbbat` | **Passiva:** `odalurbbasem, odalurbbases, odalurbbase, odalurbbasen, odalurbbaset`
   - **Imperf.Subj Ativa:** `odalurbbakem, odalurbbakes, odalurbbake, odalurbbaken, odalurbbaket` | **Passiva:** `odalurbbakesem, odalurbbakeses, odalurbbakese, odalurbbakesen, odalurbbakeset`
 
-## 184. Raiz `lut-` (caçar nas montanhas, rastrear animais silvestres)
+## 185. Raiz `lut-` (caçar nas montanhas, rastrear animais silvestres)
 
 ### 1. Positivo: **lutur** (*caçar nas montanhas, rastrear animais silvestres*)
 
@@ -12144,7 +12210,7 @@
   - **Imperf.Ind Ativa:** `odalubbam, odalubbas, odalubba, odalubban, odalubbat` | **Passiva:** `odalubbasem, odalubbases, odalubbase, odalubbasen, odalubbaset`
   - **Imperf.Subj Ativa:** `odalubbakem, odalubbakes, odalubbake, odalubbaken, odalubbaket` | **Passiva:** `odalubbakesem, odalubbakeses, odalubbakese, odalubbakesen, odalubbakeset`
 
-## 185. Raiz `lyr-` (esperar, aguardar com esperança)
+## 186. Raiz `lyr-` (esperar, aguardar com esperança)
 
 ### 1. Positivo: **lyrur** (*esperar, aguardar com esperança*)
 
@@ -12210,7 +12276,7 @@
   - **Imperf.Ind Ativa:** `odalyrbam, odalyrbas, odalyrba, odalyrban, odalyrbat` | **Passiva:** `odalyrbasem, odalyrbases, odalyrbase, odalyrbasen, odalyrbaset`
   - **Imperf.Subj Ativa:** `odalyrbakem, odalyrbakes, odalyrbake, odalyrbaken, odalyrbaket` | **Passiva:** `odalyrbakesem, odalyrbakeses, odalyrbakese, odalyrbakesen, odalyrbakeset`
 
-## 186. Raiz `mad-` (conceber no ventre, gerar (part. madet))
+## 187. Raiz `mad-` (conceber no ventre, gerar (part. madet))
 
 ### 1. Positivo: **madur** (*conceber no ventre, gerar (part. madet)*)
 
@@ -12276,7 +12342,7 @@
   - **Imperf.Ind Ativa:** `odamadbam, odamadbas, odamadba, odamadban, odamadbat` | **Passiva:** `odamadbasem, odamadbases, odamadbase, odamadbasen, odamadbaset`
   - **Imperf.Subj Ativa:** `odamadbakem, odamadbakes, odamadbake, odamadbaken, odamadbaket` | **Passiva:** `odamadbakesem, odamadbakeses, odamadbakese, odamadbakesen, odamadbakeset`
 
-## 187. Raiz `mak-` (comer, alimentar-se)
+## 188. Raiz `mak-` (comer, alimentar-se)
 
 ### 1. Positivo: **makur** (*comer, alimentar-se*)
 
@@ -12342,7 +12408,7 @@
   - **Imperf.Ind Ativa:** `odamabbam, odamabbas, odamabba, odamabban, odamabbat` | **Passiva:** `odamabbasem, odamabbases, odamabbase, odamabbasen, odamabbaset`
   - **Imperf.Subj Ativa:** `odamabbakem, odamabbakes, odamabbake, odamabbaken, odamabbaket` | **Passiva:** `odamabbakesem, odamabbakeses, odamabbakese, odamabbakesen, odamabbakeset`
 
-## 188. Raiz `malp-` (aparelhar o cavalo de viagem)
+## 189. Raiz `malp-` (aparelhar o cavalo de viagem)
 
 ### 1. Positivo: **malpur** (*aparelhar o cavalo de viagem*)
 
@@ -12408,7 +12474,7 @@
   - **Imperf.Ind Ativa:** `odamalpbam, odamalpbas, odamalpba, odamalpban, odamalpbat` | **Passiva:** `odamalpbasem, odamalpbases, odamalpbase, odamalpbasen, odamalpbaset`
   - **Imperf.Subj Ativa:** `odamalpbakem, odamalpbakes, odamalpbake, odamalpbaken, odamalpbaket` | **Passiva:** `odamalpbakesem, odamalpbakeses, odamalpbakese, odamalpbakesen, odamalpbakeset`
 
-## 189. Raiz `malx-` (domar corcel bravo pelas rédeas)
+## 190. Raiz `malx-` (domar corcel bravo pelas rédeas)
 
 ### 1. Positivo: **malxur** (*domar corcel bravo pelas rédeas*)
 
@@ -12474,7 +12540,7 @@
   - **Imperf.Ind Ativa:** `odamalxbam, odamalxbas, odamalxba, odamalxban, odamalxbat` | **Passiva:** `odamalxbasem, odamalxbases, odamalxbase, odamalxbasen, odamalxbaset`
   - **Imperf.Subj Ativa:** `odamalxbakem, odamalxbakes, odamalxbake, odamalxbaken, odamalxbaket` | **Passiva:** `odamalxbakesem, odamalxbakeses, odamalxbakese, odamalxbakesen, odamalxbakeset`
 
-## 190. Raiz `marv-` (intuir a verdade oculta sob as aparências falsas)
+## 191. Raiz `marv-` (intuir a verdade oculta sob as aparências falsas)
 
 ### 1. Positivo: **marvur** (*intuir a verdade oculta sob as aparências falsas*)
 
@@ -12540,7 +12606,7 @@
   - **Imperf.Ind Ativa:** `odamarvbam, odamarvbas, odamarvba, odamarvban, odamarvbat` | **Passiva:** `odamarvbasem, odamarvbases, odamarvbase, odamarvbasen, odamarvbaset`
   - **Imperf.Subj Ativa:** `odamarvbakem, odamarvbakes, odamarvbake, odamarvbaken, odamarvbaket` | **Passiva:** `odamarvbakesem, odamarvbakeses, odamarvbakese, odamarvbakesen, odamarvbakeset`
 
-## 191. Raiz `mat-` (alvejar o linho na água de sol)
+## 192. Raiz `mat-` (alvejar o linho na água de sol)
 
 ### 1. Positivo: **matur** (*alvejar o linho na água de sol*)
 
@@ -12606,7 +12672,7 @@
   - **Imperf.Ind Ativa:** `odamabbam, odamabbas, odamabba, odamabban, odamabbat` | **Passiva:** `odamabbasem, odamabbases, odamabbase, odamabbasen, odamabbaset`
   - **Imperf.Subj Ativa:** `odamabbakem, odamabbakes, odamabbake, odamabbaken, odamabbaket` | **Passiva:** `odamabbakesem, odamabbakeses, odamabbakese, odamabbakesen, odamabbakeset`
 
-## 192. Raiz `mek-` (emboscar o inimigo no desfiladeiro)
+## 193. Raiz `mek-` (emboscar o inimigo no desfiladeiro)
 
 ### 1. Positivo: **mekur** (*emboscar o inimigo no desfiladeiro*)
 
@@ -12672,7 +12738,7 @@
   - **Imperf.Ind Ativa:** `odamebbam, odamebbas, odamebba, odamebban, odamebbat` | **Passiva:** `odamebbasem, odamebbases, odamebbase, odamebbasen, odamebbaset`
   - **Imperf.Subj Ativa:** `odamebbakem, odamebbakes, odamebbake, odamebbaken, odamebbaket` | **Passiva:** `odamebbakesem, odamebbakeses, odamebbakese, odamebbakesen, odamebbakeset`
 
-## 193. Raiz `mel-` (negociar trégua entre exércitos)
+## 194. Raiz `mel-` (negociar trégua entre exércitos)
 
 ### 1. Positivo: **melur** (*negociar trégua entre exércitos*)
 
@@ -12738,7 +12804,7 @@
   - **Imperf.Ind Ativa:** `odamelbam, odamelbas, odamelba, odamelban, odamelbat` | **Passiva:** `odamelbasem, odamelbases, odamelbase, odamelbasen, odamelbaset`
   - **Imperf.Subj Ativa:** `odamelbakem, odamelbakes, odamelbake, odamelbaken, odamelbaket` | **Passiva:** `odamelbakesem, odamelbakeses, odamelbakese, odamelbakesen, odamelbakeset`
 
-## 194. Raiz `melb-` (gravar nome de primogênito no tronco da árvore genealógica de bronze)
+## 195. Raiz `melb-` (gravar nome de primogênito no tronco da árvore genealógica de bronze)
 
 ### 1. Positivo: **melbur** (*gravar nome de primogênito no tronco da árvore genealógica de bronze*)
 
@@ -12804,7 +12870,7 @@
   - **Imperf.Ind Ativa:** `odamelbbam, odamelbbas, odamelbba, odamelbban, odamelbbat` | **Passiva:** `odamelbbasem, odamelbbases, odamelbbase, odamelbbasen, odamelbbaset`
   - **Imperf.Subj Ativa:** `odamelbbakem, odamelbbakes, odamelbbake, odamelbbaken, odamelbbaket` | **Passiva:** `odamelbbakesem, odamelbbakeses, odamelbbakese, odamelbbakesen, odamelbbakeset`
 
-## 195. Raiz `melk-` (ondular o mar, formar vagas)
+## 196. Raiz `melk-` (ondular o mar, formar vagas)
 
 ### 1. Positivo: **melkur** (*ondular o mar, formar vagas*)
 
@@ -12870,7 +12936,7 @@
   - **Imperf.Ind Ativa:** `odamelbbam, odamelbbas, odamelbba, odamelbban, odamelbbat` | **Passiva:** `odamelbbasem, odamelbbases, odamelbbase, odamelbbasen, odamelbbaset`
   - **Imperf.Subj Ativa:** `odamelbbakem, odamelbbakes, odamelbbake, odamelbbaken, odamelbbaket` | **Passiva:** `odamelbbakesem, odamelbbakeses, odamelbbakese, odamelbbakesen, odamelbbakeset`
 
-## 196. Raiz `melp-` (sorrir serenamente, comprazer-se)
+## 197. Raiz `melp-` (sorrir serenamente, comprazer-se)
 
 ### 1. Positivo: **melpur** (*sorrir serenamente, comprazer-se*)
 
@@ -12936,7 +13002,7 @@
   - **Imperf.Ind Ativa:** `odamelpbam, odamelpbas, odamelpba, odamelpban, odamelpbat` | **Passiva:** `odamelpbasem, odamelpbases, odamelpbase, odamelpbasen, odamelpbaset`
   - **Imperf.Subj Ativa:** `odamelpbakem, odamelpbakes, odamelpbake, odamelpbaken, odamelpbaket` | **Passiva:** `odamelpbakesem, odamelpbakeses, odamelpbakese, odamelpbakesen, odamelpbakeset`
 
-## 197. Raiz `merp-` (enfardar feno e atar gavelas com vencelete)
+## 198. Raiz `merp-` (enfardar feno e atar gavelas com vencelete)
 
 ### 1. Positivo: **merpur** (*enfardar feno e atar gavelas com vencelete*)
 
@@ -13002,7 +13068,7 @@
   - **Imperf.Ind Ativa:** `odamerpbam, odamerpbas, odamerpba, odamerpban, odamerpbat` | **Passiva:** `odamerpbasem, odamerpbases, odamerpbase, odamerpbasen, odamerpbaset`
   - **Imperf.Subj Ativa:** `odamerpbakem, odamerpbakes, odamerpbake, odamerpbaken, odamerpbaket` | **Passiva:** `odamerpbakesem, odamerpbakeses, odamerpbakese, odamerpbakesen, odamerpbakeset`
 
-## 198. Raiz `met-` (glorificar, regozijar-se, exaltar)
+## 199. Raiz `met-` (glorificar, regozijar-se, exaltar)
 
 ### 1. Positivo: **metur** (*glorificar, regozijar-se, exaltar*)
 
@@ -13068,7 +13134,7 @@
   - **Imperf.Ind Ativa:** `odamebbam, odamebbas, odamebba, odamebban, odamebbat` | **Passiva:** `odamebbasem, odamebbases, odamebbase, odamebbasen, odamebbaset`
   - **Imperf.Subj Ativa:** `odamebbakem, odamebbakes, odamebbake, odamebbaken, odamebbaket` | **Passiva:** `odamebbakesem, odamebbakeses, odamebbakese, odamebbakesen, odamebbakeset`
 
-## 199. Raiz `milk-` (ordenhar o rebanho ao alvorecer)
+## 200. Raiz `milk-` (ordenhar o rebanho ao alvorecer)
 
 ### 1. Positivo: **milkur** (*ordenhar o rebanho ao alvorecer*)
 
@@ -13134,7 +13200,7 @@
   - **Imperf.Ind Ativa:** `odamilbbam, odamilbbas, odamilbba, odamilbban, odamilbbat` | **Passiva:** `odamilbbasem, odamilbbases, odamilbbase, odamilbbasen, odamilbbaset`
   - **Imperf.Subj Ativa:** `odamilbbakem, odamilbbakes, odamilbbake, odamilbbaken, odamilbbaket` | **Passiva:** `odamilbbakesem, odamilbbakeses, odamilbbakese, odamilbbakesen, odamilbbakeset`
 
-## 200. Raiz `mim-` (dedicar templo ou monumento a Gyos)
+## 201. Raiz `mim-` (dedicar templo ou monumento a Gyos)
 
 ### 1. Positivo: **mimur** (*dedicar templo ou monumento a Gyos*)
 
@@ -13200,7 +13266,7 @@
   - **Imperf.Ind Ativa:** `odamimbam, odamimbas, odamimba, odamimban, odamimbat` | **Passiva:** `odamimbasem, odamimbases, odamimbase, odamimbasen, odamimbaset`
   - **Imperf.Subj Ativa:** `odamimbakem, odamimbakes, odamimbake, odamimbaken, odamimbaket` | **Passiva:** `odamimbakesem, odamimbakeses, odamimbakese, odamimbakesen, odamimbakeset`
 
-## 201. Raiz `mir-` (ver, olhar, vigiar, contemplar)
+## 202. Raiz `mir-` (ver, olhar, vigiar, contemplar)
 
 ### 1. Positivo: **mirur** (*ver, olhar, vigiar, contemplar*)
 
@@ -13266,7 +13332,7 @@
   - **Imperf.Ind Ativa:** `odamirbam, odamirbas, odamirba, odamirban, odamirbat` | **Passiva:** `odamirbasem, odamirbases, odamirbase, odamirbasen, odamirbaset`
   - **Imperf.Subj Ativa:** `odamirbakem, odamirbakes, odamirbake, odamirbaken, odamirbaket` | **Passiva:** `odamirbakesem, odamirbakeses, odamirbakese, odamirbakesen, odamirbakeset`
 
-## 202. Raiz `mirb-` (refletir a imagem límpida em espelho côncavo de prata polida)
+## 203. Raiz `mirb-` (refletir a imagem límpida em espelho côncavo de prata polida)
 
 ### 1. Positivo: **mirbur** (*refletir a imagem límpida em espelho côncavo de prata polida*)
 
@@ -13332,7 +13398,7 @@
   - **Imperf.Ind Ativa:** `odamirbbam, odamirbbas, odamirbba, odamirbban, odamirbbat` | **Passiva:** `odamirbbasem, odamirbbases, odamirbbase, odamirbbasen, odamirbbaset`
   - **Imperf.Subj Ativa:** `odamirbbakem, odamirbbakes, odamirbbake, odamirbbaken, odamirbbaket` | **Passiva:** `odamirbbakesem, odamirbbakeses, odamirbbakese, odamirbbakesen, odamirbbakeset`
 
-## 203. Raiz `mirk-` (orvalhar ao amanhecer)
+## 204. Raiz `mirk-` (orvalhar ao amanhecer)
 
 ### 1. Positivo: **mirkur** (*orvalhar ao amanhecer*)
 
@@ -13398,7 +13464,7 @@
   - **Imperf.Ind Ativa:** `odamirbbam, odamirbbas, odamirbba, odamirbban, odamirbbat` | **Passiva:** `odamirbbasem, odamirbbases, odamirbbase, odamirbbasen, odamirbbaset`
   - **Imperf.Subj Ativa:** `odamirbbakem, odamirbbakes, odamirbbake, odamirbbaken, odamirbbaket` | **Passiva:** `odamirbbakesem, odamirbbakeses, odamirbbakese, odamirbbakesen, odamirbbakeset`
 
-## 204. Raiz `mirx-` (lustrar joia ou espelho metálico)
+## 205. Raiz `mirx-` (lustrar joia ou espelho metálico)
 
 ### 1. Positivo: **mirxur** (*lustrar joia ou espelho metálico*)
 
@@ -13464,7 +13530,7 @@
   - **Imperf.Ind Ativa:** `odamirxbam, odamirxbas, odamirxba, odamirxban, odamirxbat` | **Passiva:** `odamirxbasem, odamirxbases, odamirxbase, odamirxbasen, odamirxbaset`
   - **Imperf.Subj Ativa:** `odamirxbakem, odamirxbakes, odamirxbake, odamirxbaken, odamirxbaket` | **Passiva:** `odamirxbakesem, odamirxbakeses, odamirxbakese, odamirxbakesen, odamirxbakeset`
 
-## 205. Raiz `miv-` (declamar epopeia em cadência clássica)
+## 206. Raiz `miv-` (declamar epopeia em cadência clássica)
 
 ### 1. Positivo: **mivur** (*declamar epopeia em cadência clássica*)
 
@@ -13530,7 +13596,7 @@
   - **Imperf.Ind Ativa:** `odamivbam, odamivbas, odamivba, odamivban, odamivbat` | **Passiva:** `odamivbasem, odamivbases, odamivbase, odamivbasen, odamivbaset`
   - **Imperf.Subj Ativa:** `odamivbakem, odamivbakes, odamivbake, odamivbaken, odamivbaket` | **Passiva:** `odamivbakesem, odamivbakeses, odamivbakese, odamivbakesen, odamivbakeset`
 
-## 206. Raiz `mob-` (beneficiar, dar, conceder)
+## 207. Raiz `mob-` (beneficiar, dar, conceder)
 
 ### 1. Positivo: **mobur** (*beneficiar, dar, conceder*)
 
@@ -13596,7 +13662,7 @@
   - **Imperf.Ind Ativa:** `odamobbam, odamobbas, odamobba, odamobban, odamobbat` | **Passiva:** `odamobbasem, odamobbases, odamobbase, odamobbasen, odamobbaset`
   - **Imperf.Subj Ativa:** `odamobbakem, odamobbakes, odamobbake, odamobbaken, odamobbaket` | **Passiva:** `odamobbakesem, odamobbakeses, odamobbakese, odamobbakesen, odamobbakeset`
 
-## 207. Raiz `mobanav-` (bendizer, abençoar)
+## 208. Raiz `mobanav-` (bendizer, abençoar)
 
 ### 1. Positivo: **mobanavur** (*bendizer, abençoar*)
 
@@ -13662,7 +13728,7 @@
   - **Imperf.Ind Ativa:** `odamobanavbam, odamobanavbas, odamobanavba, odamobanavban, odamobanavbat` | **Passiva:** `odamobanavbasem, odamobanavbases, odamobanavbase, odamobanavbasen, odamobanavbaset`
   - **Imperf.Subj Ativa:** `odamobanavbakem, odamobanavbakes, odamobanavbake, odamobanavbaken, odamobanavbaket` | **Passiva:** `odamobanavbakesem, odamobanavbakeses, odamobanavbakese, odamobanavbakesen, odamobanavbakeset`
 
-## 208. Raiz `mol-` (medir tecidos por braças com a vara padrão)
+## 209. Raiz `mol-` (medir tecidos por braças com a vara padrão)
 
 ### 1. Positivo: **molur** (*medir tecidos por braças com a vara padrão*)
 
@@ -13728,7 +13794,7 @@
   - **Imperf.Ind Ativa:** `odamolbam, odamolbas, odamolba, odamolban, odamolbat` | **Passiva:** `odamolbasem, odamolbases, odamolbase, odamolbasen, odamolbaset`
   - **Imperf.Subj Ativa:** `odamolbakem, odamolbakes, odamolbake, odamolbaken, odamolbaket` | **Passiva:** `odamolbakesem, odamolbakeses, odamolbakese, odamolbakesen, odamolbakeset`
 
-## 209. Raiz `molb-` (mover pás e rodas d'água pela força da correnteza)
+## 210. Raiz `molb-` (mover pás e rodas d'água pela força da correnteza)
 
 ### 1. Positivo: **molbur** (*mover pás e rodas d'água pela força da correnteza*)
 
@@ -13794,7 +13860,7 @@
   - **Imperf.Ind Ativa:** `odamolbbam, odamolbbas, odamolbba, odamolbban, odamolbbat` | **Passiva:** `odamolbbasem, odamolbbases, odamolbbase, odamolbbasen, odamolbbaset`
   - **Imperf.Subj Ativa:** `odamolbbakem, odamolbbakes, odamolbbake, odamolbbaken, odamolbbaket` | **Passiva:** `odamolbbakesem, odamolbbakeses, odamolbbakese, odamolbbakesen, odamolbbakeset`
 
-## 210. Raiz `mold-` (sondar fendas e poços com prumo)
+## 211. Raiz `mold-` (sondar fendas e poços com prumo)
 
 ### 1. Positivo: **moldur** (*sondar fendas e poços com prumo*)
 
@@ -13860,7 +13926,7 @@
   - **Imperf.Ind Ativa:** `odamolbbam, odamolbbas, odamolbba, odamolbban, odamolbbat` | **Passiva:** `odamolbbasem, odamolbbases, odamolbbase, odamolbbasen, odamolbbaset`
   - **Imperf.Subj Ativa:** `odamolbbakem, odamolbbakes, odamolbbake, odamolbbaken, odamolbbaket` | **Passiva:** `odamolbbakesem, odamolbbakeses, odamolbbakese, odamolbbakesen, odamolbbakeset`
 
-## 211. Raiz `mollet-` (julgar, sentenciar (mon+let))
+## 212. Raiz `mollet-` (julgar, sentenciar (mon+let))
 
 ### 1. Positivo: **molletur** (*julgar, sentenciar (mon+let)*)
 
@@ -13926,7 +13992,7 @@
   - **Imperf.Ind Ativa:** `odamollebbam, odamollebbas, odamollebba, odamollebban, odamollebbat` | **Passiva:** `odamollebbasem, odamollebbases, odamollebbase, odamollebbasen, odamollebbaset`
   - **Imperf.Subj Ativa:** `odamollebbakem, odamollebbakes, odamollebbake, odamollebbaken, odamollebbaket` | **Passiva:** `odamollebbakesem, odamollebbakeses, odamollebbakese, odamollebbakesen, odamollebbakeset`
 
-## 212. Raiz `molp-` (empunhar lança de torneio em carga contra a barreira)
+## 213. Raiz `molp-` (empunhar lança de torneio em carga contra a barreira)
 
 ### 1. Positivo: **molpur** (*empunhar lança de torneio em carga contra a barreira*)
 
@@ -13992,7 +14058,7 @@
   - **Imperf.Ind Ativa:** `odamolpbam, odamolpbas, odamolpba, odamolpban, odamolpbat` | **Passiva:** `odamolpbasem, odamolpbases, odamolpbase, odamolpbasen, odamolpbaset`
   - **Imperf.Subj Ativa:** `odamolpbakem, odamolpbakes, odamolpbake, odamolpbaken, odamolpbaket` | **Passiva:** `odamolpbakesem, odamolpbakeses, odamolpbakese, odamolpbakesen, odamolpbakeset`
 
-## 213. Raiz `molx-` (promulgar decreto da Chancelaria)
+## 214. Raiz `molx-` (promulgar decreto da Chancelaria)
 
 ### 1. Positivo: **molxur** (*promulgar decreto da Chancelaria*)
 
@@ -14058,7 +14124,7 @@
   - **Imperf.Ind Ativa:** `odamolxbam, odamolxbas, odamolxba, odamolxban, odamolxbat` | **Passiva:** `odamolxbasem, odamolxbases, odamolxbase, odamolxbasen, odamolxbaset`
   - **Imperf.Subj Ativa:** `odamolxbakem, odamolxbakes, odamolxbake, odamolxbaken, odamolxbaket` | **Passiva:** `odamolxbakesem, odamolxbakeses, odamolxbakese, odamolxbakesen, odamolxbakeset`
 
-## 214. Raiz `mop-` (tecer no tear, entrelaçar fios)
+## 215. Raiz `mop-` (tecer no tear, entrelaçar fios)
 
 ### 1. Positivo: **mopur** (*tecer no tear, entrelaçar fios*)
 
@@ -14124,7 +14190,7 @@
   - **Imperf.Ind Ativa:** `odamopbam, odamopbas, odamopba, odamopban, odamopbat` | **Passiva:** `odamopbasem, odamopbases, odamopbase, odamopbasen, odamopbaset`
   - **Imperf.Subj Ativa:** `odamopbakem, odamopbakes, odamopbake, odamopbaken, odamopbaket` | **Passiva:** `odamopbakesem, odamopbakeses, odamopbakese, odamopbakesen, odamopbakeset`
 
-## 215. Raiz `morf-` (sublimar sais e pós em vaso hermético)
+## 216. Raiz `morf-` (sublimar sais e pós em vaso hermético)
 
 ### 1. Positivo: **morfur** (*sublimar sais e pós em vaso hermético*)
 
@@ -14190,7 +14256,7 @@
   - **Imperf.Ind Ativa:** `odamorbbam, odamorbbas, odamorbba, odamorbban, odamorbbat` | **Passiva:** `odamorbbasem, odamorbbases, odamorbbase, odamorbbasen, odamorbbaset`
   - **Imperf.Subj Ativa:** `odamorbbakem, odamorbbakes, odamorbbake, odamorbbaken, odamorbbaket` | **Passiva:** `odamorbbakesem, odamorbbakeses, odamorbbakese, odamorbbakesen, odamorbbakeset`
 
-## 216. Raiz `mork-` (desbravar galerias escuras tateando passagens com tochas e cordas)
+## 217. Raiz `mork-` (desbravar galerias escuras tateando passagens com tochas e cordas)
 
 ### 1. Positivo: **morkur** (*desbravar galerias escuras tateando passagens com tochas e cordas*)
 
@@ -14256,7 +14322,7 @@
   - **Imperf.Ind Ativa:** `odamorbbam, odamorbbas, odamorbba, odamorbban, odamorbbat` | **Passiva:** `odamorbbasem, odamorbbases, odamorbbase, odamorbbasen, odamorbbaset`
   - **Imperf.Subj Ativa:** `odamorbbakem, odamorbbakes, odamorbbake, odamorbbaken, odamorbbaket` | **Passiva:** `odamorbbakesem, odamorbbakeses, odamorbbakese, odamorbbakesen, odamorbbakeset`
 
-## 217. Raiz `muk-` (franzir o cenho em concentração)
+## 218. Raiz `muk-` (franzir o cenho em concentração)
 
 ### 1. Positivo: **mukur** (*franzir o cenho em concentração*)
 
@@ -14322,7 +14388,7 @@
   - **Imperf.Ind Ativa:** `odamubbam, odamubbas, odamubba, odamubban, odamubbat` | **Passiva:** `odamubbasem, odamubbases, odamubbase, odamubbasen, odamubbaset`
   - **Imperf.Subj Ativa:** `odamubbakem, odamubbakes, odamubbake, odamubbaken, odamubbaket` | **Passiva:** `odamubbakesem, odamubbakeses, odamubbakese, odamubbakesen, odamubbakeset`
 
-## 218. Raiz `mul-` (outorgar feudo ou título de nobreza)
+## 219. Raiz `mul-` (outorgar feudo ou título de nobreza)
 
 ### 1. Positivo: **mulur** (*outorgar feudo ou título de nobreza*)
 
@@ -14388,7 +14454,7 @@
   - **Imperf.Ind Ativa:** `odamulbam, odamulbas, odamulba, odamulban, odamulbat` | **Passiva:** `odamulbasem, odamulbases, odamulbase, odamulbasen, odamulbaset`
   - **Imperf.Subj Ativa:** `odamulbakem, odamulbakes, odamulbake, odamulbaken, odamulbaket` | **Passiva:** `odamulbakesem, odamulbakeses, odamulbakese, odamulbakesen, odamulbakeset`
 
-## 219. Raiz `mulk-` (arquivar nos rolos perpétuos)
+## 220. Raiz `mulk-` (arquivar nos rolos perpétuos)
 
 ### 1. Positivo: **mulkur** (*arquivar nos rolos perpétuos*)
 
@@ -14454,7 +14520,7 @@
   - **Imperf.Ind Ativa:** `odamulbbam, odamulbbas, odamulbba, odamulbban, odamulbbat` | **Passiva:** `odamulbbasem, odamulbbases, odamulbbase, odamulbbasen, odamulbbaset`
   - **Imperf.Subj Ativa:** `odamulbbakem, odamulbbakes, odamulbbake, odamulbbaken, odamulbbaket` | **Passiva:** `odamulbbakesem, odamulbbakeses, odamulbbakese, odamulbbakesen, odamulbbakeset`
 
-## 220. Raiz `murd-` (proscrever infrator condenado ao desterro)
+## 221. Raiz `murd-` (proscrever infrator condenado ao desterro)
 
 ### 1. Positivo: **murdur** (*proscrever infrator condenado ao desterro*)
 
@@ -14520,7 +14586,7 @@
   - **Imperf.Ind Ativa:** `odamurdbam, odamurdbas, odamurdba, odamurdban, odamurdbat` | **Passiva:** `odamurdbasem, odamurdbases, odamurdbase, odamurdbasen, odamurdbaset`
   - **Imperf.Subj Ativa:** `odamurdbakem, odamurdbakes, odamurdbake, odamurdbaken, odamurdbaket` | **Passiva:** `odamurdbakesem, odamurdbakeses, odamurdbakese, odamurdbakesen, odamurdbakeset`
 
-## 221. Raiz `murp-` (aferir limpidez de gemas na luz)
+## 222. Raiz `murp-` (aferir limpidez de gemas na luz)
 
 ### 1. Positivo: **murpur** (*aferir limpidez de gemas na luz*)
 
@@ -14586,7 +14652,7 @@
   - **Imperf.Ind Ativa:** `odamurpbam, odamurpbas, odamurpba, odamurpban, odamurpbat` | **Passiva:** `odamurpbasem, odamurpbases, odamurpbase, odamurpbasen, odamurpbaset`
   - **Imperf.Subj Ativa:** `odamurpbakem, odamurpbakes, odamurpbake, odamurpbaken, odamurpbaket` | **Passiva:** `odamurpbakesem, odamurpbakeses, odamurpbakese, odamurpbakesen, odamurpbakeset`
 
-## 222. Raiz `nalb-` (meditar em silêncio recolhido contemplando a alma)
+## 223. Raiz `nalb-` (meditar em silêncio recolhido contemplando a alma)
 
 ### 1. Positivo: **nalbur** (*meditar em silêncio recolhido contemplando a alma*)
 
@@ -14652,7 +14718,7 @@
   - **Imperf.Ind Ativa:** `odanalbbam, odanalbbas, odanalbba, odanalbban, odanalbbat` | **Passiva:** `odanalbbasem, odanalbbases, odanalbbase, odanalbbasen, odanalbbaset`
   - **Imperf.Subj Ativa:** `odanalbbakem, odanalbbakes, odanalbbake, odanalbbaken, odanalbbaket` | **Passiva:** `odanalbbakesem, odanalbbakeses, odanalbbakese, odanalbbakesen, odanalbbakeset`
 
-## 223. Raiz `nalp-` (guarnecer desfiladeiros estratégicos e portelas de montanha)
+## 224. Raiz `nalp-` (guarnecer desfiladeiros estratégicos e portelas de montanha)
 
 ### 1. Positivo: **nalpur** (*guarnecer desfiladeiros estratégicos e portelas de montanha*)
 
@@ -14718,7 +14784,7 @@
   - **Imperf.Ind Ativa:** `odanalpbam, odanalpbas, odanalpba, odanalpban, odanalpbat` | **Passiva:** `odanalpbasem, odanalpbases, odanalpbase, odanalpbasen, odanalpbaset`
   - **Imperf.Subj Ativa:** `odanalpbakem, odanalpbakes, odanalpbake, odanalpbaken, odanalpbaket` | **Passiva:** `odanalpbakesem, odanalpbakeses, odanalpbakese, odanalpbakesen, odanalpbakeset`
 
-## 224. Raiz `nasp-` (navegar em mar aberto com vela mestra desfraldada)
+## 225. Raiz `nasp-` (navegar em mar aberto com vela mestra desfraldada)
 
 ### 1. Positivo: **naspur** (*navegar em mar aberto com vela mestra desfraldada*)
 
@@ -14784,7 +14850,7 @@
   - **Imperf.Ind Ativa:** `odanaspbam, odanaspbas, odanaspba, odanaspban, odanaspbat` | **Passiva:** `odanaspbasem, odanaspbases, odanaspbase, odanaspbasen, odanaspbaset`
   - **Imperf.Subj Ativa:** `odanaspbakem, odanaspbakes, odanaspbake, odanaspbaken, odanaspbaket` | **Passiva:** `odanaspbakesem, odanaspbakeses, odanaspbakese, odanaspbakesen, odanaspbakeset`
 
-## 225. Raiz `nav-` (transformar, tornar-se, converter)
+## 226. Raiz `nav-` (transformar, tornar-se, converter)
 
 ### 1. Positivo: **navur** (*transformar, tornar-se, converter*)
 
@@ -14850,7 +14916,7 @@
   - **Imperf.Ind Ativa:** `odanavbam, odanavbas, odanavba, odanavban, odanavbat` | **Passiva:** `odanavbasem, odanavbases, odanavbase, odanavbasen, odanavbaset`
   - **Imperf.Subj Ativa:** `odanavbakem, odanavbakes, odanavbake, odanavbaken, odanavbaket` | **Passiva:** `odanavbakesem, odanavbakeses, odanavbakese, odanavbakesen, odanavbakeset`
 
-## 226. Raiz `nax-` (escurecer no ocaso, anoitecer)
+## 227. Raiz `nax-` (escurecer no ocaso, anoitecer)
 
 ### 1. Positivo: **naxur** (*escurecer no ocaso, anoitecer*)
 
@@ -14916,7 +14982,7 @@
   - **Imperf.Ind Ativa:** `odanaxbam, odanaxbas, odanaxba, odanaxban, odanaxbat` | **Passiva:** `odanaxbasem, odanaxbases, odanaxbase, odanaxbasen, odanaxbaset`
   - **Imperf.Subj Ativa:** `odanaxbakem, odanaxbakes, odanaxbake, odanaxbaken, odanaxbaket` | **Passiva:** `odanaxbakesem, odanaxbakeses, odanaxbakese, odanaxbakesen, odanaxbakeset`
 
-## 227. Raiz `nek-` (esticar os membros, espreguiçar-se)
+## 228. Raiz `nek-` (esticar os membros, espreguiçar-se)
 
 ### 1. Positivo: **nekur** (*esticar os membros, espreguiçar-se*)
 
@@ -14982,7 +15048,7 @@
   - **Imperf.Ind Ativa:** `odanebbam, odanebbas, odanebba, odanebban, odanebbat` | **Passiva:** `odanebbasem, odanebbases, odanebbase, odanebbasen, odanebbaset`
   - **Imperf.Subj Ativa:** `odanebbakem, odanebbakes, odanebbake, odanebbaken, odanebbaket` | **Passiva:** `odanebbakesem, odanebbakeses, odanebbakese, odanebbakesen, odanebbakeset`
 
-## 228. Raiz `nel-` (vadear o rio nos baixios)
+## 229. Raiz `nel-` (vadear o rio nos baixios)
 
 ### 1. Positivo: **nelur** (*vadear o rio nos baixios*)
 
@@ -15048,7 +15114,7 @@
   - **Imperf.Ind Ativa:** `odanelbam, odanelbas, odanelba, odanelban, odanelbat` | **Passiva:** `odanelbasem, odanelbases, odanelbase, odanelbasen, odanelbaset`
   - **Imperf.Subj Ativa:** `odanelbakem, odanelbakes, odanelbake, odanelbaken, odanelbaket` | **Passiva:** `odanelbakesem, odanelbakeses, odanelbakese, odanelbakesen, odanelbakeset`
 
-## 229. Raiz `nelb-` (julgar causas com retidão imparcial e justiça distributiva)
+## 230. Raiz `nelb-` (julgar causas com retidão imparcial e justiça distributiva)
 
 ### 1. Positivo: **nelbur** (*julgar causas com retidão imparcial e justiça distributiva*)
 
@@ -15114,7 +15180,7 @@
   - **Imperf.Ind Ativa:** `odanelbbam, odanelbbas, odanelbba, odanelbban, odanelbbat` | **Passiva:** `odanelbbasem, odanelbbases, odanelbbase, odanelbbasen, odanelbbaset`
   - **Imperf.Subj Ativa:** `odanelbbakem, odanelbbakes, odanelbbake, odanelbbaken, odanelbbaket` | **Passiva:** `odanelbbakesem, odanelbbakeses, odanelbbakese, odanelbbakesen, odanelbbakeset`
 
-## 230. Raiz `nelp-` (farejar, sentir aroma ou perfume)
+## 231. Raiz `nelp-` (farejar, sentir aroma ou perfume)
 
 ### 1. Positivo: **nelpur** (*farejar, sentir aroma ou perfume*)
 
@@ -15180,7 +15246,7 @@
   - **Imperf.Ind Ativa:** `odanelpbam, odanelpbas, odanelpba, odanelpban, odanelpbat` | **Passiva:** `odanelpbasem, odanelpbases, odanelpbase, odanelpbasen, odanelpbaset`
   - **Imperf.Subj Ativa:** `odanelpbakem, odanelpbakes, odanelpbake, odanelpbaken, odanelpbaket` | **Passiva:** `odanelpbakesem, odanelpbakeses, odanelpbakese, odanelpbakesen, odanelpbakeset`
 
-## 231. Raiz `nemr-` (lembrar, recordar na memória (fut. nemnu, nr -> nn))
+## 232. Raiz `nemr-` (lembrar, recordar na memória (fut. nemnu, nr -> nn))
 
 ### 1. Positivo: **nemrur** (*lembrar, recordar na memória (fut. nemnu, nr -> nn)*)
 
@@ -15246,7 +15312,73 @@
   - **Imperf.Ind Ativa:** `odanemrbam, odanemrbas, odanemrba, odanemrban, odanemrbat` | **Passiva:** `odanemrbasem, odanemrbases, odanemrbase, odanemrbasen, odanemrbaset`
   - **Imperf.Subj Ativa:** `odanemrbakem, odanemrbakes, odanemrbake, odanemrbaken, odanemrbaket` | **Passiva:** `odanemrbakesem, odanemrbakeses, odanemrbakese, odanemrbakesen, odanemrbakeset`
 
-## 232. Raiz `nerp-` (debater proposições dialéticas no conclave de sábios)
+## 233. Raiz `nerk-` (sublimar enxofre em crostas amarelas fumegantes)
+
+### 1. Positivo: **nerkur** (*sublimar enxofre em crostas amarelas fumegantes*)
+
+- **Infinitivo:** `nerkur` | **Imperativo:** `Nerk!` | **Interrogativo 2ª Pl:** `nerkukka?`
+- **Particípio (8 Casos):** Nom.Sg `nerket`, Gen.Sg `nerkety`, Dat.Sg `nerketi`, Acu.Sg `nerketom`, Nom.Pl `nerketi`, Gen.Pl `nerketye`, Dat.Pl `nerketoi`, Acu.Pl `nerketos`
+- **Derivados Nominais:** Agente `nertte`, Abstrato `nerkor`, Instrumento `nerttek`, Lugar `nerkia`
+  - **Pres.Ind Ativa:** `nerkum, nerkus, nerku, nerkun, nerkut` | **Passiva:** `nerkusem, nerkuses, nerkuse, nerkusen, nerkuset`
+  - **Pres.Subj Ativa:** `nerkukem, nerkukes, nerkuke, nerkuken, nerkuket` | **Passiva:** `nerkukesem, nerkukeses, nerkukese, nerkukesen, nerkukeset`
+  - **Pass.Ind Ativa:** `nerkram, nerkras, nerkra, nerkran, nerkrat` | **Passiva:** `nerkrasem, nerkrases, nerkrase, nerkrasen, nerkraset`
+  - **Pass.Subj Ativa:** `nerkrakem, nerkrakes, nerkrake, nerkraken, nerkraket` | **Passiva:** `nerkrakesem, nerkrakeses, nerkrakese, nerkrakesen, nerkrakeset`
+  - **Dur.Ind Ativa:** `nerkaim, nerkais, nerkai, nerkain, nerkait` | **Passiva:** `nerkaisem, nerkaises, nerkaise, nerkaisen, nerkaiset`
+  - **Dur.Subj Ativa:** `nerkaikem, nerkaikes, nerkaike, nerkaiken, nerkaiket` | **Passiva:** `nerkaikesem, nerkaikeses, nerkaikese, nerkaikesen, nerkaikeset`
+  - **Fut.Ind Ativa:** `nerkrum, nerkrus, nerkru, nerkrun, nerkrut` | **Passiva:** `nerkrusem, nerkruses, nerkruse, nerkrusen, nerkruset`
+  - **Fut.Subj Ativa:** `nerkrukem, nerkrukes, nerkruke, nerkruken, nerkruket` | **Passiva:** `nerkrukesem, nerkrukeses, nerkrukese, nerkrukesen, nerkrukeset`
+  - **Imperf.Ind Ativa:** `nerbbam, nerbbas, nerbba, nerbban, nerbbat` | **Passiva:** `nerbbasem, nerbbases, nerbbase, nerbbasen, nerbbaset`
+  - **Imperf.Subj Ativa:** `nerbbakem, nerbbakes, nerbbake, nerbbaken, nerbbaket` | **Passiva:** `nerbbakesem, nerbbakeses, nerbbakese, nerbbakesen, nerbbakeset`
+
+### 2. Privativo (a-): **anerkur** (*apagar as chamas sulfurosas dissolvendo as crostas acidas*)
+
+- **Infinitivo:** `anerkur` | **Imperativo:** `Anerk!` | **Interrogativo 2ª Pl:** `anerkukka?`
+- **Particípio (8 Casos):** Nom.Sg `anerket`, Gen.Sg `anerkety`, Dat.Sg `anerketi`, Acu.Sg `anerketom`, Nom.Pl `anerketi`, Gen.Pl `anerketye`, Dat.Pl `anerketoi`, Acu.Pl `anerketos`
+- **Derivados Nominais:** Agente `anertte`, Abstrato `anerkor`, Instrumento `anerttek`, Lugar `anerkia`
+  - **Pres.Ind Ativa:** `anerkum, anerkus, anerku, anerkun, anerkut` | **Passiva:** `anerkusem, anerkuses, anerkuse, anerkusen, anerkuset`
+  - **Pres.Subj Ativa:** `anerkukem, anerkukes, anerkuke, anerkuken, anerkuket` | **Passiva:** `anerkukesem, anerkukeses, anerkukese, anerkukesen, anerkukeset`
+  - **Pass.Ind Ativa:** `anerkram, anerkras, anerkra, anerkran, anerkrat` | **Passiva:** `anerkrasem, anerkrases, anerkrase, anerkrasen, anerkraset`
+  - **Pass.Subj Ativa:** `anerkrakem, anerkrakes, anerkrake, anerkraken, anerkraket` | **Passiva:** `anerkrakesem, anerkrakeses, anerkrakese, anerkrakesen, anerkrakeset`
+  - **Dur.Ind Ativa:** `anerkaim, anerkais, anerkai, anerkain, anerkait` | **Passiva:** `anerkaisem, anerkaises, anerkaise, anerkaisen, anerkaiset`
+  - **Dur.Subj Ativa:** `anerkaikem, anerkaikes, anerkaike, anerkaiken, anerkaiket` | **Passiva:** `anerkaikesem, anerkaikeses, anerkaikese, anerkaikesen, anerkaikeset`
+  - **Fut.Ind Ativa:** `anerkrum, anerkrus, anerkru, anerkrun, anerkrut` | **Passiva:** `anerkrusem, anerkruses, anerkruse, anerkrusen, anerkruset`
+  - **Fut.Subj Ativa:** `anerkrukem, anerkrukes, anerkruke, anerkruken, anerkruket` | **Passiva:** `anerkrukesem, anerkrukeses, anerkrukese, anerkrukesen, anerkrukeset`
+  - **Imperf.Ind Ativa:** `anerbbam, anerbbas, anerbba, anerbban, anerbbat` | **Passiva:** `anerbbasem, anerbbases, anerbbase, anerbbasen, anerbbaset`
+  - **Imperf.Subj Ativa:** `anerbbakem, anerbbakes, anerbbake, anerbbaken, anerbbaket` | **Passiva:** `anerbbakesem, anerbbakeses, anerbbakese, anerbbakesen, anerbbakeset`
+
+### 3. Iterativo (o-/od-): **onerkur** (*exalar continuamente vapores que tingem os rochedos*)
+
+- **Infinitivo:** `onerkur` | **Imperativo:** `Onerk!` | **Interrogativo 2ª Pl:** `onerkukka?`
+- **Particípio (8 Casos):** Nom.Sg `onerket`, Gen.Sg `onerkety`, Dat.Sg `onerketi`, Acu.Sg `onerketom`, Nom.Pl `onerketi`, Gen.Pl `onerketye`, Dat.Pl `onerketoi`, Acu.Pl `onerketos`
+- **Derivados Nominais:** Agente `onertte`, Abstrato `onerkor`, Instrumento `onerttek`, Lugar `onerkia`
+  - **Pres.Ind Ativa:** `onerkum, onerkus, onerku, onerkun, onerkut` | **Passiva:** `onerkusem, onerkuses, onerkuse, onerkusen, onerkuset`
+  - **Pres.Subj Ativa:** `onerkukem, onerkukes, onerkuke, onerkuken, onerkuket` | **Passiva:** `onerkukesem, onerkukeses, onerkukese, onerkukesen, onerkukeset`
+  - **Pass.Ind Ativa:** `onerkram, onerkras, onerkra, onerkran, onerkrat` | **Passiva:** `onerkrasem, onerkrases, onerkrase, onerkrasen, onerkraset`
+  - **Pass.Subj Ativa:** `onerkrakem, onerkrakes, onerkrake, onerkraken, onerkraket` | **Passiva:** `onerkrakesem, onerkrakeses, onerkrakese, onerkrakesen, onerkrakeset`
+  - **Dur.Ind Ativa:** `onerkaim, onerkais, onerkai, onerkain, onerkait` | **Passiva:** `onerkaisem, onerkaises, onerkaise, onerkaisen, onerkaiset`
+  - **Dur.Subj Ativa:** `onerkaikem, onerkaikes, onerkaike, onerkaiken, onerkaiket` | **Passiva:** `onerkaikesem, onerkaikeses, onerkaikese, onerkaikesen, onerkaikeset`
+  - **Fut.Ind Ativa:** `onerkrum, onerkrus, onerkru, onerkrun, onerkrut` | **Passiva:** `onerkrusem, onerkruses, onerkruse, onerkrusen, onerkruset`
+  - **Fut.Subj Ativa:** `onerkrukem, onerkrukes, onerkruke, onerkruken, onerkruket` | **Passiva:** `onerkrukesem, onerkrukeses, onerkrukese, onerkrukesen, onerkrukeset`
+  - **Imperf.Ind Ativa:** `onerbbam, onerbbas, onerbba, onerbban, onerbbat` | **Passiva:** `onerbbasem, onerbbases, onerbbase, onerbbasen, onerbbaset`
+  - **Imperf.Subj Ativa:** `onerbbakem, onerbbakes, onerbbake, onerbbaken, onerbbaket` | **Passiva:** `onerbbakesem, onerbbakeses, onerbbakese, onerbbakesen, onerbbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odanerkur** (*dispersar as fumaças sob o sopro dos ventos de altitude*)
+
+- **Infinitivo:** `odanerkur` | **Imperativo:** `Odanerk!` | **Interrogativo 2ª Pl:** `odanerkukka?`
+- **Particípio (8 Casos):** Nom.Sg `odanerket`, Gen.Sg `odanerkety`, Dat.Sg `odanerketi`, Acu.Sg `odanerketom`, Nom.Pl `odanerketi`, Gen.Pl `odanerketye`, Dat.Pl `odanerketoi`, Acu.Pl `odanerketos`
+- **Derivados Nominais:** Agente `odanertte`, Abstrato `odanerkor`, Instrumento `odanerttek`, Lugar `odanerkia`
+  - **Pres.Ind Ativa:** `odanerkum, odanerkus, odanerku, odanerkun, odanerkut` | **Passiva:** `odanerkusem, odanerkuses, odanerkuse, odanerkusen, odanerkuset`
+  - **Pres.Subj Ativa:** `odanerkukem, odanerkukes, odanerkuke, odanerkuken, odanerkuket` | **Passiva:** `odanerkukesem, odanerkukeses, odanerkukese, odanerkukesen, odanerkukeset`
+  - **Pass.Ind Ativa:** `odanerkram, odanerkras, odanerkra, odanerkran, odanerkrat` | **Passiva:** `odanerkrasem, odanerkrases, odanerkrase, odanerkrasen, odanerkraset`
+  - **Pass.Subj Ativa:** `odanerkrakem, odanerkrakes, odanerkrake, odanerkraken, odanerkraket` | **Passiva:** `odanerkrakesem, odanerkrakeses, odanerkrakese, odanerkrakesen, odanerkrakeset`
+  - **Dur.Ind Ativa:** `odanerkaim, odanerkais, odanerkai, odanerkain, odanerkait` | **Passiva:** `odanerkaisem, odanerkaises, odanerkaise, odanerkaisen, odanerkaiset`
+  - **Dur.Subj Ativa:** `odanerkaikem, odanerkaikes, odanerkaike, odanerkaiken, odanerkaiket` | **Passiva:** `odanerkaikesem, odanerkaikeses, odanerkaikese, odanerkaikesen, odanerkaikeset`
+  - **Fut.Ind Ativa:** `odanerkrum, odanerkrus, odanerkru, odanerkrun, odanerkrut` | **Passiva:** `odanerkrusem, odanerkruses, odanerkruse, odanerkrusen, odanerkruset`
+  - **Fut.Subj Ativa:** `odanerkrukem, odanerkrukes, odanerkruke, odanerkruken, odanerkruket` | **Passiva:** `odanerkrukesem, odanerkrukeses, odanerkrukese, odanerkrukesen, odanerkrukeset`
+  - **Imperf.Ind Ativa:** `odanerbbam, odanerbbas, odanerbba, odanerbban, odanerbbat` | **Passiva:** `odanerbbasem, odanerbbases, odanerbbase, odanerbbasen, odanerbbaset`
+  - **Imperf.Subj Ativa:** `odanerbbakem, odanerbbakes, odanerbbake, odanerbbaken, odanerbbaket` | **Passiva:** `odanerbbakesem, odanerbbakeses, odanerbbakese, odanerbbakesen, odanerbbakeset`
+
+## 234. Raiz `nerp-` (debater proposições dialéticas no conclave de sábios)
 
 ### 1. Positivo: **nerpur** (*debater proposições dialéticas no conclave de sábios*)
 
@@ -15312,7 +15444,7 @@
   - **Imperf.Ind Ativa:** `odanerpbam, odanerpbas, odanerpba, odanerpban, odanerpbat` | **Passiva:** `odanerpbasem, odanerpbases, odanerpbase, odanerpbasen, odanerpbaset`
   - **Imperf.Subj Ativa:** `odanerpbakem, odanerpbakes, odanerpbake, odanerpbaken, odanerpbaket` | **Passiva:** `odanerpbakesem, odanerpbakeses, odanerpbakese, odanerpbakesen, odanerpbakeset`
 
-## 233. Raiz `nik-` (entalhar relevo em madeira nobre)
+## 235. Raiz `nik-` (entalhar relevo em madeira nobre)
 
 ### 1. Positivo: **nikur** (*entalhar relevo em madeira nobre*)
 
@@ -15378,7 +15510,7 @@
   - **Imperf.Ind Ativa:** `odanibbam, odanibbas, odanibba, odanibban, odanibbat` | **Passiva:** `odanibbasem, odanibbases, odanibbase, odanibbasen, odanibbaset`
   - **Imperf.Subj Ativa:** `odanibbakem, odanibbakes, odanibbake, odanibbaken, odanibbaket` | **Passiva:** `odanibbakesem, odanibbakeses, odanibbakese, odanibbakesen, odanibbakeset`
 
-## 234. Raiz `nin-` (trançar os cabelos em penteado nobre)
+## 236. Raiz `nin-` (trançar os cabelos em penteado nobre)
 
 ### 1. Positivo: **ninur** (*trançar os cabelos em penteado nobre*)
 
@@ -15444,7 +15576,7 @@
   - **Imperf.Ind Ativa:** `odanimbam, odanimbas, odanimba, odanimban, odanimbat` | **Passiva:** `odanimbasem, odanimbases, odanimbase, odanimbasen, odanimbaset`
   - **Imperf.Subj Ativa:** `odanimbakem, odanimbakes, odanimbake, odanimbaken, odanimbaket` | **Passiva:** `odanimbakesem, odanimbakeses, odanimbakese, odanimbakesen, odanimbakeset`
 
-## 235. Raiz `nirb-` (gotejar continuamente calcario formando estalactites no teto)
+## 237. Raiz `nirb-` (gotejar continuamente calcario formando estalactites no teto)
 
 ### 1. Positivo: **nirbur** (*gotejar continuamente calcario formando estalactites no teto*)
 
@@ -15510,7 +15642,7 @@
   - **Imperf.Ind Ativa:** `odanirbbam, odanirbbas, odanirbba, odanirbban, odanirbbat` | **Passiva:** `odanirbbasem, odanirbbases, odanirbbase, odanirbbasen, odanirbbaset`
   - **Imperf.Subj Ativa:** `odanirbbakem, odanirbbakes, odanirbbake, odanirbbaken, odanirbbaket` | **Passiva:** `odanirbbakesem, odanirbbakeses, odanirbbakese, odanirbbakesen, odanirbbakeset`
 
-## 236. Raiz `niv-` (consagrar a fronte com bálsamo sagrado)
+## 238. Raiz `niv-` (consagrar a fronte com bálsamo sagrado)
 
 ### 1. Positivo: **nivur** (*consagrar a fronte com bálsamo sagrado*)
 
@@ -15576,7 +15708,7 @@
   - **Imperf.Ind Ativa:** `odanivbam, odanivbas, odanivba, odanivban, odanivbat` | **Passiva:** `odanivbasem, odanivbases, odanivbase, odanivbasen, odanivbaset`
   - **Imperf.Subj Ativa:** `odanivbakem, odanivbakes, odanivbake, odanivbaken, odanivbaket` | **Passiva:** `odanivbakesem, odanivbakeses, odanivbakese, odanivbakesen, odanivbakeset`
 
-## 237. Raiz `nop-` (semear grãos na terra lavrada)
+## 239. Raiz `nop-` (semear grãos na terra lavrada)
 
 ### 1. Positivo: **nopur** (*semear grãos na terra lavrada*)
 
@@ -15642,7 +15774,7 @@
   - **Imperf.Ind Ativa:** `odanopbam, odanopbas, odanopba, odanopban, odanopbat` | **Passiva:** `odanopbasem, odanopbases, odanopbase, odanopbasen, odanopbaset`
   - **Imperf.Subj Ativa:** `odanopbakem, odanopbakes, odanopbake, odanopbaken, odanopbaket` | **Passiva:** `odanopbakesem, odanopbakeses, odanopbakese, odanopbakesen, odanopbakeset`
 
-## 238. Raiz `norv-` (acionar martelos pesados de forja através de cames e eixo hidráulico)
+## 240. Raiz `norv-` (acionar martelos pesados de forja através de cames e eixo hidráulico)
 
 ### 1. Positivo: **norvur** (*acionar martelos pesados de forja através de cames e eixo hidráulico*)
 
@@ -15708,7 +15840,7 @@
   - **Imperf.Ind Ativa:** `odanorvbam, odanorvbas, odanorvba, odanorvban, odanorvbat` | **Passiva:** `odanorvbasem, odanorvbases, odanorvbase, odanorvbasen, odanorvbaset`
   - **Imperf.Subj Ativa:** `odanorvbakem, odanorvbakes, odanorvbake, odanorvbaken, odanorvbaket` | **Passiva:** `odanorvbakesem, odanorvbakeses, odanorvbakese, odanorvbakesen, odanorvbakeset`
 
-## 239. Raiz `nul-` (testemunhar sob juramento sagrado)
+## 241. Raiz `nul-` (testemunhar sob juramento sagrado)
 
 ### 1. Positivo: **nulur** (*testemunhar sob juramento sagrado*)
 
@@ -15774,7 +15906,7 @@
   - **Imperf.Ind Ativa:** `odanulbam, odanulbas, odanulba, odanulban, odanulbat` | **Passiva:** `odanulbasem, odanulbases, odanulbase, odanulbasen, odanulbaset`
   - **Imperf.Subj Ativa:** `odanulbakem, odanulbakes, odanulbake, odanulbaken, odanulbaket` | **Passiva:** `odanulbakesem, odanulbakeses, odanulbakese, odanulbakesen, odanulbakeset`
 
-## 240. Raiz `nulp-` (acumular bancos de neve alta)
+## 242. Raiz `nulp-` (acumular bancos de neve alta)
 
 ### 1. Positivo: **nulpur** (*acumular bancos de neve alta*)
 
@@ -15840,7 +15972,7 @@
   - **Imperf.Ind Ativa:** `odanulpbam, odanulpbas, odanulpba, odanulpban, odanulpbat` | **Passiva:** `odanulpbasem, odanulpbases, odanulpbase, odanulpbasen, odanulpbaset`
   - **Imperf.Subj Ativa:** `odanulpbakem, odanulpbakes, odanulpbake, odanulpbaken, odanulpbaket` | **Passiva:** `odanulpbakesem, odanulpbakeses, odanulpbakese, odanulpbakesen, odanulpbakeset`
 
-## 241. Raiz `nyk-` (abrir porta ou baú)
+## 243. Raiz `nyk-` (abrir porta ou baú)
 
 ### 1. Positivo: **nykur** (*abrir porta ou baú*)
 
@@ -15906,7 +16038,7 @@
   - **Imperf.Ind Ativa:** `odanybbam, odanybbas, odanybba, odanybban, odanybbat` | **Passiva:** `odanybbasem, odanybbases, odanybbase, odanybbasen, odanybbaset`
   - **Imperf.Subj Ativa:** `odanybbakem, odanybbakes, odanybbake, odanybbaken, odanybbaket` | **Passiva:** `odanybbakesem, odanybbakeses, odanybbakese, odanybbakesen, odanybbakeset`
 
-## 242. Raiz `oub-` (entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror))
+## 244. Raiz `oub-` (entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror))
 
 ### 1. Positivo: **oubur** (*entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror)*)
 
@@ -15972,7 +16104,7 @@
   - **Imperf.Ind Ativa:** `odaoubbam, odaoubbas, odaoubba, odaoubban, odaoubbat` | **Passiva:** `odaoubbasem, odaoubbases, odaoubbase, odaoubbasen, odaoubbaset`
   - **Imperf.Subj Ativa:** `odaoubbakem, odaoubbakes, odaoubbake, odaoubbaken, odaoubbaket` | **Passiva:** `odaoubbakesem, odaoubbakeses, odaoubbakese, odaoubbakesen, odaoubbakeset`
 
-## 243. Raiz `ox-` (guerrear, combater em campo)
+## 245. Raiz `ox-` (guerrear, combater em campo)
 
 ### 1. Positivo: **oxur** (*guerrear, combater em campo*)
 
@@ -16038,7 +16170,7 @@
   - **Imperf.Ind Ativa:** `odaoxbam, odaoxbas, odaoxba, odaoxban, odaoxbat` | **Passiva:** `odaoxbasem, odaoxbases, odaoxbase, odaoxbasen, odaoxbaset`
   - **Imperf.Subj Ativa:** `odaoxbakem, odaoxbakes, odaoxbake, odaoxbaken, odaoxbaket` | **Passiva:** `odaoxbakesem, odaoxbakeses, odaoxbakese, odaoxbakesen, odaoxbakeset`
 
-## 244. Raiz `oxep-` (determinar o ângulo sobre a linha da terra)
+## 246. Raiz `oxep-` (determinar o ângulo sobre a linha da terra)
 
 ### 1. Positivo: **oxepur** (*determinar o ângulo sobre a linha da terra*)
 
@@ -16104,7 +16236,7 @@
   - **Imperf.Ind Ativa:** `odaoxepbam, odaoxepbas, odaoxepba, odaoxepban, odaoxepbat` | **Passiva:** `odaoxepbasem, odaoxepbases, odaoxepbase, odaoxepbasen, odaoxepbaset`
   - **Imperf.Subj Ativa:** `odaoxepbakem, odaoxepbakes, odaoxepbake, odaoxepbaken, odaoxepbaket` | **Passiva:** `odaoxepbakesem, odaoxepbakeses, odaoxepbakese, odaoxepbakesen, odaoxepbakeset`
 
-## 245. Raiz `palb-` (moderar desejos e apetites com temperança e serenidade interior)
+## 247. Raiz `palb-` (moderar desejos e apetites com temperança e serenidade interior)
 
 ### 1. Positivo: **palbur** (*moderar desejos e apetites com temperança e serenidade interior*)
 
@@ -16170,7 +16302,7 @@
   - **Imperf.Ind Ativa:** `odapalbbam, odapalbbas, odapalbba, odapalbban, odapalbbat` | **Passiva:** `odapalbbasem, odapalbbases, odapalbbase, odapalbbasen, odapalbbaset`
   - **Imperf.Subj Ativa:** `odapalbbakem, odapalbbakes, odapalbbake, odapalbbaken, odapalbbaket` | **Passiva:** `odapalbbakesem, odapalbbakeses, odapalbbakese, odapalbbakesen, odapalbbakeset`
 
-## 246. Raiz `palp-` (furar o couro com sovela de sapateiro)
+## 248. Raiz `palp-` (furar o couro com sovela de sapateiro)
 
 ### 1. Positivo: **palpur** (*furar o couro com sovela de sapateiro*)
 
@@ -16236,7 +16368,7 @@
   - **Imperf.Ind Ativa:** `odapalpbam, odapalpbas, odapalpba, odapalpban, odapalpbat` | **Passiva:** `odapalpbasem, odapalpbases, odapalpbase, odapalpbasen, odapalpbaset`
   - **Imperf.Subj Ativa:** `odapalpbakem, odapalpbakes, odapalpbake, odapalpbaken, odapalpbaket` | **Passiva:** `odapalpbakesem, odapalpbakeses, odapalpbakese, odapalpbakesen, odapalpbakeset`
 
-## 247. Raiz `palt-` (prensar frutos em lagar de viga para mosto)
+## 249. Raiz `palt-` (prensar frutos em lagar de viga para mosto)
 
 ### 1. Positivo: **paltur** (*prensar frutos em lagar de viga para mosto*)
 
@@ -16302,7 +16434,7 @@
   - **Imperf.Ind Ativa:** `odapalbbam, odapalbbas, odapalbba, odapalbban, odapalbbat` | **Passiva:** `odapalbbasem, odapalbbases, odapalbbase, odapalbbasen, odapalbbaset`
   - **Imperf.Subj Ativa:** `odapalbbakem, odapalbbakes, odapalbbake, odapalbbaken, odapalbbaket` | **Passiva:** `odapalbbakesem, odapalbbakeses, odapalbbakese, odapalbbakesen, odapalbbakeset`
 
-## 248. Raiz `par-` (merecer, ser digno, ter parte em)
+## 250. Raiz `par-` (merecer, ser digno, ter parte em)
 
 ### 1. Positivo: **parur** (*merecer, ser digno, ter parte em*)
 
@@ -16368,7 +16500,73 @@
   - **Imperf.Ind Ativa:** `odaparbam, odaparbas, odaparba, odaparban, odaparbat` | **Passiva:** `odaparbasem, odaparbases, odaparbase, odaparbasen, odaparbaset`
   - **Imperf.Subj Ativa:** `odaparbakem, odaparbakes, odaparbake, odaparbaken, odaparbaket` | **Passiva:** `odaparbakesem, odaparbakeses, odaparbakese, odaparbakesen, odaparbakeset`
 
-## 249. Raiz `pas-` (precisar, necessitar, desejar)
+## 251. Raiz `parb-` (estremecer as falhas geologicas em abalos tectonicos)
+
+### 1. Positivo: **parbur** (*estremecer as falhas geologicas em abalos tectonicos*)
+
+- **Infinitivo:** `parbur` | **Imperativo:** `Parb!` | **Interrogativo 2ª Pl:** `parbukka?`
+- **Particípio (8 Casos):** Nom.Sg `parbet`, Gen.Sg `parbety`, Dat.Sg `parbeti`, Acu.Sg `parbetom`, Nom.Pl `parbeti`, Gen.Pl `parbetye`, Dat.Pl `parbetoi`, Acu.Pl `parbetos`
+- **Derivados Nominais:** Agente `parbte`, Abstrato `parbor`, Instrumento `parbtek`, Lugar `parbia`
+  - **Pres.Ind Ativa:** `parbum, parbus, parbu, parbun, parbut` | **Passiva:** `parbusem, parbuses, parbuse, parbusen, parbuset`
+  - **Pres.Subj Ativa:** `parbukem, parbukes, parbuke, parbuken, parbuket` | **Passiva:** `parbukesem, parbukeses, parbukese, parbukesen, parbukeset`
+  - **Pass.Ind Ativa:** `parbram, parbras, parbra, parbran, parbrat` | **Passiva:** `parbrasem, parbrases, parbrase, parbrasen, parbraset`
+  - **Pass.Subj Ativa:** `parbrakem, parbrakes, parbrake, parbraken, parbraket` | **Passiva:** `parbrakesem, parbrakeses, parbrakese, parbrakesen, parbrakeset`
+  - **Dur.Ind Ativa:** `parbaim, parbais, parbai, parbain, parbait` | **Passiva:** `parbaisem, parbaises, parbaise, parbaisen, parbaiset`
+  - **Dur.Subj Ativa:** `parbaikem, parbaikes, parbaike, parbaiken, parbaiket` | **Passiva:** `parbaikesem, parbaikeses, parbaikese, parbaikesen, parbaikeset`
+  - **Fut.Ind Ativa:** `parbrum, parbrus, parbru, parbrun, parbrut` | **Passiva:** `parbrusem, parbruses, parbruse, parbrusen, parbruset`
+  - **Fut.Subj Ativa:** `parbrukem, parbrukes, parbruke, parbruken, parbruket` | **Passiva:** `parbrukesem, parbrukeses, parbrukese, parbrukesen, parbrukeset`
+  - **Imperf.Ind Ativa:** `parbbam, parbbas, parbba, parbban, parbbat` | **Passiva:** `parbbasem, parbbases, parbbase, parbbasen, parbbaset`
+  - **Imperf.Subj Ativa:** `parbbakem, parbbakes, parbbake, parbbaken, parbbaket` | **Passiva:** `parbbakesem, parbbakeses, parbbakese, parbbakesen, parbbakeset`
+
+### 2. Privativo (a-): **aparbur** (*acalmar os sismos estabilizando as placas rochosas*)
+
+- **Infinitivo:** `aparbur` | **Imperativo:** `Aparb!` | **Interrogativo 2ª Pl:** `aparbukka?`
+- **Particípio (8 Casos):** Nom.Sg `aparbet`, Gen.Sg `aparbety`, Dat.Sg `aparbeti`, Acu.Sg `aparbetom`, Nom.Pl `aparbeti`, Gen.Pl `aparbetye`, Dat.Pl `aparbetoi`, Acu.Pl `aparbetos`
+- **Derivados Nominais:** Agente `aparbte`, Abstrato `aparbor`, Instrumento `aparbtek`, Lugar `aparbia`
+  - **Pres.Ind Ativa:** `aparbum, aparbus, aparbu, aparbun, aparbut` | **Passiva:** `aparbusem, aparbuses, aparbuse, aparbusen, aparbuset`
+  - **Pres.Subj Ativa:** `aparbukem, aparbukes, aparbuke, aparbuken, aparbuket` | **Passiva:** `aparbukesem, aparbukeses, aparbukese, aparbukesen, aparbukeset`
+  - **Pass.Ind Ativa:** `aparbram, aparbras, aparbra, aparbran, aparbrat` | **Passiva:** `aparbrasem, aparbrases, aparbrase, aparbrasen, aparbraset`
+  - **Pass.Subj Ativa:** `aparbrakem, aparbrakes, aparbrake, aparbraken, aparbraket` | **Passiva:** `aparbrakesem, aparbrakeses, aparbrakese, aparbrakesen, aparbrakeset`
+  - **Dur.Ind Ativa:** `aparbaim, aparbais, aparbai, aparbain, aparbait` | **Passiva:** `aparbaisem, aparbaises, aparbaise, aparbaisen, aparbaiset`
+  - **Dur.Subj Ativa:** `aparbaikem, aparbaikes, aparbaike, aparbaiken, aparbaiket` | **Passiva:** `aparbaikesem, aparbaikeses, aparbaikese, aparbaikesen, aparbaikeset`
+  - **Fut.Ind Ativa:** `aparbrum, aparbrus, aparbru, aparbrun, aparbrut` | **Passiva:** `aparbrusem, aparbruses, aparbruse, aparbrusen, aparbruset`
+  - **Fut.Subj Ativa:** `aparbrukem, aparbrukes, aparbruke, aparbruken, aparbruket` | **Passiva:** `aparbrukesem, aparbrukeses, aparbrukese, aparbrukesen, aparbrukeset`
+  - **Imperf.Ind Ativa:** `aparbbam, aparbbas, aparbba, aparbban, aparbbat` | **Passiva:** `aparbbasem, aparbbases, aparbbase, aparbbasen, aparbbaset`
+  - **Imperf.Subj Ativa:** `aparbbakem, aparbbakes, aparbbake, aparbbaken, aparbbaket` | **Passiva:** `aparbbakesem, aparbbakeses, aparbbakese, aparbbakesen, aparbbakeset`
+
+### 3. Iterativo (o-/od-): **oparbur** (*vibrar em tremores harmonicos anunciando a subida da lava*)
+
+- **Infinitivo:** `oparbur` | **Imperativo:** `Oparb!` | **Interrogativo 2ª Pl:** `oparbukka?`
+- **Particípio (8 Casos):** Nom.Sg `oparbet`, Gen.Sg `oparbety`, Dat.Sg `oparbeti`, Acu.Sg `oparbetom`, Nom.Pl `oparbeti`, Gen.Pl `oparbetye`, Dat.Pl `oparbetoi`, Acu.Pl `oparbetos`
+- **Derivados Nominais:** Agente `oparbte`, Abstrato `oparbor`, Instrumento `oparbtek`, Lugar `oparbia`
+  - **Pres.Ind Ativa:** `oparbum, oparbus, oparbu, oparbun, oparbut` | **Passiva:** `oparbusem, oparbuses, oparbuse, oparbusen, oparbuset`
+  - **Pres.Subj Ativa:** `oparbukem, oparbukes, oparbuke, oparbuken, oparbuket` | **Passiva:** `oparbukesem, oparbukeses, oparbukese, oparbukesen, oparbukeset`
+  - **Pass.Ind Ativa:** `oparbram, oparbras, oparbra, oparbran, oparbrat` | **Passiva:** `oparbrasem, oparbrases, oparbrase, oparbrasen, oparbraset`
+  - **Pass.Subj Ativa:** `oparbrakem, oparbrakes, oparbrake, oparbraken, oparbraket` | **Passiva:** `oparbrakesem, oparbrakeses, oparbrakese, oparbrakesen, oparbrakeset`
+  - **Dur.Ind Ativa:** `oparbaim, oparbais, oparbai, oparbain, oparbait` | **Passiva:** `oparbaisem, oparbaises, oparbaise, oparbaisen, oparbaiset`
+  - **Dur.Subj Ativa:** `oparbaikem, oparbaikes, oparbaike, oparbaiken, oparbaiket` | **Passiva:** `oparbaikesem, oparbaikeses, oparbaikese, oparbaikesen, oparbaikeset`
+  - **Fut.Ind Ativa:** `oparbrum, oparbrus, oparbru, oparbrun, oparbrut` | **Passiva:** `oparbrusem, oparbruses, oparbruse, oparbrusen, oparbruset`
+  - **Fut.Subj Ativa:** `oparbrukem, oparbrukes, oparbruke, oparbruken, oparbruket` | **Passiva:** `oparbrukesem, oparbrukeses, oparbrukese, oparbrukesen, oparbrukeset`
+  - **Imperf.Ind Ativa:** `oparbbam, oparbbas, oparbba, oparbban, oparbbat` | **Passiva:** `oparbbasem, oparbbases, oparbbase, oparbbasen, oparbbaset`
+  - **Imperf.Subj Ativa:** `oparbbakem, oparbbakes, oparbbake, oparbbaken, oparbbaket` | **Passiva:** `oparbbakesem, oparbbakeses, oparbbakese, oparbbakesen, oparbbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odaparbur** (*dissipar as ondas de choque atraves dos estratos*)
+
+- **Infinitivo:** `odaparbur` | **Imperativo:** `Odaparb!` | **Interrogativo 2ª Pl:** `odaparbukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaparbet`, Gen.Sg `odaparbety`, Dat.Sg `odaparbeti`, Acu.Sg `odaparbetom`, Nom.Pl `odaparbeti`, Gen.Pl `odaparbetye`, Dat.Pl `odaparbetoi`, Acu.Pl `odaparbetos`
+- **Derivados Nominais:** Agente `odaparbte`, Abstrato `odaparbor`, Instrumento `odaparbtek`, Lugar `odaparbia`
+  - **Pres.Ind Ativa:** `odaparbum, odaparbus, odaparbu, odaparbun, odaparbut` | **Passiva:** `odaparbusem, odaparbuses, odaparbuse, odaparbusen, odaparbuset`
+  - **Pres.Subj Ativa:** `odaparbukem, odaparbukes, odaparbuke, odaparbuken, odaparbuket` | **Passiva:** `odaparbukesem, odaparbukeses, odaparbukese, odaparbukesen, odaparbukeset`
+  - **Pass.Ind Ativa:** `odaparbram, odaparbras, odaparbra, odaparbran, odaparbrat` | **Passiva:** `odaparbrasem, odaparbrases, odaparbrase, odaparbrasen, odaparbraset`
+  - **Pass.Subj Ativa:** `odaparbrakem, odaparbrakes, odaparbrake, odaparbraken, odaparbraket` | **Passiva:** `odaparbrakesem, odaparbrakeses, odaparbrakese, odaparbrakesen, odaparbrakeset`
+  - **Dur.Ind Ativa:** `odaparbaim, odaparbais, odaparbai, odaparbain, odaparbait` | **Passiva:** `odaparbaisem, odaparbaises, odaparbaise, odaparbaisen, odaparbaiset`
+  - **Dur.Subj Ativa:** `odaparbaikem, odaparbaikes, odaparbaike, odaparbaiken, odaparbaiket` | **Passiva:** `odaparbaikesem, odaparbaikeses, odaparbaikese, odaparbaikesen, odaparbaikeset`
+  - **Fut.Ind Ativa:** `odaparbrum, odaparbrus, odaparbru, odaparbrun, odaparbrut` | **Passiva:** `odaparbrusem, odaparbruses, odaparbruse, odaparbrusen, odaparbruset`
+  - **Fut.Subj Ativa:** `odaparbrukem, odaparbrukes, odaparbruke, odaparbruken, odaparbruket` | **Passiva:** `odaparbrukesem, odaparbrukeses, odaparbrukese, odaparbrukesen, odaparbrukeset`
+  - **Imperf.Ind Ativa:** `odaparbbam, odaparbbas, odaparbba, odaparbban, odaparbbat` | **Passiva:** `odaparbbasem, odaparbbases, odaparbbase, odaparbbasen, odaparbbaset`
+  - **Imperf.Subj Ativa:** `odaparbbakem, odaparbbakes, odaparbbake, odaparbbaken, odaparbbaket` | **Passiva:** `odaparbbakesem, odaparbbakeses, odaparbbakese, odaparbbakesen, odaparbbakeset`
+
+## 252. Raiz `pas-` (precisar, necessitar, desejar)
 
 ### 1. Positivo: **pasur** (*precisar, necessitar, desejar*)
 
@@ -16434,7 +16632,7 @@
   - **Imperf.Ind Ativa:** `odapasbam, odapasbas, odapasba, odapasban, odapasbat` | **Passiva:** `odapasbasem, odapasbases, odapasbase, odapasbasen, odapasbaset`
   - **Imperf.Subj Ativa:** `odapasbakem, odapasbakes, odapasbake, odapasbaken, odapasbaket` | **Passiva:** `odapasbakesem, odapasbakeses, odapasbakese, odapasbakesen, odapasbakeset`
 
-## 250. Raiz `pek-` (quebrar, partir)
+## 253. Raiz `pek-` (quebrar, partir)
 
 ### 1. Positivo: **pekur** (*quebrar, partir*)
 
@@ -16500,7 +16698,7 @@
   - **Imperf.Ind Ativa:** `odapebbam, odapebbas, odapebba, odapebban, odapebbat` | **Passiva:** `odapebbasem, odapebbases, odapebbase, odapebbasen, odapebbaset`
   - **Imperf.Subj Ativa:** `odapebbakem, odapebbakes, odapebbake, odapebbaken, odapebbaket` | **Passiva:** `odapebbakesem, odapebbakeses, odapebbakese, odapebbakesen, odapebbakeset`
 
-## 251. Raiz `pel-` (sondar a profundidade do canal)
+## 254. Raiz `pel-` (sondar a profundidade do canal)
 
 ### 1. Positivo: **pelur** (*sondar a profundidade do canal*)
 
@@ -16566,7 +16764,7 @@
   - **Imperf.Ind Ativa:** `odapelbam, odapelbas, odapelba, odapelban, odapelbat` | **Passiva:** `odapelbasem, odapelbases, odapelbase, odapelbasen, odapelbaset`
   - **Imperf.Subj Ativa:** `odapelbakem, odapelbakes, odapelbake, odapelbaken, odapelbaket` | **Passiva:** `odapelbakesem, odapelbakeses, odapelbakese, odapelbakesen, odapelbakeset`
 
-## 252. Raiz `pelb-` (soltar o falcão no ar retirando o caparão de couro)
+## 255. Raiz `pelb-` (soltar o falcão no ar retirando o caparão de couro)
 
 ### 1. Positivo: **pelbur** (*soltar o falcão no ar retirando o caparão de couro*)
 
@@ -16632,7 +16830,7 @@
   - **Imperf.Ind Ativa:** `odapelbbam, odapelbbas, odapelbba, odapelbban, odapelbbat` | **Passiva:** `odapelbbasem, odapelbbases, odapelbbase, odapelbbasen, odapelbbaset`
   - **Imperf.Subj Ativa:** `odapelbbakem, odapelbbakes, odapelbbake, odapelbbaken, odapelbbaket` | **Passiva:** `odapelbbakesem, odapelbbakeses, odapelbbakese, odapelbbakesen, odapelbbakeset`
 
-## 253. Raiz `peld-` (inundar a margem, transbordar o rio)
+## 256. Raiz `peld-` (inundar a margem, transbordar o rio)
 
 ### 1. Positivo: **peldur** (*inundar a margem, transbordar o rio*)
 
@@ -16698,7 +16896,7 @@
   - **Imperf.Ind Ativa:** `odapelbbam, odapelbbas, odapelbba, odapelbban, odapelbbat` | **Passiva:** `odapelbbasem, odapelbbases, odapelbbase, odapelbbasen, odapelbbaset`
   - **Imperf.Subj Ativa:** `odapelbbakem, odapelbbakes, odapelbbake, odapelbbaken, odapelbbaket` | **Passiva:** `odapelbbakesem, odapelbbakeses, odapelbbakese, odapelbbakesen, odapelbbakeset`
 
-## 254. Raiz `pelp-` (modular o claro-escuro entre luz tênue e penumbra dramática)
+## 257. Raiz `pelp-` (modular o claro-escuro entre luz tênue e penumbra dramática)
 
 ### 1. Positivo: **pelpur** (*modular o claro-escuro entre luz tênue e penumbra dramática*)
 
@@ -16764,7 +16962,7 @@
   - **Imperf.Ind Ativa:** `odapelpbam, odapelpbas, odapelpba, odapelpban, odapelpbat` | **Passiva:** `odapelpbasem, odapelpbases, odapelpbase, odapelpbasen, odapelpbaset`
   - **Imperf.Subj Ativa:** `odapelpbakem, odapelpbakes, odapelpbake, odapelpbaken, odapelpbaket` | **Passiva:** `odapelpbakesem, odapelpbakeses, odapelpbakese, odapelpbakesen, odapelpbakeset`
 
-## 255. Raiz `perk-` (tocar com os dedos, tatear)
+## 258. Raiz `perk-` (tocar com os dedos, tatear)
 
 ### 1. Positivo: **perkur** (*tocar com os dedos, tatear*)
 
@@ -16830,7 +17028,7 @@
   - **Imperf.Ind Ativa:** `odaperbbam, odaperbbas, odaperbba, odaperbban, odaperbbat` | **Passiva:** `odaperbbasem, odaperbbases, odaperbbase, odaperbbasen, odaperbbaset`
   - **Imperf.Subj Ativa:** `odaperbbakem, odaperbbakes, odaperbbake, odaperbbaken, odaperbbaket` | **Passiva:** `odaperbbakesem, odaperbbakeses, odaperbbakese, odaperbbakesen, odaperbbakeset`
 
-## 256. Raiz `pesk-` (enviar legação diplomática plenipotenciária)
+## 259. Raiz `pesk-` (enviar legação diplomática plenipotenciária)
 
 ### 1. Positivo: **peskur** (*enviar legação diplomática plenipotenciária*)
 
@@ -16896,7 +17094,7 @@
   - **Imperf.Ind Ativa:** `odapesbbam, odapesbbas, odapesbba, odapesbban, odapesbbat` | **Passiva:** `odapesbbasem, odapesbbases, odapesbbase, odapesbbasen, odapesbbaset`
   - **Imperf.Subj Ativa:** `odapesbbakem, odapesbbakes, odapesbbake, odapesbbaken, odapesbbaket` | **Passiva:** `odapesbbakesem, odapesbbakeses, odapesbbakese, odapesbbakesen, odapesbbakeset`
 
-## 257. Raiz `pik-` (pôr a mesa para o banquete)
+## 260. Raiz `pik-` (pôr a mesa para o banquete)
 
 ### 1. Positivo: **pikur** (*pôr a mesa para o banquete*)
 
@@ -16962,7 +17160,7 @@
   - **Imperf.Ind Ativa:** `odapibbam, odapibbas, odapibba, odapibban, odapibbat` | **Passiva:** `odapibbasem, odapibbases, odapibbase, odapibbasen, odapibbaset`
   - **Imperf.Subj Ativa:** `odapibbakem, odapibbakes, odapibbake, odapibbaken, odapibbaket` | **Passiva:** `odapibbakesem, odapibbakeses, odapibbakese, odapibbakesen, odapibbakeset`
 
-## 258. Raiz `pilk-` (regatear o preço no bazar com o mercador)
+## 261. Raiz `pilk-` (regatear o preço no bazar com o mercador)
 
 ### 1. Positivo: **pilkur** (*regatear o preço no bazar com o mercador*)
 
@@ -17028,7 +17226,7 @@
   - **Imperf.Ind Ativa:** `odapilbbam, odapilbbas, odapilbba, odapilbban, odapilbbat` | **Passiva:** `odapilbbasem, odapilbbases, odapilbbase, odapilbbasen, odapilbbaset`
   - **Imperf.Subj Ativa:** `odapilbbakem, odapilbbakes, odapilbbake, odapilbbaken, odapilbbaket` | **Passiva:** `odapilbbakesem, odapilbbakeses, odapilbbakese, odapilbbakesen, odapilbbakeset`
 
-## 259. Raiz `pir-` (demonstrar teorema ou verdade eterna)
+## 262. Raiz `pir-` (demonstrar teorema ou verdade eterna)
 
 ### 1. Positivo: **pirur** (*demonstrar teorema ou verdade eterna*)
 
@@ -17094,7 +17292,7 @@
   - **Imperf.Ind Ativa:** `odapirbam, odapirbas, odapirba, odapirban, odapirbat` | **Passiva:** `odapirbasem, odapirbases, odapirbase, odapirbasen, odapirbaset`
   - **Imperf.Subj Ativa:** `odapirbakem, odapirbakes, odapirbake, odapirbaken, odapirbaket` | **Passiva:** `odapirbakesem, odapirbakeses, odapirbakese, odapirbakesen, odapirbakeset`
 
-## 260. Raiz `pirk-` (refutar argumento com silogismo)
+## 263. Raiz `pirk-` (refutar argumento com silogismo)
 
 ### 1. Positivo: **pirkur** (*refutar argumento com silogismo*)
 
@@ -17160,7 +17358,7 @@
   - **Imperf.Ind Ativa:** `odapirbbam, odapirbbas, odapirbba, odapirbban, odapirbbat` | **Passiva:** `odapirbbasem, odapirbbases, odapirbbase, odapirbbasen, odapirbbaset`
   - **Imperf.Subj Ativa:** `odapirbbakem, odapirbbakes, odapirbbake, odapirbbaken, odapirbbaket` | **Passiva:** `odapirbbakesem, odapirbbakeses, odapirbbakese, odapirbbakesen, odapirbbakeset`
 
-## 261. Raiz `polm-` (ventilar galerias profundas com foles)
+## 264. Raiz `polm-` (ventilar galerias profundas com foles)
 
 ### 1. Positivo: **polmur** (*ventilar galerias profundas com foles*)
 
@@ -17226,7 +17424,7 @@
   - **Imperf.Ind Ativa:** `odapolmbam, odapolmbas, odapolmba, odapolmban, odapolmbat` | **Passiva:** `odapolmbasem, odapolmbases, odapolmbase, odapolmbasen, odapolmbaset`
   - **Imperf.Subj Ativa:** `odapolmbakem, odapolmbakes, odapolmbake, odapolmbaken, odapolmbaket` | **Passiva:** `odapolmbakesem, odapolmbakeses, odapolmbakese, odapolmbakesen, odapolmbakeset`
 
-## 262. Raiz `polv-` (traçar cartas corográficas e províncias imperiais em pergaminho)
+## 265. Raiz `polv-` (traçar cartas corográficas e províncias imperiais em pergaminho)
 
 ### 1. Positivo: **polvur** (*traçar cartas corográficas e províncias imperiais em pergaminho*)
 
@@ -17292,7 +17490,7 @@
   - **Imperf.Ind Ativa:** `odapolvbam, odapolvbas, odapolvba, odapolvban, odapolvbat` | **Passiva:** `odapolvbasem, odapolvbases, odapolvbase, odapolvbasen, odapolvbaset`
   - **Imperf.Subj Ativa:** `odapolvbakem, odapolvbakes, odapolvbake, odapolvbaken, odapolvbaket` | **Passiva:** `odapolvbakesem, odapolvbakeses, odapolvbakese, odapolvbakesen, odapolvbakeset`
 
-## 263. Raiz `pork-` (arpar cabos de amarração e içar velas ao vento)
+## 266. Raiz `pork-` (arpar cabos de amarração e içar velas ao vento)
 
 ### 1. Positivo: **porkur** (*arpar cabos de amarração e içar velas ao vento*)
 
@@ -17358,7 +17556,7 @@
   - **Imperf.Ind Ativa:** `odaporbbam, odaporbbas, odaporbba, odaporbban, odaporbbat` | **Passiva:** `odaporbbasem, odaporbbases, odaporbbase, odaporbbasen, odaporbbaset`
   - **Imperf.Subj Ativa:** `odaporbbakem, odaporbbakes, odaporbbake, odaporbbaken, odaporbbaket` | **Passiva:** `odaporbbakesem, odaporbbakeses, odaporbbakese, odaporbbakesen, odaporbbakeset`
 
-## 264. Raiz `porp-` (soprar pasta vítrea com cana de sopro)
+## 267. Raiz `porp-` (soprar pasta vítrea com cana de sopro)
 
 ### 1. Positivo: **porpur** (*soprar pasta vítrea com cana de sopro*)
 
@@ -17424,7 +17622,7 @@
   - **Imperf.Ind Ativa:** `odaporpbam, odaporpbas, odaporpba, odaporpban, odaporpbat` | **Passiva:** `odaporpbasem, odaporpbases, odaporpbase, odaporpbasen, odaporpbaset`
   - **Imperf.Subj Ativa:** `odaporpbakem, odaporpbakes, odaporpbake, odaporpbaken, odaporpbaket` | **Passiva:** `odaporpbakesem, odaporpbakeses, odaporpbakese, odaporpbakesen, odaporpbakeset`
 
-## 265. Raiz `pulk-` (indenizar dano causado em guerra)
+## 268. Raiz `pulk-` (indenizar dano causado em guerra)
 
 ### 1. Positivo: **pulkur** (*indenizar dano causado em guerra*)
 
@@ -17490,7 +17688,7 @@
   - **Imperf.Ind Ativa:** `odapulbbam, odapulbbas, odapulbba, odapulbban, odapulbbat` | **Passiva:** `odapulbbasem, odapulbbases, odapulbbase, odapulbbasen, odapulbbaset`
   - **Imperf.Subj Ativa:** `odapulbbakem, odapulbbakes, odapulbbake, odapulbbaken, odapulbbaket` | **Passiva:** `odapulbbakesem, odapulbbakeses, odapulbbakese, odapulbbakesen, odapulbbakeset`
 
-## 266. Raiz `pulp-` (calçar perneiras de lã trançada na neve)
+## 269. Raiz `pulp-` (calçar perneiras de lã trançada na neve)
 
 ### 1. Positivo: **pulpur** (*calçar perneiras de lã trançada na neve*)
 
@@ -17556,7 +17754,7 @@
   - **Imperf.Ind Ativa:** `odapulpbam, odapulpbas, odapulpba, odapulpban, odapulpbat` | **Passiva:** `odapulpbasem, odapulpbases, odapulpbase, odapulpbasen, odapulpbaset`
   - **Imperf.Subj Ativa:** `odapulpbakem, odapulpbakes, odapulpbake, odapulpbaken, odapulpbaket` | **Passiva:** `odapulpbakesem, odapulpbakeses, odapulpbakese, odapulpbakesen, odapulpbakeset`
 
-## 267. Raiz `purd-` (gradar o solo desmanchando torrões)
+## 270. Raiz `purd-` (gradar o solo desmanchando torrões)
 
 ### 1. Positivo: **purdur** (*gradar o solo desmanchando torrões*)
 
@@ -17622,7 +17820,7 @@
   - **Imperf.Ind Ativa:** `odapurdbam, odapurdbas, odapurdba, odapurdban, odapurdbat` | **Passiva:** `odapurdbasem, odapurdbases, odapurdbase, odapurdbasen, odapurdbaset`
   - **Imperf.Subj Ativa:** `odapurdbakem, odapurdbakes, odapurdbake, odapurdbaken, odapurdbaket` | **Passiva:** `odapurdbakesem, odapurdbakeses, odapurdbakese, odapurdbakesen, odapurdbakeset`
 
-## 268. Raiz `rel-` (acantonar a legião em acampamento)
+## 271. Raiz `rel-` (acantonar a legião em acampamento)
 
 ### 1. Positivo: **relur** (*acantonar a legião em acampamento*)
 
@@ -17688,7 +17886,7 @@
   - **Imperf.Ind Ativa:** `odarelbam, odarelbas, odarelba, odarelban, odarelbat` | **Passiva:** `odarelbasem, odarelbases, odarelbase, odarelbasen, odarelbaset`
   - **Imperf.Subj Ativa:** `odarelbakem, odarelbakes, odarelbake, odarelbaken, odarelbaket` | **Passiva:** `odarelbakesem, odarelbakeses, odarelbakese, odarelbakesen, odarelbakeset`
 
-## 269. Raiz `relk-` (ceifar o trigo maduro com foice)
+## 272. Raiz `relk-` (ceifar o trigo maduro com foice)
 
 ### 1. Positivo: **relkur** (*ceifar o trigo maduro com foice*)
 
@@ -17754,7 +17952,7 @@
   - **Imperf.Ind Ativa:** `odarelbbam, odarelbbas, odarelbba, odarelbban, odarelbbat` | **Passiva:** `odarelbbasem, odarelbbases, odarelbbase, odarelbbasen, odarelbbaset`
   - **Imperf.Subj Ativa:** `odarelbbakem, odarelbbakes, odarelbbake, odarelbbaken, odarelbbaket` | **Passiva:** `odarelbbakesem, odarelbbakeses, odarelbbakese, odarelbbakesen, odarelbbakeset`
 
-## 270. Raiz `rik-` (fermentar o hidromel em tonéis de carvalho)
+## 273. Raiz `rik-` (fermentar o hidromel em tonéis de carvalho)
 
 ### 1. Positivo: **rikur** (*fermentar o hidromel em tonéis de carvalho*)
 
@@ -17820,7 +18018,7 @@
   - **Imperf.Ind Ativa:** `odaribbam, odaribbas, odaribba, odaribban, odaribbat` | **Passiva:** `odaribbasem, odaribbases, odaribbase, odaribbasen, odaribbaset`
   - **Imperf.Subj Ativa:** `odaribbakem, odaribbakes, odaribbake, odaribbaken, odaribbaket` | **Passiva:** `odaribbakesem, odaribbakeses, odaribbakese, odaribbakesen, odaribbakeset`
 
-## 271. Raiz `rirk-` (compor hino ou cânone polifônico)
+## 274. Raiz `rirk-` (compor hino ou cânone polifônico)
 
 ### 1. Positivo: **rirkur** (*compor hino ou cânone polifônico*)
 
@@ -17886,7 +18084,7 @@
   - **Imperf.Ind Ativa:** `odarirbbam, odarirbbas, odarirbba, odarirbban, odarirbbat` | **Passiva:** `odarirbbasem, odarirbbases, odarirbbase, odarirbbasen, odarirbbaset`
   - **Imperf.Subj Ativa:** `odarirbbakem, odarirbbakes, odarirbbake, odarirbbaken, odarirbbaket` | **Passiva:** `odarirbbakesem, odarirbbakeses, odarirbbakese, odarirbbakesen, odarirbbakeset`
 
-## 272. Raiz `rixk-` (desmoronar rochas, causar avalancha)
+## 275. Raiz `rixk-` (desmoronar rochas, causar avalancha)
 
 ### 1. Positivo: **rixkur** (*desmoronar rochas, causar avalancha*)
 
@@ -17952,7 +18150,7 @@
   - **Imperf.Ind Ativa:** `odarixbbam, odarixbbas, odarixbba, odarixbban, odarixbbat` | **Passiva:** `odarixbbasem, odarixbbases, odarixbbase, odarixbbasen, odarixbbaset`
   - **Imperf.Subj Ativa:** `odarixbbakem, odarixbbakes, odarixbbake, odarixbbaken, odarixbbaket` | **Passiva:** `odarixbbakesem, odarixbbakeses, odarixbbakese, odarixbbakesen, odarixbbakeset`
 
-## 273. Raiz `rop-` (chamar, convocar pelo nome)
+## 276. Raiz `rop-` (chamar, convocar pelo nome)
 
 ### 1. Positivo: **ropur** (*chamar, convocar pelo nome*)
 
@@ -18018,7 +18216,7 @@
   - **Imperf.Ind Ativa:** `odaropbam, odaropbas, odaropba, odaropban, odaropbat` | **Passiva:** `odaropbasem, odaropbases, odaropbase, odaropbasen, odaropbaset`
   - **Imperf.Subj Ativa:** `odaropbakem, odaropbakes, odaropbake, odaropbaken, odaropbaket` | **Passiva:** `odaropbakesem, odaropbakeses, odaropbakese, odaropbakesen, odaropbakeset`
 
-## 274. Raiz `rukx-` (desafiar em duelo singular de honra)
+## 277. Raiz `rukx-` (desafiar em duelo singular de honra)
 
 ### 1. Positivo: **rukxur** (*desafiar em duelo singular de honra*)
 
@@ -18084,7 +18282,7 @@
   - **Imperf.Ind Ativa:** `odarukxbam, odarukxbas, odarukxba, odarukxban, odarukxbat` | **Passiva:** `odarukxbasem, odarukxbases, odarukxbase, odarukxbasen, odarukxbaset`
   - **Imperf.Subj Ativa:** `odarukxbakem, odarukxbakes, odarukxbake, odarukxbaken, odarukxbaket` | **Passiva:** `odarukxbakesem, odarukxbakeses, odarukxbakese, odarukxbakesen, odarukxbakeset`
 
-## 275. Raiz `rulk-` (auditar as contas do tesouro)
+## 278. Raiz `rulk-` (auditar as contas do tesouro)
 
 ### 1. Positivo: **rulkur** (*auditar as contas do tesouro*)
 
@@ -18150,7 +18348,7 @@
   - **Imperf.Ind Ativa:** `odarulbbam, odarulbbas, odarulbba, odarulbban, odarulbbat` | **Passiva:** `odarulbbasem, odarulbbases, odarulbbase, odarulbbasen, odarulbbaset`
   - **Imperf.Subj Ativa:** `odarulbbakem, odarulbbakes, odarulbbake, odarulbbaken, odarulbbaket` | **Passiva:** `odarulbbakesem, odarulbbakeses, odarulbbakese, odarulbbakesen, odarulbbakeset`
 
-## 276. Raiz `rulp-` (bocejar de sono ou fadiga)
+## 279. Raiz `rulp-` (bocejar de sono ou fadiga)
 
 ### 1. Positivo: **rulpur** (*bocejar de sono ou fadiga*)
 
@@ -18216,7 +18414,7 @@
   - **Imperf.Ind Ativa:** `odarulpbam, odarulpbas, odarulpba, odarulpban, odarulpbat` | **Passiva:** `odarulpbasem, odarulpbases, odarulpbase, odarulpbasen, odarulpbaset`
   - **Imperf.Subj Ativa:** `odarulpbakem, odarulpbakes, odarulpbake, odarulpbaken, odarulpbaket` | **Passiva:** `odarulpbakesem, odarulpbakeses, odarulpbakese, odarulpbakesen, odarulpbakeset`
 
-## 277. Raiz `rux-` (cozinhar ao fogo, assar no caldeirão)
+## 280. Raiz `rux-` (cozinhar ao fogo, assar no caldeirão)
 
 ### 1. Positivo: **ruxur** (*cozinhar ao fogo, assar no caldeirão*)
 
@@ -18282,7 +18480,7 @@
   - **Imperf.Ind Ativa:** `odaruxbam, odaruxbas, odaruxba, odaruxban, odaruxbat` | **Passiva:** `odaruxbasem, odaruxbases, odaruxbase, odaruxbasen, odaruxbaset`
   - **Imperf.Subj Ativa:** `odaruxbakem, odaruxbakes, odaruxbake, odaruxbaken, odaruxbaket` | **Passiva:** `odaruxbakesem, odaruxbakeses, odaruxbakese, odaruxbakesen, odaruxbakeset`
 
-## 278. Raiz `ruxp-` (ferver o caldo, apurar sopa no caldeirão)
+## 281. Raiz `ruxp-` (ferver o caldo, apurar sopa no caldeirão)
 
 ### 1. Positivo: **ruxpur** (*ferver o caldo, apurar sopa no caldeirão*)
 
@@ -18348,7 +18546,7 @@
   - **Imperf.Ind Ativa:** `odaruxpbam, odaruxpbas, odaruxpba, odaruxpban, odaruxpbat` | **Passiva:** `odaruxpbasem, odaruxpbases, odaruxpbase, odaruxpbasen, odaruxpbaset`
   - **Imperf.Subj Ativa:** `odaruxpbakem, odaruxpbakes, odaruxpbake, odaruxpbaken, odaruxpbaket` | **Passiva:** `odaruxpbakesem, odaruxpbakeses, odaruxpbakese, odaruxpbakesen, odaruxpbakeset`
 
-## 279. Raiz `said-` (afiar, amolar, esculpir na rocha)
+## 282. Raiz `said-` (afiar, amolar, esculpir na rocha)
 
 ### 1. Positivo: **saidur** (*afiar, amolar, esculpir na rocha*)
 
@@ -18414,7 +18612,7 @@
   - **Imperf.Ind Ativa:** `odasaidbam, odasaidbas, odasaidba, odasaidban, odasaidbat` | **Passiva:** `odasaidbasem, odasaidbases, odasaidbase, odasaidbasen, odasaidbaset`
   - **Imperf.Subj Ativa:** `odasaidbakem, odasaidbakes, odasaidbake, odasaidbaken, odasaidbaket` | **Passiva:** `odasaidbakesem, odasaidbakeses, odasaidbakese, odasaidbakesen, odasaidbakeset`
 
-## 280. Raiz `sak-` (raspar a moeda na pedra de toque para avaliar)
+## 283. Raiz `sak-` (raspar a moeda na pedra de toque para avaliar)
 
 ### 1. Positivo: **sakur** (*raspar a moeda na pedra de toque para avaliar*)
 
@@ -18480,7 +18678,7 @@
   - **Imperf.Ind Ativa:** `odasabbam, odasabbas, odasabba, odasabban, odasabbat` | **Passiva:** `odasabbasem, odasabbases, odasabbase, odasabbasen, odasabbaset`
   - **Imperf.Subj Ativa:** `odasabbakem, odasabbakes, odasabbake, odasabbaken, odasabbaket` | **Passiva:** `odasabbakesem, odasabbakeses, odasabbakese, odasabbakesen, odasabbakeset`
 
-## 281. Raiz `salb-` (atracar galera imperial em cais de cantaria com cabos de cânhamo)
+## 284. Raiz `salb-` (atracar galera imperial em cais de cantaria com cabos de cânhamo)
 
 ### 1. Positivo: **salbur** (*atracar galera imperial em cais de cantaria com cabos de cânhamo*)
 
@@ -18546,7 +18744,7 @@
   - **Imperf.Ind Ativa:** `odasalbbam, odasalbbas, odasalbba, odasalbban, odasalbbat` | **Passiva:** `odasalbbasem, odasalbbases, odasalbbase, odasalbbasen, odasalbbaset`
   - **Imperf.Subj Ativa:** `odasalbbakem, odasalbbakes, odasalbbake, odasalbbaken, odasalbbaket` | **Passiva:** `odasalbbakesem, odasalbbakeses, odasalbbakese, odasalbbakesen, odasalbbakeset`
 
-## 282. Raiz `sam-` (pesar mercadorias na balança de dois pratos)
+## 285. Raiz `sam-` (pesar mercadorias na balança de dois pratos)
 
 ### 1. Positivo: **samur** (*pesar mercadorias na balança de dois pratos*)
 
@@ -18612,7 +18810,7 @@
   - **Imperf.Ind Ativa:** `odasambam, odasambas, odasamba, odasamban, odasambat` | **Passiva:** `odasambasem, odasambases, odasambase, odasambasen, odasambaset`
   - **Imperf.Subj Ativa:** `odasambakem, odasambakes, odasambake, odasambaken, odasambaket` | **Passiva:** `odasambakesem, odasambakeses, odasambakese, odasambakesen, odasambakeset`
 
-## 283. Raiz `sark-` (adestrar falcão peregrino para caça de altitude)
+## 286. Raiz `sark-` (adestrar falcão peregrino para caça de altitude)
 
 ### 1. Positivo: **sarkur** (*adestrar falcão peregrino para caça de altitude*)
 
@@ -18678,7 +18876,7 @@
   - **Imperf.Ind Ativa:** `odasarbbam, odasarbbas, odasarbba, odasarbban, odasarbbat` | **Passiva:** `odasarbbasem, odasarbbases, odasarbbase, odasarbbasen, odasarbbaset`
   - **Imperf.Subj Ativa:** `odasarbbakem, odasarbbakes, odasarbbake, odasarbbaken, odasarbbaket` | **Passiva:** `odasarbbakesem, odasarbbakeses, odasarbbakese, odasarbbakesen, odasarbbakeset`
 
-## 284. Raiz `sek-` (sentar-se, assentar-se)
+## 287. Raiz `sek-` (sentar-se, assentar-se)
 
 ### 1. Positivo: **sekur** (*sentar-se, assentar-se*)
 
@@ -18744,7 +18942,7 @@
   - **Imperf.Ind Ativa:** `odasebbam, odasebbas, odasebba, odasebban, odasebbat` | **Passiva:** `odasebbasem, odasebbases, odasebbase, odasebbasen, odasebbaset`
   - **Imperf.Subj Ativa:** `odasebbakem, odasebbakes, odasebbake, odasebbaken, odasebbaket` | **Passiva:** `odasebbakesem, odasebbakeses, odasebbakese, odasebbakesen, odasebbakeset`
 
-## 285. Raiz `sel-` (eclipsar um astro, ocultar o sol)
+## 288. Raiz `sel-` (eclipsar um astro, ocultar o sol)
 
 ### 1. Positivo: **selur** (*eclipsar um astro, ocultar o sol*)
 
@@ -18810,7 +19008,7 @@
   - **Imperf.Ind Ativa:** `odaselbam, odaselbas, odaselba, odaselban, odaselbat` | **Passiva:** `odaselbasem, odaselbases, odaselbase, odaselbasen, odaselbaset`
   - **Imperf.Subj Ativa:** `odaselbakem, odaselbakes, odaselbake, odaselbaken, odaselbaket` | **Passiva:** `odaselbakesem, odaselbakeses, odaselbakese, odaselbakesen, odaselbakeset`
 
-## 286. Raiz `selp-` (identificar filão na matriz de quartzo)
+## 289. Raiz `selp-` (identificar filão na matriz de quartzo)
 
 ### 1. Positivo: **selpur** (*identificar filão na matriz de quartzo*)
 
@@ -18876,7 +19074,7 @@
   - **Imperf.Ind Ativa:** `odaselpbam, odaselpbas, odaselpba, odaselpban, odaselpbat` | **Passiva:** `odaselpbasem, odaselpbases, odaselpbase, odaselpbasen, odaselpbaset`
   - **Imperf.Subj Ativa:** `odaselpbakem, odaselpbakes, odaselpbake, odaselpbaken, odaselpbaket` | **Passiva:** `odaselpbakesem, odaselpbakeses, odaselpbakese, odaselpbakesen, odaselpbakeset`
 
-## 287. Raiz `sem-` (moer o grão entre mós de pedra)
+## 290. Raiz `sem-` (moer o grão entre mós de pedra)
 
 ### 1. Positivo: **semur** (*moer o grão entre mós de pedra*)
 
@@ -18942,7 +19140,7 @@
   - **Imperf.Ind Ativa:** `odasembam, odasembas, odasemba, odasemban, odasembat` | **Passiva:** `odasembasem, odasembases, odasembase, odasembasen, odasembaset`
   - **Imperf.Subj Ativa:** `odasembakem, odasembakes, odasembake, odasembaken, odasembaket` | **Passiva:** `odasembakesem, odasembakeses, odasembakese, odasembakesen, odasembakeset`
 
-## 288. Raiz `sfar-` (enxergar na bruma, avistar os caminhos)
+## 291. Raiz `sfar-` (enxergar na bruma, avistar os caminhos)
 
 ### 1. Positivo: **sfarur** (*enxergar na bruma, avistar os caminhos*)
 
@@ -19008,7 +19206,7 @@
   - **Imperf.Ind Ativa:** `odasfarbam, odasfarbas, odasfarba, odasfarban, odasfarbat` | **Passiva:** `odasfarbasem, odasfarbases, odasfarbase, odasfarbasen, odasfarbaset`
   - **Imperf.Subj Ativa:** `odasfarbakem, odasfarbakes, odasfarbake, odasfarbaken, odasfarbaket` | **Passiva:** `odasfarbakesem, odasfarbakeses, odasfarbakese, odasfarbakesen, odasfarbakeset`
 
-## 289. Raiz `sif-` (contar histórias, narrar crônica)
+## 292. Raiz `sif-` (contar histórias, narrar crônica)
 
 ### 1. Positivo: **sifur** (*contar histórias, narrar crônica*)
 
@@ -19074,7 +19272,7 @@
   - **Imperf.Ind Ativa:** `odasibbam, odasibbas, odasibba, odasibban, odasibbat` | **Passiva:** `odasibbasem, odasibbases, odasibbase, odasibbasen, odasibbaset`
   - **Imperf.Subj Ativa:** `odasibbakem, odasibbakes, odasibbake, odasibbaken, odasibbaket` | **Passiva:** `odasibbakesem, odasibbakeses, odasibbakese, odasibbakesen, odasibbakeset`
 
-## 290. Raiz `sik-` (forragear provisões no campo)
+## 293. Raiz `sik-` (forragear provisões no campo)
 
 ### 1. Positivo: **sikur** (*forragear provisões no campo*)
 
@@ -19140,7 +19338,7 @@
   - **Imperf.Ind Ativa:** `odasibbam, odasibbas, odasibba, odasibban, odasibbat` | **Passiva:** `odasibbasem, odasibbases, odasibbase, odasibbasen, odasibbaset`
   - **Imperf.Subj Ativa:** `odasibbakem, odasibbakes, odasibbake, odasibbaken, odasibbaket` | **Passiva:** `odasibbakesem, odasibbakeses, odasibbakese, odasibbakesen, odasibbakeset`
 
-## 291. Raiz `silb-` (pintar afrescos em têmpera e óleos sobre argamassa fresca de cal)
+## 294. Raiz `silb-` (pintar afrescos em têmpera e óleos sobre argamassa fresca de cal)
 
 ### 1. Positivo: **silbur** (*pintar afrescos em têmpera e óleos sobre argamassa fresca de cal*)
 
@@ -19206,7 +19404,7 @@
   - **Imperf.Ind Ativa:** `odasilbbam, odasilbbas, odasilbba, odasilbban, odasilbbat` | **Passiva:** `odasilbbasem, odasilbbases, odasilbbase, odasilbbasen, odasilbbaset`
   - **Imperf.Subj Ativa:** `odasilbbakem, odasilbbakes, odasilbbake, odasilbbaken, odasilbbaket` | **Passiva:** `odasilbbakesem, odasilbbakeses, odasilbbakese, odasilbbakesen, odasilbbakeset`
 
-## 292. Raiz `silk-` (esmaltar cerâmica ao forno)
+## 295. Raiz `silk-` (esmaltar cerâmica ao forno)
 
 ### 1. Positivo: **silkur** (*esmaltar cerâmica ao forno*)
 
@@ -19272,7 +19470,7 @@
   - **Imperf.Ind Ativa:** `odasilbbam, odasilbbas, odasilbba, odasilbban, odasilbbat` | **Passiva:** `odasilbbasem, odasilbbases, odasilbbase, odasilbbasen, odasilbbaset`
   - **Imperf.Subj Ativa:** `odasilbbakem, odasilbbakes, odasilbbake, odasilbbaken, odasilbbaket` | **Passiva:** `odasilbbakesem, odasilbbakeses, odasilbbakese, odasilbbakesen, odasilbbakeset`
 
-## 293. Raiz `sim-` (entoar o Zo es de fechamento)
+## 296. Raiz `sim-` (entoar o Zo es de fechamento)
 
 ### 1. Positivo: **simur** (*entoar o Zo es de fechamento*)
 
@@ -19338,7 +19536,7 @@
   - **Imperf.Ind Ativa:** `odasimbam, odasimbas, odasimba, odasimban, odasimbat` | **Passiva:** `odasimbasem, odasimbases, odasimbase, odasimbasen, odasimbaset`
   - **Imperf.Subj Ativa:** `odasimbakem, odasimbakes, odasimbake, odasimbaken, odasimbaket` | **Passiva:** `odasimbakesem, odasimbakeses, odasimbakese, odasimbakesen, odasimbakeset`
 
-## 294. Raiz `sin-` (flanquear à esquerda)
+## 297. Raiz `sin-` (flanquear à esquerda)
 
 ### 1. Positivo: **sinur** (*flanquear à esquerda*)
 
@@ -19404,7 +19602,7 @@
   - **Imperf.Ind Ativa:** `odasimbam, odasimbas, odasimba, odasimban, odasimbat` | **Passiva:** `odasimbasem, odasimbases, odasimbase, odasimbasen, odasimbaset`
   - **Imperf.Subj Ativa:** `odasimbakem, odasimbakes, odasimbake, odasimbaken, odasimbaket` | **Passiva:** `odasimbakesem, odasimbakeses, odasimbakese, odasimbakesen, odasimbakeset`
 
-## 295. Raiz `sir-` (clarear o céu após a tempestade)
+## 298. Raiz `sir-` (clarear o céu após a tempestade)
 
 ### 1. Positivo: **sirur** (*clarear o céu após a tempestade*)
 
@@ -19470,7 +19668,7 @@
   - **Imperf.Ind Ativa:** `odasirbam, odasirbas, odasirba, odasirban, odasirbat` | **Passiva:** `odasirbasem, odasirbases, odasirbase, odasirbasen, odasirbaset`
   - **Imperf.Subj Ativa:** `odasirbakem, odasirbakes, odasirbake, odasirbaken, odasirbaket` | **Passiva:** `odasirbakesem, odasirbakeses, odasirbakese, odasirbakesen, odasirbakeset`
 
-## 296. Raiz `sis-` (bordar brasão da Casa no estandarte)
+## 299. Raiz `sis-` (bordar brasão da Casa no estandarte)
 
 ### 1. Positivo: **sisur** (*bordar brasão da Casa no estandarte*)
 
@@ -19536,7 +19734,7 @@
   - **Imperf.Ind Ativa:** `odasisbam, odasisbas, odasisba, odasisban, odasisbat` | **Passiva:** `odasisbasem, odasisbases, odasisbase, odasisbasen, odasisbaset`
   - **Imperf.Subj Ativa:** `odasisbakem, odasisbakes, odasisbake, odasisbaken, odasisbaket` | **Passiva:** `odasisbakesem, odasisbakeses, odasisbakese, odasisbakesen, odasisbakeset`
 
-## 297. Raiz `siv-` (jejuar na vigília das estrelas)
+## 300. Raiz `siv-` (jejuar na vigília das estrelas)
 
 ### 1. Positivo: **sivur** (*jejuar na vigília das estrelas*)
 
@@ -19602,7 +19800,7 @@
   - **Imperf.Ind Ativa:** `odasivbam, odasivbas, odasivba, odasivban, odasivbat` | **Passiva:** `odasivbasem, odasivbases, odasivbase, odasivbasen, odasivbaset`
   - **Imperf.Subj Ativa:** `odasivbakem, odasivbakes, odasivbake, odasivbaken, odasivbaket` | **Passiva:** `odasivbakesem, odasivbakeses, odasivbakese, odasivbakesen, odasivbakeset`
 
-## 298. Raiz `skor-` (crer, professar fé)
+## 301. Raiz `skor-` (crer, professar fé)
 
 ### 1. Positivo: **skorur** (*crer, professar fé*)
 
@@ -19668,7 +19866,7 @@
   - **Imperf.Ind Ativa:** `odaskorbam, odaskorbas, odaskorba, odaskorban, odaskorbat` | **Passiva:** `odaskorbasem, odaskorbases, odaskorbase, odaskorbasen, odaskorbaset`
   - **Imperf.Subj Ativa:** `odaskorbakem, odaskorbakes, odaskorbake, odaskorbaken, odaskorbaket` | **Passiva:** `odaskorbakesem, odaskorbakeses, odaskorbakese, odaskorbakesen, odaskorbakeset`
 
-## 299. Raiz `sol-` (passar a lançadeira no tear de tecelão)
+## 302. Raiz `sol-` (passar a lançadeira no tear de tecelão)
 
 ### 1. Positivo: **solur** (*passar a lançadeira no tear de tecelão*)
 
@@ -19734,7 +19932,7 @@
   - **Imperf.Ind Ativa:** `odasolbam, odasolbas, odasolba, odasolban, odasolbat` | **Passiva:** `odasolbasem, odasolbases, odasolbase, odasolbasen, odasolbaset`
   - **Imperf.Subj Ativa:** `odasolbakem, odasolbakes, odasolbake, odasolbaken, odasolbaket` | **Passiva:** `odasolbakesem, odasolbakeses, odasolbakese, odasolbakesen, odasolbakeset`
 
-## 300. Raiz `solb-` (temperar caldos e assados com açafrão e especiarias da corte)
+## 303. Raiz `solb-` (temperar caldos e assados com açafrão e especiarias da corte)
 
 ### 1. Positivo: **solbur** (*temperar caldos e assados com açafrão e especiarias da corte*)
 
@@ -19800,7 +19998,7 @@
   - **Imperf.Ind Ativa:** `odasolbbam, odasolbbas, odasolbba, odasolbban, odasolbbat` | **Passiva:** `odasolbbasem, odasolbbases, odasolbbase, odasolbbasen, odasolbbaset`
   - **Imperf.Subj Ativa:** `odasolbbakem, odasolbbakes, odasolbbake, odasolbbaken, odasolbbaket` | **Passiva:** `odasolbbakesem, odasolbbakeses, odasolbbakese, odasolbbakesen, odasolbbakeset`
 
-## 301. Raiz `solk-` (condenar réu a pena aflictiva)
+## 304. Raiz `solk-` (condenar réu a pena aflictiva)
 
 ### 1. Positivo: **solkur** (*condenar réu a pena aflictiva*)
 
@@ -19866,7 +20064,7 @@
   - **Imperf.Ind Ativa:** `odasolbbam, odasolbbas, odasolbba, odasolbban, odasolbbat` | **Passiva:** `odasolbbasem, odasolbbases, odasolbbase, odasolbbasen, odasolbbaset`
   - **Imperf.Subj Ativa:** `odasolbbakem, odasolbbakes, odasolbbake, odasolbbaken, odasolbbaket` | **Passiva:** `odasolbbakesem, odasolbbakeses, odasolbbakese, odasolbbakesen, odasolbbakeset`
 
-## 302. Raiz `solp-` (encadernar fólios em tábuas de carvalho e couro)
+## 305. Raiz `solp-` (encadernar fólios em tábuas de carvalho e couro)
 
 ### 1. Positivo: **solpur** (*encadernar fólios em tábuas de carvalho e couro*)
 
@@ -19932,7 +20130,7 @@
   - **Imperf.Ind Ativa:** `odasolpbam, odasolpbas, odasolpba, odasolpban, odasolpbat` | **Passiva:** `odasolpbasem, odasolpbases, odasolpbase, odasolpbasen, odasolpbaset`
   - **Imperf.Subj Ativa:** `odasolpbakem, odasolpbakes, odasolpbake, odasolpbaken, odasolpbaket` | **Passiva:** `odasolpbakesem, odasolpbakeses, odasolpbakese, odasolpbakesen, odasolpbakeset`
 
-## 303. Raiz `sul-` (suar pelo esforço da forja ou marcha)
+## 306. Raiz `sul-` (suar pelo esforço da forja ou marcha)
 
 ### 1. Positivo: **sulur** (*suar pelo esforço da forja ou marcha*)
 
@@ -19998,7 +20196,7 @@
   - **Imperf.Ind Ativa:** `odasulbam, odasulbas, odasulba, odasulban, odasulbat` | **Passiva:** `odasulbasem, odasulbases, odasulbase, odasulbasen, odasulbaset`
   - **Imperf.Subj Ativa:** `odasulbakem, odasulbakes, odasulbake, odasulbaken, odasulbaket` | **Passiva:** `odasulbakesem, odasulbakeses, odasulbakese, odasulbakesen, odasulbakeset`
 
-## 304. Raiz `sulb-` (erguer comportas e canalizar água de açude para o moinho)
+## 307. Raiz `sulb-` (erguer comportas e canalizar água de açude para o moinho)
 
 ### 1. Positivo: **sulbur** (*erguer comportas e canalizar água de açude para o moinho*)
 
@@ -20064,7 +20262,7 @@
   - **Imperf.Ind Ativa:** `odasulbbam, odasulbbas, odasulbba, odasulbban, odasulbbat` | **Passiva:** `odasulbbasem, odasulbbases, odasulbbase, odasulbbasen, odasulbbaset`
   - **Imperf.Subj Ativa:** `odasulbbakem, odasulbbakes, odasulbbake, odasulbbaken, odasulbbaket` | **Passiva:** `odasulbbakesem, odasulbbakeses, odasulbbakese, odasulbbakesen, odasulbbakeset`
 
-## 305. Raiz `sulk-` (apelar à Corte Suprema)
+## 308. Raiz `sulk-` (apelar à Corte Suprema)
 
 ### 1. Positivo: **sulkur** (*apelar à Corte Suprema*)
 
@@ -20130,7 +20328,7 @@
   - **Imperf.Ind Ativa:** `odasulbbam, odasulbbas, odasulbba, odasulbban, odasulbbat` | **Passiva:** `odasulbbasem, odasulbbases, odasulbbase, odasulbbasen, odasulbbaset`
   - **Imperf.Subj Ativa:** `odasulbbakem, odasulbbakes, odasulbbake, odasulbbaken, odasulbbaket` | **Passiva:** `odasulbbakesem, odasulbbakeses, odasulbbakese, odasulbbakesen, odasulbbakeset`
 
-## 306. Raiz `sulv-` (cantarolar, entoar baixinho)
+## 309. Raiz `sulv-` (cantarolar, entoar baixinho)
 
 ### 1. Positivo: **sulvur** (*cantarolar, entoar baixinho*)
 
@@ -20196,7 +20394,7 @@
   - **Imperf.Ind Ativa:** `odasulvbam, odasulvbas, odasulvba, odasulvban, odasulvbat` | **Passiva:** `odasulvbasem, odasulvbases, odasulvbase, odasulvbasen, odasulvbaset`
   - **Imperf.Subj Ativa:** `odasulvbakem, odasulvbakes, odasulvbake, odasulvbaken, odasulvbaket` | **Passiva:** `odasulvbakesem, odasulvbakeses, odasulvbakese, odasulvbakesen, odasulvbakeset`
 
-## 307. Raiz `surp-` (ceifar cereais maduros com foice curta)
+## 310. Raiz `surp-` (ceifar cereais maduros com foice curta)
 
 ### 1. Positivo: **surpur** (*ceifar cereais maduros com foice curta*)
 
@@ -20262,7 +20460,7 @@
   - **Imperf.Ind Ativa:** `odasurpbam, odasurpbas, odasurpba, odasurpban, odasurpbat` | **Passiva:** `odasurpbasem, odasurpbases, odasurpbase, odasurpbasen, odasurpbaset`
   - **Imperf.Subj Ativa:** `odasurpbakem, odasurpbakes, odasurpbake, odasurpbaken, odasurpbaket` | **Passiva:** `odasurpbakesem, odasurpbakeses, odasurpbakese, odasurpbakesen, odasurpbakeset`
 
-## 308. Raiz `suv-` (demarcar fronteira com marcos de pedra)
+## 311. Raiz `suv-` (demarcar fronteira com marcos de pedra)
 
 ### 1. Positivo: **suvur** (*demarcar fronteira com marcos de pedra*)
 
@@ -20328,7 +20526,7 @@
   - **Imperf.Ind Ativa:** `odasuvbam, odasuvbas, odasuvba, odasuvban, odasuvbat` | **Passiva:** `odasuvbasem, odasuvbases, odasuvbase, odasuvbasen, odasuvbaset`
   - **Imperf.Subj Ativa:** `odasuvbakem, odasuvbakes, odasuvbake, odasuvbaken, odasuvbaket` | **Passiva:** `odasuvbakesem, odasuvbakeses, odasuvbakese, odasuvbakesen, odasuvbakeset`
 
-## 309. Raiz `tak-` (arrematar lote no leilão de importados)
+## 312. Raiz `tak-` (arrematar lote no leilão de importados)
 
 ### 1. Positivo: **takur** (*arrematar lote no leilão de importados*)
 
@@ -20394,7 +20592,7 @@
   - **Imperf.Ind Ativa:** `odatabbam, odatabbas, odatabba, odatabban, odatabbat` | **Passiva:** `odatabbasem, odatabbases, odatabbase, odatabbasen, odatabbaset`
   - **Imperf.Subj Ativa:** `odatabbakem, odatabbakes, odatabbake, odatabbaken, odatabbaket` | **Passiva:** `odatabbakesem, odatabbakeses, odatabbakese, odatabbakesen, odatabbakeset`
 
-## 310. Raiz `tald-` (mondar ervas daninhas à enxada)
+## 313. Raiz `tald-` (mondar ervas daninhas à enxada)
 
 ### 1. Positivo: **taldur** (*mondar ervas daninhas à enxada*)
 
@@ -20460,7 +20658,7 @@
   - **Imperf.Ind Ativa:** `odatalbbam, odatalbbas, odatalbba, odatalbban, odatalbbat` | **Passiva:** `odatalbbasem, odatalbbases, odatalbbase, odatalbbasen, odatalbbaset`
   - **Imperf.Subj Ativa:** `odatalbbakem, odatalbbakes, odatalbbake, odatalbbaken, odatalbbaket` | **Passiva:** `odatalbbakesem, odatalbbakeses, odatalbbakese, odatalbbakesen, odatalbbakeset`
 
-## 311. Raiz `talp-` (escorar galeria com esteios de madeira)
+## 314. Raiz `talp-` (escorar galeria com esteios de madeira)
 
 ### 1. Positivo: **talpur** (*escorar galeria com esteios de madeira*)
 
@@ -20526,7 +20724,7 @@
   - **Imperf.Ind Ativa:** `odatalpbam, odatalpbas, odatalpba, odatalpban, odatalpbat` | **Passiva:** `odatalpbasem, odatalpbases, odatalpbase, odatalpbasen, odatalpbaset`
   - **Imperf.Subj Ativa:** `odatalpbakem, odatalpbakes, odatalpbake, odatalpbaken, odatalpbaket` | **Passiva:** `odatalpbakesem, odatalpbakeses, odatalpbakese, odatalpbakesen, odatalpbakeset`
 
-## 312. Raiz `tap-` (deslocar lentamente o polo dos equinócios)
+## 315. Raiz `tap-` (deslocar lentamente o polo dos equinócios)
 
 ### 1. Positivo: **tapur** (*deslocar lentamente o polo dos equinócios*)
 
@@ -20592,7 +20790,7 @@
   - **Imperf.Ind Ativa:** `odatapbam, odatapbas, odatapba, odatapban, odatapbat` | **Passiva:** `odatapbasem, odatapbases, odatapbase, odatapbasen, odatapbaset`
   - **Imperf.Subj Ativa:** `odatapbakem, odatapbakes, odatapbake, odatapbaken, odatapbaket` | **Passiva:** `odatapbakesem, odatapbakeses, odatapbakese, odatapbakesen, odatapbakeset`
 
-## 313. Raiz `tark-` (vedar fendas de gases com argamassa)
+## 316. Raiz `tark-` (vedar fendas de gases com argamassa)
 
 ### 1. Positivo: **tarkur** (*vedar fendas de gases com argamassa*)
 
@@ -20658,7 +20856,7 @@
   - **Imperf.Ind Ativa:** `odatarbbam, odatarbbas, odatarbba, odatarbban, odatarbbat` | **Passiva:** `odatarbbasem, odatarbbases, odatarbbase, odatarbbasen, odatarbbaset`
   - **Imperf.Subj Ativa:** `odatarbbakem, odatarbbakes, odatarbbake, odatarbbaken, odatarbbaket` | **Passiva:** `odatarbbakesem, odatarbbakeses, odatarbbakese, odatarbbakesen, odatarbbakeset`
 
-## 314. Raiz `tarp-` (sacudir a terra, causar tremor)
+## 317. Raiz `tarp-` (sacudir a terra, causar tremor)
 
 ### 1. Positivo: **tarpur** (*sacudir a terra, causar tremor*)
 
@@ -20724,7 +20922,7 @@
   - **Imperf.Ind Ativa:** `odatarpbam, odatarpbas, odatarpba, odatarpban, odatarpbat` | **Passiva:** `odatarpbasem, odatarpbases, odatarpbase, odatarpbasen, odatarpbaset`
   - **Imperf.Subj Ativa:** `odatarpbakem, odatarpbakes, odatarpbake, odatarpbaken, odatarpbaket` | **Passiva:** `odatarpbakesem, odatarpbakeses, odatarpbakese, odatarpbakesen, odatarpbakeset`
 
-## 315. Raiz `tav-` (contar, enumerar moedas ou dias)
+## 318. Raiz `tav-` (contar, enumerar moedas ou dias)
 
 ### 1. Positivo: **tavur** (*contar, enumerar moedas ou dias*)
 
@@ -20790,7 +20988,7 @@
   - **Imperf.Ind Ativa:** `odatavbam, odatavbas, odatavba, odatavban, odatavbat` | **Passiva:** `odatavbasem, odatavbases, odatavbase, odatavbasen, odatavbaset`
   - **Imperf.Subj Ativa:** `odatavbakem, odatavbakes, odatavbake, odatavbaken, odatavbaket` | **Passiva:** `odatavbakesem, odatavbakeses, odatavbakese, odatavbakesen, odatavbakeset`
 
-## 316. Raiz `tek-` (forjar o ferro, lavrar a pedra, construir)
+## 319. Raiz `tek-` (forjar o ferro, lavrar a pedra, construir)
 
 ### 1. Positivo: **tekur** (*forjar o ferro, lavrar a pedra, construir*)
 
@@ -20856,7 +21054,7 @@
   - **Imperf.Ind Ativa:** `odatebbam, odatebbas, odatebba, odatebban, odatebbat` | **Passiva:** `odatebbasem, odatebbases, odatebbase, odatebbasen, odatebbaset`
   - **Imperf.Subj Ativa:** `odatebbakem, odatebbakes, odatebbake, odatebbaken, odatebbaket` | **Passiva:** `odatebbakesem, odatebbakeses, odatebbakese, odatebbakesen, odatebbakeset`
 
-## 317. Raiz `tel-` (soprar brisa suave das colinas)
+## 320. Raiz `tel-` (soprar brisa suave das colinas)
 
 ### 1. Positivo: **telur** (*soprar brisa suave das colinas*)
 
@@ -20922,7 +21120,7 @@
   - **Imperf.Ind Ativa:** `odatelbam, odatelbas, odatelba, odatelban, odatelbat` | **Passiva:** `odatelbasem, odatelbases, odatelbase, odatelbasen, odatelbaset`
   - **Imperf.Subj Ativa:** `odatelbakem, odatelbakes, odatelbake, odatelbaken, odatelbaket` | **Passiva:** `odatelbakesem, odatelbakeses, odatelbakese, odatelbakesen, odatelbakeset`
 
-## 318. Raiz `telk-` (erguer viga mestra ou cumeeira)
+## 321. Raiz `telk-` (erguer viga mestra ou cumeeira)
 
 ### 1. Positivo: **telkur** (*erguer viga mestra ou cumeeira*)
 
@@ -20988,7 +21186,7 @@
   - **Imperf.Ind Ativa:** `odatelbbam, odatelbbas, odatelbba, odatelbban, odatelbbat` | **Passiva:** `odatelbbasem, odatelbbases, odatelbbase, odatelbbasen, odatelbbaset`
   - **Imperf.Subj Ativa:** `odatelbbakem, odatelbbakes, odatelbbake, odatelbbaken, odatelbbaket` | **Passiva:** `odatelbbakesem, odatelbbakeses, odatelbbakese, odatelbbakesen, odatelbbakeset`
 
-## 319. Raiz `telp-` (sitiar fortaleza, rodear muralha)
+## 322. Raiz `telp-` (sitiar fortaleza, rodear muralha)
 
 ### 1. Positivo: **telpur** (*sitiar fortaleza, rodear muralha*)
 
@@ -21054,7 +21252,73 @@
   - **Imperf.Ind Ativa:** `odatelpbam, odatelpbas, odatelpba, odatelpban, odatelpbat` | **Passiva:** `odatelpbasem, odatelpbases, odatelpbase, odatelpbasen, odatelpbaset`
   - **Imperf.Subj Ativa:** `odatelpbakem, odatelpbakes, odatelpbake, odatelpbaken, odatelpbaket` | **Passiva:** `odatelpbakesem, odatelpbakeses, odatelpbakese, odatelpbakesen, odatelpbakeset`
 
-## 320. Raiz `terp-` (guardar reminiscências sagradas no fundo do coração)
+## 323. Raiz `terk-` (vitrificar massas de silica fundida gerando obsidiana negra)
+
+### 1. Positivo: **terkur** (*vitrificar massas de silica fundida gerando obsidiana negra*)
+
+- **Infinitivo:** `terkur` | **Imperativo:** `Terk!` | **Interrogativo 2ª Pl:** `terkukka?`
+- **Particípio (8 Casos):** Nom.Sg `terket`, Gen.Sg `terkety`, Dat.Sg `terketi`, Acu.Sg `terketom`, Nom.Pl `terketi`, Gen.Pl `terketye`, Dat.Pl `terketoi`, Acu.Pl `terketos`
+- **Derivados Nominais:** Agente `tertte`, Abstrato `terkor`, Instrumento `terttek`, Lugar `terkia`
+  - **Pres.Ind Ativa:** `terkum, terkus, terku, terkun, terkut` | **Passiva:** `terkusem, terkuses, terkuse, terkusen, terkuset`
+  - **Pres.Subj Ativa:** `terkukem, terkukes, terkuke, terkuken, terkuket` | **Passiva:** `terkukesem, terkukeses, terkukese, terkukesen, terkukeset`
+  - **Pass.Ind Ativa:** `terkram, terkras, terkra, terkran, terkrat` | **Passiva:** `terkrasem, terkrases, terkrase, terkrasen, terkraset`
+  - **Pass.Subj Ativa:** `terkrakem, terkrakes, terkrake, terkraken, terkraket` | **Passiva:** `terkrakesem, terkrakeses, terkrakese, terkrakesen, terkrakeset`
+  - **Dur.Ind Ativa:** `terkaim, terkais, terkai, terkain, terkait` | **Passiva:** `terkaisem, terkaises, terkaise, terkaisen, terkaiset`
+  - **Dur.Subj Ativa:** `terkaikem, terkaikes, terkaike, terkaiken, terkaiket` | **Passiva:** `terkaikesem, terkaikeses, terkaikese, terkaikesen, terkaikeset`
+  - **Fut.Ind Ativa:** `terkrum, terkrus, terkru, terkrun, terkrut` | **Passiva:** `terkrusem, terkruses, terkruse, terkrusen, terkruset`
+  - **Fut.Subj Ativa:** `terkrukem, terkrukes, terkruke, terkruken, terkruket` | **Passiva:** `terkrukesem, terkrukeses, terkrukese, terkrukesen, terkrukeset`
+  - **Imperf.Ind Ativa:** `terbbam, terbbas, terbba, terbban, terbbat` | **Passiva:** `terbbasem, terbbases, terbbase, terbbasen, terbbaset`
+  - **Imperf.Subj Ativa:** `terbbakem, terbbakes, terbbake, terbbaken, terbbaket` | **Passiva:** `terbbakesem, terbbakeses, terbbakese, terbbakesen, terbbakeset`
+
+### 2. Privativo (a-): **aterkur** (*quebrar a carapaça vitrea em laminas cortantes*)
+
+- **Infinitivo:** `aterkur` | **Imperativo:** `Aterk!` | **Interrogativo 2ª Pl:** `aterkukka?`
+- **Particípio (8 Casos):** Nom.Sg `aterket`, Gen.Sg `aterkety`, Dat.Sg `aterketi`, Acu.Sg `aterketom`, Nom.Pl `aterketi`, Gen.Pl `aterketye`, Dat.Pl `aterketoi`, Acu.Pl `aterketos`
+- **Derivados Nominais:** Agente `atertte`, Abstrato `aterkor`, Instrumento `aterttek`, Lugar `aterkia`
+  - **Pres.Ind Ativa:** `aterkum, aterkus, aterku, aterkun, aterkut` | **Passiva:** `aterkusem, aterkuses, aterkuse, aterkusen, aterkuset`
+  - **Pres.Subj Ativa:** `aterkukem, aterkukes, aterkuke, aterkuken, aterkuket` | **Passiva:** `aterkukesem, aterkukeses, aterkukese, aterkukesen, aterkukeset`
+  - **Pass.Ind Ativa:** `aterkram, aterkras, aterkra, aterkran, aterkrat` | **Passiva:** `aterkrasem, aterkrases, aterkrase, aterkrasen, aterkraset`
+  - **Pass.Subj Ativa:** `aterkrakem, aterkrakes, aterkrake, aterkraken, aterkraket` | **Passiva:** `aterkrakesem, aterkrakeses, aterkrakese, aterkrakesen, aterkrakeset`
+  - **Dur.Ind Ativa:** `aterkaim, aterkais, aterkai, aterkain, aterkait` | **Passiva:** `aterkaisem, aterkaises, aterkaise, aterkaisen, aterkaiset`
+  - **Dur.Subj Ativa:** `aterkaikem, aterkaikes, aterkaike, aterkaiken, aterkaiket` | **Passiva:** `aterkaikesem, aterkaikeses, aterkaikese, aterkaikesen, aterkaikeset`
+  - **Fut.Ind Ativa:** `aterkrum, aterkrus, aterkru, aterkrun, aterkrut` | **Passiva:** `aterkrusem, aterkruses, aterkruse, aterkrusen, aterkruset`
+  - **Fut.Subj Ativa:** `aterkrukem, aterkrukes, aterkruke, aterkruken, aterkruket` | **Passiva:** `aterkrukesem, aterkrukeses, aterkrukese, aterkrukesen, aterkrukeset`
+  - **Imperf.Ind Ativa:** `aterbbam, aterbbas, aterbba, aterbban, aterbbat` | **Passiva:** `aterbbasem, aterbbases, aterbbase, aterbbasen, aterbbaset`
+  - **Imperf.Subj Ativa:** `aterbbakem, aterbbakes, aterbbake, aterbbaken, aterbbaket` | **Passiva:** `aterbbakesem, aterbbakeses, aterbbakese, aterbbakesen, aterbbakeset`
+
+### 3. Iterativo (o-/od-): **oterkur** (*resfriar em blocos de vidro vulcanico de brilho espelhado*)
+
+- **Infinitivo:** `oterkur` | **Imperativo:** `Oterk!` | **Interrogativo 2ª Pl:** `oterkukka?`
+- **Particípio (8 Casos):** Nom.Sg `oterket`, Gen.Sg `oterkety`, Dat.Sg `oterketi`, Acu.Sg `oterketom`, Nom.Pl `oterketi`, Gen.Pl `oterketye`, Dat.Pl `oterketoi`, Acu.Pl `oterketos`
+- **Derivados Nominais:** Agente `otertte`, Abstrato `oterkor`, Instrumento `oterttek`, Lugar `oterkia`
+  - **Pres.Ind Ativa:** `oterkum, oterkus, oterku, oterkun, oterkut` | **Passiva:** `oterkusem, oterkuses, oterkuse, oterkusen, oterkuset`
+  - **Pres.Subj Ativa:** `oterkukem, oterkukes, oterkuke, oterkuken, oterkuket` | **Passiva:** `oterkukesem, oterkukeses, oterkukese, oterkukesen, oterkukeset`
+  - **Pass.Ind Ativa:** `oterkram, oterkras, oterkra, oterkran, oterkrat` | **Passiva:** `oterkrasem, oterkrases, oterkrase, oterkrasen, oterkraset`
+  - **Pass.Subj Ativa:** `oterkrakem, oterkrakes, oterkrake, oterkraken, oterkraket` | **Passiva:** `oterkrakesem, oterkrakeses, oterkrakese, oterkrakesen, oterkrakeset`
+  - **Dur.Ind Ativa:** `oterkaim, oterkais, oterkai, oterkain, oterkait` | **Passiva:** `oterkaisem, oterkaises, oterkaise, oterkaisen, oterkaiset`
+  - **Dur.Subj Ativa:** `oterkaikem, oterkaikes, oterkaike, oterkaiken, oterkaiket` | **Passiva:** `oterkaikesem, oterkaikeses, oterkaikese, oterkaikesen, oterkaikeset`
+  - **Fut.Ind Ativa:** `oterkrum, oterkrus, oterkru, oterkrun, oterkrut` | **Passiva:** `oterkrusem, oterkruses, oterkruse, oterkrusen, oterkruset`
+  - **Fut.Subj Ativa:** `oterkrukem, oterkrukes, oterkruke, oterkruken, oterkruket` | **Passiva:** `oterkrukesem, oterkrukeses, oterkrukese, oterkrukesen, oterkrukeset`
+  - **Imperf.Ind Ativa:** `oterbbam, oterbbas, oterbba, oterbban, oterbbat` | **Passiva:** `oterbbasem, oterbbases, oterbbase, oterbbasen, oterbbaset`
+  - **Imperf.Subj Ativa:** `oterbbakem, oterbbakes, oterbbake, oterbbaken, oterbbaket` | **Passiva:** `oterbbakesem, oterbbakeses, oterbbakese, oterbbakesen, oterbbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odaterkur** (*polir as bordas afiadas sob o fluxo continuo de calor*)
+
+- **Infinitivo:** `odaterkur` | **Imperativo:** `Odaterk!` | **Interrogativo 2ª Pl:** `odaterkukka?`
+- **Particípio (8 Casos):** Nom.Sg `odaterket`, Gen.Sg `odaterkety`, Dat.Sg `odaterketi`, Acu.Sg `odaterketom`, Nom.Pl `odaterketi`, Gen.Pl `odaterketye`, Dat.Pl `odaterketoi`, Acu.Pl `odaterketos`
+- **Derivados Nominais:** Agente `odatertte`, Abstrato `odaterkor`, Instrumento `odaterttek`, Lugar `odaterkia`
+  - **Pres.Ind Ativa:** `odaterkum, odaterkus, odaterku, odaterkun, odaterkut` | **Passiva:** `odaterkusem, odaterkuses, odaterkuse, odaterkusen, odaterkuset`
+  - **Pres.Subj Ativa:** `odaterkukem, odaterkukes, odaterkuke, odaterkuken, odaterkuket` | **Passiva:** `odaterkukesem, odaterkukeses, odaterkukese, odaterkukesen, odaterkukeset`
+  - **Pass.Ind Ativa:** `odaterkram, odaterkras, odaterkra, odaterkran, odaterkrat` | **Passiva:** `odaterkrasem, odaterkrases, odaterkrase, odaterkrasen, odaterkraset`
+  - **Pass.Subj Ativa:** `odaterkrakem, odaterkrakes, odaterkrake, odaterkraken, odaterkraket` | **Passiva:** `odaterkrakesem, odaterkrakeses, odaterkrakese, odaterkrakesen, odaterkrakeset`
+  - **Dur.Ind Ativa:** `odaterkaim, odaterkais, odaterkai, odaterkain, odaterkait` | **Passiva:** `odaterkaisem, odaterkaises, odaterkaise, odaterkaisen, odaterkaiset`
+  - **Dur.Subj Ativa:** `odaterkaikem, odaterkaikes, odaterkaike, odaterkaiken, odaterkaiket` | **Passiva:** `odaterkaikesem, odaterkaikeses, odaterkaikese, odaterkaikesen, odaterkaikeset`
+  - **Fut.Ind Ativa:** `odaterkrum, odaterkrus, odaterkru, odaterkrun, odaterkrut` | **Passiva:** `odaterkrusem, odaterkruses, odaterkruse, odaterkrusen, odaterkruset`
+  - **Fut.Subj Ativa:** `odaterkrukem, odaterkrukes, odaterkruke, odaterkruken, odaterkruket` | **Passiva:** `odaterkrukesem, odaterkrukeses, odaterkrukese, odaterkrukesen, odaterkrukeset`
+  - **Imperf.Ind Ativa:** `odaterbbam, odaterbbas, odaterbba, odaterbban, odaterbbat` | **Passiva:** `odaterbbasem, odaterbbases, odaterbbase, odaterbbasen, odaterbbaset`
+  - **Imperf.Subj Ativa:** `odaterbbakem, odaterbbakes, odaterbbake, odaterbbaken, odaterbbaket` | **Passiva:** `odaterbbakesem, odaterbbakeses, odaterbbakese, odaterbbakesen, odaterbbakeset`
+
+## 324. Raiz `terp-` (guardar reminiscências sagradas no fundo do coração)
 
 ### 1. Positivo: **terpur** (*guardar reminiscências sagradas no fundo do coração*)
 
@@ -21120,7 +21384,7 @@
   - **Imperf.Ind Ativa:** `odaterpbam, odaterpbas, odaterpba, odaterpban, odaterpbat` | **Passiva:** `odaterpbasem, odaterpbases, odaterpbase, odaterpbasen, odaterpbaset`
   - **Imperf.Subj Ativa:** `odaterpbakem, odaterpbakes, odaterpbake, odaterpbaken, odaterpbaket` | **Passiva:** `odaterpbakesem, odaterpbakeses, odaterpbakese, odaterpbakesen, odaterpbakeset`
 
-## 321. Raiz `tev-` (orientar-se pela estrela polar)
+## 325. Raiz `tev-` (orientar-se pela estrela polar)
 
 ### 1. Positivo: **tevur** (*orientar-se pela estrela polar*)
 
@@ -21186,7 +21450,7 @@
   - **Imperf.Ind Ativa:** `odatevbam, odatevbas, odatevba, odatevban, odatevbat` | **Passiva:** `odatevbasem, odatevbases, odatevbase, odatevbasen, odatevbaset`
   - **Imperf.Subj Ativa:** `odatevbakem, odatevbakes, odatevbake, odatevbaken, odatevbaket` | **Passiva:** `odatevbakesem, odatevbakeses, odatevbakese, odatevbakesen, odatevbakeset`
 
-## 322. Raiz `tik-` (aquecer água para o banho de vapor)
+## 326. Raiz `tik-` (aquecer água para o banho de vapor)
 
 ### 1. Positivo: **tikur** (*aquecer água para o banho de vapor*)
 
@@ -21252,7 +21516,7 @@
   - **Imperf.Ind Ativa:** `odatibbam, odatibbas, odatibba, odatibban, odatibbat` | **Passiva:** `odatibbasem, odatibbases, odatibbase, odatibbasen, odatibbaset`
   - **Imperf.Subj Ativa:** `odatibbakem, odatibbakes, odatibbake, odatibbaken, odatibbaket` | **Passiva:** `odatibbakesem, odatibbakeses, odatibbakese, odatibbakesen, odatibbakeset`
 
-## 323. Raiz `til-` (reter penhor ou fiança até a entrega)
+## 327. Raiz `til-` (reter penhor ou fiança até a entrega)
 
 ### 1. Positivo: **tilur** (*reter penhor ou fiança até a entrega*)
 
@@ -21318,7 +21582,7 @@
   - **Imperf.Ind Ativa:** `odatilbam, odatilbas, odatilba, odatilban, odatilbat` | **Passiva:** `odatilbasem, odatilbases, odatilbase, odatilbasen, odatilbaset`
   - **Imperf.Subj Ativa:** `odatilbakem, odatilbakes, odatilbake, odatilbaken, odatilbaket` | **Passiva:** `odatilbakesem, odatilbakeses, odatilbakese, odatilbakesen, odatilbakeset`
 
-## 324. Raiz `tilk-` (jejuar por voto litúrgico)
+## 328. Raiz `tilk-` (jejuar por voto litúrgico)
 
 ### 1. Positivo: **tilkur** (*jejuar por voto litúrgico*)
 
@@ -21384,7 +21648,7 @@
   - **Imperf.Ind Ativa:** `odatilbbam, odatilbbas, odatilbba, odatilbban, odatilbbat` | **Passiva:** `odatilbbasem, odatilbbases, odatilbbase, odatilbbasen, odatilbbaset`
   - **Imperf.Subj Ativa:** `odatilbbakem, odatilbbakes, odatilbbake, odatilbbaken, odatilbbaket` | **Passiva:** `odatilbbakesem, odatilbbakeses, odatilbbakese, odatilbbakesen, odatilbbakeset`
 
-## 325. Raiz `tilp-` (enganchar o manto com fecho de metal)
+## 329. Raiz `tilp-` (enganchar o manto com fecho de metal)
 
 ### 1. Positivo: **tilpur** (*enganchar o manto com fecho de metal*)
 
@@ -21450,7 +21714,7 @@
   - **Imperf.Ind Ativa:** `odatilpbam, odatilpbas, odatilpba, odatilpban, odatilpbat` | **Passiva:** `odatilpbasem, odatilpbases, odatilpbase, odatilpbasen, odatilpbaset`
   - **Imperf.Subj Ativa:** `odatilpbakem, odatilpbakes, odatilpbake, odatilpbaken, odatilpbaket` | **Passiva:** `odatilpbakesem, odatilpbakeses, odatilpbakese, odatilpbakesen, odatilpbakeset`
 
-## 326. Raiz `tim-` (temer, reverenciar com assombro sagrado)
+## 330. Raiz `tim-` (temer, reverenciar com assombro sagrado)
 
 ### 1. Positivo: **timur** (*temer, reverenciar com assombro sagrado*)
 
@@ -21516,7 +21780,7 @@
   - **Imperf.Ind Ativa:** `odatimbam, odatimbas, odatimba, odatimban, odatimbat` | **Passiva:** `odatimbasem, odatimbases, odatimbase, odatimbasen, odatimbaset`
   - **Imperf.Subj Ativa:** `odatimbakem, odatimbakes, odatimbake, odatimbaken, odatimbaket` | **Passiva:** `odatimbakesem, odatimbakeses, odatimbakese, odatimbakesen, odatimbakeset`
 
-## 327. Raiz `tir-` (isolar a essência universal na mente)
+## 331. Raiz `tir-` (isolar a essência universal na mente)
 
 ### 1. Positivo: **tirur** (*isolar a essência universal na mente*)
 
@@ -21582,7 +21846,7 @@
   - **Imperf.Ind Ativa:** `odatirbam, odatirbas, odatirba, odatirban, odatirbat` | **Passiva:** `odatirbasem, odatirbases, odatirbase, odatirbasen, odatirbaset`
   - **Imperf.Subj Ativa:** `odatirbakem, odatirbakes, odatirbake, odatirbaken, odatirbaket` | **Passiva:** `odatirbakesem, odatirbakeses, odatirbakese, odatirbakesen, odatirbakeset`
 
-## 328. Raiz `tirk-` (peneirar a farinha ou o ouro)
+## 332. Raiz `tirk-` (peneirar a farinha ou o ouro)
 
 ### 1. Positivo: **tirkur** (*peneirar a farinha ou o ouro*)
 
@@ -21648,7 +21912,7 @@
   - **Imperf.Ind Ativa:** `odatirbbam, odatirbbas, odatirbba, odatirbban, odatirbbat` | **Passiva:** `odatirbbasem, odatirbbases, odatirbbase, odatirbbasen, odatirbbaset`
   - **Imperf.Subj Ativa:** `odatirbbakem, odatirbbakes, odatirbbake, odatirbbaken, odatirbbaket` | **Passiva:** `odatirbbakesem, odatirbbakeses, odatirbbakese, odatirbbakesen, odatirbbakeset`
 
-## 329. Raiz `tisv-` (cardar a lã virgem em mechas macias)
+## 333. Raiz `tisv-` (cardar a lã virgem em mechas macias)
 
 ### 1. Positivo: **tisvur** (*cardar a lã virgem em mechas macias*)
 
@@ -21714,7 +21978,7 @@
   - **Imperf.Ind Ativa:** `odatisvbam, odatisvbas, odatisvba, odatisvban, odatisvbat` | **Passiva:** `odatisvbasem, odatisvbases, odatisvbase, odatisvbasen, odatisvbaset`
   - **Imperf.Subj Ativa:** `odatisvbakem, odatisvbakes, odatisvbake, odatisvbaken, odatisvbaket` | **Passiva:** `odatisvbakesem, odatisvbakeses, odatisvbakese, odatisvbakesen, odatisvbakeset`
 
-## 330. Raiz `tok-` (governar, reger com soberania)
+## 334. Raiz `tok-` (governar, reger com soberania)
 
 ### 1. Positivo: **tokur** (*governar, reger com soberania*)
 
@@ -21780,7 +22044,7 @@
   - **Imperf.Ind Ativa:** `odatobbam, odatobbas, odatobba, odatobban, odatobbat` | **Passiva:** `odatobbasem, odatobbases, odatobbase, odatobbasen, odatobbaset`
   - **Imperf.Subj Ativa:** `odatobbakem, odatobbakes, odatobbake, odatobbaken, odatobbaket` | **Passiva:** `odatobbakesem, odatobbakeses, odatobbakese, odatobbakesen, odatobbakeset`
 
-## 331. Raiz `tokx-` (reunir a corte suprema da Coroa)
+## 335. Raiz `tokx-` (reunir a corte suprema da Coroa)
 
 ### 1. Positivo: **tokxur** (*reunir a corte suprema da Coroa*)
 
@@ -21846,7 +22110,7 @@
   - **Imperf.Ind Ativa:** `odatokxbam, odatokxbas, odatokxba, odatokxban, odatokxbat` | **Passiva:** `odatokxbasem, odatokxbases, odatokxbase, odatokxbasen, odatokxbaset`
   - **Imperf.Subj Ativa:** `odatokxbakem, odatokxbakes, odatokxbake, odatokxbaken, odatokxbaket` | **Passiva:** `odatokxbakesem, odatokxbakeses, odatokxbakese, odatokxbakesen, odatokxbakeset`
 
-## 332. Raiz `tol-` (formar com beleza, aformosear)
+## 336. Raiz `tol-` (formar com beleza, aformosear)
 
 ### 1. Positivo: **tolur** (*formar com beleza, aformosear*)
 
@@ -21912,7 +22176,7 @@
   - **Imperf.Ind Ativa:** `odatolbam, odatolbas, odatolba, odatolban, odatolbat` | **Passiva:** `odatolbasem, odatolbases, odatolbase, odatolbasen, odatolbaset`
   - **Imperf.Subj Ativa:** `odatolbakem, odatolbakes, odatolbake, odatolbaken, odatolbaket` | **Passiva:** `odatolbakesem, odatolbakeses, odatolbakese, odatolbakesen, odatolbakeset`
 
-## 333. Raiz `tolk-` (debulhar espigas com mangual na eira de pedra)
+## 337. Raiz `tolk-` (debulhar espigas com mangual na eira de pedra)
 
 ### 1. Positivo: **tolkur** (*debulhar espigas com mangual na eira de pedra*)
 
@@ -21978,7 +22242,7 @@
   - **Imperf.Ind Ativa:** `odatolbbam, odatolbbas, odatolbba, odatolbban, odatolbbat` | **Passiva:** `odatolbbasem, odatolbbases, odatolbbase, odatolbbasen, odatolbbaset`
   - **Imperf.Subj Ativa:** `odatolbbakem, odatolbbakes, odatolbbake, odatolbbaken, odatolbbaket` | **Passiva:** `odatolbbakesem, odatolbbakeses, odatolbbakese, odatolbbakesen, odatolbbakeset`
 
-## 334. Raiz `tolp-` (pautar fólios de velino com ponta de chumbo)
+## 338. Raiz `tolp-` (pautar fólios de velino com ponta de chumbo)
 
 ### 1. Positivo: **tolpur** (*pautar fólios de velino com ponta de chumbo*)
 
@@ -22044,7 +22308,7 @@
   - **Imperf.Ind Ativa:** `odatolpbam, odatolpbas, odatolpba, odatolpban, odatolpbat` | **Passiva:** `odatolpbasem, odatolpbases, odatolpbase, odatolpbasen, odatolpbaset`
   - **Imperf.Subj Ativa:** `odatolpbakem, odatolpbakes, odatolpbake, odatolpbaken, odatolpbaket` | **Passiva:** `odatolpbakesem, odatolpbakeses, odatolpbakese, odatolpbakesen, odatolpbakeset`
 
-## 335. Raiz `tonp-` (calcular as tábuas celestes em pergaminho)
+## 339. Raiz `tonp-` (calcular as tábuas celestes em pergaminho)
 
 ### 1. Positivo: **tonpur** (*calcular as tábuas celestes em pergaminho*)
 
@@ -22110,7 +22374,7 @@
   - **Imperf.Ind Ativa:** `odatonpbam, odatonpbas, odatonpba, odatonpban, odatonpbat` | **Passiva:** `odatonpbasem, odatonpbases, odatonpbase, odatonpbasen, odatonpbaset`
   - **Imperf.Subj Ativa:** `odatonpbakem, odatonpbakes, odatonpbake, odatonpbaken, odatonpbaket` | **Passiva:** `odatonpbakesem, odatonpbakeses, odatonpbakese, odatonpbakesen, odatonpbakeset`
 
-## 336. Raiz `tor-` (possuir, deter, agarrar)
+## 340. Raiz `tor-` (possuir, deter, agarrar)
 
 ### 1. Positivo: **torur** (*possuir, deter, agarrar*)
 
@@ -22176,7 +22440,7 @@
   - **Imperf.Ind Ativa:** `odatorbam, odatorbas, odatorba, odatorban, odatorbat` | **Passiva:** `odatorbasem, odatorbases, odatorbase, odatorbasen, odatorbaset`
   - **Imperf.Subj Ativa:** `odatorbakem, odatorbakes, odatorbake, odatorbaken, odatorbaket` | **Passiva:** `odatorbakesem, odatorbakeses, odatorbakese, odatorbakesen, odatorbakeset`
 
-## 337. Raiz `torb-` (assar caça nobre em espeto giratório sobre brasas aromáticas)
+## 341. Raiz `torb-` (assar caça nobre em espeto giratório sobre brasas aromáticas)
 
 ### 1. Positivo: **torbur** (*assar caça nobre em espeto giratório sobre brasas aromáticas*)
 
@@ -22242,7 +22506,7 @@
   - **Imperf.Ind Ativa:** `odatorbbam, odatorbbas, odatorbba, odatorbban, odatorbbat` | **Passiva:** `odatorbbasem, odatorbbases, odatorbbase, odatorbbasen, odatorbbaset`
   - **Imperf.Subj Ativa:** `odatorbbakem, odatorbbakes, odatorbbake, odatorbbaken, odatorbbaket` | **Passiva:** `odatorbbakesem, odatorbbakeses, odatorbbakese, odatorbbakesen, odatorbbakeset`
 
-## 338. Raiz `torex-` (tomar à força, conquistar)
+## 342. Raiz `torex-` (tomar à força, conquistar)
 
 ### 1. Positivo: **torexur** (*tomar à força, conquistar*)
 
@@ -22308,7 +22572,7 @@
   - **Imperf.Ind Ativa:** `odatorexbam, odatorexbas, odatorexba, odatorexban, odatorexbat` | **Passiva:** `odatorexbasem, odatorexbases, odatorexbase, odatorexbasen, odatorexbaset`
   - **Imperf.Subj Ativa:** `odatorexbakem, odatorexbakes, odatorexbake, odatorexbaken, odatorexbaket` | **Passiva:** `odatorexbakesem, odatorexbakeses, odatorexbakese, odatorexbakesen, odatorexbakeset`
 
-## 339. Raiz `torg-` (interpor recurso perante os juízes)
+## 343. Raiz `torg-` (interpor recurso perante os juízes)
 
 ### 1. Positivo: **torgur** (*interpor recurso perante os juízes*)
 
@@ -22374,7 +22638,7 @@
   - **Imperf.Ind Ativa:** `odatorgbam, odatorgbas, odatorgba, odatorgban, odatorgbat` | **Passiva:** `odatorgbasem, odatorgbases, odatorgbase, odatorgbasen, odatorgbaset`
   - **Imperf.Subj Ativa:** `odatorgbakem, odatorgbakes, odatorgbake, odatorgbaken, odatorgbaket` | **Passiva:** `odatorgbakesem, odatorgbakeses, odatorgbakese, odatorgbakesen, odatorgbakeset`
 
-## 340. Raiz `tosp-` (enlaçar mãos de noivos com fita de seda carmesim)
+## 344. Raiz `tosp-` (enlaçar mãos de noivos com fita de seda carmesim)
 
 ### 1. Positivo: **tospur** (*enlaçar mãos de noivos com fita de seda carmesim*)
 
@@ -22440,7 +22704,7 @@
   - **Imperf.Ind Ativa:** `odatospbam, odatospbas, odatospba, odatospban, odatospbat` | **Passiva:** `odatospbasem, odatospbases, odatospbase, odatospbasen, odatospbaset`
   - **Imperf.Subj Ativa:** `odatospbakem, odatospbakes, odatospbake, odatospbaken, odatospbaket` | **Passiva:** `odatospbakesem, odatospbakeses, odatospbakese, odatospbakesen, odatospbakeset`
 
-## 341. Raiz `trak-` (marchar, comandar vanguarda)
+## 345. Raiz `trak-` (marchar, comandar vanguarda)
 
 ### 1. Positivo: **trakur** (*marchar, comandar vanguarda*)
 
@@ -22506,7 +22770,7 @@
   - **Imperf.Ind Ativa:** `odatrabbam, odatrabbas, odatrabba, odatrabban, odatrabbat` | **Passiva:** `odatrabbasem, odatrabbases, odatrabbase, odatrabbasen, odatrabbaset`
   - **Imperf.Subj Ativa:** `odatrabbakem, odatrabbakes, odatrabbake, odatrabbaken, odatrabbaket` | **Passiva:** `odatrabbakesem, odatrabbakeses, odatrabbakese, odatrabbakesen, odatrabbakeset`
 
-## 342. Raiz `tuk-` (cavar, escavar a terra)
+## 346. Raiz `tuk-` (cavar, escavar a terra)
 
 ### 1. Positivo: **tukur** (*cavar, escavar a terra*)
 
@@ -22572,7 +22836,7 @@
   - **Imperf.Ind Ativa:** `odatubbam, odatubbas, odatubba, odatubban, odatubbat` | **Passiva:** `odatubbasem, odatubbases, odatubbase, odatubbasen, odatubbaset`
   - **Imperf.Subj Ativa:** `odatubbakem, odatubbakes, odatubbake, odatubbaken, odatubbaket` | **Passiva:** `odatubbakesem, odatubbakeses, odatubbakese, odatubbakesen, odatubbakeset`
 
-## 343. Raiz `tul-` (delirar, perder a razão)
+## 347. Raiz `tul-` (delirar, perder a razão)
 
 ### 1. Positivo: **tulur** (*delirar, perder a razão*)
 
@@ -22638,7 +22902,7 @@
   - **Imperf.Ind Ativa:** `odatulbam, odatulbas, odatulba, odatulban, odatulbat` | **Passiva:** `odatulbasem, odatulbases, odatulbase, odatulbasen, odatulbaset`
   - **Imperf.Subj Ativa:** `odatulbakem, odatulbakes, odatulbake, odatulbaken, odatulbaket` | **Passiva:** `odatulbakesem, odatulbakeses, odatulbakese, odatulbakesen, odatulbakeset`
 
-## 344. Raiz `tulb-` (registrar ato oficial no cartório)
+## 348. Raiz `tulb-` (registrar ato oficial no cartório)
 
 ### 1. Positivo: **tulbur** (*registrar ato oficial no cartório*)
 
@@ -22704,7 +22968,7 @@
   - **Imperf.Ind Ativa:** `odatulbbam, odatulbbas, odatulbba, odatulbban, odatulbbat` | **Passiva:** `odatulbbasem, odatulbbases, odatulbbase, odatulbbasen, odatulbbaset`
   - **Imperf.Subj Ativa:** `odatulbbakem, odatulbbakes, odatulbbake, odatulbbaken, odatulbbaket` | **Passiva:** `odatulbbakesem, odatulbbakeses, odatulbbakese, odatulbbakesen, odatulbbakeset`
 
-## 345. Raiz `tulk-` (exercer regência em nome do herdeiro)
+## 349. Raiz `tulk-` (exercer regência em nome do herdeiro)
 
 ### 1. Positivo: **tulkur** (*exercer regência em nome do herdeiro*)
 
@@ -22770,7 +23034,7 @@
   - **Imperf.Ind Ativa:** `odatulbbam, odatulbbas, odatulbba, odatulbban, odatulbbat` | **Passiva:** `odatulbbasem, odatulbbases, odatulbbase, odatulbbasen, odatulbbaset`
   - **Imperf.Subj Ativa:** `odatulbbakem, odatulbbakes, odatulbbake, odatulbbaken, odatulbbaket` | **Passiva:** `odatulbbakesem, odatulbbakeses, odatulbbakese, odatulbbakesen, odatulbbakeset`
 
-## 346. Raiz `tulm-` (guardar e selecionar sementes-matrizes)
+## 350. Raiz `tulm-` (guardar e selecionar sementes-matrizes)
 
 ### 1. Positivo: **tulmur** (*guardar e selecionar sementes-matrizes*)
 
@@ -22836,7 +23100,7 @@
   - **Imperf.Ind Ativa:** `odatulmbam, odatulmbas, odatulmba, odatulmban, odatulmbat` | **Passiva:** `odatulmbasem, odatulmbases, odatulmbase, odatulmbasen, odatulmbaset`
   - **Imperf.Subj Ativa:** `odatulmbakem, odatulmbakes, odatulmbake, odatulmbaken, odatulmbaket` | **Passiva:** `odatulmbakesem, odatulmbakeses, odatulmbakese, odatulmbakesen, odatulmbakeset`
 
-## 347. Raiz `tupk-` (oscilar sutilmente o eixo da esfera)
+## 351. Raiz `tupk-` (oscilar sutilmente o eixo da esfera)
 
 ### 1. Positivo: **tupkur** (*oscilar sutilmente o eixo da esfera*)
 
@@ -22902,7 +23166,7 @@
   - **Imperf.Ind Ativa:** `odatupbbam, odatupbbas, odatupbba, odatupbban, odatupbbat` | **Passiva:** `odatupbbasem, odatupbbases, odatupbbase, odatupbbasen, odatupbbaset`
   - **Imperf.Subj Ativa:** `odatupbbakem, odatupbbakes, odatupbbake, odatupbbaken, odatupbbaket` | **Passiva:** `odatupbbakesem, odatupbbakeses, odatupbbakese, odatupbbakesen, odatupbbakeset`
 
-## 348. Raiz `tupx-` (disparar flecha ou dardo certeiro)
+## 352. Raiz `tupx-` (disparar flecha ou dardo certeiro)
 
 ### 1. Positivo: **tupxur** (*disparar flecha ou dardo certeiro*)
 
@@ -22968,7 +23232,7 @@
   - **Imperf.Ind Ativa:** `odatupxbam, odatupxbas, odatupxba, odatupxban, odatupxbat` | **Passiva:** `odatupxbasem, odatupxbases, odatupxbase, odatupxbasen, odatupxbaset`
   - **Imperf.Subj Ativa:** `odatupxbakem, odatupxbakes, odatupxbake, odatupxbaken, odatupxbaket` | **Passiva:** `odatupxbakesem, odatupxbakeses, odatupxbakese, odatupxbakesen, odatupxbakeset`
 
-## 349. Raiz `turb-` (armar torre móvel de assalto e catapultas de contrapeso no campo)
+## 353. Raiz `turb-` (armar torre móvel de assalto e catapultas de contrapeso no campo)
 
 ### 1. Positivo: **turbur** (*armar torre móvel de assalto e catapultas de contrapeso no campo*)
 
@@ -23034,7 +23298,7 @@
   - **Imperf.Ind Ativa:** `odaturbbam, odaturbbas, odaturbba, odaturbban, odaturbbat` | **Passiva:** `odaturbbasem, odaturbbases, odaturbbase, odaturbbasen, odaturbbaset`
   - **Imperf.Subj Ativa:** `odaturbbakem, odaturbbakes, odaturbbake, odaturbbaken, odaturbbaket` | **Passiva:** `odaturbbakesem, odaturbbakeses, odaturbbakese, odaturbbakesen, odaturbbakeset`
 
-## 350. Raiz `turk-` (morder, mastigar com firmeza)
+## 354. Raiz `turk-` (morder, mastigar com firmeza)
 
 ### 1. Positivo: **turkur** (*morder, mastigar com firmeza*)
 
@@ -23100,7 +23364,7 @@
   - **Imperf.Ind Ativa:** `odaturbbam, odaturbbas, odaturbba, odaturbban, odaturbbat` | **Passiva:** `odaturbbasem, odaturbbases, odaturbbase, odaturbbasen, odaturbbaset`
   - **Imperf.Subj Ativa:** `odaturbbakem, odaturbbakes, odaturbbake, odaturbbaken, odaturbbaket` | **Passiva:** `odaturbbakesem, odaturbbakeses, odaturbbakese, odaturbbakesen, odaturbbakeset`
 
-## 351. Raiz `turp-` (ratificar tratado de aliança)
+## 355. Raiz `turp-` (ratificar tratado de aliança)
 
 ### 1. Positivo: **turpur** (*ratificar tratado de aliança*)
 
@@ -23166,7 +23430,7 @@
   - **Imperf.Ind Ativa:** `odaturpbam, odaturpbas, odaturpba, odaturpban, odaturpbat` | **Passiva:** `odaturpbasem, odaturpbases, odaturpbase, odaturpbasen, odaturpbaset`
   - **Imperf.Subj Ativa:** `odaturpbakem, odaturpbakes, odaturpbake, odaturpbaken, odaturpbaket` | **Passiva:** `odaturpbakesem, odaturpbakeses, odaturpbakese, odaturpbakesen, odaturpbakeset`
 
-## 352. Raiz `valb-` (drenar bolsões de água da galeria)
+## 356. Raiz `valb-` (drenar bolsões de água da galeria)
 
 ### 1. Positivo: **valbur** (*drenar bolsões de água da galeria*)
 
@@ -23232,7 +23496,7 @@
   - **Imperf.Ind Ativa:** `odavalbbam, odavalbbas, odavalbba, odavalbban, odavalbbat` | **Passiva:** `odavalbbasem, odavalbbases, odavalbbase, odavalbbasen, odavalbbaset`
   - **Imperf.Subj Ativa:** `odavalbbakem, odavalbbakes, odavalbbake, odavalbbaken, odavalbbaket` | **Passiva:** `odavalbbakesem, odavalbbakeses, odavalbbakese, odavalbbakesen, odavalbbakeset`
 
-## 353. Raiz `valk-` (julgar litígio em tribunal condal)
+## 357. Raiz `valk-` (julgar litígio em tribunal condal)
 
 ### 1. Positivo: **valkur** (*julgar litígio em tribunal condal*)
 
@@ -23298,7 +23562,7 @@
   - **Imperf.Ind Ativa:** `odavalbbam, odavalbbas, odavalbba, odavalbban, odavalbbat` | **Passiva:** `odavalbbasem, odavalbbases, odavalbbase, odavalbbasen, odavalbbaset`
   - **Imperf.Subj Ativa:** `odavalbbakem, odavalbbakes, odavalbbake, odavalbbaken, odavalbbaket` | **Passiva:** `odavalbbakesem, odavalbbakeses, odavalbbakese, odavalbbakesen, odavalbbakeset`
 
-## 354. Raiz `valp-` (abençoar união nupcial com imposição solene de mãos)
+## 358. Raiz `valp-` (abençoar união nupcial com imposição solene de mãos)
 
 ### 1. Positivo: **valpur** (*abençoar união nupcial com imposição solene de mãos*)
 
@@ -23364,7 +23628,7 @@
   - **Imperf.Ind Ativa:** `odavalpbam, odavalpbas, odavalpba, odavalpban, odavalpbat` | **Passiva:** `odavalpbasem, odavalpbases, odavalpbase, odavalpbasen, odavalpbaset`
   - **Imperf.Subj Ativa:** `odavalpbakem, odavalpbakes, odavalpbake, odavalpbaken, odavalpbaket` | **Passiva:** `odavalpbakesem, odavalpbakeses, odavalpbakese, odavalpbakesen, odavalpbakeset`
 
-## 355. Raiz `varb-` (organizar comboios militares de suprimento, carroças e víveres)
+## 359. Raiz `varb-` (organizar comboios militares de suprimento, carroças e víveres)
 
 ### 1. Positivo: **varbur** (*organizar comboios militares de suprimento, carroças e víveres*)
 
@@ -23430,7 +23694,7 @@
   - **Imperf.Ind Ativa:** `odavarbbam, odavarbbas, odavarbba, odavarbban, odavarbbat` | **Passiva:** `odavarbbasem, odavarbbases, odavarbbase, odavarbbasen, odavarbbaset`
   - **Imperf.Subj Ativa:** `odavarbbakem, odavarbbakes, odavarbbake, odavarbbaken, odavarbbaket` | **Passiva:** `odavarbbakesem, odavarbbakeses, odavarbbakese, odavarbbakesen, odavarbbakeset`
 
-## 356. Raiz `vark-` (acolchoar o forro da capa de viagem)
+## 360. Raiz `vark-` (acolchoar o forro da capa de viagem)
 
 ### 1. Positivo: **varkur** (*acolchoar o forro da capa de viagem*)
 
@@ -23496,7 +23760,7 @@
   - **Imperf.Ind Ativa:** `odavarbbam, odavarbbas, odavarbba, odavarbban, odavarbbat` | **Passiva:** `odavarbbasem, odavarbbases, odavarbbase, odavarbbasen, odavarbbaset`
   - **Imperf.Subj Ativa:** `odavarbbakem, odavarbbakes, odavarbbake, odavarbbaken, odavarbbaket` | **Passiva:** `odavarbbakesem, odavarbbakeses, odavarbbakese, odavarbbakesen, odavarbbakeset`
 
-## 357. Raiz `varp-` (afastar-se no ponto mais distante da órbita)
+## 361. Raiz `varp-` (afastar-se no ponto mais distante da órbita)
 
 ### 1. Positivo: **varpur** (*afastar-se no ponto mais distante da órbita*)
 
@@ -23562,7 +23826,7 @@
   - **Imperf.Ind Ativa:** `odavarpbam, odavarpbas, odavarpba, odavarpban, odavarpbat` | **Passiva:** `odavarpbasem, odavarpbases, odavarpbase, odavarpbasen, odavarpbaset`
   - **Imperf.Subj Ativa:** `odavarpbakem, odavarpbakes, odavarpbake, odavarpbaken, odavarpbaket` | **Passiva:** `odavarpbakesem, odavarpbakeses, odavarpbakese, odavarpbakesen, odavarpbakeset`
 
-## 358. Raiz `varx-` (patrulhar as fronteiras da serra)
+## 362. Raiz `varx-` (patrulhar as fronteiras da serra)
 
 ### 1. Positivo: **varxur** (*patrulhar as fronteiras da serra*)
 
@@ -23628,7 +23892,7 @@
   - **Imperf.Ind Ativa:** `odavarxbam, odavarxbas, odavarxba, odavarxban, odavarxbat` | **Passiva:** `odavarxbasem, odavarxbases, odavarxbase, odavarxbasen, odavarxbaset`
   - **Imperf.Subj Ativa:** `odavarxbakem, odavarxbakes, odavarxbake, odavarxbaken, odavarxbaket` | **Passiva:** `odavarxbakesem, odavarxbakeses, odavarxbakese, odavarxbakesen, odavarxbakeset`
 
-## 359. Raiz `vel-` (sombrear, cobrir de penumbra)
+## 363. Raiz `vel-` (sombrear, cobrir de penumbra)
 
 ### 1. Positivo: **velur** (*sombrear, cobrir de penumbra*)
 
@@ -23694,7 +23958,7 @@
   - **Imperf.Ind Ativa:** `odavelbam, odavelbas, odavelba, odavelban, odavelbat` | **Passiva:** `odavelbasem, odavelbases, odavelbase, odavelbasen, odavelbaset`
   - **Imperf.Subj Ativa:** `odavelbakem, odavelbakes, odavelbake, odavelbaken, odavelbaket` | **Passiva:** `odavelbakesem, odavelbakeses, odavelbakese, odavelbakesen, odavelbakeset`
 
-## 360. Raiz `velp-` (encobrir estrela atrás do disco lunar)
+## 364. Raiz `velp-` (encobrir estrela atrás do disco lunar)
 
 ### 1. Positivo: **velpur** (*encobrir estrela atrás do disco lunar*)
 
@@ -23760,7 +24024,7 @@
   - **Imperf.Ind Ativa:** `odavelpbam, odavelpbas, odavelpba, odavelpban, odavelpbat` | **Passiva:** `odavelpbasem, odavelpbases, odavelpbase, odavelpbasen, odavelpbaset`
   - **Imperf.Subj Ativa:** `odavelpbakem, odavelpbakes, odavelpbake, odavelpbaken, odavelpbaket` | **Passiva:** `odavelpbakesem, odavelpbakeses, odavelpbakese, odavelpbakesen, odavelpbakeset`
 
-## 361. Raiz `verk-` (fluir em corredeira rápida)
+## 365. Raiz `verk-` (fluir em corredeira rápida)
 
 ### 1. Positivo: **verkur** (*fluir em corredeira rápida*)
 
@@ -23826,7 +24090,7 @@
   - **Imperf.Ind Ativa:** `odaverbbam, odaverbbas, odaverbba, odaverbban, odaverbbat` | **Passiva:** `odaverbbasem, odaverbbases, odaverbbase, odaverbbasen, odaverbbaset`
   - **Imperf.Subj Ativa:** `odaverbbakem, odaverbbakes, odaverbbake, odaverbbaken, odaverbbaket` | **Passiva:** `odaverbbakesem, odaverbbakeses, odaverbbakese, odaverbbakesen, odaverbbakeset`
 
-## 362. Raiz `verp-` (fixar precedente normativo nos assentos)
+## 366. Raiz `verp-` (fixar precedente normativo nos assentos)
 
 ### 1. Positivo: **verpur** (*fixar precedente normativo nos assentos*)
 
@@ -23892,7 +24156,7 @@
   - **Imperf.Ind Ativa:** `odaverpbam, odaverpbas, odaverpba, odaverpban, odaverpbat` | **Passiva:** `odaverpbasem, odaverpbases, odaverpbase, odaverpbasen, odaverpbaset`
   - **Imperf.Subj Ativa:** `odaverpbakem, odaverpbakes, odaverpbake, odaverpbaken, odaverpbaket` | **Passiva:** `odaverpbakesem, odaverpbakeses, odaverpbakese, odaverpbakesen, odaverpbakeset`
 
-## 363. Raiz `vesk-` (joeirar os grãos ao vento no crivo raso)
+## 367. Raiz `vesk-` (joeirar os grãos ao vento no crivo raso)
 
 ### 1. Positivo: **veskur** (*joeirar os grãos ao vento no crivo raso*)
 
@@ -23958,7 +24222,7 @@
   - **Imperf.Ind Ativa:** `odavesbbam, odavesbbas, odavesbba, odavesbban, odavesbbat` | **Passiva:** `odavesbbasem, odavesbbases, odavesbbase, odavesbbasen, odavesbbaset`
   - **Imperf.Subj Ativa:** `odavesbbakem, odavesbbakes, odavesbbake, odavesbbaken, odavesbbaket` | **Passiva:** `odavesbbakesem, odavesbbakeses, odavesbbakese, odavesbbakesen, odavesbbakeset`
 
-## 364. Raiz `vesp-` (entrar em êxtase místico de arroubo espiritual)
+## 368. Raiz `vesp-` (entrar em êxtase místico de arroubo espiritual)
 
 ### 1. Positivo: **vespur** (*entrar em êxtase místico de arroubo espiritual*)
 
@@ -24024,7 +24288,7 @@
   - **Imperf.Ind Ativa:** `odavespbam, odavespbas, odavespba, odavespban, odavespbat` | **Passiva:** `odavespbasem, odavespbases, odavespbase, odavespbasen, odavespbaset`
   - **Imperf.Subj Ativa:** `odavespbakem, odavespbakes, odavespbake, odavespbaken, odavespbaket` | **Passiva:** `odavespbakesem, odavespbakeses, odavespbakese, odavespbakesen, odavespbakeset`
 
-## 365. Raiz `veyn-` (velejar com vento de popa)
+## 369. Raiz `veyn-` (velejar com vento de popa)
 
 ### 1. Positivo: **veynur** (*velejar com vento de popa*)
 
@@ -24090,7 +24354,7 @@
   - **Imperf.Ind Ativa:** `odaveymbam, odaveymbas, odaveymba, odaveymban, odaveymbat` | **Passiva:** `odaveymbasem, odaveymbases, odaveymbase, odaveymbasen, odaveymbaset`
   - **Imperf.Subj Ativa:** `odaveymbakem, odaveymbakes, odaveymbake, odaveymbaken, odaveymbaket` | **Passiva:** `odaveymbakesem, odaveymbakeses, odaveymbakese, odaveymbakesen, odaveymbakeset`
 
-## 366. Raiz `vik-` (acender todas as arandelas do salão)
+## 370. Raiz `vik-` (acender todas as arandelas do salão)
 
 ### 1. Positivo: **vikur** (*acender todas as arandelas do salão*)
 
@@ -24156,7 +24420,7 @@
   - **Imperf.Ind Ativa:** `odavibbam, odavibbas, odavibba, odavibban, odavibbat` | **Passiva:** `odavibbasem, odavibbases, odavibbase, odavibbasen, odavibbaset`
   - **Imperf.Subj Ativa:** `odavibbakem, odavibbakes, odavibbake, odavibbaken, odavibbaket` | **Passiva:** `odavibbakesem, odavibbakeses, odavibbakese, odavibbakesen, odavibbakeset`
 
-## 367. Raiz `vilb-` (carvoejar hulha em veios subterrâneos)
+## 371. Raiz `vilb-` (carvoejar hulha em veios subterrâneos)
 
 ### 1. Positivo: **vilbur** (*carvoejar hulha em veios subterrâneos*)
 
@@ -24222,7 +24486,7 @@
   - **Imperf.Ind Ativa:** `odavilbbam, odavilbbas, odavilbba, odavilbban, odavilbbat` | **Passiva:** `odavilbbasem, odavilbbases, odavilbbase, odavilbbasen, odavilbbaset`
   - **Imperf.Subj Ativa:** `odavilbbakem, odavilbbakes, odavilbbake, odavilbbaken, odavilbbaket` | **Passiva:** `odavilbbakesem, odavilbbakeses, odavilbbakese, odavilbbakesen, odavilbbakeset`
 
-## 368. Raiz `vilk-` (lacrimejar, marejar os olhos)
+## 372. Raiz `vilk-` (lacrimejar, marejar os olhos)
 
 ### 1. Positivo: **vilkur** (*lacrimejar, marejar os olhos*)
 
@@ -24288,7 +24552,7 @@
   - **Imperf.Ind Ativa:** `odavilbbam, odavilbbas, odavilbba, odavilbban, odavilbbat` | **Passiva:** `odavilbbasem, odavilbbases, odavilbbase, odavilbbasen, odavilbbaset`
   - **Imperf.Subj Ativa:** `odavilbbakem, odavilbbakes, odavilbbake, odavilbbaken, odavilbbaket` | **Passiva:** `odavilbbakesem, odavilbbakeses, odavilbbakese, odavilbbakesen, odavilbbakeset`
 
-## 369. Raiz `vilp-` (aparar golpe com o escudo)
+## 373. Raiz `vilp-` (aparar golpe com o escudo)
 
 ### 1. Positivo: **vilpur** (*aparar golpe com o escudo*)
 
@@ -24354,7 +24618,7 @@
   - **Imperf.Ind Ativa:** `odavilpbam, odavilpbas, odavilpba, odavilpban, odavilpbat` | **Passiva:** `odavilpbasem, odavilpbases, odavilpbase, odavilpbasen, odavilpbaset`
   - **Imperf.Subj Ativa:** `odavilpbakem, odavilpbakes, odavilpbake, odavilpbaken, odavilpbaket` | **Passiva:** `odavilpbakesem, odavilpbakeses, odavilpbakese, odavilpbakesen, odavilpbakeset`
 
-## 370. Raiz `vilt-` (curar ferimento, sarar doente com bálsamo)
+## 374. Raiz `vilt-` (curar ferimento, sarar doente com bálsamo)
 
 ### 1. Positivo: **viltur** (*curar ferimento, sarar doente com bálsamo*)
 
@@ -24420,7 +24684,7 @@
   - **Imperf.Ind Ativa:** `odavilbbam, odavilbbas, odavilbba, odavilbban, odavilbbat` | **Passiva:** `odavilbbasem, odavilbbases, odavilbbase, odavilbbasen, odavilbbaset`
   - **Imperf.Subj Ativa:** `odavilbbakem, odavilbbakes, odavilbbake, odavilbbaken, odavilbbaket` | **Passiva:** `odavilbbakesem, odavilbbakeses, odavilbbakese, odavilbbakesen, odavilbbakeset`
 
-## 371. Raiz `virk-` (consagrar o cálice na elevação)
+## 375. Raiz `virk-` (consagrar o cálice na elevação)
 
 ### 1. Positivo: **virkur** (*consagrar o cálice na elevação*)
 
@@ -24486,7 +24750,7 @@
   - **Imperf.Ind Ativa:** `odavirbbam, odavirbbas, odavirbba, odavirbban, odavirbbat` | **Passiva:** `odavirbbasem, odavirbbases, odavirbbase, odavirbbasen, odavirbbaset`
   - **Imperf.Subj Ativa:** `odavirbbakem, odavirbbakes, odavirbbake, odavirbbaken, odavirbbaket` | **Passiva:** `odavirbbakesem, odavirbbakeses, odavirbbakese, odavirbbakesen, odavirbbakeset`
 
-## 372. Raiz `visk-` (enfaixar ferida, aplicar atadura)
+## 376. Raiz `visk-` (enfaixar ferida, aplicar atadura)
 
 ### 1. Positivo: **viskur** (*enfaixar ferida, aplicar atadura*)
 
@@ -24552,7 +24816,7 @@
   - **Imperf.Ind Ativa:** `odavisbbam, odavisbbas, odavisbba, odavisbban, odavisbbat` | **Passiva:** `odavisbbasem, odavisbbases, odavisbbase, odavisbbasen, odavisbbaset`
   - **Imperf.Subj Ativa:** `odavisbbakem, odavisbbakes, odavisbbake, odavisbbaken, odavisbbaket` | **Passiva:** `odavisbbakesem, odavisbbakeses, odavisbbakese, odavisbbakesen, odavisbbakeset`
 
-## 373. Raiz `vok-` (sangrar, verter sangue)
+## 377. Raiz `vok-` (sangrar, verter sangue)
 
 ### 1. Positivo: **vokur** (*sangrar, verter sangue*)
 
@@ -24618,7 +24882,7 @@
   - **Imperf.Ind Ativa:** `odavobbam, odavobbas, odavobba, odavobban, odavobbat` | **Passiva:** `odavobbasem, odavobbases, odavobbase, odavobbasen, odavobbaset`
   - **Imperf.Subj Ativa:** `odavobbakem, odavobbakes, odavobbake, odavobbaken, odavobbaket` | **Passiva:** `odavobbakesem, odavobbakeses, odavobbakese, odavobbakesen, odavobbakeset`
 
-## 374. Raiz `volb-` (iluminar capitulares com pó de ouro e carmim)
+## 378. Raiz `volb-` (iluminar capitulares com pó de ouro e carmim)
 
 ### 1. Positivo: **volbur** (*iluminar capitulares com pó de ouro e carmim*)
 
@@ -24684,7 +24948,7 @@
   - **Imperf.Ind Ativa:** `odavolbbam, odavolbbas, odavolbba, odavolbban, odavolbbat` | **Passiva:** `odavolbbasem, odavolbbases, odavolbbase, odavolbbasen, odavolbbaset`
   - **Imperf.Subj Ativa:** `odavolbbakem, odavolbbakes, odavolbbake, odavolbbaken, odavolbbaket` | **Passiva:** `odavolbbakesem, odavolbbakeses, odavolbbakese, odavolbbakesen, odavolbbakeset`
 
-## 375. Raiz `volk-` (calafetar casco de nau com breu)
+## 379. Raiz `volk-` (calafetar casco de nau com breu)
 
 ### 1. Positivo: **volkur** (*calafetar casco de nau com breu*)
 
@@ -24750,7 +25014,7 @@
   - **Imperf.Ind Ativa:** `odavolbbam, odavolbbas, odavolbba, odavolbban, odavolbbat` | **Passiva:** `odavolbbasem, odavolbbases, odavolbbase, odavolbbasen, odavolbbaset`
   - **Imperf.Subj Ativa:** `odavolbbakem, odavolbbakes, odavolbbake, odavolbbaken, odavolbbaket` | **Passiva:** `odavolbbakesem, odavolbbakeses, odavolbbakese, odavolbbakesen, odavolbbakeset`
 
-## 376. Raiz `vorb-` (manter postos de muda com montarias descansadas nas estradas reais)
+## 380. Raiz `vorb-` (manter postos de muda com montarias descansadas nas estradas reais)
 
 ### 1. Positivo: **vorbur** (*manter postos de muda com montarias descansadas nas estradas reais*)
 
@@ -24816,7 +25080,73 @@
   - **Imperf.Ind Ativa:** `odavorbbam, odavorbbas, odavorbba, odavorbban, odavorbbat` | **Passiva:** `odavorbbasem, odavorbbases, odavorbbase, odavorbbasen, odavorbbaset`
   - **Imperf.Subj Ativa:** `odavorbbakem, odavorbbakes, odavorbbake, odavorbbaken, odavorbbaket` | **Passiva:** `odavorbbakesem, odavorbbakeses, odavorbbakese, odavorbbakesen, odavorbbakeset`
 
-## 377. Raiz `vul-` (querer, determinar pela vontade)
+## 381. Raiz `vork-` (expelir colunas de cinza e magma pela cratera aberta)
+
+### 1. Positivo: **vorkur** (*expelir colunas de cinza e magma pela cratera aberta*)
+
+- **Infinitivo:** `vorkur` | **Imperativo:** `Vork!` | **Interrogativo 2ª Pl:** `vorkukka?`
+- **Particípio (8 Casos):** Nom.Sg `vorket`, Gen.Sg `vorkety`, Dat.Sg `vorketi`, Acu.Sg `vorketom`, Nom.Pl `vorketi`, Gen.Pl `vorketye`, Dat.Pl `vorketoi`, Acu.Pl `vorketos`
+- **Derivados Nominais:** Agente `vortte`, Abstrato `vorkor`, Instrumento `vorttek`, Lugar `vorkia`
+  - **Pres.Ind Ativa:** `vorkum, vorkus, vorku, vorkun, vorkut` | **Passiva:** `vorkusem, vorkuses, vorkuse, vorkusen, vorkuset`
+  - **Pres.Subj Ativa:** `vorkukem, vorkukes, vorkuke, vorkuken, vorkuket` | **Passiva:** `vorkukesem, vorkukeses, vorkukese, vorkukesen, vorkukeset`
+  - **Pass.Ind Ativa:** `vorkram, vorkras, vorkra, vorkran, vorkrat` | **Passiva:** `vorkrasem, vorkrases, vorkrase, vorkrasen, vorkraset`
+  - **Pass.Subj Ativa:** `vorkrakem, vorkrakes, vorkrake, vorkraken, vorkraket` | **Passiva:** `vorkrakesem, vorkrakeses, vorkrakese, vorkrakesen, vorkrakeset`
+  - **Dur.Ind Ativa:** `vorkaim, vorkais, vorkai, vorkain, vorkait` | **Passiva:** `vorkaisem, vorkaises, vorkaise, vorkaisen, vorkaiset`
+  - **Dur.Subj Ativa:** `vorkaikem, vorkaikes, vorkaike, vorkaiken, vorkaiket` | **Passiva:** `vorkaikesem, vorkaikeses, vorkaikese, vorkaikesen, vorkaikeset`
+  - **Fut.Ind Ativa:** `vorkrum, vorkrus, vorkru, vorkrun, vorkrut` | **Passiva:** `vorkrusem, vorkruses, vorkruse, vorkrusen, vorkruset`
+  - **Fut.Subj Ativa:** `vorkrukem, vorkrukes, vorkruke, vorkruken, vorkruket` | **Passiva:** `vorkrukesem, vorkrukeses, vorkrukese, vorkrukesen, vorkrukeset`
+  - **Imperf.Ind Ativa:** `vorbbam, vorbbas, vorbba, vorbban, vorbbat` | **Passiva:** `vorbbasem, vorbbases, vorbbase, vorbbasen, vorbbaset`
+  - **Imperf.Subj Ativa:** `vorbbakem, vorbbakes, vorbbake, vorbbaken, vorbbaket` | **Passiva:** `vorbbakesem, vorbbakeses, vorbbakese, vorbbakesen, vorbbakeset`
+
+### 2. Privativo (a-): **avorkur** (*selar o conduto com tampao de rocha basaltica*)
+
+- **Infinitivo:** `avorkur` | **Imperativo:** `Avork!` | **Interrogativo 2ª Pl:** `avorkukka?`
+- **Particípio (8 Casos):** Nom.Sg `avorket`, Gen.Sg `avorkety`, Dat.Sg `avorketi`, Acu.Sg `avorketom`, Nom.Pl `avorketi`, Gen.Pl `avorketye`, Dat.Pl `avorketoi`, Acu.Pl `avorketos`
+- **Derivados Nominais:** Agente `avortte`, Abstrato `avorkor`, Instrumento `avorttek`, Lugar `avorkia`
+  - **Pres.Ind Ativa:** `avorkum, avorkus, avorku, avorkun, avorkut` | **Passiva:** `avorkusem, avorkuses, avorkuse, avorkusen, avorkuset`
+  - **Pres.Subj Ativa:** `avorkukem, avorkukes, avorkuke, avorkuken, avorkuket` | **Passiva:** `avorkukesem, avorkukeses, avorkukese, avorkukesen, avorkukeset`
+  - **Pass.Ind Ativa:** `avorkram, avorkras, avorkra, avorkran, avorkrat` | **Passiva:** `avorkrasem, avorkrases, avorkrase, avorkrasen, avorkraset`
+  - **Pass.Subj Ativa:** `avorkrakem, avorkrakes, avorkrake, avorkraken, avorkraket` | **Passiva:** `avorkrakesem, avorkrakeses, avorkrakese, avorkrakesen, avorkrakeset`
+  - **Dur.Ind Ativa:** `avorkaim, avorkais, avorkai, avorkain, avorkait` | **Passiva:** `avorkaisem, avorkaises, avorkaise, avorkaisen, avorkaiset`
+  - **Dur.Subj Ativa:** `avorkaikem, avorkaikes, avorkaike, avorkaiken, avorkaiket` | **Passiva:** `avorkaikesem, avorkaikeses, avorkaikese, avorkaikesen, avorkaikeset`
+  - **Fut.Ind Ativa:** `avorkrum, avorkrus, avorkru, avorkrun, avorkrut` | **Passiva:** `avorkrusem, avorkruses, avorkruse, avorkrusen, avorkruset`
+  - **Fut.Subj Ativa:** `avorkrukem, avorkrukes, avorkruke, avorkruken, avorkruket` | **Passiva:** `avorkrukesem, avorkrukeses, avorkrukese, avorkrukesen, avorkrukeset`
+  - **Imperf.Ind Ativa:** `avorbbam, avorbbas, avorbba, avorbban, avorbbat` | **Passiva:** `avorbbasem, avorbbases, avorbbase, avorbbasen, avorbbaset`
+  - **Imperf.Subj Ativa:** `avorbbakem, avorbbakes, avorbbake, avorbbaken, avorbbaket` | **Passiva:** `avorbbakesem, avorbbakeses, avorbbakese, avorbbakesen, avorbbakeset`
+
+### 3. Iterativo (o-/od-): **ovorkur** (*rugir em explosoes sucessivas lancando bombas de fogo*)
+
+- **Infinitivo:** `ovorkur` | **Imperativo:** `Ovork!` | **Interrogativo 2ª Pl:** `ovorkukka?`
+- **Particípio (8 Casos):** Nom.Sg `ovorket`, Gen.Sg `ovorkety`, Dat.Sg `ovorketi`, Acu.Sg `ovorketom`, Nom.Pl `ovorketi`, Gen.Pl `ovorketye`, Dat.Pl `ovorketoi`, Acu.Pl `ovorketos`
+- **Derivados Nominais:** Agente `ovortte`, Abstrato `ovorkor`, Instrumento `ovorttek`, Lugar `ovorkia`
+  - **Pres.Ind Ativa:** `ovorkum, ovorkus, ovorku, ovorkun, ovorkut` | **Passiva:** `ovorkusem, ovorkuses, ovorkuse, ovorkusen, ovorkuset`
+  - **Pres.Subj Ativa:** `ovorkukem, ovorkukes, ovorkuke, ovorkuken, ovorkuket` | **Passiva:** `ovorkukesem, ovorkukeses, ovorkukese, ovorkukesen, ovorkukeset`
+  - **Pass.Ind Ativa:** `ovorkram, ovorkras, ovorkra, ovorkran, ovorkrat` | **Passiva:** `ovorkrasem, ovorkrases, ovorkrase, ovorkrasen, ovorkraset`
+  - **Pass.Subj Ativa:** `ovorkrakem, ovorkrakes, ovorkrake, ovorkraken, ovorkraket` | **Passiva:** `ovorkrakesem, ovorkrakeses, ovorkrakese, ovorkrakesen, ovorkrakeset`
+  - **Dur.Ind Ativa:** `ovorkaim, ovorkais, ovorkai, ovorkain, ovorkait` | **Passiva:** `ovorkaisem, ovorkaises, ovorkaise, ovorkaisen, ovorkaiset`
+  - **Dur.Subj Ativa:** `ovorkaikem, ovorkaikes, ovorkaike, ovorkaiken, ovorkaiket` | **Passiva:** `ovorkaikesem, ovorkaikeses, ovorkaikese, ovorkaikesen, ovorkaikeset`
+  - **Fut.Ind Ativa:** `ovorkrum, ovorkrus, ovorkru, ovorkrun, ovorkrut` | **Passiva:** `ovorkrusem, ovorkruses, ovorkruse, ovorkrusen, ovorkruset`
+  - **Fut.Subj Ativa:** `ovorkrukem, ovorkrukes, ovorkruke, ovorkruken, ovorkruket` | **Passiva:** `ovorkrukesem, ovorkrukeses, ovorkrukese, ovorkrukesen, ovorkrukeset`
+  - **Imperf.Ind Ativa:** `ovorbbam, ovorbbas, ovorbba, ovorbban, ovorbbat` | **Passiva:** `ovorbbasem, ovorbbases, ovorbbase, ovorbbasen, ovorbbaset`
+  - **Imperf.Subj Ativa:** `ovorbbakem, ovorbbakes, ovorbbake, ovorbbaken, ovorbbaket` | **Passiva:** `ovorbbakesem, ovorbbakeses, ovorbbakese, ovorbbakesen, ovorbbakeset`
+
+### 4. Iter.-Privativo (od-a-): **odavorkur** (*amortecer as convulsoes magmaticas em repouso secular*)
+
+- **Infinitivo:** `odavorkur` | **Imperativo:** `Odavork!` | **Interrogativo 2ª Pl:** `odavorkukka?`
+- **Particípio (8 Casos):** Nom.Sg `odavorket`, Gen.Sg `odavorkety`, Dat.Sg `odavorketi`, Acu.Sg `odavorketom`, Nom.Pl `odavorketi`, Gen.Pl `odavorketye`, Dat.Pl `odavorketoi`, Acu.Pl `odavorketos`
+- **Derivados Nominais:** Agente `odavortte`, Abstrato `odavorkor`, Instrumento `odavorttek`, Lugar `odavorkia`
+  - **Pres.Ind Ativa:** `odavorkum, odavorkus, odavorku, odavorkun, odavorkut` | **Passiva:** `odavorkusem, odavorkuses, odavorkuse, odavorkusen, odavorkuset`
+  - **Pres.Subj Ativa:** `odavorkukem, odavorkukes, odavorkuke, odavorkuken, odavorkuket` | **Passiva:** `odavorkukesem, odavorkukeses, odavorkukese, odavorkukesen, odavorkukeset`
+  - **Pass.Ind Ativa:** `odavorkram, odavorkras, odavorkra, odavorkran, odavorkrat` | **Passiva:** `odavorkrasem, odavorkrases, odavorkrase, odavorkrasen, odavorkraset`
+  - **Pass.Subj Ativa:** `odavorkrakem, odavorkrakes, odavorkrake, odavorkraken, odavorkraket` | **Passiva:** `odavorkrakesem, odavorkrakeses, odavorkrakese, odavorkrakesen, odavorkrakeset`
+  - **Dur.Ind Ativa:** `odavorkaim, odavorkais, odavorkai, odavorkain, odavorkait` | **Passiva:** `odavorkaisem, odavorkaises, odavorkaise, odavorkaisen, odavorkaiset`
+  - **Dur.Subj Ativa:** `odavorkaikem, odavorkaikes, odavorkaike, odavorkaiken, odavorkaiket` | **Passiva:** `odavorkaikesem, odavorkaikeses, odavorkaikese, odavorkaikesen, odavorkaikeset`
+  - **Fut.Ind Ativa:** `odavorkrum, odavorkrus, odavorkru, odavorkrun, odavorkrut` | **Passiva:** `odavorkrusem, odavorkruses, odavorkruse, odavorkrusen, odavorkruset`
+  - **Fut.Subj Ativa:** `odavorkrukem, odavorkrukes, odavorkruke, odavorkruken, odavorkruket` | **Passiva:** `odavorkrukesem, odavorkrukeses, odavorkrukese, odavorkrukesen, odavorkrukeset`
+  - **Imperf.Ind Ativa:** `odavorbbam, odavorbbas, odavorbba, odavorbban, odavorbbat` | **Passiva:** `odavorbbasem, odavorbbases, odavorbbase, odavorbbasen, odavorbbaset`
+  - **Imperf.Subj Ativa:** `odavorbbakem, odavorbbakes, odavorbbake, odavorbbaken, odavorbbaket` | **Passiva:** `odavorbbakesem, odavorbbakeses, odavorbbakese, odavorbbakesen, odavorbbakeset`
+
+## 382. Raiz `vul-` (querer, determinar pela vontade)
 
 ### 1. Positivo: **vulur** (*querer, determinar pela vontade*)
 
@@ -24882,7 +25212,7 @@
   - **Imperf.Ind Ativa:** `odavulbam, odavulbas, odavulba, odavulban, odavulbat` | **Passiva:** `odavulbasem, odavulbases, odavulbase, odavulbasen, odavulbaset`
   - **Imperf.Subj Ativa:** `odavulbakem, odavulbakes, odavulbake, odavulbaken, odavulbaket` | **Passiva:** `odavulbakesem, odavulbakeses, odavulbakese, odavulbakesen, odavulbakeset`
 
-## 378. Raiz `vulk-` (cunhar moedas com a efígie real)
+## 383. Raiz `vulk-` (cunhar moedas com a efígie real)
 
 ### 1. Positivo: **vulkur** (*cunhar moedas com a efígie real*)
 
@@ -24948,7 +25278,7 @@
   - **Imperf.Ind Ativa:** `odavulbbam, odavulbbas, odavulbba, odavulbban, odavulbbat` | **Passiva:** `odavulbbasem, odavulbbases, odavulbbase, odavulbbasen, odavulbbaset`
   - **Imperf.Subj Ativa:** `odavulbbakem, odavulbbakes, odavulbbake, odavulbbaken, odavulbbaket` | **Passiva:** `odavulbbakesem, odavulbbakeses, odavulbbakese, odavulbbakesen, odavulbbakeset`
 
-## 379. Raiz `vulp-` (estocar fardos no celeiro alfandegário)
+## 384. Raiz `vulp-` (estocar fardos no celeiro alfandegário)
 
 ### 1. Positivo: **vulpur** (*estocar fardos no celeiro alfandegário*)
 
@@ -25014,7 +25344,7 @@
   - **Imperf.Ind Ativa:** `odavulpbam, odavulpbas, odavulpba, odavulpban, odavulpbat` | **Passiva:** `odavulpbasem, odavulpbases, odavulpbase, odavulpbasen, odavulpbaset`
   - **Imperf.Subj Ativa:** `odavulpbakem, odavulpbakes, odavulpbake, odavulpbaken, odavulpbaket` | **Passiva:** `odavulpbakesem, odavulpbakeses, odavulpbakese, odavulpbakesen, odavulpbakeset`
 
-## 380. Raiz `vur-` (aquecer com fogo, avivar a lareira)
+## 385. Raiz `vur-` (aquecer com fogo, avivar a lareira)
 
 ### 1. Positivo: **vurur** (*aquecer com fogo, avivar a lareira*)
 
@@ -25080,7 +25410,7 @@
   - **Imperf.Ind Ativa:** `odavurbam, odavurbas, odavurba, odavurban, odavurbat` | **Passiva:** `odavurbasem, odavurbases, odavurbase, odavurbasen, odavurbaset`
   - **Imperf.Subj Ativa:** `odavurbakem, odavurbakes, odavurbake, odavurbaken, odavurbaket` | **Passiva:** `odavurbakesem, odavurbakeses, odavurbakese, odavurbakesen, odavurbakeset`
 
-## 381. Raiz `vurk-` (jorrar água termal ou gêiser)
+## 386. Raiz `vurk-` (jorrar água termal ou gêiser)
 
 ### 1. Positivo: **vurkur** (*jorrar água termal ou gêiser*)
 
@@ -25146,7 +25476,7 @@
   - **Imperf.Ind Ativa:** `odavurbbam, odavurbbas, odavurbba, odavurbban, odavurbbat` | **Passiva:** `odavurbbasem, odavurbbases, odavurbbase, odavurbbasen, odavurbbaset`
   - **Imperf.Subj Ativa:** `odavurbbakem, odavurbbakes, odavurbbake, odavurbbaken, odavurbbaket` | **Passiva:** `odavurbbakesem, odavurbbakeses, odavurbbakese, odavurbbakesen, odavurbbakeset`
 
-## 382. Raiz `xak-` (atingir o ponto culminante no céu)
+## 387. Raiz `xak-` (atingir o ponto culminante no céu)
 
 ### 1. Positivo: **xakur** (*atingir o ponto culminante no céu*)
 
@@ -25212,7 +25542,7 @@
   - **Imperf.Ind Ativa:** `odaxabbam, odaxabbas, odaxabba, odaxabban, odaxabbat` | **Passiva:** `odaxabbasem, odaxabbases, odaxabbase, odaxabbasen, odaxabbaset`
   - **Imperf.Subj Ativa:** `odaxabbakem, odaxabbakes, odaxabbake, odaxabbaken, odaxabbaket` | **Passiva:** `odaxabbakesem, odaxabbakeses, odaxabbakese, odaxabbakesen, odaxabbakeset`
 
-## 383. Raiz `xal-` (afixar o broche de sinete na roupagem)
+## 388. Raiz `xal-` (afixar o broche de sinete na roupagem)
 
 ### 1. Positivo: **xalur** (*afixar o broche de sinete na roupagem*)
 
@@ -25278,7 +25608,7 @@
   - **Imperf.Ind Ativa:** `odaxalbam, odaxalbas, odaxalba, odaxalban, odaxalbat` | **Passiva:** `odaxalbasem, odaxalbases, odaxalbase, odaxalbasen, odaxalbaset`
   - **Imperf.Subj Ativa:** `odaxalbakem, odaxalbakes, odaxalbake, odaxalbaken, odaxalbaket` | **Passiva:** `odaxalbakesem, odaxalbakeses, odaxalbakese, odaxalbakesen, odaxalbakeset`
 
-## 384. Raiz `xalb-` (bater a nata até formar manteiga)
+## 389. Raiz `xalb-` (bater a nata até formar manteiga)
 
 ### 1. Positivo: **xalbur** (*bater a nata até formar manteiga*)
 
@@ -25344,7 +25674,7 @@
   - **Imperf.Ind Ativa:** `odaxalbbam, odaxalbbas, odaxalbba, odaxalbban, odaxalbbat` | **Passiva:** `odaxalbbasem, odaxalbbases, odaxalbbase, odaxalbbasen, odaxalbbaset`
   - **Imperf.Subj Ativa:** `odaxalbbakem, odaxalbbakes, odaxalbbake, odaxalbbaken, odaxalbbaket` | **Passiva:** `odaxalbbakesem, odaxalbbakeses, odaxalbbakese, odaxalbbakesen, odaxalbbakeset`
 
-## 385. Raiz `xarp-` (tossir, limpar a garganta)
+## 390. Raiz `xarp-` (tossir, limpar a garganta)
 
 ### 1. Positivo: **xarpur** (*tossir, limpar a garganta*)
 
@@ -25410,7 +25740,7 @@
   - **Imperf.Ind Ativa:** `odaxarpbam, odaxarpbas, odaxarpba, odaxarpban, odaxarpbat` | **Passiva:** `odaxarpbasem, odaxarpbases, odaxarpbase, odaxarpbasen, odaxarpbaset`
   - **Imperf.Subj Ativa:** `odaxarpbakem, odaxarpbakes, odaxarpbake, odaxarpbaken, odaxarpbaket` | **Passiva:** `odaxarpbakesem, odaxarpbakeses, odaxarpbakese, odaxarpbakesen, odaxarpbakeset`
 
-## 386. Raiz `xed-` (orlar a capa com pele alva de arminho)
+## 391. Raiz `xed-` (orlar a capa com pele alva de arminho)
 
 ### 1. Positivo: **xedur** (*orlar a capa com pele alva de arminho*)
 
@@ -25476,7 +25806,7 @@
   - **Imperf.Ind Ativa:** `odaxedbam, odaxedbas, odaxedba, odaxedban, odaxedbat` | **Passiva:** `odaxedbasem, odaxedbases, odaxedbase, odaxedbasen, odaxedbaset`
   - **Imperf.Subj Ativa:** `odaxedbakem, odaxedbakes, odaxedbake, odaxedbaken, odaxedbaket` | **Passiva:** `odaxedbakesem, odaxedbakeses, odaxedbakese, odaxedbakesen, odaxedbakeset`
 
-## 387. Raiz `xel-` (nevar, cair neve)
+## 392. Raiz `xel-` (nevar, cair neve)
 
 ### 1. Positivo: **xelur** (*nevar, cair neve*)
 
@@ -25542,7 +25872,7 @@
   - **Imperf.Ind Ativa:** `odaxelbam, odaxelbas, odaxelba, odaxelban, odaxelbat` | **Passiva:** `odaxelbasem, odaxelbases, odaxelbase, odaxelbasen, odaxelbaset`
   - **Imperf.Subj Ativa:** `odaxelbakem, odaxelbakes, odaxelbake, odaxelbaken, odaxelbaket` | **Passiva:** `odaxelbakesem, odaxelbakeses, odaxelbakese, odaxelbakesen, odaxelbakeset`
 
-## 388. Raiz `xelp-` (rodopiar em redemoinho de vento)
+## 393. Raiz `xelp-` (rodopiar em redemoinho de vento)
 
 ### 1. Positivo: **xelpur** (*rodopiar em redemoinho de vento*)
 
@@ -25608,7 +25938,7 @@
   - **Imperf.Ind Ativa:** `odaxelpbam, odaxelpbas, odaxelpba, odaxelpban, odaxelpbat` | **Passiva:** `odaxelpbasem, odaxelpbases, odaxelpbase, odaxelpbasen, odaxelpbaset`
   - **Imperf.Subj Ativa:** `odaxelpbakem, odaxelpbakes, odaxelpbake, odaxelpbaken, odaxelpbaket` | **Passiva:** `odaxelpbakesem, odaxelpbakeses, odaxelpbakese, odaxelpbakesen, odaxelpbakeset`
 
-## 389. Raiz `xerk-` (podar ramos secos da árvore)
+## 394. Raiz `xerk-` (podar ramos secos da árvore)
 
 ### 1. Positivo: **xerkur** (*podar ramos secos da árvore*)
 
@@ -25674,7 +26004,7 @@
   - **Imperf.Ind Ativa:** `odaxerbbam, odaxerbbas, odaxerbba, odaxerbban, odaxerbbat` | **Passiva:** `odaxerbbasem, odaxerbbases, odaxerbbase, odaxerbbasen, odaxerbbaset`
   - **Imperf.Subj Ativa:** `odaxerbbakem, odaxerbbakes, odaxerbbake, odaxerbbaken, odaxerbbaket` | **Passiva:** `odaxerbbakesem, odaxerbbakeses, odaxerbbakese, odaxerbbakesen, odaxerbbakeset`
 
-## 390. Raiz `xev-` (tocar o clarim de alvorada ou carga)
+## 395. Raiz `xev-` (tocar o clarim de alvorada ou carga)
 
 ### 1. Positivo: **xevur** (*tocar o clarim de alvorada ou carga*)
 
@@ -25740,7 +26070,7 @@
   - **Imperf.Ind Ativa:** `odaxevbam, odaxevbas, odaxevba, odaxevban, odaxevbat` | **Passiva:** `odaxevbasem, odaxevbases, odaxevbase, odaxevbasen, odaxevbaset`
   - **Imperf.Subj Ativa:** `odaxevbakem, odaxevbakes, odaxevbake, odaxevbaken, odaxevbaket` | **Passiva:** `odaxevbakesem, odaxevbakeses, odaxevbakese, odaxevbakesen, odaxevbakeset`
 
-## 391. Raiz `xik-` (agasalhar o hóspede com peles perto do fogo)
+## 396. Raiz `xik-` (agasalhar o hóspede com peles perto do fogo)
 
 ### 1. Positivo: **xikur** (*agasalhar o hóspede com peles perto do fogo*)
 
@@ -25806,7 +26136,7 @@
   - **Imperf.Ind Ativa:** `odaxibbam, odaxibbas, odaxibba, odaxibban, odaxibbat` | **Passiva:** `odaxibbasem, odaxibbases, odaxibbase, odaxibbasen, odaxibbaset`
   - **Imperf.Subj Ativa:** `odaxibbakem, odaxibbakes, odaxibbake, odaxibbaken, odaxibbaket` | **Passiva:** `odaxibbakesem, odaxibbakeses, odaxibbakese, odaxibbakesen, odaxibbakeset`
 
-## 392. Raiz `xir-` (esconjurar sombra ou espírito impuro)
+## 397. Raiz `xir-` (esconjurar sombra ou espírito impuro)
 
 ### 1. Positivo: **xirur** (*esconjurar sombra ou espírito impuro*)
 
@@ -25872,7 +26202,7 @@
   - **Imperf.Ind Ativa:** `odaxirbam, odaxirbas, odaxirba, odaxirban, odaxirbat` | **Passiva:** `odaxirbasem, odaxirbases, odaxirbase, odaxirbasen, odaxirbaset`
   - **Imperf.Subj Ativa:** `odaxirbakem, odaxirbakes, odaxirbake, odaxirbaken, odaxirbaket` | **Passiva:** `odaxirbakesem, odaxirbakeses, odaxirbakese, odaxirbakesen, odaxirbakeset`
 
-## 393. Raiz `xurk-` (banir para além das fronteiras)
+## 398. Raiz `xurk-` (banir para além das fronteiras)
 
 ### 1. Positivo: **xurkur** (*banir para além das fronteiras*)
 
@@ -25938,7 +26268,7 @@
   - **Imperf.Ind Ativa:** `odaxurbbam, odaxurbbas, odaxurbba, odaxurbban, odaxurbbat` | **Passiva:** `odaxurbbasem, odaxurbbases, odaxurbbase, odaxurbbasen, odaxurbbaset`
   - **Imperf.Subj Ativa:** `odaxurbbakem, odaxurbbakes, odaxurbbake, odaxurbbaken, odaxurbbaket` | **Passiva:** `odaxurbbakesem, odaxurbbakeses, odaxurbbakese, odaxurbbakesen, odaxurbbakeset`
 
-## 394. Raiz `yarv-` (agir com magnanimidade e nobreza de alma perdoando agravos)
+## 399. Raiz `yarv-` (agir com magnanimidade e nobreza de alma perdoando agravos)
 
 ### 1. Positivo: **yarvur** (*agir com magnanimidade e nobreza de alma perdoando agravos*)
 
@@ -26004,7 +26334,7 @@
   - **Imperf.Ind Ativa:** `odayarvbam, odayarvbas, odayarvba, odayarvban, odayarvbat` | **Passiva:** `odayarvbasem, odayarvbases, odayarvbase, odayarvbasen, odayarvbaset`
   - **Imperf.Subj Ativa:** `odayarvbakem, odayarvbakes, odayarvbake, odayarvbaken, odayarvbaket` | **Passiva:** `odayarvbakesem, odayarvbakeses, odayarvbakese, odayarvbakesen, odayarvbakeset`
 
-## 395. Raiz `yerb-` (orientar rumos de marcha com agulha imantada em taça de bronze)
+## 400. Raiz `yerb-` (orientar rumos de marcha com agulha imantada em taça de bronze)
 
 ### 1. Positivo: **yerbur** (*orientar rumos de marcha com agulha imantada em taça de bronze*)
 
@@ -26070,7 +26400,7 @@
   - **Imperf.Ind Ativa:** `odayerbbam, odayerbbas, odayerbba, odayerbban, odayerbbat` | **Passiva:** `odayerbbasem, odayerbbases, odayerbbase, odayerbbasen, odayerbbaset`
   - **Imperf.Subj Ativa:** `odayerbbakem, odayerbbakes, odayerbbake, odayerbbaken, odayerbbaket` | **Passiva:** `odayerbbakesem, odayerbbakeses, odayerbbakese, odayerbbakesen, odayerbbakeset`
 
-## 396. Raiz `yerp-` (guardar juramentos sagrados e lealdade inabalável ao suserano)
+## 401. Raiz `yerp-` (guardar juramentos sagrados e lealdade inabalável ao suserano)
 
 ### 1. Positivo: **yerpur** (*guardar juramentos sagrados e lealdade inabalável ao suserano*)
 
@@ -26136,7 +26466,7 @@
   - **Imperf.Ind Ativa:** `odayerpbam, odayerpbas, odayerpba, odayerpban, odayerpbat` | **Passiva:** `odayerpbasem, odayerpbases, odayerpbase, odayerpbasen, odayerpbaset`
   - **Imperf.Subj Ativa:** `odayerpbakem, odayerpbakes, odayerpbake, odayerpbaken, odayerpbaket` | **Passiva:** `odayerpbakesem, odayerpbakeses, odayerpbakese, odayerpbakesen, odayerpbakeset`
 
-## 397. Raiz `yn-` (andar, caminhar, entrar, descer)
+## 402. Raiz `yn-` (andar, caminhar, entrar, descer)
 
 ### 1. Positivo: **ynur** (*andar, caminhar, entrar, descer*)
 
@@ -26202,7 +26532,7 @@
   - **Imperf.Ind Ativa:** `odaymbam, odaymbas, odaymba, odaymban, odaymbat` | **Passiva:** `odaymbasem, odaymbases, odaymbase, odaymbasen, odaymbaset`
   - **Imperf.Subj Ativa:** `odaymbakem, odaymbakes, odaymbake, odaymbaken, odaymbaket` | **Passiva:** `odaymbakesem, odaymbakeses, odaymbakese, odaymbakesen, odaymbakeset`
 
-## 398. Raiz `yolp-` (entoar acordes celestiais na sinfonia cósmica do Halylitror)
+## 403. Raiz `yolp-` (entoar acordes celestiais na sinfonia cósmica do Halylitror)
 
 ### 1. Positivo: **yolpur** (*entoar acordes celestiais na sinfonia cósmica do Halylitror*)
 
@@ -26268,7 +26598,7 @@
   - **Imperf.Ind Ativa:** `odayolpbam, odayolpbas, odayolpba, odayolpban, odayolpbat` | **Passiva:** `odayolpbasem, odayolpbases, odayolpbase, odayolpbasen, odayolpbaset`
   - **Imperf.Subj Ativa:** `odayolpbakem, odayolpbakes, odayolpbake, odayolpbaken, odayolpbaket` | **Passiva:** `odayolpbakesem, odayolpbakeses, odayolpbakese, odayolpbakesen, odayolpbakeset`
 
-## 399. Raiz `yulb-` (deslizar lentamente em leito glacial esculpindo o vale)
+## 404. Raiz `yulb-` (deslizar lentamente em leito glacial esculpindo o vale)
 
 ### 1. Positivo: **yulbur** (*deslizar lentamente em leito glacial esculpindo o vale*)
 
@@ -26334,7 +26664,7 @@
   - **Imperf.Ind Ativa:** `odayulbbam, odayulbbas, odayulbba, odayulbban, odayulbbat` | **Passiva:** `odayulbbasem, odayulbbases, odayulbbase, odayulbbasen, odayulbbaset`
   - **Imperf.Subj Ativa:** `odayulbbakem, odayulbbakes, odayulbbake, odayulbbaken, odayulbbaket` | **Passiva:** `odayulbbakesem, odayulbbakeses, odayulbbakese, odayulbbakesen, odayulbbakeset`
 
-## 400. Raiz `zal-` (pagar, quitar uma dívida)
+## 405. Raiz `zal-` (pagar, quitar uma dívida)
 
 ### 1. Positivo: **zalur** (*pagar, quitar uma dívida*)
 
@@ -26400,7 +26730,7 @@
   - **Imperf.Ind Ativa:** `odazalbam, odazalbas, odazalba, odazalban, odazalbat` | **Passiva:** `odazalbasem, odazalbases, odazalbase, odazalbasen, odazalbaset`
   - **Imperf.Subj Ativa:** `odazalbakem, odazalbakes, odazalbake, odazalbaken, odazalbaket` | **Passiva:** `odazalbakesem, odazalbakeses, odazalbakese, odazalbakesen, odazalbakeset`
 
-## 401. Raiz `zalk-` (cambiar moedas de diferentes cunhos)
+## 406. Raiz `zalk-` (cambiar moedas de diferentes cunhos)
 
 ### 1. Positivo: **zalkur** (*cambiar moedas de diferentes cunhos*)
 
@@ -26466,7 +26796,7 @@
   - **Imperf.Ind Ativa:** `odazalbbam, odazalbbas, odazalbba, odazalbban, odazalbbat` | **Passiva:** `odazalbbasem, odazalbbases, odazalbbase, odazalbbasen, odazalbbaset`
   - **Imperf.Subj Ativa:** `odazalbbakem, odazalbbakes, odazalbbake, odazalbbaken, odazalbbaket` | **Passiva:** `odazalbbakesem, odazalbbakeses, odazalbbakese, odazalbbakesen, odazalbbakeset`
 
-## 402. Raiz `zalv-` (renovar o cosmos após a consumação dos tempos na Segunda Canção)
+## 407. Raiz `zalv-` (renovar o cosmos após a consumação dos tempos na Segunda Canção)
 
 ### 1. Positivo: **zalvur** (*renovar o cosmos após a consumação dos tempos na Segunda Canção*)
 
@@ -26532,7 +26862,7 @@
   - **Imperf.Ind Ativa:** `odazalvbam, odazalvbas, odazalvba, odazalvban, odazalvbat` | **Passiva:** `odazalvbasem, odazalvbases, odazalvbase, odazalvbasen, odazalvbaset`
   - **Imperf.Subj Ativa:** `odazalvbakem, odazalvbakes, odazalvbake, odazalvbaken, odazalvbaket` | **Passiva:** `odazalvbakesem, odazalvbakeses, odazalvbakese, odazalvbakesen, odazalvbakeset`
 
-## 403. Raiz `zard-` (abrir sessão solene do tribunal com bastão)
+## 408. Raiz `zard-` (abrir sessão solene do tribunal com bastão)
 
 ### 1. Positivo: **zardur** (*abrir sessão solene do tribunal com bastão*)
 
@@ -26598,7 +26928,7 @@
   - **Imperf.Ind Ativa:** `odazardbam, odazardbas, odazardba, odazardban, odazardbat` | **Passiva:** `odazardbasem, odazardbases, odazardbase, odazardbasen, odazardbaset`
   - **Imperf.Subj Ativa:** `odazardbakem, odazardbakes, odazardbake, odazardbaken, odazardbaket` | **Passiva:** `odazardbakesem, odazardbakeses, odazardbakese, odazardbakesen, odazardbakeset`
 
-## 404. Raiz `zarv-` (acender a Chama Imperecível infundindo vida consciente na criação)
+## 409. Raiz `zarv-` (acender a Chama Imperecível infundindo vida consciente na criação)
 
 ### 1. Positivo: **zarvur** (*acender a Chama Imperecível infundindo vida consciente na criação*)
 
@@ -26664,7 +26994,7 @@
   - **Imperf.Ind Ativa:** `odazarvbam, odazarvbas, odazarvba, odazarvban, odazarvbat` | **Passiva:** `odazarvbasem, odazarvbases, odazarvbase, odazarvbasen, odazarvbaset`
   - **Imperf.Subj Ativa:** `odazarvbakem, odazarvbakes, odazarvbake, odazarvbaken, odazarvbaket` | **Passiva:** `odazarvbakesem, odazarvbakeses, odazarvbakese, odazarvbakesen, odazarvbakeset`
 
-## 405. Raiz `zasp-` (calafetar juntas do casco de carvalho com estopa e piche)
+## 410. Raiz `zasp-` (calafetar juntas do casco de carvalho com estopa e piche)
 
 ### 1. Positivo: **zaspur** (*calafetar juntas do casco de carvalho com estopa e piche*)
 
@@ -26730,7 +27060,7 @@
   - **Imperf.Ind Ativa:** `odazaspbam, odazaspbas, odazaspba, odazaspban, odazaspbat` | **Passiva:** `odazaspbasem, odazaspbases, odazaspbase, odazaspbasen, odazaspbaset`
   - **Imperf.Subj Ativa:** `odazaspbakem, odazaspbakes, odazaspbake, odazaspbaken, odazaspbaket` | **Passiva:** `odazaspbakesem, odazaspbakeses, odazaspbakese, odazaspbakesen, odazaspbakeset`
 
-## 406. Raiz `zelb-` (destilar vapores voláteis em serpentina)
+## 411. Raiz `zelb-` (destilar vapores voláteis em serpentina)
 
 ### 1. Positivo: **zelbur** (*destilar vapores voláteis em serpentina*)
 
@@ -26796,7 +27126,7 @@
   - **Imperf.Ind Ativa:** `odazelbbam, odazelbbas, odazelbba, odazelbban, odazelbbat` | **Passiva:** `odazelbbasem, odazelbbases, odazelbbase, odazelbbasen, odazelbbaset`
   - **Imperf.Subj Ativa:** `odazelbbakem, odazelbbakes, odazelbbake, odazelbbaken, odazelbbaket` | **Passiva:** `odazelbbakesem, odazelbbakeses, odazelbbakese, odazelbbakesen, odazelbbakeset`
 
-## 407. Raiz `zelk-` (cicatrizar a pele, fechar corte)
+## 412. Raiz `zelk-` (cicatrizar a pele, fechar corte)
 
 ### 1. Positivo: **zelkur** (*cicatrizar a pele, fechar corte*)
 
@@ -26862,7 +27192,7 @@
   - **Imperf.Ind Ativa:** `odazelbbam, odazelbbas, odazelbba, odazelbban, odazelbbat` | **Passiva:** `odazelbbasem, odazelbbases, odazelbbase, odazelbbasen, odazelbbaset`
   - **Imperf.Subj Ativa:** `odazelbbakem, odazelbbakes, odazelbbake, odazelbbaken, odazelbbaket` | **Passiva:** `odazelbbakesem, odazelbbakeses, odazelbbakese, odazelbbakesen, odazelbbakeset`
 
-## 408. Raiz `zelm-` (semear grãos a lanço nos canteiros)
+## 413. Raiz `zelm-` (semear grãos a lanço nos canteiros)
 
 ### 1. Positivo: **zelmur** (*semear grãos a lanço nos canteiros*)
 
@@ -26928,7 +27258,7 @@
   - **Imperf.Ind Ativa:** `odazelmbam, odazelmbas, odazelmba, odazelmban, odazelmbat` | **Passiva:** `odazelmbasem, odazelmbases, odazelmbase, odazelmbasen, odazelmbaset`
   - **Imperf.Subj Ativa:** `odazelmbakem, odazelmbakes, odazelmbake, odazelmbaken, odazelmbaket` | **Passiva:** `odazelmbakesem, odazelmbakeses, odazelmbakese, odazelmbakesen, odazelmbakeset`
 
-## 409. Raiz `zelp-` (gravar selo imperial de cera)
+## 414. Raiz `zelp-` (gravar selo imperial de cera)
 
 ### 1. Positivo: **zelpur** (*gravar selo imperial de cera*)
 
@@ -26994,7 +27324,7 @@
   - **Imperf.Ind Ativa:** `odazelpbam, odazelpbas, odazelpba, odazelpban, odazelpbat` | **Passiva:** `odazelpbasem, odazelpbases, odazelpbase, odazelpbasen, odazelpbaset`
   - **Imperf.Subj Ativa:** `odazelpbakem, odazelpbakes, odazelpbake, odazelpbaken, odazelpbaket` | **Passiva:** `odazelpbakesem, odazelpbakeses, odazelpbakese, odazelpbakesen, odazelpbakeset`
 
-## 410. Raiz `zerb-` (pisar uvas maduras em lagar de cantaria)
+## 415. Raiz `zerb-` (pisar uvas maduras em lagar de cantaria)
 
 ### 1. Positivo: **zerbur** (*pisar uvas maduras em lagar de cantaria*)
 
@@ -27060,7 +27390,7 @@
   - **Imperf.Ind Ativa:** `odazerbbam, odazerbbas, odazerbba, odazerbban, odazerbbat` | **Passiva:** `odazerbbasem, odazerbbases, odazerbbase, odazerbbasen, odazerbbaset`
   - **Imperf.Subj Ativa:** `odazerbbakem, odazerbbakes, odazerbbake, odazerbbaken, odazerbbaket` | **Passiva:** `odazerbbakesem, odazerbbakeses, odazerbbakese, odazerbbakesen, odazerbbakeset`
 
-## 411. Raiz `zerd-` (britar blocos de basalto na mina)
+## 416. Raiz `zerd-` (britar blocos de basalto na mina)
 
 ### 1. Positivo: **zerdur** (*britar blocos de basalto na mina*)
 
@@ -27126,7 +27456,7 @@
   - **Imperf.Ind Ativa:** `odazerdbam, odazerdbas, odazerdba, odazerdban, odazerdbat` | **Passiva:** `odazerdbasem, odazerdbases, odazerdbase, odazerdbasen, odazerdbaset`
   - **Imperf.Subj Ativa:** `odazerdbakem, odazerdbakes, odazerdbake, odazerdbaken, odazerdbaket` | **Passiva:** `odazerdbakesem, odazerdbakeses, odazerdbakese, odazerdbakesen, odazerdbakeset`
 
-## 412. Raiz `zerp-` (irrigar as várzeas por canais de água)
+## 417. Raiz `zerp-` (irrigar as várzeas por canais de água)
 
 ### 1. Positivo: **zerpur** (*irrigar as várzeas por canais de água*)
 
@@ -27192,7 +27522,7 @@
   - **Imperf.Ind Ativa:** `odazerpbam, odazerpbas, odazerpba, odazerpban, odazerpbat` | **Passiva:** `odazerpbasem, odazerpbases, odazerpbase, odazerpbasen, odazerpbaset`
   - **Imperf.Subj Ativa:** `odazerpbakem, odazerpbakes, odazerpbake, odazerpbaken, odazerpbaket` | **Passiva:** `odazerpbakesem, odazerpbakeses, odazerpbakese, odazerpbakesen, odazerpbakeset`
 
-## 413. Raiz `zet-` (entretecer fios dourados no brocado real)
+## 418. Raiz `zet-` (entretecer fios dourados no brocado real)
 
 ### 1. Positivo: **zetur** (*entretecer fios dourados no brocado real*)
 
@@ -27258,7 +27588,7 @@
   - **Imperf.Ind Ativa:** `odazebbam, odazebbas, odazebba, odazebban, odazebbat` | **Passiva:** `odazebbasem, odazebbases, odazebbase, odazebbasen, odazebbaset`
   - **Imperf.Subj Ativa:** `odazebbakem, odazebbakes, odazebbake, odazebbaken, odazebbaket` | **Passiva:** `odazebbakesem, odazebbakeses, odazebbakese, odazebbakesen, odazebbakeset`
 
-## 414. Raiz `zik-` (celebrar bodas ou aliança entre famílias)
+## 419. Raiz `zik-` (celebrar bodas ou aliança entre famílias)
 
 ### 1. Positivo: **zikur** (*celebrar bodas ou aliança entre famílias*)
 
@@ -27324,7 +27654,7 @@
   - **Imperf.Ind Ativa:** `odazibbam, odazibbas, odazibba, odazibban, odazibbat` | **Passiva:** `odazibbasem, odazibbases, odazibbase, odazibbasen, odazibbaset`
   - **Imperf.Subj Ativa:** `odazibbakem, odazibbakes, odazibbake, odazibbaken, odazibbaket` | **Passiva:** `odazibbakesem, odazibbakeses, odazibbakese, odazibbakesen, odazibbakeset`
 
-## 415. Raiz `zilk-` (cobrar pedágio de passagem na ponte condal)
+## 420. Raiz `zilk-` (cobrar pedágio de passagem na ponte condal)
 
 ### 1. Positivo: **zilkur** (*cobrar pedágio de passagem na ponte condal*)
 
@@ -27390,7 +27720,7 @@
   - **Imperf.Ind Ativa:** `odazilbbam, odazilbbas, odazilbba, odazilbban, odazilbbat` | **Passiva:** `odazilbbasem, odazilbbases, odazilbbase, odazilbbasen, odazilbbaset`
   - **Imperf.Subj Ativa:** `odazilbbakem, odazilbbakes, odazilbbake, odazilbbaken, odazilbbaket` | **Passiva:** `odazilbbakesem, odazilbbakeses, odazilbbakese, odazilbbakesen, odazilbbakeset`
 
-## 416. Raiz `zir-` (afinar os tubos do grande órgão)
+## 421. Raiz `zir-` (afinar os tubos do grande órgão)
 
 ### 1. Positivo: **zirur** (*afinar os tubos do grande órgão*)
 
@@ -27456,7 +27786,7 @@
   - **Imperf.Ind Ativa:** `odazirbam, odazirbas, odazirba, odazirban, odazirbat` | **Passiva:** `odazirbasem, odazirbases, odazirbase, odazirbasen, odazirbaset`
   - **Imperf.Subj Ativa:** `odazirbakem, odazirbakes, odazirbake, odazirbaken, odazirbaket` | **Passiva:** `odazirbakesem, odazirbakeses, odazirbakese, odazirbakesen, odazirbakeset`
 
-## 417. Raiz `zolb-` (escavar galerias subterrâneas de sapa e minas sob alicerces)
+## 422. Raiz `zolb-` (escavar galerias subterrâneas de sapa e minas sob alicerces)
 
 ### 1. Positivo: **zolbur** (*escavar galerias subterrâneas de sapa e minas sob alicerces*)
 
@@ -27522,7 +27852,7 @@
   - **Imperf.Ind Ativa:** `odazolbbam, odazolbbas, odazolbba, odazolbban, odazolbbat` | **Passiva:** `odazolbbasem, odazolbbases, odazolbbase, odazolbbasen, odazolbbaset`
   - **Imperf.Subj Ativa:** `odazolbbakem, odazolbbakes, odazolbbake, odazolbbaken, odazolbbaket` | **Passiva:** `odazolbbakesem, odazolbbakeses, odazolbbakese, odazolbbakesen, odazolbbakeset`
 
-## 418. Raiz `zold-` (ressoar o eco nos desfiladeiros)
+## 423. Raiz `zold-` (ressoar o eco nos desfiladeiros)
 
 ### 1. Positivo: **zoldur** (*ressoar o eco nos desfiladeiros*)
 
@@ -27588,7 +27918,7 @@
   - **Imperf.Ind Ativa:** `odazolbbam, odazolbbas, odazolbba, odazolbban, odazolbbat` | **Passiva:** `odazolbbasem, odazolbbases, odazolbbase, odazolbbasen, odazolbbaset`
   - **Imperf.Subj Ativa:** `odazolbbakem, odazolbbakes, odazolbbake, odazolbbaken, odazolbbaket` | **Passiva:** `odazolbbakesem, odazolbbakeses, odazolbbakese, odazolbbakesen, odazolbbakeset`
 
-## 419. Raiz `zorb-` (agasalhar peregrinos oferecendo pão, sal e proteção sob o teto)
+## 424. Raiz `zorb-` (agasalhar peregrinos oferecendo pão, sal e proteção sob o teto)
 
 ### 1. Positivo: **zorbur** (*agasalhar peregrinos oferecendo pão, sal e proteção sob o teto*)
 
@@ -27654,7 +27984,7 @@
   - **Imperf.Ind Ativa:** `odazorbbam, odazorbbas, odazorbba, odazorbban, odazorbbat` | **Passiva:** `odazorbbasem, odazorbbases, odazorbbase, odazorbbasen, odazorbbaset`
   - **Imperf.Subj Ativa:** `odazorbbakem, odazorbbakes, odazorbbake, odazorbbaken, odazorbbaket` | **Passiva:** `odazorbbakesem, odazorbbakeses, odazorbbakese, odazorbbakesen, odazorbbakeset`
 
-## 420. Raiz `zork-` (lavar cascalho no crivo para gemas)
+## 425. Raiz `zork-` (lavar cascalho no crivo para gemas)
 
 ### 1. Positivo: **zorkur** (*lavar cascalho no crivo para gemas*)
 
@@ -27720,7 +28050,7 @@
   - **Imperf.Ind Ativa:** `odazorbbam, odazorbbas, odazorbba, odazorbban, odazorbbat` | **Passiva:** `odazorbbasem, odazorbbases, odazorbbase, odazorbbasen, odazorbbaset`
   - **Imperf.Subj Ativa:** `odazorbbakem, odazorbbakes, odazorbbake, odazorbbaken, odazorbbaket` | **Passiva:** `odazorbbakesem, odazorbbakeses, odazorbbakese, odazorbbakesen, odazorbbakeset`
 
-## 421. Raiz `zorp-` (singrar vagas revoltas com proa erguida)
+## 426. Raiz `zorp-` (singrar vagas revoltas com proa erguida)
 
 ### 1. Positivo: **zorpur** (*singrar vagas revoltas com proa erguida*)
 
@@ -27786,7 +28116,7 @@
   - **Imperf.Ind Ativa:** `odazorpbam, odazorpbas, odazorpba, odazorpban, odazorpbat` | **Passiva:** `odazorpbasem, odazorpbases, odazorpbase, odazorpbasen, odazorpbaset`
   - **Imperf.Subj Ativa:** `odazorpbakem, odazorpbakes, odazorpbake, odazorpbaken, odazorpbaket` | **Passiva:** `odazorpbakesem, odazorpbakeses, odazorpbakese, odazorpbakesen, odazorpbakeset`
 
-## 422. Raiz `zuk-` (forjar elos de corrente ou cota)
+## 427. Raiz `zuk-` (forjar elos de corrente ou cota)
 
 ### 1. Positivo: **zukur** (*forjar elos de corrente ou cota*)
 
@@ -27852,7 +28182,7 @@
   - **Imperf.Ind Ativa:** `odazubbam, odazubbas, odazubba, odazubban, odazubbat` | **Passiva:** `odazubbasem, odazubbases, odazubbase, odazubbasen, odazubbaset`
   - **Imperf.Subj Ativa:** `odazubbakem, odazubbakes, odazubbake, odazubbaken, odazubbaket` | **Passiva:** `odazubbakesem, odazubbakeses, odazubbakese, odazubbakesen, odazubbakeset`
 
-## 423. Raiz `zukx-` (empenhar palavra ou penhor real)
+## 428. Raiz `zukx-` (empenhar palavra ou penhor real)
 
 ### 1. Positivo: **zukxur** (*empenhar palavra ou penhor real*)
 
@@ -27918,7 +28248,7 @@
   - **Imperf.Ind Ativa:** `odazukxbam, odazukxbas, odazukxba, odazukxban, odazukxbat` | **Passiva:** `odazukxbasem, odazukxbases, odazukxbase, odazukxbasen, odazukxbaset`
   - **Imperf.Subj Ativa:** `odazukxbakem, odazukxbakes, odazukxbake, odazukxbaken, odazukxbaket` | **Passiva:** `odazukxbakesem, odazukxbakeses, odazukxbakese, odazukxbakesen, odazukxbakeset`
 
-## 424. Raiz `zul-` (aferir peso na balança, medir mercadoria)
+## 429. Raiz `zul-` (aferir peso na balança, medir mercadoria)
 
 ### 1. Positivo: **zulur** (*aferir peso na balança, medir mercadoria*)
 
@@ -27984,7 +28314,7 @@
   - **Imperf.Ind Ativa:** `odazulbam, odazulbas, odazulba, odazulban, odazulbat` | **Passiva:** `odazulbasem, odazulbases, odazulbase, odazulbasen, odazulbaset`
   - **Imperf.Subj Ativa:** `odazulbakem, odazulbakes, odazulbake, odazulbaken, odazulbaket` | **Passiva:** `odazulbakesem, odazulbakeses, odazulbakese, odazulbakesen, odazulbakeset`
 
-## 425. Raiz `zulp-` (percorrer as casas das constelações)
+## 430. Raiz `zulp-` (percorrer as casas das constelações)
 
 ### 1. Positivo: **zulpur** (*percorrer as casas das constelações*)
 
@@ -28050,7 +28380,7 @@
   - **Imperf.Ind Ativa:** `odazulpbam, odazulpbas, odazulpba, odazulpban, odazulpbat` | **Passiva:** `odazulpbasem, odazulpbases, odazulpbase, odazulpbasen, odazulpbaset`
   - **Imperf.Subj Ativa:** `odazulpbakem, odazulpbakes, odazulpbake, odazulpbaken, odazulpbaket` | **Passiva:** `odazulpbakesem, odazulpbakeses, odazulpbakese, odazulpbakesen, odazulpbakeset`
 
-## 426. Raiz `zurb-` (ensilar cereais em tulha elevada de madeira)
+## 431. Raiz `zurb-` (ensilar cereais em tulha elevada de madeira)
 
 ### 1. Positivo: **zurbur** (*ensilar cereais em tulha elevada de madeira*)
 
@@ -28116,7 +28446,7 @@
   - **Imperf.Ind Ativa:** `odazurbbam, odazurbbas, odazurbba, odazurbban, odazurbbat` | **Passiva:** `odazurbbasem, odazurbbases, odazurbbase, odazurbbasen, odazurbbaset`
   - **Imperf.Subj Ativa:** `odazurbbakem, odazurbbakes, odazurbbake, odazurbbaken, odazurbbaket` | **Passiva:** `odazurbbakesem, odazurbbakeses, odazurbbakese, odazurbbakesen, odazurbbakeset`
 
-## 427. Raiz `zurv-` (despencar em estrondo com massas de avalanche)
+## 432. Raiz `zurv-` (despencar em estrondo com massas de avalanche)
 
 ### 1. Positivo: **zurvur** (*despencar em estrondo com massas de avalanche*)
 
