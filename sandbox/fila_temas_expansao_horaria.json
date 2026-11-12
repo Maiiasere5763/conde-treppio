@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 18,
+  "ultimo_indice_executado": 19,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -198,6 +198,17 @@
       "adjetivos_adicionados": 5,
       "total_formas_apos_lote": 220054,
       "concluido_em": "2026-11-12T14:41:07.790810+00:00"
+    },
+    {
+      "indice": 19,
+      "tema_id": 20,
+      "titulo": "Hidráulica, Moinhos, Relojoaria e Mecanismos Antigos",
+      "raizes_adicionadas": 5,
+      "substantivos_adicionados": 63,
+      "substantivos_primarios_concretos": 48,
+      "adjetivos_adicionados": 5,
+      "total_formas_apos_lote": 222722,
+      "concluido_em": "2026-11-12T17:00:24.367594+00:00"
     }
   ],
   "temas": [
