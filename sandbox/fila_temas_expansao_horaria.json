@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 24,
+  "ultimo_indice_executado": 25,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -1260,6 +1260,12 @@
       "titulo": "Glaciologia, Campos de Neve, Avalanches e Criosfera",
       "data_hora": "2026-11-12T16:30:52.172369",
       "total_formas": 236062
+    },
+    {
+      "id": 26,
+      "titulo": "Espeleologia, Cavernas Abissais e Rios Subterrâneos",
+      "data_hora": "2026-11-12T16:59:30.665641",
+      "total_formas": 238730
     }
   ]
 }
