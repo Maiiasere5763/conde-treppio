@@ -2,12 +2,12 @@
   "metadata": {
     "title": "Dicionário Geral e Códice Morfológico Exaustivo da Língua Tréppia (Era Clássica V8.1)",
     "environment": "Sandbox",
-    "nouns_count": 2034,
-    "adjectives_count": 421,
-    "adverbs_count": 934,
-    "verb_roots_count": 417,
-    "verb_stems_quadripartite": 1668,
-    "total_expanded_word_forms": 233394
+    "nouns_count": 2049,
+    "adjectives_count": 426,
+    "adverbs_count": 987,
+    "verb_roots_count": 422,
+    "verb_stems_quadripartite": 1688,
+    "total_expanded_word_forms": 236062
   },
   "substantivos": {
     "aelfor": {
@@ -4635,6 +4635,31 @@
         "Aument(-gar)": "dilkorgar"
       }
     },
+    "dilptek": {
+      "declinacao": 2,
+      "significado": "instrumento ou meio para solidificar em crosta vitrea e agulhas polares",
+      "etimologia": "dilv- + -tek",
+      "formas": {
+        "Nom.Sg": "dilptek",
+        "Gen.Sg": "dilpteky",
+        "Dat.Sg": "dilpteki",
+        "Acu.Sg": "dilptekom",
+        "Nom.Pl": "dilpteko",
+        "Gen.Pl": "dilptekye",
+        "Dat.Pl": "dilptekoi",
+        "Acu.Pl": "dilptekos",
+        "Adj(-a)": "dilpteka",
+        "Adv(-vë)": "dilptekavë",
+        "Superl.Sg(-n)": "dilptekn",
+        "Superl.Pl(-ni)": "dilptekni",
+        "Lugar(-ia)": "dilptekia",
+        "Agente(-te)": "dilptette",
+        "Abstrato(-or)": "dilptekor",
+        "Instrum(-tek)": "dilptek",
+        "Dimin(-il)": "dilptekil",
+        "Aument(-gar)": "dilptekgar"
+      }
+    },
     "dilttek": {
       "declinacao": 2,
       "significado": "instrumento ou meio para acreditar embaixador junto à corte",
@@ -4658,6 +4683,56 @@
         "Instrum(-tek)": "dilttek",
         "Dimin(-il)": "dilttekil",
         "Aument(-gar)": "dilttekgar"
+      }
+    },
+    "dilvia": {
+      "declinacao": 1,
+      "significado": "lugar, recinto ou oficina de solidificar em crosta vitrea e agulhas polares",
+      "etimologia": "dilv- + -ia",
+      "formas": {
+        "Nom.Sg": "dilvia",
+        "Gen.Sg": "dilviady",
+        "Dat.Sg": "dilviaj",
+        "Acu.Sg": "dilviam",
+        "Nom.Pl": "dilviar",
+        "Gen.Pl": "dilviadye",
+        "Dat.Pl": "dilviarj",
+        "Acu.Pl": "dilvias",
+        "Adj(-a)": "dilvia",
+        "Adv(-vë)": "dilviavë",
+        "Superl.Sg(-n)": "dilvin",
+        "Superl.Pl(-ni)": "dilvini",
+        "Lugar(-ia)": "dilvia",
+        "Agente(-te)": "dilvite",
+        "Abstrato(-or)": "dilvior",
+        "Instrum(-tek)": "dilvitek",
+        "Dimin(-il)": "dilviil",
+        "Aument(-gar)": "dilvigar"
+      }
+    },
+    "dilvor": {
+      "declinacao": 2,
+      "significado": "ato ou efeito de solidificar em crosta vitrea e agulhas polares",
+      "etimologia": "dilv- + -or",
+      "formas": {
+        "Nom.Sg": "dilvor",
+        "Gen.Sg": "dilvory",
+        "Dat.Sg": "dilvori",
+        "Acu.Sg": "dilvorom",
+        "Nom.Pl": "dilvoro",
+        "Gen.Pl": "dilvorye",
+        "Dat.Pl": "dilvoroi",
+        "Acu.Pl": "dilvoros",
+        "Adj(-a)": "dilvora",
+        "Adv(-vë)": "dilvoravë",
+        "Superl.Sg(-n)": "dilvold",
+        "Superl.Pl(-ni)": "dilvoldi",
+        "Lugar(-ia)": "dilvoria",
+        "Agente(-te)": "dilvorte",
+        "Abstrato(-or)": "dilvor",
+        "Instrum(-tek)": "dilvortek",
+        "Dimin(-il)": "dilvoril",
+        "Aument(-gar)": "dilvorgar"
       }
     },
     "dimia": {
@@ -5533,6 +5608,81 @@
         "Instrum(-tek)": "drinettek",
         "Dimin(-il)": "drinetil",
         "Aument(-gar)": "drinetgar"
+      }
+    },
+    "dulpia": {
+      "declinacao": 1,
+      "significado": "lugar, recinto ou oficina de acumular camadas espessas de nevasca nas encostas altas",
+      "etimologia": "dulp- + -ia",
+      "formas": {
+        "Nom.Sg": "dulpia",
+        "Gen.Sg": "dulpiady",
+        "Dat.Sg": "dulpiaj",
+        "Acu.Sg": "dulpiam",
+        "Nom.Pl": "dulpiar",
+        "Gen.Pl": "dulpiadye",
+        "Dat.Pl": "dulpiarj",
+        "Acu.Pl": "dulpias",
+        "Adj(-a)": "dulpia",
+        "Adv(-vë)": "dulpiavë",
+        "Superl.Sg(-n)": "dulpin",
+        "Superl.Pl(-ni)": "dulpini",
+        "Lugar(-ia)": "dulpia",
+        "Agente(-te)": "dulpite",
+        "Abstrato(-or)": "dulpior",
+        "Instrum(-tek)": "dulpitek",
+        "Dimin(-il)": "dulpiil",
+        "Aument(-gar)": "dulpigar"
+      }
+    },
+    "dulpor": {
+      "declinacao": 2,
+      "significado": "ato ou efeito de acumular camadas espessas de nevasca nas encostas altas",
+      "etimologia": "dulp- + -or",
+      "formas": {
+        "Nom.Sg": "dulpor",
+        "Gen.Sg": "dulpory",
+        "Dat.Sg": "dulpori",
+        "Acu.Sg": "dulporom",
+        "Nom.Pl": "dulporo",
+        "Gen.Pl": "dulporye",
+        "Dat.Pl": "dulporoi",
+        "Acu.Pl": "dulporos",
+        "Adj(-a)": "dulpora",
+        "Adv(-vë)": "dulporavë",
+        "Superl.Sg(-n)": "dulpold",
+        "Superl.Pl(-ni)": "dulpoldi",
+        "Lugar(-ia)": "dulporia",
+        "Agente(-te)": "dulporte",
+        "Abstrato(-or)": "dulpor",
+        "Instrum(-tek)": "dulportek",
+        "Dimin(-il)": "dulporil",
+        "Aument(-gar)": "dulporgar"
+      }
+    },
+    "dulptek": {
+      "declinacao": 2,
+      "significado": "instrumento ou meio para acumular camadas espessas de nevasca nas encostas altas",
+      "etimologia": "dulp- + -tek",
+      "formas": {
+        "Nom.Sg": "dulptek",
+        "Gen.Sg": "dulpteky",
+        "Dat.Sg": "dulpteki",
+        "Acu.Sg": "dulptekom",
+        "Nom.Pl": "dulpteko",
+        "Gen.Pl": "dulptekye",
+        "Dat.Pl": "dulptekoi",
+        "Acu.Pl": "dulptekos",
+        "Adj(-a)": "dulpteka",
+        "Adv(-vë)": "dulptekavë",
+        "Superl.Sg(-n)": "dulptekn",
+        "Superl.Pl(-ni)": "dulptekni",
+        "Lugar(-ia)": "dulptekia",
+        "Agente(-te)": "dulptette",
+        "Abstrato(-or)": "dulptekor",
+        "Instrum(-tek)": "dulptek",
+        "Dimin(-il)": "dulptekil",
+        "Aument(-gar)": "dulptekgar"
       }
     },
     "durkia": {
@@ -13135,6 +13285,56 @@
         "Aument(-gar)": "heskorgar"
       }
     },
+    "holkia": {
+      "declinacao": 1,
+      "significado": "lugar, recinto ou oficina de rachar o manto sob tensao formando fendas profundas",
+      "etimologia": "holk- + -ia",
+      "formas": {
+        "Nom.Sg": "holkia",
+        "Gen.Sg": "holkiady",
+        "Dat.Sg": "holkiaj",
+        "Acu.Sg": "holkiam",
+        "Nom.Pl": "holkiar",
+        "Gen.Pl": "holkiadye",
+        "Dat.Pl": "holkiarj",
+        "Acu.Pl": "holkias",
+        "Adj(-a)": "holkia",
+        "Adv(-vë)": "holkiavë",
+        "Superl.Sg(-n)": "holkin",
+        "Superl.Pl(-ni)": "holkini",
+        "Lugar(-ia)": "holkia",
+        "Agente(-te)": "holkite",
+        "Abstrato(-or)": "holkior",
+        "Instrum(-tek)": "holkitek",
+        "Dimin(-il)": "holkiil",
+        "Aument(-gar)": "holkigar"
+      }
+    },
+    "holkor": {
+      "declinacao": 2,
+      "significado": "ato ou efeito de rachar o manto sob tensao formando fendas profundas",
+      "etimologia": "holk- + -or",
+      "formas": {
+        "Nom.Sg": "holkor",
+        "Gen.Sg": "holkory",
+        "Dat.Sg": "holkori",
+        "Acu.Sg": "holkorom",
+        "Nom.Pl": "holkoro",
+        "Gen.Pl": "holkorye",
+        "Dat.Pl": "holkoroi",
+        "Acu.Pl": "holkoros",
+        "Adj(-a)": "holkora",
+        "Adv(-vë)": "holkoravë",
+        "Superl.Sg(-n)": "holkold",
+        "Superl.Pl(-ni)": "holkoldi",
+        "Lugar(-ia)": "holkoria",
+        "Agente(-te)": "holkorte",
+        "Abstrato(-or)": "holkor",
+        "Instrum(-tek)": "holkortek",
+        "Dimin(-il)": "holkoril",
+        "Aument(-gar)": "holkorgar"
+      }
+    },
     "holpia": {
       "declinacao": 1,
       "significado": "lugar, recinto ou oficina de mergulhar em sono profundo com visões oníricas",
@@ -13208,6 +13408,31 @@
         "Instrum(-tek)": "holptek",
         "Dimin(-il)": "holptekil",
         "Aument(-gar)": "holptekgar"
+      }
+    },
+    "holttek": {
+      "declinacao": 2,
+      "significado": "instrumento ou meio para rachar o manto sob tensao formando fendas profundas",
+      "etimologia": "holk- + -tek",
+      "formas": {
+        "Nom.Sg": "holttek",
+        "Gen.Sg": "holtteky",
+        "Dat.Sg": "holtteki",
+        "Acu.Sg": "holttekom",
+        "Nom.Pl": "holtteko",
+        "Gen.Pl": "holttekye",
+        "Dat.Pl": "holttekoi",
+        "Acu.Pl": "holttekos",
+        "Adj(-a)": "holtteka",
+        "Adv(-vë)": "holttekavë",
+        "Superl.Sg(-n)": "holttekn",
+        "Superl.Pl(-ni)": "holttekni",
+        "Lugar(-ia)": "holttekia",
+        "Agente(-te)": "holttette",
+        "Abstrato(-or)": "holttekor",
+        "Instrum(-tek)": "holttek",
+        "Dimin(-il)": "holttekil",
+        "Aument(-gar)": "holttekgar"
       }
     },
     "hulbia": {
@@ -47935,6 +48160,81 @@
         "Aument(-gar)": "yolptekgar"
       }
     },
+    "yulbia": {
+      "declinacao": 1,
+      "significado": "lugar, recinto ou oficina de deslizar lentamente em leito glacial esculpindo o vale",
+      "etimologia": "yulb- + -ia",
+      "formas": {
+        "Nom.Sg": "yulbia",
+        "Gen.Sg": "yulbiady",
+        "Dat.Sg": "yulbiaj",
+        "Acu.Sg": "yulbiam",
+        "Nom.Pl": "yulbiar",
+        "Gen.Pl": "yulbiadye",
+        "Dat.Pl": "yulbiarj",
+        "Acu.Pl": "yulbias",
+        "Adj(-a)": "yulbia",
+        "Adv(-vë)": "yulbiavë",
+        "Superl.Sg(-n)": "yulbin",
+        "Superl.Pl(-ni)": "yulbini",
+        "Lugar(-ia)": "yulbia",
+        "Agente(-te)": "yulbite",
+        "Abstrato(-or)": "yulbior",
+        "Instrum(-tek)": "yulbitek",
+        "Dimin(-il)": "yulbiil",
+        "Aument(-gar)": "yulbigar"
+      }
+    },
+    "yulbor": {
+      "declinacao": 2,
+      "significado": "ato ou efeito de deslizar lentamente em leito glacial esculpindo o vale",
+      "etimologia": "yulb- + -or",
+      "formas": {
+        "Nom.Sg": "yulbor",
+        "Gen.Sg": "yulbory",
+        "Dat.Sg": "yulbori",
+        "Acu.Sg": "yulborom",
+        "Nom.Pl": "yulboro",
+        "Gen.Pl": "yulborye",
+        "Dat.Pl": "yulboroi",
+        "Acu.Pl": "yulboros",
+        "Adj(-a)": "yulbora",
+        "Adv(-vë)": "yulboravë",
+        "Superl.Sg(-n)": "yulbold",
+        "Superl.Pl(-ni)": "yulboldi",
+        "Lugar(-ia)": "yulboria",
+        "Agente(-te)": "yulborte",
+        "Abstrato(-or)": "yulbor",
+        "Instrum(-tek)": "yulbortek",
+        "Dimin(-il)": "yulboril",
+        "Aument(-gar)": "yulborgar"
+      }
+    },
+    "yulbtek": {
+      "declinacao": 2,
+      "significado": "instrumento ou meio para deslizar lentamente em leito glacial esculpindo o vale",
+      "etimologia": "yulb- + -tek",
+      "formas": {
+        "Nom.Sg": "yulbtek",
+        "Gen.Sg": "yulbteky",
+        "Dat.Sg": "yulbteki",
+        "Acu.Sg": "yulbtekom",
+        "Nom.Pl": "yulbteko",
+        "Gen.Pl": "yulbtekye",
+        "Dat.Pl": "yulbtekoi",
+        "Acu.Pl": "yulbtekos",
+        "Adj(-a)": "yulbteka",
+        "Adv(-vë)": "yulbtekavë",
+        "Superl.Sg(-n)": "yulbtekn",
+        "Superl.Pl(-ni)": "yulbtekni",
+        "Lugar(-ia)": "yulbtekia",
+        "Agente(-te)": "yulbtette",
+        "Abstrato(-or)": "yulbtekor",
+        "Instrum(-tek)": "yulbtek",
+        "Dimin(-il)": "yulbtekil",
+        "Aument(-gar)": "yulbtekgar"
+      }
+    },
     "zalkia": {
       "declinacao": 1,
       "significado": "lugar, recinto ou oficina de cambiar moedas de diferentes cunhos",
@@ -50835,6 +51135,81 @@
         "Aument(-gar)": "zurbtekgar"
       }
     },
+    "zurptek": {
+      "declinacao": 2,
+      "significado": "instrumento ou meio para despencar em estrondo com massas de avalanche",
+      "etimologia": "zurv- + -tek",
+      "formas": {
+        "Nom.Sg": "zurptek",
+        "Gen.Sg": "zurpteky",
+        "Dat.Sg": "zurpteki",
+        "Acu.Sg": "zurptekom",
+        "Nom.Pl": "zurpteko",
+        "Gen.Pl": "zurptekye",
+        "Dat.Pl": "zurptekoi",
+        "Acu.Pl": "zurptekos",
+        "Adj(-a)": "zurpteka",
+        "Adv(-vë)": "zurptekavë",
+        "Superl.Sg(-n)": "zurptekn",
+        "Superl.Pl(-ni)": "zurptekni",
+        "Lugar(-ia)": "zurptekia",
+        "Agente(-te)": "zurptette",
+        "Abstrato(-or)": "zurptekor",
+        "Instrum(-tek)": "zurptek",
+        "Dimin(-il)": "zurptekil",
+        "Aument(-gar)": "zurptekgar"
+      }
+    },
+    "zurvia": {
+      "declinacao": 1,
+      "significado": "lugar, recinto ou oficina de despencar em estrondo com massas de avalanche",
+      "etimologia": "zurv- + -ia",
+      "formas": {
+        "Nom.Sg": "zurvia",
+        "Gen.Sg": "zurviady",
+        "Dat.Sg": "zurviaj",
+        "Acu.Sg": "zurviam",
+        "Nom.Pl": "zurviar",
+        "Gen.Pl": "zurviadye",
+        "Dat.Pl": "zurviarj",
+        "Acu.Pl": "zurvias",
+        "Adj(-a)": "zurvia",
+        "Adv(-vë)": "zurviavë",
+        "Superl.Sg(-n)": "zurvin",
+        "Superl.Pl(-ni)": "zurvini",
+        "Lugar(-ia)": "zurvia",
+        "Agente(-te)": "zurvite",
+        "Abstrato(-or)": "zurvior",
+        "Instrum(-tek)": "zurvitek",
+        "Dimin(-il)": "zurviil",
+        "Aument(-gar)": "zurvigar"
+      }
+    },
+    "zurvor": {
+      "declinacao": 2,
+      "significado": "ato ou efeito de despencar em estrondo com massas de avalanche",
+      "etimologia": "zurv- + -or",
+      "formas": {
+        "Nom.Sg": "zurvor",
+        "Gen.Sg": "zurvory",
+        "Dat.Sg": "zurvori",
+        "Acu.Sg": "zurvorom",
+        "Nom.Pl": "zurvoro",
+        "Gen.Pl": "zurvorye",
+        "Dat.Pl": "zurvoroi",
+        "Acu.Pl": "zurvoros",
+        "Adj(-a)": "zurvora",
+        "Adv(-vë)": "zurvoravë",
+        "Superl.Sg(-n)": "zurvold",
+        "Superl.Pl(-ni)": "zurvoldi",
+        "Lugar(-ia)": "zurvoria",
+        "Agente(-te)": "zurvorte",
+        "Abstrato(-or)": "zurvor",
+        "Instrum(-tek)": "zurvortek",
+        "Dimin(-il)": "zurvoril",
+        "Aument(-gar)": "zurvorgar"
+      }
+    },
     "zuttek": {
       "declinacao": 2,
       "significado": "instrumento ou meio para forjar elos de corrente ou cota",
@@ -51678,6 +52053,22 @@
       "Subst.Abstrato(-or)": "dilkor",
       "Significado": "relativo ou propenso a acreditar embaixador junto à corte"
     },
+    "dilva": {
+      "Positivo.Sg": "dilva",
+      "Gen.Sg": "dilvady",
+      "Dat.Sg": "dilvaj",
+      "Acu.Sg": "dilvam",
+      "Nom.Pl": "dilvar",
+      "Gen.Pl": "dilvadye",
+      "Dat.Pl": "dilvarj",
+      "Acu.Pl": "dilvas",
+      "Comparativo": "maer dilva",
+      "Superl.Sg(-n)": "dilvn",
+      "Superl.Pl(-ni)": "dilvni",
+      "Adv.Modal(-vë)": "dilvavë",
+      "Subst.Abstrato(-or)": "dilvor",
+      "Significado": "relativo ou propenso a solidificar em crosta vitrea e agulhas polares"
+    },
     "dima": {
       "Positivo.Sg": "dima",
       "Gen.Sg": "dimady",
@@ -51805,6 +52196,22 @@
       "Adv.Modal(-vë)": "drinanavë",
       "Subst.Abstrato(-or)": "drinanor",
       "Significado": "de madeira maciça, entalhado em carvalho"
+    },
+    "dulpa": {
+      "Positivo.Sg": "dulpa",
+      "Gen.Sg": "dulpady",
+      "Dat.Sg": "dulpaj",
+      "Acu.Sg": "dulpam",
+      "Nom.Pl": "dulpar",
+      "Gen.Pl": "dulpadye",
+      "Dat.Pl": "dulparj",
+      "Acu.Pl": "dulpas",
+      "Comparativo": "maer dulpa",
+      "Superl.Sg(-n)": "dulpn",
+      "Superl.Pl(-ni)": "dulpni",
+      "Adv.Modal(-vë)": "dulpavë",
+      "Subst.Abstrato(-or)": "dulpor",
+      "Significado": "relativo ou propenso a acumular camadas espessas de nevasca nas encostas altas"
     },
     "durka": {
       "Positivo.Sg": "durka",
@@ -52733,6 +53140,22 @@
       "Adv.Modal(-vë)": "hokavë",
       "Subst.Abstrato(-or)": "hokor",
       "Significado": "tolo, ignorante, néscio"
+    },
+    "holka": {
+      "Positivo.Sg": "holka",
+      "Gen.Sg": "holkady",
+      "Dat.Sg": "holkaj",
+      "Acu.Sg": "holkam",
+      "Nom.Pl": "holkar",
+      "Gen.Pl": "holkadye",
+      "Dat.Pl": "holkarj",
+      "Acu.Pl": "holkas",
+      "Comparativo": "maer holka",
+      "Superl.Sg(-n)": "holkn",
+      "Superl.Pl(-ni)": "holkni",
+      "Adv.Modal(-vë)": "holkavë",
+      "Subst.Abstrato(-or)": "holkor",
+      "Significado": "relativo ou propenso a rachar o manto sob tensao formando fendas profundas"
     },
     "holpa": {
       "Positivo.Sg": "holpa",
@@ -57166,6 +57589,22 @@
       "Subst.Abstrato(-or)": "yolpor",
       "Significado": "relativo ou propenso a entoar acordes celestiais na sinfonia cósmica do Halylitror"
     },
+    "yulba": {
+      "Positivo.Sg": "yulba",
+      "Gen.Sg": "yulbady",
+      "Dat.Sg": "yulbaj",
+      "Acu.Sg": "yulbam",
+      "Nom.Pl": "yulbar",
+      "Gen.Pl": "yulbadye",
+      "Dat.Pl": "yulbarj",
+      "Acu.Pl": "yulbas",
+      "Comparativo": "maer yulba",
+      "Superl.Sg(-n)": "yulbn",
+      "Superl.Pl(-ni)": "yulbni",
+      "Adv.Modal(-vë)": "yulbavë",
+      "Subst.Abstrato(-or)": "yulbor",
+      "Significado": "relativo ou propenso a deslizar lentamente em leito glacial esculpindo o vale"
+    },
     "zala": {
       "Positivo.Sg": "zala",
       "Gen.Sg": "zalady",
@@ -57597,6 +58036,22 @@
       "Adv.Modal(-vë)": "zurbavë",
       "Subst.Abstrato(-or)": "zurbor",
       "Significado": "relativo ou propenso a ensilar cereais em tulha elevada de madeira"
+    },
+    "zurva": {
+      "Positivo.Sg": "zurva",
+      "Gen.Sg": "zurvady",
+      "Dat.Sg": "zurvaj",
+      "Acu.Sg": "zurvam",
+      "Nom.Pl": "zurvar",
+      "Gen.Pl": "zurvadye",
+      "Dat.Pl": "zurvarj",
+      "Acu.Pl": "zurvas",
+      "Comparativo": "maer zurva",
+      "Superl.Sg(-n)": "zurvn",
+      "Superl.Pl(-ni)": "zurvni",
+      "Adv.Modal(-vë)": "zurvavë",
+      "Subst.Abstrato(-or)": "zurvor",
+      "Significado": "relativo ou propenso a despencar em estrondo com massas de avalanche"
     }
   },
   "adverbios": {
@@ -57749,6 +58204,16 @@
       "subclasse": 2,
       "etimologia": "guardião do tempo que monitora as marcas horárias na água",
       "significado": "balp- + -ur"
+    },
+    "bambise": {
+      "subclasse": 1,
+      "etimologia": "camada marinha flutuante estendida ate o polo",
+      "significado": "bambis- + -e, termina em -e (1 decl)"
+    },
+    "bambisur": {
+      "subclasse": 2,
+      "etimologia": "navegador de rotas polares ao redor das massas flutuantes",
+      "significado": "bambis- + -ur"
     },
     "bapavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -58055,6 +58520,36 @@
       "etimologia": "dilka + -vë",
       "significado": "de modo relativo ou propenso a acreditar embaixador junto à corte"
     },
+    "dilvavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "dilva + -vë",
+      "significado": "de modo relativo ou propenso a solidificar em crosta vitrea e agulhas polares"
+    },
+    "dilveste": {
+      "subclasse": 1,
+      "etimologia": "abobada esculpida no interior da massa azulada",
+      "significado": "dilv- + este, termina em -e (1 decl)"
+    },
+    "dilveve": {
+      "subclasse": 1,
+      "etimologia": "camada vitrea que recobre as superficies rochosas",
+      "significado": "dilv- + eve, termina em -e (1 decl)"
+    },
+    "dilvil": {
+      "subclasse": 2,
+      "etimologia": "estaca de ferro cravada para fixar cordas de descida",
+      "significado": "dilv- + -il"
+    },
+    "dilvin": {
+      "subclasse": 2,
+      "etimologia": "torres pontiagudas de tom azulado na vertente inclinada",
+      "significado": "dilv- + -in"
+    },
+    "dilvur": {
+      "subclasse": 2,
+      "etimologia": "cortador de blocos cristalinos perenes nos vales frios",
+      "significado": "dilv- + -ur"
+    },
     "dimavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "dima + -vë",
@@ -58129,6 +58624,36 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "drinan + -vë",
       "significado": "de modo de madeira maciça"
+    },
+    "dulpavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "dulpa + -vë",
+      "significado": "de modo relativo ou propenso a acumular camadas espessas de nevasca nas encostas altas"
+    },
+    "dulpeste": {
+      "subclasse": 1,
+      "etimologia": "campo aberto de horizonte perene em plato elevado",
+      "significado": "dulp- + este, termina em -e (1 decl)"
+    },
+    "dulpeve": {
+      "subclasse": 1,
+      "etimologia": "crosta quebradiça endurecida pelo vento matinal",
+      "significado": "dulp- + eve, termina em -e (1 decl)"
+    },
+    "dulpil": {
+      "subclasse": 2,
+      "etimologia": "vara graduada de sondagem usada para medir profundidade",
+      "significado": "dulp- + -il"
+    },
+    "dulpin": {
+      "subclasse": 2,
+      "etimologia": "acumulo estavel de flocos compactados no circo montanhoso",
+      "significado": "dulp- + -in"
+    },
+    "dulpur": {
+      "subclasse": 2,
+      "etimologia": "observador que afere a espessura da capa nival",
+      "significado": "dulp- + -ur"
     },
     "durkavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -58305,6 +58830,16 @@
       "etimologia": "fipa + -vë",
       "significado": "de modo relativo ou propenso a varrer a cinza da lareira"
     },
+    "firisin": {
+      "subclasse": 2,
+      "etimologia": "nevoa fina com prismas cintilando na alvorada gelida",
+      "significado": "firis- + -in"
+    },
+    "firisve": {
+      "subclasse": 1,
+      "etimologia": "poeira luminosa de cristais no ar gerando halos solares",
+      "significado": "firisv- + -e, termina em -e (1 decl)"
+    },
     "firkavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "firka + -vë",
@@ -58414,6 +58949,16 @@
       "subclasse": "Modal Festivo",
       "etimologia": "gasp- + -vë",
       "significado": "festivamente, em banquete farto de aliança e concórdia"
+    },
+    "gelbre": {
+      "subclasse": 1,
+      "etimologia": "pulsaçao sismica que ecoa apos a queda de imenso rochedo de gelo",
+      "significado": "gelbr- + -e, termina em -e (1 decl)"
+    },
+    "gelbron": {
+      "subclasse": 2,
+      "etimologia": "estrondo potente emitido pelo desmoronamento de uma muralha polar",
+      "significado": "gelbr- + -on"
     },
     "gevavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -58555,6 +59100,16 @@
       "etimologia": "Grande Música Cósmica dos Ainur entoada perante o Ilúvatar",
       "significado": "halylitro- + -on"
     },
+    "hardive": {
+      "subclasse": 1,
+      "etimologia": "massa granulada endurecida que se converte em manto denso",
+      "significado": "hardiv- + -e, termina em -e (1 decl)"
+    },
+    "hardivon": {
+      "subclasse": 2,
+      "etimologia": "leito profundo e compacto preservado sob camadas novas",
+      "significado": "hardiv- + -on"
+    },
     "helbeste": {
       "subclasse": 1,
       "etimologia": "relógio de sol horizontal com linhas horárias gravadas em mármore",
@@ -58604,6 +59159,36 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "hoka + -vë",
       "significado": "de modo tolo"
+    },
+    "holkavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "holka + -vë",
+      "significado": "de modo relativo ou propenso a rachar o manto sob tensao formando fendas profundas"
+    },
+    "holkeste": {
+      "subclasse": 1,
+      "etimologia": "zona de fratura caotica onde o manto desce sobre rochas",
+      "significado": "holk- + este, termina em -e (1 decl)"
+    },
+    "holkeve": {
+      "subclasse": 1,
+      "etimologia": "fissura estreita e profunda na couraça viva",
+      "significado": "holk- + eve, termina em -e (1 decl)"
+    },
+    "holkil": {
+      "subclasse": 2,
+      "etimologia": "ferramenta de aço com ponta afiada para esculpir degraus",
+      "significado": "holk- + -il"
+    },
+    "holkin": {
+      "subclasse": 2,
+      "etimologia": "sistema de fendas transversais em manto alpino",
+      "significado": "holk- + -in"
+    },
+    "holkur": {
+      "subclasse": 2,
+      "etimologia": "guia de travessia que identifica gretas ocultas sob a neve",
+      "significado": "holk- + -ur"
     },
     "holpavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -58794,6 +59379,11 @@
       "subclasse": "Modal Festivo",
       "etimologia": "kraz- + -vë",
       "significado": "jubilosamente, entre risos"
+    },
+    "karosfer": {
+      "subclasse": 2,
+      "etimologia": "abobada de massas congeladas perenes nas culminancias do mundo",
+      "significado": "karo- + -sfer"
     },
     "karpavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -59049,6 +59639,16 @@
       "subclasse": 2,
       "etimologia": "estrada real pavimentada de lajes polidas com valas laterais de drenagem",
       "significado": "kolv- + -in"
+    },
+    "kolviste": {
+      "subclasse": 1,
+      "etimologia": "passagem natural que une bordas de fenda abissal",
+      "significado": "kolv- + -iste, termina em -e (1 decl)"
+    },
+    "kolvor": {
+      "subclasse": 2,
+      "etimologia": "arco suspenso por onde cruzam batedores de altitude",
+      "significado": "kolv- + -or"
     },
     "koravë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -59755,6 +60355,16 @@
       "etimologia": "morf- + -vë",
       "significado": "sublimadamente, em cristais tênues de vapor"
     },
+    "morvane": {
+      "subclasse": 1,
+      "etimologia": "crista de detritos rochosos depositada na margem",
+      "significado": "morvan- + -e, termina em -e (1 decl)"
+    },
+    "morvanon": {
+      "subclasse": 2,
+      "etimologia": "arco terminal de cascalho que retem lago alpino",
+      "significado": "morvan- + -on"
+    },
     "morveste": {
       "subclasse": 1,
       "etimologia": "véu diáfano de gaze com que os adivinhos cobrem os olhos na consulta",
@@ -60435,6 +61045,16 @@
       "etimologia": "rika + -vë",
       "significado": "de modo relativo ou propenso a fermentar o hidromel em tonéis de carvalho"
     },
+    "rimelil": {
+      "subclasse": 2,
+      "etimologia": "cristal ramificado fixado nas pedras pela brisa umida",
+      "significado": "rimel- + -il"
+    },
+    "rimelve": {
+      "subclasse": 1,
+      "etimologia": "cobertura prateada cintilante sobre os liquens articos",
+      "significado": "rimelv- + -e, termina em -e (1 decl)"
+    },
     "rirkavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "rirka + -vë",
@@ -60624,6 +61244,16 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "sema + -vë",
       "significado": "de modo relativo ou propenso a moer o grão entre mós de pedra"
+    },
+    "serake": {
+      "subclasse": 1,
+      "etimologia": "torre pontiaguda instavel em cascata inclinada",
+      "significado": "serak- + -e, termina em -e (1 decl)"
+    },
+    "serakin": {
+      "subclasse": 2,
+      "etimologia": "labirinto de pilares pontiagudos em alta vertente",
+      "significado": "serak- + -in"
     },
     "sikavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -61189,6 +61819,16 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "tulma + -vë",
       "significado": "de modo relativo ou propenso a guardar e selecionar sementes-matrizes"
+    },
+    "tundre": {
+      "subclasse": 1,
+      "etimologia": "estepe polar aberta onde brotam musgos na curta estaçao morna",
+      "significado": "tundr- + -e, termina em -e (1 decl)"
+    },
+    "tundril": {
+      "subclasse": 2,
+      "etimologia": "planicie pedregosa com solo permanentemente enrijecido",
+      "significado": "tundr- + -il"
     },
     "tupkavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -61820,6 +62460,16 @@
       "etimologia": "perdão incondicional de dívida concedido no jubileu de libertação",
       "significado": "yolb- + -in"
     },
+    "yolbute": {
+      "subclasse": 1,
+      "etimologia": "abrigo escavado em bloco compacto contra tempestades",
+      "significado": "yolbut- + -e, termina em -e (1 decl)"
+    },
+    "yolbuton": {
+      "subclasse": 2,
+      "etimologia": "aldeia temporaria de iglus em travessia de alta calota",
+      "significado": "yolbut- + -on"
+    },
     "yolpavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "yolpa + -vë",
@@ -61854,6 +62504,46 @@
       "subclasse": 2,
       "etimologia": "cantor celestial que lidera o coro dos seres angélicos",
       "significado": "yolp- + -ur"
+    },
+    "yulbavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "yulba + -vë",
+      "significado": "de modo relativo ou propenso a deslizar lentamente em leito glacial esculpindo o vale"
+    },
+    "yulbeste": {
+      "subclasse": 1,
+      "etimologia": "leito em canal esculpido ao longo das eras pelo fluxo",
+      "significado": "yulb- + este, termina em -e (1 decl)"
+    },
+    "yulbeve": {
+      "subclasse": 1,
+      "etimologia": "esteira de atrito e po de rocha sob o peso do manto",
+      "significado": "yulb- + eve, termina em -e (1 decl)"
+    },
+    "yulbil": {
+      "subclasse": 2,
+      "etimologia": "marco de pedra fixado no percurso de avanço lento",
+      "significado": "yulb- + -il"
+    },
+    "yulbin": {
+      "subclasse": 2,
+      "etimologia": "esporao lateral de blocos transportados pelo fluxo",
+      "significado": "yulb- + -in"
+    },
+    "yulbur": {
+      "subclasse": 2,
+      "etimologia": "batedor que afere a taxa anual de avanço do manto",
+      "significado": "yulb- + -ur"
+    },
+    "yulpave": {
+      "subclasse": 1,
+      "etimologia": "lufada violenta descendo das calotas para as gargantas",
+      "significado": "yulpav- + -e, termina em -e (1 decl)"
+    },
+    "yulpavon": {
+      "subclasse": 2,
+      "etimologia": "vendaval polar continuo que forja dunas endurecidas",
+      "significado": "yulpav- + -on"
     },
     "zalavë": {
       "subclasse": "Modal Regulado (-vë com diérese)",
@@ -62269,6 +62959,36 @@
       "subclasse": "Modal Regulado (-vë com diérese)",
       "etimologia": "zurba + -vë",
       "significado": "de modo relativo ou propenso a ensilar cereais em tulha elevada de madeira"
+    },
+    "zurvavë": {
+      "subclasse": "Modal Regulado (-vë com diérese)",
+      "etimologia": "zurva + -vë",
+      "significado": "de modo relativo ou propenso a despencar em estrondo com massas de avalanche"
+    },
+    "zurveste": {
+      "subclasse": 1,
+      "etimologia": "calha rochosa por onde descem as massas acumuladas",
+      "significado": "zurv- + este, termina em -e (1 decl)"
+    },
+    "zurveve": {
+      "subclasse": 1,
+      "etimologia": "nuvem turbilhonante em suspensao que precede o impacto",
+      "significado": "zurv- + eve, termina em -e (1 decl)"
+    },
+    "zurvil": {
+      "subclasse": 2,
+      "etimologia": "trompa sonora de bronze que soa o alarme de descida",
+      "significado": "zurv- + -il"
+    },
+    "zurvin": {
+      "subclasse": 2,
+      "etimologia": "cone de dejeçao formado pelos detritos de quedas sucessivas",
+      "significado": "zurv- + -in"
+    },
+    "zurvur": {
+      "subclasse": 2,
+      "etimologia": "vigia de desfiladeiro estacionado em abrigo de encosta",
+      "significado": "zurv- + -ur"
     }
   },
   "pronomes": {
@@ -85051,6 +85771,668 @@
         }
       }
     },
+    "dilv": {
+      "1. Positivo": {
+        "stem": "dilv",
+        "meaning": "solidificar em crosta vitrea e agulhas polares",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "dilvum",
+            "dilvus",
+            "dilvu",
+            "dilvun",
+            "dilvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "dilvusem",
+            "dilvuses",
+            "dilvuse",
+            "dilvusen",
+            "dilvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "dilvukem",
+            "dilvukes",
+            "dilvuke",
+            "dilvuken",
+            "dilvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "dilvukesem",
+            "dilvukeses",
+            "dilvukese",
+            "dilvukesen",
+            "dilvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "dilvram",
+            "dilvras",
+            "dilvra",
+            "dilvran",
+            "dilvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "dilvrasem",
+            "dilvrases",
+            "dilvrase",
+            "dilvrasen",
+            "dilvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "dilvrakem",
+            "dilvrakes",
+            "dilvrake",
+            "dilvraken",
+            "dilvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "dilvrakesem",
+            "dilvrakeses",
+            "dilvrakese",
+            "dilvrakesen",
+            "dilvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "dilvaim",
+            "dilvais",
+            "dilvai",
+            "dilvain",
+            "dilvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "dilvaisem",
+            "dilvaises",
+            "dilvaise",
+            "dilvaisen",
+            "dilvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "dilvaikem",
+            "dilvaikes",
+            "dilvaike",
+            "dilvaiken",
+            "dilvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "dilvaikesem",
+            "dilvaikeses",
+            "dilvaikese",
+            "dilvaikesen",
+            "dilvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "dilvrum",
+            "dilvrus",
+            "dilvru",
+            "dilvrun",
+            "dilvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "dilvrusem",
+            "dilvruses",
+            "dilvruse",
+            "dilvrusen",
+            "dilvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "dilvrukem",
+            "dilvrukes",
+            "dilvruke",
+            "dilvruken",
+            "dilvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "dilvrukesem",
+            "dilvrukeses",
+            "dilvrukese",
+            "dilvrukesen",
+            "dilvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "dilvbam",
+            "dilvbas",
+            "dilvba",
+            "dilvban",
+            "dilvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "dilvbasem",
+            "dilvbases",
+            "dilvbase",
+            "dilvbasen",
+            "dilvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "dilvbakem",
+            "dilvbakes",
+            "dilvbake",
+            "dilvbaken",
+            "dilvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "dilvbakesem",
+            "dilvbakeses",
+            "dilvbakese",
+            "dilvbakesen",
+            "dilvbakeset"
+          ],
+          "Infinitivo(-ur)": "dilvur",
+          "Imperativo(Raiz)": "Dilv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "dilvet",
+            "Gen.Sg": "dilvety",
+            "Dat.Sg": "dilveti",
+            "Acu.Sg": "dilvetom",
+            "Nom.Pl": "dilveti",
+            "Gen.Pl": "dilvetye",
+            "Dat.Pl": "dilvetoi",
+            "Acu.Pl": "dilvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "dilvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "dilpte",
+            "Abstrato(-or)": "dilvor",
+            "Instrum(-tek)": "dilptek",
+            "Lugar(-ia)": "dilvia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "adilv",
+        "meaning": "amolecer a superficie endurecida sob o sopro morno",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "adilvum",
+            "adilvus",
+            "adilvu",
+            "adilvun",
+            "adilvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "adilvusem",
+            "adilvuses",
+            "adilvuse",
+            "adilvusen",
+            "adilvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "adilvukem",
+            "adilvukes",
+            "adilvuke",
+            "adilvuken",
+            "adilvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "adilvukesem",
+            "adilvukeses",
+            "adilvukese",
+            "adilvukesen",
+            "adilvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "adilvram",
+            "adilvras",
+            "adilvra",
+            "adilvran",
+            "adilvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "adilvrasem",
+            "adilvrases",
+            "adilvrase",
+            "adilvrasen",
+            "adilvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "adilvrakem",
+            "adilvrakes",
+            "adilvrake",
+            "adilvraken",
+            "adilvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "adilvrakesem",
+            "adilvrakeses",
+            "adilvrakese",
+            "adilvrakesen",
+            "adilvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "adilvaim",
+            "adilvais",
+            "adilvai",
+            "adilvain",
+            "adilvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "adilvaisem",
+            "adilvaises",
+            "adilvaise",
+            "adilvaisen",
+            "adilvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "adilvaikem",
+            "adilvaikes",
+            "adilvaike",
+            "adilvaiken",
+            "adilvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "adilvaikesem",
+            "adilvaikeses",
+            "adilvaikese",
+            "adilvaikesen",
+            "adilvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "adilvrum",
+            "adilvrus",
+            "adilvru",
+            "adilvrun",
+            "adilvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "adilvrusem",
+            "adilvruses",
+            "adilvruse",
+            "adilvrusen",
+            "adilvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "adilvrukem",
+            "adilvrukes",
+            "adilvruke",
+            "adilvruken",
+            "adilvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "adilvrukesem",
+            "adilvrukeses",
+            "adilvrukese",
+            "adilvrukesen",
+            "adilvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "adilvbam",
+            "adilvbas",
+            "adilvba",
+            "adilvban",
+            "adilvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "adilvbasem",
+            "adilvbases",
+            "adilvbase",
+            "adilvbasen",
+            "adilvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "adilvbakem",
+            "adilvbakes",
+            "adilvbake",
+            "adilvbaken",
+            "adilvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "adilvbakesem",
+            "adilvbakeses",
+            "adilvbakese",
+            "adilvbakesen",
+            "adilvbakeset"
+          ],
+          "Infinitivo(-ur)": "adilvur",
+          "Imperativo(Raiz)": "Adilv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "adilvet",
+            "Gen.Sg": "adilvety",
+            "Dat.Sg": "adilveti",
+            "Acu.Sg": "adilvetom",
+            "Nom.Pl": "adilveti",
+            "Gen.Pl": "adilvetye",
+            "Dat.Pl": "adilvetoi",
+            "Acu.Pl": "adilvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "adilvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "adilpte",
+            "Abstrato(-or)": "adilvor",
+            "Instrum(-tek)": "adilptek",
+            "Lugar(-ia)": "adilvia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "odilv",
+        "meaning": "cristalizar ciclicamente a geada sobre as rochas",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odilvum",
+            "odilvus",
+            "odilvu",
+            "odilvun",
+            "odilvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odilvusem",
+            "odilvuses",
+            "odilvuse",
+            "odilvusen",
+            "odilvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odilvukem",
+            "odilvukes",
+            "odilvuke",
+            "odilvuken",
+            "odilvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odilvukesem",
+            "odilvukeses",
+            "odilvukese",
+            "odilvukesen",
+            "odilvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odilvram",
+            "odilvras",
+            "odilvra",
+            "odilvran",
+            "odilvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odilvrasem",
+            "odilvrases",
+            "odilvrase",
+            "odilvrasen",
+            "odilvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odilvrakem",
+            "odilvrakes",
+            "odilvrake",
+            "odilvraken",
+            "odilvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odilvrakesem",
+            "odilvrakeses",
+            "odilvrakese",
+            "odilvrakesen",
+            "odilvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odilvaim",
+            "odilvais",
+            "odilvai",
+            "odilvain",
+            "odilvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odilvaisem",
+            "odilvaises",
+            "odilvaise",
+            "odilvaisen",
+            "odilvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odilvaikem",
+            "odilvaikes",
+            "odilvaike",
+            "odilvaiken",
+            "odilvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odilvaikesem",
+            "odilvaikeses",
+            "odilvaikese",
+            "odilvaikesen",
+            "odilvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odilvrum",
+            "odilvrus",
+            "odilvru",
+            "odilvrun",
+            "odilvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odilvrusem",
+            "odilvruses",
+            "odilvruse",
+            "odilvrusen",
+            "odilvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odilvrukem",
+            "odilvrukes",
+            "odilvruke",
+            "odilvruken",
+            "odilvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odilvrukesem",
+            "odilvrukeses",
+            "odilvrukese",
+            "odilvrukesen",
+            "odilvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odilvbam",
+            "odilvbas",
+            "odilvba",
+            "odilvban",
+            "odilvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odilvbasem",
+            "odilvbases",
+            "odilvbase",
+            "odilvbasen",
+            "odilvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odilvbakem",
+            "odilvbakes",
+            "odilvbake",
+            "odilvbaken",
+            "odilvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odilvbakesem",
+            "odilvbakeses",
+            "odilvbakese",
+            "odilvbakesen",
+            "odilvbakeset"
+          ],
+          "Infinitivo(-ur)": "odilvur",
+          "Imperativo(Raiz)": "Odilv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odilvet",
+            "Gen.Sg": "odilvety",
+            "Dat.Sg": "odilveti",
+            "Acu.Sg": "odilvetom",
+            "Nom.Pl": "odilveti",
+            "Gen.Pl": "odilvetye",
+            "Dat.Pl": "odilvetoi",
+            "Acu.Pl": "odilvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odilvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odilpte",
+            "Abstrato(-or)": "odilvor",
+            "Instrum(-tek)": "odilptek",
+            "Lugar(-ia)": "odilvia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "oda'ilv",
+        "meaning": "dissolver as finas agulhas na calmaria termica",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "oda'ilvum",
+            "oda'ilvus",
+            "oda'ilvu",
+            "oda'ilvun",
+            "oda'ilvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "oda'ilvusem",
+            "oda'ilvuses",
+            "oda'ilvuse",
+            "oda'ilvusen",
+            "oda'ilvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "oda'ilvukem",
+            "oda'ilvukes",
+            "oda'ilvuke",
+            "oda'ilvuken",
+            "oda'ilvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "oda'ilvukesem",
+            "oda'ilvukeses",
+            "oda'ilvukese",
+            "oda'ilvukesen",
+            "oda'ilvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "oda'ilvram",
+            "oda'ilvras",
+            "oda'ilvra",
+            "oda'ilvran",
+            "oda'ilvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "oda'ilvrasem",
+            "oda'ilvrases",
+            "oda'ilvrase",
+            "oda'ilvrasen",
+            "oda'ilvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "oda'ilvrakem",
+            "oda'ilvrakes",
+            "oda'ilvrake",
+            "oda'ilvraken",
+            "oda'ilvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "oda'ilvrakesem",
+            "oda'ilvrakeses",
+            "oda'ilvrakese",
+            "oda'ilvrakesen",
+            "oda'ilvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "oda'ilvaim",
+            "oda'ilvais",
+            "oda'ilvai",
+            "oda'ilvain",
+            "oda'ilvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "oda'ilvaisem",
+            "oda'ilvaises",
+            "oda'ilvaise",
+            "oda'ilvaisen",
+            "oda'ilvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "oda'ilvaikem",
+            "oda'ilvaikes",
+            "oda'ilvaike",
+            "oda'ilvaiken",
+            "oda'ilvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "oda'ilvaikesem",
+            "oda'ilvaikeses",
+            "oda'ilvaikese",
+            "oda'ilvaikesen",
+            "oda'ilvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "oda'ilvrum",
+            "oda'ilvrus",
+            "oda'ilvru",
+            "oda'ilvrun",
+            "oda'ilvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "oda'ilvrusem",
+            "oda'ilvruses",
+            "oda'ilvruse",
+            "oda'ilvrusen",
+            "oda'ilvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "oda'ilvrukem",
+            "oda'ilvrukes",
+            "oda'ilvruke",
+            "oda'ilvruken",
+            "oda'ilvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "oda'ilvrukesem",
+            "oda'ilvrukeses",
+            "oda'ilvrukese",
+            "oda'ilvrukesen",
+            "oda'ilvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "oda'ilvbam",
+            "oda'ilvbas",
+            "oda'ilvba",
+            "oda'ilvban",
+            "oda'ilvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "oda'ilvbasem",
+            "oda'ilvbases",
+            "oda'ilvbase",
+            "oda'ilvbasen",
+            "oda'ilvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "oda'ilvbakem",
+            "oda'ilvbakes",
+            "oda'ilvbake",
+            "oda'ilvbaken",
+            "oda'ilvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "oda'ilvbakesem",
+            "oda'ilvbakeses",
+            "oda'ilvbakese",
+            "oda'ilvbakesen",
+            "oda'ilvbakeset"
+          ],
+          "Infinitivo(-ur)": "oda'ilvur",
+          "Imperativo(Raiz)": "Oda'ilv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "oda'ilvet",
+            "Gen.Sg": "oda'ilvety",
+            "Dat.Sg": "oda'ilveti",
+            "Acu.Sg": "oda'ilvetom",
+            "Nom.Pl": "oda'ilveti",
+            "Gen.Pl": "oda'ilvetye",
+            "Dat.Pl": "oda'ilvetoi",
+            "Acu.Pl": "oda'ilvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "oda'ilvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "oda'ilpte",
+            "Abstrato(-or)": "oda'ilvor",
+            "Instrum(-tek)": "oda'ilptek",
+            "Lugar(-ia)": "oda'ilvia"
+          }
+        }
+      }
+    },
     "dim": {
       "1. Positivo": {
         "stem": "dim",
@@ -91005,6 +92387,668 @@
             "Abstrato(-or)": "oda'rakor",
             "Instrum(-tek)": "oda'rattek",
             "Lugar(-ia)": "oda'rakia"
+          }
+        }
+      }
+    },
+    "dulp": {
+      "1. Positivo": {
+        "stem": "dulp",
+        "meaning": "acumular camadas espessas de nevasca nas encostas altas",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "dulpum",
+            "dulpus",
+            "dulpu",
+            "dulpun",
+            "dulput"
+          ],
+          "Pres.Ind.Passiva": [
+            "dulpusem",
+            "dulpuses",
+            "dulpuse",
+            "dulpusen",
+            "dulpuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "dulpukem",
+            "dulpukes",
+            "dulpuke",
+            "dulpuken",
+            "dulpuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "dulpukesem",
+            "dulpukeses",
+            "dulpukese",
+            "dulpukesen",
+            "dulpukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "dulpram",
+            "dulpras",
+            "dulpra",
+            "dulpran",
+            "dulprat"
+          ],
+          "Pass.Ind.Passiva": [
+            "dulprasem",
+            "dulprases",
+            "dulprase",
+            "dulprasen",
+            "dulpraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "dulprakem",
+            "dulprakes",
+            "dulprake",
+            "dulpraken",
+            "dulpraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "dulprakesem",
+            "dulprakeses",
+            "dulprakese",
+            "dulprakesen",
+            "dulprakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "dulpaim",
+            "dulpais",
+            "dulpai",
+            "dulpain",
+            "dulpait"
+          ],
+          "Dur.Ind.Passiva": [
+            "dulpaisem",
+            "dulpaises",
+            "dulpaise",
+            "dulpaisen",
+            "dulpaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "dulpaikem",
+            "dulpaikes",
+            "dulpaike",
+            "dulpaiken",
+            "dulpaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "dulpaikesem",
+            "dulpaikeses",
+            "dulpaikese",
+            "dulpaikesen",
+            "dulpaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "dulprum",
+            "dulprus",
+            "dulpru",
+            "dulprun",
+            "dulprut"
+          ],
+          "Fut.Ind.Passiva": [
+            "dulprusem",
+            "dulpruses",
+            "dulpruse",
+            "dulprusen",
+            "dulpruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "dulprukem",
+            "dulprukes",
+            "dulpruke",
+            "dulpruken",
+            "dulpruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "dulprukesem",
+            "dulprukeses",
+            "dulprukese",
+            "dulprukesen",
+            "dulprukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "dulpbam",
+            "dulpbas",
+            "dulpba",
+            "dulpban",
+            "dulpbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "dulpbasem",
+            "dulpbases",
+            "dulpbase",
+            "dulpbasen",
+            "dulpbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "dulpbakem",
+            "dulpbakes",
+            "dulpbake",
+            "dulpbaken",
+            "dulpbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "dulpbakesem",
+            "dulpbakeses",
+            "dulpbakese",
+            "dulpbakesen",
+            "dulpbakeset"
+          ],
+          "Infinitivo(-ur)": "dulpur",
+          "Imperativo(Raiz)": "Dulp!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "dulpet",
+            "Gen.Sg": "dulpety",
+            "Dat.Sg": "dulpeti",
+            "Acu.Sg": "dulpetom",
+            "Nom.Pl": "dulpeti",
+            "Gen.Pl": "dulpetye",
+            "Dat.Pl": "dulpetoi",
+            "Acu.Pl": "dulpetos"
+          },
+          "Interrogativo.2Pl(-ka)": "dulpukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "dulpte",
+            "Abstrato(-or)": "dulpor",
+            "Instrum(-tek)": "dulptek",
+            "Lugar(-ia)": "dulpia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "adulp",
+        "meaning": "varrer o acumulo limpando os desfiladeiros",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "adulpum",
+            "adulpus",
+            "adulpu",
+            "adulpun",
+            "adulput"
+          ],
+          "Pres.Ind.Passiva": [
+            "adulpusem",
+            "adulpuses",
+            "adulpuse",
+            "adulpusen",
+            "adulpuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "adulpukem",
+            "adulpukes",
+            "adulpuke",
+            "adulpuken",
+            "adulpuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "adulpukesem",
+            "adulpukeses",
+            "adulpukese",
+            "adulpukesen",
+            "adulpukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "adulpram",
+            "adulpras",
+            "adulpra",
+            "adulpran",
+            "adulprat"
+          ],
+          "Pass.Ind.Passiva": [
+            "adulprasem",
+            "adulprases",
+            "adulprase",
+            "adulprasen",
+            "adulpraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "adulprakem",
+            "adulprakes",
+            "adulprake",
+            "adulpraken",
+            "adulpraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "adulprakesem",
+            "adulprakeses",
+            "adulprakese",
+            "adulprakesen",
+            "adulprakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "adulpaim",
+            "adulpais",
+            "adulpai",
+            "adulpain",
+            "adulpait"
+          ],
+          "Dur.Ind.Passiva": [
+            "adulpaisem",
+            "adulpaises",
+            "adulpaise",
+            "adulpaisen",
+            "adulpaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "adulpaikem",
+            "adulpaikes",
+            "adulpaike",
+            "adulpaiken",
+            "adulpaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "adulpaikesem",
+            "adulpaikeses",
+            "adulpaikese",
+            "adulpaikesen",
+            "adulpaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "adulprum",
+            "adulprus",
+            "adulpru",
+            "adulprun",
+            "adulprut"
+          ],
+          "Fut.Ind.Passiva": [
+            "adulprusem",
+            "adulpruses",
+            "adulpruse",
+            "adulprusen",
+            "adulpruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "adulprukem",
+            "adulprukes",
+            "adulpruke",
+            "adulpruken",
+            "adulpruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "adulprukesem",
+            "adulprukeses",
+            "adulprukese",
+            "adulprukesen",
+            "adulprukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "adulpbam",
+            "adulpbas",
+            "adulpba",
+            "adulpban",
+            "adulpbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "adulpbasem",
+            "adulpbases",
+            "adulpbase",
+            "adulpbasen",
+            "adulpbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "adulpbakem",
+            "adulpbakes",
+            "adulpbake",
+            "adulpbaken",
+            "adulpbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "adulpbakesem",
+            "adulpbakeses",
+            "adulpbakese",
+            "adulpbakesen",
+            "adulpbakeset"
+          ],
+          "Infinitivo(-ur)": "adulpur",
+          "Imperativo(Raiz)": "Adulp!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "adulpet",
+            "Gen.Sg": "adulpety",
+            "Dat.Sg": "adulpeti",
+            "Acu.Sg": "adulpetom",
+            "Nom.Pl": "adulpeti",
+            "Gen.Pl": "adulpetye",
+            "Dat.Pl": "adulpetoi",
+            "Acu.Pl": "adulpetos"
+          },
+          "Interrogativo.2Pl(-ka)": "adulpukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "adulpte",
+            "Abstrato(-or)": "adulpor",
+            "Instrum(-tek)": "adulptek",
+            "Lugar(-ia)": "adulpia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "odulp",
+        "meaning": "nevar continuamente em tormentas brancas sucessivas",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odulpum",
+            "odulpus",
+            "odulpu",
+            "odulpun",
+            "odulput"
+          ],
+          "Pres.Ind.Passiva": [
+            "odulpusem",
+            "odulpuses",
+            "odulpuse",
+            "odulpusen",
+            "odulpuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odulpukem",
+            "odulpukes",
+            "odulpuke",
+            "odulpuken",
+            "odulpuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odulpukesem",
+            "odulpukeses",
+            "odulpukese",
+            "odulpukesen",
+            "odulpukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odulpram",
+            "odulpras",
+            "odulpra",
+            "odulpran",
+            "odulprat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odulprasem",
+            "odulprases",
+            "odulprase",
+            "odulprasen",
+            "odulpraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odulprakem",
+            "odulprakes",
+            "odulprake",
+            "odulpraken",
+            "odulpraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odulprakesem",
+            "odulprakeses",
+            "odulprakese",
+            "odulprakesen",
+            "odulprakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odulpaim",
+            "odulpais",
+            "odulpai",
+            "odulpain",
+            "odulpait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odulpaisem",
+            "odulpaises",
+            "odulpaise",
+            "odulpaisen",
+            "odulpaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odulpaikem",
+            "odulpaikes",
+            "odulpaike",
+            "odulpaiken",
+            "odulpaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odulpaikesem",
+            "odulpaikeses",
+            "odulpaikese",
+            "odulpaikesen",
+            "odulpaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odulprum",
+            "odulprus",
+            "odulpru",
+            "odulprun",
+            "odulprut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odulprusem",
+            "odulpruses",
+            "odulpruse",
+            "odulprusen",
+            "odulpruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odulprukem",
+            "odulprukes",
+            "odulpruke",
+            "odulpruken",
+            "odulpruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odulprukesem",
+            "odulprukeses",
+            "odulprukese",
+            "odulprukesen",
+            "odulprukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odulpbam",
+            "odulpbas",
+            "odulpba",
+            "odulpban",
+            "odulpbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odulpbasem",
+            "odulpbases",
+            "odulpbase",
+            "odulpbasen",
+            "odulpbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odulpbakem",
+            "odulpbakes",
+            "odulpbake",
+            "odulpbaken",
+            "odulpbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odulpbakesem",
+            "odulpbakeses",
+            "odulpbakese",
+            "odulpbakesen",
+            "odulpbakeset"
+          ],
+          "Infinitivo(-ur)": "odulpur",
+          "Imperativo(Raiz)": "Odulp!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odulpet",
+            "Gen.Sg": "odulpety",
+            "Dat.Sg": "odulpeti",
+            "Acu.Sg": "odulpetom",
+            "Nom.Pl": "odulpeti",
+            "Gen.Pl": "odulpetye",
+            "Dat.Pl": "odulpetoi",
+            "Acu.Pl": "odulpetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odulpukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odulpte",
+            "Abstrato(-or)": "odulpor",
+            "Instrum(-tek)": "odulptek",
+            "Lugar(-ia)": "odulpia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "oda'ulp",
+        "meaning": "derreter ciclicamente os bancos no degelo primaveril",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "oda'ulpum",
+            "oda'ulpus",
+            "oda'ulpu",
+            "oda'ulpun",
+            "oda'ulput"
+          ],
+          "Pres.Ind.Passiva": [
+            "oda'ulpusem",
+            "oda'ulpuses",
+            "oda'ulpuse",
+            "oda'ulpusen",
+            "oda'ulpuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "oda'ulpukem",
+            "oda'ulpukes",
+            "oda'ulpuke",
+            "oda'ulpuken",
+            "oda'ulpuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "oda'ulpukesem",
+            "oda'ulpukeses",
+            "oda'ulpukese",
+            "oda'ulpukesen",
+            "oda'ulpukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "oda'ulpram",
+            "oda'ulpras",
+            "oda'ulpra",
+            "oda'ulpran",
+            "oda'ulprat"
+          ],
+          "Pass.Ind.Passiva": [
+            "oda'ulprasem",
+            "oda'ulprases",
+            "oda'ulprase",
+            "oda'ulprasen",
+            "oda'ulpraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "oda'ulprakem",
+            "oda'ulprakes",
+            "oda'ulprake",
+            "oda'ulpraken",
+            "oda'ulpraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "oda'ulprakesem",
+            "oda'ulprakeses",
+            "oda'ulprakese",
+            "oda'ulprakesen",
+            "oda'ulprakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "oda'ulpaim",
+            "oda'ulpais",
+            "oda'ulpai",
+            "oda'ulpain",
+            "oda'ulpait"
+          ],
+          "Dur.Ind.Passiva": [
+            "oda'ulpaisem",
+            "oda'ulpaises",
+            "oda'ulpaise",
+            "oda'ulpaisen",
+            "oda'ulpaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "oda'ulpaikem",
+            "oda'ulpaikes",
+            "oda'ulpaike",
+            "oda'ulpaiken",
+            "oda'ulpaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "oda'ulpaikesem",
+            "oda'ulpaikeses",
+            "oda'ulpaikese",
+            "oda'ulpaikesen",
+            "oda'ulpaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "oda'ulprum",
+            "oda'ulprus",
+            "oda'ulpru",
+            "oda'ulprun",
+            "oda'ulprut"
+          ],
+          "Fut.Ind.Passiva": [
+            "oda'ulprusem",
+            "oda'ulpruses",
+            "oda'ulpruse",
+            "oda'ulprusen",
+            "oda'ulpruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "oda'ulprukem",
+            "oda'ulprukes",
+            "oda'ulpruke",
+            "oda'ulpruken",
+            "oda'ulpruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "oda'ulprukesem",
+            "oda'ulprukeses",
+            "oda'ulprukese",
+            "oda'ulprukesen",
+            "oda'ulprukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "oda'ulpbam",
+            "oda'ulpbas",
+            "oda'ulpba",
+            "oda'ulpban",
+            "oda'ulpbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "oda'ulpbasem",
+            "oda'ulpbases",
+            "oda'ulpbase",
+            "oda'ulpbasen",
+            "oda'ulpbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "oda'ulpbakem",
+            "oda'ulpbakes",
+            "oda'ulpbake",
+            "oda'ulpbaken",
+            "oda'ulpbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "oda'ulpbakesem",
+            "oda'ulpbakeses",
+            "oda'ulpbakese",
+            "oda'ulpbakesen",
+            "oda'ulpbakeset"
+          ],
+          "Infinitivo(-ur)": "oda'ulpur",
+          "Imperativo(Raiz)": "Oda'ulp!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "oda'ulpet",
+            "Gen.Sg": "oda'ulpety",
+            "Dat.Sg": "oda'ulpeti",
+            "Acu.Sg": "oda'ulpetom",
+            "Nom.Pl": "oda'ulpeti",
+            "Gen.Pl": "oda'ulpetye",
+            "Dat.Pl": "oda'ulpetoi",
+            "Acu.Pl": "oda'ulpetos"
+          },
+          "Interrogativo.2Pl(-ka)": "oda'ulpukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "oda'ulpte",
+            "Abstrato(-or)": "oda'ulpor",
+            "Instrum(-tek)": "oda'ulptek",
+            "Lugar(-ia)": "oda'ulpia"
           }
         }
       }
@@ -133373,6 +135417,668 @@
             "Abstrato(-or)": "odaheskor",
             "Instrum(-tek)": "odahesttek",
             "Lugar(-ia)": "odaheskia"
+          }
+        }
+      }
+    },
+    "holk": {
+      "1. Positivo": {
+        "stem": "holk",
+        "meaning": "rachar o manto sob tensao formando fendas profundas",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "holkum",
+            "holkus",
+            "holku",
+            "holkun",
+            "holkut"
+          ],
+          "Pres.Ind.Passiva": [
+            "holkusem",
+            "holkuses",
+            "holkuse",
+            "holkusen",
+            "holkuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "holkukem",
+            "holkukes",
+            "holkuke",
+            "holkuken",
+            "holkuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "holkukesem",
+            "holkukeses",
+            "holkukese",
+            "holkukesen",
+            "holkukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "holkram",
+            "holkras",
+            "holkra",
+            "holkran",
+            "holkrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "holkrasem",
+            "holkrases",
+            "holkrase",
+            "holkrasen",
+            "holkraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "holkrakem",
+            "holkrakes",
+            "holkrake",
+            "holkraken",
+            "holkraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "holkrakesem",
+            "holkrakeses",
+            "holkrakese",
+            "holkrakesen",
+            "holkrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "holkaim",
+            "holkais",
+            "holkai",
+            "holkain",
+            "holkait"
+          ],
+          "Dur.Ind.Passiva": [
+            "holkaisem",
+            "holkaises",
+            "holkaise",
+            "holkaisen",
+            "holkaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "holkaikem",
+            "holkaikes",
+            "holkaike",
+            "holkaiken",
+            "holkaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "holkaikesem",
+            "holkaikeses",
+            "holkaikese",
+            "holkaikesen",
+            "holkaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "holkrum",
+            "holkrus",
+            "holkru",
+            "holkrun",
+            "holkrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "holkrusem",
+            "holkruses",
+            "holkruse",
+            "holkrusen",
+            "holkruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "holkrukem",
+            "holkrukes",
+            "holkruke",
+            "holkruken",
+            "holkruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "holkrukesem",
+            "holkrukeses",
+            "holkrukese",
+            "holkrukesen",
+            "holkrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "holbbam",
+            "holbbas",
+            "holbba",
+            "holbban",
+            "holbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "holbbasem",
+            "holbbases",
+            "holbbase",
+            "holbbasen",
+            "holbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "holbbakem",
+            "holbbakes",
+            "holbbake",
+            "holbbaken",
+            "holbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "holbbakesem",
+            "holbbakeses",
+            "holbbakese",
+            "holbbakesen",
+            "holbbakeset"
+          ],
+          "Infinitivo(-ur)": "holkur",
+          "Imperativo(Raiz)": "Holk!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "holket",
+            "Gen.Sg": "holkety",
+            "Dat.Sg": "holketi",
+            "Acu.Sg": "holketom",
+            "Nom.Pl": "holketi",
+            "Gen.Pl": "holketye",
+            "Dat.Pl": "holketoi",
+            "Acu.Pl": "holketos"
+          },
+          "Interrogativo.2Pl(-ka)": "holkukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "holtte",
+            "Abstrato(-or)": "holkor",
+            "Instrum(-tek)": "holttek",
+            "Lugar(-ia)": "holkia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "aholk",
+        "meaning": "selar fendas glaciais com pontes firmes",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "aholkum",
+            "aholkus",
+            "aholku",
+            "aholkun",
+            "aholkut"
+          ],
+          "Pres.Ind.Passiva": [
+            "aholkusem",
+            "aholkuses",
+            "aholkuse",
+            "aholkusen",
+            "aholkuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "aholkukem",
+            "aholkukes",
+            "aholkuke",
+            "aholkuken",
+            "aholkuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "aholkukesem",
+            "aholkukeses",
+            "aholkukese",
+            "aholkukesen",
+            "aholkukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "aholkram",
+            "aholkras",
+            "aholkra",
+            "aholkran",
+            "aholkrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "aholkrasem",
+            "aholkrases",
+            "aholkrase",
+            "aholkrasen",
+            "aholkraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "aholkrakem",
+            "aholkrakes",
+            "aholkrake",
+            "aholkraken",
+            "aholkraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "aholkrakesem",
+            "aholkrakeses",
+            "aholkrakese",
+            "aholkrakesen",
+            "aholkrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "aholkaim",
+            "aholkais",
+            "aholkai",
+            "aholkain",
+            "aholkait"
+          ],
+          "Dur.Ind.Passiva": [
+            "aholkaisem",
+            "aholkaises",
+            "aholkaise",
+            "aholkaisen",
+            "aholkaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "aholkaikem",
+            "aholkaikes",
+            "aholkaike",
+            "aholkaiken",
+            "aholkaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "aholkaikesem",
+            "aholkaikeses",
+            "aholkaikese",
+            "aholkaikesen",
+            "aholkaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "aholkrum",
+            "aholkrus",
+            "aholkru",
+            "aholkrun",
+            "aholkrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "aholkrusem",
+            "aholkruses",
+            "aholkruse",
+            "aholkrusen",
+            "aholkruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "aholkrukem",
+            "aholkrukes",
+            "aholkruke",
+            "aholkruken",
+            "aholkruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "aholkrukesem",
+            "aholkrukeses",
+            "aholkrukese",
+            "aholkrukesen",
+            "aholkrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "aholbbam",
+            "aholbbas",
+            "aholbba",
+            "aholbban",
+            "aholbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "aholbbasem",
+            "aholbbases",
+            "aholbbase",
+            "aholbbasen",
+            "aholbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "aholbbakem",
+            "aholbbakes",
+            "aholbbake",
+            "aholbbaken",
+            "aholbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "aholbbakesem",
+            "aholbbakeses",
+            "aholbbakese",
+            "aholbbakesen",
+            "aholbbakeset"
+          ],
+          "Infinitivo(-ur)": "aholkur",
+          "Imperativo(Raiz)": "Aholk!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "aholket",
+            "Gen.Sg": "aholkety",
+            "Dat.Sg": "aholketi",
+            "Acu.Sg": "aholketom",
+            "Nom.Pl": "aholketi",
+            "Gen.Pl": "aholketye",
+            "Dat.Pl": "aholketoi",
+            "Acu.Pl": "aholketos"
+          },
+          "Interrogativo.2Pl(-ka)": "aholkukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "aholtte",
+            "Abstrato(-or)": "aholkor",
+            "Instrum(-tek)": "aholttek",
+            "Lugar(-ia)": "aholkia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "oholk",
+        "meaning": "fender repetidamente a couraça dos vales rochosos",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "oholkum",
+            "oholkus",
+            "oholku",
+            "oholkun",
+            "oholkut"
+          ],
+          "Pres.Ind.Passiva": [
+            "oholkusem",
+            "oholkuses",
+            "oholkuse",
+            "oholkusen",
+            "oholkuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "oholkukem",
+            "oholkukes",
+            "oholkuke",
+            "oholkuken",
+            "oholkuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "oholkukesem",
+            "oholkukeses",
+            "oholkukese",
+            "oholkukesen",
+            "oholkukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "oholkram",
+            "oholkras",
+            "oholkra",
+            "oholkran",
+            "oholkrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "oholkrasem",
+            "oholkrases",
+            "oholkrase",
+            "oholkrasen",
+            "oholkraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "oholkrakem",
+            "oholkrakes",
+            "oholkrake",
+            "oholkraken",
+            "oholkraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "oholkrakesem",
+            "oholkrakeses",
+            "oholkrakese",
+            "oholkrakesen",
+            "oholkrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "oholkaim",
+            "oholkais",
+            "oholkai",
+            "oholkain",
+            "oholkait"
+          ],
+          "Dur.Ind.Passiva": [
+            "oholkaisem",
+            "oholkaises",
+            "oholkaise",
+            "oholkaisen",
+            "oholkaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "oholkaikem",
+            "oholkaikes",
+            "oholkaike",
+            "oholkaiken",
+            "oholkaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "oholkaikesem",
+            "oholkaikeses",
+            "oholkaikese",
+            "oholkaikesen",
+            "oholkaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "oholkrum",
+            "oholkrus",
+            "oholkru",
+            "oholkrun",
+            "oholkrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "oholkrusem",
+            "oholkruses",
+            "oholkruse",
+            "oholkrusen",
+            "oholkruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "oholkrukem",
+            "oholkrukes",
+            "oholkruke",
+            "oholkruken",
+            "oholkruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "oholkrukesem",
+            "oholkrukeses",
+            "oholkrukese",
+            "oholkrukesen",
+            "oholkrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "oholbbam",
+            "oholbbas",
+            "oholbba",
+            "oholbban",
+            "oholbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "oholbbasem",
+            "oholbbases",
+            "oholbbase",
+            "oholbbasen",
+            "oholbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "oholbbakem",
+            "oholbbakes",
+            "oholbbake",
+            "oholbbaken",
+            "oholbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "oholbbakesem",
+            "oholbbakeses",
+            "oholbbakese",
+            "oholbbakesen",
+            "oholbbakeset"
+          ],
+          "Infinitivo(-ur)": "oholkur",
+          "Imperativo(Raiz)": "Oholk!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "oholket",
+            "Gen.Sg": "oholkety",
+            "Dat.Sg": "oholketi",
+            "Acu.Sg": "oholketom",
+            "Nom.Pl": "oholketi",
+            "Gen.Pl": "oholketye",
+            "Dat.Pl": "oholketoi",
+            "Acu.Pl": "oholketos"
+          },
+          "Interrogativo.2Pl(-ka)": "oholkukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "oholtte",
+            "Abstrato(-or)": "oholkor",
+            "Instrum(-tek)": "oholttek",
+            "Lugar(-ia)": "oholkia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "odaholk",
+        "meaning": "consolidar as fissuras em plano continuo e uniforme",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odaholkum",
+            "odaholkus",
+            "odaholku",
+            "odaholkun",
+            "odaholkut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odaholkusem",
+            "odaholkuses",
+            "odaholkuse",
+            "odaholkusen",
+            "odaholkuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odaholkukem",
+            "odaholkukes",
+            "odaholkuke",
+            "odaholkuken",
+            "odaholkuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odaholkukesem",
+            "odaholkukeses",
+            "odaholkukese",
+            "odaholkukesen",
+            "odaholkukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odaholkram",
+            "odaholkras",
+            "odaholkra",
+            "odaholkran",
+            "odaholkrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odaholkrasem",
+            "odaholkrases",
+            "odaholkrase",
+            "odaholkrasen",
+            "odaholkraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odaholkrakem",
+            "odaholkrakes",
+            "odaholkrake",
+            "odaholkraken",
+            "odaholkraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odaholkrakesem",
+            "odaholkrakeses",
+            "odaholkrakese",
+            "odaholkrakesen",
+            "odaholkrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odaholkaim",
+            "odaholkais",
+            "odaholkai",
+            "odaholkain",
+            "odaholkait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odaholkaisem",
+            "odaholkaises",
+            "odaholkaise",
+            "odaholkaisen",
+            "odaholkaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odaholkaikem",
+            "odaholkaikes",
+            "odaholkaike",
+            "odaholkaiken",
+            "odaholkaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odaholkaikesem",
+            "odaholkaikeses",
+            "odaholkaikese",
+            "odaholkaikesen",
+            "odaholkaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odaholkrum",
+            "odaholkrus",
+            "odaholkru",
+            "odaholkrun",
+            "odaholkrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odaholkrusem",
+            "odaholkruses",
+            "odaholkruse",
+            "odaholkrusen",
+            "odaholkruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odaholkrukem",
+            "odaholkrukes",
+            "odaholkruke",
+            "odaholkruken",
+            "odaholkruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odaholkrukesem",
+            "odaholkrukeses",
+            "odaholkrukese",
+            "odaholkrukesen",
+            "odaholkrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odaholbbam",
+            "odaholbbas",
+            "odaholbba",
+            "odaholbban",
+            "odaholbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odaholbbasem",
+            "odaholbbases",
+            "odaholbbase",
+            "odaholbbasen",
+            "odaholbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odaholbbakem",
+            "odaholbbakes",
+            "odaholbbake",
+            "odaholbbaken",
+            "odaholbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odaholbbakesem",
+            "odaholbbakeses",
+            "odaholbbakese",
+            "odaholbbakesen",
+            "odaholbbakeset"
+          ],
+          "Infinitivo(-ur)": "odaholkur",
+          "Imperativo(Raiz)": "Odaholk!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odaholket",
+            "Gen.Sg": "odaholkety",
+            "Dat.Sg": "odaholketi",
+            "Acu.Sg": "odaholketom",
+            "Nom.Pl": "odaholketi",
+            "Gen.Pl": "odaholketye",
+            "Dat.Pl": "odaholketoi",
+            "Acu.Pl": "odaholketos"
+          },
+          "Interrogativo.2Pl(-ka)": "odaholkukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odaholtte",
+            "Abstrato(-or)": "odaholkor",
+            "Instrum(-tek)": "odaholttek",
+            "Lugar(-ia)": "odaholkia"
           }
         }
       }
@@ -320723,6 +323429,668 @@
         }
       }
     },
+    "yulb": {
+      "1. Positivo": {
+        "stem": "yulb",
+        "meaning": "deslizar lentamente em leito glacial esculpindo o vale",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "yulbum",
+            "yulbus",
+            "yulbu",
+            "yulbun",
+            "yulbut"
+          ],
+          "Pres.Ind.Passiva": [
+            "yulbusem",
+            "yulbuses",
+            "yulbuse",
+            "yulbusen",
+            "yulbuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "yulbukem",
+            "yulbukes",
+            "yulbuke",
+            "yulbuken",
+            "yulbuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "yulbukesem",
+            "yulbukeses",
+            "yulbukese",
+            "yulbukesen",
+            "yulbukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "yulbram",
+            "yulbras",
+            "yulbra",
+            "yulbran",
+            "yulbrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "yulbrasem",
+            "yulbrases",
+            "yulbrase",
+            "yulbrasen",
+            "yulbraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "yulbrakem",
+            "yulbrakes",
+            "yulbrake",
+            "yulbraken",
+            "yulbraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "yulbrakesem",
+            "yulbrakeses",
+            "yulbrakese",
+            "yulbrakesen",
+            "yulbrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "yulbaim",
+            "yulbais",
+            "yulbai",
+            "yulbain",
+            "yulbait"
+          ],
+          "Dur.Ind.Passiva": [
+            "yulbaisem",
+            "yulbaises",
+            "yulbaise",
+            "yulbaisen",
+            "yulbaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "yulbaikem",
+            "yulbaikes",
+            "yulbaike",
+            "yulbaiken",
+            "yulbaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "yulbaikesem",
+            "yulbaikeses",
+            "yulbaikese",
+            "yulbaikesen",
+            "yulbaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "yulbrum",
+            "yulbrus",
+            "yulbru",
+            "yulbrun",
+            "yulbrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "yulbrusem",
+            "yulbruses",
+            "yulbruse",
+            "yulbrusen",
+            "yulbruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "yulbrukem",
+            "yulbrukes",
+            "yulbruke",
+            "yulbruken",
+            "yulbruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "yulbrukesem",
+            "yulbrukeses",
+            "yulbrukese",
+            "yulbrukesen",
+            "yulbrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "yulbbam",
+            "yulbbas",
+            "yulbba",
+            "yulbban",
+            "yulbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "yulbbasem",
+            "yulbbases",
+            "yulbbase",
+            "yulbbasen",
+            "yulbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "yulbbakem",
+            "yulbbakes",
+            "yulbbake",
+            "yulbbaken",
+            "yulbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "yulbbakesem",
+            "yulbbakeses",
+            "yulbbakese",
+            "yulbbakesen",
+            "yulbbakeset"
+          ],
+          "Infinitivo(-ur)": "yulbur",
+          "Imperativo(Raiz)": "Yulb!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "yulbet",
+            "Gen.Sg": "yulbety",
+            "Dat.Sg": "yulbeti",
+            "Acu.Sg": "yulbetom",
+            "Nom.Pl": "yulbeti",
+            "Gen.Pl": "yulbetye",
+            "Dat.Pl": "yulbetoi",
+            "Acu.Pl": "yulbetos"
+          },
+          "Interrogativo.2Pl(-ka)": "yulbukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "yulbte",
+            "Abstrato(-or)": "yulbor",
+            "Instrum(-tek)": "yulbtek",
+            "Lugar(-ia)": "yulbia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "ayulb",
+        "meaning": "estacionar o fluxo glacial em barreiras de retençao",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "ayulbum",
+            "ayulbus",
+            "ayulbu",
+            "ayulbun",
+            "ayulbut"
+          ],
+          "Pres.Ind.Passiva": [
+            "ayulbusem",
+            "ayulbuses",
+            "ayulbuse",
+            "ayulbusen",
+            "ayulbuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "ayulbukem",
+            "ayulbukes",
+            "ayulbuke",
+            "ayulbuken",
+            "ayulbuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "ayulbukesem",
+            "ayulbukeses",
+            "ayulbukese",
+            "ayulbukesen",
+            "ayulbukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "ayulbram",
+            "ayulbras",
+            "ayulbra",
+            "ayulbran",
+            "ayulbrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "ayulbrasem",
+            "ayulbrases",
+            "ayulbrase",
+            "ayulbrasen",
+            "ayulbraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "ayulbrakem",
+            "ayulbrakes",
+            "ayulbrake",
+            "ayulbraken",
+            "ayulbraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "ayulbrakesem",
+            "ayulbrakeses",
+            "ayulbrakese",
+            "ayulbrakesen",
+            "ayulbrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "ayulbaim",
+            "ayulbais",
+            "ayulbai",
+            "ayulbain",
+            "ayulbait"
+          ],
+          "Dur.Ind.Passiva": [
+            "ayulbaisem",
+            "ayulbaises",
+            "ayulbaise",
+            "ayulbaisen",
+            "ayulbaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "ayulbaikem",
+            "ayulbaikes",
+            "ayulbaike",
+            "ayulbaiken",
+            "ayulbaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "ayulbaikesem",
+            "ayulbaikeses",
+            "ayulbaikese",
+            "ayulbaikesen",
+            "ayulbaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "ayulbrum",
+            "ayulbrus",
+            "ayulbru",
+            "ayulbrun",
+            "ayulbrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "ayulbrusem",
+            "ayulbruses",
+            "ayulbruse",
+            "ayulbrusen",
+            "ayulbruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "ayulbrukem",
+            "ayulbrukes",
+            "ayulbruke",
+            "ayulbruken",
+            "ayulbruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "ayulbrukesem",
+            "ayulbrukeses",
+            "ayulbrukese",
+            "ayulbrukesen",
+            "ayulbrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "ayulbbam",
+            "ayulbbas",
+            "ayulbba",
+            "ayulbban",
+            "ayulbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "ayulbbasem",
+            "ayulbbases",
+            "ayulbbase",
+            "ayulbbasen",
+            "ayulbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "ayulbbakem",
+            "ayulbbakes",
+            "ayulbbake",
+            "ayulbbaken",
+            "ayulbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "ayulbbakesem",
+            "ayulbbakeses",
+            "ayulbbakese",
+            "ayulbbakesen",
+            "ayulbbakeset"
+          ],
+          "Infinitivo(-ur)": "ayulbur",
+          "Imperativo(Raiz)": "Ayulb!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "ayulbet",
+            "Gen.Sg": "ayulbety",
+            "Dat.Sg": "ayulbeti",
+            "Acu.Sg": "ayulbetom",
+            "Nom.Pl": "ayulbeti",
+            "Gen.Pl": "ayulbetye",
+            "Dat.Pl": "ayulbetoi",
+            "Acu.Pl": "ayulbetos"
+          },
+          "Interrogativo.2Pl(-ka)": "ayulbukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "ayulbte",
+            "Abstrato(-or)": "ayulbor",
+            "Instrum(-tek)": "ayulbtek",
+            "Lugar(-ia)": "ayulbia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "odyulb",
+        "meaning": "avançar continuamente escavando circos de alta vertente",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odyulbum",
+            "odyulbus",
+            "odyulbu",
+            "odyulbun",
+            "odyulbut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odyulbusem",
+            "odyulbuses",
+            "odyulbuse",
+            "odyulbusen",
+            "odyulbuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odyulbukem",
+            "odyulbukes",
+            "odyulbuke",
+            "odyulbuken",
+            "odyulbuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odyulbukesem",
+            "odyulbukeses",
+            "odyulbukese",
+            "odyulbukesen",
+            "odyulbukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odyulbram",
+            "odyulbras",
+            "odyulbra",
+            "odyulbran",
+            "odyulbrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odyulbrasem",
+            "odyulbrases",
+            "odyulbrase",
+            "odyulbrasen",
+            "odyulbraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odyulbrakem",
+            "odyulbrakes",
+            "odyulbrake",
+            "odyulbraken",
+            "odyulbraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odyulbrakesem",
+            "odyulbrakeses",
+            "odyulbrakese",
+            "odyulbrakesen",
+            "odyulbrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odyulbaim",
+            "odyulbais",
+            "odyulbai",
+            "odyulbain",
+            "odyulbait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odyulbaisem",
+            "odyulbaises",
+            "odyulbaise",
+            "odyulbaisen",
+            "odyulbaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odyulbaikem",
+            "odyulbaikes",
+            "odyulbaike",
+            "odyulbaiken",
+            "odyulbaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odyulbaikesem",
+            "odyulbaikeses",
+            "odyulbaikese",
+            "odyulbaikesen",
+            "odyulbaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odyulbrum",
+            "odyulbrus",
+            "odyulbru",
+            "odyulbrun",
+            "odyulbrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odyulbrusem",
+            "odyulbruses",
+            "odyulbruse",
+            "odyulbrusen",
+            "odyulbruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odyulbrukem",
+            "odyulbrukes",
+            "odyulbruke",
+            "odyulbruken",
+            "odyulbruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odyulbrukesem",
+            "odyulbrukeses",
+            "odyulbrukese",
+            "odyulbrukesen",
+            "odyulbrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odyulbbam",
+            "odyulbbas",
+            "odyulbba",
+            "odyulbban",
+            "odyulbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odyulbbasem",
+            "odyulbbases",
+            "odyulbbase",
+            "odyulbbasen",
+            "odyulbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odyulbbakem",
+            "odyulbbakes",
+            "odyulbbake",
+            "odyulbbaken",
+            "odyulbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odyulbbakesem",
+            "odyulbbakeses",
+            "odyulbbakese",
+            "odyulbbakesen",
+            "odyulbbakeset"
+          ],
+          "Infinitivo(-ur)": "odyulbur",
+          "Imperativo(Raiz)": "Odyulb!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odyulbet",
+            "Gen.Sg": "odyulbety",
+            "Dat.Sg": "odyulbeti",
+            "Acu.Sg": "odyulbetom",
+            "Nom.Pl": "odyulbeti",
+            "Gen.Pl": "odyulbetye",
+            "Dat.Pl": "odyulbetoi",
+            "Acu.Pl": "odyulbetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odyulbukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odyulbte",
+            "Abstrato(-or)": "odyulbor",
+            "Instrum(-tek)": "odyulbtek",
+            "Lugar(-ia)": "odyulbia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "odayulb",
+        "meaning": "retroceder o leito libertando o terreno rochoso",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odayulbum",
+            "odayulbus",
+            "odayulbu",
+            "odayulbun",
+            "odayulbut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odayulbusem",
+            "odayulbuses",
+            "odayulbuse",
+            "odayulbusen",
+            "odayulbuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odayulbukem",
+            "odayulbukes",
+            "odayulbuke",
+            "odayulbuken",
+            "odayulbuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odayulbukesem",
+            "odayulbukeses",
+            "odayulbukese",
+            "odayulbukesen",
+            "odayulbukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odayulbram",
+            "odayulbras",
+            "odayulbra",
+            "odayulbran",
+            "odayulbrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odayulbrasem",
+            "odayulbrases",
+            "odayulbrase",
+            "odayulbrasen",
+            "odayulbraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odayulbrakem",
+            "odayulbrakes",
+            "odayulbrake",
+            "odayulbraken",
+            "odayulbraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odayulbrakesem",
+            "odayulbrakeses",
+            "odayulbrakese",
+            "odayulbrakesen",
+            "odayulbrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odayulbaim",
+            "odayulbais",
+            "odayulbai",
+            "odayulbain",
+            "odayulbait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odayulbaisem",
+            "odayulbaises",
+            "odayulbaise",
+            "odayulbaisen",
+            "odayulbaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odayulbaikem",
+            "odayulbaikes",
+            "odayulbaike",
+            "odayulbaiken",
+            "odayulbaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odayulbaikesem",
+            "odayulbaikeses",
+            "odayulbaikese",
+            "odayulbaikesen",
+            "odayulbaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odayulbrum",
+            "odayulbrus",
+            "odayulbru",
+            "odayulbrun",
+            "odayulbrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odayulbrusem",
+            "odayulbruses",
+            "odayulbruse",
+            "odayulbrusen",
+            "odayulbruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odayulbrukem",
+            "odayulbrukes",
+            "odayulbruke",
+            "odayulbruken",
+            "odayulbruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odayulbrukesem",
+            "odayulbrukeses",
+            "odayulbrukese",
+            "odayulbrukesen",
+            "odayulbrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odayulbbam",
+            "odayulbbas",
+            "odayulbba",
+            "odayulbban",
+            "odayulbbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odayulbbasem",
+            "odayulbbases",
+            "odayulbbase",
+            "odayulbbasen",
+            "odayulbbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odayulbbakem",
+            "odayulbbakes",
+            "odayulbbake",
+            "odayulbbaken",
+            "odayulbbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odayulbbakesem",
+            "odayulbbakeses",
+            "odayulbbakese",
+            "odayulbbakesen",
+            "odayulbbakeset"
+          ],
+          "Infinitivo(-ur)": "odayulbur",
+          "Imperativo(Raiz)": "Odayulb!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odayulbet",
+            "Gen.Sg": "odayulbety",
+            "Dat.Sg": "odayulbeti",
+            "Acu.Sg": "odayulbetom",
+            "Nom.Pl": "odayulbeti",
+            "Gen.Pl": "odayulbetye",
+            "Dat.Pl": "odayulbetoi",
+            "Acu.Pl": "odayulbetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odayulbukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odayulbte",
+            "Abstrato(-or)": "odayulbor",
+            "Instrum(-tek)": "odayulbtek",
+            "Lugar(-ia)": "odayulbia"
+          }
+        }
+      }
+    },
     "zal": {
       "1. Positivo": {
         "stem": "zal",
@@ -338593,6 +341961,668 @@
             "Abstrato(-or)": "odazurbor",
             "Instrum(-tek)": "odazurbtek",
             "Lugar(-ia)": "odazurbia"
+          }
+        }
+      }
+    },
+    "zurv": {
+      "1. Positivo": {
+        "stem": "zurv",
+        "meaning": "despencar em estrondo com massas de avalanche",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "zurvum",
+            "zurvus",
+            "zurvu",
+            "zurvun",
+            "zurvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "zurvusem",
+            "zurvuses",
+            "zurvuse",
+            "zurvusen",
+            "zurvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "zurvukem",
+            "zurvukes",
+            "zurvuke",
+            "zurvuken",
+            "zurvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "zurvukesem",
+            "zurvukeses",
+            "zurvukese",
+            "zurvukesen",
+            "zurvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "zurvram",
+            "zurvras",
+            "zurvra",
+            "zurvran",
+            "zurvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "zurvrasem",
+            "zurvrases",
+            "zurvrase",
+            "zurvrasen",
+            "zurvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "zurvrakem",
+            "zurvrakes",
+            "zurvrake",
+            "zurvraken",
+            "zurvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "zurvrakesem",
+            "zurvrakeses",
+            "zurvrakese",
+            "zurvrakesen",
+            "zurvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "zurvaim",
+            "zurvais",
+            "zurvai",
+            "zurvain",
+            "zurvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "zurvaisem",
+            "zurvaises",
+            "zurvaise",
+            "zurvaisen",
+            "zurvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "zurvaikem",
+            "zurvaikes",
+            "zurvaike",
+            "zurvaiken",
+            "zurvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "zurvaikesem",
+            "zurvaikeses",
+            "zurvaikese",
+            "zurvaikesen",
+            "zurvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "zurvrum",
+            "zurvrus",
+            "zurvru",
+            "zurvrun",
+            "zurvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "zurvrusem",
+            "zurvruses",
+            "zurvruse",
+            "zurvrusen",
+            "zurvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "zurvrukem",
+            "zurvrukes",
+            "zurvruke",
+            "zurvruken",
+            "zurvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "zurvrukesem",
+            "zurvrukeses",
+            "zurvrukese",
+            "zurvrukesen",
+            "zurvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "zurvbam",
+            "zurvbas",
+            "zurvba",
+            "zurvban",
+            "zurvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "zurvbasem",
+            "zurvbases",
+            "zurvbase",
+            "zurvbasen",
+            "zurvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "zurvbakem",
+            "zurvbakes",
+            "zurvbake",
+            "zurvbaken",
+            "zurvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "zurvbakesem",
+            "zurvbakeses",
+            "zurvbakese",
+            "zurvbakesen",
+            "zurvbakeset"
+          ],
+          "Infinitivo(-ur)": "zurvur",
+          "Imperativo(Raiz)": "Zurv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "zurvet",
+            "Gen.Sg": "zurvety",
+            "Dat.Sg": "zurveti",
+            "Acu.Sg": "zurvetom",
+            "Nom.Pl": "zurveti",
+            "Gen.Pl": "zurvetye",
+            "Dat.Pl": "zurvetoi",
+            "Acu.Pl": "zurvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "zurvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "zurpte",
+            "Abstrato(-or)": "zurvor",
+            "Instrum(-tek)": "zurptek",
+            "Lugar(-ia)": "zurvia"
+          }
+        }
+      },
+      "2. Privativo (a-)": {
+        "stem": "azurv",
+        "meaning": "estabilizar os taludes evitando a descida das massas",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "azurvum",
+            "azurvus",
+            "azurvu",
+            "azurvun",
+            "azurvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "azurvusem",
+            "azurvuses",
+            "azurvuse",
+            "azurvusen",
+            "azurvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "azurvukem",
+            "azurvukes",
+            "azurvuke",
+            "azurvuken",
+            "azurvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "azurvukesem",
+            "azurvukeses",
+            "azurvukese",
+            "azurvukesen",
+            "azurvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "azurvram",
+            "azurvras",
+            "azurvra",
+            "azurvran",
+            "azurvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "azurvrasem",
+            "azurvrases",
+            "azurvrase",
+            "azurvrasen",
+            "azurvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "azurvrakem",
+            "azurvrakes",
+            "azurvrake",
+            "azurvraken",
+            "azurvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "azurvrakesem",
+            "azurvrakeses",
+            "azurvrakese",
+            "azurvrakesen",
+            "azurvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "azurvaim",
+            "azurvais",
+            "azurvai",
+            "azurvain",
+            "azurvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "azurvaisem",
+            "azurvaises",
+            "azurvaise",
+            "azurvaisen",
+            "azurvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "azurvaikem",
+            "azurvaikes",
+            "azurvaike",
+            "azurvaiken",
+            "azurvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "azurvaikesem",
+            "azurvaikeses",
+            "azurvaikese",
+            "azurvaikesen",
+            "azurvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "azurvrum",
+            "azurvrus",
+            "azurvru",
+            "azurvrun",
+            "azurvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "azurvrusem",
+            "azurvruses",
+            "azurvruse",
+            "azurvrusen",
+            "azurvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "azurvrukem",
+            "azurvrukes",
+            "azurvruke",
+            "azurvruken",
+            "azurvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "azurvrukesem",
+            "azurvrukeses",
+            "azurvrukese",
+            "azurvrukesen",
+            "azurvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "azurvbam",
+            "azurvbas",
+            "azurvba",
+            "azurvban",
+            "azurvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "azurvbasem",
+            "azurvbases",
+            "azurvbase",
+            "azurvbasen",
+            "azurvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "azurvbakem",
+            "azurvbakes",
+            "azurvbake",
+            "azurvbaken",
+            "azurvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "azurvbakesem",
+            "azurvbakeses",
+            "azurvbakese",
+            "azurvbakesen",
+            "azurvbakeset"
+          ],
+          "Infinitivo(-ur)": "azurvur",
+          "Imperativo(Raiz)": "Azurv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "azurvet",
+            "Gen.Sg": "azurvety",
+            "Dat.Sg": "azurveti",
+            "Acu.Sg": "azurvetom",
+            "Nom.Pl": "azurveti",
+            "Gen.Pl": "azurvetye",
+            "Dat.Pl": "azurvetoi",
+            "Acu.Pl": "azurvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "azurvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "azurpte",
+            "Abstrato(-or)": "azurvor",
+            "Instrum(-tek)": "azurptek",
+            "Lugar(-ia)": "azurvia"
+          }
+        }
+      },
+      "3. Iterativo (o-/od-)": {
+        "stem": "ozurv",
+        "meaning": "rugir em descidas continuas pelos corredores montanhosos",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "ozurvum",
+            "ozurvus",
+            "ozurvu",
+            "ozurvun",
+            "ozurvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "ozurvusem",
+            "ozurvuses",
+            "ozurvuse",
+            "ozurvusen",
+            "ozurvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "ozurvukem",
+            "ozurvukes",
+            "ozurvuke",
+            "ozurvuken",
+            "ozurvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "ozurvukesem",
+            "ozurvukeses",
+            "ozurvukese",
+            "ozurvukesen",
+            "ozurvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "ozurvram",
+            "ozurvras",
+            "ozurvra",
+            "ozurvran",
+            "ozurvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "ozurvrasem",
+            "ozurvrases",
+            "ozurvrase",
+            "ozurvrasen",
+            "ozurvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "ozurvrakem",
+            "ozurvrakes",
+            "ozurvrake",
+            "ozurvraken",
+            "ozurvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "ozurvrakesem",
+            "ozurvrakeses",
+            "ozurvrakese",
+            "ozurvrakesen",
+            "ozurvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "ozurvaim",
+            "ozurvais",
+            "ozurvai",
+            "ozurvain",
+            "ozurvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "ozurvaisem",
+            "ozurvaises",
+            "ozurvaise",
+            "ozurvaisen",
+            "ozurvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "ozurvaikem",
+            "ozurvaikes",
+            "ozurvaike",
+            "ozurvaiken",
+            "ozurvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "ozurvaikesem",
+            "ozurvaikeses",
+            "ozurvaikese",
+            "ozurvaikesen",
+            "ozurvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "ozurvrum",
+            "ozurvrus",
+            "ozurvru",
+            "ozurvrun",
+            "ozurvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "ozurvrusem",
+            "ozurvruses",
+            "ozurvruse",
+            "ozurvrusen",
+            "ozurvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "ozurvrukem",
+            "ozurvrukes",
+            "ozurvruke",
+            "ozurvruken",
+            "ozurvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "ozurvrukesem",
+            "ozurvrukeses",
+            "ozurvrukese",
+            "ozurvrukesen",
+            "ozurvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "ozurvbam",
+            "ozurvbas",
+            "ozurvba",
+            "ozurvban",
+            "ozurvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "ozurvbasem",
+            "ozurvbases",
+            "ozurvbase",
+            "ozurvbasen",
+            "ozurvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "ozurvbakem",
+            "ozurvbakes",
+            "ozurvbake",
+            "ozurvbaken",
+            "ozurvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "ozurvbakesem",
+            "ozurvbakeses",
+            "ozurvbakese",
+            "ozurvbakesen",
+            "ozurvbakeset"
+          ],
+          "Infinitivo(-ur)": "ozurvur",
+          "Imperativo(Raiz)": "Ozurv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "ozurvet",
+            "Gen.Sg": "ozurvety",
+            "Dat.Sg": "ozurveti",
+            "Acu.Sg": "ozurvetom",
+            "Nom.Pl": "ozurveti",
+            "Gen.Pl": "ozurvetye",
+            "Dat.Pl": "ozurvetoi",
+            "Acu.Pl": "ozurvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "ozurvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "ozurpte",
+            "Abstrato(-or)": "ozurvor",
+            "Instrum(-tek)": "ozurptek",
+            "Lugar(-ia)": "ozurvia"
+          }
+        }
+      },
+      "4. Iter.-Privativo (od-a-)": {
+        "stem": "odazurv",
+        "meaning": "conter as massas instaveis em patamares seguros",
+        "conjugation": {
+          "Pres.Ind.Ativa": [
+            "odazurvum",
+            "odazurvus",
+            "odazurvu",
+            "odazurvun",
+            "odazurvut"
+          ],
+          "Pres.Ind.Passiva": [
+            "odazurvusem",
+            "odazurvuses",
+            "odazurvuse",
+            "odazurvusen",
+            "odazurvuset"
+          ],
+          "Pres.Subj.Ativa": [
+            "odazurvukem",
+            "odazurvukes",
+            "odazurvuke",
+            "odazurvuken",
+            "odazurvuket"
+          ],
+          "Pres.Subj.Passiva": [
+            "odazurvukesem",
+            "odazurvukeses",
+            "odazurvukese",
+            "odazurvukesen",
+            "odazurvukeset"
+          ],
+          "Pass.Ind.Ativa": [
+            "odazurvram",
+            "odazurvras",
+            "odazurvra",
+            "odazurvran",
+            "odazurvrat"
+          ],
+          "Pass.Ind.Passiva": [
+            "odazurvrasem",
+            "odazurvrases",
+            "odazurvrase",
+            "odazurvrasen",
+            "odazurvraset"
+          ],
+          "Pass.Subj.Ativa": [
+            "odazurvrakem",
+            "odazurvrakes",
+            "odazurvrake",
+            "odazurvraken",
+            "odazurvraket"
+          ],
+          "Pass.Subj.Passiva": [
+            "odazurvrakesem",
+            "odazurvrakeses",
+            "odazurvrakese",
+            "odazurvrakesen",
+            "odazurvrakeset"
+          ],
+          "Dur.Ind.Ativa": [
+            "odazurvaim",
+            "odazurvais",
+            "odazurvai",
+            "odazurvain",
+            "odazurvait"
+          ],
+          "Dur.Ind.Passiva": [
+            "odazurvaisem",
+            "odazurvaises",
+            "odazurvaise",
+            "odazurvaisen",
+            "odazurvaiset"
+          ],
+          "Dur.Subj.Ativa": [
+            "odazurvaikem",
+            "odazurvaikes",
+            "odazurvaike",
+            "odazurvaiken",
+            "odazurvaiket"
+          ],
+          "Dur.Subj.Passiva": [
+            "odazurvaikesem",
+            "odazurvaikeses",
+            "odazurvaikese",
+            "odazurvaikesen",
+            "odazurvaikeset"
+          ],
+          "Fut.Ind.Ativa": [
+            "odazurvrum",
+            "odazurvrus",
+            "odazurvru",
+            "odazurvrun",
+            "odazurvrut"
+          ],
+          "Fut.Ind.Passiva": [
+            "odazurvrusem",
+            "odazurvruses",
+            "odazurvruse",
+            "odazurvrusen",
+            "odazurvruset"
+          ],
+          "Fut.Subj.Ativa": [
+            "odazurvrukem",
+            "odazurvrukes",
+            "odazurvruke",
+            "odazurvruken",
+            "odazurvruket"
+          ],
+          "Fut.Subj.Passiva": [
+            "odazurvrukesem",
+            "odazurvrukeses",
+            "odazurvrukese",
+            "odazurvrukesen",
+            "odazurvrukeset"
+          ],
+          "Imperf.Ind.Ativa": [
+            "odazurvbam",
+            "odazurvbas",
+            "odazurvba",
+            "odazurvban",
+            "odazurvbat"
+          ],
+          "Imperf.Ind.Passiva": [
+            "odazurvbasem",
+            "odazurvbases",
+            "odazurvbase",
+            "odazurvbasen",
+            "odazurvbaset"
+          ],
+          "Imperf.Subj.Ativa": [
+            "odazurvbakem",
+            "odazurvbakes",
+            "odazurvbake",
+            "odazurvbaken",
+            "odazurvbaket"
+          ],
+          "Imperf.Subj.Passiva": [
+            "odazurvbakesem",
+            "odazurvbakeses",
+            "odazurvbakese",
+            "odazurvbakesen",
+            "odazurvbakeset"
+          ],
+          "Infinitivo(-ur)": "odazurvur",
+          "Imperativo(Raiz)": "Odazurv!",
+          "Participio(8_Casos)": {
+            "Nom.Sg": "odazurvet",
+            "Gen.Sg": "odazurvety",
+            "Dat.Sg": "odazurveti",
+            "Acu.Sg": "odazurvetom",
+            "Nom.Pl": "odazurveti",
+            "Gen.Pl": "odazurvetye",
+            "Dat.Pl": "odazurvetoi",
+            "Acu.Pl": "odazurvetos"
+          },
+          "Interrogativo.2Pl(-ka)": "odazurvukka?",
+          "Derivados.Nominais": {
+            "Agente(-te)": "odazurpte",
+            "Abstrato(-or)": "odazurvor",
+            "Instrum(-tek)": "odazurptek",
+            "Lugar(-ia)": "odazurvia"
           }
         }
       }
