@@ -1,6 +1,6 @@
 {
   "descricao": "Fila Enciclopédica de 200 Campos Semânticos para a Expansão Lexical Endógena a cada 30 Minutos (*/30 * * * *) do Tréppio (Era Clássica V8.3 — Proibição de Clusters Iniciais #CC... e Tolerância Românica <= 70%) pelo Conde",
-  "ultimo_indice_executado": 27,
+  "ultimo_indice_executado": 28,
   "historico_execucoes": [
     {
       "indice": 0,
@@ -1278,6 +1278,12 @@
       "titulo": "Limnologia, Lagos Alpinos, Pântanos e Turfeiras",
       "data_hora": "2026-11-12T17:57:59.322492",
       "total_formas": 244069
+    },
+    {
+      "id": 29,
+      "titulo": "Potamologia, Cachoeiras, Corredeiras e Estuários",
+      "data_hora": "2026-11-12T18:27:45.048353",
+      "total_formas": 246737
     }
   ]
 }
