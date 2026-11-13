@@ -1,3 +1,5 @@
+import base64
+import gzip
 import re
 
 def extract_gnlt_payload(root_dir: str) -> dict:
@@ -1744,7 +1746,7 @@ def generate_all_files():
     with open(verbs_md_path, "w", encoding="utf-8") as f:
         f.write("\n".join(verbs_full_md))
 
-    # Salvar o JSON estruturado com todas as 37.769 formas expandidas
+    # Salvar o JSON estruturado e versão compacta GZip para Launcher/Site
     json_path = os.path.join(ex_dir, "dicionario_formas_expandidas.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(full_json_db, f, ensure_ascii=False, indent=2)
@@ -1752,16 +1754,18 @@ def generate_all_files():
     with open(root_json_path, "w", encoding="utf-8") as f:
         json.dump(full_json_db, f, ensure_ascii=False, indent=2)
 
+    json_compact_str = json.dumps(full_json_db, ensure_ascii=False, separators=(",", ":"))
+    json_compact_safe_js = json_compact_str.replace("</", "<\\/")
+    with gzip.open(os.path.join(ex_dir, "dicionario_formas_expandidas.compact.json.gz"), "wb", compresslevel=9) as f_gz:
+        f_gz.write(json_compact_str.encode("utf-8"))
+
     # Salvar o bundle JS direto para alimentar a UI do Dicionário (funciona tanto via servidor quanto via file://)
     ui_dir = os.path.join(out_dir, "ui_dicionario")
     os.makedirs(ui_dir, exist_ok=True)
     js_bundle_path = os.path.join(ui_dir, "dados_dicionario_conde.js")
-    json_compact_str = json.dumps(full_json_db, ensure_ascii=False)
+    js_bundle_text = "// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V8.5)\nwindow.CONDE_DB = " + json_compact_safe_js + ";\n"
     with open(js_bundle_path, "w", encoding="utf-8") as f:
-        f.write("// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V8.1)\n")
-        f.write("window.CONDE_DB = ")
-        f.write(json_compact_str)
-        f.write(";\n")
+        f.write(js_bundle_text)
 
     # Gerar diretório docs/ na raiz de D:\Conde_Treppio para publicação direta no GitHub Pages
     root_dir = r"D:\Conde_Treppio"
@@ -1775,31 +1779,44 @@ def generate_all_files():
         with open(ui_index_path, "r", encoding="utf-8") as f:
             html_template = f.read()
 
-        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + dicionario_formas_expandidas.json + PWA)
+        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + JSON + PWA + Brasão)
         with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html_template)
         with open(os.path.join(docs_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
-            f.write("window.CONDE_DB = " + json_compact_str + ";\n")
+            f.write("window.CONDE_DB = " + json_compact_safe_js + ";\n")
         with open(os.path.join(docs_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
             f.write(json_compact_str)
-        for pwa_asset in ("sw.js", "manifest.json", "icon-512.png"):
+        for pwa_asset in ("sw.js", "manifest.json", "icon-512.png", "icon-192.png", "icon-maskable-512.png", "favicon.ico"):
             src_asset = os.path.join(ui_dir, pwa_asset)
             if os.path.exists(src_asset):
                 shutil.copy2(src_asset, os.path.join(docs_dir, pwa_asset))
 
-        # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) para envio a amigos / Google Drive
-        inline_script = f"<script>window.CONDE_DB = {json_compact_str};</script>"
-        portable_html = re.sub(r'<script src="dados_dicionario_conde\.js[^"]*"></script>', inline_script, html_template)
+        # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) com Brasão embutido em Base64
+        inline_script = "<script>window.CONDE_DB = " + json_compact_safe_js + ";</script>"
+        portable_html = re.sub(
+            r'<script[^>]*src="dados_dicionario_conde\.js[^"]*"[^>]*></script>',
+            lambda _: inline_script,
+            html_template,
+        )
+        icon_192_path = os.path.join(ui_dir, "icon-192.png")
+        if os.path.exists(icon_192_path):
+            with open(icon_192_path, "rb") as f_ic:
+                b64_crest = "data:image/png;base64," + base64.b64encode(f_ic.read()).decode("ascii")
+            portable_html = portable_html.replace('src="icon-192.png"', f'src="{b64_crest}"')
+            portable_html = portable_html.replace('href="icon-192.png"', f'href="{b64_crest}"')
         portable_html_path = os.path.join(dist_dir, "Codice_Treppio_Portatil.html")
         with open(portable_html_path, "w", encoding="utf-8") as f:
             f.write(portable_html)
 
-        # 3. Salvar asset único autocontido no projeto Android APK (sandbox/android_apk/app/src/main/assets/)
-        # Deduplicado: evita triplicar ~3.6 MB x 3 no pacote APK
+        # 3. Android APK assets/: shell enxuto (~180 KB) + dados_dicionario_conde.js.gz + icon-192.png (Zero travamento na abertura!)
         android_assets_dir = os.path.join(out_dir, "android_apk", "app", "src", "main", "assets")
         os.makedirs(android_assets_dir, exist_ok=True)
         with open(os.path.join(android_assets_dir, "index.html"), "w", encoding="utf-8") as f:
-            f.write(portable_html)
+            f.write(html_template)
+        with gzip.open(os.path.join(android_assets_dir, "dados_dicionario_conde.js.gz"), "wb", compresslevel=9) as f_gz:
+            f_gz.write(("window.CONDE_DB = " + json_compact_safe_js + ";\n").encode("utf-8"))
+        if os.path.exists(icon_192_path):
+            shutil.copy2(icon_192_path, os.path.join(android_assets_dir, "icon-192.png"))
         for redundant_asset in ("dados_dicionario_conde.js", "dicionario_formas_expandidas.json"):
             redundant_path = os.path.join(android_assets_dir, redundant_asset)
             if os.path.exists(redundant_path):

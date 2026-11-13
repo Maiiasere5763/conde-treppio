@@ -24,22 +24,37 @@ import android.webkit.JavascriptInterface;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.zip.GZIPInputStream;
 
 public class MainActivity extends Activity implements TextToSpeech.OnInitListener {
 
+    private static final String VIRTUAL_HOST = "conde.treppio.local";
+    private static final String VIRTUAL_ORIGIN = "https://" + VIRTUAL_HOST + "/";
+
     private WebView mWebView;
     private LinearLayout mSplashOverlay;
+    private volatile boolean mSplashDismissed = false;
     private TextToSpeech mTts;
     private boolean mTtsReady = false;
+    private OnBackInvokedCallback mBackCallback;
 
     @Override
     @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
@@ -64,12 +79,15 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         } catch (Exception ignored) {
         }
 
-        // Container raiz com WebView + Splash Overlay Nativo (Ouro Imperial & Obsidiana)
+        // Container raiz com WebView + Splash Overlay Nativo (Brasão do Conde & Obsidiana)
         FrameLayout rootLayout = new FrameLayout(this);
         rootLayout.setBackgroundColor(Color.parseColor("#09090b"));
 
         mWebView = new WebView(this);
         mWebView.setBackgroundColor(Color.parseColor("#09090b"));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mWebView.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, false);
+        }
         rootLayout.addView(mWebView, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
@@ -87,57 +105,77 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
-        settings.setAllowFileAccess(true);
-        settings.setAllowContentAccess(true);
+        settings.setAllowFileAccess(false);
+        settings.setAllowContentAccess(false);
         settings.setLoadWithOverviewMode(true);
         settings.setUseWideViewPort(true);
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            settings.setAllowFileAccessFromFileURLs(true);
-            settings.setAllowUniversalAccessFromFileURLs(true);
-        }
-
-        // Registrar ponte JavaScript nativa para síntese de voz (TTS) e área de transferência
+        // Registrar ponte JavaScript nativa (TTS, Clipboard, onUiReady)
         mWebView.addJavascriptInterface(new AndroidCondeBridge(), "AndroidCondeBridge");
 
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP || request == null || request.getUrl() == null) {
+                    return super.shouldInterceptRequest(view, request);
+                }
+                Uri uri = request.getUrl();
+                String host = uri.getHost();
+                if (host != null && (host.equalsIgnoreCase("fonts.googleapis.com") || host.equalsIgnoreCase("fonts.gstatic.com"))) {
+                    return new WebResourceResponse(
+                            "text/css",
+                            "UTF-8",
+                            204,
+                            "No Content",
+                            null,
+                            new ByteArrayInputStream(new byte[0])
+                    );
+                }
+                if (VIRTUAL_HOST.equalsIgnoreCase(host)) {
+                    return serveVirtualAsset(uri.getPath());
+                }
+                return super.shouldInterceptRequest(view, request);
+            }
+
+            @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                if (mSplashOverlay != null && mSplashOverlay.getVisibility() == View.VISIBLE) {
-                    mSplashOverlay.animate()
-                            .alpha(0f)
-                            .setDuration(300)
-                            .withEndAction(new Runnable() {
-                                @Override
-                                public void run() {
-                                    mSplashOverlay.setVisibility(View.GONE);
-                                }
-                            })
-                            .start();
+                if (mWebView != null && !mSplashDismissed) {
+                    mWebView.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            dismissSplashOverlay();
+                        }
+                    }, 1200);
                 }
             }
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && request != null) {
                     return handleUri(request.getUrl());
                 }
                 return false;
             }
 
+            @SuppressWarnings("deprecation")
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 return handleUri(Uri.parse(url));
             }
 
             private boolean handleUri(Uri uri) {
+                if (uri == null) return false;
                 String scheme = uri.getScheme();
                 if (scheme != null && (scheme.equalsIgnoreCase("http") || scheme.equalsIgnoreCase("https"))) {
-                    if (!uri.toString().contains("127.0.0.1") && !uri.toString().contains("localhost")) {
+                    String host = uri.getHost();
+                    if (host == null || (
+                            !host.equalsIgnoreCase(VIRTUAL_HOST)
+                            && !host.equalsIgnoreCase("127.0.0.1")
+                            && !host.equalsIgnoreCase("localhost"))) {
                         try {
                             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                             startActivity(intent);
@@ -158,8 +196,89 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             }
         });
 
-        // Carregar o Códice V8.4 autocontido dos assets locais
-        mWebView.loadUrl("file:///android_asset/index.html");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            mBackCallback = new OnBackInvokedCallback() {
+                @Override
+                public void onBackInvoked() {
+                    handleBackNavigation(new Runnable() {
+                        @Override
+                        public void run() {
+                            finish();
+                        }
+                    });
+                }
+            };
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                    OnBackInvokedDispatcher.PRIORITY_DEFAULT,
+                    mBackCallback
+            );
+        }
+
+        // Carrega shell enxuto na origem virtual HTTPS segura sem engasgo
+        mWebView.loadUrl(VIRTUAL_ORIGIN + "index.html");
+    }
+
+    private WebResourceResponse serveVirtualAsset(String rawPath) {
+        String path = (rawPath == null || rawPath.isEmpty() || "/".equals(rawPath)) ? "index.html" : rawPath.substring(1);
+        if (path.contains("..")) {
+            return new WebResourceResponse("text/plain", "UTF-8", 403, "Forbidden", null, new ByteArrayInputStream(new byte[0]));
+        }
+
+        Map<String, String> headers = new HashMap<String, String>();
+        headers.put("Access-Control-Allow-Origin", "*");
+        headers.put("Cache-Control", "public, max-age=3600");
+
+        try {
+            if ("dados_dicionario_conde.js".equals(path)) {
+                InputStream jsStream;
+                try {
+                    // AAPT2 descompacta .js.gz no empacotamento para assets/dados_dicionario_conde.js (DEFLATE nativo no APK)
+                    jsStream = new BufferedInputStream(getAssets().open("dados_dicionario_conde.js"), 32768);
+                } catch (Exception missingPlain) {
+                    InputStream gzRaw = getAssets().open("dados_dicionario_conde.js.gz");
+                    jsStream = new BufferedInputStream(new GZIPInputStream(gzRaw, 32768), 32768);
+                }
+                return new WebResourceResponse("application/javascript", "UTF-8", 200, "OK", headers, jsStream);
+            }
+
+            InputStream assetStream = new BufferedInputStream(getAssets().open(path), 32768);
+            String mime = "application/octet-stream";
+            String encoding = null;
+            if (path.endsWith(".html")) {
+                mime = "text/html";
+                encoding = "UTF-8";
+            } else if (path.endsWith(".js")) {
+                mime = "application/javascript";
+                encoding = "UTF-8";
+            } else if (path.endsWith(".png")) {
+                mime = "image/png";
+            } else if (path.endsWith(".ico")) {
+                mime = "image/x-icon";
+            } else if (path.endsWith(".json")) {
+                mime = "application/json";
+                encoding = "UTF-8";
+            }
+            return new WebResourceResponse(mime, encoding, 200, "OK", headers, assetStream);
+        } catch (Exception e) {
+            return new WebResourceResponse("text/plain", "UTF-8", 404, "Not Found", null, new ByteArrayInputStream(new byte[0]));
+        }
+    }
+
+    private void dismissSplashOverlay() {
+        if (mSplashDismissed || mSplashOverlay == null) return;
+        mSplashDismissed = true;
+        if (mSplashOverlay.getVisibility() == View.VISIBLE) {
+            mSplashOverlay.animate()
+                    .alpha(0f)
+                    .setDuration(180)
+                    .withEndAction(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (mSplashOverlay != null) mSplashOverlay.setVisibility(View.GONE);
+                        }
+                    })
+                    .start();
+        }
     }
 
     private LinearLayout buildImperialSplashOverlay() {
@@ -170,13 +289,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         int pad = dpToPx(32);
         splash.setPadding(pad, pad, pad, pad);
 
-        TextView crest = new TextView(this);
-        crest.setText("𝓣");
-        crest.setTextColor(Color.parseColor("#fde28e"));
-        crest.setTextSize(TypedValue.COMPLEX_UNIT_SP, 48);
-        crest.setTypeface(Typeface.SERIF, Typeface.BOLD);
-        crest.setGravity(Gravity.CENTER);
-        splash.addView(crest);
+        ImageView crest = new ImageView(this);
+        crest.setImageResource(R.drawable.brasao_conde_splash);
+        crest.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        LinearLayout.LayoutParams crestLp = new LinearLayout.LayoutParams(dpToPx(116), dpToPx(116));
+        splash.addView(crest, crestLp);
 
         TextView title = new TextView(this);
         title.setText("CÓDICE IMPERIAL TRÉPPIO");
@@ -188,11 +305,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
         );
-        titleLp.topMargin = dpToPx(12);
+        titleLp.topMargin = dpToPx(14);
         splash.addView(title, titleLp);
 
         TextView sub = new TextView(this);
-        sub.setText("Era Clássica V8.4 • 246.737 Formas Validadas");
+        sub.setText("Era Clássica V8.5 • Brasão do Conde • 246.737 Formas");
         sub.setTextColor(Color.parseColor("#9da9c5"));
         sub.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
         sub.setGravity(Gravity.CENTER);
@@ -205,7 +322,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         ProgressBar bar = new ProgressBar(this);
         LinearLayout.LayoutParams barLp = new LinearLayout.LayoutParams(dpToPx(36), dpToPx(36));
-        barLp.topMargin = dpToPx(24);
+        barLp.topMargin = dpToPx(22);
         splash.addView(bar, barLp);
 
         return splash;
@@ -273,6 +390,16 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         }
 
         @JavascriptInterface
+        public void onUiReady() {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    dismissSplashOverlay();
+                }
+            });
+        }
+
+        @JavascriptInterface
         public void copy(final String text) {
             if (text == null) return;
             runOnUiThread(new Runnable() {
@@ -293,8 +420,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         }
     }
 
-    @Override
-    public void onBackPressed() {
+    private void handleBackNavigation(final Runnable fallbackExit) {
+        if (mWebView == null) {
+            fallbackExit.run();
+            return;
+        }
         mWebView.evaluateJavascript(
             "(function() {" +
             "  var m = document.getElementById('detail-modal');" +
@@ -315,14 +445,25 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     if (value != null && (value.contains("MODAL_CLOSED") || value.contains("SEARCH_CLEARED"))) {
                         return;
                     }
-                    if (mWebView.canGoBack()) {
+                    if (mWebView != null && mWebView.canGoBack()) {
                         mWebView.goBack();
                     } else {
-                        MainActivity.super.onBackPressed();
+                        fallbackExit.run();
                     }
                 }
             }
         );
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public void onBackPressed() {
+        handleBackNavigation(new Runnable() {
+            @Override
+            public void run() {
+                MainActivity.super.onBackPressed();
+            }
+        });
     }
 
     @Override
@@ -343,6 +484,12 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
     @Override
     protected void onDestroy() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && mBackCallback != null) {
+            try {
+                getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(mBackCallback);
+            } catch (Exception ignored) {
+            }
+        }
         if (mTts != null) {
             try {
                 mTts.stop();

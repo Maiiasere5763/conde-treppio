@@ -1,34 +1,35 @@
-// Service Worker do Códice Tréppio (V8.4 - Haplologia Silábica, Pronúncia IPA & Tradutor TR-PT)
-const CACHE_NAME = 'treppio-v8-4-cache-editorial';
+// Service Worker do Códice Tréppio (V8.5 - Brasão do Conde, Cache Rápido & Zero Bloqueio)
+const CACHE_NAME = 'treppio-v8-5-cache-brasao';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './dados_dicionario_conde.js?v=8.4.0',
-  './dicionario_formas_expandidas.json',
+  './dados_dicionario_conde.js?v=8.5.0',
   './manifest.json',
-  './icon-512.png'
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-512.png',
+  './favicon.ico'
 ];
 
-// Instalação: baixa os assets e assume o controle sem esperar
+// Instalação: pré-carrega shell, brasão e léxico sem bloquear ativação
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE).catch((err) => {
-        console.warn('Falha parcial no cache inicial:', err);
+        console.warn('[SW] Falha parcial no cache inicial:', err);
       });
     })
   );
 });
 
-// Ativação: expurga agressivamente TODOS os caches anteriores
+// Ativação: remove versões antigas e assume imediatamente
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
         keys.map((k) => {
           if (k !== CACHE_NAME) {
-            console.log('[SW] Purgando cache legado:', k);
             return caches.delete(k);
           }
         })
@@ -37,30 +38,58 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Estratégia Network-First: sempre prioriza a versão mais recente da rede
-// com fallback elegante para o Cache Storage caso o usuário esteja offline
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
-  event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return networkResponse;
-      })
-      .catch(() => {
-        // Fallback offline a partir do cache
-        return caches.match(event.request).then((cached) => {
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+
+  // APIs dinâmicas do Launcher: sempre Network-Only (sem cache obsoleto)
+  if (url.pathname.startsWith('/api/')) return;
+
+  // Dados massivos do léxico: Cache-First com ignoreSearch para leitura instantânea (<5 ms)
+  if (url.pathname.endsWith('/dados_dicionario_conde.js') || url.pathname === '/dados_dicionario_conde.js') {
+    event.respondWith(
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request, { ignoreSearch: true }).then((cached) => {
           if (cached) return cached;
-          if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
-            return caches.match('./index.html');
-          }
+          return fetch(event.request).then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          });
         });
       })
+    );
+    return;
+  }
+
+  // Demais assets (shell HTML, ícones do Brasão, manifest): Stale-While-Revalidate
+  event.respondWith(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(event.request, { ignoreSearch: url.pathname.endsWith('.js') }).then((cached) => {
+        const networkPromise = fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          })
+          .catch(() => null);
+
+        if (cached) {
+          event.waitUntil(networkPromise);
+          return cached;
+        }
+        return networkPromise.then((res) => {
+          if (res) return res;
+          if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
+            return cache.match('./index.html');
+          }
+          return Response.error();
+        });
+      });
+    })
   );
 });

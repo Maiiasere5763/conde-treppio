@@ -1,9 +1,13 @@
 # ==============================================================================
 # compilar_apk.ps1
 # Compilador e Empacotador do Aplicativo Android (Codice_Treppio_Conde.apk)
-# Integração da Matriz Quadripartite e Léxico /conde V8.4
+# Integração da Matriz Quadripartite e Léxico /conde V8.5
 # ==============================================================================
-$ErrorActionPreference = "Continue"
+param(
+    [switch]$SkipSync
+)
+
+$ErrorActionPreference = "Stop"
 
 $RootDir = "D:\Conde_Treppio"
 $SandboxDir = Join-Path $RootDir "sandbox"
@@ -14,6 +18,9 @@ New-Item -ItemType Directory -Force -Path $DistDir | Out-Null
 
 Write-Host "=== [1/4] Atualizando Base Filológica e Sincronizando Assets Android ===" -ForegroundColor Cyan
 python (Join-Path $SandboxDir "gerador_dicionario_integral_sandbox.py")
+if ($LASTEXITCODE -ne 0) {
+    throw "Falha ao executar gerador_dicionario_integral_sandbox.py (exit $LASTEXITCODE)"
+}
 
 Write-Host "=== [2/4] Verificando Ambiente Java JDK e Android SDK ===" -ForegroundColor Cyan
 
@@ -105,12 +112,14 @@ if ($BuildSuccess -and $ApkBuiltPath) {
     Copy-Item -Path $ApkBuiltPath -Destination $RootApk -Force
     Write-Host " -> APK compilado com sucesso localmente: $DestApk ($((Get-Item $DestApk).Length) bytes)" -ForegroundColor Green
 } else {
-    Write-Host " -> Compilacao local requer JDK 17 e Android SDK instalados." -ForegroundColor Yellow
-    Write-Host " -> O pipeline de compilacao em nuvem (.github/workflows/build-apk.yml) ja esta configurado!" -ForegroundColor Cyan
-    Write-Host "    Basta dar push no GitHub (ou executar Publicar_Site_GitHub_Pages.bat) para que o GitHub" -ForegroundColor Cyan
-    Write-Host "    compile e disponibilize o Codice_Treppio_Conde.apk automaticamente para download." -ForegroundColor Cyan
+    Write-Host " -> Falha na compilacao local do APK (verifique JDK 17 e Android SDK)." -ForegroundColor Red
+    exit 1
 }
 
-# Espelhar para o Google Drive e OneDrive se existirem
-powershell -ExecutionPolicy Bypass -File (Join-Path $RootDir "sync_conde.ps1") -CommitMessage "chore(android): atualizacao dos assets do APK e configuracoes Gradle"
+if (-not $SkipSync) {
+    powershell -ExecutionPolicy Bypass -File (Join-Path $RootDir "sync_conde.ps1") -CommitMessage "chore(android): atualizacao dos assets do APK e configuracoes Gradle"
+    if ($LASTEXITCODE -ne 0) {
+        throw "sync_conde.ps1 falhou com codigo $LASTEXITCODE"
+    }
+}
 

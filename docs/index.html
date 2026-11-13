@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#09090b" />
-  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.4. Edição Filológica Completa com 246.737 formas, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
+  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.5. Edição Filológica Completa com 246.737 formas, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" type="image/png" href="icon-512.png" />
-  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.4)</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.5)</title>
 
-  <!-- Google Fonts: Inter (UI Sans & Display), Cinzel (Imperial Serif), Playfair Display (Editorial), JetBrains Mono (Philology/Code) -->
+  <!-- Google Fonts carregado de forma não bloqueante (skip no APK offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="if(!window.AndroidCondeBridge)this.media='all'" />
 
   <style>
     /* ==========================================================================
@@ -1576,20 +1579,34 @@
       gap: 1rem !important;
     }
     .crest {
-      width: 42px !important;
-      height: 42px !important;
+      width: 46px !important;
+      height: 46px !important;
       font-size: 1.35rem !important;
       border-radius: 12px !important;
-      background: rgba(255, 255, 255, 0.06) !important;
-      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      background: rgba(14, 14, 18, 0.9) !important;
+      border: 1px solid rgba(226, 185, 75, 0.38) !important;
       color: #ffffff !important;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
-      transition: all var(--transition-fast) !important;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+      overflow: hidden;
+      padding: 2px !important;
+    }
+    [data-theme="light"] .crest {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-color: rgba(168, 128, 24, 0.45) !important;
+      box-shadow: 0 2px 10px rgba(60, 45, 15, 0.12) !important;
+    }
+    .crest-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
     }
     .crest:hover {
-      transform: scale(1.05) !important;
-      border-color: rgba(255, 255, 255, 0.35) !important;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+      transform: scale(1.06) !important;
+      border-color: rgba(242, 208, 107, 0.72) !important;
+      box-shadow: 0 0 22px rgba(226, 185, 75, 0.35) !important;
     }
     .brand-title h1 {
       font-family: var(--font-sans) !important;
@@ -2265,6 +2282,50 @@
       }
     }
 
+    /* Performance Mobile / Android WebView: desativa backdrop-filter pesados e ativa content-visibility */
+    .entry-card {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 220px;
+    }
+    @media (max-width: 900px), (prefers-reduced-motion: reduce) {
+      .imperial-header,
+      .omni-search-bar,
+      .imperial-hero-banner,
+      .modal-backdrop,
+      .mobile-bottom-nav,
+      .entry-card,
+      .hub-btn {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .imperial-header,
+      .omni-search-bar,
+      .imperial-hero-banner {
+        background: rgba(14, 14, 18, 0.97) !important;
+        background-color: rgba(14, 14, 18, 0.97) !important;
+      }
+      [data-theme="light"] .imperial-header,
+      [data-theme="light"] .omni-search-bar,
+      [data-theme="light"] .imperial-hero-banner {
+        background: rgba(255, 255, 255, 0.98) !important;
+        background-color: rgba(255, 255, 255, 0.98) !important;
+      }
+      .modal-backdrop {
+        background: rgba(0, 0, 0, 0.92) !important;
+      }
+    }
+    .perf-lite .imperial-header,
+    .perf-lite .omni-search-bar,
+    .perf-lite .imperial-hero-banner,
+    .perf-lite .modal-backdrop,
+    .perf-lite .mobile-bottom-nav {
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    .in-android-apk .ecosystem-pills {
+      display: none !important;
+    }
+
     /* Hub Pronúncia & IPA + Hub Tradutor TR <-> PT */
     .ipa-rule-banner {
       display: grid;
@@ -2383,11 +2444,14 @@
 
   </style>
   <script>
+    if (window.AndroidCondeBridge) {
+      document.documentElement.classList.add('perf-lite', 'in-android-apk');
+    }
     // Expurgar imediatamente caches legados que prendem o HTML antigo
-    if ('caches' in window) {
+    if ('caches' in window && !window.AndroidCondeBridge) {
       caches.keys().then(function(names) {
         names.forEach(function(name) {
-          if (name !== 'treppio-v8-4-cache-editorial') {
+          if (name !== 'treppio-v8-5-cache-brasao') {
             console.log('[CacheBuster] Purgando cache legado:', name);
             caches.delete(name);
           }
@@ -2398,15 +2462,15 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V8.4) -->
+  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V8.5) -->
   <header class="imperial-header">
     <div class="header-top">
       <div class="brand-block">
-        <div class="crest" title="Chancelaria Imperial de Treppênia">𝓣</div>
+        <div class="crest crest-brasao" title="Brasão Imperial do Conde de Treppênia"><img class="crest-img" src="icon-192.png" alt="Brasão do Conde" width="44" height="44" decoding="async" /></div>
         <div class="brand-title">
           <h1>
             Códice Imperial Tréppio
-            <span class="brand-edition-pill">Era Clássica V8.4</span>
+            <span class="brand-edition-pill">Era Clássica V8.5</span>
           </h1>
         </div>
       </div>
@@ -2558,8 +2622,8 @@
     </div>
   </div>
 
-  <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE -->
-  <script src="dados_dicionario_conde.js?v=8.4.0"></script>
+  <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE (ASYNC, SEM BLOQUEIO) -->
+  <script id="conde-db-script" src="dados_dicionario_conde.js?v=8.5.0" async onload="window.__condeDbScriptDone=1;window.dispatchEvent(new Event('conde-db-ready'))" onerror="window.__condeDbScriptDone=-1;window.dispatchEvent(new Event('conde-db-ready'))"></script>
   <script>
     // Estado Global da Aplicação
     let DB = window.CONDE_DB || null;
@@ -2575,7 +2639,11 @@
     let selectedVerbAxisIdx = 0;
     let nounDisplayLimit = 60;
     let omniDebounceTimer = null;
+    let translatorDebounceTimer = null;
     let reverseIndex = new Map(); // forma_minuscula -> lista de descritores morfológicos
+    let reverseIndexGeneration = 0;
+    let reverseIndexComplete = false;
+    let nounSearchCache = new Map();
     let ptTranslatorIndex = null;
     let ipaInputText = "Haly'itror giza in oxej: falde, Vé, rase, ve'ar et Tepy'atte.";
     let translatorDirection = "pt-tr"; // "pt-tr" | "tr-pt"
@@ -2790,41 +2858,51 @@
       };
     }
 
-    // 2. Construção do Índice Morfológico Reverso sobre Todas as 7 Classes e 246.737 Formas
-    function buildReverseIndex() {
-      reverseIndex.clear();
-      ptTranslatorIndex = null;
+    // 2. Pré-normalização e Índice Morfológico Reverso em 2 Estágios (Zero Bloqueio na UI)
+    function preNormalizeLexicon() {
+      nounSearchCache.clear();
       if (!DB) return;
-
-      const addRev = (formStr, info) => {
-        if (!formStr) return;
-        const clean = String(formStr).replace(/[!?]/g, "").trim().toLowerCase();
-        if (!clean) return;
-        if (!reverseIndex.has(clean)) reverseIndex.set(clean, []);
-        const arr = reverseIndex.get(clean);
-        if (arr.length < 8) arr.push(info);
-      };
-
-      // Substantivos (8 casos + 10 derivados)
       for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
-        for (const [k, val] of Object.entries(obj.formas || {})) {
-          addRev(val, {
-            form: val,
-            lemma: lemma,
-            category: "Substantivo (" + obj.declinacao + "ª Decl.)",
-            tag: k,
-            meaning: obj.significado,
-            actionType: "noun",
-            actionKey: lemma
-          });
-        }
+        const formsVals = obj.formas ? Object.values(obj.formas).join(" ") : "";
+        nounSearchCache.set(
+          lemma,
+          (lemma + " " + (obj.significado || "") + " " + (obj.etimologia || "") + " " + formsVals).toLowerCase()
+        );
+      }
+    }
+
+    function _addRevEntry(formStr, info) {
+      if (!formStr) return;
+      const clean = String(formStr).replace(/[!?]/g, "").trim().toLowerCase();
+      if (!clean) return;
+      let arr = reverseIndex.get(clean);
+      if (!arr) {
+        arr = [];
+        reverseIndex.set(clean, arr);
+      }
+      if (arr.length < 8) arr.push(info);
+    }
+
+    function _indexClosedAndHeadEntries() {
+      if (!DB) return;
+      // Estágio 1 (< 10 ms): classes fechadas + adjetivos + advérbios + lemas nominais + infinitivos/imperativos verbais
+      for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
+        const nomSg = obj.formas ? (obj.formas["Nom.Sg"] || lemma) : lemma;
+        _addRevEntry(nomSg, {
+          form: nomSg,
+          lemma: lemma,
+          category: "Substantivo (" + obj.declinacao + "ª Decl.)",
+          tag: "Nom.Sg",
+          meaning: obj.significado,
+          actionType: "noun",
+          actionKey: lemma
+        });
       }
 
-      // Adjetivos
       for (const [adj, obj] of Object.entries(DB.adjetivos || {})) {
         for (const [k, val] of Object.entries(obj)) {
           if (k === "Significado") continue;
-          addRev(val, {
+          _addRevEntry(val, {
             form: val,
             lemma: adj,
             category: "Adjetivo",
@@ -2836,9 +2914,8 @@
         }
       }
 
-      // Advérbios
       for (const [adv, obj] of Object.entries(DB.adverbios || {})) {
-        addRev(adv, {
+        _addRevEntry(adv, {
           form: adv,
           lemma: adv,
           category: "Advérbio",
@@ -2849,7 +2926,6 @@
         });
       }
 
-      // Pronomes Pessoais e Demonstrativos
       for (const [pKey, pObj] of Object.entries(DB.pronomes || {})) {
         const baseDesc = pObj.esfera || pKey;
         for (const [caseK, rawForms] of Object.entries(pObj)) {
@@ -2857,7 +2933,7 @@
           String(rawForms).split("/").forEach(rawPart => {
             const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
             if (tok) {
-              addRev(tok, {
+              _addRevEntry(tok, {
                 form: tok,
                 lemma: pKey,
                 category: "Pronome",
@@ -2871,14 +2947,13 @@
         }
       }
 
-      // Numerais Cardinais e Ordinais
       for (const [numK, nObj] of Object.entries(DB.numerais || {})) {
         for (const [fKey, fVal] of Object.entries(nObj)) {
           if (fKey === "compostos") continue;
           String(fVal).split("/").forEach(rawPart => {
             const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
             if (tok) {
-              addRev(tok, {
+              _addRevEntry(tok, {
                 form: tok,
                 lemma: nObj.cardinal || numK,
                 category: "Numeral",
@@ -2892,12 +2967,11 @@
         }
       }
 
-      // Partículas, Preposições e Conjunções
       for (const [pTok, pObj] of Object.entries(DB.particulas_e_afixos || {})) {
         String(pTok).split("/").forEach(sub => {
           const cleanSub = sub.replace(/\([^)]*\)/g, "").trim();
           if (cleanSub && !cleanSub.startsWith("-") && !cleanSub.endsWith("-")) {
-            addRev(cleanSub, {
+            _addRevEntry(cleanSub, {
               form: cleanSub,
               lemma: pTok,
               category: pObj.classe || "Partícula",
@@ -2910,12 +2984,11 @@
         });
       }
 
-      // Registro Diacrônico e Variantes Cristalizadas (Metuses, Durrum, Zo es, etc.)
       for (const [vTok, vObj] of Object.entries(DB.registro_diacronico_e_variantes || {})) {
         String(vTok).split("/").forEach(sub => {
           const cleanSub = sub.trim();
           if (cleanSub) {
-            addRev(cleanSub, {
+            _addRevEntry(cleanSub, {
               form: cleanSub,
               lemma: vTok,
               category: vObj.estatuto || "Variante",
@@ -2928,12 +3001,10 @@
         });
       }
 
-      // Verbos Quadripartites (442 raízes x 4 eixos x 114 formas)
-      const persons = ["1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl (∅)", "1ª Pl (-n)", "2ª Pl (-t)"];
       for (const [root, axes] of Object.entries(DB.verbos_quadripartite || {})) {
         for (const [axisLabel, axisObj] of Object.entries(axes)) {
           const c = axisObj.conjugation;
-          addRev(c["Infinitivo(-ur)"], {
+          _addRevEntry(c["Infinitivo(-ur)"], {
             form: c["Infinitivo(-ur)"],
             lemma: root + "-",
             category: `Verbo [${axisLabel}]`,
@@ -2942,7 +3013,7 @@
             actionType: "verb",
             actionKey: root
           });
-          addRev(c["Imperativo(Raiz)"], {
+          _addRevEntry(c["Imperativo(Raiz)"], {
             form: c["Imperativo(Raiz)"],
             lemma: root + "-",
             category: `Verbo [${axisLabel}]`,
@@ -2951,54 +3022,136 @@
             actionType: "verb",
             actionKey: root
           });
-          addRev(c["Interrogativo.2Pl(-ka)"], {
-            form: c["Interrogativo.2Pl(-ka)"],
+        }
+      }
+    }
+
+    function _indexNounDetailEntry(lemma, obj) {
+      const cat = "Substantivo (" + obj.declinacao + "ª Decl.)";
+      for (const [k, val] of Object.entries(obj.formas || {})) {
+        if (k === "Nom.Sg") continue;
+        _addRevEntry(val, {
+          form: val,
+          lemma: lemma,
+          category: cat,
+          tag: k,
+          meaning: obj.significado,
+          actionType: "noun",
+          actionKey: lemma
+        });
+      }
+    }
+
+    const _VERBS_PERSONS = ["1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl (∅)", "1ª Pl (-n)", "2ª Pl (-t)"];
+    function _indexVerbRootFull(root, axes) {
+      for (const [axisLabel, axisObj] of Object.entries(axes)) {
+        const c = axisObj.conjugation;
+        _addRevEntry(c["Interrogativo.2Pl(-ka)"], {
+          form: c["Interrogativo.2Pl(-ka)"],
+          lemma: root + "-",
+          category: `Verbo [${axisLabel}]`,
+          tag: "Interrogativo 2ª Pl (-ka, tk->kk)",
+          meaning: axisObj.meaning,
+          actionType: "verb",
+          actionKey: root
+        });
+        for (const [pCase, pVal] of Object.entries(c["Participio(8_Casos)"] || {})) {
+          _addRevEntry(pVal, {
+            form: pVal,
             lemma: root + "-",
-            category: `Verbo [${axisLabel}]`,
-            tag: "Interrogativo 2ª Pl (-ka, tk->kk)",
+            category: `Particípio Verbal [${axisLabel}]`,
+            tag: pCase,
             meaning: axisObj.meaning,
             actionType: "verb",
             actionKey: root
           });
-          for (const [pCase, pVal] of Object.entries(c["Participio(8_Casos)"] || {})) {
-            addRev(pVal, {
-              form: pVal,
-              lemma: root + "-",
-              category: `Particípio Verbal [${axisLabel}]`,
-              tag: pCase,
-              meaning: axisObj.meaning,
-              actionType: "verb",
-              actionKey: root
-            });
-          }
-          for (const [dName, dVal] of Object.entries(c["Derivados.Nominais"] || {})) {
-            addRev(dVal, {
-              form: dVal,
-              lemma: root + "-",
-              category: `Derivado Verbal [${axisLabel}]`,
-              tag: dName,
-              meaning: axisObj.meaning,
-              actionType: "verb",
-              actionKey: root
-            });
-          }
-          for (const [tKey, list] of Object.entries(c)) {
-            if (Array.isArray(list)) {
-              list.forEach((fVal, pIdx) => {
-                addRev(fVal, {
-                  form: fVal,
-                  lemma: c["Infinitivo(-ur)"],
-                  category: `Verbo [${axisLabel}]`,
-                  tag: `${tKey} — ${persons[pIdx]}`,
-                  meaning: axisObj.meaning,
-                  actionType: "verb",
-                  actionKey: root
-                });
+        }
+        for (const [dName, dVal] of Object.entries(c["Derivados.Nominais"] || {})) {
+          _addRevEntry(dVal, {
+            form: dVal,
+            lemma: root + "-",
+            category: `Derivado Verbal [${axisLabel}]`,
+            tag: dName,
+            meaning: axisObj.meaning,
+            actionType: "verb",
+            actionKey: root
+          });
+        }
+        for (const [tKey, list] of Object.entries(c)) {
+          if (Array.isArray(list)) {
+            list.forEach((fVal, pIdx) => {
+              _addRevEntry(fVal, {
+                form: fVal,
+                lemma: c["Infinitivo(-ur)"],
+                category: `Verbo [${axisLabel}]`,
+                tag: `${tKey} — ${_VERBS_PERSONS[pIdx]}`,
+                meaning: axisObj.meaning,
+                actionType: "verb",
+                actionKey: root
               });
-            }
+            });
           }
         }
       }
+    }
+
+    function buildReverseIndex() {
+      reverseIndexGeneration++;
+      reverseIndex.clear();
+      ptTranslatorIndex = null;
+      reverseIndexComplete = false;
+      if (!DB) return;
+      _indexClosedAndHeadEntries();
+      for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
+        _indexNounDetailEntry(lemma, obj);
+      }
+      for (const [root, axes] of Object.entries(DB.verbos_quadripartite || {})) {
+        _indexVerbRootFull(root, axes);
+      }
+      reverseIndexComplete = true;
+    }
+
+    function buildReverseIndexChunked() {
+      const gen = ++reverseIndexGeneration;
+      reverseIndex.clear();
+      ptTranslatorIndex = null;
+      reverseIndexComplete = false;
+      if (!DB) return;
+
+      _indexClosedAndHeadEntries();
+
+      const nounEntries = Object.entries(DB.substantivos || {});
+      const verbEntries = Object.entries(DB.verbos_quadripartite || {});
+      let nounIdx = 0;
+      let verbIdx = 0;
+      const schedule = window.requestIdleCallback
+        ? (fn) => window.requestIdleCallback(fn, { timeout: 60 })
+        : (fn) => setTimeout(() => fn({ timeRemaining: () => 8 }), 0);
+
+      function stepBatch(deadline) {
+        if (gen !== reverseIndexGeneration) return;
+        const startT = performance.now();
+        let processed = 0;
+        while (nounIdx < nounEntries.length && processed < 40 && (performance.now() - startT) < 8) {
+          const pair = nounEntries[nounIdx++];
+          _indexNounDetailEntry(pair[0], pair[1]);
+          processed++;
+        }
+        while (nounIdx >= nounEntries.length && verbIdx < verbEntries.length && processed < 25 && (performance.now() - startT) < 8) {
+          const pair = verbEntries[verbIdx++];
+          _indexVerbRootFull(pair[0], pair[1]);
+          processed++;
+        }
+        if (nounIdx < nounEntries.length || verbIdx < verbEntries.length) {
+          schedule(stepBatch);
+        } else {
+          reverseIndexComplete = true;
+          if (searchQuery && searchQuery.length >= 2) {
+            renderReverseMatches(searchQuery);
+          }
+        }
+      }
+      schedule(stepBatch);
     }
 
     // Conversor automático de links do Google Drive ou GitHub para link direto de JSON
@@ -3017,49 +3170,61 @@
       return u;
     }
 
-    // 3. Inicialização e Atualização de Contadores (Híbrido: Servidor .exe / GitHub Pages / Nuvem Git-Drive / Offline)
+    // 3. Inicialização e Atualização de Contadores (Sem Duplo Fetch, Híbrido: Launcher / Web / APK / Offline)
     async function initApp() {
-      let sourceLabel = "Embutido Offline";
-      const savedCloudUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
+      const isAndroid = Boolean(window.AndroidCondeBridge);
+      let sourceLabel = isAndroid ? "Aplicativo Android (.APK)" : "Embutido Offline";
 
-      // 1º: Tentar API local do Launcher .exe ou servidor Python (/api/db)
-      try {
-        const res = await fetch("/api/db", { cache: "no-store" });
-        if (res.ok) {
-          DB = await res.json();
-          sourceLabel = "Launcher Local /conde";
+      // Aguardar o script assíncrono dados_dicionario_conde.js caso ainda esteja decodificando
+      if (!window.CONDE_DB && !window.__condeDbScriptDone && document.getElementById("conde-db-script")) {
+        const tabEl = document.getElementById("tab-content");
+        if (tabEl) {
+          tabEl.innerHTML = `<div class="entry-card" style="padding:1.25rem;"><strong>⏳ Carregando Códice Tréppio (246.737 formas)...</strong></div>`;
         }
-      } catch (_) {}
-
-      // 2º: Se estiver hospedado no GitHub Pages (http/https sem /api/db), buscar ./dicionario_formas_expandidas.json
-      if (sourceLabel === "Embutido Offline" && location.protocol.startsWith("http")) {
-        try {
-          const res = await fetch("./dicionario_formas_expandidas.json", { cache: "no-store" });
-          if (res.ok) {
-            DB = await res.json();
-            sourceLabel = "Site Online (GitHub Pages)";
-          }
-        } catch (_) {}
+        await new Promise((resolve) => {
+          let settled = false;
+          const finish = () => {
+            if (settled) return;
+            settled = true;
+            window.removeEventListener("conde-db-ready", finish);
+            resolve();
+          };
+          window.addEventListener("conde-db-ready", finish, { once: true });
+          setTimeout(finish, 4000);
+        });
       }
 
-      // 3º: Se houver URL de Nuvem (GitHub Raw / Google Drive) configurada, buscar versão mais recente
-      if (savedCloudUrl) {
+      if (window.CONDE_DB) {
+        DB = window.CONDE_DB;
+        if (!isAndroid && location.protocol.startsWith("http")) {
+          sourceLabel = "Site Online / PWA";
+        }
+      } else if (!isAndroid) {
         try {
-          const directUrl = normalizeCloudUrl(savedCloudUrl);
-          const res = await fetch(directUrl, { cache: "no-store" });
+          const res = await fetch("/api/db", { cache: "no-store" });
           if (res.ok) {
-            const cloudDb = await res.json();
-            if (cloudDb && cloudDb.substantivos) {
-              DB = cloudDb;
-              sourceLabel = "Nuvem Online (Git/Drive)";
-            }
+            DB = await res.json();
+            sourceLabel = "Launcher Local /conde";
           }
         } catch (_) {}
+
+        if (!DB && location.protocol.startsWith("http")) {
+          try {
+            const res = await fetch("./dicionario_formas_expandidas.json", { cache: "no-cache" });
+            if (res.ok) {
+              DB = await res.json();
+              sourceLabel = "Site Online (GitHub Pages)";
+            }
+          } catch (_) {}
+        }
       }
 
       if (!DB) {
         document.getElementById("tab-content").innerHTML =
           `<div class="entry-card"><h3>Erro ao carregar a base de dados.</h3><p>Execute <code>gerador_dicionario_integral_sandbox.py</code>.</p></div>`;
+        if (isAndroid && typeof window.AndroidCondeBridge.onUiReady === "function") {
+          try { window.AndroidCondeBridge.onUiReady(); } catch (_) {}
+        }
         return;
       }
 
@@ -3067,8 +3232,45 @@
       if (connEl) connEl.textContent = sourceLabel;
 
       updateHeaderCounters();
-      buildReverseIndex();
+      preNormalizeLexicon();
+      buildReverseIndexChunked();
       renderActiveTab();
+
+      if (isAndroid && typeof window.AndroidCondeBridge.onUiReady === "function") {
+        requestAnimationFrame(() => {
+          try { window.AndroidCondeBridge.onUiReady(); } catch (_) {}
+        });
+      }
+
+      // Verificação leve (/api/health, 120 bytes) sem duplicar fetch de 10 MB
+      if (!isAndroid && location.protocol.startsWith("http")) {
+        fetch("/api/health", { cache: "no-store" })
+          .then(res => (res.ok ? res.json() : null))
+          .then(health => {
+            if (health && health.ok && connEl) {
+              connEl.textContent = "Launcher Local /conde";
+            }
+          })
+          .catch(() => {});
+      }
+
+      // Atualização em segundo plano caso haja URL de Nuvem customizada
+      const savedCloudUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
+      if (savedCloudUrl && !isAndroid) {
+        fetch(normalizeCloudUrl(savedCloudUrl), { cache: "no-store" })
+          .then(res => (res.ok ? res.json() : null))
+          .then(cloudDb => {
+            if (cloudDb && cloudDb.substantivos) {
+              DB = cloudDb;
+              updateHeaderCounters();
+              preNormalizeLexicon();
+              buildReverseIndexChunked();
+              renderActiveTab();
+              if (connEl) connEl.textContent = "Nuvem Online (Git/Drive)";
+            }
+          })
+          .catch(() => {});
+      }
     }
 
     function updateHeaderCounters() {
@@ -3131,7 +3333,8 @@
           const data = await res.json();
           DB = data.db;
           updateHeaderCounters();
-          buildReverseIndex();
+          preNormalizeLexicon();
+          buildReverseIndexChunked();
           renderActiveTab();
           const connEl = document.getElementById("conn-status");
           if (connEl) connEl.textContent = data.source || "Sincronizado (/conde)";
@@ -3151,7 +3354,8 @@
             if (cloudDb && cloudDb.substantivos) {
               DB = cloudDb;
               updateHeaderCounters();
-              buildReverseIndex();
+              preNormalizeLexicon();
+              buildReverseIndexChunked();
               renderActiveTab();
               document.getElementById("conn-status").textContent = "Nuvem Online (Git/Drive)";
               btn.innerHTML = "✓ Sincronizado da Nuvem!";
@@ -3548,6 +3752,8 @@
         if (selectedLetter !== "ALL" && lemma[0].toUpperCase() !== selectedLetter) return false;
         if (selectedDeclFilter !== "ALL" && String(obj.declinacao) !== selectedDeclFilter) return false;
         if (!q) return true;
+        const cached = nounSearchCache.get(lemma);
+        if (cached !== undefined) return cached.includes(q);
         const inLemma = lemma.toLowerCase().includes(q);
         const inMean = obj.significado.toLowerCase().includes(q);
         const inEtym = obj.etimologia.toLowerCase().includes(q);
@@ -4557,7 +4763,10 @@
 
     function handleTranslatorInput(val) {
       translatorQuery = val || "";
-      renderTranslatorResults();
+      clearTimeout(translatorDebounceTimer);
+      translatorDebounceTimer = setTimeout(() => {
+        renderTranslatorResults();
+      }, 100);
     }
 
     function renderTranslatorResults() {
@@ -5055,8 +5264,8 @@
 
     window.addEventListener("DOMContentLoaded", initApp);
 
-    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      navigator.serviceWorker.register('sw.js?v=8.4.0', { updateViaCache: 'none' })
+    if (!window.AndroidCondeBridge && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('sw.js?v=8.5.0', { updateViaCache: 'none' })
         .then(function(reg) {
           reg.update();
           reg.addEventListener('updatefound', function() {
@@ -5064,7 +5273,7 @@
             if (newWorker) {
               newWorker.addEventListener('statechange', function() {
                 if (newWorker.state === 'activated') {
-                  console.log('[SW] Novo Service Worker V8.4 ativado.');
+                  console.log('[SW] Novo Service Worker V8.5 ativado.');
                 }
               });
             }

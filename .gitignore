@@ -7,6 +7,10 @@ Thumbs.db
 .tmp.driveupload/
 .tmp.drivedownload/
 *.tmp
+.sync_paused.lock
+headless_test_result.txt
+sandbox/launcher_exe/*.ico
+sandbox/launcher_exe/*.png
 sandbox/android_apk/.gradle/
 sandbox/android_apk/app/build/
 sandbox/android_apk/build/

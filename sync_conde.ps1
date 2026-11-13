@@ -1,16 +1,26 @@
-# Script de Sincronizacao Tripla do Banco de Dados da Skill Conde (Treppio V8.1)
+# Script de Sincronizacao Tripla do Banco de Dados da Skill Conde (Treppio V8.5)
 param(
-    [string]$CommitMessage = "chore(treppio): sincronizacao automatica do corpus e sandbox Conde"
+    [string]$CommitMessage = "chore(treppio): sincronizacao automatica do corpus e sandbox Conde",
+    [switch]$Force
 )
 
-$ErrorActionPreference = 'Continue'
+$ErrorActionPreference = 'Stop'
 $SourceDir = "D:\Conde_Treppio"
+$PauseLock = Join-Path $SourceDir ".sync_paused.lock"
+if ((-not $Force) -and (Test-Path $PauseLock)) {
+    Write-Host " -> Sincronizacao pausada por lock ativo (.sync_paused.lock)." -ForegroundColor Yellow
+    exit 0
+}
+
 $GitExe = if (Test-Path "D:\Outros\Git\cmd\git.exe") { "D:\Outros\Git\cmd\git.exe" } else { "git" }
 
 $BuildScript = Join-Path $SourceDir "sandbox\launcher_exe\compilar_launcher_exe.ps1"
 if (Test-Path $BuildScript) {
     Write-Host "=== [0/3] Recompilando Launcher .exe, Pacote Web Portatil e GitHub Pages (docs/) ===" -ForegroundColor Cyan
     powershell -ExecutionPolicy Bypass -File $BuildScript
+    if ($LASTEXITCODE -ne 0) {
+        throw "Falha na compilacao do Launcher/corpus (exit code $LASTEXITCODE). Sincronizacao abortada."
+    }
 }
 
 Write-Host "=== [1/3] Sincronizando com pastas em nuvem (OneDrive & Google Drive) ===" -ForegroundColor Cyan

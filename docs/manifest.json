@@ -1,5 +1,5 @@
 {
-  "name": "Códice Lexicográfico Imperial da Língua Tréppia (V8.4)",
+  "name": "Códice Lexicográfico Imperial da Língua Tréppia (V8.5)",
   "short_name": "Códice Tréppio",
   "description": "Dicionário Geral da Língua Tréppia (246.737 formas), Alfabeto Fonético IPA (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT e Matriz Quadripartite.",
   "start_url": "./index.html",
@@ -9,10 +9,22 @@
   "orientation": "any",
   "icons": [
     {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

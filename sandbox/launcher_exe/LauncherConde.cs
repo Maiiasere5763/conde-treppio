@@ -1,25 +1,28 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.IO.Compression;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Speech.Synthesis;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Web.Script.Serialization;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.4)")]
-[assembly: AssemblyDescription("Launcher Executavel, Servidor Embarcado, Pronuncia IPA e Tradutor Bilingue TR-PT (/conde)")]
+[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.5)")]
+[assembly: AssemblyDescription("Launcher Executavel, Servidor HTTP/1.1 Async Keep-Alive, Brasao do Conde, Pronuncia IPA e Tradutor TR-PT (/conde)")]
 [assembly: AssemblyCompany("Chancelaria Imperial de Treppenia")]
-[assembly: AssemblyProduct("Codice Treppio Conde V8.4")]
-[assembly: AssemblyVersion("8.4.0.0")]
+[assembly: AssemblyProduct("Codice Treppio Conde V8.5")]
+[assembly: AssemblyVersion("8.5.0.0")]
 
 namespace CondeTreppioLauncher
 {
@@ -28,6 +31,9 @@ namespace CondeTreppioLauncher
         public string Treppio { get; set; }
         public string PtMeaning { get; set; }
         public string PtNorm { get; set; }
+        public string PtHead { get; set; }
+        public string[] HeadWords { get; set; }
+        public string[] Words { get; set; }
         public string ClassTag { get; set; }
         public string Detail { get; set; }
         public int Boost { get; set; }
@@ -58,13 +64,26 @@ namespace CondeTreppioLauncher
             "Pontius", "Pilatus", "Eä", "Ilúvatar", "Ainur", "Valar"
         };
 
-        private readonly object _lock = new object();
-        private List<LexEntry> _ptEntries = new List<LexEntry>();
-        private Dictionary<string, List<LexEntry>> _trReverse = new Dictionary<string, List<LexEntry>>(StringComparer.OrdinalIgnoreCase);
-        private Dictionary<string, string> _corpusByTreppio = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-        public volatile bool IsReady;
-        public int IndexedFormsCount { get; private set; }
-        public int IndexedLemmasCount { get; private set; }
+        private sealed class LexiconSnapshot
+        {
+            public List<LexEntry> PtEntries = new List<LexEntry>();
+            public Dictionary<string, List<int>> PtTokenMap = new Dictionary<string, List<int>>(StringComparer.Ordinal);
+            public Dictionary<string, List<int>> PtStemMap = new Dictionary<string, List<int>>(StringComparer.Ordinal);
+            public Dictionary<string, List<LexEntry>> TrReverse = new Dictionary<string, List<LexEntry>>(StringComparer.OrdinalIgnoreCase);
+            public Dictionary<string, string> CorpusByTreppio = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            public int IndexedFormsCount;
+            public int IndexedLemmasCount;
+            public int Generation;
+            public bool IsReady;
+        }
+
+        private volatile LexiconSnapshot _snap = new LexiconSnapshot();
+        private int _generationSeq;
+
+        public bool IsReady { get { return _snap.IsReady; } }
+        public int IndexedFormsCount { get { return _snap.IndexedFormsCount; } }
+        public int IndexedLemmasCount { get { return _snap.IndexedLemmasCount; } }
+        public int Generation { get { return _snap.Generation; } }
 
         public static string StripAccents(string input)
         {
@@ -263,6 +282,19 @@ namespace CondeTreppioLauncher
             };
         }
 
+        public static List<IpaWordInfo> AnalyzeSentenceIpa(string sentence)
+        {
+            List<IpaWordInfo> list = new List<IpaWordInfo>();
+            if (string.IsNullOrWhiteSpace(sentence)) return list;
+            string[] tokens = Regex.Split(sentence.Trim(), @"\s+");
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                IpaWordInfo info = AnalyzeWordIpa(tokens[i]);
+                if (info != null) list.Add(info);
+            }
+            return list;
+        }
+
         public static string ToTtsPtBr(string text)
         {
             if (string.IsNullOrEmpty(text)) return "";
@@ -273,18 +305,93 @@ namespace CondeTreppioLauncher
             return s;
         }
 
-        private static void AddPtEntry(List<LexEntry> ptList, string treppio, string ptMeaning, string classTag, string detail, int boost)
+        private static string[] SplitAlphaNum(string norm)
+        {
+            if (string.IsNullOrEmpty(norm)) return new string[0];
+            List<string> list = new List<string>(8);
+            int start = -1;
+            for (int i = 0; i < norm.Length; i++)
+            {
+                char ch = norm[i];
+                bool isAlnum = (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9');
+                if (isAlnum)
+                {
+                    if (start < 0) start = i;
+                }
+                else if (start >= 0)
+                {
+                    list.Add(norm.Substring(start, i - start));
+                    start = -1;
+                }
+            }
+            if (start >= 0) list.Add(norm.Substring(start));
+            return list.ToArray();
+        }
+
+        private static string ComputePtStem(string q)
+        {
+            if (string.IsNullOrEmpty(q) || q.Length <= 4) return q ?? "";
+            string[] suffixes = new string[] { "mente", "coes", "cao", "ado", "ada", "es", "os", "as", "ar", "er", "ir", "s" };
+            for (int i = 0; i < suffixes.Length; i++)
+            {
+                string suf = suffixes[i];
+                if (q.Length > suf.Length + 2 && q.EndsWith(suf, StringComparison.Ordinal))
+                {
+                    return q.Substring(0, q.Length - suf.Length);
+                }
+            }
+            return q;
+        }
+
+        private static void IndexBucket(Dictionary<string, List<int>> map, string key, int entryIdx)
+        {
+            if (string.IsNullOrEmpty(key)) return;
+            List<int> bucket;
+            if (!map.TryGetValue(key, out bucket))
+            {
+                bucket = new List<int>(4);
+                map[key] = bucket;
+            }
+            if (bucket.Count == 0 || bucket[bucket.Count - 1] != entryIdx)
+            {
+                bucket.Add(entryIdx);
+            }
+        }
+
+        private static void AddPtEntry(LexiconSnapshot snap, string treppio, string ptMeaning, string classTag, string detail, int boost)
         {
             if (string.IsNullOrEmpty(treppio) || string.IsNullOrEmpty(ptMeaning)) return;
-            ptList.Add(new LexEntry
+            string norm = StripAccents(ptMeaning).Trim();
+            int sepIdx = norm.IndexOfAny(new char[] { ',', ';', '(' });
+            string head = (sepIdx >= 0 ? norm.Substring(0, sepIdx) : norm).Trim();
+            string[] headWords = SplitAlphaNum(head);
+            string[] words = SplitAlphaNum(norm);
+
+            int idx = snap.PtEntries.Count;
+            snap.PtEntries.Add(new LexEntry
             {
                 Treppio = treppio,
                 PtMeaning = ptMeaning,
-                PtNorm = StripAccents(ptMeaning).Trim(),
+                PtNorm = norm,
+                PtHead = head,
+                HeadWords = headWords,
+                Words = words,
                 ClassTag = classTag,
                 Detail = detail ?? "",
                 Boost = boost
             });
+
+            IndexBucket(snap.PtTokenMap, norm, idx);
+            if (!string.IsNullOrEmpty(head)) IndexBucket(snap.PtTokenMap, head, idx);
+            for (int i = 0; i < words.Length; i++)
+            {
+                string w = words[i];
+                IndexBucket(snap.PtTokenMap, w, idx);
+                if (w.Length >= 3)
+                {
+                    IndexBucket(snap.PtStemMap, w.Substring(0, 3), idx);
+                }
+            }
         }
 
         private static void AddTrForm(Dictionary<string, List<LexEntry>> rev, ref int count, string formStr, LexEntry template)
@@ -295,7 +402,7 @@ namespace CondeTreppioLauncher
             List<LexEntry> list;
             if (!rev.TryGetValue(clean, out list))
             {
-                list = new List<LexEntry>();
+                list = new List<LexEntry>(2);
                 rev[clean] = list;
             }
             if (list.Count < 8)
@@ -305,32 +412,248 @@ namespace CondeTreppioLauncher
             }
         }
 
-        private static Dictionary<string, object> AsDict(object o)
+        private sealed class FastJsonCursor
         {
-            return o as Dictionary<string, object>;
+            private readonly string _s;
+            private readonly int _len;
+            public int Pos;
+
+            public FastJsonCursor(string json)
+            {
+                _s = json ?? "";
+                _len = _s.Length;
+                Pos = 0;
+            }
+
+            public void SkipWs()
+            {
+                while (Pos < _len)
+                {
+                    char c = _s[Pos];
+                    if (c == ' ' || c == '\t' || c == '\r' || c == '\n') Pos++;
+                    else break;
+                }
+            }
+
+            public char Peek()
+            {
+                SkipWs();
+                return Pos < _len ? _s[Pos] : '\0';
+            }
+
+            public bool TryConsume(char expected)
+            {
+                SkipWs();
+                if (Pos < _len && _s[Pos] == expected)
+                {
+                    Pos++;
+                    return true;
+                }
+                return false;
+            }
+
+            public string ReadString()
+            {
+                SkipWs();
+                if (Pos >= _len || _s[Pos] != '"') return null;
+                Pos++;
+                int start = Pos;
+                bool hasEscape = false;
+                while (Pos < _len)
+                {
+                    char c = _s[Pos];
+                    if (c == '"')
+                    {
+                        string res = hasEscape ? Unescape(_s, start, Pos) : _s.Substring(start, Pos - start);
+                        Pos++;
+                        return res;
+                    }
+                    if (c == '\\')
+                    {
+                        hasEscape = true;
+                        Pos += 2;
+                    }
+                    else
+                    {
+                        Pos++;
+                    }
+                }
+                return _s.Substring(start);
+            }
+
+            private static string Unescape(string s, int start, int end)
+            {
+                StringBuilder sb = new StringBuilder(end - start);
+                for (int i = start; i < end; i++)
+                {
+                    char c = s[i];
+                    if (c == '\\' && i + 1 < end)
+                    {
+                        char n = s[++i];
+                        if (n == '"' || n == '\\' || n == '/') sb.Append(n);
+                        else if (n == 'n') sb.Append('\n');
+                        else if (n == 'r') sb.Append('\r');
+                        else if (n == 't') sb.Append('\t');
+                        else if (n == 'b') sb.Append('\b');
+                        else if (n == 'f') sb.Append('\f');
+                        else if (n == 'u' && i + 4 < end)
+                        {
+                            int code;
+                            if (int.TryParse(s.Substring(i + 1, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out code))
+                            {
+                                sb.Append((char)code);
+                            }
+                            i += 4;
+                        }
+                        else sb.Append(n);
+                    }
+                    else
+                    {
+                        sb.Append(c);
+                    }
+                }
+                return sb.ToString();
+            }
+
+            public string ReadScalarAsString()
+            {
+                SkipWs();
+                if (Pos >= _len) return "";
+                char c = _s[Pos];
+                if (c == '"') return ReadString() ?? "";
+                if (c == '{' || c == '[')
+                {
+                    SkipValue();
+                    return "";
+                }
+                int start = Pos;
+                while (Pos < _len)
+                {
+                    char ch = _s[Pos];
+                    if (ch == ',' || ch == '}' || ch == ']' || ch == ' ' || ch == '\r' || ch == '\n' || ch == '\t') break;
+                    Pos++;
+                }
+                string raw = _s.Substring(start, Pos - start);
+                return raw == "null" ? "" : raw;
+            }
+
+            private void SkipStringFast()
+            {
+                Pos++;
+                while (Pos < _len)
+                {
+                    char c = _s[Pos++];
+                    if (c == '"') return;
+                    if (c == '\\' && Pos < _len) Pos++;
+                }
+            }
+
+            public void SkipValue()
+            {
+                SkipWs();
+                if (Pos >= _len) return;
+                char c = _s[Pos];
+                if (c == '"')
+                {
+                    SkipStringFast();
+                    return;
+                }
+                if (c == '{' || c == '[')
+                {
+                    int depth = 0;
+                    while (Pos < _len)
+                    {
+                        char ch = _s[Pos];
+                        if (ch == '"')
+                        {
+                            SkipStringFast();
+                            continue;
+                        }
+                        if (ch == '{' || ch == '[') depth++;
+                        else if (ch == '}' || ch == ']')
+                        {
+                            depth--;
+                            if (depth <= 0)
+                            {
+                                Pos++;
+                                return;
+                            }
+                        }
+                        Pos++;
+                    }
+                    return;
+                }
+                while (Pos < _len)
+                {
+                    char ch = _s[Pos];
+                    if (ch == ',' || ch == '}' || ch == ']') break;
+                    Pos++;
+                }
+            }
+
+            public void ForEachObjectPair(Action<string> onKey)
+            {
+                if (!TryConsume('{'))
+                {
+                    SkipValue();
+                    return;
+                }
+                if (TryConsume('}')) return;
+                while (Pos < _len)
+                {
+                    string key = ReadString();
+                    if (key == null) break;
+                    TryConsume(':');
+                    onKey(key);
+                    if (TryConsume(',')) continue;
+                    TryConsume('}');
+                    break;
+                }
+            }
+
+            public void ForEachArrayItem(Action<int> onIndex)
+            {
+                if (!TryConsume('['))
+                {
+                    SkipValue();
+                    return;
+                }
+                if (TryConsume(']')) return;
+                int idx = 0;
+                while (Pos < _len)
+                {
+                    onIndex(idx++);
+                    if (TryConsume(',')) continue;
+                    TryConsume(']');
+                    break;
+                }
+            }
         }
 
-        private static string GetStr(Dictionary<string, object> d, string key)
+        private static string StripParenTrim(string s)
         {
-            object v;
-            if (d != null && d.TryGetValue(key, out v) && v != null) return v.ToString();
-            return "";
+            if (string.IsNullOrEmpty(s)) return "";
+            if (s.IndexOf('(') < 0) return s.Trim();
+            StringBuilder sb = new StringBuilder(s.Length);
+            int depth = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+                if (c == '(') depth++;
+                else if (c == ')' && depth > 0) depth--;
+                else if (depth == 0) sb.Append(c);
+            }
+            return sb.ToString().Trim();
         }
 
         public void BuildFromJsonBytes(byte[] jsonBytes)
         {
             if (jsonBytes == null || jsonBytes.Length == 0) return;
             string json = Encoding.UTF8.GetString(jsonBytes);
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            ser.MaxJsonLength = int.MaxValue;
-            ser.RecursionLimit = 100;
+            FastJsonCursor cur = new FastJsonCursor(json);
+            if (cur.Peek() != '{') return;
 
-            Dictionary<string, object> root = ser.Deserialize<Dictionary<string, object>>(json);
-            if (root == null) return;
-
-            List<LexEntry> nextPt = new List<LexEntry>();
-            Dictionary<string, List<LexEntry>> nextRev = new Dictionary<string, List<LexEntry>>(StringComparer.OrdinalIgnoreCase);
-            Dictionary<string, string> nextCorpus = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            LexiconSnapshot snap = new LexiconSnapshot();
             int revCount = 0;
 
             string[,] funcWords = new string[,] {
@@ -363,231 +686,301 @@ namespace CondeTreppioLauncher
             };
             for (int i = 0; i < funcWords.GetLength(0); i++)
             {
-                AddPtEntry(nextPt, funcWords[i, 1], funcWords[i, 0], funcWords[i, 2], funcWords[i, 3], 45);
+                AddPtEntry(snap, funcWords[i, 1], funcWords[i, 0], funcWords[i, 2], funcWords[i, 3], 45);
             }
 
-            Dictionary<string, object> subs = AsDict(root.ContainsKey("substantivos") ? root["substantivos"] : null);
-            if (subs != null)
+            string[] persons = new string[] { "1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl", "1ª Pl (-n)", "2ª Pl (-t)" };
+
+            cur.ForEachObjectPair(topKey =>
             {
-                foreach (KeyValuePair<string, object> kv in subs)
+                if (topKey == "gnlt")
                 {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string decl = GetStr(obj, "declinacao");
-                    string sig = GetStr(obj, "significado");
-                    string etym = GetStr(obj, "etimologia");
-                    string cTag = "Substantivo (" + decl + "ª Decl.)";
-                    AddPtEntry(nextPt, kv.Key, sig, cTag, etym, 10);
-                    Dictionary<string, object> formas = AsDict(obj.ContainsKey("formas") ? obj["formas"] : null);
-                    if (formas != null)
+                    // Pula capítulo textual GNLT sem alocar dicionários nem strings
+                    cur.SkipValue();
+                }
+                else if (topKey == "substantivos")
+                {
+                    cur.ForEachObjectPair(lemma =>
                     {
-                        foreach (KeyValuePair<string, object> fkv in formas)
+                        string decl = "", sig = "", etym = "";
+                        List<string> formasVal = new List<string>(20);
+                        List<string> formasKey = new List<string>(20);
+                        cur.ForEachObjectPair(fk =>
                         {
-                            string fv = fkv.Value != null ? fkv.Value.ToString() : "";
-                            AddTrForm(nextRev, ref revCount, fv, new LexEntry { Treppio = kv.Key, PtMeaning = sig, ClassTag = cTag, Detail = fkv.Key });
-                        }
-                    }
-                }
-            }
-
-            Dictionary<string, object> adjs = AsDict(root.ContainsKey("adjetivos") ? root["adjetivos"] : null);
-            if (adjs != null)
-            {
-                foreach (KeyValuePair<string, object> kv in adjs)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string sig = GetStr(obj, "Significado");
-                    AddPtEntry(nextPt, kv.Key, sig, "Adjetivo", "Comp: " + GetStr(obj, "Comparativo"), 8);
-                    foreach (KeyValuePair<string, object> fkv in obj)
-                    {
-                        if (fkv.Key == "Significado") continue;
-                        string fv = fkv.Value != null ? fkv.Value.ToString() : "";
-                        AddTrForm(nextRev, ref revCount, fv, new LexEntry { Treppio = kv.Key, PtMeaning = sig, ClassTag = "Adjetivo", Detail = fkv.Key });
-                    }
-                }
-            }
-
-            Dictionary<string, object> advs = AsDict(root.ContainsKey("adverbios") ? root["adverbios"] : null);
-            if (advs != null)
-            {
-                foreach (KeyValuePair<string, object> kv in advs)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string sig = GetStr(obj, "significado");
-                    string subc = GetStr(obj, "subclasse");
-                    AddPtEntry(nextPt, kv.Key, sig, "Advérbio (" + subc + ")", GetStr(obj, "etimologia"), 6);
-                    AddTrForm(nextRev, ref revCount, kv.Key, new LexEntry { Treppio = kv.Key, PtMeaning = sig, ClassTag = "Advérbio", Detail = subc });
-                }
-            }
-
-            Dictionary<string, object> prons = AsDict(root.ContainsKey("pronomes") ? root["pronomes"] : null);
-            if (prons != null)
-            {
-                foreach (KeyValuePair<string, object> kv in prons)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string desc = obj.ContainsKey("esfera") ? (kv.Key + ": " + GetStr(obj, "esfera")) : kv.Key;
-                    string nomClean = Regex.Replace(GetStr(obj, "Nom"), @"\([^)]*\)", "").Trim();
-                    AddPtEntry(nextPt, string.IsNullOrEmpty(nomClean) ? kv.Key : nomClean, desc, "Pronome", "", 15);
-                    foreach (KeyValuePair<string, object> pkv in obj)
-                    {
-                        if (pkv.Key == "esfera" || pkv.Value == null) continue;
-                        string[] parts = pkv.Value.ToString().Split('/');
-                        for (int i = 0; i < parts.Length; i++)
-                        {
-                            string tok = Regex.Replace(parts[i], @"\([^)]*\)", "").Trim();
-                            AddTrForm(nextRev, ref revCount, tok, new LexEntry { Treppio = kv.Key, PtMeaning = desc, ClassTag = "Pronome", Detail = pkv.Key });
-                        }
-                    }
-                }
-            }
-
-            Dictionary<string, object> nums = AsDict(root.ContainsKey("numerais") ? root["numerais"] : null);
-            if (nums != null)
-            {
-                foreach (KeyValuePair<string, object> kv in nums)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string card = GetStr(obj, "cardinal");
-                    string ord = Regex.Replace(GetStr(obj, "ordinal"), @"\([^)]*\)", "").Trim();
-                    string desc = "numeral " + kv.Key + " (" + card + ", " + ord + ")";
-                    AddPtEntry(nextPt, card + " / " + ord, desc, "Numeral", GetStr(obj, "compostos"), 14);
-                    foreach (KeyValuePair<string, object> nkv in obj)
-                    {
-                        if (nkv.Key == "compostos" || nkv.Value == null) continue;
-                        string[] parts = nkv.Value.ToString().Split('/');
-                        for (int i = 0; i < parts.Length; i++)
-                        {
-                            string tok = Regex.Replace(parts[i], @"\([^)]*\)", "").Trim();
-                            AddTrForm(nextRev, ref revCount, tok, new LexEntry { Treppio = card, PtMeaning = desc, ClassTag = "Numeral", Detail = kv.Key + " (" + nkv.Key + ")" });
-                        }
-                    }
-                }
-            }
-
-            Dictionary<string, object> partsDic = AsDict(root.ContainsKey("particulas_e_afixos") ? root["particulas_e_afixos"] : null);
-            if (partsDic != null)
-            {
-                foreach (KeyValuePair<string, object> kv in partsDic)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string desc = GetStr(obj, "descricao");
-                    string cls = GetStr(obj, "classe");
-                    AddPtEntry(nextPt, kv.Key, desc, cls, "", 18);
-                    string[] toks = kv.Key.Split('/');
-                    for (int i = 0; i < toks.Length; i++)
-                    {
-                        string t = Regex.Replace(toks[i], @"\([^)]*\)", "").Trim();
-                        if (!string.IsNullOrEmpty(t) && !t.StartsWith("-") && !t.EndsWith("-"))
-                        {
-                            AddTrForm(nextRev, ref revCount, t, new LexEntry { Treppio = kv.Key, PtMeaning = desc, ClassTag = cls, Detail = "Invariável" });
-                        }
-                    }
-                }
-            }
-
-            Dictionary<string, object> diacs = AsDict(root.ContainsKey("registro_diacronico_e_variantes") ? root["registro_diacronico_e_variantes"] : null);
-            if (diacs != null)
-            {
-                foreach (KeyValuePair<string, object> kv in diacs)
-                {
-                    Dictionary<string, object> obj = AsDict(kv.Value);
-                    if (obj == null) continue;
-                    string analise = GetStr(obj, "analise");
-                    string est = GetStr(obj, "estatuto");
-                    string eq = GetStr(obj, "equivalente_canonico");
-                    AddPtEntry(nextPt, kv.Key + " -> " + eq, analise, est, eq, 2);
-                    string[] toks = kv.Key.Split('/');
-                    for (int i = 0; i < toks.Length; i++)
-                    {
-                        AddTrForm(nextRev, ref revCount, toks[i].Trim(), new LexEntry { Treppio = kv.Key, PtMeaning = analise, ClassTag = est, Detail = eq });
-                    }
-                }
-            }
-
-            Dictionary<string, object> verbs = AsDict(root.ContainsKey("verbos_quadripartite") ? root["verbos_quadripartite"] : null);
-            if (verbs != null)
-            {
-                string[] persons = new string[] { "1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl", "1ª Pl (-n)", "2ª Pl (-t)" };
-                foreach (KeyValuePair<string, object> vkv in verbs)
-                {
-                    string vRoot = vkv.Key;
-                    Dictionary<string, object> axes = AsDict(vkv.Value);
-                    if (axes == null) continue;
-                    foreach (KeyValuePair<string, object> akv in axes)
-                    {
-                        Dictionary<string, object> axObj = AsDict(akv.Value);
-                        if (axObj == null) continue;
-                        string mean = GetStr(axObj, "meaning");
-                        Dictionary<string, object> conj = AsDict(axObj.ContainsKey("conjugation") ? axObj["conjugation"] : null);
-                        if (conj == null) continue;
-                        string inf = GetStr(conj, "Infinitivo(-ur)");
-                        string imp = GetStr(conj, "Imperativo(Raiz)");
-                        string cat = "Verbo [" + akv.Key + "]";
-                        AddPtEntry(nextPt, inf, mean, cat, "Raiz " + vRoot + "- | Imp: " + imp, akv.Key.StartsWith("1.") ? 12 : 4);
-                        AddTrForm(nextRev, ref revCount, inf, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Infinitivo" });
-                        AddTrForm(nextRev, ref revCount, imp, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Imperativo" });
-                        AddTrForm(nextRev, ref revCount, GetStr(conj, "Interrogativo.2Pl(-ka)"), new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Interrogativo 2ª Pl" });
-
-                        foreach (KeyValuePair<string, object> ckv in conj)
-                        {
-                            object[] arr = ckv.Value as object[];
-                            if (arr != null)
+                            if (fk == "declinacao") decl = cur.ReadScalarAsString();
+                            else if (fk == "significado") sig = cur.ReadScalarAsString();
+                            else if (fk == "etimologia") etym = cur.ReadScalarAsString();
+                            else if (fk == "formas")
                             {
-                                for (int pIdx = 0; pIdx < arr.Length; pIdx++)
+                                cur.ForEachObjectPair(ck =>
                                 {
-                                    string wf = arr[pIdx] != null ? arr[pIdx].ToString() : "";
-                                    string pLbl = pIdx < persons.Length ? persons[pIdx] : "";
-                                    AddTrForm(nextRev, ref revCount, wf, new LexEntry { Treppio = inf, PtMeaning = mean, ClassTag = cat, Detail = ckv.Key + " " + pLbl });
-                                }
-                                continue;
+                                    formasKey.Add(ck);
+                                    formasVal.Add(cur.ReadScalarAsString());
+                                });
                             }
-                            Dictionary<string, object> subDict = AsDict(ckv.Value);
-                            if (subDict != null)
+                            else cur.SkipValue();
+                        });
+                        string cTag = "Substantivo (" + decl + "ª Decl.)";
+                        AddPtEntry(snap, lemma, sig, cTag, etym, 10);
+                        for (int i = 0; i < formasVal.Count; i++)
+                        {
+                            AddTrForm(snap.TrReverse, ref revCount, formasVal[i], new LexEntry { Treppio = lemma, PtMeaning = sig, ClassTag = cTag, Detail = formasKey[i] });
+                        }
+                    });
+                }
+                else if (topKey == "adjetivos")
+                {
+                    cur.ForEachObjectPair(adj =>
+                    {
+                        string sig = "", comp = "";
+                        List<string> fKeys = new List<string>(16);
+                        List<string> fVals = new List<string>(16);
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            string v = cur.ReadScalarAsString();
+                            if (fk == "Significado") sig = v;
+                            else
                             {
-                                foreach (KeyValuePair<string, object> sdkv in subDict)
-                                {
-                                    string wf = sdkv.Value != null ? sdkv.Value.ToString() : "";
-                                    AddTrForm(nextRev, ref revCount, wf, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = ckv.Key + ": " + sdkv.Key });
-                                }
+                                if (fk == "Comparativo") comp = v;
+                                fKeys.Add(fk);
+                                fVals.Add(v);
+                            }
+                        });
+                        AddPtEntry(snap, adj, sig, "Adjetivo", "Comp: " + comp, 8);
+                        for (int i = 0; i < fVals.Count; i++)
+                        {
+                            AddTrForm(snap.TrReverse, ref revCount, fVals[i], new LexEntry { Treppio = adj, PtMeaning = sig, ClassTag = "Adjetivo", Detail = fKeys[i] });
+                        }
+                    });
+                }
+                else if (topKey == "adverbios")
+                {
+                    cur.ForEachObjectPair(adv =>
+                    {
+                        string sig = "", subc = "", etym = "";
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            if (fk == "significado") sig = cur.ReadScalarAsString();
+                            else if (fk == "subclasse") subc = cur.ReadScalarAsString();
+                            else if (fk == "etimologia") etym = cur.ReadScalarAsString();
+                            else cur.SkipValue();
+                        });
+                        AddPtEntry(snap, adv, sig, "Advérbio (" + subc + ")", etym, 6);
+                        AddTrForm(snap.TrReverse, ref revCount, adv, new LexEntry { Treppio = adv, PtMeaning = sig, ClassTag = "Advérbio", Detail = subc });
+                    });
+                }
+                else if (topKey == "pronomes")
+                {
+                    cur.ForEachObjectPair(pKey =>
+                    {
+                        string esfera = "", nomRaw = "";
+                        bool hasEsfera = false;
+                        List<string> cKeys = new List<string>(8);
+                        List<string> cVals = new List<string>(8);
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            string v = cur.ReadScalarAsString();
+                            if (fk == "esfera") { esfera = v; hasEsfera = true; }
+                            else
+                            {
+                                if (fk == "Nom") nomRaw = v;
+                                cKeys.Add(fk);
+                                cVals.Add(v);
+                            }
+                        });
+                        string desc = hasEsfera ? (pKey + ": " + esfera) : pKey;
+                        string nomClean = StripParenTrim(nomRaw);
+                        AddPtEntry(snap, string.IsNullOrEmpty(nomClean) ? pKey : nomClean, desc, "Pronome", "", 15);
+                        for (int i = 0; i < cVals.Count; i++)
+                        {
+                            string[] parts = cVals[i].Split('/');
+                            for (int p = 0; p < parts.Length; p++)
+                            {
+                                string tok = StripParenTrim(parts[p]);
+                                AddTrForm(snap.TrReverse, ref revCount, tok, new LexEntry { Treppio = pKey, PtMeaning = desc, ClassTag = "Pronome", Detail = cKeys[i] });
                             }
                         }
-                    }
+                    });
                 }
-            }
-
-            object[] corpusArr = root.ContainsKey("corpus_canonico") ? root["corpus_canonico"] as object[] : null;
-            if (corpusArr != null)
-            {
-                for (int i = 0; i < corpusArr.Length; i++)
+                else if (topKey == "numerais")
                 {
-                    Dictionary<string, object> cObj = AsDict(corpusArr[i]);
-                    if (cObj == null) continue;
-                    string tr = GetStr(cObj, "treppio");
-                    string pt = GetStr(cObj, "portugues");
-                    string tit = GetStr(cObj, "titulo");
-                    if (!string.IsNullOrEmpty(tr) && !string.IsNullOrEmpty(pt))
+                    cur.ForEachObjectPair(numK =>
                     {
-                        nextCorpus[tr] = tit + ": " + pt;
-                        AddPtEntry(nextPt, tr, pt, "Corpus Canônico", tit, 5);
-                    }
+                        string card = "", ordRaw = "", comp = "";
+                        List<string> nKeys = new List<string>(8);
+                        List<string> nVals = new List<string>(8);
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            string v = cur.ReadScalarAsString();
+                            if (fk == "cardinal") card = v;
+                            else if (fk == "ordinal") ordRaw = v;
+                            else if (fk == "compostos") { comp = v; return; }
+                            nKeys.Add(fk);
+                            nVals.Add(v);
+                        });
+                        string ord = StripParenTrim(ordRaw);
+                        string desc = "numeral " + numK + " (" + card + ", " + ord + ")";
+                        AddPtEntry(snap, card + " / " + ord, desc, "Numeral", comp, 14);
+                        for (int i = 0; i < nVals.Count; i++)
+                        {
+                            string[] parts = nVals[i].Split('/');
+                            for (int p = 0; p < parts.Length; p++)
+                            {
+                                string tok = StripParenTrim(parts[p]);
+                                AddTrForm(snap.TrReverse, ref revCount, tok, new LexEntry { Treppio = card, PtMeaning = desc, ClassTag = "Numeral", Detail = numK + " (" + nKeys[i] + ")" });
+                            }
+                        }
+                    });
                 }
-            }
+                else if (topKey == "particulas_e_afixos")
+                {
+                    cur.ForEachObjectPair(pTok =>
+                    {
+                        string desc = "", cls = "";
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            if (fk == "descricao") desc = cur.ReadScalarAsString();
+                            else if (fk == "classe") cls = cur.ReadScalarAsString();
+                            else cur.SkipValue();
+                        });
+                        AddPtEntry(snap, pTok, desc, cls, "", 18);
+                        string[] toks = pTok.Split('/');
+                        for (int i = 0; i < toks.Length; i++)
+                        {
+                            string t = StripParenTrim(toks[i]);
+                            if (!string.IsNullOrEmpty(t) && !t.StartsWith("-") && !t.EndsWith("-"))
+                            {
+                                AddTrForm(snap.TrReverse, ref revCount, t, new LexEntry { Treppio = pTok, PtMeaning = desc, ClassTag = cls, Detail = "Invariável" });
+                            }
+                        }
+                    });
+                }
+                else if (topKey == "registro_diacronico_e_variantes")
+                {
+                    cur.ForEachObjectPair(dTok =>
+                    {
+                        string analise = "", est = "", eq = "";
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            if (fk == "analise") analise = cur.ReadScalarAsString();
+                            else if (fk == "estatuto") est = cur.ReadScalarAsString();
+                            else if (fk == "equivalente_canonico") eq = cur.ReadScalarAsString();
+                            else cur.SkipValue();
+                        });
+                        AddPtEntry(snap, dTok + " -> " + eq, analise, est, eq, 2);
+                        string[] toks = dTok.Split('/');
+                        for (int i = 0; i < toks.Length; i++)
+                        {
+                            AddTrForm(snap.TrReverse, ref revCount, toks[i].Trim(), new LexEntry { Treppio = dTok, PtMeaning = analise, ClassTag = est, Detail = eq });
+                        }
+                    });
+                }
+                else if (topKey == "verbos_quadripartite")
+                {
+                    cur.ForEachObjectPair(vRoot =>
+                    {
+                        cur.ForEachObjectPair(axKey =>
+                        {
+                            string mean = "", inf = "", imp = "", interr = "";
+                            string cat = "Verbo [" + axKey + "]";
+                            List<KeyValuePair<string, string>> pendingForms = new List<KeyValuePair<string, string>>(120);
+                            List<string> pendingDetails = new List<string>(120);
+                            bool[] pendingUseInf = new bool[120];
 
-            lock (_lock)
-            {
-                _ptEntries = nextPt;
-                _trReverse = nextRev;
-                _corpusByTreppio = nextCorpus;
-                IndexedFormsCount = revCount;
-                IndexedLemmasCount = nextPt.Count;
-                IsReady = true;
-            }
+                            cur.ForEachObjectPair(ak =>
+                            {
+                                if (ak == "meaning") mean = cur.ReadScalarAsString();
+                                else if (ak == "conjugation")
+                                {
+                                    cur.ForEachObjectPair(ck =>
+                                    {
+                                        char nxt = cur.Peek();
+                                        if (nxt == '[')
+                                        {
+                                            cur.ForEachArrayItem(pIdx =>
+                                            {
+                                                string wf = cur.ReadScalarAsString();
+                                                if (!string.IsNullOrEmpty(wf))
+                                                {
+                                                    string pLbl = pIdx < persons.Length ? persons[pIdx] : "";
+                                                    int kIdx = pendingForms.Count;
+                                                    if (kIdx < pendingUseInf.Length) pendingUseInf[kIdx] = true;
+                                                    pendingForms.Add(new KeyValuePair<string, string>(wf, ck + " " + pLbl));
+                                                }
+                                            });
+                                        }
+                                        else if (nxt == '{')
+                                        {
+                                            cur.ForEachObjectPair(sdk =>
+                                            {
+                                                string wf = cur.ReadScalarAsString();
+                                                if (!string.IsNullOrEmpty(wf))
+                                                {
+                                                    pendingForms.Add(new KeyValuePair<string, string>(wf, ck + ": " + sdk));
+                                                }
+                                            });
+                                        }
+                                        else
+                                        {
+                                            string sv = cur.ReadScalarAsString();
+                                            if (ck == "Infinitivo(-ur)") inf = sv;
+                                            else if (ck == "Imperativo(Raiz)") imp = sv;
+                                            else if (ck == "Interrogativo.2Pl(-ka)") interr = sv;
+                                        }
+                                    });
+                                }
+                                else cur.SkipValue();
+                            });
+
+                            AddPtEntry(snap, inf, mean, cat, "Raiz " + vRoot + "- | Imp: " + imp, axKey.StartsWith("1.") ? 12 : 4);
+                            AddTrForm(snap.TrReverse, ref revCount, inf, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Infinitivo" });
+                            AddTrForm(snap.TrReverse, ref revCount, imp, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Imperativo" });
+                            AddTrForm(snap.TrReverse, ref revCount, interr, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Interrogativo 2ª Pl" });
+
+                            for (int f = 0; f < pendingForms.Count; f++)
+                            {
+                                string lemmaForm = (f < pendingUseInf.Length && pendingUseInf[f]) ? inf : (vRoot + "-");
+                                AddTrForm(snap.TrReverse, ref revCount, pendingForms[f].Key, new LexEntry
+                                {
+                                    Treppio = lemmaForm,
+                                    PtMeaning = mean,
+                                    ClassTag = cat,
+                                    Detail = pendingForms[f].Value
+                                });
+                            }
+                        });
+                    });
+                }
+                else if (topKey == "corpus_canonico")
+                {
+                    cur.ForEachArrayItem(_ =>
+                    {
+                        string tr = "", pt = "", tit = "";
+                        cur.ForEachObjectPair(fk =>
+                        {
+                            if (fk == "treppio") tr = cur.ReadScalarAsString();
+                            else if (fk == "portugues") pt = cur.ReadScalarAsString();
+                            else if (fk == "titulo") tit = cur.ReadScalarAsString();
+                            else cur.SkipValue();
+                        });
+                        if (!string.IsNullOrEmpty(tr) && !string.IsNullOrEmpty(pt))
+                        {
+                            snap.CorpusByTreppio[tr] = tit + ": " + pt;
+                            AddPtEntry(snap, tr, pt, "Corpus Canônico", tit, 5);
+                        }
+                    });
+                }
+                else
+                {
+                    cur.SkipValue();
+                }
+            });
+
+            snap.IndexedFormsCount = revCount;
+            snap.IndexedLemmasCount = snap.PtEntries.Count;
+            snap.Generation = Interlocked.Increment(ref _generationSeq);
+            snap.IsReady = true;
+            _snap = snap;
         }
 
         private class ScoredLex
@@ -596,59 +989,85 @@ namespace CondeTreppioLauncher
             public LexEntry Entry;
         }
 
-        public List<LexEntry> SearchPtToken(string ptToken, int limit)
+        private static int ScorePtItem(LexEntry item, string q, string qStem)
         {
-            List<LexEntry> snapshot;
-            lock (_lock) { snapshot = _ptEntries; }
-            string q = StripAccents(ptToken).Trim();
-            List<LexEntry> outList = new List<LexEntry>();
-            if (string.IsNullOrEmpty(q) || snapshot.Count == 0) return outList;
+            if (item.PtNorm == q) return 140;
+            if (item.PtHead == q) return 128;
 
-            string qStem = q.Length > 4 ? Regex.Replace(q, "(s|es|os|as|mente|coes|cao|ado|ada|ar|er|ir)$", "") : q;
-            List<ScoredLex> scored = new List<ScoredLex>();
-
-            for (int i = 0; i < snapshot.Count; i++)
+            string[] hWords = item.HeadWords;
+            for (int h = 0; h < hWords.Length; h++)
             {
-                LexEntry item = snapshot[i];
-                int sc = 0;
-                int sepIdx = item.PtNorm.IndexOfAny(new char[] { ',', ';', '(' });
-                string head = (sepIdx >= 0 ? item.PtNorm.Substring(0, sepIdx) : item.PtNorm).Trim();
-                if (item.PtNorm == q)
+                if (hWords[h] == q) return 105 - Math.Min(20, item.Words.Length);
+            }
+
+            string[] words = item.Words;
+            bool stemMatch = false;
+            for (int w = 0; w < words.Length; w++)
+            {
+                string wrd = words[w];
+                if (wrd == q) return 85 - Math.Min(25, words.Length * 2);
+                if (qStem.Length >= 3 && (wrd == qStem || wrd.StartsWith(qStem, StringComparison.Ordinal)))
                 {
-                    sc = 140;
-                }
-                else if (head == q)
-                {
-                    sc = 128;
-                }
-                else
-                {
-                    string[] headWords = Regex.Split(head, "[^a-z0-9]+");
-                    bool inHead = false;
-                    for (int h = 0; h < headWords.Length; h++)
-                    {
-                        if (headWords[h] == q) { inHead = true; break; }
-                    }
-                    string[] words = Regex.Split(item.PtNorm, "[^a-z0-9]+");
-                    bool exactWord = false;
-                    bool stemWord = false;
-                    for (int w = 0; w < words.Length; w++)
-                    {
-                        if (words[w] == q) { exactWord = true; break; }
-                        if (qStem.Length >= 3 && (words[w] == qStem || words[w].StartsWith(qStem))) stemWord = true;
-                    }
-                    if (inHead) sc = 105 - Math.Min(20, words.Length);
-                    else if (exactWord) sc = 85 - Math.Min(25, words.Length * 2);
-                    else if (stemWord) sc = 62 - Math.Min(20, words.Length);
-                    else if (q.Length >= 3 && item.PtNorm.Contains(q)) sc = 40;
-                }
-                if (sc > 0)
-                {
-                    scored.Add(new ScoredLex { Score = sc + item.Boost, Entry = item });
+                    stemMatch = true;
                 }
             }
+            if (stemMatch) return 62 - Math.Min(20, words.Length);
+            if (q.Length >= 3 && item.PtNorm.IndexOf(q, StringComparison.Ordinal) >= 0) return 40;
+            return 0;
+        }
+
+        public List<LexEntry> SearchPtToken(string ptToken, int limit)
+        {
+            LexiconSnapshot snap = _snap;
+            string q = StripAccents(ptToken).Trim();
+            List<LexEntry> outList = new List<LexEntry>();
+            if (string.IsNullOrEmpty(q) || snap.PtEntries.Count == 0) return outList;
+
+            string qStem = ComputePtStem(q);
+            List<ScoredLex> scored = new List<ScoredLex>(32);
+            HashSet<int> candidateIdx = new HashSet<int>();
+
+            List<int> bucket;
+            if (snap.PtTokenMap.TryGetValue(q, out bucket))
+            {
+                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
+            }
+            if (!string.IsNullOrEmpty(qStem) && qStem != q && snap.PtTokenMap.TryGetValue(qStem, out bucket))
+            {
+                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
+            }
+            if (qStem.Length >= 3 && snap.PtStemMap.TryGetValue(qStem.Substring(0, 3), out bucket))
+            {
+                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
+            }
+
+            if (candidateIdx.Count > 0)
+            {
+                foreach (int idx in candidateIdx)
+                {
+                    LexEntry item = snap.PtEntries[idx];
+                    int sc = ScorePtItem(item, q, qStem);
+                    if (sc > 0) scored.Add(new ScoredLex { Score = sc + item.Boost, Entry = item });
+                }
+            }
+
+            // Fallback de substring caso nenhum token exato/radical tenha atingido o limite
+            if (scored.Count < limit && q.Length >= 3)
+            {
+                List<LexEntry> all = snap.PtEntries;
+                for (int i = 0; i < all.Count; i++)
+                {
+                    if (candidateIdx.Contains(i)) continue;
+                    LexEntry item = all[i];
+                    if (item.PtNorm.IndexOf(q, StringComparison.Ordinal) >= 0)
+                    {
+                        scored.Add(new ScoredLex { Score = 40 + item.Boost, Entry = item });
+                    }
+                }
+            }
+
             scored.Sort((a, b) => b.Score.CompareTo(a.Score));
-            HashSet<string> seen = new HashSet<string>();
+            HashSet<string> seen = new HashSet<string>(StringComparer.Ordinal);
             for (int i = 0; i < scored.Count && outList.Count < limit; i++)
             {
                 string key = scored[i].Entry.Treppio + "|" + scored[i].Entry.ClassTag;
@@ -660,7 +1079,8 @@ namespace CondeTreppioLauncher
         public string TranslatePtToTrReport(string query, out string primaryTreppio)
         {
             primaryTreppio = "";
-            if (!IsReady) return "Indexando banco de dados em segundo plano... tente em 2 segundos.";
+            LexiconSnapshot snap = _snap;
+            if (!snap.IsReady) return "Indexando banco de dados em segundo plano... tente em 2 segundos.";
             string qRaw = (query ?? "").Trim();
             if (string.IsNullOrEmpty(qRaw)) return "Digite uma palavra ou frase em português.";
 
@@ -726,17 +1146,13 @@ namespace CondeTreppioLauncher
 
         public string TranslateTrToPtReport(string query)
         {
-            if (!IsReady) return "Indexando banco de dados em segundo plano... tente em 2 segundos.";
+            LexiconSnapshot snap = _snap;
+            if (!snap.IsReady) return "Indexando banco de dados em segundo plano... tente em 2 segundos.";
             string qRaw = (query ?? "").Trim();
             if (string.IsNullOrEmpty(qRaw)) return "Digite palavras ou frases em Tréppio.";
 
-            Dictionary<string, List<LexEntry>> revSnap;
-            Dictionary<string, string> corpSnap;
-            lock (_lock)
-            {
-                revSnap = _trReverse;
-                corpSnap = _corpusByTreppio;
-            }
+            Dictionary<string, List<LexEntry>> revSnap = snap.TrReverse;
+            Dictionary<string, string> corpSnap = snap.CorpusByTreppio;
 
             StringBuilder sb = new StringBuilder();
             foreach (KeyValuePair<string, string> ckv in corpSnap)
@@ -790,6 +1206,143 @@ namespace CondeTreppioLauncher
             sb.Append(detailSb.ToString());
             return sb.ToString();
         }
+
+        public static string EscapeJsonValue(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return "";
+            StringBuilder sb = new StringBuilder(s.Length + 8);
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+                if (c == '\\') sb.Append("\\\\");
+                else if (c == '"') sb.Append("\\\"");
+                else if (c == '\r') sb.Append("\\r");
+                else if (c == '\n') sb.Append("\\n");
+                else if (c == '\t') sb.Append("\\t");
+                else if (c < 0x20) sb.AppendFormat("\\u{0:x4}", (int)c);
+                else sb.Append(c);
+            }
+            return sb.ToString();
+        }
+
+        public string BuildIpaJson(string query)
+        {
+            string q = (query ?? "").Trim();
+            List<IpaWordInfo> words = AnalyzeSentenceIpa(q);
+            StringBuilder sb = new StringBuilder(512);
+            sb.Append("{\"ok\":true,\"query\":\"");
+            sb.Append(EscapeJsonValue(q));
+            sb.Append("\",\"ttsPtBr\":\"");
+            sb.Append(EscapeJsonValue(ToTtsPtBr(q)));
+            sb.Append("\",\"words\":[");
+            for (int i = 0; i < words.Count; i++)
+            {
+                if (i > 0) sb.Append(',');
+                IpaWordInfo w = words[i];
+                sb.Append("{\"word\":\"");
+                sb.Append(EscapeJsonValue(w.Word));
+                sb.Append("\",\"syllables\":\"");
+                sb.Append(EscapeJsonValue(w.SyllablesJoined));
+                sb.Append("\",\"ipa\":\"");
+                sb.Append(EscapeJsonValue(w.Ipa));
+                sb.Append("\",\"notes\":\"");
+                sb.Append(EscapeJsonValue(w.Notes));
+                sb.Append("\"}");
+            }
+            sb.Append("]}");
+            return sb.ToString();
+        }
+
+        public string BuildTranslateJson(string dir, string query)
+        {
+            string d = (dir ?? "pt-tr").Trim().ToLowerInvariant();
+            string q = (query ?? "").Trim();
+            string primary = "";
+            string report;
+            if (d == "tr-pt")
+            {
+                report = TranslateTrToPtReport(q);
+                IpaWordInfo ipa = AnalyzeWordIpa(q);
+                primary = ipa != null ? ipa.Word : q;
+            }
+            else
+            {
+                d = "pt-tr";
+                report = TranslatePtToTrReport(q, out primary);
+            }
+            StringBuilder sb = new StringBuilder(1024);
+            sb.Append("{\"ok\":true,\"ready\":");
+            sb.Append(_snap.IsReady ? "true" : "false");
+            sb.Append(",\"dir\":\"");
+            sb.Append(EscapeJsonValue(d));
+            sb.Append("\",\"query\":\"");
+            sb.Append(EscapeJsonValue(q));
+            sb.Append("\",\"primary\":\"");
+            sb.Append(EscapeJsonValue(primary));
+            sb.Append("\",\"report\":\"");
+            sb.Append(EscapeJsonValue(report));
+            sb.Append("\"}");
+            return sb.ToString();
+        }
+
+        public string BuildSearchJson(string query, int limit)
+        {
+            LexiconSnapshot snap = _snap;
+            string q = (query ?? "").Trim();
+            int lim = Math.Max(1, Math.Min(30, limit));
+            StringBuilder sb = new StringBuilder(1024);
+            sb.Append("{\"ok\":true,\"ready\":");
+            sb.Append(snap.IsReady ? "true" : "false");
+            sb.Append(",\"query\":\"");
+            sb.Append(EscapeJsonValue(q));
+            sb.Append("\",\"reverseMatches\":[");
+
+            if (!string.IsNullOrEmpty(q) && snap.IsReady)
+            {
+                string clean = q.Replace("!", "").Replace("?", "").Trim().ToLowerInvariant();
+                List<LexEntry> revList;
+                if (snap.TrReverse.TryGetValue(clean, out revList) && revList != null)
+                {
+                    int n = Math.Min(lim, revList.Count);
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (i > 0) sb.Append(',');
+                        LexEntry e = revList[i];
+                        sb.Append("{\"treppio\":\"");
+                        sb.Append(EscapeJsonValue(e.Treppio));
+                        sb.Append("\",\"classTag\":\"");
+                        sb.Append(EscapeJsonValue(e.ClassTag));
+                        sb.Append("\",\"detail\":\"");
+                        sb.Append(EscapeJsonValue(e.Detail));
+                        sb.Append("\",\"pt\":\"");
+                        sb.Append(EscapeJsonValue(e.PtMeaning));
+                        sb.Append("\"}");
+                    }
+                }
+            }
+
+            sb.Append("],\"ptMatches\":[");
+            if (!string.IsNullOrEmpty(q) && snap.IsReady)
+            {
+                List<LexEntry> ptList = SearchPtToken(q, lim);
+                for (int i = 0; i < ptList.Count; i++)
+                {
+                    if (i > 0) sb.Append(',');
+                    LexEntry e = ptList[i];
+                    sb.Append("{\"treppio\":\"");
+                    sb.Append(EscapeJsonValue(e.Treppio));
+                    sb.Append("\",\"classTag\":\"");
+                    sb.Append(EscapeJsonValue(e.ClassTag));
+                    sb.Append("\",\"detail\":\"");
+                    sb.Append(EscapeJsonValue(e.Detail));
+                    sb.Append("\",\"pt\":\"");
+                    sb.Append(EscapeJsonValue(e.PtMeaning));
+                    sb.Append("\"}");
+                }
+            }
+            sb.Append("]}");
+            return sb.ToString();
+        }
     }
 
     public class TreppioTtsService
@@ -840,12 +1393,120 @@ namespace CondeTreppioLauncher
         }
     }
 
-    public class EmbeddedServer
+    public sealed class EmbeddedServer
     {
-        private TcpListener _listener;
-        private Thread _serverThread;
+        private sealed class StaticAssetEntry
+        {
+            public byte[] RawBytes;
+            public byte[] GzipBytes;
+            public string ContentType;
+            public string ETag;
+            public string CacheControl;
+        }
+
+        private sealed class PayloadSnapshot
+        {
+            public byte[] HtmlRaw;
+            public byte[] HtmlGzip;
+            public string HtmlETag;
+
+            public byte[] JsonRaw;
+            public byte[] JsonGzip;
+            public string JsonETag;
+
+            public byte[] DadosJsRaw;
+            public byte[] DadosJsGzip;
+            public string DadosJsETag;
+
+            public Dictionary<string, StaticAssetEntry> Assets = new Dictionary<string, StaticAssetEntry>(StringComparer.OrdinalIgnoreCase);
+            public string ActiveSource;
+        }
+
+        private sealed class CachedBytePair
+        {
+            public byte[] Raw;
+            public byte[] Gzip;
+        }
+
+        private sealed class BoundedLruCache
+        {
+            private readonly int _capacity;
+            private readonly object _sync = new object();
+            private readonly Dictionary<string, LinkedListNode<KeyValuePair<string, CachedBytePair>>> _map;
+            private readonly LinkedList<KeyValuePair<string, CachedBytePair>> _order;
+
+            public BoundedLruCache(int capacity)
+            {
+                _capacity = Math.Max(64, capacity);
+                _map = new Dictionary<string, LinkedListNode<KeyValuePair<string, CachedBytePair>>>(StringComparer.Ordinal);
+                _order = new LinkedList<KeyValuePair<string, CachedBytePair>>();
+            }
+
+            public bool TryGet(string key, out CachedBytePair val)
+            {
+                lock (_sync)
+                {
+                    LinkedListNode<KeyValuePair<string, CachedBytePair>> node;
+                    if (_map.TryGetValue(key, out node))
+                    {
+                        _order.Remove(node);
+                        _order.AddFirst(node);
+                        val = node.Value.Value;
+                        return true;
+                    }
+                    val = null;
+                    return false;
+                }
+            }
+
+            public void Put(string key, CachedBytePair val)
+            {
+                lock (_sync)
+                {
+                    LinkedListNode<KeyValuePair<string, CachedBytePair>> existing;
+                    if (_map.TryGetValue(key, out existing))
+                    {
+                        _order.Remove(existing);
+                        existing.Value = new KeyValuePair<string, CachedBytePair>(key, val);
+                        _order.AddFirst(existing);
+                        return;
+                    }
+                    if (_map.Count >= _capacity && _order.Last != null)
+                    {
+                        LinkedListNode<KeyValuePair<string, CachedBytePair>> oldest = _order.Last;
+                        _order.RemoveLast();
+                        _map.Remove(oldest.Value.Key);
+                    }
+                    LinkedListNode<KeyValuePair<string, CachedBytePair>> node = new LinkedListNode<KeyValuePair<string, CachedBytePair>>(
+                        new KeyValuePair<string, CachedBytePair>(key, val)
+                    );
+                    _order.AddFirst(node);
+                    _map[key] = node;
+                }
+            }
+        }
+
+        private sealed class HttpParsedRequest
+        {
+            public string Method;
+            public string Path;
+            public string Query;
+            public bool KeepAlive;
+            public bool AcceptsGzip;
+            public string IfNoneMatch;
+            public string Body;
+        }
+
+        private Socket _listenerV4;
+        private Socket _listenerV6;
         private volatile bool _running;
+        private int _activeConnections;
+        private const int MaxConcurrentConnections = 2500;
+        private const int KeepAliveIdleTimeoutMs = 8000;
+        private const int MaxKeepAliveRequests = 1000;
+
         public int Port { get; private set; }
+        public int PreferredPort { get; set; }
         public string ActiveSource { get; set; }
         public string CloudUrl { get; set; }
 
@@ -865,8 +1526,10 @@ namespace CondeTreppioLauncher
         private readonly string _localCondeHtmlPath = @"D:\Conde_Treppio\sandbox\ui_dicionario\index.html";
         private readonly string _localUiDir = @"D:\Conde_Treppio\sandbox\ui_dicionario";
 
-        private byte[] _cachedHtmlBytes;
-        private byte[] _cachedJsonBytes;
+        private PayloadSnapshot _snapshot;
+        private readonly BoundedLruCache _apiLru = new BoundedLruCache(2048);
+        private readonly ConcurrentBag<byte[]> _bufferPool = new ConcurrentBag<byte[]>();
+        private readonly SemaphoreSlim _recompileGate = new SemaphoreSlim(1, 1);
 
         public EmbeddedServer()
         {
@@ -880,40 +1543,179 @@ namespace CondeTreppioLauncher
             ReloadPayloads();
         }
 
-        public void ReloadPayloads()
+        private byte[] RentBuffer()
         {
-            _cachedHtmlBytes = File.Exists(_localCondeHtmlPath)
-                ? File.ReadAllBytes(_localCondeHtmlPath)
-                : ReadEmbeddedResource("index.html");
+            byte[] buf;
+            if (_bufferPool.TryTake(out buf)) return buf;
+            return new byte[8192];
+        }
 
-            if (File.Exists(_localCondeDbPath))
+        private void ReturnBuffer(byte[] buf)
+        {
+            if (buf != null && _bufferPool.Count < 1024)
             {
-                _cachedJsonBytes = File.ReadAllBytes(_localCondeDbPath);
-                ActiveSource = "Base Local Oficial (D:\\Conde_Treppio)";
+                _bufferPool.Add(buf);
             }
-            else if (File.Exists(_cachedDbPath))
+        }
+
+        private static byte[] CompressGzip(byte[] raw)
+        {
+            if (raw == null || raw.Length == 0) return new byte[0];
+            using (MemoryStream ms = new MemoryStream())
             {
-                _cachedJsonBytes = File.ReadAllBytes(_cachedDbPath);
-                ActiveSource = "Banco Sincronizado da Nuvem (Git/Drive)";
+                using (GZipStream gz = new GZipStream(ms, CompressionLevel.Optimal, true))
+                {
+                    gz.Write(raw, 0, raw.Length);
+                }
+                return ms.ToArray();
+            }
+        }
+
+        private static byte[] DecompressGzip(byte[] gzBytes)
+        {
+            if (gzBytes == null || gzBytes.Length == 0) return new byte[0];
+            using (MemoryStream src = new MemoryStream(gzBytes))
+            using (GZipStream gz = new GZipStream(src, CompressionMode.Decompress))
+            using (MemoryStream dst = new MemoryStream())
+            {
+                gz.CopyTo(dst);
+                return dst.ToArray();
+            }
+        }
+
+        private static string ComputeETag(byte[] data)
+        {
+            if (data == null) return "\"0\"";
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] h = sha.ComputeHash(data);
+                StringBuilder sb = new StringBuilder(20);
+                sb.Append('"');
+                for (int i = 0; i < 8; i++) sb.Append(h[i].ToString("x2", CultureInfo.InvariantCulture));
+                sb.Append('"');
+                return sb.ToString();
+            }
+        }
+
+        private static byte[] BuildDadosJsBytes(byte[] jsonBytes)
+        {
+            byte[] prefix = Encoding.UTF8.GetBytes("window.CONDE_DB = ");
+            byte[] suffix = Encoding.UTF8.GetBytes(";\n");
+            byte[] res = new byte[prefix.Length + jsonBytes.Length + suffix.Length];
+            Buffer.BlockCopy(prefix, 0, res, 0, prefix.Length);
+            Buffer.BlockCopy(jsonBytes, 0, res, prefix.Length, jsonBytes.Length);
+            Buffer.BlockCopy(suffix, 0, res, prefix.Length + jsonBytes.Length, suffix.Length);
+            return res;
+        }
+
+        private StaticAssetEntry LoadAssetEntry(string fileName, string contentType, string cacheControl)
+        {
+            byte[] raw = null;
+            string diskPath = Path.Combine(_localUiDir, fileName);
+            if (File.Exists(diskPath))
+            {
+                raw = File.ReadAllBytes(diskPath);
             }
             else
             {
-                _cachedJsonBytes = ReadEmbeddedResource("dicionario_formas_expandidas.json");
-                ActiveSource = "Banco Embutido no Executavel (Offline)";
+                raw = ReadEmbeddedResourceOrNull(fileName);
+            }
+            if (raw == null) return null;
+            bool compress = !fileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase) && raw.Length >= 256;
+            return new StaticAssetEntry
+            {
+                RawBytes = raw,
+                GzipBytes = compress ? CompressGzip(raw) : null,
+                ContentType = contentType,
+                ETag = ComputeETag(raw),
+                CacheControl = cacheControl
+            };
+        }
+
+        public void ReloadPayloads()
+        {
+            byte[] htmlRaw = File.Exists(_localCondeHtmlPath)
+                ? File.ReadAllBytes(_localCondeHtmlPath)
+                : ReadEmbeddedResource("index.html");
+
+            byte[] jsonRaw;
+            string sourceLabel;
+            if (File.Exists(_localCondeDbPath))
+            {
+                jsonRaw = File.ReadAllBytes(_localCondeDbPath);
+                sourceLabel = "Base Local Oficial (D:\\Conde_Treppio)";
+            }
+            else if (File.Exists(_cachedDbPath))
+            {
+                jsonRaw = File.ReadAllBytes(_cachedDbPath);
+                sourceLabel = "Banco Sincronizado da Nuvem (Git/Drive)";
+            }
+            else
+            {
+                byte[] embGz = ReadEmbeddedResourceOrNull("dicionario_formas_expandidas.json.gz");
+                if (embGz != null)
+                {
+                    jsonRaw = DecompressGzip(embGz);
+                }
+                else
+                {
+                    jsonRaw = ReadEmbeddedResource("dicionario_formas_expandidas.json");
+                }
+                sourceLabel = "Banco Embutido no Executavel (Offline)";
             }
 
-            ParseMetadataMetrics();
-            StartBackgroundIndexBuild();
+            SwapPayloadSnapshot(htmlRaw, jsonRaw, sourceLabel);
+        }
+
+        private void SwapPayloadSnapshot(byte[] htmlRaw, byte[] jsonRaw, string sourceLabel)
+        {
+            ActiveSource = sourceLabel;
+            ParseMetadataMetrics(jsonRaw);
+
+            PayloadSnapshot next = new PayloadSnapshot();
+            next.ActiveSource = sourceLabel;
+            next.HtmlRaw = htmlRaw ?? new byte[0];
+            next.HtmlGzip = CompressGzip(next.HtmlRaw);
+            next.HtmlETag = ComputeETag(next.HtmlRaw);
+
+            next.JsonRaw = jsonRaw ?? Encoding.UTF8.GetBytes("{}");
+            next.JsonGzip = CompressGzip(next.JsonRaw);
+            next.JsonETag = ComputeETag(next.JsonRaw);
+
+            next.DadosJsRaw = BuildDadosJsBytes(next.JsonRaw);
+            next.DadosJsGzip = CompressGzip(next.DadosJsRaw);
+            next.DadosJsETag = ComputeETag(next.DadosJsRaw);
+
+            AddStaticIfPresent(next, "manifest.json", "application/manifest+json; charset=utf-8", "public, max-age=300");
+            AddStaticIfPresent(next, "sw.js", "application/javascript; charset=utf-8", "no-cache");
+            AddStaticIfPresent(next, "icon-512.png", "image/png", "public, max-age=86400");
+            AddStaticIfPresent(next, "icon-192.png", "image/png", "public, max-age=86400");
+            AddStaticIfPresent(next, "icon-maskable-512.png", "image/png", "public, max-age=86400");
+            AddStaticIfPresent(next, "favicon.ico", "image/x-icon", "public, max-age=86400");
+
+            Interlocked.Exchange(ref _snapshot, next);
+            StartBackgroundIndexBuild(next.JsonRaw);
+        }
+
+        private void AddStaticIfPresent(PayloadSnapshot snap, string name, string mime, string cacheControl)
+        {
+            StaticAssetEntry entry = LoadAssetEntry(name, mime, cacheControl);
+            if (entry != null) snap.Assets[name] = entry;
         }
 
         public void StartBackgroundIndexBuild()
         {
-            byte[] snapshot = _cachedJsonBytes;
+            PayloadSnapshot snap = _snapshot;
+            if (snap != null) StartBackgroundIndexBuild(snap.JsonRaw);
+        }
+
+        private void StartBackgroundIndexBuild(byte[] snapshotJson)
+        {
             ThreadPool.QueueUserWorkItem(_ =>
             {
                 try
                 {
-                    Lexicon.BuildFromJsonBytes(snapshot);
+                    Lexicon.BuildFromJsonBytes(snapshotJson);
                     Action handler = LexiconUpdated;
                     if (handler != null) handler();
                 }
@@ -921,7 +1723,7 @@ namespace CondeTreppioLauncher
             });
         }
 
-        private void ParseMetadataMetrics()
+        private void ParseMetadataMetrics(byte[] jsonBytes)
         {
             TotalForms = 246737;
             NounsCount = 2109;
@@ -931,9 +1733,9 @@ namespace CondeTreppioLauncher
 
             try
             {
-                if (_cachedJsonBytes == null || _cachedJsonBytes.Length == 0) return;
-                int scanLen = Math.Min(_cachedJsonBytes.Length, 4096);
-                string head = Encoding.UTF8.GetString(_cachedJsonBytes, 0, scanLen);
+                if (jsonBytes == null || jsonBytes.Length == 0) return;
+                int scanLen = Math.Min(jsonBytes.Length, 4096);
+                string head = Encoding.UTF8.GetString(jsonBytes, 0, scanLen);
 
                 TotalForms = ExtractIntMetric(head, "total_expanded_word_forms", TotalForms);
                 NounsCount = ExtractIntMetric(head, "nouns_count", NounsCount);
@@ -941,9 +1743,9 @@ namespace CondeTreppioLauncher
                 AdjsCount = ExtractIntMetric(head, "adjectives_count", AdjsCount);
                 AdvsCount = ExtractIntMetric(head, "adverbs_count", AdvsCount);
 
-                if (TotalForms == 246737 && _cachedJsonBytes.Length > 4096)
+                if (TotalForms == 246737 && jsonBytes.Length > 4096)
                 {
-                    string tail = Encoding.UTF8.GetString(_cachedJsonBytes, _cachedJsonBytes.Length - 4096, 4096);
+                    string tail = Encoding.UTF8.GetString(jsonBytes, jsonBytes.Length - 4096, 4096);
                     TotalForms = ExtractIntMetric(tail, "total_expanded_word_forms", TotalForms);
                 }
             }
@@ -961,18 +1763,24 @@ namespace CondeTreppioLauncher
             return fallback;
         }
 
-        private byte[] ReadEmbeddedResource(string resourceName)
+        private static byte[] ReadEmbeddedResourceOrNull(string resourceName)
         {
             Assembly asm = Assembly.GetExecutingAssembly();
             using (Stream s = asm.GetManifestResourceStream(resourceName))
             {
-                if (s == null) return Encoding.UTF8.GetBytes("{}");
+                if (s == null) return null;
                 using (MemoryStream ms = new MemoryStream())
                 {
                     s.CopyTo(ms);
                     return ms.ToArray();
                 }
             }
+        }
+
+        private byte[] ReadEmbeddedResource(string resourceName)
+        {
+            byte[] data = ReadEmbeddedResourceOrNull(resourceName);
+            return data ?? Encoding.UTF8.GetBytes("{}");
         }
 
         public static string NormalizeCloudUrl(string rawUrl)
@@ -1007,7 +1815,7 @@ namespace CondeTreppioLauncher
                 using (WebClient wc = new WebClient())
                 {
                     wc.Encoding = Encoding.UTF8;
-                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/8.4");
+                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/8.5");
                     string json = wc.DownloadString(directUrl);
                     if (!json.Contains("\"substantivos\""))
                     {
@@ -1017,10 +1825,10 @@ namespace CondeTreppioLauncher
                     File.WriteAllText(_cachedDbPath, json, Encoding.UTF8);
                     File.WriteAllText(_cloudConfigPath, directUrl, Encoding.UTF8);
                     CloudUrl = directUrl;
-                    _cachedJsonBytes = Encoding.UTF8.GetBytes(json);
-                    ParseMetadataMetrics();
-                    StartBackgroundIndexBuild();
-                    ActiveSource = "Nuvem Sincronizada (Git/Google Drive)";
+
+                    PayloadSnapshot cur = _snapshot;
+                    byte[] htmlRaw = cur != null ? cur.HtmlRaw : ReadEmbeddedResource("index.html");
+                    SwapPayloadSnapshot(htmlRaw, Encoding.UTF8.GetBytes(json), "Nuvem Sincronizada (Git/Google Drive)");
                     message = "Banco atualizado da nuvem (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas)!";
                     return true;
                 }
@@ -1034,20 +1842,28 @@ namespace CondeTreppioLauncher
 
         public bool RecompileLocalConde(out string message)
         {
-            string scriptPath = @"D:\Conde_Treppio\sandbox\gerador_dicionario_integral_sandbox.py";
-            if (!File.Exists(scriptPath))
+            if (!_recompileGate.Wait(0))
             {
-                if (!string.IsNullOrEmpty(CloudUrl))
-                {
-                    return SyncFromCloud(CloudUrl, out message);
-                }
-                ReloadPayloads();
-                message = "Base embutida recarregada (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas).";
+                _recompileGate.Wait();
+                _recompileGate.Release();
+                message = "Recompilacao em andamento aproveitada (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas).";
                 return true;
             }
 
             try
             {
+                string scriptPath = @"D:\Conde_Treppio\sandbox\gerador_dicionario_integral_sandbox.py";
+                if (!File.Exists(scriptPath))
+                {
+                    if (!string.IsNullOrEmpty(CloudUrl))
+                    {
+                        return SyncFromCloud(CloudUrl, out message);
+                    }
+                    ReloadPayloads();
+                    message = "Base embutida recarregada (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas).";
+                    return true;
+                }
+
                 ProcessStartInfo psi = new ProcessStartInfo("python", "\"" + scriptPath + "\"")
                 {
                     UseShellExecute = false,
@@ -1069,51 +1885,95 @@ namespace CondeTreppioLauncher
                 message = "Erro ao recompilar: " + ex.Message;
                 return false;
             }
+            finally
+            {
+                _recompileGate.Release();
+            }
         }
 
         public void Start()
         {
-            int[] candidatePorts = new int[] { 8766, 8767, 8768, 0 };
-            foreach (int p in candidatePorts)
+            int minW, minC;
+            ThreadPool.GetMinThreads(out minW, out minC);
+            ThreadPool.SetMinThreads(Math.Max(minW, 128), Math.Max(minC, 128));
+
+            List<int> candidatePorts = new List<int>();
+            if (PreferredPort > 0) candidatePorts.Add(PreferredPort);
+            candidatePorts.Add(8766);
+            candidatePorts.Add(8767);
+            candidatePorts.Add(8768);
+            candidatePorts.Add(0);
+
+            for (int i = 0; i < candidatePorts.Count; i++)
             {
+                int p = candidatePorts[i];
+                Socket sock = null;
                 try
                 {
-                    _listener = new TcpListener(IPAddress.Loopback, p);
-                    _listener.Start();
-                    Port = ((IPEndPoint)_listener.LocalEndpoint).Port;
+                    sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                    sock.Bind(new IPEndPoint(IPAddress.Loopback, p));
+                    sock.Listen(2048);
+                    _listenerV4 = sock;
+                    Port = ((IPEndPoint)sock.LocalEndPoint).Port;
                     break;
                 }
                 catch
                 {
-                    _listener = null;
+                    if (sock != null) { try { sock.Close(); } catch { } }
                 }
             }
 
+            if (_listenerV4 == null)
+            {
+                throw new InvalidOperationException("Nao foi possivel vincular o servidor HTTP local.");
+            }
+
+            try
+            {
+                Socket sock6 = new Socket(AddressFamily.InterNetworkV6, SocketType.Stream, ProtocolType.Tcp);
+                sock6.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                sock6.Bind(new IPEndPoint(IPAddress.IPv6Loopback, Port));
+                sock6.Listen(2048);
+                _listenerV6 = sock6;
+            }
+            catch
+            {
+                _listenerV6 = null;
+            }
+
             _running = true;
-            _serverThread = new Thread(ListenLoop) { IsBackground = true };
-            _serverThread.Start();
+            StartAcceptLoop(_listenerV4);
+            if (_listenerV6 != null) StartAcceptLoop(_listenerV6);
         }
 
         public void Stop()
         {
             _running = false;
-            try { _listener.Stop(); } catch { }
+            try { if (_listenerV4 != null) _listenerV4.Close(); } catch { }
+            try { if (_listenerV6 != null) _listenerV6.Close(); } catch { }
         }
 
-        private void ListenLoop()
+        private void StartAcceptLoop(Socket listener)
         {
-            while (_running)
+            Task.Run(async () =>
             {
-                try
+                while (_running)
                 {
-                    TcpClient client = _listener.AcceptTcpClient();
-                    ThreadPool.QueueUserWorkItem(HandleClient, client);
+                    Socket client = null;
+                    try
+                    {
+                        client = await Task.Factory.FromAsync<Socket>(listener.BeginAccept, listener.EndAccept, null).ConfigureAwait(false);
+                    }
+                    catch
+                    {
+                        if (!_running) break;
+                        continue;
+                    }
+                    if (client == null) continue;
+                    Task _unused = HandleSocketAsync(client);
                 }
-                catch
-                {
-                    if (!_running) break;
-                }
-            }
+            });
         }
 
         private static string ResolveDownloadArtifact(string relativeName)
@@ -1127,119 +1987,412 @@ namespace CondeTreppioLauncher
             return null;
         }
 
-        private void HandleClient(object state)
+        private static int FindHeaderEnd(byte[] buf, int len)
         {
-            using (TcpClient client = (TcpClient)state)
-            using (NetworkStream stream = client.GetStream())
+            for (int i = 0; i <= len - 4; i++)
             {
-                try
+                if (buf[i] == 13 && buf[i + 1] == 10 && buf[i + 2] == 13 && buf[i + 3] == 10)
                 {
-                    client.ReceiveTimeout = 5000;
-                    client.SendTimeout = 5000;
-                    byte[] buffer = new byte[8192];
-                    int read = stream.Read(buffer, 0, buffer.Length);
-                    if (read <= 0) return;
+                    return i;
+                }
+            }
+            return -1;
+        }
 
-                    string requestText = Encoding.UTF8.GetString(buffer, 0, read);
-                    string[] lines = requestText.Split(new[] { "\r\n" }, StringSplitOptions.None);
-                    if (lines.Length == 0) return;
+        private async Task<int> ReadWithTimeoutAsync(NetworkStream ns, byte[] buf, int offset, int count, int timeoutMs)
+        {
+            Task<int> readTask = ns.ReadAsync(buf, offset, count);
+            Task delayTask = Task.Delay(timeoutMs);
+            Task completed = await Task.WhenAny(readTask, delayTask).ConfigureAwait(false);
+            if (completed != readTask) return -2;
+            return await readTask.ConfigureAwait(false);
+        }
 
-                    string[] firstLine = lines[0].Split(' ');
-                    if (firstLine.Length < 2) return;
-                    string method = firstLine[0].ToUpperInvariant();
-                    string cleanPath = firstLine[1].Split('?')[0];
+        private async Task<HttpParsedRequest> ReadHttpRequestAsync(NetworkStream ns, byte[] buf)
+        {
+            int filled = 0;
+            int headerEnd = -1;
 
-                    if (cleanPath == "/api/db" || cleanPath.EndsWith("/dicionario_formas_expandidas.json"))
+            while (headerEnd < 0)
+            {
+                if (filled >= buf.Length) return null;
+                int n = await ReadWithTimeoutAsync(ns, buf, filled, buf.Length - filled, KeepAliveIdleTimeoutMs).ConfigureAwait(false);
+                if (n <= 0) return null;
+                filled += n;
+                headerEnd = FindHeaderEnd(buf, filled);
+            }
+
+            string headerText = Encoding.ASCII.GetString(buf, 0, headerEnd);
+            string[] lines = headerText.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+            if (lines.Length == 0) return null;
+
+            string[] first = lines[0].Split(' ');
+            if (first.Length < 2) return null;
+
+            HttpParsedRequest req = new HttpParsedRequest();
+            req.Method = first[0].ToUpperInvariant();
+            string rawTarget = first[1];
+            int qIdx = rawTarget.IndexOf('?');
+            req.Path = qIdx >= 0 ? rawTarget.Substring(0, qIdx) : rawTarget;
+            req.Query = qIdx >= 0 ? rawTarget.Substring(qIdx + 1) : "";
+
+            bool isHttp10 = first.Length >= 3 && first[2].Equals("HTTP/1.0", StringComparison.OrdinalIgnoreCase);
+            bool hasConnKeepAlive = false;
+            bool hasConnClose = false;
+            int contentLength = 0;
+
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string line = lines[i];
+                int colon = line.IndexOf(':');
+                if (colon <= 0) continue;
+                string hName = line.Substring(0, colon).Trim();
+                string hVal = line.Substring(colon + 1).Trim();
+
+                if (hName.Equals("Connection", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (hVal.IndexOf("close", StringComparison.OrdinalIgnoreCase) >= 0) hasConnClose = true;
+                    if (hVal.IndexOf("keep-alive", StringComparison.OrdinalIgnoreCase) >= 0) hasConnKeepAlive = true;
+                }
+                else if (hName.Equals("Accept-Encoding", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (hVal.IndexOf("gzip", StringComparison.OrdinalIgnoreCase) >= 0) req.AcceptsGzip = true;
+                }
+                else if (hName.Equals("If-None-Match", StringComparison.OrdinalIgnoreCase))
+                {
+                    req.IfNoneMatch = hVal;
+                }
+                else if (hName.Equals("Content-Length", StringComparison.OrdinalIgnoreCase))
+                {
+                    int cl;
+                    if (int.TryParse(hVal, out cl) && cl > 0) contentLength = Math.Min(cl, 1024 * 1024);
+                }
+            }
+
+            req.KeepAlive = isHttp10 ? (hasConnKeepAlive && !hasConnClose) : !hasConnClose;
+
+            int bodyOffset = headerEnd + 4;
+            int alreadyHave = filled - bodyOffset;
+            if (contentLength > 0)
+            {
+                byte[] bodyBytes = new byte[contentLength];
+                int copyLen = Math.Min(alreadyHave, contentLength);
+                if (copyLen > 0) Buffer.BlockCopy(buf, bodyOffset, bodyBytes, 0, copyLen);
+                int got = copyLen;
+                while (got < contentLength)
+                {
+                    int n = await ReadWithTimeoutAsync(ns, bodyBytes, got, contentLength - got, KeepAliveIdleTimeoutMs).ConfigureAwait(false);
+                    if (n <= 0) break;
+                    got += n;
+                }
+                req.Body = Encoding.UTF8.GetString(bodyBytes, 0, got);
+            }
+            else
+            {
+                req.Body = "";
+            }
+
+            return req;
+        }
+
+        private static string GetQueryParam(string queryString, string key)
+        {
+            if (string.IsNullOrEmpty(queryString)) return "";
+            string[] pairs = queryString.Split('&');
+            for (int i = 0; i < pairs.Length; i++)
+            {
+                string p = pairs[i];
+                int eq = p.IndexOf('=');
+                string k = eq >= 0 ? p.Substring(0, eq) : p;
+                if (k.Equals(key, StringComparison.OrdinalIgnoreCase))
+                {
+                    string v = eq >= 0 ? p.Substring(eq + 1) : "";
+                    return Uri.UnescapeDataString(v.Replace('+', ' '));
+                }
+            }
+            return "";
+        }
+
+        private byte[] BuildHealthJsonBytes()
+        {
+            StringBuilder sb = new StringBuilder(256);
+            sb.Append("{\"ok\":true,\"version\":\"8.5.0\",\"port\":");
+            sb.Append(Port);
+            sb.Append(",\"lexiconReady\":");
+            sb.Append(Lexicon.IsReady ? "true" : "false");
+            sb.Append(",\"totalForms\":");
+            sb.Append(TotalForms);
+            sb.Append(",\"nounsCount\":");
+            sb.Append(NounsCount);
+            sb.Append(",\"verbsCount\":");
+            sb.Append(VerbsCount);
+            sb.Append(",\"adjsCount\":");
+            sb.Append(AdjsCount);
+            sb.Append(",\"advsCount\":");
+            sb.Append(AdvsCount);
+            sb.Append(",\"indexedForms\":");
+            sb.Append(Lexicon.IndexedFormsCount);
+            sb.Append(",\"indexedLemmas\":");
+            sb.Append(Lexicon.IndexedLemmasCount);
+            sb.Append(",\"activeConnections\":");
+            sb.Append(Thread.VolatileRead(ref _activeConnections));
+            sb.Append(",\"activeSource\":\"");
+            sb.Append(TreppioLexiconEngine.EscapeJsonValue(ActiveSource));
+            sb.Append("\"}");
+            return Encoding.UTF8.GetBytes(sb.ToString());
+        }
+
+        private CachedBytePair GetOrBuildCachedApiResponse(string cacheKey, Func<string> jsonBuilder)
+        {
+            CachedBytePair pair;
+            if (_apiLru.TryGet(cacheKey, out pair)) return pair;
+
+            string json = jsonBuilder();
+            byte[] raw = Encoding.UTF8.GetBytes(json);
+            byte[] gz = raw.Length >= 256 ? CompressGzip(raw) : null;
+            if (gz != null && gz.Length >= raw.Length) gz = null;
+
+            pair = new CachedBytePair { Raw = raw, Gzip = gz };
+            _apiLru.Put(cacheKey, pair);
+            return pair;
+        }
+
+        private async Task HandleSocketAsync(Socket sock)
+        {
+            int curConns = Interlocked.Increment(ref _activeConnections);
+            byte[] readBuf = null;
+            try
+            {
+                sock.NoDelay = true;
+                using (sock)
+                using (NetworkStream ns = new NetworkStream(sock, false))
+                {
+                    if (curConns > MaxConcurrentConnections)
                     {
-                        SendResponse(stream, "200 OK", "application/json; charset=utf-8", _cachedJsonBytes);
+                        byte[] busy = Encoding.UTF8.GetBytes("Server busy");
+                        await WriteHttpResponseAsync(ns, "503 Service Unavailable", "text/plain; charset=utf-8", busy, false, null, "no-store", false, false).ConfigureAwait(false);
+                        return;
                     }
-                    else if (cleanPath == "/api/recompilar" && method == "POST")
+
+                    readBuf = RentBuffer();
+                    int reqCount = 0;
+
+                    while (_running && reqCount < MaxKeepAliveRequests)
                     {
-                        string msg;
-                        RecompileLocalConde(out msg);
-                        string body = "{\"status\":\"ok\",\"source\":\"" + EscapeJson(ActiveSource) + "\",\"db\":" + Encoding.UTF8.GetString(_cachedJsonBytes) + "}";
-                        SendResponse(stream, "200 OK", "application/json; charset=utf-8", Encoding.UTF8.GetBytes(body));
-                    }
-                    else if (cleanPath == "/api/cloud-config" && method == "POST")
-                    {
-                        int bodyIdx = requestText.IndexOf("\r\n\r\n");
-                        if (bodyIdx >= 0)
+                        HttpParsedRequest req = await ReadHttpRequestAsync(ns, readBuf).ConfigureAwait(false);
+                        if (req == null) break;
+                        reqCount++;
+
+                        bool keepAlive = req.KeepAlive && reqCount < MaxKeepAliveRequests;
+                        bool isHead = req.Method == "HEAD";
+                        PayloadSnapshot snap = _snapshot;
+                        string path = req.Path;
+
+                        if (path == "/api/health")
                         {
-                            string postBody = requestText.Substring(bodyIdx + 4);
-                            Match m = Regex.Match(postBody, "\"cloud_url\"\\s*:\\s*\"([^\"]+)\"");
-                            if (m.Success)
+                            byte[] healthBytes = BuildHealthJsonBytes();
+                            await WriteHttpResponseAsync(ns, "200 OK", "application/json; charset=utf-8", healthBytes, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/ipa")
+                        {
+                            string q = GetQueryParam(req.Query, "q");
+                            if (string.IsNullOrEmpty(q)) q = "Haly'itror giza in oxej";
+                            string key = "ipa|" + q;
+                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildIpaJson(q));
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/traduzir")
+                        {
+                            string dir = GetQueryParam(req.Query, "dir");
+                            if (string.IsNullOrEmpty(dir)) dir = "pt-tr";
+                            string q = GetQueryParam(req.Query, "q");
+                            string key = Lexicon.Generation + "|tr|" + dir + "|" + q;
+                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildTranslateJson(dir, q));
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/search")
+                        {
+                            string q = GetQueryParam(req.Query, "q");
+                            int limit = 12;
+                            string limStr = GetQueryParam(req.Query, "limit");
+                            int parsedLim;
+                            if (int.TryParse(limStr, out parsedLim) && parsedLim > 0) limit = parsedLim;
+                            string key = Lexicon.Generation + "|sr|" + limit + "|" + q;
+                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildSearchJson(q, limit));
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/db" || path.EndsWith("/dicionario_formas_expandidas.json", StringComparison.OrdinalIgnoreCase))
+                        {
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", snap.JsonRaw, snap.JsonGzip, req.AcceptsGzip, snap.JsonETag, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/dados_dicionario_conde.js")
+                        {
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/javascript; charset=utf-8", snap.DadosJsRaw, snap.DadosJsGzip, req.AcceptsGzip, snap.DadosJsETag, req.IfNoneMatch, "public, max-age=60", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/" || path == "/index.html")
+                        {
+                            await WriteNegotiatedAsync(ns, "200 OK", "text/html; charset=utf-8", snap.HtmlRaw, snap.HtmlGzip, req.AcceptsGzip, snap.HtmlETag, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/recompilar" && req.Method == "POST")
+                        {
+                            string msg;
+                            RecompileLocalConde(out msg);
+                            PayloadSnapshot updated = _snapshot;
+                            byte[] prefix = Encoding.UTF8.GetBytes("{\"status\":\"ok\",\"source\":\"" + TreppioLexiconEngine.EscapeJsonValue(updated.ActiveSource) + "\",\"db\":");
+                            byte[] suffix = Encoding.UTF8.GetBytes("}");
+                            byte[] combined = new byte[prefix.Length + updated.JsonRaw.Length + suffix.Length];
+                            Buffer.BlockCopy(prefix, 0, combined, 0, prefix.Length);
+                            Buffer.BlockCopy(updated.JsonRaw, 0, combined, prefix.Length, updated.JsonRaw.Length);
+                            Buffer.BlockCopy(suffix, 0, combined, prefix.Length + updated.JsonRaw.Length, suffix.Length);
+                            byte[] gzCombined = req.AcceptsGzip ? CompressGzip(combined) : null;
+                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", combined, gzCombined, req.AcceptsGzip, null, null, "no-store", keepAlive, false).ConfigureAwait(false);
+                        }
+                        else if (path == "/api/cloud-config" && req.Method == "POST")
+                        {
+                            if (!string.IsNullOrEmpty(req.Body))
                             {
-                                string msg;
-                                SyncFromCloud(m.Groups[1].Value, out msg);
+                                Match m = Regex.Match(req.Body, "\"cloud_url\"\\s*:\\s*\"([^\"]+)\"");
+                                if (m.Success)
+                                {
+                                    string msg;
+                                    SyncFromCloud(m.Groups[1].Value, out msg);
+                                }
+                            }
+                            byte[] okBytes = Encoding.UTF8.GetBytes("{\"status\":\"ok\"}");
+                            await WriteHttpResponseAsync(ns, "200 OK", "application/json; charset=utf-8", okBytes, false, null, "no-store", keepAlive, false).ConfigureAwait(false);
+                        }
+                        else if (path.StartsWith("/", StringComparison.Ordinal) && snap.Assets.ContainsKey(path.TrimStart('/')))
+                        {
+                            StaticAssetEntry asset = snap.Assets[path.TrimStart('/')];
+                            await WriteNegotiatedAsync(ns, "200 OK", asset.ContentType, asset.RawBytes, asset.GzipBytes, req.AcceptsGzip, asset.ETag, req.IfNoneMatch, asset.CacheControl, keepAlive, isHead).ConfigureAwait(false);
+                        }
+                        else if (path == "/Codice_Treppio_Conde.exe" || path == "/Codice_Treppio_Conde.apk" || path == "/dist/Codice_Treppio_Portatil.html")
+                        {
+                            string diskPath = ResolveDownloadArtifact(path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
+                            if (diskPath != null)
+                            {
+                                string mime = path.EndsWith(".html", StringComparison.OrdinalIgnoreCase) ? "text/html; charset=utf-8" : "application/octet-stream";
+                                await StreamFileResponseAsync(ns, diskPath, mime, keepAlive, isHead).ConfigureAwait(false);
+                            }
+                            else
+                            {
+                                byte[] nf = Encoding.UTF8.GetBytes("Artifact not found");
+                                await WriteHttpResponseAsync(ns, "404 Not Found", "text/plain; charset=utf-8", nf, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
                             }
                         }
-                        SendResponse(stream, "200 OK", "application/json; charset=utf-8", Encoding.UTF8.GetBytes("{\"status\":\"ok\"}"));
-                    }
-                    else if (cleanPath == "/dados_dicionario_conde.js")
-                    {
-                        string js = "window.CONDE_DB = " + Encoding.UTF8.GetString(_cachedJsonBytes) + ";";
-                        SendResponse(stream, "200 OK", "application/javascript; charset=utf-8", Encoding.UTF8.GetBytes(js));
-                    }
-                    else if (cleanPath == "/manifest.json" || cleanPath == "/sw.js" || cleanPath == "/icon-512.png")
-                    {
-                        string fileName = cleanPath.TrimStart('/');
-                        string localAsset = Path.Combine(_localUiDir, fileName);
-                        if (File.Exists(localAsset))
-                        {
-                            string mime = fileName.EndsWith(".json") ? "application/manifest+json; charset=utf-8"
-                                        : fileName.EndsWith(".js") ? "application/javascript; charset=utf-8"
-                                        : "image/png";
-                            SendResponse(stream, "200 OK", mime, File.ReadAllBytes(localAsset));
-                        }
                         else
                         {
-                            SendResponse(stream, "404 Not Found", "text/plain; charset=utf-8", Encoding.UTF8.GetBytes("Not found"));
+                            byte[] nf = Encoding.UTF8.GetBytes("Not found");
+                            await WriteHttpResponseAsync(ns, "404 Not Found", "text/plain; charset=utf-8", nf, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
                         }
-                    }
-                    else if (cleanPath == "/Codice_Treppio_Conde.exe" || cleanPath == "/Codice_Treppio_Conde.apk" || cleanPath == "/dist/Codice_Treppio_Portatil.html")
-                    {
-                        string diskPath = ResolveDownloadArtifact(cleanPath.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
-                        if (diskPath != null)
-                        {
-                            string mime = cleanPath.EndsWith(".html") ? "text/html; charset=utf-8" : "application/octet-stream";
-                            SendResponse(stream, "200 OK", mime, File.ReadAllBytes(diskPath));
-                        }
-                        else
-                        {
-                            SendResponse(stream, "404 Not Found", "text/plain; charset=utf-8", Encoding.UTF8.GetBytes("Artifact not found"));
-                        }
-                    }
-                    else if (cleanPath == "/" || cleanPath == "/index.html")
-                    {
-                        SendResponse(stream, "200 OK", "text/html; charset=utf-8", _cachedHtmlBytes);
-                    }
-                    else
-                    {
-                        SendResponse(stream, "404 Not Found", "text/plain; charset=utf-8", Encoding.UTF8.GetBytes("Not found"));
+
+                        if (!keepAlive) break;
                     }
                 }
-                catch { }
+            }
+            catch { }
+            finally
+            {
+                ReturnBuffer(readBuf);
+                Interlocked.Decrement(ref _activeConnections);
             }
         }
 
-        private static string EscapeJson(string s)
+        private static bool MatchesIfNoneMatch(string ifNoneMatch, string etag)
         {
-            return (s ?? "").Replace("\\", "\\\\").Replace("\"", "\\\"");
+            if (string.IsNullOrEmpty(ifNoneMatch) || string.IsNullOrEmpty(etag)) return false;
+            string trim = ifNoneMatch.Trim();
+            if (trim == "*" || trim == etag) return true;
+            return trim.IndexOf(etag, StringComparison.Ordinal) >= 0;
         }
 
-        private static void SendResponse(NetworkStream stream, string status, string contentType, byte[] body)
+        private static Task WriteNegotiatedAsync(
+            NetworkStream ns,
+            string status,
+            string contentType,
+            byte[] rawBody,
+            byte[] gzipBody,
+            bool acceptsGzip,
+            string etag,
+            string ifNoneMatch,
+            string cacheControl,
+            bool keepAlive,
+            bool isHead)
         {
-            string header =
-                "HTTP/1.1 " + status + "\r\n" +
-                "Content-Type: " + contentType + "\r\n" +
-                "Content-Length: " + body.Length + "\r\n" +
-                "Cache-Control: no-store\r\n" +
-                "Access-Control-Allow-Origin: *\r\n" +
-                "Connection: close\r\n\r\n";
-            byte[] headerBytes = Encoding.UTF8.GetBytes(header);
-            stream.Write(headerBytes, 0, headerBytes.Length);
-            stream.Write(body, 0, body.Length);
-            stream.Flush();
+            if (MatchesIfNoneMatch(ifNoneMatch, etag))
+            {
+                return WriteNotModifiedAsync(ns, etag, cacheControl, keepAlive);
+            }
+
+            bool useGzip = acceptsGzip && gzipBody != null && gzipBody.Length < rawBody.Length;
+            byte[] payload = useGzip ? gzipBody : rawBody;
+            return WriteHttpResponseAsync(ns, status, contentType, payload, useGzip, etag, cacheControl, keepAlive, isHead);
+        }
+
+        private static async Task WriteNotModifiedAsync(NetworkStream ns, string etag, string cacheControl, bool keepAlive)
+        {
+            StringBuilder sb = new StringBuilder(256);
+            sb.Append("HTTP/1.1 304 Not Modified\r\n");
+            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
+            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
+            sb.Append("Vary: Accept-Encoding\r\n");
+            sb.Append("Access-Control-Allow-Origin: *\r\n");
+            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
+            byte[] hdr = Encoding.ASCII.GetBytes(sb.ToString());
+            await ns.WriteAsync(hdr, 0, hdr.Length).ConfigureAwait(false);
+        }
+
+        private static async Task WriteHttpResponseAsync(
+            NetworkStream ns,
+            string status,
+            string contentType,
+            byte[] body,
+            bool isGzip,
+            string etag,
+            string cacheControl,
+            bool keepAlive,
+            bool isHead)
+        {
+            byte[] safeBody = body ?? new byte[0];
+            StringBuilder sb = new StringBuilder(320);
+            sb.Append("HTTP/1.1 "); sb.Append(status); sb.Append("\r\n");
+            sb.Append("Content-Type: "); sb.Append(contentType); sb.Append("\r\n");
+            sb.Append("Content-Length: "); sb.Append(safeBody.Length); sb.Append("\r\n");
+            if (isGzip) sb.Append("Content-Encoding: gzip\r\n");
+            sb.Append("Vary: Accept-Encoding\r\n");
+            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
+            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
+            sb.Append("Access-Control-Allow-Origin: *\r\n");
+            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
+
+            byte[] headerBytes = Encoding.ASCII.GetBytes(sb.ToString());
+            await ns.WriteAsync(headerBytes, 0, headerBytes.Length).ConfigureAwait(false);
+            if (!isHead && safeBody.Length > 0)
+            {
+                await ns.WriteAsync(safeBody, 0, safeBody.Length).ConfigureAwait(false);
+            }
+        }
+
+        private static async Task StreamFileResponseAsync(NetworkStream ns, string diskPath, string contentType, bool keepAlive, bool isHead)
+        {
+            FileInfo fi = new FileInfo(diskPath);
+            StringBuilder sb = new StringBuilder(256);
+            sb.Append("HTTP/1.1 200 OK\r\n");
+            sb.Append("Content-Type: "); sb.Append(contentType); sb.Append("\r\n");
+            sb.Append("Content-Length: "); sb.Append(fi.Length); sb.Append("\r\n");
+            sb.Append("Cache-Control: no-cache\r\n");
+            sb.Append("Access-Control-Allow-Origin: *\r\n");
+            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
+
+            byte[] headerBytes = Encoding.ASCII.GetBytes(sb.ToString());
+            await ns.WriteAsync(headerBytes, 0, headerBytes.Length).ConfigureAwait(false);
+            if (!isHead)
+            {
+                using (FileStream fs = new FileStream(diskPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 65536, FileOptions.Asynchronous | FileOptions.SequentialScan))
+                {
+                    await fs.CopyToAsync(ns, 65536).ConfigureAwait(false);
+                }
+            }
         }
     }
 
@@ -1297,13 +2450,63 @@ namespace CondeTreppioLauncher
         private Label _lblTransIndexStatus;
         private string _lastPrimaryTreppio = "falde et Vé";
 
+        internal static Icon TryLoadFormIcon()
+        {
+            try
+            {
+                Assembly asm = Assembly.GetExecutingAssembly();
+                using (Stream s = asm.GetManifestResourceStream("conde_form_gdi.ico"))
+                {
+                    if (s != null)
+                    {
+                        return new Icon(s);
+                    }
+                }
+                string diskIco = @"D:\Conde_Treppio\sandbox\launcher_exe\conde_form_gdi.ico";
+                if (File.Exists(diskIco)) return new Icon(diskIco);
+                return Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        internal static Image TryLoadCrestImage()
+        {
+            try
+            {
+                Assembly asm = Assembly.GetExecutingAssembly();
+                using (Stream s = asm.GetManifestResourceStream("conde_crest_header.png"))
+                {
+                    if (s != null)
+                    {
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            s.CopyTo(ms);
+                            ms.Position = 0;
+                            return new Bitmap(ms);
+                        }
+                    }
+                }
+                string diskPng = @"D:\Conde_Treppio\sandbox\launcher_exe\conde_crest_header.png";
+                if (File.Exists(diskPng)) return Image.FromFile(diskPng);
+            }
+            catch { }
+            return null;
+        }
+
         public LauncherForm(EmbeddedServer server)
         {
             _server = server;
             _tts = new TreppioTtsService();
+            DoubleBuffered = true;
 
             AutoScaleMode = AutoScaleMode.Dpi;
-            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.4 | /conde)";
+            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.5 | /conde)";
+            Icon formIco = TryLoadFormIcon();
+            if (formIco != null) Icon = formIco;
+
             ClientSize = new Size(880, 620);
             StartPosition = FormStartPosition.CenterScreen;
             BackColor = Color.FromArgb(9, 9, 11);
@@ -1319,19 +2522,35 @@ namespace CondeTreppioLauncher
             Panel goldTopBar = new Panel { Dock = DockStyle.Top, Height = 2, BackColor = Color.FromArgb(212, 175, 55) };
             Panel headerPanel = new Panel { Dock = DockStyle.Top, Height = 78, BackColor = Color.FromArgb(17, 17, 21) };
 
-            Label lblCrest = new Label
+            Control crestControl;
+            Image crestImg = TryLoadCrestImage();
+            if (crestImg != null)
             {
-                Text = "𝓣",
-                Font = new Font("Segoe UI", 18f, FontStyle.Bold),
-                ForeColor = Color.White,
-                BackColor = Color.FromArgb(26, 26, 32),
-                TextAlign = ContentAlignment.MiddleCenter,
-                Size = new Size(48, 48),
-                Location = new Point(22, 15)
-            };
+                crestControl = new PictureBox
+                {
+                    Image = crestImg,
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    BackColor = Color.Transparent,
+                    Size = new Size(52, 52),
+                    Location = new Point(20, 13)
+                };
+            }
+            else
+            {
+                crestControl = new Label
+                {
+                    Text = "C",
+                    Font = new Font("Segoe UI", 18f, FontStyle.Bold),
+                    ForeColor = Color.Gold,
+                    BackColor = Color.FromArgb(26, 26, 32),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Size = new Size(48, 48),
+                    Location = new Point(22, 15)
+                };
+            }
             Label lblTitle = new Label
             {
-                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.4)",
+                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.5)",
                 Font = titleFont,
                 ForeColor = Color.White,
                 AutoSize = true,
@@ -1345,7 +2564,7 @@ namespace CondeTreppioLauncher
                 AutoSize = true,
                 Location = new Point(84, 42)
             };
-            headerPanel.Controls.Add(lblCrest);
+            headerPanel.Controls.Add(crestControl);
             headerPanel.Controls.Add(lblTitle);
             headerPanel.Controls.Add(_lblSubtitle);
 
@@ -1980,16 +3199,60 @@ namespace CondeTreppioLauncher
         {
             try { SetProcessDPIAware(); } catch { }
 
+            bool testHeadless = false;
+            bool serveOnly = false;
+            int requestedPort = 0;
+
+            if (args != null)
+            {
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i] == "--test-headless") testHeadless = true;
+                    else if (args[i] == "--serve-only") serveOnly = true;
+                    else if (args[i] == "--port" && i + 1 < args.Length)
+                    {
+                        int p;
+                        if (int.TryParse(args[++i], out p) && p >= 0) requestedPort = p;
+                    }
+                }
+            }
+
             EmbeddedServer server = new EmbeddedServer();
+            if (requestedPort > 0) server.PreferredPort = requestedPort;
             server.Start();
 
-            if (args != null && args.Length > 0 && args[0] == "--test-headless")
+            if (serveOnly)
+            {
+                for (int waitMs = 0; waitMs < 20000 && !server.Lexicon.IsReady; waitMs += 25)
+                {
+                    Thread.Sleep(25);
+                }
+                Console.WriteLine(string.Format(
+                    "SERVE_ONLY_READY PORT={0} READY={1} FORMS={2} LEMMAS={3}",
+                    server.Port, server.Lexicon.IsReady, server.Lexicon.IndexedFormsCount, server.Lexicon.IndexedLemmasCount
+                ));
+                Console.Out.Flush();
+
+                using (ManualResetEventSlim stopGate = new ManualResetEventSlim(false))
+                {
+                    Console.CancelKeyPress += (s, e) =>
+                    {
+                        e.Cancel = true;
+                        stopGate.Set();
+                    };
+                    stopGate.Wait();
+                }
+                server.Stop();
+                return 0;
+            }
+
+            if (testHeadless)
             {
                 try
                 {
-                    for (int waitMs = 0; waitMs < 15000 && !server.Lexicon.IsReady; waitMs += 50)
+                    for (int waitMs = 0; waitMs < 20000 && !server.Lexicon.IsReady; waitMs += 25)
                     {
-                        Thread.Sleep(50);
+                        Thread.Sleep(25);
                     }
                     bool hapOk = TreppioLexiconEngine.ApplyHaplology("vevar") == "ve'ar"
                               && TreppioLexiconEngine.ApplyHaplology("Treppenína") == "Treppení'a"
@@ -2001,15 +3264,66 @@ namespace CondeTreppioLauncher
                     string trOut = server.Lexicon.TranslateTrToPtReport("in faldem");
                     bool transOk = server.Lexicon.IsReady && prim.Trim().Equals("falde", StringComparison.OrdinalIgnoreCase) && ptOut.IndexOf("falde", StringComparison.OrdinalIgnoreCase) >= 0 && trOut.IndexOf("Preposição", StringComparison.OrdinalIgnoreCase) >= 0;
 
+                    bool iconOk = false;
+                    using (Icon fIco = LauncherForm.TryLoadFormIcon())
+                    {
+                        iconOk = (fIco != null && fIco.Width >= 16);
+                    }
+                    bool crestOk = false;
+                    using (Image crImg = LauncherForm.TryLoadCrestImage())
+                    {
+                        crestOk = (crImg != null && crImg.Width >= 32);
+                    }
+
                     using (WebClient wc = new WebClient())
                     {
                         wc.Encoding = Encoding.UTF8;
-                        string dbJson = wc.DownloadString("http://127.0.0.1:" + server.Port + "/api/db");
+                        string baseUrl = "http://127.0.0.1:" + server.Port;
+                        string dbJson = wc.DownloadString(baseUrl + "/api/db");
                         bool validDb = dbJson.Contains("\"substantivos\"") && dbJson.Contains("\"verbos_quadripartite\"");
+
+                        string healthJson = wc.DownloadString(baseUrl + "/api/health");
+                        string ipaJson = wc.DownloadString(baseUrl + "/api/ipa?q=vevar");
+                        string apiTransJson = wc.DownloadString(baseUrl + "/api/traduzir?dir=pt-tr&q=" + Uri.EscapeDataString("pão"));
+                        string apiSearchJson = wc.DownloadString(baseUrl + "/api/search?q=falde&limit=5");
+                        bool apisOk = healthJson.Contains("\"ok\":true")
+                                   && ipaJson.Contains("\"ipa\"")
+                                   && apiTransJson.Contains("falde")
+                                   && apiSearchJson.Contains("falde");
+
+                        HttpWebRequest gzReq = (HttpWebRequest)WebRequest.Create(baseUrl + "/dados_dicionario_conde.js");
+                        gzReq.Headers.Add("Accept-Encoding", "gzip");
+                        string etag = "";
+                        bool gzipJsOk = false;
+                        using (HttpWebResponse gzResp = (HttpWebResponse)gzReq.GetResponse())
+                        {
+                            etag = gzResp.Headers["ETag"] ?? "";
+                            gzipJsOk = gzResp.StatusCode == HttpStatusCode.OK && (gzResp.ContentEncoding ?? "").IndexOf("gzip", StringComparison.OrdinalIgnoreCase) >= 0;
+                        }
+
+                        bool etag304Ok = false;
+                        if (!string.IsNullOrEmpty(etag))
+                        {
+                            HttpWebRequest req304 = (HttpWebRequest)WebRequest.Create(baseUrl + "/dados_dicionario_conde.js");
+                            req304.Headers.Add("If-None-Match", etag);
+                            try
+                            {
+                                using (HttpWebResponse resp304 = (HttpWebResponse)req304.GetResponse())
+                                {
+                                    etag304Ok = ((int)resp304.StatusCode == 304);
+                                }
+                            }
+                            catch (WebException wex304)
+                            {
+                                HttpWebResponse r304 = wex304.Response as HttpWebResponse;
+                                if (r304 != null && (int)r304.StatusCode == 304) etag304Ok = true;
+                            }
+                        }
+
                         bool notFoundOk = false;
                         try
                         {
-                            wc.DownloadString("http://127.0.0.1:" + server.Port + "/nao_existe_404.png");
+                            wc.DownloadString(baseUrl + "/nao_existe_404.png");
                         }
                         catch (WebException wex)
                         {
@@ -2017,10 +3331,10 @@ namespace CondeTreppioLauncher
                             if (resp != null && (int)resp.StatusCode == 404) notFoundOk = true;
                         }
 
-                        bool allOk = validDb && hapOk && transOk && notFoundOk;
+                        bool allOk = validDb && hapOk && transOk && iconOk && crestOk && apisOk && gzipJsOk && etag304Ok && notFoundOk;
                         string msg = string.Format(
-                            "TEST_HEADLESS_OK={0} DB={1} HAPLO_TTS={2} TRANS={3} HTTP404={4} PORT={5} BYTES={6} FORMS={7} LEMMAS={8} SOURCE={9}",
-                            allOk, validDb, hapOk, transOk, notFoundOk, server.Port, dbJson.Length, server.TotalForms, server.Lexicon.IndexedLemmasCount, server.ActiveSource
+                            "TEST_HEADLESS_OK={0} DB={1} HAPLO_TTS={2} TRANS={3} ICON={4} CREST={5} APIS={6} GZIP_JS={7} ETAG304={8} HTTP404={9} PORT={10} BYTES={11} FORMS={12} LEMMAS={13} SOURCE={14}",
+                            allOk, validDb, hapOk, transOk, iconOk, crestOk, apisOk, gzipJsOk, etag304Ok, notFoundOk, server.Port, dbJson.Length, server.TotalForms, server.Lexicon.IndexedLemmasCount, server.ActiveSource
                         );
                         Console.WriteLine(msg);
                         try
