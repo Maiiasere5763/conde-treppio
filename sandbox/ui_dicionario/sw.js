@@ -1,9 +1,10 @@
-// Service Worker do Códice Tréppio (V8.5 - Brasão do Conde, Cache Rápido & Zero Bloqueio)
-const CACHE_NAME = 'treppio-v8-5-cache-brasao';
+// Service Worker do Códice Tréppio (V9.0 - Brasão Vetorizado, Cache Compacto & Zero Bloqueio)
+const CACHE_NAME = 'treppio-v9-0-cache-vector';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './dados_dicionario_conde.js?v=8.5.0',
+  './brasao_conde.svg',
+  './dados_dicionario_conde.js?v=9.0.0',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',

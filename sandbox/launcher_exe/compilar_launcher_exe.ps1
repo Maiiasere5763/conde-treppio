@@ -84,6 +84,7 @@ $OptRes = @{
     "favicon.ico"            = $FaviconRes
     "conde_form_gdi.ico"     = $FormGdiIco
     "conde_crest_header.png" = $CrestPng
+    "brasao_conde.svg"       = (Join-Path $UiDir "brasao_conde.svg")
 }
 foreach ($k in $OptRes.Keys) {
     $p = $OptRes[$k]

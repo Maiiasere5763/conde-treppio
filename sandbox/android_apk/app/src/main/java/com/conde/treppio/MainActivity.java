@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -50,7 +51,9 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private static final String VIRTUAL_ORIGIN = "https://" + VIRTUAL_HOST + "/";
 
     private WebView mWebView;
+    private FrameLayout mRootLayout;
     private LinearLayout mSplashOverlay;
+    private ImageView mSplashCrest;
     private volatile boolean mSplashDismissed = false;
     private TextToSpeech mTts;
     private boolean mTtsReady = false;
@@ -79,39 +82,39 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         } catch (Exception ignored) {
         }
 
-        // Container raiz com WebView + Splash Overlay Nativo (Brasão do Conde & Obsidiana)
-        FrameLayout rootLayout = new FrameLayout(this);
-        rootLayout.setBackgroundColor(Color.parseColor("#09090b"));
+        // Container raiz com WebView + Splash Overlay Nativo (Brasão Vetorizado & Obsidiana)
+        mRootLayout = new FrameLayout(this);
+        mRootLayout.setBackgroundColor(Color.parseColor("#09090b"));
 
         mWebView = new WebView(this);
         mWebView.setBackgroundColor(Color.parseColor("#09090b"));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mWebView.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, false);
         }
-        rootLayout.addView(mWebView, new FrameLayout.LayoutParams(
+        mRootLayout.addView(mWebView, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
         ));
 
         mSplashOverlay = buildImperialSplashOverlay();
-        rootLayout.addView(mSplashOverlay, new FrameLayout.LayoutParams(
+        mRootLayout.addView(mSplashOverlay, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
         ));
 
-        setContentView(rootLayout);
+        setContentView(mRootLayout);
 
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
-        settings.setDatabaseEnabled(true);
+        settings.setDatabaseEnabled(false);
         settings.setAllowFileAccess(false);
         settings.setAllowContentAccess(false);
         settings.setLoadWithOverviewMode(true);
         settings.setUseWideViewPort(true);
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
-        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
         // Registrar ponte JavaScript nativa (TTS, Clipboard, onUiReady)
         mWebView.addJavascriptInterface(new AndroidCondeBridge(), "AndroidCondeBridge");
@@ -226,7 +229,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Access-Control-Allow-Origin", "*");
-        headers.put("Cache-Control", "public, max-age=3600");
+        headers.put("Cache-Control", "no-store");
 
         try {
             if ("dados_dicionario_conde.js".equals(path)) {
@@ -246,6 +249,9 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             String encoding = null;
             if (path.endsWith(".html")) {
                 mime = "text/html";
+                encoding = "UTF-8";
+            } else if (path.endsWith(".svg")) {
+                mime = "image/svg+xml";
                 encoding = "UTF-8";
             } else if (path.endsWith(".js")) {
                 mime = "application/javascript";
@@ -274,7 +280,18 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     .withEndAction(new Runnable() {
                         @Override
                         public void run() {
-                            if (mSplashOverlay != null) mSplashOverlay.setVisibility(View.GONE);
+                            if (mSplashCrest != null) {
+                                mSplashCrest.setImageDrawable(null);
+                                mSplashCrest = null;
+                            }
+                            if (mSplashOverlay != null) {
+                                mSplashOverlay.setVisibility(View.GONE);
+                                mSplashOverlay.removeAllViews();
+                                if (mRootLayout != null) {
+                                    mRootLayout.removeView(mSplashOverlay);
+                                }
+                                mSplashOverlay = null;
+                            }
                         }
                     })
                     .start();
@@ -289,11 +306,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         int pad = dpToPx(32);
         splash.setPadding(pad, pad, pad, pad);
 
-        ImageView crest = new ImageView(this);
-        crest.setImageResource(R.drawable.brasao_conde_splash);
-        crest.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        mSplashCrest = new ImageView(this);
+        mSplashCrest.setImageResource(R.drawable.brasao_conde_vector);
+        mSplashCrest.setScaleType(ImageView.ScaleType.FIT_CENTER);
         LinearLayout.LayoutParams crestLp = new LinearLayout.LayoutParams(dpToPx(116), dpToPx(116));
-        splash.addView(crest, crestLp);
+        splash.addView(mSplashCrest, crestLp);
 
         TextView title = new TextView(this);
         title.setText("CÓDICE IMPERIAL TRÉPPIO");
@@ -309,7 +326,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         splash.addView(title, titleLp);
 
         TextView sub = new TextView(this);
-        sub.setText("Era Clássica V8.5 • Brasão do Conde • 246.737 Formas");
+        sub.setText("Era Clássica V9.0 • Brasão Vetorizado • 246.737 Formas");
         sub.setTextColor(Color.parseColor("#9da9c5"));
         sub.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
         sub.setGravity(Gravity.CENTER);
@@ -483,6 +500,23 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     }
 
     @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        if (level >= ComponentCallbacks2.TRIM_MEMORY_UI_HIDDEN && !isFinishing() && !isDestroyed()) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (mWebView != null && !isFinishing() && !isDestroyed()) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                            mWebView.evaluateJavascript("if(window.__condeTrimMemory)window.__condeTrimMemory();", null);
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    @Override
     protected void onDestroy() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && mBackCallback != null) {
             try {
@@ -499,7 +533,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         }
         if (mWebView != null) {
             mWebView.destroy();
+            mWebView = null;
         }
+        mRootLayout = null;
+        mSplashOverlay = null;
+        mSplashCrest = null;
         super.onDestroy();
     }
 }

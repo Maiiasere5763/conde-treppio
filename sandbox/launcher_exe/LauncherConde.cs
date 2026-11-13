@@ -9,6 +9,7 @@ using System.IO.Compression;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Speech.Synthesis;
@@ -18,11 +19,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V8.5)")]
-[assembly: AssemblyDescription("Launcher Executavel, Servidor HTTP/1.1 Async Keep-Alive, Brasao do Conde, Pronuncia IPA e Tradutor TR-PT (/conde)")]
+[assembly: AssemblyTitle("Codice Lexicografico Imperial da Lingua Treppia (V9.0)")]
+[assembly: AssemblyDescription("Launcher Executavel, Servidor HTTP/1.1 IOCP C10K/C100K Keep-Alive, Brasao do Conde Vetorizado, Pronuncia IPA e Tradutor TR-PT (/conde)")]
 [assembly: AssemblyCompany("Chancelaria Imperial de Treppenia")]
-[assembly: AssemblyProduct("Codice Treppio Conde V8.5")]
-[assembly: AssemblyVersion("8.5.0.0")]
+[assembly: AssemblyProduct("Codice Treppio Conde V9.0")]
+[assembly: AssemblyVersion("9.0.0.0")]
 
 namespace CondeTreppioLauncher
 {
@@ -64,12 +65,196 @@ namespace CondeTreppioLauncher
             "Pontius", "Pilatus", "Eä", "Ilúvatar", "Ainur", "Valar"
         };
 
+        private struct LemmaRecord
+        {
+            public int TreppioLoc;
+            public int TreppioLen;
+            public int AltTreppioLoc;
+            public int AltTreppioLen;
+            public int PtLoc;
+            public int PtLen;
+            public int PtNormLoc;
+            public int PtNormLen;
+            public int PtHeadLen;
+            public int ClassLoc;
+            public int ClassLen;
+            public int DetailLoc;
+            public int DetailLen;
+            public int Boost;
+        }
+
+        private sealed class PagedIntArray
+        {
+            private const int PageSize = 16384; // 64 KB (< 85 KB LOH threshold)
+            private const int PageShift = 14;
+            private const int PageMask = 0x3FFF;
+            private readonly List<int[]> _pages = new List<int[]>();
+            private int _count;
+
+            public int Count { get { return _count; } }
+
+            public PagedIntArray() { }
+
+            public PagedIntArray(int fixedSize)
+            {
+                InitZero(fixedSize);
+            }
+
+            public void InitZero(int fixedSize)
+            {
+                _pages.Clear();
+                int numPages = (fixedSize + PageMask) >> PageShift;
+                for (int i = 0; i < numPages; i++)
+                {
+                    _pages.Add(new int[PageSize]);
+                }
+                _count = fixedSize;
+            }
+
+            public int this[int index]
+            {
+                get { return _pages[index >> PageShift][index & PageMask]; }
+                set { _pages[index >> PageShift][index & PageMask] = value; }
+            }
+
+            public int Add(int value)
+            {
+                int idx = _count;
+                int pageIdx = idx >> PageShift;
+                if (pageIdx >= _pages.Count)
+                {
+                    _pages.Add(new int[PageSize]);
+                }
+                _pages[pageIdx][idx & PageMask] = value;
+                _count = idx + 1;
+                return idx;
+            }
+        }
+
+        private sealed class PagedByteArena
+        {
+            private const int BlockSize = 65536; // 64 KB (< 85 KB LOH threshold)
+            private readonly List<byte[]> _blocks = new List<byte[]>();
+            private int _curBlock = -1;
+            private int _curOff = BlockSize;
+
+            public int AppendRaw(byte[] src, int srcOff, int len)
+            {
+                if (src == null || len <= 0) return -1;
+                if (_curBlock < 0 || len > BlockSize - _curOff)
+                {
+                    byte[] nb = new byte[len > BlockSize ? len : BlockSize];
+                    _blocks.Add(nb);
+                    _curBlock = _blocks.Count - 1;
+                    _curOff = 0;
+                }
+                int loc = (_curBlock << 16) | _curOff;
+                Buffer.BlockCopy(src, srcOff, _blocks[_curBlock], _curOff, len);
+                _curOff = (len > BlockSize) ? BlockSize : (_curOff + len);
+                return loc;
+            }
+
+            public int AppendLenPrefixed(byte[] src, int srcOff, int len, out int storedLen)
+            {
+                storedLen = 0;
+                if (src == null || len <= 0) return -1;
+                int safeLen = len > 254 ? 254 : len;
+                int need = safeLen + 1;
+                if (_curBlock < 0 || need > BlockSize - _curOff)
+                {
+                    _blocks.Add(new byte[BlockSize]);
+                    _curBlock = _blocks.Count - 1;
+                    _curOff = 0;
+                }
+                int loc = (_curBlock << 16) | _curOff;
+                byte[] blk = _blocks[_curBlock];
+                blk[_curOff] = (byte)safeLen;
+                Buffer.BlockCopy(src, srcOff, blk, _curOff + 1, safeLen);
+                _curOff += need;
+                storedLen = safeLen;
+                return loc;
+            }
+
+            public string Decode(int loc, int len)
+            {
+                if (loc < 0 || len <= 0) return "";
+                return Encoding.UTF8.GetString(_blocks[loc >> 16], loc & 0xFFFF, len);
+            }
+
+            public void GetSlice(int loc, out byte[] block, out int offset)
+            {
+                block = _blocks[loc >> 16];
+                offset = loc & 0xFFFF;
+            }
+
+            public bool RawEquals(int loc, int locLen, byte[] other, int off, int len)
+            {
+                if (locLen != len) return false;
+                byte[] blk = _blocks[loc >> 16];
+                int p = loc & 0xFFFF;
+                for (int i = 0; i < len; i++)
+                {
+                    if (blk[p + i] != other[off + i]) return false;
+                }
+                return true;
+            }
+
+            public bool KeyEquals(int loc, byte[] q, int qOff, int qLen)
+            {
+                byte[] blk = _blocks[loc >> 16];
+                int p = loc & 0xFFFF;
+                if (blk[p] != qLen) return false;
+                p++;
+                for (int i = 0; i < qLen; i++)
+                {
+                    if (blk[p + i] != q[qOff + i]) return false;
+                }
+                return true;
+            }
+
+            public uint HashFormAt(int loc)
+            {
+                byte[] blk = _blocks[loc >> 16];
+                int p = loc & 0xFFFF;
+                return ComputeFnv1a(blk, p + 1, blk[p]);
+            }
+        }
+
+        private static uint ComputeFnv1a(byte[] b, int off, int len)
+        {
+            uint h = 2166136261u;
+            int end = off + len;
+            for (int i = off; i < end; i++)
+            {
+                h ^= b[i];
+                h *= 16777619u;
+            }
+            return h;
+        }
+
         private sealed class LexiconSnapshot
         {
-            public List<LexEntry> PtEntries = new List<LexEntry>();
-            public Dictionary<string, List<int>> PtTokenMap = new Dictionary<string, List<int>>(StringComparer.Ordinal);
-            public Dictionary<string, List<int>> PtStemMap = new Dictionary<string, List<int>>(StringComparer.Ordinal);
-            public Dictionary<string, List<LexEntry>> TrReverse = new Dictionary<string, List<LexEntry>>(StringComparer.OrdinalIgnoreCase);
+            public readonly PagedByteArena TextArena = new PagedByteArena();
+            public readonly PagedByteArena FormArena = new PagedByteArena();
+            public readonly List<LemmaRecord> Lemmas = new List<LemmaRecord>();
+
+            public readonly Dictionary<string, int> PtTokenHead = new Dictionary<string, int>(StringComparer.Ordinal);
+            public readonly Dictionary<string, int> PtStemHead = new Dictionary<string, int>(StringComparer.Ordinal);
+            public readonly PagedIntArray PtPostLemma = new PagedIntArray();
+            public readonly PagedIntArray PtPostNext = new PagedIntArray();
+
+            public PagedIntArray TrBucketHead = new PagedIntArray(1024);
+            public int TrBucketMask = 1023;
+            public readonly PagedIntArray TrKeyNext = new PagedIntArray();
+            public readonly PagedIntArray TrKeyFormLoc = new PagedIntArray();
+            public readonly PagedIntArray TrKeyHitHeadAndCount = new PagedIntArray(); // bits 28..31 = count (0..8), bits 0..27 = hitId + 1
+            public int TrUniqueKeysCount;
+
+            public readonly PagedIntArray HitLemmaAndAlt = new PagedIntArray(); // bit 31 = useAltTreppio, bits 0..30 = lemmaIdx
+            public readonly PagedIntArray HitDetailLoc = new PagedIntArray();
+            public readonly PagedIntArray HitDetailLen = new PagedIntArray();
+            public readonly PagedIntArray HitNext = new PagedIntArray(); // hitId + 1
+
             public Dictionary<string, string> CorpusByTreppio = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             public int IndexedFormsCount;
             public int IndexedLemmasCount;
@@ -343,94 +528,397 @@ namespace CondeTreppioLauncher
             return q;
         }
 
-        private static void IndexBucket(Dictionary<string, List<int>> map, string key, int entryIdx)
+        private struct TempPostList
         {
-            if (string.IsNullOrEmpty(key)) return;
-            List<int> bucket;
-            if (!map.TryGetValue(key, out bucket))
+            public int Head;
+            public int Tail;
+        }
+
+        private sealed class Utf8StringPool
+        {
+            private readonly PagedByteArena _arena;
+            private int[] _buckets;
+            private int[] _next;
+            private int[] _locs;
+            private int[] _lens;
+            private int _count;
+
+            public Utf8StringPool(PagedByteArena arena)
             {
-                bucket = new List<int>(4);
-                map[key] = bucket;
+                _arena = arena;
+                _buckets = new int[4096];
+                _next = new int[4096];
+                _locs = new int[4096];
+                _lens = new int[4096];
             }
-            if (bucket.Count == 0 || bucket[bucket.Count - 1] != entryIdx)
+
+            public void InternBytes(byte[] src, int off, int len, out int outLoc, out int outLen)
             {
-                bucket.Add(entryIdx);
+                if (src == null || len <= 0)
+                {
+                    outLoc = -1;
+                    outLen = 0;
+                    return;
+                }
+                uint h = ComputeFnv1a(src, off, len);
+                int mask = _buckets.Length - 1;
+                int b = (int)(h & (uint)mask);
+                int cur = _buckets[b];
+                while (cur != 0)
+                {
+                    int idx = cur - 1;
+                    if (_arena.RawEquals(_locs[idx], _lens[idx], src, off, len))
+                    {
+                        outLoc = _locs[idx];
+                        outLen = _lens[idx];
+                        return;
+                    }
+                    cur = _next[idx];
+                }
+
+                if (_count >= _next.Length)
+                {
+                    int newCap = _next.Length << 1;
+                    Array.Resize(ref _next, newCap);
+                    Array.Resize(ref _locs, newCap);
+                    Array.Resize(ref _lens, newCap);
+                }
+                if (_count * 10 > _buckets.Length * 7)
+                {
+                    int newBuckCap = _buckets.Length << 1;
+                    int[] nb = new int[newBuckCap];
+                    int nMask = newBuckCap - 1;
+                    for (int i = 0; i < _count; i++)
+                    {
+                        byte[] blk;
+                        int p;
+                        _arena.GetSlice(_locs[i], out blk, out p);
+                        uint ih = ComputeFnv1a(blk, p, _lens[i]);
+                        int ib = (int)(ih & (uint)nMask);
+                        _next[i] = nb[ib];
+                        nb[ib] = i + 1;
+                    }
+                    _buckets = nb;
+                    mask = nMask;
+                    b = (int)(h & (uint)mask);
+                }
+
+                int loc = _arena.AppendRaw(src, off, len);
+                int id = _count++;
+                _locs[id] = loc;
+                _lens[id] = len;
+                _next[id] = _buckets[b];
+                _buckets[b] = id + 1;
+                outLoc = loc;
+                outLen = len;
+            }
+
+            public void InternString(string s, ref byte[] scratch, out int outLoc, out int outLen)
+            {
+                if (string.IsNullOrEmpty(s))
+                {
+                    outLoc = -1;
+                    outLen = 0;
+                    return;
+                }
+                int maxBytes = Encoding.UTF8.GetMaxByteCount(s.Length);
+                if (scratch == null || scratch.Length < maxBytes) scratch = new byte[Math.Max(256, maxBytes)];
+                int len = Encoding.UTF8.GetBytes(s, 0, s.Length, scratch, 0);
+                InternBytes(scratch, 0, len, out outLoc, out outLen);
             }
         }
 
-        private static void AddPtEntry(LexiconSnapshot snap, string treppio, string ptMeaning, string classTag, string detail, int boost)
+        private static void IndexPtPost(
+            LexiconSnapshot snap,
+            Dictionary<string, TempPostList> buildMap,
+            Dictionary<string, int> headMap,
+            string key,
+            int lemmaIdx)
         {
-            if (string.IsNullOrEmpty(treppio) || string.IsNullOrEmpty(ptMeaning)) return;
+            if (string.IsNullOrEmpty(key)) return;
+            TempPostList lst;
+            if (!buildMap.TryGetValue(key, out lst))
+            {
+                int pid = snap.PtPostLemma.Add(lemmaIdx);
+                snap.PtPostNext.Add(0);
+                int pPlus1 = pid + 1;
+                lst.Head = pPlus1;
+                lst.Tail = pPlus1;
+                buildMap[key] = lst;
+                headMap[key] = pPlus1;
+                return;
+            }
+            int tailIdx = lst.Tail - 1;
+            if (snap.PtPostLemma[tailIdx] != lemmaIdx)
+            {
+                int pid = snap.PtPostLemma.Add(lemmaIdx);
+                snap.PtPostNext.Add(0);
+                int pPlus1 = pid + 1;
+                snap.PtPostNext[tailIdx] = pPlus1;
+                lst.Tail = pPlus1;
+                buildMap[key] = lst;
+            }
+        }
+
+        private static int AddPtEntry(
+            LexiconSnapshot snap,
+            Utf8StringPool pool,
+            Dictionary<string, TempPostList> buildTokenMap,
+            Dictionary<string, TempPostList> buildStemMap,
+            ref byte[] scratch,
+            string treppio,
+            string altTreppio,
+            string ptMeaning,
+            string classTag,
+            string detail,
+            int boost)
+        {
+            if (string.IsNullOrEmpty(treppio) || string.IsNullOrEmpty(ptMeaning)) return -1;
             string norm = StripAccents(ptMeaning).Trim();
             int sepIdx = norm.IndexOfAny(new char[] { ',', ';', '(' });
             string head = (sepIdx >= 0 ? norm.Substring(0, sepIdx) : norm).Trim();
-            string[] headWords = SplitAlphaNum(head);
-            string[] words = SplitAlphaNum(norm);
 
-            int idx = snap.PtEntries.Count;
-            snap.PtEntries.Add(new LexEntry
+            int trLoc, trLen, altLoc, altLen, ptLoc, ptLen, normLoc, normLen, clLoc, clLen, dtLoc, dtLen;
+            pool.InternString(treppio, ref scratch, out trLoc, out trLen);
+            if (string.IsNullOrEmpty(altTreppio) || altTreppio == treppio)
             {
-                Treppio = treppio,
-                PtMeaning = ptMeaning,
-                PtNorm = norm,
-                PtHead = head,
-                HeadWords = headWords,
-                Words = words,
-                ClassTag = classTag,
-                Detail = detail ?? "",
+                altLoc = trLoc;
+                altLen = trLen;
+            }
+            else
+            {
+                pool.InternString(altTreppio, ref scratch, out altLoc, out altLen);
+            }
+            pool.InternString(ptMeaning, ref scratch, out ptLoc, out ptLen);
+            pool.InternString(norm, ref scratch, out normLoc, out normLen);
+            int headByteLen = string.IsNullOrEmpty(head) ? 0 : Encoding.UTF8.GetByteCount(head);
+            if (headByteLen > normLen) headByteLen = normLen;
+
+            pool.InternString(classTag, ref scratch, out clLoc, out clLen);
+            pool.InternString(detail ?? "", ref scratch, out dtLoc, out dtLen);
+
+            int idx = snap.Lemmas.Count;
+            snap.Lemmas.Add(new LemmaRecord
+            {
+                TreppioLoc = trLoc,
+                TreppioLen = trLen,
+                AltTreppioLoc = altLoc,
+                AltTreppioLen = altLen,
+                PtLoc = ptLoc,
+                PtLen = ptLen,
+                PtNormLoc = normLoc,
+                PtNormLen = normLen,
+                PtHeadLen = headByteLen,
+                ClassLoc = clLoc,
+                ClassLen = clLen,
+                DetailLoc = dtLoc,
+                DetailLen = dtLen,
                 Boost = boost
             });
 
-            IndexBucket(snap.PtTokenMap, norm, idx);
-            if (!string.IsNullOrEmpty(head)) IndexBucket(snap.PtTokenMap, head, idx);
-            for (int i = 0; i < words.Length; i++)
+            IndexPtPost(snap, buildTokenMap, snap.PtTokenHead, norm, idx);
+            if (!string.IsNullOrEmpty(head)) IndexPtPost(snap, buildTokenMap, snap.PtTokenHead, head, idx);
+
+            int start = -1;
+            for (int i = 0; i < norm.Length; i++)
             {
-                string w = words[i];
-                IndexBucket(snap.PtTokenMap, w, idx);
-                if (w.Length >= 3)
+                char ch = norm[i];
+                bool isAlnum = (ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9');
+                if (isAlnum)
                 {
-                    IndexBucket(snap.PtStemMap, w.Substring(0, 3), idx);
+                    if (start < 0) start = i;
+                }
+                else if (start >= 0)
+                {
+                    string w = norm.Substring(start, i - start);
+                    IndexPtPost(snap, buildTokenMap, snap.PtTokenHead, w, idx);
+                    if (w.Length >= 3) IndexPtPost(snap, buildStemMap, snap.PtStemHead, w.Substring(0, 3), idx);
+                    start = -1;
                 }
             }
+            if (start >= 0)
+            {
+                string w = norm.Substring(start);
+                IndexPtPost(snap, buildTokenMap, snap.PtTokenHead, w, idx);
+                if (w.Length >= 3) IndexPtPost(snap, buildStemMap, snap.PtStemHead, w.Substring(0, 3), idx);
+            }
+            return idx;
         }
 
-        private static void AddTrForm(Dictionary<string, List<LexEntry>> rev, ref int count, string formStr, LexEntry template)
+        private static int NormalizeFormKeyUtf8(byte[] src, int srcOff, int srcLen, ref byte[] dst)
+        {
+            if (src == null || srcLen <= 0) return 0;
+            if (dst == null || dst.Length < srcLen + 16) dst = new byte[Math.Max(256, srcLen + 32)];
+            int s = srcOff;
+            int e = srcOff + srcLen;
+            while (s < e && (src[s] <= 0x20 || src[s] == (byte)'!' || src[s] == (byte)'?')) s++;
+            while (e > s && (src[e - 1] <= 0x20 || src[e - 1] == (byte)'!' || src[e - 1] == (byte)'?')) e--;
+            if (s >= e) return 0;
+
+            int o = 0;
+            for (int i = s; i < e; i++)
+            {
+                byte b = src[i];
+                if (b == (byte)'!' || b == (byte)'?') continue;
+                if (b >= (byte)'A' && b <= (byte)'Z')
+                {
+                    dst[o++] = (byte)(b + 32);
+                }
+                else if (b < 0x80)
+                {
+                    dst[o++] = b;
+                }
+                else if (b == 0xC3 && i + 1 < e)
+                {
+                    byte b2 = src[i + 1];
+                    dst[o++] = 0xC3;
+                    if (b2 >= 0x80 && b2 <= 0x9E && b2 != 0x97) dst[o++] = (byte)(b2 + 0x20);
+                    else dst[o++] = b2;
+                    i++;
+                }
+                else
+                {
+                    // Rare non-Latin-1 multibyte char: fallback to full Unicode lowercasing
+                    string cleaned = Encoding.UTF8.GetString(src, s, e - s).Replace("!", "").Replace("?", "").Trim().ToLowerInvariant();
+                    if (string.IsNullOrEmpty(cleaned)) return 0;
+                    int need = Encoding.UTF8.GetMaxByteCount(cleaned.Length);
+                    if (dst.Length < need) dst = new byte[need];
+                    o = Encoding.UTF8.GetBytes(cleaned, 0, cleaned.Length, dst, 0);
+                    return o > 254 ? 254 : o;
+                }
+            }
+            while (o > 0 && dst[o - 1] <= 0x20) o--;
+            return o > 254 ? 254 : o;
+        }
+
+        private static void RehashTrBuckets(LexiconSnapshot snap)
+        {
+            int newCap = (snap.TrBucketMask + 1) << 1;
+            int newMask = newCap - 1;
+            PagedIntArray nextBuckets = new PagedIntArray(newCap);
+            for (int k = 0; k < snap.TrUniqueKeysCount; k++)
+            {
+                uint h = snap.FormArena.HashFormAt(snap.TrKeyFormLoc[k]);
+                int b = (int)(h & (uint)newMask);
+                snap.TrKeyNext[k] = nextBuckets[b];
+                nextBuckets[b] = k + 1;
+            }
+            snap.TrBucketHead = nextBuckets;
+            snap.TrBucketMask = newMask;
+        }
+
+        private static void AddTrFormBytes(
+            LexiconSnapshot snap,
+            PagedIntArray keyHitTail,
+            ref int revCount,
+            ref byte[] normBuf,
+            byte[] formBytes,
+            int formOff,
+            int formLen,
+            int lemmaIdx,
+            bool useAlt,
+            int detailLoc,
+            int detailLen)
+        {
+            if (lemmaIdx < 0 || formBytes == null || formLen <= 0) return;
+            int nLen = NormalizeFormKeyUtf8(formBytes, formOff, formLen, ref normBuf);
+            if (nLen <= 0) return;
+
+            uint h = ComputeFnv1a(normBuf, 0, nLen);
+            int bucket = (int)(h & (uint)snap.TrBucketMask);
+            int cur = snap.TrBucketHead[bucket];
+            int keyId = -1;
+            while (cur != 0)
+            {
+                int k = cur - 1;
+                if (snap.FormArena.KeyEquals(snap.TrKeyFormLoc[k], normBuf, 0, nLen))
+                {
+                    keyId = k;
+                    break;
+                }
+                cur = snap.TrKeyNext[k];
+            }
+
+            if (keyId < 0)
+            {
+                if ((snap.TrUniqueKeysCount + 1) * 10 > (snap.TrBucketMask + 1) * 7)
+                {
+                    RehashTrBuckets(snap);
+                    bucket = (int)(h & (uint)snap.TrBucketMask);
+                }
+                int storedLen;
+                int formLoc = snap.FormArena.AppendLenPrefixed(normBuf, 0, nLen, out storedLen);
+                keyId = snap.TrUniqueKeysCount++;
+                snap.TrKeyFormLoc.Add(formLoc);
+                snap.TrKeyHitHeadAndCount.Add(0);
+                keyHitTail.Add(0);
+                snap.TrKeyNext.Add(snap.TrBucketHead[bucket]);
+                snap.TrBucketHead[bucket] = keyId + 1;
+            }
+
+            int headAndCnt = snap.TrKeyHitHeadAndCount[keyId];
+            int cnt = (headAndCnt >> 28) & 0xF;
+            if (cnt >= 8) return;
+
+            int hitId = snap.HitLemmaAndAlt.Add((useAlt ? int.MinValue : 0) | (lemmaIdx & 0x7FFFFFFF));
+            snap.HitDetailLoc.Add(detailLoc);
+            snap.HitDetailLen.Add(detailLen);
+            snap.HitNext.Add(0);
+
+            int tailPlus1 = keyHitTail[keyId];
+            if (tailPlus1 == 0)
+            {
+                snap.TrKeyHitHeadAndCount[keyId] = (1 << 28) | ((hitId + 1) & 0x0FFFFFFF);
+            }
+            else
+            {
+                snap.HitNext[tailPlus1 - 1] = hitId + 1;
+                snap.TrKeyHitHeadAndCount[keyId] = ((cnt + 1) << 28) | (headAndCnt & 0x0FFFFFFF);
+            }
+            keyHitTail[keyId] = hitId + 1;
+            revCount++;
+        }
+
+        private static void AddTrFormString(
+            LexiconSnapshot snap,
+            PagedIntArray keyHitTail,
+            ref int revCount,
+            ref byte[] scratch,
+            ref byte[] normBuf,
+            string formStr,
+            int lemmaIdx,
+            bool useAlt,
+            int detailLoc,
+            int detailLen)
         {
             if (string.IsNullOrEmpty(formStr)) return;
-            string clean = formStr.Replace("!", "").Replace("?", "").Trim().ToLowerInvariant();
-            if (string.IsNullOrEmpty(clean)) return;
-            List<LexEntry> list;
-            if (!rev.TryGetValue(clean, out list))
-            {
-                list = new List<LexEntry>(2);
-                rev[clean] = list;
-            }
-            if (list.Count < 8)
-            {
-                list.Add(template);
-                count++;
-            }
+            int maxB = Encoding.UTF8.GetMaxByteCount(formStr.Length);
+            if (scratch == null || scratch.Length < maxB) scratch = new byte[Math.Max(256, maxB)];
+            int len = Encoding.UTF8.GetBytes(formStr, 0, formStr.Length, scratch, 0);
+            AddTrFormBytes(snap, keyHitTail, ref revCount, ref normBuf, scratch, 0, len, lemmaIdx, useAlt, detailLoc, detailLen);
         }
 
-        private sealed class FastJsonCursor
+        private sealed class Utf8JsonCursor
         {
-            private readonly string _s;
+            private readonly byte[] _b;
             private readonly int _len;
             public int Pos;
+            private byte[] _scratch = new byte[4096];
+            private char[] _charScratch = new char[256];
 
-            public FastJsonCursor(string json)
+            public Utf8JsonCursor(byte[] jsonBytes)
             {
-                _s = json ?? "";
-                _len = _s.Length;
-                Pos = 0;
+                _b = jsonBytes ?? new byte[0];
+                _len = _b.Length;
+                Pos = (_len >= 3 && _b[0] == 0xEF && _b[1] == 0xBB && _b[2] == 0xBF) ? 3 : 0;
             }
 
             public void SkipWs()
             {
                 while (Pos < _len)
                 {
-                    char c = _s[Pos];
-                    if (c == ' ' || c == '\t' || c == '\r' || c == '\n') Pos++;
+                    byte c = _b[Pos];
+                    if (c == (byte)' ' || c == (byte)'\t' || c == (byte)'\r' || c == (byte)'\n') Pos++;
                     else break;
                 }
             }
@@ -438,13 +926,13 @@ namespace CondeTreppioLauncher
             public char Peek()
             {
                 SkipWs();
-                return Pos < _len ? _s[Pos] : '\0';
+                return Pos < _len ? (char)_b[Pos] : '\0';
             }
 
-            public bool TryConsume(char expected)
+            public bool TryConsume(byte expected)
             {
                 SkipWs();
-                if (Pos < _len && _s[Pos] == expected)
+                if (Pos < _len && _b[Pos] == expected)
                 {
                     Pos++;
                     return true;
@@ -452,23 +940,39 @@ namespace CondeTreppioLauncher
                 return false;
             }
 
-            public string ReadString()
+            public bool ReadStringSlice(out byte[] buf, out int start, out int len)
             {
                 SkipWs();
-                if (Pos >= _len || _s[Pos] != '"') return null;
+                if (Pos >= _len || _b[Pos] != (byte)'"')
+                {
+                    buf = null;
+                    start = 0;
+                    len = 0;
+                    return false;
+                }
                 Pos++;
-                int start = Pos;
+                int s = Pos;
                 bool hasEscape = false;
                 while (Pos < _len)
                 {
-                    char c = _s[Pos];
-                    if (c == '"')
+                    byte c = _b[Pos];
+                    if (c == (byte)'"')
                     {
-                        string res = hasEscape ? Unescape(_s, start, Pos) : _s.Substring(start, Pos - start);
+                        int end = Pos;
                         Pos++;
-                        return res;
+                        if (!hasEscape)
+                        {
+                            buf = _b;
+                            start = s;
+                            len = end - s;
+                            return true;
+                        }
+                        len = UnescapeIntoScratch(s, end);
+                        buf = _scratch;
+                        start = 0;
+                        return true;
                     }
-                    if (c == '\\')
+                    if (c == (byte)'\\')
                     {
                         hasEscape = true;
                         Pos += 2;
@@ -478,63 +982,152 @@ namespace CondeTreppioLauncher
                         Pos++;
                     }
                 }
-                return _s.Substring(start);
+                buf = _b;
+                start = s;
+                len = _len - s;
+                return true;
             }
 
-            private static string Unescape(string s, int start, int end)
+            public string ReadString()
             {
-                StringBuilder sb = new StringBuilder(end - start);
-                for (int i = start; i < end; i++)
+                byte[] buf;
+                int s, len;
+                if (!ReadStringSlice(out buf, out s, out len)) return null;
+                if (len == 0) return "";
+                return Encoding.UTF8.GetString(buf, s, len);
+            }
+
+            private void EnsureScratch(int need)
+            {
+                if (_scratch.Length < need)
                 {
-                    char c = s[i];
-                    if (c == '\\' && i + 1 < end)
+                    int cap = _scratch.Length << 1;
+                    while (cap < need) cap <<= 1;
+                    Array.Resize(ref _scratch, cap);
+                }
+            }
+
+            private void FlushChars(int charCount, ref int outLen)
+            {
+                if (charCount <= 0) return;
+                EnsureScratch(outLen + Encoding.UTF8.GetMaxByteCount(charCount));
+                outLen += Encoding.UTF8.GetBytes(_charScratch, 0, charCount, _scratch, outLen);
+            }
+
+            private static int ParseHex4(byte[] b, int p)
+            {
+                int val = 0;
+                for (int i = 0; i < 4; i++)
+                {
+                    byte c = b[p + i];
+                    int d;
+                    if (c >= (byte)'0' && c <= (byte)'9') d = c - '0';
+                    else if (c >= (byte)'a' && c <= (byte)'f') d = 10 + (c - 'a');
+                    else if (c >= (byte)'A' && c <= (byte)'F') d = 10 + (c - 'A');
+                    else return -1;
+                    val = (val << 4) | d;
+                }
+                return val;
+            }
+
+            private int UnescapeIntoScratch(int s, int end)
+            {
+                EnsureScratch((end - s) + 8);
+                int outLen = 0;
+                int charLen = 0;
+                for (int i = s; i < end; i++)
+                {
+                    byte c = _b[i];
+                    if (c == (byte)'\\' && i + 1 < end)
                     {
-                        char n = s[++i];
-                        if (n == '"' || n == '\\' || n == '/') sb.Append(n);
-                        else if (n == 'n') sb.Append('\n');
-                        else if (n == 'r') sb.Append('\r');
-                        else if (n == 't') sb.Append('\t');
-                        else if (n == 'b') sb.Append('\b');
-                        else if (n == 'f') sb.Append('\f');
-                        else if (n == 'u' && i + 4 < end)
+                        byte n = _b[++i];
+                        if (n == (byte)'u' && i + 4 < end)
                         {
-                            int code;
-                            if (int.TryParse(s.Substring(i + 1, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out code))
+                            int code = ParseHex4(_b, i + 1);
+                            if (code >= 0)
                             {
-                                sb.Append((char)code);
+                                if (charLen >= _charScratch.Length) Array.Resize(ref _charScratch, _charScratch.Length << 1);
+                                _charScratch[charLen++] = (char)code;
+                                i += 4;
+                                continue;
                             }
-                            i += 4;
                         }
-                        else sb.Append(n);
+                        if (charLen > 0)
+                        {
+                            FlushChars(charLen, ref outLen);
+                            charLen = 0;
+                        }
+                        EnsureScratch(outLen + 4);
+                        if (n == (byte)'"' || n == (byte)'\\' || n == (byte)'/') _scratch[outLen++] = n;
+                        else if (n == (byte)'n') _scratch[outLen++] = (byte)'\n';
+                        else if (n == (byte)'r') _scratch[outLen++] = (byte)'\r';
+                        else if (n == (byte)'t') _scratch[outLen++] = (byte)'\t';
+                        else if (n == (byte)'b') _scratch[outLen++] = (byte)'\b';
+                        else if (n == (byte)'f') _scratch[outLen++] = (byte)'\f';
+                        else _scratch[outLen++] = n;
                     }
                     else
                     {
-                        sb.Append(c);
+                        if (charLen > 0)
+                        {
+                            FlushChars(charLen, ref outLen);
+                            charLen = 0;
+                        }
+                        EnsureScratch(outLen + 4);
+                        _scratch[outLen++] = c;
                     }
                 }
-                return sb.ToString();
+                if (charLen > 0) FlushChars(charLen, ref outLen);
+                return outLen;
+            }
+
+            public bool ReadScalarAsSlice(out byte[] buf, out int start, out int len)
+            {
+                SkipWs();
+                if (Pos >= _len)
+                {
+                    buf = null;
+                    start = 0;
+                    len = 0;
+                    return false;
+                }
+                byte c = _b[Pos];
+                if (c == (byte)'"') return ReadStringSlice(out buf, out start, out len);
+                if (c == (byte)'{' || c == (byte)'[')
+                {
+                    SkipValue();
+                    buf = null;
+                    start = 0;
+                    len = 0;
+                    return false;
+                }
+                int s = Pos;
+                while (Pos < _len)
+                {
+                    byte ch = _b[Pos];
+                    if (ch == (byte)',' || ch == (byte)'}' || ch == (byte)']' || ch <= 0x20) break;
+                    Pos++;
+                }
+                int rawLen = Pos - s;
+                if (rawLen == 4 && _b[s] == (byte)'n' && _b[s + 1] == (byte)'u' && _b[s + 2] == (byte)'l' && _b[s + 3] == (byte)'l')
+                {
+                    buf = null;
+                    start = 0;
+                    len = 0;
+                    return false;
+                }
+                buf = _b;
+                start = s;
+                len = rawLen;
+                return rawLen > 0;
             }
 
             public string ReadScalarAsString()
             {
-                SkipWs();
-                if (Pos >= _len) return "";
-                char c = _s[Pos];
-                if (c == '"') return ReadString() ?? "";
-                if (c == '{' || c == '[')
-                {
-                    SkipValue();
-                    return "";
-                }
-                int start = Pos;
-                while (Pos < _len)
-                {
-                    char ch = _s[Pos];
-                    if (ch == ',' || ch == '}' || ch == ']' || ch == ' ' || ch == '\r' || ch == '\n' || ch == '\t') break;
-                    Pos++;
-                }
-                string raw = _s.Substring(start, Pos - start);
-                return raw == "null" ? "" : raw;
+                byte[] buf;
+                int s, len;
+                if (!ReadScalarAsSlice(out buf, out s, out len) || len == 0) return "";
+                return Encoding.UTF8.GetString(buf, s, len);
             }
 
             private void SkipStringFast()
@@ -542,9 +1135,9 @@ namespace CondeTreppioLauncher
                 Pos++;
                 while (Pos < _len)
                 {
-                    char c = _s[Pos++];
-                    if (c == '"') return;
-                    if (c == '\\' && Pos < _len) Pos++;
+                    byte c = _b[Pos++];
+                    if (c == (byte)'"') return;
+                    if (c == (byte)'\\' && Pos < _len) Pos++;
                 }
             }
 
@@ -552,25 +1145,25 @@ namespace CondeTreppioLauncher
             {
                 SkipWs();
                 if (Pos >= _len) return;
-                char c = _s[Pos];
-                if (c == '"')
+                byte c = _b[Pos];
+                if (c == (byte)'"')
                 {
                     SkipStringFast();
                     return;
                 }
-                if (c == '{' || c == '[')
+                if (c == (byte)'{' || c == (byte)'[')
                 {
                     int depth = 0;
                     while (Pos < _len)
                     {
-                        char ch = _s[Pos];
-                        if (ch == '"')
+                        byte ch = _b[Pos];
+                        if (ch == (byte)'"')
                         {
                             SkipStringFast();
                             continue;
                         }
-                        if (ch == '{' || ch == '[') depth++;
-                        else if (ch == '}' || ch == ']')
+                        if (ch == (byte)'{' || ch == (byte)'[') depth++;
+                        else if (ch == (byte)'}' || ch == (byte)']')
                         {
                             depth--;
                             if (depth <= 0)
@@ -585,46 +1178,46 @@ namespace CondeTreppioLauncher
                 }
                 while (Pos < _len)
                 {
-                    char ch = _s[Pos];
-                    if (ch == ',' || ch == '}' || ch == ']') break;
+                    byte ch = _b[Pos];
+                    if (ch == (byte)',' || ch == (byte)'}' || ch == (byte)']') break;
                     Pos++;
                 }
             }
 
             public void ForEachObjectPair(Action<string> onKey)
             {
-                if (!TryConsume('{'))
+                if (!TryConsume((byte)'{'))
                 {
                     SkipValue();
                     return;
                 }
-                if (TryConsume('}')) return;
+                if (TryConsume((byte)'}')) return;
                 while (Pos < _len)
                 {
                     string key = ReadString();
                     if (key == null) break;
-                    TryConsume(':');
+                    TryConsume((byte)':');
                     onKey(key);
-                    if (TryConsume(',')) continue;
-                    TryConsume('}');
+                    if (TryConsume((byte)',')) continue;
+                    TryConsume((byte)'}');
                     break;
                 }
             }
 
             public void ForEachArrayItem(Action<int> onIndex)
             {
-                if (!TryConsume('['))
+                if (!TryConsume((byte)'['))
                 {
                     SkipValue();
                     return;
                 }
-                if (TryConsume(']')) return;
+                if (TryConsume((byte)']')) return;
                 int idx = 0;
                 while (Pos < _len)
                 {
                     onIndex(idx++);
-                    if (TryConsume(',')) continue;
-                    TryConsume(']');
+                    if (TryConsume((byte)',')) continue;
+                    TryConsume((byte)']');
                     break;
                 }
             }
@@ -646,15 +1239,55 @@ namespace CondeTreppioLauncher
             return sb.ToString().Trim();
         }
 
+        private struct PendingVerbForm
+        {
+            public int BufOff;
+            public int BufLen;
+            public int DetailLoc;
+            public int DetailLen;
+            public bool UseInf;
+        }
+
+        private struct CachedLocLen
+        {
+            public int Loc;
+            public int Len;
+        }
+
         public void BuildFromJsonBytes(byte[] jsonBytes)
         {
             if (jsonBytes == null || jsonBytes.Length == 0) return;
-            string json = Encoding.UTF8.GetString(jsonBytes);
-            FastJsonCursor cur = new FastJsonCursor(json);
+            Utf8JsonCursor cur = new Utf8JsonCursor(jsonBytes);
             if (cur.Peek() != '{') return;
 
             LexiconSnapshot snap = new LexiconSnapshot();
+            snap.TrBucketHead = new PagedIntArray(32768);
+            snap.TrBucketMask = 32767;
+
+            Utf8StringPool pool = new Utf8StringPool(snap.TextArena);
+            PagedIntArray keyHitTail = new PagedIntArray();
+            Dictionary<string, TempPostList> buildTokenMap = new Dictionary<string, TempPostList>(8192, StringComparer.Ordinal);
+            Dictionary<string, TempPostList> buildStemMap = new Dictionary<string, TempPostList>(2048, StringComparer.Ordinal);
+            Dictionary<string, CachedLocLen> detailCache = new Dictionary<string, CachedLocLen>(512, StringComparer.Ordinal);
+
+            byte[] scratch = new byte[512];
+            byte[] normBuf = new byte[512];
+            byte[] verbBuf = new byte[16384];
+            int verbBufUsed = 0;
+            List<PendingVerbForm> pendingForms = new List<PendingVerbForm>(160);
             int revCount = 0;
+
+            Func<string, CachedLocLen> getDetail = delegate(string detStr)
+            {
+                string key = detStr ?? "";
+                CachedLocLen cached;
+                if (detailCache.TryGetValue(key, out cached)) return cached;
+                int dl, dlen;
+                pool.InternString(key, ref scratch, out dl, out dlen);
+                cached = new CachedLocLen { Loc = dl, Len = dlen };
+                detailCache[key] = cached;
+                return cached;
+            };
 
             string[,] funcWords = new string[,] {
                 { "não", "ne", "Advérbio Negativo", "Negação factual pré-verbal." },
@@ -686,10 +1319,14 @@ namespace CondeTreppioLauncher
             };
             for (int i = 0; i < funcWords.GetLength(0); i++)
             {
-                AddPtEntry(snap, funcWords[i, 1], funcWords[i, 0], funcWords[i, 2], funcWords[i, 3], 45);
+                AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, funcWords[i, 1], null, funcWords[i, 0], funcWords[i, 2], funcWords[i, 3], 45);
             }
 
             string[] persons = new string[] { "1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl", "1ª Pl (-n)", "2ª Pl (-t)" };
+            CachedLocLen detInvar = getDetail("Invariável");
+            CachedLocLen detInf = getDetail("Infinitivo");
+            CachedLocLen detImp = getDetail("Imperativo");
+            CachedLocLen detInterr = getDetail("Interrogativo 2ª Pl");
 
             cur.ForEachObjectPair(topKey =>
             {
@@ -700,11 +1337,13 @@ namespace CondeTreppioLauncher
                 }
                 else if (topKey == "substantivos")
                 {
+                    List<string> formasVal = new List<string>(24);
+                    List<string> formasKey = new List<string>(24);
                     cur.ForEachObjectPair(lemma =>
                     {
                         string decl = "", sig = "", etym = "";
-                        List<string> formasVal = new List<string>(20);
-                        List<string> formasKey = new List<string>(20);
+                        formasVal.Clear();
+                        formasKey.Clear();
                         cur.ForEachObjectPair(fk =>
                         {
                             if (fk == "declinacao") decl = cur.ReadScalarAsString();
@@ -721,20 +1360,23 @@ namespace CondeTreppioLauncher
                             else cur.SkipValue();
                         });
                         string cTag = "Substantivo (" + decl + "ª Decl.)";
-                        AddPtEntry(snap, lemma, sig, cTag, etym, 10);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, lemma, null, sig, cTag, etym, 10);
                         for (int i = 0; i < formasVal.Count; i++)
                         {
-                            AddTrForm(snap.TrReverse, ref revCount, formasVal[i], new LexEntry { Treppio = lemma, PtMeaning = sig, ClassTag = cTag, Detail = formasKey[i] });
+                            CachedLocLen dl = getDetail(formasKey[i]);
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, formasVal[i], lIdx, false, dl.Loc, dl.Len);
                         }
                     });
                 }
                 else if (topKey == "adjetivos")
                 {
+                    List<string> fKeys = new List<string>(16);
+                    List<string> fVals = new List<string>(16);
                     cur.ForEachObjectPair(adj =>
                     {
                         string sig = "", comp = "";
-                        List<string> fKeys = new List<string>(16);
-                        List<string> fVals = new List<string>(16);
+                        fKeys.Clear();
+                        fVals.Clear();
                         cur.ForEachObjectPair(fk =>
                         {
                             string v = cur.ReadScalarAsString();
@@ -746,10 +1388,11 @@ namespace CondeTreppioLauncher
                                 fVals.Add(v);
                             }
                         });
-                        AddPtEntry(snap, adj, sig, "Adjetivo", "Comp: " + comp, 8);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, adj, null, sig, "Adjetivo", "Comp: " + comp, 8);
                         for (int i = 0; i < fVals.Count; i++)
                         {
-                            AddTrForm(snap.TrReverse, ref revCount, fVals[i], new LexEntry { Treppio = adj, PtMeaning = sig, ClassTag = "Adjetivo", Detail = fKeys[i] });
+                            CachedLocLen dl = getDetail(fKeys[i]);
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, fVals[i], lIdx, false, dl.Loc, dl.Len);
                         }
                     });
                 }
@@ -765,18 +1408,21 @@ namespace CondeTreppioLauncher
                             else if (fk == "etimologia") etym = cur.ReadScalarAsString();
                             else cur.SkipValue();
                         });
-                        AddPtEntry(snap, adv, sig, "Advérbio (" + subc + ")", etym, 6);
-                        AddTrForm(snap.TrReverse, ref revCount, adv, new LexEntry { Treppio = adv, PtMeaning = sig, ClassTag = "Advérbio", Detail = subc });
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, adv, null, sig, "Advérbio (" + subc + ")", etym, 6);
+                        CachedLocLen dl = getDetail(subc);
+                        AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, adv, lIdx, false, dl.Loc, dl.Len);
                     });
                 }
                 else if (topKey == "pronomes")
                 {
+                    List<string> cKeys = new List<string>(10);
+                    List<string> cVals = new List<string>(10);
                     cur.ForEachObjectPair(pKey =>
                     {
                         string esfera = "", nomRaw = "";
                         bool hasEsfera = false;
-                        List<string> cKeys = new List<string>(8);
-                        List<string> cVals = new List<string>(8);
+                        cKeys.Clear();
+                        cVals.Clear();
                         cur.ForEachObjectPair(fk =>
                         {
                             string v = cur.ReadScalarAsString();
@@ -790,25 +1436,28 @@ namespace CondeTreppioLauncher
                         });
                         string desc = hasEsfera ? (pKey + ": " + esfera) : pKey;
                         string nomClean = StripParenTrim(nomRaw);
-                        AddPtEntry(snap, string.IsNullOrEmpty(nomClean) ? pKey : nomClean, desc, "Pronome", "", 15);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, string.IsNullOrEmpty(nomClean) ? pKey : nomClean, pKey, desc, "Pronome", "", 15);
                         for (int i = 0; i < cVals.Count; i++)
                         {
+                            CachedLocLen dl = getDetail(cKeys[i]);
                             string[] parts = cVals[i].Split('/');
                             for (int p = 0; p < parts.Length; p++)
                             {
                                 string tok = StripParenTrim(parts[p]);
-                                AddTrForm(snap.TrReverse, ref revCount, tok, new LexEntry { Treppio = pKey, PtMeaning = desc, ClassTag = "Pronome", Detail = cKeys[i] });
+                                AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, tok, lIdx, true, dl.Loc, dl.Len);
                             }
                         }
                     });
                 }
                 else if (topKey == "numerais")
                 {
+                    List<string> nKeys = new List<string>(10);
+                    List<string> nVals = new List<string>(10);
                     cur.ForEachObjectPair(numK =>
                     {
                         string card = "", ordRaw = "", comp = "";
-                        List<string> nKeys = new List<string>(8);
-                        List<string> nVals = new List<string>(8);
+                        nKeys.Clear();
+                        nVals.Clear();
                         cur.ForEachObjectPair(fk =>
                         {
                             string v = cur.ReadScalarAsString();
@@ -820,14 +1469,15 @@ namespace CondeTreppioLauncher
                         });
                         string ord = StripParenTrim(ordRaw);
                         string desc = "numeral " + numK + " (" + card + ", " + ord + ")";
-                        AddPtEntry(snap, card + " / " + ord, desc, "Numeral", comp, 14);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, card + " / " + ord, card, desc, "Numeral", comp, 14);
                         for (int i = 0; i < nVals.Count; i++)
                         {
+                            CachedLocLen dl = getDetail(numK + " (" + nKeys[i] + ")");
                             string[] parts = nVals[i].Split('/');
                             for (int p = 0; p < parts.Length; p++)
                             {
                                 string tok = StripParenTrim(parts[p]);
-                                AddTrForm(snap.TrReverse, ref revCount, tok, new LexEntry { Treppio = card, PtMeaning = desc, ClassTag = "Numeral", Detail = numK + " (" + nKeys[i] + ")" });
+                                AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, tok, lIdx, true, dl.Loc, dl.Len);
                             }
                         }
                     });
@@ -843,14 +1493,14 @@ namespace CondeTreppioLauncher
                             else if (fk == "classe") cls = cur.ReadScalarAsString();
                             else cur.SkipValue();
                         });
-                        AddPtEntry(snap, pTok, desc, cls, "", 18);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, pTok, null, desc, cls, "", 18);
                         string[] toks = pTok.Split('/');
                         for (int i = 0; i < toks.Length; i++)
                         {
                             string t = StripParenTrim(toks[i]);
                             if (!string.IsNullOrEmpty(t) && !t.StartsWith("-") && !t.EndsWith("-"))
                             {
-                                AddTrForm(snap.TrReverse, ref revCount, t, new LexEntry { Treppio = pTok, PtMeaning = desc, ClassTag = cls, Detail = "Invariável" });
+                                AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, t, lIdx, false, detInvar.Loc, detInvar.Len);
                             }
                         }
                     });
@@ -867,11 +1517,12 @@ namespace CondeTreppioLauncher
                             else if (fk == "equivalente_canonico") eq = cur.ReadScalarAsString();
                             else cur.SkipValue();
                         });
-                        AddPtEntry(snap, dTok + " -> " + eq, analise, est, eq, 2);
+                        int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, dTok + " -> " + eq, dTok, analise, est, eq, 2);
+                        CachedLocLen dl = getDetail(eq);
                         string[] toks = dTok.Split('/');
                         for (int i = 0; i < toks.Length; i++)
                         {
-                            AddTrForm(snap.TrReverse, ref revCount, toks[i].Trim(), new LexEntry { Treppio = dTok, PtMeaning = analise, ClassTag = est, Detail = eq });
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, toks[i].Trim(), lIdx, true, dl.Loc, dl.Len);
                         }
                     });
                 }
@@ -879,13 +1530,13 @@ namespace CondeTreppioLauncher
                 {
                     cur.ForEachObjectPair(vRoot =>
                     {
+                        string rootDash = vRoot + "-";
                         cur.ForEachObjectPair(axKey =>
                         {
                             string mean = "", inf = "", imp = "", interr = "";
                             string cat = "Verbo [" + axKey + "]";
-                            List<KeyValuePair<string, string>> pendingForms = new List<KeyValuePair<string, string>>(120);
-                            List<string> pendingDetails = new List<string>(120);
-                            bool[] pendingUseInf = new bool[120];
+                            pendingForms.Clear();
+                            verbBufUsed = 0;
 
                             cur.ForEachObjectPair(ak =>
                             {
@@ -899,13 +1550,26 @@ namespace CondeTreppioLauncher
                                         {
                                             cur.ForEachArrayItem(pIdx =>
                                             {
-                                                string wf = cur.ReadScalarAsString();
-                                                if (!string.IsNullOrEmpty(wf))
+                                                byte[] fBuf;
+                                                int fOff, fLen;
+                                                if (cur.ReadScalarAsSlice(out fBuf, out fOff, out fLen) && fLen > 0)
                                                 {
                                                     string pLbl = pIdx < persons.Length ? persons[pIdx] : "";
-                                                    int kIdx = pendingForms.Count;
-                                                    if (kIdx < pendingUseInf.Length) pendingUseInf[kIdx] = true;
-                                                    pendingForms.Add(new KeyValuePair<string, string>(wf, ck + " " + pLbl));
+                                                    CachedLocLen dl = getDetail(ck + " " + pLbl);
+                                                    if (verbBufUsed + fLen > verbBuf.Length)
+                                                    {
+                                                        Array.Resize(ref verbBuf, Math.Max(verbBuf.Length << 1, verbBufUsed + fLen));
+                                                    }
+                                                    Buffer.BlockCopy(fBuf, fOff, verbBuf, verbBufUsed, fLen);
+                                                    pendingForms.Add(new PendingVerbForm
+                                                    {
+                                                        BufOff = verbBufUsed,
+                                                        BufLen = fLen,
+                                                        DetailLoc = dl.Loc,
+                                                        DetailLen = dl.Len,
+                                                        UseInf = (pendingForms.Count < 120)
+                                                    });
+                                                    verbBufUsed += fLen;
                                                 }
                                             });
                                         }
@@ -913,10 +1577,25 @@ namespace CondeTreppioLauncher
                                         {
                                             cur.ForEachObjectPair(sdk =>
                                             {
-                                                string wf = cur.ReadScalarAsString();
-                                                if (!string.IsNullOrEmpty(wf))
+                                                byte[] fBuf;
+                                                int fOff, fLen;
+                                                if (cur.ReadScalarAsSlice(out fBuf, out fOff, out fLen) && fLen > 0)
                                                 {
-                                                    pendingForms.Add(new KeyValuePair<string, string>(wf, ck + ": " + sdk));
+                                                    CachedLocLen dl = getDetail(ck + ": " + sdk);
+                                                    if (verbBufUsed + fLen > verbBuf.Length)
+                                                    {
+                                                        Array.Resize(ref verbBuf, Math.Max(verbBuf.Length << 1, verbBufUsed + fLen));
+                                                    }
+                                                    Buffer.BlockCopy(fBuf, fOff, verbBuf, verbBufUsed, fLen);
+                                                    pendingForms.Add(new PendingVerbForm
+                                                    {
+                                                        BufOff = verbBufUsed,
+                                                        BufLen = fLen,
+                                                        DetailLoc = dl.Loc,
+                                                        DetailLen = dl.Len,
+                                                        UseInf = false
+                                                    });
+                                                    verbBufUsed += fLen;
                                                 }
                                             });
                                         }
@@ -932,21 +1611,15 @@ namespace CondeTreppioLauncher
                                 else cur.SkipValue();
                             });
 
-                            AddPtEntry(snap, inf, mean, cat, "Raiz " + vRoot + "- | Imp: " + imp, axKey.StartsWith("1.") ? 12 : 4);
-                            AddTrForm(snap.TrReverse, ref revCount, inf, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Infinitivo" });
-                            AddTrForm(snap.TrReverse, ref revCount, imp, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Imperativo" });
-                            AddTrForm(snap.TrReverse, ref revCount, interr, new LexEntry { Treppio = vRoot + "-", PtMeaning = mean, ClassTag = cat, Detail = "Interrogativo 2ª Pl" });
+                            int lIdx = AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, inf, rootDash, mean, cat, "Raiz " + vRoot + "- | Imp: " + imp, axKey.StartsWith("1.") ? 12 : 4);
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, inf, lIdx, true, detInf.Loc, detInf.Len);
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, imp, lIdx, true, detImp.Loc, detImp.Len);
+                            AddTrFormString(snap, keyHitTail, ref revCount, ref scratch, ref normBuf, interr, lIdx, true, detInterr.Loc, detInterr.Len);
 
                             for (int f = 0; f < pendingForms.Count; f++)
                             {
-                                string lemmaForm = (f < pendingUseInf.Length && pendingUseInf[f]) ? inf : (vRoot + "-");
-                                AddTrForm(snap.TrReverse, ref revCount, pendingForms[f].Key, new LexEntry
-                                {
-                                    Treppio = lemmaForm,
-                                    PtMeaning = mean,
-                                    ClassTag = cat,
-                                    Detail = pendingForms[f].Value
-                                });
+                                PendingVerbForm pf = pendingForms[f];
+                                AddTrFormBytes(snap, keyHitTail, ref revCount, ref normBuf, verbBuf, pf.BufOff, pf.BufLen, lIdx, !pf.UseInf, pf.DetailLoc, pf.DetailLen);
                             }
                         });
                     });
@@ -966,7 +1639,7 @@ namespace CondeTreppioLauncher
                         if (!string.IsNullOrEmpty(tr) && !string.IsNullOrEmpty(pt))
                         {
                             snap.CorpusByTreppio[tr] = tit + ": " + pt;
-                            AddPtEntry(snap, tr, pt, "Corpus Canônico", tit, 5);
+                            AddPtEntry(snap, pool, buildTokenMap, buildStemMap, ref scratch, tr, null, pt, "Corpus Canônico", tit, 5);
                         }
                     });
                 }
@@ -976,44 +1649,150 @@ namespace CondeTreppioLauncher
                 }
             });
 
+            snap.Lemmas.TrimExcess();
             snap.IndexedFormsCount = revCount;
-            snap.IndexedLemmasCount = snap.PtEntries.Count;
+            snap.IndexedLemmasCount = snap.Lemmas.Count;
             snap.Generation = Interlocked.Increment(ref _generationSeq);
             snap.IsReady = true;
             _snap = snap;
+
+            // Limpa arrays temporarios de indexacao / LOH imediatamente apos trocar snapshot
+            pool = null;
+            keyHitTail = null;
+            buildTokenMap = null;
+            buildStemMap = null;
+            detailCache = null;
+            try
+            {
+                GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+                GC.Collect(2, GCCollectionMode.Forced, true, true);
+            }
+            catch { }
         }
 
-        private class ScoredLex
+        private struct ScoredIdx
         {
             public int Score;
-            public LexEntry Entry;
+            public int LemmaIdx;
         }
 
-        private static int ScorePtItem(LexEntry item, string q, string qStem)
+        private static LexEntry MaterializeLemma(LexiconSnapshot snap, int lemmaIdx, bool useAltTreppio, int overrideDetailLoc, int overrideDetailLen, bool includeNorm)
         {
-            if (item.PtNorm == q) return 140;
-            if (item.PtHead == q) return 128;
-
-            string[] hWords = item.HeadWords;
-            for (int h = 0; h < hWords.Length; h++)
+            LemmaRecord r = snap.Lemmas[lemmaIdx];
+            string tr = useAltTreppio
+                ? snap.TextArena.Decode(r.AltTreppioLoc, r.AltTreppioLen)
+                : snap.TextArena.Decode(r.TreppioLoc, r.TreppioLen);
+            string det = (overrideDetailLoc >= 0 && overrideDetailLen > 0)
+                ? snap.TextArena.Decode(overrideDetailLoc, overrideDetailLen)
+                : snap.TextArena.Decode(r.DetailLoc, r.DetailLen);
+            return new LexEntry
             {
-                if (hWords[h] == q) return 105 - Math.Min(20, item.Words.Length);
+                Treppio = tr,
+                PtMeaning = snap.TextArena.Decode(r.PtLoc, r.PtLen),
+                PtNorm = includeNorm ? snap.TextArena.Decode(r.PtNormLoc, r.PtNormLen) : "",
+                ClassTag = snap.TextArena.Decode(r.ClassLoc, r.ClassLen),
+                Detail = det,
+                Boost = r.Boost
+            };
+        }
+
+        private static bool BytesEqual(byte[] a, int aOff, byte[] b, int len)
+        {
+            for (int i = 0; i < len; i++)
+            {
+                if (a[aOff + i] != b[i]) return false;
             }
+            return true;
+        }
 
-            string[] words = item.Words;
-            bool stemMatch = false;
-            for (int w = 0; w < words.Length; w++)
+        private static bool ContainsBytes(byte[] hay, int hayOff, int hayLen, byte[] needle)
+        {
+            int nLen = needle.Length;
+            if (nLen == 0) return true;
+            if (nLen > hayLen) return false;
+            int limit = hayOff + hayLen - nLen;
+            byte first = needle[0];
+            for (int i = hayOff; i <= limit; i++)
             {
-                string wrd = words[w];
-                if (wrd == q) return 85 - Math.Min(25, words.Length * 2);
-                if (qStem.Length >= 3 && (wrd == qStem || wrd.StartsWith(qStem, StringComparison.Ordinal)))
+                if (hay[i] == first)
                 {
-                    stemMatch = true;
+                    bool eq = true;
+                    for (int j = 1; j < nLen; j++)
+                    {
+                        if (hay[i + j] != needle[j]) { eq = false; break; }
+                    }
+                    if (eq) return true;
                 }
             }
-            if (stemMatch) return 62 - Math.Min(20, words.Length);
-            if (q.Length >= 3 && item.PtNorm.IndexOf(q, StringComparison.Ordinal) >= 0) return 40;
+            return false;
+        }
+
+        private static int ScorePtRecord(LexiconSnapshot snap, LemmaRecord rec, byte[] qBytes, byte[] qStemBytes)
+        {
+            if (rec.PtNormLoc < 0 || rec.PtNormLen <= 0) return 0;
+            byte[] blk;
+            int normOff;
+            snap.TextArena.GetSlice(rec.PtNormLoc, out blk, out normOff);
+            int normLen = rec.PtNormLen;
+            int qLen = qBytes.Length;
+
+            if (normLen == qLen && BytesEqual(blk, normOff, qBytes, qLen)) return 140;
+            if (rec.PtHeadLen == qLen && BytesEqual(blk, normOff, qBytes, qLen)) return 128;
+
+            bool headWordExact = false;
+            bool anyWordExact = false;
+            bool stemMatch = false;
+            int totalWords = 0;
+            int headEnd = normOff + rec.PtHeadLen;
+            int normEnd = normOff + normLen;
+            int wStart = -1;
+
+            for (int i = normOff; i <= normEnd; i++)
+            {
+                bool isAlnum = false;
+                if (i < normEnd)
+                {
+                    byte b = blk[i];
+                    isAlnum = (b >= (byte)'a' && b <= (byte)'z') || (b >= (byte)'0' && b <= (byte)'9');
+                }
+                if (isAlnum)
+                {
+                    if (wStart < 0) wStart = i;
+                }
+                else if (wStart >= 0)
+                {
+                    totalWords++;
+                    int wLen = i - wStart;
+                    if (wLen == qLen && BytesEqual(blk, wStart, qBytes, qLen))
+                    {
+                        anyWordExact = true;
+                        if (wStart < headEnd) headWordExact = true;
+                    }
+                    if (!stemMatch && qStemBytes.Length >= 3 && wLen >= qStemBytes.Length && BytesEqual(blk, wStart, qStemBytes, qStemBytes.Length))
+                    {
+                        stemMatch = true;
+                    }
+                    wStart = -1;
+                }
+            }
+
+            if (headWordExact) return 105 - Math.Min(20, totalWords);
+            if (anyWordExact) return 85 - Math.Min(25, totalWords * 2);
+            if (stemMatch) return 62 - Math.Min(20, totalWords);
+            if (qLen >= 3 && ContainsBytes(blk, normOff, normLen, qBytes)) return 40;
             return 0;
+        }
+
+        private static void CollectPtCandidates(LexiconSnapshot snap, Dictionary<string, int> headMap, string key, HashSet<int> candidateIdx)
+        {
+            int postPlus1;
+            if (string.IsNullOrEmpty(key) || !headMap.TryGetValue(key, out postPlus1)) return;
+            while (postPlus1 != 0)
+            {
+                int pid = postPlus1 - 1;
+                candidateIdx.Add(snap.PtPostLemma[pid]);
+                postPlus1 = snap.PtPostNext[pid];
+            }
         }
 
         public List<LexEntry> SearchPtToken(string ptToken, int limit)
@@ -1021,47 +1800,52 @@ namespace CondeTreppioLauncher
             LexiconSnapshot snap = _snap;
             string q = StripAccents(ptToken).Trim();
             List<LexEntry> outList = new List<LexEntry>();
-            if (string.IsNullOrEmpty(q) || snap.PtEntries.Count == 0) return outList;
+            if (string.IsNullOrEmpty(q) || snap.Lemmas.Count == 0) return outList;
 
             string qStem = ComputePtStem(q);
-            List<ScoredLex> scored = new List<ScoredLex>(32);
+            byte[] qBytes = Encoding.UTF8.GetBytes(q);
+            byte[] qStemBytes = qStem == q ? qBytes : Encoding.UTF8.GetBytes(qStem);
+
+            List<ScoredIdx> scored = new List<ScoredIdx>(32);
             HashSet<int> candidateIdx = new HashSet<int>();
 
-            List<int> bucket;
-            if (snap.PtTokenMap.TryGetValue(q, out bucket))
+            CollectPtCandidates(snap, snap.PtTokenHead, q, candidateIdx);
+            if (!string.IsNullOrEmpty(qStem) && qStem != q)
             {
-                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
+                CollectPtCandidates(snap, snap.PtTokenHead, qStem, candidateIdx);
             }
-            if (!string.IsNullOrEmpty(qStem) && qStem != q && snap.PtTokenMap.TryGetValue(qStem, out bucket))
+            if (qStem.Length >= 3)
             {
-                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
-            }
-            if (qStem.Length >= 3 && snap.PtStemMap.TryGetValue(qStem.Substring(0, 3), out bucket))
-            {
-                for (int i = 0; i < bucket.Count; i++) candidateIdx.Add(bucket[i]);
+                CollectPtCandidates(snap, snap.PtStemHead, qStem.Substring(0, 3), candidateIdx);
             }
 
             if (candidateIdx.Count > 0)
             {
                 foreach (int idx in candidateIdx)
                 {
-                    LexEntry item = snap.PtEntries[idx];
-                    int sc = ScorePtItem(item, q, qStem);
-                    if (sc > 0) scored.Add(new ScoredLex { Score = sc + item.Boost, Entry = item });
+                    LemmaRecord rec = snap.Lemmas[idx];
+                    int sc = ScorePtRecord(snap, rec, qBytes, qStemBytes);
+                    if (sc > 0) scored.Add(new ScoredIdx { Score = sc + rec.Boost, LemmaIdx = idx });
                 }
             }
 
             // Fallback de substring caso nenhum token exato/radical tenha atingido o limite
-            if (scored.Count < limit && q.Length >= 3)
+            if (scored.Count < limit && qBytes.Length >= 3)
             {
-                List<LexEntry> all = snap.PtEntries;
+                List<LemmaRecord> all = snap.Lemmas;
                 for (int i = 0; i < all.Count; i++)
                 {
                     if (candidateIdx.Contains(i)) continue;
-                    LexEntry item = all[i];
-                    if (item.PtNorm.IndexOf(q, StringComparison.Ordinal) >= 0)
+                    LemmaRecord rec = all[i];
+                    if (rec.PtNormLoc >= 0 && rec.PtNormLen >= qBytes.Length)
                     {
-                        scored.Add(new ScoredLex { Score = 40 + item.Boost, Entry = item });
+                        byte[] blk;
+                        int off;
+                        snap.TextArena.GetSlice(rec.PtNormLoc, out blk, out off);
+                        if (ContainsBytes(blk, off, rec.PtNormLen, qBytes))
+                        {
+                            scored.Add(new ScoredIdx { Score = 40 + rec.Boost, LemmaIdx = i });
+                        }
                     }
                 }
             }
@@ -1070,10 +1854,48 @@ namespace CondeTreppioLauncher
             HashSet<string> seen = new HashSet<string>(StringComparer.Ordinal);
             for (int i = 0; i < scored.Count && outList.Count < limit; i++)
             {
-                string key = scored[i].Entry.Treppio + "|" + scored[i].Entry.ClassTag;
-                if (seen.Add(key)) outList.Add(scored[i].Entry);
+                LexEntry e = MaterializeLemma(snap, scored[i].LemmaIdx, false, -1, 0, true);
+                string key = e.Treppio + "|" + e.ClassTag;
+                if (seen.Add(key)) outList.Add(e);
             }
             return outList;
+        }
+
+        private static bool LookupTrReverse(LexiconSnapshot snap, string formRaw, int maxHits, List<LexEntry> dest)
+        {
+            dest.Clear();
+            if (string.IsNullOrEmpty(formRaw) || snap.TrUniqueKeysCount == 0) return false;
+            byte[] src = Encoding.UTF8.GetBytes(formRaw);
+            byte[] normBuf = null;
+            int nLen = NormalizeFormKeyUtf8(src, 0, src.Length, ref normBuf);
+            if (nLen <= 0) return false;
+
+            uint h = ComputeFnv1a(normBuf, 0, nLen);
+            int bucket = (int)(h & (uint)snap.TrBucketMask);
+            int cur = snap.TrBucketHead[bucket];
+            while (cur != 0)
+            {
+                int keyId = cur - 1;
+                if (snap.FormArena.KeyEquals(snap.TrKeyFormLoc[keyId], normBuf, 0, nLen))
+                {
+                    int headAndCnt = snap.TrKeyHitHeadAndCount[keyId];
+                    int hitPlus1 = headAndCnt & 0x0FFFFFFF;
+                    while (hitPlus1 != 0 && dest.Count < maxHits)
+                    {
+                        int hitId = hitPlus1 - 1;
+                        int packed = snap.HitLemmaAndAlt[hitId];
+                        bool useAlt = (packed & int.MinValue) != 0;
+                        int lemmaIdx = packed & 0x7FFFFFFF;
+                        int dLoc = snap.HitDetailLoc[hitId];
+                        int dLen = snap.HitDetailLen[hitId];
+                        dest.Add(MaterializeLemma(snap, lemmaIdx, useAlt, dLoc, dLen, false));
+                        hitPlus1 = snap.HitNext[hitId];
+                    }
+                    return dest.Count > 0;
+                }
+                cur = snap.TrKeyNext[keyId];
+            }
+            return false;
         }
 
         public string TranslatePtToTrReport(string query, out string primaryTreppio)
@@ -1151,7 +1973,6 @@ namespace CondeTreppioLauncher
             string qRaw = (query ?? "").Trim();
             if (string.IsNullOrEmpty(qRaw)) return "Digite palavras ou frases em Tréppio.";
 
-            Dictionary<string, List<LexEntry>> revSnap = snap.TrReverse;
             Dictionary<string, string> corpSnap = snap.CorpusByTreppio;
 
             StringBuilder sb = new StringBuilder();
@@ -1168,19 +1989,19 @@ namespace CondeTreppioLauncher
 
             string[] tokens = Regex.Split(qRaw, @"\s+");
             List<string> glosses = new List<string>();
+            List<LexEntry> list = new List<LexEntry>(4);
             StringBuilder detailSb = new StringBuilder();
             for (int i = 0; i < tokens.Length; i++)
             {
                 string clean = Regex.Replace(tokens[i], @"[.,;:!?()\[\]""“”]", "");
                 if (string.IsNullOrEmpty(clean)) continue;
                 string hap = ApplyHaplology(clean);
-                List<LexEntry> list = null;
-                if (!revSnap.TryGetValue(clean.ToLowerInvariant(), out list))
+                if (!LookupTrReverse(snap, clean, 3, list))
                 {
-                    revSnap.TryGetValue(hap.ToLowerInvariant(), out list);
+                    LookupTrReverse(snap, hap, 3, list);
                 }
                 IpaWordInfo ipa = AnalyzeWordIpa(hap);
-                if (list != null && list.Count > 0)
+                if (list.Count > 0)
                 {
                     string shortMean = Regex.Split(list[0].PtMeaning ?? "", @"[,;(]")[0].Trim();
                     glosses.Add(string.IsNullOrEmpty(shortMean) ? list[0].Treppio : shortMean);
@@ -1299,9 +2120,8 @@ namespace CondeTreppioLauncher
 
             if (!string.IsNullOrEmpty(q) && snap.IsReady)
             {
-                string clean = q.Replace("!", "").Replace("?", "").Trim().ToLowerInvariant();
-                List<LexEntry> revList;
-                if (snap.TrReverse.TryGetValue(clean, out revList) && revList != null)
+                List<LexEntry> revList = new List<LexEntry>(lim);
+                if (LookupTrReverse(snap, q, lim, revList))
                 {
                     int n = Math.Min(lim, revList.Count);
                     for (int i = 0; i < n; i++)
@@ -1395,37 +2215,38 @@ namespace CondeTreppioLauncher
 
     public sealed class EmbeddedServer
     {
+        private sealed class PreparedPayload
+        {
+            public byte[][] RawParts;
+            public long RawLen;
+            public byte[] HdrRawKeep;
+            public byte[] HdrRawClose;
+            public byte[] GzipBytes;
+            public byte[] HdrGzKeep;
+            public byte[] HdrGzClose;
+            public string ETag;
+            public byte[] Hdr304Keep;
+            public byte[] Hdr304Close;
+        }
+
         private sealed class StaticAssetEntry
         {
-            public byte[] RawBytes;
-            public byte[] GzipBytes;
-            public string ContentType;
-            public string ETag;
-            public string CacheControl;
+            public PreparedPayload Payload;
         }
 
         private sealed class PayloadSnapshot
         {
-            public byte[] HtmlRaw;
-            public byte[] HtmlGzip;
-            public string HtmlETag;
-
+            public PreparedPayload Html;
+            public PreparedPayload Json;
+            public PreparedPayload DadosJs;
             public byte[] JsonRaw;
-            public byte[] JsonGzip;
-            public string JsonETag;
-
-            public byte[] DadosJsRaw;
-            public byte[] DadosJsGzip;
-            public string DadosJsETag;
-
             public Dictionary<string, StaticAssetEntry> Assets = new Dictionary<string, StaticAssetEntry>(StringComparer.OrdinalIgnoreCase);
             public string ActiveSource;
         }
 
         private sealed class CachedBytePair
         {
-            public byte[] Raw;
-            public byte[] Gzip;
+            public PreparedPayload Payload;
         }
 
         private sealed class BoundedLruCache
@@ -1486,6 +2307,73 @@ namespace CondeTreppioLauncher
             }
         }
 
+        private struct SlabSlice
+        {
+            public byte[] Array;
+            public int Offset;
+            public bool IsPooled;
+        }
+
+        private sealed class BufferSlabPool
+        {
+            private const int SliceSize = 4096;
+            private const int SlicesPerBlock = 16; // 16 * 4096 = 65536 bytes (< 85 KB LOH threshold)
+            private const int MaxBlocks = 384;     // Up to 6144 pooled slices = 24 MB peak
+            private ConcurrentStack<SlabSlice> _stack = new ConcurrentStack<SlabSlice>();
+            private int _allocatedBlocks;
+            private readonly object _growLock = new object();
+
+            public SlabSlice Rent()
+            {
+                ConcurrentStack<SlabSlice> stk = _stack;
+                SlabSlice slice;
+                if (stk.TryPop(out slice)) return slice;
+                if (Thread.VolatileRead(ref _allocatedBlocks) < MaxBlocks)
+                {
+                    lock (_growLock)
+                    {
+                        stk = _stack;
+                        if (stk.TryPop(out slice)) return slice;
+                        if (_allocatedBlocks < MaxBlocks)
+                        {
+                            int toAdd = Math.Min(16, MaxBlocks - _allocatedBlocks);
+                            for (int b = 0; b < toAdd; b++)
+                            {
+                                byte[] blk = new byte[SliceSize * SlicesPerBlock];
+                                for (int s = 0; s < SlicesPerBlock; s++)
+                                {
+                                    stk.Push(new SlabSlice { Array = blk, Offset = s * SliceSize, IsPooled = true });
+                                }
+                                _allocatedBlocks++;
+                            }
+                            if (stk.TryPop(out slice)) return slice;
+                        }
+                    }
+                }
+                return new SlabSlice { Array = new byte[SliceSize], Offset = 0, IsPooled = false };
+            }
+
+            public void Return(SlabSlice slice)
+            {
+                if (slice.IsPooled && slice.Array != null)
+                {
+                    _stack.Push(slice);
+                }
+            }
+
+            public void TrimOnIdle()
+            {
+                lock (_growLock)
+                {
+                    if (_allocatedBlocks > 2)
+                    {
+                        _stack = new ConcurrentStack<SlabSlice>();
+                        _allocatedBlocks = 0;
+                    }
+                }
+            }
+        }
+
         private sealed class HttpParsedRequest
         {
             public string Method;
@@ -1494,19 +2382,137 @@ namespace CondeTreppioLauncher
             public bool KeepAlive;
             public bool AcceptsGzip;
             public string IfNoneMatch;
-            public string Body;
+            public int ContentLength;
         }
 
-        private Socket _listenerV4;
-        private Socket _listenerV6;
+        private const int PhaseFree = 0;
+        private const int PhaseZeroWait = 1;
+        private const int PhaseDataRead = 2;
+        private const int PhaseBodyRead = 3;
+        private const int PhaseProcessing = 4;
+        private const int PhaseSending = 5;
+        private const int PhaseStreamingFile = 6;
+        private const int PhaseClosed = 7;
+
+        private const int ModeStartRead = 0;
+        private const int ModeReadCompleted = 1;
+        private const int ModeWriteCompleted = 2;
+
+        private const int SlabSliceSize = 4096;
+        private const int MaxKeepAliveRequests = 1000;
+        private const int MaxPooledConns = 1024;
+        private const int IdleRetainConns = 32;
+        private const int ConnShardCount = 16;
+
+        private sealed class ConnState
+        {
+            public long ConnId;
+            public Socket Sock;
+            public readonly SocketAsyncEventArgs ReadSaea;
+            public readonly SocketAsyncEventArgs WriteSaea;
+            public readonly HttpParsedRequest CurReq = new HttpParsedRequest();
+            public readonly List<ArraySegment<byte>> SendSegs = new List<ArraySegment<byte>>(4);
+            public readonly List<ArraySegment<byte>> SendActiveList = new List<ArraySegment<byte>>(4);
+
+            public SlabSlice ReadSlice;
+            public int ReadLen;
+            public int ReadOffset;
+
+            public byte[] BodyBuf;
+            public int BodyGot;
+            public int BodyLen;
+
+            public int Phase;
+            public int ReqCount;
+            public bool KeepAliveAfterSend;
+            public int SendSegIdx;
+            public int SendSegOff;
+            public long SendBatchBytes;
+
+            public FileStream ActiveFileStream;
+            public long FileRemaining;
+            public byte[] FileChunkBuf;
+
+            public long LastActivityTs;
+            public int Closed;
+            public int Counted;
+
+            public ConnState(EventHandler<SocketAsyncEventArgs> readHandler, EventHandler<SocketAsyncEventArgs> writeHandler)
+            {
+                ReadSaea = new SocketAsyncEventArgs();
+                ReadSaea.UserToken = this;
+                ReadSaea.Completed += readHandler;
+
+                WriteSaea = new SocketAsyncEventArgs();
+                WriteSaea.UserToken = this;
+                WriteSaea.Completed += writeHandler;
+            }
+
+            public void Touch()
+            {
+                Interlocked.Exchange(ref LastActivityTs, Stopwatch.GetTimestamp());
+            }
+
+            public void ResetForSocket(Socket s, long id)
+            {
+                Sock = s;
+                ConnId = id;
+                Phase = PhaseZeroWait;
+                ReqCount = 0;
+                ReadOffset = 0;
+                ReadLen = 0;
+                BodyBuf = null;
+                BodyGot = 0;
+                BodyLen = 0;
+                KeepAliveAfterSend = false;
+                SendSegs.Clear();
+                SendActiveList.Clear();
+                SendSegIdx = 0;
+                SendSegOff = 0;
+                SendBatchBytes = 0;
+                ActiveFileStream = null;
+                FileRemaining = 0;
+                FileChunkBuf = null;
+                Closed = 0;
+                Counted = 1;
+                Touch();
+            }
+        }
+
+        private static readonly byte[] EmptyZeroBuffer = new byte[0];
+        private static readonly byte[] DadosJsPrefix = Encoding.UTF8.GetBytes("window.CONDE_DB = ");
+        private static readonly byte[] DadosJsSuffix = Encoding.UTF8.GetBytes(";\n");
+        private static readonly byte[] BusyResponseBytes = Encoding.ASCII.GetBytes("HTTP/1.1 503 Service Unavailable\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Length: 11\r\nConnection: close\r\n\r\nServer busy");
+        private static readonly byte[] NotFoundBytes = Encoding.UTF8.GetBytes("Not found");
+        private static readonly byte[] ArtifactNotFoundBytes = Encoding.UTF8.GetBytes("Artifact not found");
+        private static readonly byte[] OkStatusBytes = Encoding.UTF8.GetBytes("{\"status\":\"ok\"}");
+        private static readonly byte[] HeaderNotFoundKeep = BuildHeaderBytes("404 Not Found", "text/plain; charset=utf-8", NotFoundBytes.Length, false, null, "no-store", true);
+        private static readonly byte[] HeaderNotFoundClose = BuildHeaderBytes("404 Not Found", "text/plain; charset=utf-8", NotFoundBytes.Length, false, null, "no-store", false);
+        private static readonly byte[] HeaderArtNotFoundKeep = BuildHeaderBytes("404 Not Found", "text/plain; charset=utf-8", ArtifactNotFoundBytes.Length, false, null, "no-store", true);
+        private static readonly byte[] HeaderArtNotFoundClose = BuildHeaderBytes("404 Not Found", "text/plain; charset=utf-8", ArtifactNotFoundBytes.Length, false, null, "no-store", false);
+        private static readonly byte[] HeaderOkKeep = BuildHeaderBytes("200 OK", "application/json; charset=utf-8", OkStatusBytes.Length, false, null, "no-store", true);
+        private static readonly byte[] HeaderOkClose = BuildHeaderBytes("200 OK", "application/json; charset=utf-8", OkStatusBytes.Length, false, null, "no-store", false);
+
+        private readonly List<Socket> _listeners = new List<Socket>();
         private volatile bool _running;
         private int _activeConnections;
-        private const int MaxConcurrentConnections = 2500;
-        private const int KeepAliveIdleTimeoutMs = 8000;
-        private const int MaxKeepAliveRequests = 1000;
+        private long _connIdSeq;
+        private int _connPoolCount;
+        private int _peakSinceIdleTrim;
+        private int _idleStableTicks;
+        private int _reaperRunning;
+        private System.Threading.Timer _reaperTimer;
+
+        private readonly object[] _shardLocks = new object[ConnShardCount];
+        private readonly Dictionary<long, ConnState>[] _connShards = new Dictionary<long, ConnState>[ConnShardCount];
+        private readonly ConcurrentStack<ConnState> _connPool = new ConcurrentStack<ConnState>();
+        private readonly ConcurrentBag<SocketAsyncEventArgs> _acceptSaeas = new ConcurrentBag<SocketAsyncEventArgs>();
+        private readonly BufferSlabPool _slabPool = new BufferSlabPool();
 
         public int Port { get; private set; }
         public int PreferredPort { get; set; }
+        public bool BindMultiLoopback { get; set; }
+        public int MaxConcurrentConnections { get; set; }
         public string ActiveSource { get; set; }
         public string CloudUrl { get; set; }
 
@@ -1523,16 +2529,22 @@ namespace CondeTreppioLauncher
         private readonly string _cachedDbPath;
         private readonly string _cloudConfigPath;
         private readonly string _localCondeDbPath = @"D:\Conde_Treppio\sandbox\dicionario_exaustivo\dicionario_formas_expandidas.json";
+        private readonly string _localCondeDbCompactGzPath = @"D:\Conde_Treppio\sandbox\dicionario_exaustivo\dicionario_formas_expandidas.compact.json.gz";
         private readonly string _localCondeHtmlPath = @"D:\Conde_Treppio\sandbox\ui_dicionario\index.html";
         private readonly string _localUiDir = @"D:\Conde_Treppio\sandbox\ui_dicionario";
 
         private PayloadSnapshot _snapshot;
         private readonly BoundedLruCache _apiLru = new BoundedLruCache(2048);
-        private readonly ConcurrentBag<byte[]> _bufferPool = new ConcurrentBag<byte[]>();
         private readonly SemaphoreSlim _recompileGate = new SemaphoreSlim(1, 1);
 
         public EmbeddedServer()
         {
+            MaxConcurrentConnections = 120000;
+            for (int i = 0; i < ConnShardCount; i++)
+            {
+                _shardLocks[i] = new object();
+                _connShards[i] = new Dictionary<long, ConnState>();
+            }
             Lexicon = new TreppioLexiconEngine();
             _appDataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CondeTreppio");
             Directory.CreateDirectory(_appDataDir);
@@ -1543,29 +2555,18 @@ namespace CondeTreppioLauncher
             ReloadPayloads();
         }
 
-        private byte[] RentBuffer()
+        private static byte[] CompressGzipSegments(params byte[][] segs)
         {
-            byte[] buf;
-            if (_bufferPool.TryTake(out buf)) return buf;
-            return new byte[8192];
-        }
-
-        private void ReturnBuffer(byte[] buf)
-        {
-            if (buf != null && _bufferPool.Count < 1024)
-            {
-                _bufferPool.Add(buf);
-            }
-        }
-
-        private static byte[] CompressGzip(byte[] raw)
-        {
-            if (raw == null || raw.Length == 0) return new byte[0];
+            if (segs == null || segs.Length == 0) return new byte[0];
             using (MemoryStream ms = new MemoryStream())
             {
                 using (GZipStream gz = new GZipStream(ms, CompressionLevel.Optimal, true))
                 {
-                    gz.Write(raw, 0, raw.Length);
+                    for (int i = 0; i < segs.Length; i++)
+                    {
+                        byte[] s = segs[i];
+                        if (s != null && s.Length > 0) gz.Write(s, 0, s.Length);
+                    }
                 }
                 return ms.ToArray();
             }
@@ -1574,21 +2575,37 @@ namespace CondeTreppioLauncher
         private static byte[] DecompressGzip(byte[] gzBytes)
         {
             if (gzBytes == null || gzBytes.Length == 0) return new byte[0];
+            int initCap = 0;
+            if (gzBytes.Length >= 18)
+            {
+                int isize = BitConverter.ToInt32(gzBytes, gzBytes.Length - 4);
+                if (isize >= 1024 && isize <= 64 * 1024 * 1024) initCap = isize;
+            }
             using (MemoryStream src = new MemoryStream(gzBytes))
             using (GZipStream gz = new GZipStream(src, CompressionMode.Decompress))
-            using (MemoryStream dst = new MemoryStream())
+            using (MemoryStream dst = initCap > 0 ? new MemoryStream(initCap) : new MemoryStream())
             {
-                gz.CopyTo(dst);
+                gz.CopyTo(dst, 65536);
+                if (dst.Length == dst.Capacity)
+                {
+                    return dst.GetBuffer();
+                }
                 return dst.ToArray();
             }
         }
 
-        private static string ComputeETag(byte[] data)
+        private static string ComputeETagSegments(params byte[][] segs)
         {
-            if (data == null) return "\"0\"";
+            if (segs == null || segs.Length == 0) return "\"0\"";
             using (SHA256 sha = SHA256.Create())
             {
-                byte[] h = sha.ComputeHash(data);
+                for (int i = 0; i < segs.Length; i++)
+                {
+                    byte[] d = segs[i];
+                    if (d != null && d.Length > 0) sha.TransformBlock(d, 0, d.Length, null, 0);
+                }
+                sha.TransformFinalBlock(EmptyZeroBuffer, 0, 0);
+                byte[] h = sha.Hash;
                 StringBuilder sb = new StringBuilder(20);
                 sb.Append('"');
                 for (int i = 0; i < 8; i++) sb.Append(h[i].ToString("x2", CultureInfo.InvariantCulture));
@@ -1597,15 +2614,57 @@ namespace CondeTreppioLauncher
             }
         }
 
-        private static byte[] BuildDadosJsBytes(byte[] jsonBytes)
+        private static byte[] BuildHeaderBytes(string status, string contentType, long contentLength, bool isGzip, string etag, string cacheControl, bool keepAlive)
         {
-            byte[] prefix = Encoding.UTF8.GetBytes("window.CONDE_DB = ");
-            byte[] suffix = Encoding.UTF8.GetBytes(";\n");
-            byte[] res = new byte[prefix.Length + jsonBytes.Length + suffix.Length];
-            Buffer.BlockCopy(prefix, 0, res, 0, prefix.Length);
-            Buffer.BlockCopy(jsonBytes, 0, res, prefix.Length, jsonBytes.Length);
-            Buffer.BlockCopy(suffix, 0, res, prefix.Length + jsonBytes.Length, suffix.Length);
-            return res;
+            StringBuilder sb = new StringBuilder(320);
+            sb.Append("HTTP/1.1 "); sb.Append(status); sb.Append("\r\n");
+            sb.Append("Content-Type: "); sb.Append(contentType); sb.Append("\r\n");
+            sb.Append("Content-Length: "); sb.Append(contentLength); sb.Append("\r\n");
+            if (isGzip) sb.Append("Content-Encoding: gzip\r\n");
+            sb.Append("Vary: Accept-Encoding\r\n");
+            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
+            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
+            sb.Append("Access-Control-Allow-Origin: *\r\n");
+            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
+            return Encoding.ASCII.GetBytes(sb.ToString());
+        }
+
+        private static byte[] BuildNotModifiedBytes(string etag, string cacheControl, bool keepAlive)
+        {
+            StringBuilder sb = new StringBuilder(224);
+            sb.Append("HTTP/1.1 304 Not Modified\r\n");
+            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
+            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
+            sb.Append("Vary: Accept-Encoding\r\n");
+            sb.Append("Access-Control-Allow-Origin: *\r\n");
+            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
+            return Encoding.ASCII.GetBytes(sb.ToString());
+        }
+
+        private static PreparedPayload BuildPreparedPayload(string contentType, string cacheControl, bool computeGzip, bool computeEtag, params byte[][] rawParts)
+        {
+            long rawLen = 0;
+            for (int i = 0; i < rawParts.Length; i++)
+            {
+                if (rawParts[i] != null) rawLen += rawParts[i].Length;
+            }
+            string etag = computeEtag ? ComputeETagSegments(rawParts) : null;
+            byte[] gz = (computeGzip && rawLen >= 256) ? CompressGzipSegments(rawParts) : null;
+            if (gz != null && gz.Length >= rawLen) gz = null;
+
+            return new PreparedPayload
+            {
+                RawParts = rawParts,
+                RawLen = rawLen,
+                HdrRawKeep = BuildHeaderBytes("200 OK", contentType, rawLen, false, etag, cacheControl, true),
+                HdrRawClose = BuildHeaderBytes("200 OK", contentType, rawLen, false, etag, cacheControl, false),
+                GzipBytes = gz,
+                HdrGzKeep = gz != null ? BuildHeaderBytes("200 OK", contentType, gz.Length, true, etag, cacheControl, true) : null,
+                HdrGzClose = gz != null ? BuildHeaderBytes("200 OK", contentType, gz.Length, true, etag, cacheControl, false) : null,
+                ETag = etag,
+                Hdr304Keep = !string.IsNullOrEmpty(etag) ? BuildNotModifiedBytes(etag, cacheControl, true) : null,
+                Hdr304Close = !string.IsNullOrEmpty(etag) ? BuildNotModifiedBytes(etag, cacheControl, false) : null
+            };
         }
 
         private StaticAssetEntry LoadAssetEntry(string fileName, string contentType, string cacheControl)
@@ -1621,14 +2680,12 @@ namespace CondeTreppioLauncher
                 raw = ReadEmbeddedResourceOrNull(fileName);
             }
             if (raw == null) return null;
-            bool compress = !fileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase) && raw.Length >= 256;
+            bool compress = !fileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase)
+                         && !fileName.EndsWith(".ico", StringComparison.OrdinalIgnoreCase)
+                         && raw.Length >= 256;
             return new StaticAssetEntry
             {
-                RawBytes = raw,
-                GzipBytes = compress ? CompressGzip(raw) : null,
-                ContentType = contentType,
-                ETag = ComputeETag(raw),
-                CacheControl = cacheControl
+                Payload = BuildPreparedPayload(contentType, cacheControl, compress, true, raw)
             };
         }
 
@@ -1640,7 +2697,13 @@ namespace CondeTreppioLauncher
 
             byte[] jsonRaw;
             string sourceLabel;
-            if (File.Exists(_localCondeDbPath))
+            if (File.Exists(_localCondeDbCompactGzPath) &&
+                (!File.Exists(_localCondeDbPath) || File.GetLastWriteTimeUtc(_localCondeDbCompactGzPath) >= File.GetLastWriteTimeUtc(_localCondeDbPath).AddSeconds(-2)))
+            {
+                jsonRaw = DecompressGzip(File.ReadAllBytes(_localCondeDbCompactGzPath));
+                sourceLabel = "Base Local Compacta (D:\\Conde_Treppio)";
+            }
+            else if (File.Exists(_localCondeDbPath))
             {
                 jsonRaw = File.ReadAllBytes(_localCondeDbPath);
                 sourceLabel = "Base Local Oficial (D:\\Conde_Treppio)";
@@ -1672,20 +2735,17 @@ namespace CondeTreppioLauncher
             ActiveSource = sourceLabel;
             ParseMetadataMetrics(jsonRaw);
 
+            byte[] safeHtml = htmlRaw ?? EmptyZeroBuffer;
+            byte[] safeJson = jsonRaw ?? Encoding.UTF8.GetBytes("{}");
+
             PayloadSnapshot next = new PayloadSnapshot();
             next.ActiveSource = sourceLabel;
-            next.HtmlRaw = htmlRaw ?? new byte[0];
-            next.HtmlGzip = CompressGzip(next.HtmlRaw);
-            next.HtmlETag = ComputeETag(next.HtmlRaw);
+            next.JsonRaw = safeJson;
+            next.Html = BuildPreparedPayload("text/html; charset=utf-8", "no-cache", true, true, safeHtml);
+            next.Json = BuildPreparedPayload("application/json; charset=utf-8", "no-cache", true, true, safeJson);
+            next.DadosJs = BuildPreparedPayload("application/javascript; charset=utf-8", "public, max-age=60", true, true, DadosJsPrefix, safeJson, DadosJsSuffix);
 
-            next.JsonRaw = jsonRaw ?? Encoding.UTF8.GetBytes("{}");
-            next.JsonGzip = CompressGzip(next.JsonRaw);
-            next.JsonETag = ComputeETag(next.JsonRaw);
-
-            next.DadosJsRaw = BuildDadosJsBytes(next.JsonRaw);
-            next.DadosJsGzip = CompressGzip(next.DadosJsRaw);
-            next.DadosJsETag = ComputeETag(next.DadosJsRaw);
-
+            AddStaticIfPresent(next, "brasao_conde.svg", "image/svg+xml; charset=utf-8", "public, max-age=86400");
             AddStaticIfPresent(next, "manifest.json", "application/manifest+json; charset=utf-8", "public, max-age=300");
             AddStaticIfPresent(next, "sw.js", "application/javascript; charset=utf-8", "no-cache");
             AddStaticIfPresent(next, "icon-512.png", "image/png", "public, max-age=86400");
@@ -1694,7 +2754,7 @@ namespace CondeTreppioLauncher
             AddStaticIfPresent(next, "favicon.ico", "image/x-icon", "public, max-age=86400");
 
             Interlocked.Exchange(ref _snapshot, next);
-            StartBackgroundIndexBuild(next.JsonRaw);
+            StartBackgroundIndexBuild(safeJson);
         }
 
         private void AddStaticIfPresent(PayloadSnapshot snap, string name, string mime, string cacheControl)
@@ -1815,7 +2875,7 @@ namespace CondeTreppioLauncher
                 using (WebClient wc = new WebClient())
                 {
                     wc.Encoding = Encoding.UTF8;
-                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/8.5");
+                    wc.Headers.Add("User-Agent", "CondeTreppioLauncher/9.0");
                     string json = wc.DownloadString(directUrl);
                     if (!json.Contains("\"substantivos\""))
                     {
@@ -1827,7 +2887,9 @@ namespace CondeTreppioLauncher
                     CloudUrl = directUrl;
 
                     PayloadSnapshot cur = _snapshot;
-                    byte[] htmlRaw = cur != null ? cur.HtmlRaw : ReadEmbeddedResource("index.html");
+                    byte[] htmlRaw = (cur != null && cur.Html != null && cur.Html.RawParts != null && cur.Html.RawParts.Length > 0)
+                        ? cur.Html.RawParts[0]
+                        : ReadEmbeddedResource("index.html");
                     SwapPayloadSnapshot(htmlRaw, Encoding.UTF8.GetBytes(json), "Nuvem Sincronizada (Git/Google Drive)");
                     message = "Banco atualizado da nuvem (" + TotalForms.ToString("N0", new CultureInfo("pt-BR")) + " formas)!";
                     return true;
@@ -1895,7 +2957,7 @@ namespace CondeTreppioLauncher
         {
             int minW, minC;
             ThreadPool.GetMinThreads(out minW, out minC);
-            ThreadPool.SetMinThreads(Math.Max(minW, 128), Math.Max(minC, 128));
+            ThreadPool.SetMinThreads(Math.Max(minW, 64), Math.Max(minC, 128));
 
             List<int> candidatePorts = new List<int>();
             if (PreferredPort > 0) candidatePorts.Add(PreferredPort);
@@ -1904,6 +2966,7 @@ namespace CondeTreppioLauncher
             candidatePorts.Add(8768);
             candidatePorts.Add(0);
 
+            Socket primaryV4 = null;
             for (int i = 0; i < candidatePorts.Count; i++)
             {
                 int p = candidatePorts[i];
@@ -1913,9 +2976,10 @@ namespace CondeTreppioLauncher
                     sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                     sock.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                     sock.Bind(new IPEndPoint(IPAddress.Loopback, p));
-                    sock.Listen(2048);
-                    _listenerV4 = sock;
+                    sock.Listen(65535);
+                    primaryV4 = sock;
                     Port = ((IPEndPoint)sock.LocalEndPoint).Port;
+                    _listeners.Add(sock);
                     break;
                 }
                 catch
@@ -1924,9 +2988,30 @@ namespace CondeTreppioLauncher
                 }
             }
 
-            if (_listenerV4 == null)
+            if (primaryV4 == null)
             {
                 throw new InvalidOperationException("Nao foi possivel vincular o servidor HTTP local.");
+            }
+
+            if (BindMultiLoopback)
+            {
+                for (int octet = 2; octet <= 32; octet++)
+                {
+                    Socket extra = null;
+                    try
+                    {
+                        IPAddress ip = IPAddress.Parse("127.0.0." + octet.ToString(CultureInfo.InvariantCulture));
+                        extra = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                        extra.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                        extra.Bind(new IPEndPoint(ip, Port));
+                        extra.Listen(65535);
+                        _listeners.Add(extra);
+                    }
+                    catch
+                    {
+                        if (extra != null) { try { extra.Close(); } catch { } }
+                    }
+                }
             }
 
             try
@@ -1934,46 +3019,932 @@ namespace CondeTreppioLauncher
                 Socket sock6 = new Socket(AddressFamily.InterNetworkV6, SocketType.Stream, ProtocolType.Tcp);
                 sock6.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                 sock6.Bind(new IPEndPoint(IPAddress.IPv6Loopback, Port));
-                sock6.Listen(2048);
-                _listenerV6 = sock6;
+                sock6.Listen(65535);
+                _listeners.Add(sock6);
             }
-            catch
-            {
-                _listenerV6 = null;
-            }
+            catch { }
 
             _running = true;
-            StartAcceptLoop(_listenerV4);
-            if (_listenerV6 != null) StartAcceptLoop(_listenerV6);
+            _reaperTimer = new System.Threading.Timer(OnReaperTick, null, 1000, 1000);
+
+            int acceptSlotsPerListener = _listeners.Count > 4 ? 16 : 64;
+            for (int i = 0; i < _listeners.Count; i++)
+            {
+                Socket listener = _listeners[i];
+                for (int s = 0; s < acceptSlotsPerListener; s++)
+                {
+                    SocketAsyncEventArgs saea = new SocketAsyncEventArgs();
+                    saea.UserToken = listener;
+                    saea.Completed += OnAcceptCompleted;
+                    _acceptSaeas.Add(saea);
+                    StartAccept(listener, saea);
+                }
+            }
         }
 
         public void Stop()
         {
             _running = false;
-            try { if (_listenerV4 != null) _listenerV4.Close(); } catch { }
-            try { if (_listenerV6 != null) _listenerV6.Close(); } catch { }
+            try
+            {
+                System.Threading.Timer t = _reaperTimer;
+                _reaperTimer = null;
+                if (t != null) t.Dispose();
+            }
+            catch { }
+
+            for (int i = 0; i < _listeners.Count; i++)
+            {
+                try { _listeners[i].Close(); } catch { }
+            }
+            _listeners.Clear();
+
+            List<Socket> toClose = new List<Socket>();
+            for (int s = 0; s < ConnShardCount; s++)
+            {
+                lock (_shardLocks[s])
+                {
+                    foreach (KeyValuePair<long, ConnState> kv in _connShards[s])
+                    {
+                        Socket sock = kv.Value.Sock;
+                        if (sock != null) toClose.Add(sock);
+                    }
+                    _connShards[s].Clear();
+                }
+            }
+            for (int i = 0; i < toClose.Count; i++)
+            {
+                try { toClose[i].Close(); } catch { }
+            }
         }
 
-        private void StartAcceptLoop(Socket listener)
+        private void OnReaperTick(object state)
         {
-            Task.Run(async () =>
+            if (!_running) return;
+            if (Interlocked.CompareExchange(ref _reaperRunning, 1, 0) != 0) return;
+            try
             {
-                while (_running)
+                int active = Thread.VolatileRead(ref _activeConnections);
+                long ttlMs = 8000;
+                if (active >= 60000) ttlMs = 1200;
+                else if (active >= 25000) ttlMs = 2500;
+                else if (active >= 10000) ttlMs = 5000;
+
+                long freq = Stopwatch.Frequency;
+                long maxIdleTicks = (ttlMs * freq) / 1000L;
+                long maxSendHangTicks = (30000L * freq) / 1000L;
+                long nowTs = Stopwatch.GetTimestamp();
+
+                List<Socket> expired = null;
+                for (int s = 0; s < ConnShardCount; s++)
                 {
-                    Socket client = null;
-                    try
+                    lock (_shardLocks[s])
                     {
-                        client = await Task.Factory.FromAsync<Socket>(listener.BeginAccept, listener.EndAccept, null).ConfigureAwait(false);
+                        if (_connShards[s].Count == 0) continue;
+                        foreach (KeyValuePair<long, ConnState> kv in _connShards[s])
+                        {
+                            ConnState c = kv.Value;
+                            long elapsed = nowTs - Interlocked.Read(ref c.LastActivityTs);
+                            int phase = Volatile.Read(ref c.Phase);
+                            long limit = (phase >= PhaseSending) ? maxSendHangTicks : maxIdleTicks;
+                            if (elapsed >= limit)
+                            {
+                                Socket sock = c.Sock;
+                                if (sock != null)
+                                {
+                                    if (expired == null) expired = new List<Socket>(64);
+                                    expired.Add(sock);
+                                }
+                            }
+                        }
                     }
-                    catch
+                }
+                if (expired != null)
+                {
+                    for (int i = 0; i < expired.Count; i++)
                     {
-                        if (!_running) break;
+                        try { expired[i].Close(); } catch { }
+                    }
+                }
+
+                if (active <= 2)
+                {
+                    int idleT = Interlocked.Increment(ref _idleStableTicks);
+                    if (idleT >= 2 && Volatile.Read(ref _peakSinceIdleTrim) >= 100)
+                    {
+                        Volatile.Write(ref _peakSinceIdleTrim, 0);
+                        Interlocked.Exchange(ref _idleStableTicks, 0);
+                        while (Volatile.Read(ref _connPoolCount) > IdleRetainConns)
+                        {
+                            ConnState evicted;
+                            if (!_connPool.TryPop(out evicted)) break;
+                            Interlocked.Decrement(ref _connPoolCount);
+                            try { evicted.ReadSaea.Dispose(); } catch { }
+                            try { evicted.WriteSaea.Dispose(); } catch { }
+                        }
+                        _slabPool.TrimOnIdle();
+                        GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+                        GC.Collect(2, GCCollectionMode.Forced, true, true);
+                        GC.WaitForPendingFinalizers();
+                        GC.Collect(2, GCCollectionMode.Forced, true, true);
+                    }
+                }
+                else
+                {
+                    Interlocked.Exchange(ref _idleStableTicks, 0);
+                }
+            }
+            catch { }
+            finally
+            {
+                Interlocked.Exchange(ref _reaperRunning, 0);
+            }
+        }
+
+        private void StartAccept(Socket listener, SocketAsyncEventArgs saea)
+        {
+            while (_running)
+            {
+                saea.AcceptSocket = null;
+                bool pending;
+                try
+                {
+                    pending = listener.AcceptAsync(saea);
+                }
+                catch
+                {
+                    break;
+                }
+                if (pending) return;
+                HandleAccepted(saea);
+            }
+        }
+
+        private void OnAcceptCompleted(object sender, SocketAsyncEventArgs saea)
+        {
+            HandleAccepted(saea);
+            Socket listener = saea.UserToken as Socket;
+            if (listener != null && _running)
+            {
+                StartAccept(listener, saea);
+            }
+        }
+
+        private void HandleAccepted(SocketAsyncEventArgs saea)
+        {
+            Socket client = saea.AcceptSocket;
+            saea.AcceptSocket = null;
+            if (saea.SocketError != SocketError.Success || client == null || !_running)
+            {
+                if (client != null) { try { client.Close(); } catch { } }
+                return;
+            }
+
+            int curConns = Interlocked.Increment(ref _activeConnections);
+            if (curConns > MaxConcurrentConnections)
+            {
+                Interlocked.Decrement(ref _activeConnections);
+                try { client.SendTimeout = 250; client.Send(BusyResponseBytes); } catch { }
+                try { client.Close(); } catch { }
+                return;
+            }
+
+            try { client.NoDelay = true; } catch { }
+            ConnState conn;
+            if (_connPool.TryPop(out conn))
+            {
+                Interlocked.Decrement(ref _connPoolCount);
+            }
+            else
+            {
+                conn = new ConnState(OnReadCompleted, OnWriteCompleted);
+            }
+            int prevPeak = Volatile.Read(ref _peakSinceIdleTrim);
+            if (curConns > prevPeak) Interlocked.CompareExchange(ref _peakSinceIdleTrim, curConns, prevPeak);
+            long id = Interlocked.Increment(ref _connIdSeq);
+            conn.ResetForSocket(client, id);
+
+            int shard = (int)(id & (ConnShardCount - 1));
+            lock (_shardLocks[shard])
+            {
+                _connShards[shard][id] = conn;
+            }
+
+            RunConnectionLoop(conn, ModeStartRead);
+        }
+
+        private void EnsureReadSlice(ConnState conn)
+        {
+            if (conn.ReadSlice.Array == null)
+            {
+                conn.ReadSlice = _slabPool.Rent();
+                conn.ReadLen = 0;
+                conn.ReadOffset = 0;
+            }
+        }
+
+        private void ReleaseReadSlice(ConnState conn)
+        {
+            if (conn.ReadSlice.Array != null)
+            {
+                _slabPool.Return(conn.ReadSlice);
+                conn.ReadSlice = default(SlabSlice);
+            }
+            conn.ReadLen = 0;
+            conn.ReadOffset = 0;
+        }
+
+        private void CloseAndRecycle(ConnState conn)
+        {
+            if (Interlocked.Exchange(ref conn.Closed, 1) != 0) return;
+
+            Volatile.Write(ref conn.Phase, PhaseClosed);
+            long cid = conn.ConnId;
+            if (cid > 0)
+            {
+                int shard = (int)(cid & (ConnShardCount - 1));
+                lock (_shardLocks[shard])
+                {
+                    _connShards[shard].Remove(cid);
+                }
+            }
+
+            Socket sock = Interlocked.Exchange(ref conn.Sock, null);
+            if (sock != null)
+            {
+                try { sock.Close(); } catch { }
+            }
+
+            ReleaseReadSlice(conn);
+            conn.BodyBuf = null;
+            conn.BodyGot = 0;
+            conn.BodyLen = 0;
+            conn.SendSegs.Clear();
+            conn.SendActiveList.Clear();
+
+            FileStream fs = conn.ActiveFileStream;
+            conn.ActiveFileStream = null;
+            conn.FileChunkBuf = null;
+            if (fs != null) { try { fs.Dispose(); } catch { } }
+
+            if (Interlocked.Exchange(ref conn.Counted, 0) != 0)
+            {
+                Interlocked.Decrement(ref _activeConnections);
+            }
+
+            conn.ConnId = 0;
+            conn.Phase = PhaseFree;
+            try
+            {
+                conn.ReadSaea.BufferList = null;
+                conn.ReadSaea.SetBuffer(null, 0, 0);
+                conn.WriteSaea.BufferList = null;
+                conn.WriteSaea.SetBuffer(null, 0, 0);
+            }
+            catch { }
+
+            if (Interlocked.Increment(ref _connPoolCount) <= MaxPooledConns)
+            {
+                _connPool.Push(conn);
+            }
+            else
+            {
+                Interlocked.Decrement(ref _connPoolCount);
+                try { conn.ReadSaea.Dispose(); } catch { }
+                try { conn.WriteSaea.Dispose(); } catch { }
+            }
+        }
+
+        private void OnReadCompleted(object sender, SocketAsyncEventArgs saea)
+        {
+            ConnState conn = saea.UserToken as ConnState;
+            if (conn != null) RunConnectionLoop(conn, ModeReadCompleted);
+        }
+
+        private void OnWriteCompleted(object sender, SocketAsyncEventArgs saea)
+        {
+            ConnState conn = saea.UserToken as ConnState;
+            if (conn != null) RunConnectionLoop(conn, ModeWriteCompleted);
+        }
+
+        private void RunConnectionLoop(ConnState conn, int mode)
+        {
+            while (true)
+            {
+                if (Thread.VolatileRead(ref conn.Closed) != 0 || conn.Sock == null)
+                {
+                    CloseAndRecycle(conn);
+                    return;
+                }
+
+                if (mode == ModeStartRead)
+                {
+                    if (!_running || conn.ReqCount >= MaxKeepAliveRequests)
+                    {
+                        CloseAndRecycle(conn);
+                        return;
+                    }
+                    if (conn.ReadSlice.Array != null && conn.ReadOffset < conn.ReadLen)
+                    {
+                        mode = TryParseAndDispatch(conn);
+                        if (mode < 0) return;
                         continue;
                     }
-                    if (client == null) continue;
-                    Task _unused = HandleSocketAsync(client);
+                    ReleaseReadSlice(conn);
+                    Volatile.Write(ref conn.Phase, PhaseZeroWait);
+                    conn.Touch();
+                    conn.ReadSaea.BufferList = null;
+                    conn.ReadSaea.SetBuffer(EmptyZeroBuffer, 0, 0);
+                    bool pending;
+                    try { pending = conn.Sock.ReceiveAsync(conn.ReadSaea); }
+                    catch { CloseAndRecycle(conn); return; }
+                    if (pending) return;
+                    mode = ModeReadCompleted;
+                    continue;
                 }
-            });
+                else if (mode == ModeReadCompleted)
+                {
+                    if (conn.ReadSaea.SocketError != SocketError.Success)
+                    {
+                        CloseAndRecycle(conn);
+                        return;
+                    }
+                    int phase = Volatile.Read(ref conn.Phase);
+                    if (phase == PhaseZeroWait)
+                    {
+                        EnsureReadSlice(conn);
+                        Volatile.Write(ref conn.Phase, PhaseDataRead);
+                        conn.Touch();
+                        conn.ReadSaea.BufferList = null;
+                        conn.ReadSaea.SetBuffer(conn.ReadSlice.Array, conn.ReadSlice.Offset, SlabSliceSize);
+                        bool pending;
+                        try { pending = conn.Sock.ReceiveAsync(conn.ReadSaea); }
+                        catch { CloseAndRecycle(conn); return; }
+                        if (pending) return;
+                        continue;
+                    }
+                    else if (phase == PhaseDataRead)
+                    {
+                        int n = conn.ReadSaea.BytesTransferred;
+                        if (n <= 0)
+                        {
+                            CloseAndRecycle(conn);
+                            return;
+                        }
+                        conn.ReadLen += n;
+                        conn.Touch();
+                        mode = TryParseAndDispatch(conn);
+                        if (mode < 0) return;
+                        continue;
+                    }
+                    else if (phase == PhaseBodyRead)
+                    {
+                        int n = conn.ReadSaea.BytesTransferred;
+                        if (n <= 0)
+                        {
+                            CloseAndRecycle(conn);
+                            return;
+                        }
+                        conn.BodyGot += n;
+                        conn.Touch();
+                        if (conn.BodyGot < conn.BodyLen)
+                        {
+                            conn.ReadSaea.BufferList = null;
+                            conn.ReadSaea.SetBuffer(conn.BodyBuf, conn.BodyGot, conn.BodyLen - conn.BodyGot);
+                            bool pending;
+                            try { pending = conn.Sock.ReceiveAsync(conn.ReadSaea); }
+                            catch { CloseAndRecycle(conn); return; }
+                            if (pending) return;
+                            continue;
+                        }
+                        string bodyStr = Encoding.UTF8.GetString(conn.BodyBuf, 0, conn.BodyLen);
+                        conn.BodyBuf = null;
+                        conn.BodyGot = 0;
+                        conn.BodyLen = 0;
+                        mode = DispatchParsedRequest(conn, bodyStr);
+                        if (mode < 0) return;
+                        continue;
+                    }
+                    else
+                    {
+                        CloseAndRecycle(conn);
+                        return;
+                    }
+                }
+                else if (mode == ModeWriteCompleted)
+                {
+                    if (conn.WriteSaea.SocketError != SocketError.Success || conn.WriteSaea.BytesTransferred <= 0)
+                    {
+                        CloseAndRecycle(conn);
+                        return;
+                    }
+                    conn.Touch();
+                    int nextMode;
+                    if (AdvanceSendOrFinish(conn, conn.WriteSaea.BytesTransferred, out nextMode))
+                    {
+                        if (nextMode < 0) return;
+                        mode = nextMode;
+                        continue;
+                    }
+                    return;
+                }
+                else
+                {
+                    CloseAndRecycle(conn);
+                    return;
+                }
+            }
+        }
+
+        private int TryParseAndDispatch(ConnState conn)
+        {
+            byte[] buf = conn.ReadSlice.Array;
+            int baseOff = conn.ReadSlice.Offset;
+            int avail = conn.ReadLen - conn.ReadOffset;
+            int headerRelEnd = FindHeaderEnd(buf, baseOff + conn.ReadOffset, avail);
+
+            if (headerRelEnd < 0)
+            {
+                if (conn.ReadOffset > 0 && avail > 0)
+                {
+                    Buffer.BlockCopy(buf, baseOff + conn.ReadOffset, buf, baseOff, avail);
+                    conn.ReadLen = avail;
+                    conn.ReadOffset = 0;
+                }
+                else if (conn.ReadOffset > 0)
+                {
+                    conn.ReadLen = 0;
+                    conn.ReadOffset = 0;
+                }
+
+                if (conn.ReadLen >= SlabSliceSize)
+                {
+                    CloseAndRecycle(conn);
+                    return -1;
+                }
+
+                Volatile.Write(ref conn.Phase, PhaseDataRead);
+                conn.ReadSaea.BufferList = null;
+                conn.ReadSaea.SetBuffer(buf, baseOff + conn.ReadLen, SlabSliceSize - conn.ReadLen);
+                bool pending;
+                try { pending = conn.Sock.ReceiveAsync(conn.ReadSaea); }
+                catch { CloseAndRecycle(conn); return -1; }
+                return pending ? -1 : ModeReadCompleted;
+            }
+
+            if (!ParseHttpHeaderBlock(buf, baseOff + conn.ReadOffset, headerRelEnd, conn.CurReq))
+            {
+                CloseAndRecycle(conn);
+                return -1;
+            }
+
+            conn.ReadOffset += headerRelEnd + 4;
+            int remaining = conn.ReadLen - conn.ReadOffset;
+            int cl = conn.CurReq.ContentLength;
+
+            if (cl <= 0)
+            {
+                if (remaining > 0)
+                {
+                    Buffer.BlockCopy(buf, baseOff + conn.ReadOffset, buf, baseOff, remaining);
+                    conn.ReadLen = remaining;
+                    conn.ReadOffset = 0;
+                }
+                else
+                {
+                    ReleaseReadSlice(conn);
+                }
+                return DispatchParsedRequest(conn, "");
+            }
+
+            if (remaining >= cl)
+            {
+                string bodyStr = Encoding.UTF8.GetString(buf, baseOff + conn.ReadOffset, cl);
+                conn.ReadOffset += cl;
+                int extra = conn.ReadLen - conn.ReadOffset;
+                if (extra > 0)
+                {
+                    Buffer.BlockCopy(buf, baseOff + conn.ReadOffset, buf, baseOff, extra);
+                    conn.ReadLen = extra;
+                    conn.ReadOffset = 0;
+                }
+                else
+                {
+                    ReleaseReadSlice(conn);
+                }
+                return DispatchParsedRequest(conn, bodyStr);
+            }
+
+            byte[] bodyBuf = new byte[cl];
+            if (remaining > 0) Buffer.BlockCopy(buf, baseOff + conn.ReadOffset, bodyBuf, 0, remaining);
+            ReleaseReadSlice(conn);
+            conn.BodyBuf = bodyBuf;
+            conn.BodyGot = remaining;
+            conn.BodyLen = cl;
+            Volatile.Write(ref conn.Phase, PhaseBodyRead);
+            conn.ReadSaea.BufferList = null;
+            conn.ReadSaea.SetBuffer(conn.BodyBuf, conn.BodyGot, conn.BodyLen - conn.BodyGot);
+            bool bodyPending;
+            try { bodyPending = conn.Sock.ReceiveAsync(conn.ReadSaea); }
+            catch { CloseAndRecycle(conn); return -1; }
+            return bodyPending ? -1 : ModeReadCompleted;
+        }
+
+        private static bool ParseHttpHeaderBlock(byte[] buf, int offset, int len, HttpParsedRequest req)
+        {
+            string headerText = Encoding.ASCII.GetString(buf, offset, len);
+            int firstCr = headerText.IndexOf('\n');
+            string firstLine = (firstCr >= 0 ? headerText.Substring(0, firstCr) : headerText).TrimEnd('\r');
+            int sp1 = firstLine.IndexOf(' ');
+            if (sp1 <= 0) return false;
+            int sp2 = firstLine.IndexOf(' ', sp1 + 1);
+            string methodRaw = firstLine.Substring(0, sp1);
+            string rawTarget = sp2 > sp1 ? firstLine.Substring(sp1 + 1, sp2 - sp1 - 1) : firstLine.Substring(sp1 + 1);
+            string proto = sp2 > sp1 ? firstLine.Substring(sp2 + 1) : "HTTP/1.1";
+
+            req.Method = methodRaw.ToUpperInvariant();
+            int qIdx = rawTarget.IndexOf('?');
+            req.Path = qIdx >= 0 ? rawTarget.Substring(0, qIdx) : rawTarget;
+            req.Query = qIdx >= 0 ? rawTarget.Substring(qIdx + 1) : "";
+            req.AcceptsGzip = false;
+            req.IfNoneMatch = null;
+            req.ContentLength = 0;
+
+            bool isHttp10 = proto.Equals("HTTP/1.0", StringComparison.OrdinalIgnoreCase);
+            bool hasKeep = false;
+            bool hasClose = false;
+
+            if (firstCr >= 0)
+            {
+                int pos = firstCr + 1;
+                while (pos < headerText.Length)
+                {
+                    int nextNl = headerText.IndexOf('\n', pos);
+                    int lineEnd = nextNl >= 0 ? nextNl : headerText.Length;
+                    string line = headerText.Substring(pos, lineEnd - pos).TrimEnd('\r');
+                    pos = lineEnd + 1;
+                    int colon = line.IndexOf(':');
+                    if (colon <= 0) continue;
+                    string hName = line.Substring(0, colon).Trim();
+                    string hVal = line.Substring(colon + 1).Trim();
+
+                    if (hName.Equals("Connection", StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (hVal.IndexOf("close", StringComparison.OrdinalIgnoreCase) >= 0) hasClose = true;
+                        if (hVal.IndexOf("keep-alive", StringComparison.OrdinalIgnoreCase) >= 0) hasKeep = true;
+                    }
+                    else if (hName.Equals("Accept-Encoding", StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (hVal.IndexOf("gzip", StringComparison.OrdinalIgnoreCase) >= 0) req.AcceptsGzip = true;
+                    }
+                    else if (hName.Equals("If-None-Match", StringComparison.OrdinalIgnoreCase))
+                    {
+                        req.IfNoneMatch = hVal;
+                    }
+                    else if (hName.Equals("Content-Length", StringComparison.OrdinalIgnoreCase))
+                    {
+                        int cl;
+                        if (int.TryParse(hVal, out cl) && cl > 0) req.ContentLength = Math.Min(cl, 1024 * 1024);
+                    }
+                }
+            }
+
+            req.KeepAlive = isHttp10 ? (hasKeep && !hasClose) : !hasClose;
+            return true;
+        }
+
+        private int DispatchParsedRequest(ConnState conn, string body)
+        {
+            conn.ReqCount++;
+            HttpParsedRequest req = conn.CurReq;
+            bool keepAlive = req.KeepAlive && conn.ReqCount < MaxKeepAliveRequests;
+            bool isHead = req.Method == "HEAD";
+            PayloadSnapshot snap = _snapshot;
+            string path = req.Path;
+
+            Volatile.Write(ref conn.Phase, PhaseProcessing);
+
+            if (path == "/api/health")
+            {
+                byte[] healthBytes = BuildHealthJsonBytes();
+                byte[] hdr = BuildHeaderBytes("200 OK", "application/json; charset=utf-8", healthBytes.Length, false, null, "no-store", keepAlive);
+                return StartSendSingle(conn, hdr, isHead ? null : healthBytes, keepAlive);
+            }
+            if (path == "/api/ipa")
+            {
+                string q = GetQueryParam(req.Query, "q");
+                if (string.IsNullOrEmpty(q)) q = "Haly'itror giza in oxej";
+                string key = "ipa|" + q;
+                CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildIpaJson(q));
+                return StartSendPrepared(conn, pair.Payload, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/api/traduzir")
+            {
+                string dir = GetQueryParam(req.Query, "dir");
+                if (string.IsNullOrEmpty(dir)) dir = "pt-tr";
+                string q = GetQueryParam(req.Query, "q");
+                string key = Lexicon.Generation + "|tr|" + dir + "|" + q;
+                CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildTranslateJson(dir, q));
+                return StartSendPrepared(conn, pair.Payload, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/api/search")
+            {
+                string q = GetQueryParam(req.Query, "q");
+                int limit = 12;
+                string limStr = GetQueryParam(req.Query, "limit");
+                int parsedLim;
+                if (int.TryParse(limStr, out parsedLim) && parsedLim > 0) limit = parsedLim;
+                string key = Lexicon.Generation + "|sr|" + limit + "|" + q;
+                CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildSearchJson(q, limit));
+                return StartSendPrepared(conn, pair.Payload, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/api/db" || path.EndsWith("/dicionario_formas_expandidas.json", StringComparison.OrdinalIgnoreCase))
+            {
+                return StartSendPrepared(conn, snap.Json, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/dados_dicionario_conde.js")
+            {
+                return StartSendPrepared(conn, snap.DadosJs, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/" || path == "/index.html")
+            {
+                return StartSendPrepared(conn, snap.Html, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+            }
+            if (path == "/api/recompilar" && req.Method == "POST")
+            {
+                string msg;
+                RecompileLocalConde(out msg);
+                PayloadSnapshot updated = _snapshot;
+                byte[] prefix = Encoding.UTF8.GetBytes("{\"status\":\"ok\",\"source\":\"" + TreppioLexiconEngine.EscapeJsonValue(updated.ActiveSource) + "\",\"db\":");
+                byte[] suffix = Encoding.UTF8.GetBytes("}");
+                if (req.AcceptsGzip)
+                {
+                    byte[] gz = CompressGzipSegments(prefix, updated.JsonRaw, suffix);
+                    byte[] hdr = BuildHeaderBytes("200 OK", "application/json; charset=utf-8", gz.Length, true, null, "no-store", keepAlive);
+                    return StartSendSingle(conn, hdr, gz, keepAlive);
+                }
+                else
+                {
+                    long totalLen = (long)prefix.Length + updated.JsonRaw.Length + suffix.Length;
+                    byte[] hdr = BuildHeaderBytes("200 OK", "application/json; charset=utf-8", totalLen, false, null, "no-store", keepAlive);
+                    conn.SendSegs.Clear();
+                    conn.SendSegs.Add(new ArraySegment<byte>(hdr));
+                    conn.SendSegs.Add(new ArraySegment<byte>(prefix));
+                    conn.SendSegs.Add(new ArraySegment<byte>(updated.JsonRaw));
+                    conn.SendSegs.Add(new ArraySegment<byte>(suffix));
+                    return StartSendSegs(conn, keepAlive);
+                }
+            }
+            if (path == "/api/cloud-config" && req.Method == "POST")
+            {
+                if (!string.IsNullOrEmpty(body))
+                {
+                    Match m = Regex.Match(body, "\"cloud_url\"\\s*:\\s*\"([^\"]+)\"");
+                    if (m.Success)
+                    {
+                        string msg;
+                        SyncFromCloud(m.Groups[1].Value, out msg);
+                    }
+                }
+                return StartSendSingle(conn, keepAlive ? HeaderOkKeep : HeaderOkClose, OkStatusBytes, keepAlive);
+            }
+            if (path.StartsWith("/", StringComparison.Ordinal))
+            {
+                string keyName = path.TrimStart('/');
+                StaticAssetEntry asset;
+                if (snap.Assets.TryGetValue(keyName, out asset))
+                {
+                    return StartSendPrepared(conn, asset.Payload, req.AcceptsGzip, req.IfNoneMatch, keepAlive, isHead);
+                }
+            }
+            if (path == "/Codice_Treppio_Conde.exe" || path == "/Codice_Treppio_Conde.apk" || path == "/dist/Codice_Treppio_Portatil.html")
+            {
+                string diskPath = ResolveDownloadArtifact(path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
+                if (diskPath != null)
+                {
+                    string mime = path.EndsWith(".html", StringComparison.OrdinalIgnoreCase) ? "text/html; charset=utf-8" : "application/octet-stream";
+                    FileInfo fi = new FileInfo(diskPath);
+                    long len = fi.Exists ? fi.Length : 0;
+                    byte[] hdr = BuildHeaderBytes("200 OK", mime, len, false, null, "no-cache", keepAlive);
+                    if (isHead || len == 0)
+                    {
+                        return StartSendSingle(conn, hdr, null, keepAlive);
+                    }
+                    try
+                    {
+                        FileStream fs = new FileStream(diskPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 65536, FileOptions.SequentialScan);
+                        conn.ActiveFileStream = fs;
+                        conn.FileRemaining = len;
+                        conn.FileChunkBuf = new byte[65536];
+                        conn.KeepAliveAfterSend = keepAlive;
+                        Volatile.Write(ref conn.Phase, PhaseStreamingFile);
+                        return SendSingleBufferAsync(conn, hdr, 0, hdr.Length);
+                    }
+                    catch { }
+                }
+                return StartSendSingle(conn, keepAlive ? HeaderArtNotFoundKeep : HeaderArtNotFoundClose, isHead ? null : ArtifactNotFoundBytes, keepAlive);
+            }
+
+            return StartSendSingle(conn, keepAlive ? HeaderNotFoundKeep : HeaderNotFoundClose, isHead ? null : NotFoundBytes, keepAlive);
+        }
+
+        private int StartSendPrepared(ConnState conn, PreparedPayload p, bool acceptsGzip, string ifNoneMatch, bool keepAlive, bool isHead)
+        {
+            if (MatchesIfNoneMatch(ifNoneMatch, p.ETag))
+            {
+                byte[] hdr304 = keepAlive ? p.Hdr304Keep : p.Hdr304Close;
+                return StartSendSingle(conn, hdr304, null, keepAlive);
+            }
+
+            bool useGz = acceptsGzip && p.GzipBytes != null;
+            if (useGz)
+            {
+                byte[] hdr = keepAlive ? p.HdrGzKeep : p.HdrGzClose;
+                return StartSendSingle(conn, hdr, isHead ? null : p.GzipBytes, keepAlive);
+            }
+
+            byte[] rawHdr = keepAlive ? p.HdrRawKeep : p.HdrRawClose;
+            if (isHead || p.RawParts == null || p.RawParts.Length == 0)
+            {
+                return StartSendSingle(conn, rawHdr, null, keepAlive);
+            }
+
+            conn.SendSegs.Clear();
+            conn.SendSegs.Add(new ArraySegment<byte>(rawHdr));
+            for (int i = 0; i < p.RawParts.Length; i++)
+            {
+                byte[] part = p.RawParts[i];
+                if (part != null && part.Length > 0) conn.SendSegs.Add(new ArraySegment<byte>(part));
+            }
+            return StartSendSegs(conn, keepAlive);
+        }
+
+        private int StartSendSingle(ConnState conn, byte[] hdr, byte[] body, bool keepAlive)
+        {
+            conn.SendSegs.Clear();
+            conn.SendSegs.Add(new ArraySegment<byte>(hdr));
+            if (body != null && body.Length > 0) conn.SendSegs.Add(new ArraySegment<byte>(body));
+            return StartSendSegs(conn, keepAlive);
+        }
+
+        private int SendSingleBufferAsync(ConnState conn, byte[] buf, int off, int count)
+        {
+            conn.SendSegs.Clear();
+            conn.SendBatchBytes = count;
+            conn.WriteSaea.BufferList = null;
+            conn.WriteSaea.SetBuffer(buf, off, count);
+            conn.Touch();
+            bool pending;
+            try { pending = conn.Sock.SendAsync(conn.WriteSaea); }
+            catch { CloseAndRecycle(conn); return -1; }
+            return pending ? -1 : ModeWriteCompleted;
+        }
+
+        private int StartSendSegs(ConnState conn, bool keepAlive)
+        {
+            conn.KeepAliveAfterSend = keepAlive;
+            conn.SendSegIdx = 0;
+            conn.SendSegOff = 0;
+            Volatile.Write(ref conn.Phase, PhaseSending);
+
+            if (conn.SendSegs.Count == 1)
+            {
+                ArraySegment<byte> seg = conn.SendSegs[0];
+                conn.SendBatchBytes = seg.Count;
+                conn.WriteSaea.BufferList = null;
+                conn.WriteSaea.SetBuffer(seg.Array, seg.Offset, seg.Count);
+            }
+            else
+            {
+                conn.SendActiveList.Clear();
+                long sum = 0;
+                for (int i = 0; i < conn.SendSegs.Count; i++)
+                {
+                    conn.SendActiveList.Add(conn.SendSegs[i]);
+                    sum += conn.SendSegs[i].Count;
+                }
+                conn.SendBatchBytes = sum;
+                conn.WriteSaea.SetBuffer(null, 0, 0);
+                conn.WriteSaea.BufferList = null;
+                conn.WriteSaea.BufferList = conn.SendActiveList;
+            }
+
+            conn.Touch();
+            bool pending;
+            try { pending = conn.Sock.SendAsync(conn.WriteSaea); }
+            catch { CloseAndRecycle(conn); return -1; }
+            return pending ? -1 : ModeWriteCompleted;
+        }
+
+        private bool AdvanceSendOrFinish(ConnState conn, int bytesSent, out int nextMode)
+        {
+            nextMode = -1;
+            int phase = Volatile.Read(ref conn.Phase);
+
+            if (phase == PhaseStreamingFile)
+            {
+                if (conn.ActiveFileStream != null)
+                {
+                    if (conn.SendBatchBytes > 0 && bytesSent < conn.SendBatchBytes)
+                    {
+                        byte[] curBuf = conn.WriteSaea.Buffer;
+                        int curOff = conn.WriteSaea.Offset + bytesSent;
+                        int rem = (int)(conn.SendBatchBytes - bytesSent);
+                        conn.SendBatchBytes = rem;
+                        conn.WriteSaea.BufferList = null;
+                        conn.WriteSaea.SetBuffer(curBuf, curOff, rem);
+                        bool pPartial;
+                        try { pPartial = conn.Sock.SendAsync(conn.WriteSaea); }
+                        catch { CloseAndRecycle(conn); return false; }
+                        nextMode = pPartial ? -1 : ModeWriteCompleted;
+                        return true;
+                    }
+
+                    if (conn.FileRemaining > 0)
+                    {
+                        int toRead = (int)Math.Min(conn.FileChunkBuf.Length, conn.FileRemaining);
+                        int readN = conn.ActiveFileStream.Read(conn.FileChunkBuf, 0, toRead);
+                        if (readN > 0)
+                        {
+                            conn.FileRemaining -= readN;
+                            conn.SendBatchBytes = readN;
+                            conn.WriteSaea.BufferList = null;
+                            conn.WriteSaea.SetBuffer(conn.FileChunkBuf, 0, readN);
+                            bool pChunk;
+                            try { pChunk = conn.Sock.SendAsync(conn.WriteSaea); }
+                            catch { CloseAndRecycle(conn); return false; }
+                            nextMode = pChunk ? -1 : ModeWriteCompleted;
+                            return true;
+                        }
+                    }
+
+                    try { conn.ActiveFileStream.Dispose(); } catch { }
+                    conn.ActiveFileStream = null;
+                    conn.FileChunkBuf = null;
+                }
+                if (!conn.KeepAliveAfterSend)
+                {
+                    CloseAndRecycle(conn);
+                    return false;
+                }
+                nextMode = ModeStartRead;
+                return true;
+            }
+
+            if (bytesSent < conn.SendBatchBytes)
+            {
+                int remSkip = bytesSent;
+                while (remSkip > 0 && conn.SendSegIdx < conn.SendSegs.Count)
+                {
+                    ArraySegment<byte> seg = conn.SendSegs[conn.SendSegIdx];
+                    int avail = seg.Count - conn.SendSegOff;
+                    if (remSkip >= avail)
+                    {
+                        remSkip -= avail;
+                        conn.SendSegIdx++;
+                        conn.SendSegOff = 0;
+                    }
+                    else
+                    {
+                        conn.SendSegOff += remSkip;
+                        remSkip = 0;
+                    }
+                }
+
+                if (conn.SendSegIdx < conn.SendSegs.Count)
+                {
+                    conn.SendActiveList.Clear();
+                    long remTotal = 0;
+                    ArraySegment<byte> first = conn.SendSegs[conn.SendSegIdx];
+                    int fLen = first.Count - conn.SendSegOff;
+                    conn.SendActiveList.Add(new ArraySegment<byte>(first.Array, first.Offset + conn.SendSegOff, fLen));
+                    remTotal += fLen;
+                    for (int i = conn.SendSegIdx + 1; i < conn.SendSegs.Count; i++)
+                    {
+                        conn.SendActiveList.Add(conn.SendSegs[i]);
+                        remTotal += conn.SendSegs[i].Count;
+                    }
+                    conn.SendBatchBytes = remTotal;
+                    conn.WriteSaea.SetBuffer(null, 0, 0);
+                    conn.WriteSaea.BufferList = null;
+                    conn.WriteSaea.BufferList = conn.SendActiveList;
+                    bool pRem;
+                    try { pRem = conn.Sock.SendAsync(conn.WriteSaea); }
+                    catch { CloseAndRecycle(conn); return false; }
+                    nextMode = pRem ? -1 : ModeWriteCompleted;
+                    return true;
+                }
+            }
+
+            conn.SendSegs.Clear();
+            conn.SendActiveList.Clear();
+            if (!conn.KeepAliveAfterSend)
+            {
+                CloseAndRecycle(conn);
+                return false;
+            }
+            nextMode = ModeStartRead;
+            return true;
         }
 
         private static string ResolveDownloadArtifact(string relativeName)
@@ -1987,112 +3958,17 @@ namespace CondeTreppioLauncher
             return null;
         }
 
-        private static int FindHeaderEnd(byte[] buf, int len)
+        private static int FindHeaderEnd(byte[] buf, int offset, int len)
         {
-            for (int i = 0; i <= len - 4; i++)
+            int end = offset + len - 4;
+            for (int i = offset; i <= end; i++)
             {
                 if (buf[i] == 13 && buf[i + 1] == 10 && buf[i + 2] == 13 && buf[i + 3] == 10)
                 {
-                    return i;
+                    return i - offset;
                 }
             }
             return -1;
-        }
-
-        private async Task<int> ReadWithTimeoutAsync(NetworkStream ns, byte[] buf, int offset, int count, int timeoutMs)
-        {
-            Task<int> readTask = ns.ReadAsync(buf, offset, count);
-            Task delayTask = Task.Delay(timeoutMs);
-            Task completed = await Task.WhenAny(readTask, delayTask).ConfigureAwait(false);
-            if (completed != readTask) return -2;
-            return await readTask.ConfigureAwait(false);
-        }
-
-        private async Task<HttpParsedRequest> ReadHttpRequestAsync(NetworkStream ns, byte[] buf)
-        {
-            int filled = 0;
-            int headerEnd = -1;
-
-            while (headerEnd < 0)
-            {
-                if (filled >= buf.Length) return null;
-                int n = await ReadWithTimeoutAsync(ns, buf, filled, buf.Length - filled, KeepAliveIdleTimeoutMs).ConfigureAwait(false);
-                if (n <= 0) return null;
-                filled += n;
-                headerEnd = FindHeaderEnd(buf, filled);
-            }
-
-            string headerText = Encoding.ASCII.GetString(buf, 0, headerEnd);
-            string[] lines = headerText.Split(new string[] { "\r\n" }, StringSplitOptions.None);
-            if (lines.Length == 0) return null;
-
-            string[] first = lines[0].Split(' ');
-            if (first.Length < 2) return null;
-
-            HttpParsedRequest req = new HttpParsedRequest();
-            req.Method = first[0].ToUpperInvariant();
-            string rawTarget = first[1];
-            int qIdx = rawTarget.IndexOf('?');
-            req.Path = qIdx >= 0 ? rawTarget.Substring(0, qIdx) : rawTarget;
-            req.Query = qIdx >= 0 ? rawTarget.Substring(qIdx + 1) : "";
-
-            bool isHttp10 = first.Length >= 3 && first[2].Equals("HTTP/1.0", StringComparison.OrdinalIgnoreCase);
-            bool hasConnKeepAlive = false;
-            bool hasConnClose = false;
-            int contentLength = 0;
-
-            for (int i = 1; i < lines.Length; i++)
-            {
-                string line = lines[i];
-                int colon = line.IndexOf(':');
-                if (colon <= 0) continue;
-                string hName = line.Substring(0, colon).Trim();
-                string hVal = line.Substring(colon + 1).Trim();
-
-                if (hName.Equals("Connection", StringComparison.OrdinalIgnoreCase))
-                {
-                    if (hVal.IndexOf("close", StringComparison.OrdinalIgnoreCase) >= 0) hasConnClose = true;
-                    if (hVal.IndexOf("keep-alive", StringComparison.OrdinalIgnoreCase) >= 0) hasConnKeepAlive = true;
-                }
-                else if (hName.Equals("Accept-Encoding", StringComparison.OrdinalIgnoreCase))
-                {
-                    if (hVal.IndexOf("gzip", StringComparison.OrdinalIgnoreCase) >= 0) req.AcceptsGzip = true;
-                }
-                else if (hName.Equals("If-None-Match", StringComparison.OrdinalIgnoreCase))
-                {
-                    req.IfNoneMatch = hVal;
-                }
-                else if (hName.Equals("Content-Length", StringComparison.OrdinalIgnoreCase))
-                {
-                    int cl;
-                    if (int.TryParse(hVal, out cl) && cl > 0) contentLength = Math.Min(cl, 1024 * 1024);
-                }
-            }
-
-            req.KeepAlive = isHttp10 ? (hasConnKeepAlive && !hasConnClose) : !hasConnClose;
-
-            int bodyOffset = headerEnd + 4;
-            int alreadyHave = filled - bodyOffset;
-            if (contentLength > 0)
-            {
-                byte[] bodyBytes = new byte[contentLength];
-                int copyLen = Math.Min(alreadyHave, contentLength);
-                if (copyLen > 0) Buffer.BlockCopy(buf, bodyOffset, bodyBytes, 0, copyLen);
-                int got = copyLen;
-                while (got < contentLength)
-                {
-                    int n = await ReadWithTimeoutAsync(ns, bodyBytes, got, contentLength - got, KeepAliveIdleTimeoutMs).ConfigureAwait(false);
-                    if (n <= 0) break;
-                    got += n;
-                }
-                req.Body = Encoding.UTF8.GetString(bodyBytes, 0, got);
-            }
-            else
-            {
-                req.Body = "";
-            }
-
-            return req;
         }
 
         private static string GetQueryParam(string queryString, string key)
@@ -2116,7 +3992,7 @@ namespace CondeTreppioLauncher
         private byte[] BuildHealthJsonBytes()
         {
             StringBuilder sb = new StringBuilder(256);
-            sb.Append("{\"ok\":true,\"version\":\"8.5.0\",\"port\":");
+            sb.Append("{\"ok\":true,\"version\":\"9.0.0\",\"port\":");
             sb.Append(Port);
             sb.Append(",\"lexiconReady\":");
             sb.Append(Lexicon.IsReady ? "true" : "false");
@@ -2149,153 +4025,12 @@ namespace CondeTreppioLauncher
 
             string json = jsonBuilder();
             byte[] raw = Encoding.UTF8.GetBytes(json);
-            byte[] gz = raw.Length >= 256 ? CompressGzip(raw) : null;
-            if (gz != null && gz.Length >= raw.Length) gz = null;
-
-            pair = new CachedBytePair { Raw = raw, Gzip = gz };
+            pair = new CachedBytePair
+            {
+                Payload = BuildPreparedPayload("application/json; charset=utf-8", "no-cache", true, false, raw)
+            };
             _apiLru.Put(cacheKey, pair);
             return pair;
-        }
-
-        private async Task HandleSocketAsync(Socket sock)
-        {
-            int curConns = Interlocked.Increment(ref _activeConnections);
-            byte[] readBuf = null;
-            try
-            {
-                sock.NoDelay = true;
-                using (sock)
-                using (NetworkStream ns = new NetworkStream(sock, false))
-                {
-                    if (curConns > MaxConcurrentConnections)
-                    {
-                        byte[] busy = Encoding.UTF8.GetBytes("Server busy");
-                        await WriteHttpResponseAsync(ns, "503 Service Unavailable", "text/plain; charset=utf-8", busy, false, null, "no-store", false, false).ConfigureAwait(false);
-                        return;
-                    }
-
-                    readBuf = RentBuffer();
-                    int reqCount = 0;
-
-                    while (_running && reqCount < MaxKeepAliveRequests)
-                    {
-                        HttpParsedRequest req = await ReadHttpRequestAsync(ns, readBuf).ConfigureAwait(false);
-                        if (req == null) break;
-                        reqCount++;
-
-                        bool keepAlive = req.KeepAlive && reqCount < MaxKeepAliveRequests;
-                        bool isHead = req.Method == "HEAD";
-                        PayloadSnapshot snap = _snapshot;
-                        string path = req.Path;
-
-                        if (path == "/api/health")
-                        {
-                            byte[] healthBytes = BuildHealthJsonBytes();
-                            await WriteHttpResponseAsync(ns, "200 OK", "application/json; charset=utf-8", healthBytes, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/ipa")
-                        {
-                            string q = GetQueryParam(req.Query, "q");
-                            if (string.IsNullOrEmpty(q)) q = "Haly'itror giza in oxej";
-                            string key = "ipa|" + q;
-                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildIpaJson(q));
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/traduzir")
-                        {
-                            string dir = GetQueryParam(req.Query, "dir");
-                            if (string.IsNullOrEmpty(dir)) dir = "pt-tr";
-                            string q = GetQueryParam(req.Query, "q");
-                            string key = Lexicon.Generation + "|tr|" + dir + "|" + q;
-                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildTranslateJson(dir, q));
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/search")
-                        {
-                            string q = GetQueryParam(req.Query, "q");
-                            int limit = 12;
-                            string limStr = GetQueryParam(req.Query, "limit");
-                            int parsedLim;
-                            if (int.TryParse(limStr, out parsedLim) && parsedLim > 0) limit = parsedLim;
-                            string key = Lexicon.Generation + "|sr|" + limit + "|" + q;
-                            CachedBytePair pair = GetOrBuildCachedApiResponse(key, () => Lexicon.BuildSearchJson(q, limit));
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", pair.Raw, pair.Gzip, req.AcceptsGzip, null, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/db" || path.EndsWith("/dicionario_formas_expandidas.json", StringComparison.OrdinalIgnoreCase))
-                        {
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", snap.JsonRaw, snap.JsonGzip, req.AcceptsGzip, snap.JsonETag, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/dados_dicionario_conde.js")
-                        {
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/javascript; charset=utf-8", snap.DadosJsRaw, snap.DadosJsGzip, req.AcceptsGzip, snap.DadosJsETag, req.IfNoneMatch, "public, max-age=60", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/" || path == "/index.html")
-                        {
-                            await WriteNegotiatedAsync(ns, "200 OK", "text/html; charset=utf-8", snap.HtmlRaw, snap.HtmlGzip, req.AcceptsGzip, snap.HtmlETag, req.IfNoneMatch, "no-cache", keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/recompilar" && req.Method == "POST")
-                        {
-                            string msg;
-                            RecompileLocalConde(out msg);
-                            PayloadSnapshot updated = _snapshot;
-                            byte[] prefix = Encoding.UTF8.GetBytes("{\"status\":\"ok\",\"source\":\"" + TreppioLexiconEngine.EscapeJsonValue(updated.ActiveSource) + "\",\"db\":");
-                            byte[] suffix = Encoding.UTF8.GetBytes("}");
-                            byte[] combined = new byte[prefix.Length + updated.JsonRaw.Length + suffix.Length];
-                            Buffer.BlockCopy(prefix, 0, combined, 0, prefix.Length);
-                            Buffer.BlockCopy(updated.JsonRaw, 0, combined, prefix.Length, updated.JsonRaw.Length);
-                            Buffer.BlockCopy(suffix, 0, combined, prefix.Length + updated.JsonRaw.Length, suffix.Length);
-                            byte[] gzCombined = req.AcceptsGzip ? CompressGzip(combined) : null;
-                            await WriteNegotiatedAsync(ns, "200 OK", "application/json; charset=utf-8", combined, gzCombined, req.AcceptsGzip, null, null, "no-store", keepAlive, false).ConfigureAwait(false);
-                        }
-                        else if (path == "/api/cloud-config" && req.Method == "POST")
-                        {
-                            if (!string.IsNullOrEmpty(req.Body))
-                            {
-                                Match m = Regex.Match(req.Body, "\"cloud_url\"\\s*:\\s*\"([^\"]+)\"");
-                                if (m.Success)
-                                {
-                                    string msg;
-                                    SyncFromCloud(m.Groups[1].Value, out msg);
-                                }
-                            }
-                            byte[] okBytes = Encoding.UTF8.GetBytes("{\"status\":\"ok\"}");
-                            await WriteHttpResponseAsync(ns, "200 OK", "application/json; charset=utf-8", okBytes, false, null, "no-store", keepAlive, false).ConfigureAwait(false);
-                        }
-                        else if (path.StartsWith("/", StringComparison.Ordinal) && snap.Assets.ContainsKey(path.TrimStart('/')))
-                        {
-                            StaticAssetEntry asset = snap.Assets[path.TrimStart('/')];
-                            await WriteNegotiatedAsync(ns, "200 OK", asset.ContentType, asset.RawBytes, asset.GzipBytes, req.AcceptsGzip, asset.ETag, req.IfNoneMatch, asset.CacheControl, keepAlive, isHead).ConfigureAwait(false);
-                        }
-                        else if (path == "/Codice_Treppio_Conde.exe" || path == "/Codice_Treppio_Conde.apk" || path == "/dist/Codice_Treppio_Portatil.html")
-                        {
-                            string diskPath = ResolveDownloadArtifact(path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
-                            if (diskPath != null)
-                            {
-                                string mime = path.EndsWith(".html", StringComparison.OrdinalIgnoreCase) ? "text/html; charset=utf-8" : "application/octet-stream";
-                                await StreamFileResponseAsync(ns, diskPath, mime, keepAlive, isHead).ConfigureAwait(false);
-                            }
-                            else
-                            {
-                                byte[] nf = Encoding.UTF8.GetBytes("Artifact not found");
-                                await WriteHttpResponseAsync(ns, "404 Not Found", "text/plain; charset=utf-8", nf, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
-                            }
-                        }
-                        else
-                        {
-                            byte[] nf = Encoding.UTF8.GetBytes("Not found");
-                            await WriteHttpResponseAsync(ns, "404 Not Found", "text/plain; charset=utf-8", nf, false, null, "no-store", keepAlive, isHead).ConfigureAwait(false);
-                        }
-
-                        if (!keepAlive) break;
-                    }
-                }
-            }
-            catch { }
-            finally
-            {
-                ReturnBuffer(readBuf);
-                Interlocked.Decrement(ref _activeConnections);
-            }
         }
 
         private static bool MatchesIfNoneMatch(string ifNoneMatch, string etag)
@@ -2304,95 +4039,6 @@ namespace CondeTreppioLauncher
             string trim = ifNoneMatch.Trim();
             if (trim == "*" || trim == etag) return true;
             return trim.IndexOf(etag, StringComparison.Ordinal) >= 0;
-        }
-
-        private static Task WriteNegotiatedAsync(
-            NetworkStream ns,
-            string status,
-            string contentType,
-            byte[] rawBody,
-            byte[] gzipBody,
-            bool acceptsGzip,
-            string etag,
-            string ifNoneMatch,
-            string cacheControl,
-            bool keepAlive,
-            bool isHead)
-        {
-            if (MatchesIfNoneMatch(ifNoneMatch, etag))
-            {
-                return WriteNotModifiedAsync(ns, etag, cacheControl, keepAlive);
-            }
-
-            bool useGzip = acceptsGzip && gzipBody != null && gzipBody.Length < rawBody.Length;
-            byte[] payload = useGzip ? gzipBody : rawBody;
-            return WriteHttpResponseAsync(ns, status, contentType, payload, useGzip, etag, cacheControl, keepAlive, isHead);
-        }
-
-        private static async Task WriteNotModifiedAsync(NetworkStream ns, string etag, string cacheControl, bool keepAlive)
-        {
-            StringBuilder sb = new StringBuilder(256);
-            sb.Append("HTTP/1.1 304 Not Modified\r\n");
-            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
-            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
-            sb.Append("Vary: Accept-Encoding\r\n");
-            sb.Append("Access-Control-Allow-Origin: *\r\n");
-            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
-            byte[] hdr = Encoding.ASCII.GetBytes(sb.ToString());
-            await ns.WriteAsync(hdr, 0, hdr.Length).ConfigureAwait(false);
-        }
-
-        private static async Task WriteHttpResponseAsync(
-            NetworkStream ns,
-            string status,
-            string contentType,
-            byte[] body,
-            bool isGzip,
-            string etag,
-            string cacheControl,
-            bool keepAlive,
-            bool isHead)
-        {
-            byte[] safeBody = body ?? new byte[0];
-            StringBuilder sb = new StringBuilder(320);
-            sb.Append("HTTP/1.1 "); sb.Append(status); sb.Append("\r\n");
-            sb.Append("Content-Type: "); sb.Append(contentType); sb.Append("\r\n");
-            sb.Append("Content-Length: "); sb.Append(safeBody.Length); sb.Append("\r\n");
-            if (isGzip) sb.Append("Content-Encoding: gzip\r\n");
-            sb.Append("Vary: Accept-Encoding\r\n");
-            if (!string.IsNullOrEmpty(etag)) { sb.Append("ETag: "); sb.Append(etag); sb.Append("\r\n"); }
-            sb.Append("Cache-Control: "); sb.Append(cacheControl ?? "no-cache"); sb.Append("\r\n");
-            sb.Append("Access-Control-Allow-Origin: *\r\n");
-            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
-
-            byte[] headerBytes = Encoding.ASCII.GetBytes(sb.ToString());
-            await ns.WriteAsync(headerBytes, 0, headerBytes.Length).ConfigureAwait(false);
-            if (!isHead && safeBody.Length > 0)
-            {
-                await ns.WriteAsync(safeBody, 0, safeBody.Length).ConfigureAwait(false);
-            }
-        }
-
-        private static async Task StreamFileResponseAsync(NetworkStream ns, string diskPath, string contentType, bool keepAlive, bool isHead)
-        {
-            FileInfo fi = new FileInfo(diskPath);
-            StringBuilder sb = new StringBuilder(256);
-            sb.Append("HTTP/1.1 200 OK\r\n");
-            sb.Append("Content-Type: "); sb.Append(contentType); sb.Append("\r\n");
-            sb.Append("Content-Length: "); sb.Append(fi.Length); sb.Append("\r\n");
-            sb.Append("Cache-Control: no-cache\r\n");
-            sb.Append("Access-Control-Allow-Origin: *\r\n");
-            sb.Append("Connection: "); sb.Append(keepAlive ? "keep-alive\r\n\r\n" : "close\r\n\r\n");
-
-            byte[] headerBytes = Encoding.ASCII.GetBytes(sb.ToString());
-            await ns.WriteAsync(headerBytes, 0, headerBytes.Length).ConfigureAwait(false);
-            if (!isHead)
-            {
-                using (FileStream fs = new FileStream(diskPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 65536, FileOptions.Asynchronous | FileOptions.SequentialScan))
-                {
-                    await fs.CopyToAsync(ns, 65536).ConfigureAwait(false);
-                }
-            }
         }
     }
 
@@ -2503,7 +4149,7 @@ namespace CondeTreppioLauncher
             DoubleBuffered = true;
 
             AutoScaleMode = AutoScaleMode.Dpi;
-            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V8.5 | /conde)";
+            Text = "Códice Lexicográfico Imperial — Língua Tréppia (Era Clássica V9.0 | /conde)";
             Icon formIco = TryLoadFormIcon();
             if (formIco != null) Icon = formIco;
 
@@ -2550,7 +4196,7 @@ namespace CondeTreppioLauncher
             }
             Label lblTitle = new Label
             {
-                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V8.5)",
+                Text = "CÓDICE LEXICOGRÁFICO IMPERIAL DO TRÉPPIO (V9.0)",
                 Font = titleFont,
                 ForeColor = Color.White,
                 AutoSize = true,
@@ -3201,7 +4847,9 @@ namespace CondeTreppioLauncher
 
             bool testHeadless = false;
             bool serveOnly = false;
+            bool bindMulti = false;
             int requestedPort = 0;
+            int maxConn = 0;
 
             if (args != null)
             {
@@ -3209,16 +4857,24 @@ namespace CondeTreppioLauncher
                 {
                     if (args[i] == "--test-headless") testHeadless = true;
                     else if (args[i] == "--serve-only") serveOnly = true;
+                    else if (args[i] == "--bind-multi") bindMulti = true;
                     else if (args[i] == "--port" && i + 1 < args.Length)
                     {
                         int p;
                         if (int.TryParse(args[++i], out p) && p >= 0) requestedPort = p;
+                    }
+                    else if (args[i] == "--max-conn" && i + 1 < args.Length)
+                    {
+                        int mc;
+                        if (int.TryParse(args[++i], out mc) && mc > 0) maxConn = mc;
                     }
                 }
             }
 
             EmbeddedServer server = new EmbeddedServer();
             if (requestedPort > 0) server.PreferredPort = requestedPort;
+            if (bindMulti) server.BindMultiLoopback = true;
+            if (maxConn > 0) server.MaxConcurrentConnections = maxConn;
             server.Start();
 
             if (serveOnly)
@@ -3283,10 +4939,13 @@ namespace CondeTreppioLauncher
                         bool validDb = dbJson.Contains("\"substantivos\"") && dbJson.Contains("\"verbos_quadripartite\"");
 
                         string healthJson = wc.DownloadString(baseUrl + "/api/health");
+                        string svgText = wc.DownloadString(baseUrl + "/brasao_conde.svg");
                         string ipaJson = wc.DownloadString(baseUrl + "/api/ipa?q=vevar");
                         string apiTransJson = wc.DownloadString(baseUrl + "/api/traduzir?dir=pt-tr&q=" + Uri.EscapeDataString("pão"));
                         string apiSearchJson = wc.DownloadString(baseUrl + "/api/search?q=falde&limit=5");
                         bool apisOk = healthJson.Contains("\"ok\":true")
+                                   && healthJson.Contains("\"version\":\"9.0.0\"")
+                                   && svgText.Contains("<svg")
                                    && ipaJson.Contains("\"ipa\"")
                                    && apiTransJson.Contains("falde")
                                    && apiSearchJson.Contains("falde");

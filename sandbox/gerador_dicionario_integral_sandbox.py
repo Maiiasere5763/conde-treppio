@@ -1763,7 +1763,7 @@ def generate_all_files():
     ui_dir = os.path.join(out_dir, "ui_dicionario")
     os.makedirs(ui_dir, exist_ok=True)
     js_bundle_path = os.path.join(ui_dir, "dados_dicionario_conde.js")
-    js_bundle_text = "// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V8.5)\nwindow.CONDE_DB = " + json_compact_safe_js + ";\n"
+    js_bundle_text = "// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V9.0)\nwindow.CONDE_DB = " + json_compact_safe_js + ";\n"
     with open(js_bundle_path, "w", encoding="utf-8") as f:
         f.write(js_bundle_text)
 
@@ -1779,25 +1779,31 @@ def generate_all_files():
         with open(ui_index_path, "r", encoding="utf-8") as f:
             html_template = f.read()
 
-        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + JSON + PWA + Brasão)
+        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + JSON + PWA + Brasão SVG)
         with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html_template)
         with open(os.path.join(docs_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
             f.write("window.CONDE_DB = " + json_compact_safe_js + ";\n")
         with open(os.path.join(docs_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
             f.write(json_compact_str)
-        for pwa_asset in ("sw.js", "manifest.json", "icon-512.png", "icon-192.png", "icon-maskable-512.png", "favicon.ico"):
+        for pwa_asset in ("brasao_conde.svg", "sw.js", "manifest.json", "icon-512.png", "icon-192.png", "icon-maskable-512.png", "favicon.ico"):
             src_asset = os.path.join(ui_dir, pwa_asset)
             if os.path.exists(src_asset):
                 shutil.copy2(src_asset, os.path.join(docs_dir, pwa_asset))
 
-        # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) com Brasão embutido em Base64
+        # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) com Brasão Vetorizado embutido (SVG data URI)
         inline_script = "<script>window.CONDE_DB = " + json_compact_safe_js + ";</script>"
         portable_html = re.sub(
             r'<script[^>]*src="dados_dicionario_conde\.js[^"]*"[^>]*></script>',
             lambda _: inline_script,
             html_template,
         )
+        svg_path = os.path.join(ui_dir, "brasao_conde.svg")
+        if os.path.exists(svg_path):
+            with open(svg_path, "rb") as f_svg:
+                b64_svg = "data:image/svg+xml;base64," + base64.b64encode(f_svg.read()).decode("ascii")
+            portable_html = portable_html.replace('src="brasao_conde.svg"', f'src="{b64_svg}"')
+            portable_html = portable_html.replace('href="brasao_conde.svg"', f'href="{b64_svg}"')
         icon_192_path = os.path.join(ui_dir, "icon-192.png")
         if os.path.exists(icon_192_path):
             with open(icon_192_path, "rb") as f_ic:
@@ -1808,16 +1814,16 @@ def generate_all_files():
         with open(portable_html_path, "w", encoding="utf-8") as f:
             f.write(portable_html)
 
-        # 3. Android APK assets/: shell enxuto (~180 KB) + dados_dicionario_conde.js.gz + icon-192.png (Zero travamento na abertura!)
+        # 3. Android APK assets/: shell enxuto + dados_dicionario_conde.js.gz + brasao_conde.svg
         android_assets_dir = os.path.join(out_dir, "android_apk", "app", "src", "main", "assets")
         os.makedirs(android_assets_dir, exist_ok=True)
         with open(os.path.join(android_assets_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html_template)
         with gzip.open(os.path.join(android_assets_dir, "dados_dicionario_conde.js.gz"), "wb", compresslevel=9) as f_gz:
             f_gz.write(("window.CONDE_DB = " + json_compact_safe_js + ";\n").encode("utf-8"))
-        if os.path.exists(icon_192_path):
-            shutil.copy2(icon_192_path, os.path.join(android_assets_dir, "icon-192.png"))
-        for redundant_asset in ("dados_dicionario_conde.js", "dicionario_formas_expandidas.json"):
+        if os.path.exists(svg_path):
+            shutil.copy2(svg_path, os.path.join(android_assets_dir, "brasao_conde.svg"))
+        for redundant_asset in ("dados_dicionario_conde.js", "dicionario_formas_expandidas.json", "icon-192.png"):
             redundant_path = os.path.join(android_assets_dir, redundant_asset)
             if os.path.exists(redundant_path):
                 try:

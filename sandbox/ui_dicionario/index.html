@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#09090b" />
-  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.5. Edição Filológica Completa com 246.737 formas, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
+  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V9.0. Edição Filológica Completa com 246.737 formas, Brasão Vetorizado, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="brasao_conde.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.5)</title>
+  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V9.0)</title>
 
   <!-- Google Fonts carregado de forma não bloqueante (skip no APK offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2451,7 +2451,7 @@
     if ('caches' in window && !window.AndroidCondeBridge) {
       caches.keys().then(function(names) {
         names.forEach(function(name) {
-          if (name !== 'treppio-v8-5-cache-brasao') {
+          if (name !== 'treppio-v9-0-cache-vector') {
             console.log('[CacheBuster] Purgando cache legado:', name);
             caches.delete(name);
           }
@@ -2462,15 +2462,15 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V8.5) -->
+  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V9.0) -->
   <header class="imperial-header">
     <div class="header-top">
       <div class="brand-block">
-        <div class="crest crest-brasao" title="Brasão Imperial do Conde de Treppênia"><img class="crest-img" src="icon-192.png" alt="Brasão do Conde" width="44" height="44" decoding="async" /></div>
+        <div class="crest crest-brasao" title="Brasão Imperial do Conde de Treppênia"><img class="crest-img" src="brasao_conde.svg" alt="Brasão do Conde" width="44" height="44" decoding="async" /></div>
         <div class="brand-title">
           <h1>
             Códice Imperial Tréppio
-            <span class="brand-edition-pill">Era Clássica V8.5</span>
+            <span class="brand-edition-pill">Era Clássica V9.0</span>
           </h1>
         </div>
       </div>
@@ -2623,7 +2623,7 @@
   </div>
 
   <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE (ASYNC, SEM BLOQUEIO) -->
-  <script id="conde-db-script" src="dados_dicionario_conde.js?v=8.5.0" async onload="window.__condeDbScriptDone=1;window.dispatchEvent(new Event('conde-db-ready'))" onerror="window.__condeDbScriptDone=-1;window.dispatchEvent(new Event('conde-db-ready'))"></script>
+  <script id="conde-db-script" src="dados_dicionario_conde.js?v=9.0.0" async onload="window.__condeDbScriptDone=1;window.dispatchEvent(new Event('conde-db-ready'))" onerror="window.__condeDbScriptDone=-1;window.dispatchEvent(new Event('conde-db-ready'))"></script>
   <script>
     // Estado Global da Aplicação
     let DB = window.CONDE_DB || null;
@@ -2640,10 +2640,17 @@
     let nounDisplayLimit = 60;
     let omniDebounceTimer = null;
     let translatorDebounceTimer = null;
-    let reverseIndex = new Map(); // forma_minuscula -> lista de descritores morfológicos
+    // Índice reverso compacto em SMI 30-bit (19 bits metaId + 11 bits tagId <= 2^30-1)
+    const REV_ACTION_TYPES = ["noun", "verb", "adj", "adv", "pron", "num", "part", "diac"];
+    let reverseIndex = new Map();
+    let reverseMetaTable = [];
+    let reverseCatTable = [];
+    let _revCatMap = new Map();
+    let reverseTagTable = [];
+    let _revTagMap = new Map();
+    let reverseCanonForm = new Map();
     let reverseIndexGeneration = 0;
     let reverseIndexComplete = false;
-    let nounSearchCache = new Map();
     let ptTranslatorIndex = null;
     let ipaInputText = "Haly'itror giza in oxej: falde, Vé, rase, ve'ar et Tepy'atte.";
     let translatorDirection = "pt-tr"; // "pt-tr" | "tr-pt"
@@ -2656,13 +2663,17 @@
       "Pontius", "Pilatus", "Eä", "Ilúvatar", "Ainur", "Valar"
     ]);
 
-    function escapeHtmlAttr(str) {
+    function escapeHtml(str) {
       return String(str == null ? "" : str)
         .replace(/&/g, "&amp;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;")
         .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function escapeHtmlAttr(str) {
+      return escapeHtml(str);
     }
 
     function stripPtAccents(str) {
@@ -2858,187 +2869,203 @@
       };
     }
 
-    // 2. Pré-normalização e Índice Morfológico Reverso em 2 Estágios (Zero Bloqueio na UI)
+    // 2. Índice Morfológico Reverso Compacto (SMI 30-bit: 19 bits metaId + 11 bits tagId)
     function preNormalizeLexicon() {
-      nounSearchCache.clear();
-      if (!DB) return;
-      for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
-        const formsVals = obj.formas ? Object.values(obj.formas).join(" ") : "";
-        nounSearchCache.set(
-          lemma,
-          (lemma + " " + (obj.significado || "") + " " + (obj.etimologia || "") + " " + formsVals).toLowerCase()
-        );
+      // Intencionalmente no-op: busca em substantivos faz scan direto sem duplicar strings em RAM
+    }
+
+    function _resetReverseTables() {
+      reverseIndex.clear();
+      reverseMetaTable = [];
+      reverseCatTable = [];
+      _revCatMap.clear();
+      reverseTagTable = [];
+      _revTagMap.clear();
+      reverseCanonForm.clear();
+    }
+
+    function _internRevCat(catStr) {
+      let id = _revCatMap.get(catStr);
+      if (id === undefined) {
+        id = reverseCatTable.length;
+        reverseCatTable.push(catStr);
+        _revCatMap.set(catStr, id);
+      }
+      return id;
+    }
+
+    function _internRevTag(catStr, tagStr, useInf) {
+      const catId = _internRevCat(catStr);
+      const key = catId + "\x01" + tagStr + "\x01" + (useInf ? "1" : "0");
+      let id = _revTagMap.get(key);
+      if (id === undefined) {
+        id = reverseTagTable.length;
+        reverseTagTable.push([catId, tagStr, useInf ? 1 : 0]);
+        _revTagMap.set(key, id);
+      }
+      return id;
+    }
+
+    function _addRevMeta(lemma, meaning, actionType, actionKey, infLemma) {
+      const actionIdx = REV_ACTION_TYPES.indexOf(actionType);
+      const id = reverseMetaTable.length;
+      if (infLemma !== undefined && infLemma !== null) {
+        reverseMetaTable.push([lemma, meaning || "", actionIdx, actionKey, infLemma]);
+      } else {
+        reverseMetaTable.push([lemma, meaning || "", actionIdx, actionKey]);
+      }
+      return id;
+    }
+
+    function _addRevPacked(formStr, metaId, tagId) {
+      if (!formStr) return;
+      const canon = String(formStr).trim();
+      const k = canon.replace(/[!?]/g, "").trim().toLowerCase();
+      if (!k) return;
+      if (canon !== k && !reverseCanonForm.has(k)) {
+        reverseCanonForm.set(k, canon);
+      }
+      const packed = ((metaId & 0x7FFFF) << 11) | (tagId & 0x7FF);
+      const cur = reverseIndex.get(k);
+      if (cur === undefined) {
+        reverseIndex.set(k, packed);
+      } else if (typeof cur === "number") {
+        if (cur !== packed) reverseIndex.set(k, [cur, packed]);
+      } else if (cur.length < 8 && !cur.includes(packed)) {
+        cur.push(packed);
       }
     }
 
-    function _addRevEntry(formStr, info) {
-      if (!formStr) return;
-      const clean = String(formStr).replace(/[!?]/g, "").trim().toLowerCase();
-      if (!clean) return;
-      let arr = reverseIndex.get(clean);
-      if (!arr) {
-        arr = [];
-        reverseIndex.set(clean, arr);
+    function _decodePackedHit(packed, canonicalForm) {
+      const metaId = (packed >>> 11) & 0x7FFFF;
+      const tagId = packed & 0x7FF;
+      const mRow = reverseMetaTable[metaId];
+      const tRow = reverseTagTable[tagId];
+      if (!mRow || !tRow) return null;
+      const lemmaStr = (tRow[2] && mRow.length > 4) ? mRow[4] : mRow[0];
+      return {
+        form: canonicalForm,
+        lemma: lemmaStr,
+        category: reverseCatTable[tRow[0]] || "",
+        tag: tRow[1] || "",
+        meaning: mRow[1] || "",
+        actionType: REV_ACTION_TYPES[mRow[2]] || "noun",
+        actionKey: mRow[3]
+      };
+    }
+
+    function _lookupRevMatches(rawKey) {
+      if (!rawKey) return [];
+      const clean = String(rawKey).replace(/[!?]/g, "").trim().toLowerCase();
+      if (!clean) return [];
+      const raw = reverseIndex.get(clean);
+      if (raw === undefined) return [];
+      const canon = reverseCanonForm.get(clean) || clean;
+      if (typeof raw === "number") {
+        const hit = _decodePackedHit(raw, canon);
+        return hit ? [hit] : [];
       }
-      if (arr.length < 8) arr.push(info);
+      const out = [];
+      for (let i = 0; i < raw.length; i++) {
+        const hit = _decodePackedHit(raw[i], canon);
+        if (hit) out.push(hit);
+      }
+      return out;
     }
 
     function _indexClosedAndHeadEntries() {
       if (!DB) return;
-      // Estágio 1 (< 10 ms): classes fechadas + adjetivos + advérbios + lemas nominais + infinitivos/imperativos verbais
       for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
         const nomSg = obj.formas ? (obj.formas["Nom.Sg"] || lemma) : lemma;
-        _addRevEntry(nomSg, {
-          form: nomSg,
-          lemma: lemma,
-          category: "Substantivo (" + obj.declinacao + "ª Decl.)",
-          tag: "Nom.Sg",
-          meaning: obj.significado,
-          actionType: "noun",
-          actionKey: lemma
-        });
+        const mId = _addRevMeta(lemma, obj.significado, "noun", lemma);
+        const tId = _internRevTag("Substantivo (" + obj.declinacao + "ª Decl.)", "Nom.Sg", false);
+        _addRevPacked(nomSg, mId, tId);
+        obj._revMetaId = mId;
       }
 
       for (const [adj, obj] of Object.entries(DB.adjetivos || {})) {
+        const mId = _addRevMeta(adj, obj.Significado, "adj", adj);
         for (const [k, val] of Object.entries(obj)) {
           if (k === "Significado") continue;
-          _addRevEntry(val, {
-            form: val,
-            lemma: adj,
-            category: "Adjetivo",
-            tag: k,
-            meaning: obj.Significado,
-            actionType: "adj",
-            actionKey: adj
-          });
+          _addRevPacked(val, mId, _internRevTag("Adjetivo", k, false));
         }
       }
 
       for (const [adv, obj] of Object.entries(DB.adverbios || {})) {
-        _addRevEntry(adv, {
-          form: adv,
-          lemma: adv,
-          category: "Advérbio",
-          tag: obj.subclasse || "Advérbio",
-          meaning: obj.significado || "",
-          actionType: "adv",
-          actionKey: adv
-        });
+        const mId = _addRevMeta(adv, obj.significado || "", "adv", adv);
+        _addRevPacked(adv, mId, _internRevTag("Advérbio", obj.subclasse || "Advérbio", false));
       }
 
       for (const [pKey, pObj] of Object.entries(DB.pronomes || {})) {
         const baseDesc = pObj.esfera || pKey;
+        const mId = _addRevMeta(pKey, `${pKey} — ${baseDesc}`, "pron", pKey);
         for (const [caseK, rawForms] of Object.entries(pObj)) {
           if (caseK === "esfera") continue;
+          const tId = _internRevTag("Pronome", caseK, false);
           String(rawForms).split("/").forEach(rawPart => {
             const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
-            if (tok) {
-              _addRevEntry(tok, {
-                form: tok,
-                lemma: pKey,
-                category: "Pronome",
-                tag: caseK,
-                meaning: `${pKey} — ${baseDesc}`,
-                actionType: "pron",
-                actionKey: pKey
-              });
-            }
+            if (tok) _addRevPacked(tok, mId, tId);
           });
         }
       }
 
       for (const [numK, nObj] of Object.entries(DB.numerais || {})) {
+        const mId = _addRevMeta(
+          nObj.cardinal || numK,
+          `Numeral ${numK}: cardinal ${nObj.cardinal}, ordinal ${(nObj.ordinal || "").replace(/\([^)]*\)/g, "").trim()}`,
+          "num",
+          numK
+        );
         for (const [fKey, fVal] of Object.entries(nObj)) {
           if (fKey === "compostos") continue;
+          const tId = _internRevTag("Numeral", `${numK} (${fKey})`, false);
           String(fVal).split("/").forEach(rawPart => {
             const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
-            if (tok) {
-              _addRevEntry(tok, {
-                form: tok,
-                lemma: nObj.cardinal || numK,
-                category: "Numeral",
-                tag: `${numK} (${fKey})`,
-                meaning: `Numeral ${numK}: cardinal ${nObj.cardinal}, ordinal ${(nObj.ordinal || "").replace(/\([^)]*\)/g, "").trim()}`,
-                actionType: "num",
-                actionKey: numK
-              });
-            }
+            if (tok) _addRevPacked(tok, mId, tId);
           });
         }
       }
 
       for (const [pTok, pObj] of Object.entries(DB.particulas_e_afixos || {})) {
+        const mId = _addRevMeta(pTok, pObj.descricao || "", "part", pTok);
+        const tId = _internRevTag(pObj.classe || "Partícula", "Invariável", false);
         String(pTok).split("/").forEach(sub => {
           const cleanSub = sub.replace(/\([^)]*\)/g, "").trim();
           if (cleanSub && !cleanSub.startsWith("-") && !cleanSub.endsWith("-")) {
-            _addRevEntry(cleanSub, {
-              form: cleanSub,
-              lemma: pTok,
-              category: pObj.classe || "Partícula",
-              tag: "Invariável",
-              meaning: pObj.descricao || "",
-              actionType: "part",
-              actionKey: pTok
-            });
+            _addRevPacked(cleanSub, mId, tId);
           }
         });
       }
 
       for (const [vTok, vObj] of Object.entries(DB.registro_diacronico_e_variantes || {})) {
+        const mId = _addRevMeta(vTok, vObj.analise || "", "diac", vTok);
+        const tId = _internRevTag(vObj.estatuto || "Variante", vObj.equivalente_canonico || "", false);
         String(vTok).split("/").forEach(sub => {
           const cleanSub = sub.trim();
-          if (cleanSub) {
-            _addRevEntry(cleanSub, {
-              form: cleanSub,
-              lemma: vTok,
-              category: vObj.estatuto || "Variante",
-              tag: vObj.equivalente_canonico || "",
-              meaning: vObj.analise || "",
-              actionType: "diac",
-              actionKey: vTok
-            });
-          }
+          if (cleanSub) _addRevPacked(cleanSub, mId, tId);
         });
       }
 
       for (const [root, axes] of Object.entries(DB.verbos_quadripartite || {})) {
         for (const [axisLabel, axisObj] of Object.entries(axes)) {
           const c = axisObj.conjugation;
-          _addRevEntry(c["Infinitivo(-ur)"], {
-            form: c["Infinitivo(-ur)"],
-            lemma: root + "-",
-            category: `Verbo [${axisLabel}]`,
-            tag: "Infinitivo (-ur)",
-            meaning: axisObj.meaning,
-            actionType: "verb",
-            actionKey: root
-          });
-          _addRevEntry(c["Imperativo(Raiz)"], {
-            form: c["Imperativo(Raiz)"],
-            lemma: root + "-",
-            category: `Verbo [${axisLabel}]`,
-            tag: "Imperativo",
-            meaning: axisObj.meaning,
-            actionType: "verb",
-            actionKey: root
-          });
+          const vCat = `Verbo [${axisLabel}]`;
+          const mId = _addRevMeta(root + "-", axisObj.meaning, "verb", root, c["Infinitivo(-ur)"]);
+          axisObj._revMetaId = mId;
+          _addRevPacked(c["Infinitivo(-ur)"], mId, _internRevTag(vCat, "Infinitivo (-ur)", false));
+          _addRevPacked(c["Imperativo(Raiz)"], mId, _internRevTag(vCat, "Imperativo", false));
         }
       }
     }
 
     function _indexNounDetailEntry(lemma, obj) {
       const cat = "Substantivo (" + obj.declinacao + "ª Decl.)";
+      const mId = (obj._revMetaId !== undefined)
+        ? obj._revMetaId
+        : _addRevMeta(lemma, obj.significado, "noun", lemma);
       for (const [k, val] of Object.entries(obj.formas || {})) {
         if (k === "Nom.Sg") continue;
-        _addRevEntry(val, {
-          form: val,
-          lemma: lemma,
-          category: cat,
-          tag: k,
-          meaning: obj.significado,
-          actionType: "noun",
-          actionKey: lemma
-        });
+        _addRevPacked(val, mId, _internRevTag(cat, k, false));
       }
     }
 
@@ -3046,49 +3073,24 @@
     function _indexVerbRootFull(root, axes) {
       for (const [axisLabel, axisObj] of Object.entries(axes)) {
         const c = axisObj.conjugation;
-        _addRevEntry(c["Interrogativo.2Pl(-ka)"], {
-          form: c["Interrogativo.2Pl(-ka)"],
-          lemma: root + "-",
-          category: `Verbo [${axisLabel}]`,
-          tag: "Interrogativo 2ª Pl (-ka, tk->kk)",
-          meaning: axisObj.meaning,
-          actionType: "verb",
-          actionKey: root
-        });
+        const vCat = `Verbo [${axisLabel}]`;
+        const pCat = `Particípio Verbal [${axisLabel}]`;
+        const dCat = `Derivado Verbal [${axisLabel}]`;
+        const mId = (axisObj._revMetaId !== undefined)
+          ? axisObj._revMetaId
+          : _addRevMeta(root + "-", axisObj.meaning, "verb", root, c["Infinitivo(-ur)"]);
+
+        _addRevPacked(c["Interrogativo.2Pl(-ka)"], mId, _internRevTag(vCat, "Interrogativo 2ª Pl (-ka, tk->kk)", false));
         for (const [pCase, pVal] of Object.entries(c["Participio(8_Casos)"] || {})) {
-          _addRevEntry(pVal, {
-            form: pVal,
-            lemma: root + "-",
-            category: `Particípio Verbal [${axisLabel}]`,
-            tag: pCase,
-            meaning: axisObj.meaning,
-            actionType: "verb",
-            actionKey: root
-          });
+          _addRevPacked(pVal, mId, _internRevTag(pCat, pCase, false));
         }
         for (const [dName, dVal] of Object.entries(c["Derivados.Nominais"] || {})) {
-          _addRevEntry(dVal, {
-            form: dVal,
-            lemma: root + "-",
-            category: `Derivado Verbal [${axisLabel}]`,
-            tag: dName,
-            meaning: axisObj.meaning,
-            actionType: "verb",
-            actionKey: root
-          });
+          _addRevPacked(dVal, mId, _internRevTag(dCat, dName, false));
         }
         for (const [tKey, list] of Object.entries(c)) {
           if (Array.isArray(list)) {
             list.forEach((fVal, pIdx) => {
-              _addRevEntry(fVal, {
-                form: fVal,
-                lemma: c["Infinitivo(-ur)"],
-                category: `Verbo [${axisLabel}]`,
-                tag: `${tKey} — ${_VERBS_PERSONS[pIdx]}`,
-                meaning: axisObj.meaning,
-                actionType: "verb",
-                actionKey: root
-              });
+              _addRevPacked(fVal, mId, _internRevTag(vCat, `${tKey} — ${_VERBS_PERSONS[pIdx]}`, true));
             });
           }
         }
@@ -3097,7 +3099,7 @@
 
     function buildReverseIndex() {
       reverseIndexGeneration++;
-      reverseIndex.clear();
+      _resetReverseTables();
       ptTranslatorIndex = null;
       reverseIndexComplete = false;
       if (!DB) return;
@@ -3113,7 +3115,7 @@
 
     function buildReverseIndexChunked() {
       const gen = ++reverseIndexGeneration;
-      reverseIndex.clear();
+      _resetReverseTables();
       ptTranslatorIndex = null;
       reverseIndexComplete = false;
       if (!DB) return;
@@ -3128,7 +3130,7 @@
         ? (fn) => window.requestIdleCallback(fn, { timeout: 60 })
         : (fn) => setTimeout(() => fn({ timeRemaining: () => 8 }), 0);
 
-      function stepBatch(deadline) {
+      function stepBatch() {
         if (gen !== reverseIndexGeneration) return;
         const startT = performance.now();
         let processed = 0;
@@ -3153,6 +3155,15 @@
       }
       schedule(stepBatch);
     }
+
+    window.__condeTrimMemory = function() {
+      ptTranslatorIndex = null;
+      const modal = document.getElementById("detail-modal");
+      const mBody = document.getElementById("modal-body");
+      if (modal && !modal.classList.contains("open") && mBody && mBody.firstChild) {
+        mBody.textContent = "";
+      }
+    };
 
     // Conversor automático de links do Google Drive ou GitHub para link direto de JSON
     function normalizeCloudUrl(rawUrl) {
@@ -3509,8 +3520,8 @@
         return;
       }
 
-      const cleanQ = q.replace(/[!?]/g, "").toLowerCase();
-      let matches = reverseIndex.get(cleanQ) || [];
+      const cleanQ = q.replace(/[!?]/g, "").trim().toLowerCase();
+      let matches = _lookupRevMatches(cleanQ);
 
       if (matches.length === 0) {
         box.classList.remove("visible");
@@ -3522,12 +3533,12 @@
         <div class="reverse-match-item">
           <div>
             <div style="font-family:var(--font-mono);font-weight:700;color:var(--gold-bright);font-size:0.95rem;">
-              ${m.form} <span style="color:var(--text-secondary);font-weight:400;">←</span> <span style="color:var(--azure);">${m.lemma}</span>
+              ${escapeHtml(m.form)} <span style="color:var(--text-secondary);font-weight:400;">←</span> <span style="color:var(--azure);">${escapeHtml(m.lemma)}</span>
             </div>
             <div style="font-size:0.78rem;color:var(--text-secondary);">
-              <strong>${m.category}</strong> • ${m.tag}
+              <strong>${escapeHtml(m.category)}</strong> • ${escapeHtml(m.tag)}
             </div>
-            <div style="font-size:0.78rem;color:var(--text-primary);">${m.meaning}</div>
+            <div style="font-size:0.78rem;color:var(--text-primary);">${escapeHtml(m.meaning)}</div>
           </div>
           <div class="card-micro-actions">
             <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(m.form)}" title="Ouvir pronúncia">🔊</button>
@@ -3752,13 +3763,17 @@
         if (selectedLetter !== "ALL" && lemma[0].toUpperCase() !== selectedLetter) return false;
         if (selectedDeclFilter !== "ALL" && String(obj.declinacao) !== selectedDeclFilter) return false;
         if (!q) return true;
-        const cached = nounSearchCache.get(lemma);
-        if (cached !== undefined) return cached.includes(q);
-        const inLemma = lemma.toLowerCase().includes(q);
-        const inMean = obj.significado.toLowerCase().includes(q);
-        const inEtym = obj.etimologia.toLowerCase().includes(q);
-        const inForms = Object.values(obj.formas || {}).some(v => v.toLowerCase().includes(q));
-        return inLemma || inMean || inEtym || inForms;
+        if (lemma.toLowerCase().includes(q)) return true;
+        if ((obj.significado || "").toLowerCase().includes(q)) return true;
+        if ((obj.etimologia || "").toLowerCase().includes(q)) return true;
+        const forms = obj.formas;
+        if (forms) {
+          for (const fk in forms) {
+            const val = forms[fk];
+            if (val && String(val).toLowerCase().includes(q)) return true;
+          }
+        }
+        return false;
       });
 
       const visibleSlice = filtered.slice(0, nounDisplayLimit);
@@ -4850,7 +4865,8 @@
           const clean = rawTok.replace(/[.,;:!?()[\]"“”]/g, "");
           const low = clean.toLowerCase();
           const hap = applyHaplologyJS(clean);
-          let matches = reverseIndex.get(low) || reverseIndex.get(hap.toLowerCase()) || [];
+          let matches = _lookupRevMatches(low);
+          if (!matches.length) matches = _lookupRevMatches(hap);
           const ipa = analyzeTreppioWord(hap);
           return { raw: clean, hap, matches, ipa };
         });
@@ -4873,11 +4889,11 @@
             </div>
             ${corpusExact.length ? `
               <div style="background:rgba(16,185,129,0.08);border:1px solid var(--emerald);border-radius:10px;padding:0.75rem 0.9rem;margin-bottom:0.65rem;">
-                <div style="font-size:0.78rem;color:var(--emerald);font-weight:700;">📜 Passagem Oficial no Corpus Canônico (${corpusExact[0].titulo}):</div>
-                <div style="font-size:1.05rem;margin-top:0.2rem;">${corpusExact[0].portugues}</div>
+                <div style="font-size:0.78rem;color:var(--emerald);font-weight:700;">📜 Passagem Oficial no Corpus Canônico (${escapeHtml(corpusExact[0].titulo)}):</div>
+                <div style="font-size:1.05rem;margin-top:0.2rem;">${escapeHtml(corpusExact[0].portugues)}</div>
               </div>
             ` : ""}
-            <div style="font-size:1.25rem;color:var(--text-primary);font-weight:600;margin:0.35rem 0;">${glossSummary || "—"}</div>
+            <div style="font-size:1.25rem;color:var(--text-primary);font-weight:600;margin:0.35rem 0;">${escapeHtml(glossSummary || "—")}</div>
           </div>
 
           <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
@@ -4888,8 +4904,8 @@
               <article class="entry-card">
                 <div class="card-header">
                   <div>
-                    <span class="lemma-title">${a.hap || a.raw}</span>
-                    ${a.ipa ? `<span style="font-family:var(--font-mono);color:var(--emerald);font-size:0.85rem;margin-left:0.45rem;">${a.ipa.ipa}</span>` : ""}
+                    <span class="lemma-title">${escapeHtml(a.hap || a.raw)}</span>
+                    ${a.ipa ? `<span style="font-family:var(--font-mono);color:var(--emerald);font-size:0.85rem;margin-left:0.45rem;">${escapeHtml(a.ipa.ipa)}</span>` : ""}
                   </div>
                   <div class="card-micro-actions">
                     <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(a.hap || a.raw)}">🔊</button>
@@ -4898,11 +4914,11 @@
                 ${a.matches.length ? a.matches.slice(0, 3).map(m => `
                   <div style="padding:0.45rem 0;border-top:1px dashed var(--border-color);">
                     <div style="display:flex;justify-content:space-between;align-items:center;gap:0.4rem;">
-                      <span class="pos-badge badge-verb">${m.category}</span>
+                      <span class="pos-badge badge-verb">${escapeHtml(m.category)}</span>
                       <button class="micro-btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(m.actionType)}" data-arg2="${escapeHtmlAttr(m.actionKey)}">Paradigma →</button>
                     </div>
-                    <div style="font-size:0.86rem;margin-top:0.25rem;"><strong>Lema:</strong> <code>${m.lemma}</code> • <strong>Função:</strong> ${m.tag}</div>
-                    <div class="gloss-text" style="margin-top:0.15rem;">${m.meaning}</div>
+                    <div style="font-size:0.86rem;margin-top:0.25rem;"><strong>Lema:</strong> <code>${escapeHtml(m.lemma)}</code> • <strong>Função:</strong> ${escapeHtml(m.tag)}</div>
+                    <div class="gloss-text" style="margin-top:0.15rem;">${escapeHtml(m.meaning)}</div>
                   </div>
                 `).join("") : `<div style="color:var(--text-secondary);font-size:0.88rem;">Vocábulo não localizado diretamente nas 246.737 formas indexadas.</div>`}
               </article>
@@ -5265,7 +5281,7 @@
     window.addEventListener("DOMContentLoaded", initApp);
 
     if (!window.AndroidCondeBridge && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      navigator.serviceWorker.register('sw.js?v=8.5.0', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw.js?v=9.0.0', { updateViaCache: 'none' })
         .then(function(reg) {
           reg.update();
           reg.addEventListener('updatefound', function() {
@@ -5273,7 +5289,7 @@
             if (newWorker) {
               newWorker.addEventListener('statechange', function() {
                 if (newWorker.state === 'activated') {
-                  console.log('[SW] Novo Service Worker V8.5 ativado.');
+                  console.log('[SW] Novo Service Worker V9.0 ativado.');
                 }
               });
             }

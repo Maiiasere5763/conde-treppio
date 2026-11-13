@@ -10,8 +10,8 @@ android {
         applicationId "com.conde.treppio"
         minSdk 24
         targetSdk 34
-        versionCode 85
-        versionName "8.5.0"
+        versionCode 90
+        versionName "9.0.0"
     }
 
     buildTypes {
