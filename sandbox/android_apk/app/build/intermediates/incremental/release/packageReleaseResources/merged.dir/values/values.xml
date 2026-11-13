@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#e2b94b</color>
+    <color name="gold">#e2b94b</color>
+    <color name="gold_bright">#ffd86b</color>
+    <color name="obsidian">#0b0d13</color>
+    <color name="primary">#0b0d13</color>
+    <color name="primary_dark">#05070a</color>
+    <string name="app_name">Códice Tréppio</string>
+    <style name="AppTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowBackground">@color/obsidian</item>
+        <item name="android:statusBarColor">@color/obsidian</item>
+        <item name="android:navigationBarColor">@color/obsidian</item>
+    </style>
+</resources>

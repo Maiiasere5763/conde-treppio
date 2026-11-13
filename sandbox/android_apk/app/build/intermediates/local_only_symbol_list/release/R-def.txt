@@ -1,0 +1,11 @@
+R_DEF: Internal format may change without notice
+local
+color accent
+color gold
+color gold_bright
+color obsidian
+color primary
+color primary_dark
+drawable ic_launcher
+string app_name
+style AppTheme

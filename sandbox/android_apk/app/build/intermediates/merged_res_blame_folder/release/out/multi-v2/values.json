@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.conde.treppio.app-mergeReleaseResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "293"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "365",
+                        "endLines": "13",
+                        "endColumns": "12",
+                        "endOffsets": "642"
+                    }
+                },
+                {
+                    "source": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,2,3",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "144,185,224,270,55,97",
+                        "endColumns": "40,38,45,42,41,46",
+                        "endOffsets": "180,219,265,308,92,139"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,96,135,181,224,266",
+                        "endColumns": "40,38,45,42,41,46",
+                        "endOffsets": "91,130,176,219,261,308"
+                    }
+                },
+                {
+                    "source": "D:\\Conde_Treppio\\sandbox\\android_apk\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "51",
+                        "endOffsets": "63"
+                    },
+                    "to": {
+                        "startLines": "8",
+                        "startColumns": "4",
+                        "startOffsets": "313",
+                        "endColumns": "51",
+                        "endOffsets": "360"
+                    }
+                }
+            ]
+        }
+    ]
+}
