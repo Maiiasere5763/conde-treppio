@@ -313,7 +313,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         splash.addView(mSplashCrest, crestLp);
 
         TextView title = new TextView(this);
-        title.setText("CÓDICE IMPERIAL TRÉPPIO");
+        title.setText("CÓDICE TRÉPPIO");
         title.setTextColor(Color.parseColor("#fde28e"));
         title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         title.setTypeface(Typeface.SERIF, Typeface.BOLD);
@@ -326,7 +326,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         splash.addView(title, titleLp);
 
         TextView sub = new TextView(this);
-        sub.setText("Era Clássica V9.0 • Brasão Vetorizado • 246.737 Formas");
+        sub.setText("Língua Tréppia");
         sub.setTextColor(Color.parseColor("#9da9c5"));
         sub.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
         sub.setGravity(Gravity.CENTER);

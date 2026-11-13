@@ -91,17 +91,24 @@ def extract_gnlt_payload(root_dir: str) -> dict:
             out.append("</ul>")
         return "\n".join(out)
 
+    def strip_version_tags(txt):
+        txt = re.sub(r"\s*\(V[89]\.\d+\)", "", txt)
+        txt = re.sub(r"\s+(?:da|na|em|pela)\s+V[89]\.\d+\b", "", txt)
+        txt = re.sub(r"\s+\bV[89]\.\d+\b", "", txt)
+        txt = re.sub(r"\*\*(?:XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)\.\*\*\s*", "", txt)
+        return txt
+
     def parse_file(content):
         raw_blocks = re.split(r"\n(?=## \d+\. )", content)
-        intro = raw_blocks[0].strip()
+        intro = strip_version_tags(raw_blocks[0].strip())
         chapters = []
         for b in raw_blocks[1:]:
             lines = b.strip().split("\n")
             header = lines[0].replace("## ", "").strip()
             num_match = re.match(r"^(\d+)\.\s*(.*)", header)
             num = int(num_match.group(1)) if num_match else len(chapters) + 1
-            title = num_match.group(2) if num_match else header
-            full_md = "\n".join(lines[1:]).strip()
+            title = strip_version_tags(num_match.group(2) if num_match else header)
+            full_md = strip_version_tags("\n".join(lines[1:]).strip())
             chapters.append({
                 "num": num,
                 "title": title,
@@ -125,8 +132,8 @@ def extract_gnlt_payload(root_dir: str) -> dict:
         })
 
     return {
-        "title": "Gramática Normativa da Língua Tréppia (GNLT)",
-        "subtitulo": "Cânone Gramatical da Era Clássica V8.4 | Chancelaria Imperial",
+        "title": "Gramática Normativa da Língua Tréppia",
+        "subtitulo": "Norma Clássica",
         "intro_base": intro_base,
         "intro_v81": intro_v81,
         "capitulos": unified_chapters
@@ -1654,80 +1661,80 @@ def generate_all_files():
 
     full_json_db["corpus_canonico"] = [
         {
-            "titulo": "I. Patte Ny (Oração Dominical)",
-            "categoria": "Liturgia Canônica (GNLT Seção 8.1)",
+            "titulo": "Patte Ny (Oração Dominical)",
+            "categoria": "Liturgia",
             "treppio": "Patte ny, ke in xeri esu, elfase mon vy. Keladuke karan vy. Tekuse vule vy, in oxej ko in xeri. Faldem ny sambela mob noj sambel. Et akit faltes ny, ko no akitun faltetoi ny. Et ne gel nom in tulom, ta sfar nom ex lakej. Zo es.",
             "portugues": "Pai nosso, que estás no céu, santificado seja o vosso nome. Venha o vosso reino. Seja feita a vossa vontade, na terra como no céu. O pão nosso de cada dia dai-nos hoje. E perdoai as nossas ofensas, assim como nós perdoamos aos nossos ofensores. E não nos deixeis cair em tentação, mas livrai-nos do mal. Assim sê."
         },
         {
-            "titulo": "II. Metuses Maria (Saudação Angélica)",
-            "categoria": "Liturgia Canônica (GNLT Seção 8.2)",
+            "titulo": "Metuses Maria (Saudação Angélica)",
+            "categoria": "Liturgia",
             "treppio": "Metuses Maria, lana mety, Trátte esu tij. Mobanavet esus in kranoi, et mobanavet esu fel massuy ty, Jesus. Elfa Maria, Mad Gyosy, let ad Gyos pro noj kuroi, santonk et in tonkrej akazory ny. Zo es.",
             "portugues": "Ave Maria, cheia de graça, o Senhor é convosco. Bendita sois vós entre as mulheres, e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai a Deus por nós, pecadores, agora e na hora de nossa morte. Assim sê."
         },
         {
-            "titulo": "III. Skorum (Símbolo Apostólico / Credo)",
-            "categoria": "Liturgia Canônica (GNLT Seção 8.3)",
+            "titulo": "Skorum (Símbolo Apostólico / Credo)",
+            "categoria": "Liturgia",
             "treppio": "Skorum in Gyos, Patte rukran, Kratte xery et oxedy. Et in Jesus Kristus, Fel idda Kany, Trátte ny, ke madet essa ex Hali Hali, kazza ex akuraj Mariaj, fassa ponu Pontius Pilatus, akazza et kossa; ynna ad Veloxem; in zelta beli okazza ex akazetoi; ynna ad xeros, esu in dattej Pattedy rukrany; ex Kani keladru ad molletur kazetos et akazetos. Skorum in Halom Halom, elfam Halkelem, kindrem lexedye, akitorom faltedye, okazorom vokory, et kazorom in atonkrej. Zo es.",
             "portugues": "Creio em Deus, Pai todo-poderoso, Criador do céu e da terra. E em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, morreu e foi sepultado; desceu aos infernos; no terceiro dia ressuscitou dos mortos; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso; de lá há de vir a julgar os vivos e os mortos. Creio no Espírito Santo, na Santa Igreja, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne e na vida eterna. Assim sê."
         },
         {
-            "titulo": "IV. Halylitror — Iº Movimento: A Gênese dos Espíritos do Pensamento",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento I: A Gênese dos Espíritos do Pensamento",
+            "categoria": "Cosmogonia",
             "treppio": "Essa Gyos Idda, ke in Tréppia Oratypatte letuse. Et Kan itta Halo kradda, Daifelo ex daiori Kany; et Kano in Kani essan ante ke idda maer kraddase. Et Oratypatte ad Kanos ledda, et Kanoi leddalitroros mobra; et Kano in sotimi Kany litrran, et Kan mebba. Ta durai Katte idlitrorom litrba, u katro in kindrej, nam aetikos ne isban; nam itta idda tanom isba ex daiori Oratypattedy ex ke kazza, et in aletori girba.",
             "portugues": "Havia Eru, o Único, que em Tréppia é chamado Ilúvatar (Pai do Todo). E Ele criou primeiro os Ainur, os Sagrados, que foram os Filhos do seu Pensamento; e eles estavam com Ele antes que qualquer outra coisa fosse criada. E falou a eles, propondo-lhes temas musicais; e cantaram perante Ele, e Ele se regozijava."
         },
         {
-            "titulo": "V. Halylitror — IIº Movimento: A Convocação da Grande Música",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento II: A Convocação da Grande Música",
+            "categoria": "Cosmogonia",
             "treppio": "Ta ko Halo maer isban, kindrorom et kellitrorom gizzan. Et Oratypatte todos Halos keladra, et Kanoi ledda: Ex leddalitrori ke voj akossam, vulum santonk ke in mobalitrori kellitruket Litrgarom! Et ko Kanoi Halvurom illanram, akosut isoros et rukroros vy ad illotur leddalitrorom ex daiori iddy.",
             "portugues": "Contudo, à medida que compreendiam mais, cresceram em concórdia e harmonia coral. E Ilúvatar convocou todos os Espíritos Sagrados e declarou-lhes: Do tema que vos revelei, quero agora que em harmonia façais juntos uma Grande Música! E como vos inspirei com a Chama Imperecível, demonstrareis vossos poderes para adornar o tema."
         },
         {
-            "titulo": "VI. Halylitror — IIIº Movimento: O Despertar da Sinfonia nos Salões Atemporais",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento III: O Despertar da Sinfonia nos Salões Atemporais",
+            "categoria": "Cosmogonia",
             "treppio": "Ta suleto Halye, ko harper et violer, ko litrteko et rukraleter, ko kellitroro amygatar ke in leddamo litrban, Litrgarom Kany inran. Et sulet mobalitrory, ke ne alim oletuse, in fili et in xeri ynna; et Halyteggar lana essa, et Litror exkosai in Nesuom ynna, et Nesu ne maer nesua essa.",
             "portugues": "Então as vozes dos Espíritos Sagrados, como harpas e violas, como trombetas e órgãos e como coros incontáveis que cantam com palavras, começaram a transformar o tema de Ilúvatar em uma Grande Música; e os Salões Atemporais transbordaram, e a música alcançou o Vazio, e ele deixou de ser vazio."
         },
         {
-            "titulo": "VII. Halylitror — IVº Movimento: A Soberania de Lanrukra e a Busca no Vazio",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento IV: A Soberania de Lanrukra e a Busca no Vazio",
+            "categoria": "Cosmogonia",
             "treppio": "Oratypatte esba et kellitrorom mirba, et moba Kani esba. Ta ko leddalitror girba, in sukori Lanrukrady inna ad illotur daioros ex vulej Kany ke ne in leddalitrori Oratypattedy esban; nam Kani isoro et rukroro mobani mobrassen, et in donoi fratroro Kany parba. Kan in Nesuom ynna ad mirur Halvurom, nam in intulori vulba kradur Kradetos Kany; ta Halvurom ne mirra, nam in Oratypattej esu.",
             "portugues": "Ilúvatar sentou-se e escutou, e pareceu-Lhe bom. Mas, conforme o tema progredia, entrou no coração de Melkor entretecer assuntos de sua própria imaginação que não estavam de acordo com o tema de Ilúvatar; pois a ele tinham sido dados os maiores dons de poder e conhecimento. Ele fora sozinho ao Vazio buscar a Chama Imperecível, mas não a encontrou, pois ela está com Ilúvatar."
         },
         {
-            "titulo": "VIII. Halylitror — Vº Movimento: A Dissonância de Kurlan e os Três Grandes Temas",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento V: A Dissonância de Kurlan e os Três Grandes Temas",
+            "categoria": "Cosmogonia",
             "treppio": "Ex daiori iddi Kurlany alitror girra, et Halo in Kani doobban, et suleto aetika essan, et kellitror akindrra. Ta Oratypatte esba et mirba, antetonk ko in Halyteggari feroxéor girra. Ta Oratypatte girra, et Halo mirran ke lita mebba; et dattem Kany girra, et Dota Leddalitror in alitrori inna, maer lota et maer rukra. Et ko alitror Kurlany ogirra, Oratypatte Zelta Leddalitrorom inra: lita et fassukora in fili, ta rukra ko garvelitror in atonkrej.",
             "portugues": "Dos pensamentos solitários de Melkor brotou a dissonância, e muitos ao seu redor desalentaram-se, e a unidade foi rompida. Então Ilúvatar ergueu-se, e os Ainur perceberam que Ele sorria; ergueu a mão esquerda, e um novo tema começou em meio à tormenta; e novamente ergueu a mão direita, e um terceiro tema cresceu em poder profundo."
         },
         {
-            "titulo": "IX. Halylitror — VIº Movimento: O Acorde Final e a Revelação da Visão",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento VI: O Acorde Final e a Revelação da Visão",
+            "categoria": "Cosmogonia",
             "treppio": "Ta Oratypatte in rukrori girra, et dattem et sintem in idda girra; et in idda leddaj Litror alerra. Et Oratypatte ledda: Rukrar esu Halo, et in kanoi Kurlan rukran esu; ta isru ke ne idda leddalitror litrukeso so ne ex Ej fontom toruke, et ke in Em alitror tekuse, lotorom tekoroy Ey inru! Ta Oratypatte Halyteggaros agaldra, et Halos in Nesuom gelra, et ledda: Mir! San esu Litror vy! Et Mirakosor akosrase: Oratoxe in Nesui, ko oxegar in lani in velliri.",
             "portugues": "Então Ilúvatar ergueu-se em majestade e levantou ambas as mãos, e num acorde mais profundo que o Abismo a Música cessou. E disse: Poderosos são os Ainur, e mais poderoso entre eles é Melkor; mas ele saberá que nenhum tema pode ser tocado sem ter em Mim sua fonte! E conduziu-os ao Vazio e disse: Olhai! Esta é a vossa Música! E uma Visão lhes foi revelada: um Mundo globado em meio ao Vazio."
         },
         {
-            "titulo": "X. Halylitror — VIIº Movimento: O Despertar dos Filhos de Ilúvatar (Ittakazeti e Dotakazeti)",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento VII: O Despertar dos Filhos de Ilúvatar (Ittakazeti e Dotakazeti)",
+            "categoria": "Cosmogonia",
             "treppio": "Et ko Halo Mirakosorom mirban, mirran ke in Zelta Leddalitrori kradeto aetika esban, ke ne in daiori Halye esban: Felo Oratypattedy, Ittakazeti et Dotakazeti, ke ex Kani Iddi kraddassen! Et Halo Kanos gizzan, nam lotan esban; et Kurlan illotorom Kany inra, ad ke Felos Oratypattedy torexuke.",
             "portugues": "E enquanto os Ainur contemplavam esta Visão, viram que no Terceiro Tema havia coisas estranhas que não provinham do pensamento deles: eram os Filhos de Ilúvatar, os Primeiros Nascidos e os Sucessores, concebidos por Ele sozinho! E os Ainur os amaram, mas Melkor fingiu ocultar seu desejo de dominá-los."
         },
         {
-            "titulo": "XI. Halylitror — VIIIº Movimento: ODomínio de Ferytrátte, Vétrátte e Tektrátte",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimento VIII: O Domínio de Ferytrátte, Vétrátte e Tektrátte",
+            "categoria": "Cosmogonia",
             "treppio": "In Halo, Ferytrátte daiorom Oratypattedy isan isba, et ferom, feriam et ferveos gizza. Vétrátte garveos et vevaros gizza, et in garvelitrori Oratypattej ledda. Tektrátte oxegaros, rixegaros, lauriom et verrem gizza, nam isorom et tekorom ko Oratypatte torba. Et Vétrátte et Ferytrátte ex fili in kindrori essan: in ferveoi et in veksixij Vé et fer keladun.",
             "portugues": "Dentre os Ainur, Manwë (Ferytrátte) conhecia mais claramente a mente de Ilúvatar, amando os ventos e o ar; Ulmo (Vétrátte) voltou seu pensamento às águas e oceanos; e Aulë (Tektrátte) voltou-se à estrutura da terra, às rochas e aos metais. E Ulmo e Manwë estiveram desde o princípio aliados nas nuvens e nas chuvas."
         },
         {
-            "titulo": "XII. Halylitror — IXº a XIIº Movimentos: O Decreto de Eä (Esu!) e a Guerra de Construção",
-            "categoria": "Cosmogonia Sagrada (GNLT Seção 8.5)",
+            "titulo": "Halylitror — Movimentos IX a XII: O Decreto de Eä (Esu!) e a Guerra de Construção",
+            "categoria": "Cosmogonia",
             "treppio": "Ta Oratypatte Mirakosorom kossa, et in Halo vulor girra ad ynur in Oratoxem. Et Oratypatte ledda: Isum vulorom vy, ad ke sano ke mirrat esuke! Ta Mobum: Esu! Et Kan Halvurom in suom Nesuy gelra, et Oratoxe essa! Et Halo, ke Totter et Rukroro letusen, in Oratoxem ynnan; ta nakad esba. Et ko Totter oxegaros tekban, Kurlan in vurori et in avuri keladra, et tekoros Tottedye akradba: filoxer kossa, rixegaros akradda, garveos akossa. Ta tekor Tottedye ne nesua essa: in avuri et in avurvéj Kurlany, Vétrátte et Ferytrátte ferveos et veksixis kraddan, et Oratoxe ad Ittakazetos illotrase. Zo es!",
             "portugues": "Então Ilúvatar recolheu a Visão, e despertou nos Ainur o desejo de que aquelas coisas existissem. E Ilúvatar declarou: Sei do desejo de vossas mentes! Portanto, digo: Eä! Que estas coisas Sejam! E enviou a Chama Imperecível ao coração do Vazio, e o Mundo Passou a Ser! Os Valar desceram a Arda e travaram com Melkor a guerra da edificação do mundo, preparando a Terra para os Primeiros Nascidos. Assim sê!"
         }
     ]
 
-    full_json_db["metadata"]["title"] = "Dicionário Geral e Códice Morfológico Exaustivo da Língua Tréppia (Era Clássica V8.4)"
+    full_json_db["metadata"]["title"] = "Dicionário Geral da Língua Tréppia"
 
     for entry in full_json_db["corpus_canonico"]:
         entry["titulo"] = entry["titulo"].replace("ODomínio", "O Domínio").replace("Halylitror", "Haly'itror")
@@ -1763,7 +1770,7 @@ def generate_all_files():
     ui_dir = os.path.join(out_dir, "ui_dicionario")
     os.makedirs(ui_dir, exist_ok=True)
     js_bundle_path = os.path.join(ui_dir, "dados_dicionario_conde.js")
-    js_bundle_text = "// Banco de Dados Automático da UI do Dicionário Tréppio (/conde V9.0)\nwindow.CONDE_DB = " + json_compact_safe_js + ";\n"
+    js_bundle_text = "// Banco de Dados do Códice Tréppio\nwindow.CONDE_DB = " + json_compact_safe_js + ";\n"
     with open(js_bundle_path, "w", encoding="utf-8") as f:
         f.write(js_bundle_text)
 

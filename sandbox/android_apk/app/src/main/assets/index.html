@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#09090b" />
-  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V9.0. Edição Filológica Completa com 246.737 formas, Brasão Vetorizado, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
+  <meta name="description" content="Códice Tréppio — Dicionário, gramática normativa, pronúncia IPA e tradutor bilíngue da língua tréppia." />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/svg+xml" href="brasao_conde.svg" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V9.0)</title>
+  <title>Códice Tréppio — Dicionário, Pronúncia e Tradutor</title>
 
   <!-- Google Fonts carregado de forma não bloqueante (skip no APK offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -523,7 +523,7 @@
 
     .reverse-matches-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
       gap: 0.75rem;
     }
 
@@ -594,7 +594,7 @@
        ========================================================================== */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
       gap: 1.15rem;
     }
 
@@ -609,6 +609,8 @@
       gap: 0.75rem;
       box-shadow: var(--shadow-sm);
       position: relative;
+      min-width: 0;
+      max-width: 100%;
     }
 
     .entry-card:hover {
@@ -622,6 +624,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: wrap;
       gap: 0.65rem;
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 0.65rem;
@@ -908,7 +911,7 @@
 
     .lab-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
       gap: 1.5rem;
     }
 
@@ -1579,8 +1582,8 @@
       gap: 1rem !important;
     }
     .crest {
-      width: 46px !important;
-      height: 46px !important;
+      width: 44px !important;
+      height: 44px !important;
       font-size: 1.35rem !important;
       border-radius: 12px !important;
       background: rgba(14, 14, 18, 0.9) !important;
@@ -1621,52 +1624,44 @@
       color: #09090b !important;
       -webkit-text-fill-color: #09090b !important;
     }
-    .brand-edition-pill {
-      background: rgba(255, 255, 255, 0.08) !important;
-      border: 1px solid rgba(255, 255, 255, 0.14) !important;
-      color: #a1a1aa !important;
-      -webkit-text-fill-color: #a1a1aa !important;
-      font-size: 0.65rem !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.12em !important;
-      text-transform: uppercase !important;
-      border-radius: 9999px !important;
-      padding: 0.2rem 0.65rem !important;
-    }
-    [data-theme="light"] .brand-edition-pill {
-      background: rgba(0, 0, 0, 0.05) !important;
-      border-color: rgba(0, 0, 0, 0.12) !important;
-      color: #52525b !important;
-      -webkit-text-fill-color: #52525b !important;
-    }
     .brand-title p {
       display: none !important;
     }
-    .stats-pill {
-      background: rgba(18, 18, 22, 0.8) !important;
-      border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    .svg-icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.125em;
+      flex-shrink: 0;
+    }
+    .icon-btn {
+      padding: 0.48rem !important;
+      min-width: 36px;
+      height: 36px;
+      justify-content: center;
       border-radius: 9999px !important;
-      padding: 0.38rem 1rem !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
     }
-    [data-theme="light"] .stats-pill {
-      background: rgba(244, 244, 245, 0.9) !important;
-      border-color: rgba(0, 0, 0, 0.08) !important;
+    .mic-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff4d5a;
+      box-shadow: 0 0 8px #ff4d5a;
     }
-    .stats-pill strong {
-      color: #ffffff !important;
-      font-family: var(--font-sans) !important;
-      font-weight: 700 !important;
-      font-variant-numeric: tabular-nums !important;
+    .ecosystem-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.45rem;
     }
-    [data-theme="light"] .stats-pill strong {
-      color: #09090b !important;
+    .settings-section {
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--border-color);
     }
-    .pill-sep {
-      color: rgba(255, 255, 255, 0.15) !important;
-    }
-    [data-theme="light"] .pill-sep {
-      color: rgba(0, 0, 0, 0.15) !important;
+    .settings-section:first-child {
+      padding-top: 0;
+      border-top: none;
     }
 
     /* Botões Pílula Tonal */
@@ -1803,14 +1798,6 @@
       color: #fff !important;
       animation: pulseListening 1.2s infinite !important;
     }
-    .kbd-hint {
-      border-radius: 9999px !important;
-      background: rgba(255, 255, 255, 0.06) !important;
-      border: 1px solid rgba(255, 255, 255, 0.1) !important;
-      color: #71717a !important;
-      font-size: 0.7rem !important;
-      padding: 0.2rem 0.55rem !important;
-    }
 
     /* Abas de Navegação (Segmented Pill Strip) */
     .nav-tabs {
@@ -1824,7 +1811,7 @@
       color: #a1a1aa !important;
       font-size: 0.83rem !important;
       font-weight: 600 !important;
-      padding: 0.5rem 1.15rem !important;
+      padding: 0.48rem 1.05rem !important;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
       transition: all var(--transition-fast) !important;
     }
@@ -1852,118 +1839,8 @@
       border-color: #09090b !important;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
     }
-    .tab-count {
-      border-radius: 9999px !important;
-      background: rgba(255, 255, 255, 0.08) !important;
-      color: #a1a1aa !important;
-      font-size: 0.72rem !important;
-      padding: 0.1rem 0.48rem !important;
-    }
-    .tab-btn.active .tab-count {
-      background: rgba(0, 0, 0, 0.12) !important;
-      color: #000000 !important;
-      font-weight: 800 !important;
-    }
-    [data-theme="light"] .tab-btn.active .tab-count {
-      background: rgba(255, 255, 255, 0.2) !important;
-      color: #ffffff !important;
-    }
 
-    /* Painel Hero Tonal Bento Grid (Precision Athletic Telemetry) */
-    .imperial-hero-banner {
-      background: rgba(14, 14, 18, 0.78) !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-radius: 20px !important;
-      padding: 1.35rem 1.65rem !important;
-      margin-bottom: 1.35rem !important;
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65) !important;
-      backdrop-filter: blur(24px) !important;
-      -webkit-backdrop-filter: blur(24px) !important;
-      position: relative;
-      overflow: hidden;
-      transition: all var(--transition-normal) !important;
-    }
-    [data-theme="light"] .imperial-hero-banner {
-      background: #ffffff !important;
-      border-color: rgba(0, 0, 0, 0.08) !important;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06) !important;
-    }
-    .imperial-hero-banner.collapsed {
-      padding: 0.75rem 1.35rem !important;
-    }
-    .hero-headline h2 {
-      font-family: var(--font-sans) !important;
-      font-size: 1.15rem !important;
-      font-weight: 800 !important;
-      letter-spacing: -0.02em !important;
-      color: #ffffff !important;
-    }
-    [data-theme="light"] .hero-headline h2 {
-      color: #09090b !important;
-    }
-    .hero-subtitle-inline {
-      font-size: 0.82rem !important;
-      color: #a1a1aa !important;
-    }
-    .hero-bento-grid {
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 0.85rem !important;
-      margin-top: 1rem !important;
-    }
-    .hero-bento-card {
-      background: rgba(20, 20, 24, 0.65) !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
-      border-radius: 16px !important;
-      padding: 1.15rem 1.35rem !important;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
-      transition: all var(--transition-fast) !important;
-    }
-    [data-theme="light"] .hero-bento-card {
-      background: rgba(244, 244, 245, 0.8) !important;
-      border-color: rgba(0, 0, 0, 0.08) !important;
-      border-left-color: rgba(0, 0, 0, 0.08) !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
-    }
-    .hero-bento-card:hover {
-      transform: translateY(-2px) !important;
-      border-color: rgba(255, 255, 255, 0.25) !important;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.03) !important;
-    }
-    [data-theme="light"] .hero-bento-card:hover {
-      border-color: rgba(0, 0, 0, 0.2) !important;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
-    }
-    .hero-bento-label {
-      font-size: 0.68rem !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.12em !important;
-      color: #71717a !important;
-      font-weight: 700 !important;
-    }
-    .hero-bento-value {
-      font-family: var(--font-sans) !important;
-      font-size: 1.95rem !important;
-      font-weight: 800 !important;
-      letter-spacing: -0.04em !important;
-      color: #ffffff !important;
-      line-height: 1.15 !important;
-      margin: 0.35rem 0 0.2rem !important;
-      font-variant-numeric: tabular-nums !important;
-    }
-    [data-theme="light"] .hero-bento-value {
-      color: #09090b !important;
-    }
-    .hero-bento-meta {
-      font-size: 0.74rem !important;
-      color: #a1a1aa !important;
-    }
-    [data-theme="light"] .hero-bento-meta {
-      color: #71717a !important;
-    }
-
-    /* Ecos Rápidos e Pílulas do Ecossistema */
+    /* Chips e Pílulas */
     .quick-chip {
       border-radius: 9999px !important;
       background: rgba(255, 255, 255, 0.05) !important;
@@ -2229,17 +2106,6 @@
       filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) !important;
     }
 
-    @media (max-width: 960px) {
-      .hero-bento-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-    }
-    @media (max-width: 560px) {
-      .hero-bento-grid {
-        grid-template-columns: 1fr !important;
-      }
-    }
-
     /* Ajustes Mobile Bottom Nav e Busca para 7 abas em 360px+ */
     @media (max-width: 768px) {
       .search-and-tabs {
@@ -2250,8 +2116,14 @@
         padding: 0.38rem 0.75rem !important;
         gap: 0.45rem !important;
       }
-      .omni-search-bar .kbd-hint {
-        display: none !important;
+      .reverse-matches-grid,
+      .cards-grid,
+      .lab-grid,
+      .translator-shell {
+        grid-template-columns: 1fr !important;
+      }
+      .gnlt-search-box {
+        min-width: 0 !important;
       }
       .btn-voice-search {
         flex-shrink: 0;
@@ -2271,6 +2143,9 @@
         gap: 2px;
       }
       .mobile-nav-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.05rem;
       }
       .mobile-nav-label {
@@ -2290,7 +2165,6 @@
     @media (max-width: 900px), (prefers-reduced-motion: reduce) {
       .imperial-header,
       .omni-search-bar,
-      .imperial-hero-banner,
       .modal-backdrop,
       .mobile-bottom-nav,
       .entry-card,
@@ -2299,14 +2173,12 @@
         -webkit-backdrop-filter: none !important;
       }
       .imperial-header,
-      .omni-search-bar,
-      .imperial-hero-banner {
+      .omni-search-bar {
         background: rgba(14, 14, 18, 0.97) !important;
         background-color: rgba(14, 14, 18, 0.97) !important;
       }
       [data-theme="light"] .imperial-header,
-      [data-theme="light"] .omni-search-bar,
-      [data-theme="light"] .imperial-hero-banner {
+      [data-theme="light"] .omni-search-bar {
         background: rgba(255, 255, 255, 0.98) !important;
         background-color: rgba(255, 255, 255, 0.98) !important;
       }
@@ -2316,7 +2188,6 @@
     }
     .perf-lite .imperial-header,
     .perf-lite .omni-search-bar,
-    .perf-lite .imperial-hero-banner,
     .perf-lite .modal-backdrop,
     .perf-lite .mobile-bottom-nav {
       backdrop-filter: none !important;
@@ -2383,7 +2254,7 @@
     }
     .translator-shell {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
       gap: 1rem;
       margin-bottom: 1.1rem;
     }
@@ -2451,7 +2322,7 @@
     if ('caches' in window && !window.AndroidCondeBridge) {
       caches.keys().then(function(names) {
         names.forEach(function(name) {
-          if (name !== 'treppio-v9-0-cache-vector') {
+          if (name !== 'treppio-v10-0-clean') {
             console.log('[CacheBuster] Purgando cache legado:', name);
             caches.delete(name);
           }
@@ -2462,148 +2333,62 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V9.0) -->
+  <!-- CABEÇALHO LIMPO -->
   <header class="imperial-header">
     <div class="header-top">
       <div class="brand-block">
-        <div class="crest crest-brasao" title="Brasão Imperial do Conde de Treppênia"><img class="crest-img" src="brasao_conde.svg" alt="Brasão do Conde" width="44" height="44" decoding="async" /></div>
+        <div class="crest crest-brasao" title="Brasão do Conde"><img class="crest-img" src="brasao_conde.svg" alt="Brasão do Conde" width="44" height="44" decoding="async" /></div>
         <div class="brand-title">
-          <h1>
-            Códice Imperial Tréppio
-            <span class="brand-edition-pill">Era Clássica V9.0</span>
-          </h1>
+          <h1>Códice Tréppio</h1>
         </div>
       </div>
 
       <div class="header-actions">
-        <div class="stats-pill" title="Total de Formas e Classes Gramaticais Oficiais">
-          <span class="pulse-dot"></span>
-          <span><strong id="stat-forms">246.737</strong> Formas</span>
-          <span class="pill-sep">•</span>
-          <span><strong id="stat-nouns">2109</strong> Nomes</span>
-          <span class="pill-sep">•</span>
-          <span><strong id="stat-verbs">1768</strong> Verbos</span>
-          <span class="pill-sep">•</span>
-          <span><strong id="stat-adjs">446</strong> Adjs</span>
-        </div>
-        <button class="btn" id="btn-toggle-hero" onclick="toggleHeroBanner()" title="Mostrar ou recolher o Painel Filológico Imperial">
-          📊 Painel
+        <button class="btn icon-btn" onclick="toggleTheme()" id="btn-theme" title="Alternar tema" aria-label="Alternar tema">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <button class="btn btn-gold" id="btn-sync" onclick="syncWithCondeBackend()" title="Sincronizar base local ou da nuvem">
-          ⟳ Sincronizar
+        <button class="btn icon-btn" onclick="openSettingsModal()" id="btn-settings" title="Ajustes e Sincronização" aria-label="Ajustes e Sincronização">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </button>
-        <button class="btn" onclick="openCloudConfigModal()" title="Configurar URL Online (Git/Drive)">
-          ☁️ Nuvem
-        </button>
-        <button class="btn" onclick="toggleTheme()" id="btn-theme" title="Alternar entre modo noturno obsidiana e modo pergaminho">☀ Pergaminho</button>
       </div>
     </div>
 
     <div class="search-and-tabs">
       <div class="omni-search-bar">
-        <span class="omni-search-icon">🔍</span>
+        <span class="omni-search-icon" aria-hidden="true">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </span>
         <input
           type="text"
           id="omni-input"
-          placeholder="Buscar em 246.737 formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)..."
+          placeholder="Buscar em tréppio ou português..."
           oninput="handleOmniSearch(this.value)"
         />
         <button class="btn-voice-search" id="btn-voice-omni" onclick="startVoiceSearch()" title="Pesquisar falando pelo microfone">
-          🎙️ Voz
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+          <span>Voz</span>
         </button>
         <button class="btn" onclick="clearSearch()" id="btn-clear-search" style="display:none;">Limpar</button>
-        <span class="kbd-hint">Tecla /</span>
       </div>
 
-      <!-- 7 HUBS PRINCIPAIS E COESOS -->
+      <!-- 7 ABAS PRINCIPAIS -->
       <nav class="nav-tabs" id="main-tabs">
-        <button class="tab-btn active" data-hub="dict" onclick="switchHub('dict')">
-          🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">246.737</span>
-        </button>
-        <button class="tab-btn" data-hub="verbs" onclick="switchHub('verbs')">
-          ⚔️ II. Conjugador Verbal <span class="tab-count" id="hub-cnt-verbs">1.768 Verbos</span>
-        </button>
-        <button class="tab-btn" data-hub="phonetics" onclick="switchHub('phonetics')">
-          🎙️ III. Pronúncia & IPA <span class="tab-count">G=/ɡ/ • S=/s/</span>
-        </button>
-        <button class="tab-btn" data-hub="translator" onclick="switchHub('translator')">
-          🔄 IV. Tradutor TR ↔ PT <span class="tab-count">Bilíngue</span>
-        </button>
-        <button class="tab-btn" data-hub="dialogues" onclick="switchHub('dialogues')">
-          💬 V. Diálogos Práticos <span class="tab-count">5 Cenas</span>
-        </button>
-        <button class="tab-btn" data-hub="grammar" onclick="switchHub('grammar')">
-          📜 VI. Gramática & Corpus <span class="tab-count">GNLT + Haly'itror</span>
-        </button>
-        <button class="tab-btn" data-hub="lab" onclick="switchHub('lab')">
-          ⚗️ VII. Laboratório Sandi V8.4
-        </button>
+        <button class="tab-btn active" data-hub="dict" onclick="switchHub('dict')">Dicionário</button>
+        <button class="tab-btn" data-hub="verbs" onclick="switchHub('verbs')">Verbos</button>
+        <button class="tab-btn" data-hub="phonetics" onclick="switchHub('phonetics')">Pronúncia</button>
+        <button class="tab-btn" data-hub="translator" onclick="switchHub('translator')">Tradutor</button>
+        <button class="tab-btn" data-hub="dialogues" onclick="switchHub('dialogues')">Diálogos</button>
+        <button class="tab-btn" data-hub="grammar" onclick="switchHub('grammar')">Gramática</button>
+        <button class="tab-btn" data-hub="lab" onclick="switchHub('lab')">Laboratório</button>
       </nav>
     </div>
   </header>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="main-container">
-    <!-- HERO BANNER EDITORIAL COLAPSÁVEL (TELEMETRIA BENTO + ACESSO RÁPIDO + ECOSSISTEMA) -->
-    <section class="imperial-hero-banner" id="imperial-hero">
-      <div class="hero-top-row">
-        <div class="hero-headline">
-          <h2>🏛️ Chancelaria Imperial de Treppênia — Códice Morfológico Exaustivo</h2>
-          <span class="hero-subtitle-inline">Fonte: <strong id="conn-status" style="color:var(--emerald);">Embutido Offline</strong> • Ciclo Autônomo de 200 Temas (30 min)</span>
-        </div>
-        <button class="micro-btn" id="btn-hero-collapse-label" onclick="toggleHeroBanner()">▲ Recolher Painel</button>
-      </div>
-
-      <div class="hero-collapsible-body">
-        <div class="hero-bento-grid">
-          <div class="hero-bento-card">
-            <div class="hero-bento-label">Formas Flexionadas e Derivadas</div>
-            <div class="hero-bento-value" id="hero-stat-forms">246.737</div>
-            <div class="hero-bento-meta">0 Colisões Homonímicas • 26 Leis de Sândi</div>
-          </div>
-          <div class="hero-bento-card">
-            <div class="hero-bento-label">Substantivos Canônicos</div>
-            <div class="hero-bento-value" id="hero-stat-nouns">2.109</div>
-            <div class="hero-bento-meta">8 Casos (Sg/Pl) + 10 Sufixos Derivacionais</div>
-          </div>
-          <div class="hero-bento-card">
-            <div class="hero-bento-label">Matriz Verbal Quadripartite</div>
-            <div class="hero-bento-value" id="hero-stat-verbs">1.768</div>
-            <div class="hero-bento-meta">4 Eixos Ontológicos × 114 Formas Finitas</div>
-          </div>
-          <div class="hero-bento-card">
-            <div class="hero-bento-label">Adjetivos & Advérbios</div>
-            <div class="hero-bento-value"><span id="hero-stat-adjs">446</span> <span style="font-size:0.9rem;color:var(--text-secondary);">/</span> <span id="hero-stat-advs">1.202</span></div>
-            <div class="hero-bento-meta">Comparativo, Superlativo (-n/-ni) e Modal (-vë)</div>
-          </div>
-        </div>
-
-        <div class="hero-bottom-bar">
-          <div class="search-quick-chips" style="margin-top:0;">
-            <span class="quick-chip-label">⚡ Ecos Rápidos:</span>
-            <button class="quick-chip" onclick="quickSearch('falde')">🍞 Pão (falde)</button>
-            <button class="quick-chip" onclick="quickSearch('vur')">🔥 Fogo (vur)</button>
-            <button class="quick-chip" onclick="quickSearch('Vé')">💧 Água (Vé)</button>
-            <button class="quick-chip" onclick="quickSearch('sfammir')">⚔️ Espada (sfammir)</button>
-            <button class="quick-chip" onclick="quickSearch('Tette')">⚒️ Ferreiro (Tette)</button>
-            <button class="quick-chip" onclick="quickSearch('poke xuna')">🐕 Cão Loiro</button>
-            <button class="quick-chip" onclick="quickSearch('teggar')">🏰 Castelo (teggar)</button>
-            <button class="quick-chip" onclick="quickSearch('Patte ny')">📜 Pai Nosso</button>
-            <button class="quick-chip" data-action="quick-search" data-arg="Haly'itror">🎶 Haly'itror</button>
-          </div>
-
-          <div class="ecosystem-pills">
-            <a class="eco-pill" href="../Codice_Treppio_Conde.exe" download title="Baixar Launcher Desktop Windows (.EXE)">💻 Desktop .EXE</a>
-            <a class="eco-pill" href="../Codice_Treppio_Conde.apk" download title="Baixar Aplicativo Android (.APK)">📱 Android .APK</a>
-            <a class="eco-pill" href="../dist/Codice_Treppio_Portatil.html" download title="Baixar Códice Portátil 100% Autocontido (.HTML)">📄 Portátil .HTML</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- PAINEL DE RECONHECIMENTO MORFOLÓGICO REVERSO -->
     <section class="reverse-parser-box" id="reverse-box">
-      <div class="reverse-parser-title">⚡ Reconhecimento Morfológico Reverso Instantâneo</div>
+      <div class="reverse-parser-title">Reconhecimento Morfológico</div>
       <div class="reverse-matches-grid" id="reverse-grid"></div>
     </section>
 
@@ -2611,19 +2396,19 @@
     <div id="tab-content"></div>
   </main>
 
-  <!-- MODAL DE INSPECÇÃO PROFUNDA -->
+  <!-- MODAL DE INSPECÇÃO PROFUNDA & AJUSTES -->
   <div class="modal-backdrop" id="detail-modal" onclick="if(event.target===this) closeModal()">
     <div class="modal-box">
       <div class="modal-header">
-        <h2 id="modal-title" style="font-family:var(--font-display);color:var(--gold-bright);">Detalhes do Verbete</h2>
-        <button class="btn" onclick="closeModal()">✕ Fechar (Esc)</button>
+        <h2 id="modal-title" style="font-family:var(--font-display);color:var(--gold-bright);">Detalhes</h2>
+        <button class="btn" onclick="closeModal()">Fechar</button>
       </div>
       <div id="modal-body"></div>
     </div>
   </div>
 
-  <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE (ASYNC, SEM BLOQUEIO) -->
-  <script id="conde-db-script" src="dados_dicionario_conde.js?v=9.0.0" async onload="window.__condeDbScriptDone=1;window.dispatchEvent(new Event('conde-db-ready'))" onerror="window.__condeDbScriptDone=-1;window.dispatchEvent(new Event('conde-db-ready'))"></script>
+  <!-- CARREGAMENTO ASSÍNCRONO DO BANCO DE DADOS -->
+  <script id="conde-db-script" src="dados_dicionario_conde.js?v=10.0.0" async onload="window.__condeDbScriptDone=1;window.dispatchEvent(new Event('conde-db-ready'))" onerror="window.__condeDbScriptDone=-1;window.dispatchEvent(new Event('conde-db-ready'))"></script>
   <script>
     // Estado Global da Aplicação
     let DB = window.CONDE_DB || null;
@@ -3165,6 +2950,23 @@
       }
     };
 
+    window.__condeSourceLabel = "Embutido Offline";
+
+    const ICON_SPEAK = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+    const ICON_COPY = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
+    const ICON_SEARCH = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>';
+    const ICON_CHEVRON_DOWN = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+    const ICON_CHEVRON_UP = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>';
+    const ICON_SUN = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+    const ICON_MOON = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+    const ICON_MIC = '<svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>';
+
+    function setSourceLabel(label) {
+      window.__condeSourceLabel = label || "Embutido Offline";
+      const el = document.getElementById("settings-conn-status");
+      if (el) el.textContent = window.__condeSourceLabel;
+    }
+
     // Conversor automático de links do Google Drive ou GitHub para link direto de JSON
     function normalizeCloudUrl(rawUrl) {
       if (!rawUrl) return "";
@@ -3181,16 +2983,16 @@
       return u;
     }
 
-    // 3. Inicialização e Atualização de Contadores (Sem Duplo Fetch, Híbrido: Launcher / Web / APK / Offline)
+    // 3. Inicialização e Atualização Segura
     async function initApp() {
       const isAndroid = Boolean(window.AndroidCondeBridge);
-      let sourceLabel = isAndroid ? "Aplicativo Android (.APK)" : "Embutido Offline";
+      let sourceLabel = isAndroid ? "Aplicativo Android" : "Embutido Offline";
 
       // Aguardar o script assíncrono dados_dicionario_conde.js caso ainda esteja decodificando
       if (!window.CONDE_DB && !window.__condeDbScriptDone && document.getElementById("conde-db-script")) {
         const tabEl = document.getElementById("tab-content");
         if (tabEl) {
-          tabEl.innerHTML = `<div class="entry-card" style="padding:1.25rem;"><strong>⏳ Carregando Códice Tréppio (246.737 formas)...</strong></div>`;
+          tabEl.innerHTML = `<div class="entry-card" style="padding:1.25rem;"><strong>Carregando Códice Tréppio...</strong></div>`;
         }
         await new Promise((resolve) => {
           let settled = false;
@@ -3208,14 +3010,14 @@
       if (window.CONDE_DB) {
         DB = window.CONDE_DB;
         if (!isAndroid && location.protocol.startsWith("http")) {
-          sourceLabel = "Site Online / PWA";
+          sourceLabel = "Site Online";
         }
       } else if (!isAndroid) {
         try {
           const res = await fetch("/api/db", { cache: "no-store" });
           if (res.ok) {
             DB = await res.json();
-            sourceLabel = "Launcher Local /conde";
+            sourceLabel = "Base Local";
           }
         } catch (_) {}
 
@@ -3224,7 +3026,7 @@
             const res = await fetch("./dicionario_formas_expandidas.json", { cache: "no-cache" });
             if (res.ok) {
               DB = await res.json();
-              sourceLabel = "Site Online (GitHub Pages)";
+              sourceLabel = "Site Online";
             }
           } catch (_) {}
         }
@@ -3232,15 +3034,14 @@
 
       if (!DB) {
         document.getElementById("tab-content").innerHTML =
-          `<div class="entry-card"><h3>Erro ao carregar a base de dados.</h3><p>Execute <code>gerador_dicionario_integral_sandbox.py</code>.</p></div>`;
+          `<div class="entry-card"><h3>Não foi possível carregar o dicionário.</h3><p>Verifique sua conexão ou tente recarregar o aplicativo.</p></div>`;
         if (isAndroid && typeof window.AndroidCondeBridge.onUiReady === "function") {
           try { window.AndroidCondeBridge.onUiReady(); } catch (_) {}
         }
         return;
       }
 
-      const connEl = document.getElementById("conn-status");
-      if (connEl) connEl.textContent = sourceLabel;
+      setSourceLabel(sourceLabel);
 
       updateHeaderCounters();
       preNormalizeLexicon();
@@ -3253,13 +3054,13 @@
         });
       }
 
-      // Verificação leve (/api/health, 120 bytes) sem duplicar fetch de 10 MB
+      // Verificação leve (/api/health, 120 bytes) sem duplicar fetch
       if (!isAndroid && location.protocol.startsWith("http")) {
         fetch("/api/health", { cache: "no-store" })
           .then(res => (res.ok ? res.json() : null))
           .then(health => {
-            if (health && health.ok && connEl) {
-              connEl.textContent = "Launcher Local /conde";
+            if (health && health.ok) {
+              setSourceLabel("Base Local");
             }
           })
           .catch(() => {});
@@ -3277,7 +3078,7 @@
               preNormalizeLexicon();
               buildReverseIndexChunked();
               renderActiveTab();
-              if (connEl) connEl.textContent = "Nuvem Online (Git/Drive)";
+              setSourceLabel("Nuvem Online");
             }
           })
           .catch(() => {});
@@ -3285,6 +3086,7 @@
     }
 
     function updateHeaderCounters() {
+      if (!DB) return;
       const m = DB.metadata || {};
       const nCount = Object.keys(DB.substantivos || {}).length;
       const vRoots = Object.keys(DB.verbos_quadripartite || {}).length;
@@ -3304,58 +3106,43 @@
       setTxt("stat-adjs", aCount.toLocaleString("pt-BR"));
       setTxt("stat-advs", advCount.toLocaleString("pt-BR"));
       setTxt("stat-forms", totalForms);
-
-      setTxt("hero-stat-forms", totalForms);
-      setTxt("hero-stat-nouns", nCount.toLocaleString("pt-BR"));
-      setTxt("hero-stat-verbs", (vRoots * 4).toLocaleString("pt-BR"));
-      setTxt("hero-stat-adjs", aCount.toLocaleString("pt-BR"));
-      setTxt("hero-stat-advs", advCount.toLocaleString("pt-BR"));
-
-      setTxt("hub-cnt-dict", totalForms);
-      setTxt("hub-cnt-verbs", (vRoots * 4) + " Verbos");
-
       setTxt("tab-cnt-nouns", nCount);
       setTxt("tab-cnt-verbs", vRoots * 4);
       setTxt("tab-cnt-adjs", aCount);
       setTxt("tab-cnt-advs", advCount);
       setTxt("tab-cnt-part", pCount);
       setTxt("tab-cnt-diac", dCount);
-
-      const omniInp = document.getElementById("omni-input");
-      if (omniInp) {
-        omniInp.placeholder = `Buscar em ${totalForms} formas (ex.: falde, vur, mild, pão, fogo, saittek, lareira, castelo)...`;
-      }
-      if (localStorage.getItem("CONDE_HERO_COLLAPSED") === "1") {
-        const hero = document.getElementById("imperial-hero");
-        const lbl = document.getElementById("btn-hero-collapse-label");
-        if (hero) hero.classList.add("collapsed");
-        if (lbl) lbl.textContent = "▼ Expandir Painel";
-      }
     }
 
-    // 4. Sincronização ao Vivo com o Backend (.exe / Python) ou Nuvem (GitHub / Google Drive)
-    async function syncWithCondeBackend() {
-      const btn = document.getElementById("btn-sync");
-      const origText = btn.innerHTML;
-      btn.innerHTML = "⏳ Sincronizando base /conde...";
+    // 4. Sincronização Sob Demanda e Ajustes
+    async function syncWithCondeBackend(triggerBtn) {
+      const btn = triggerBtn || document.getElementById("settings-sync-btn");
+      const origText = btn ? btn.textContent : "";
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "Sincronizando...";
+      }
       try {
         const res = await fetch("/api/recompilar", { method: "POST" });
         if (res.ok) {
           const data = await res.json();
-          DB = data.db;
-          updateHeaderCounters();
-          preNormalizeLexicon();
-          buildReverseIndexChunked();
-          renderActiveTab();
-          const connEl = document.getElementById("conn-status");
-          if (connEl) connEl.textContent = data.source || "Sincronizado (/conde)";
-          btn.innerHTML = "✓ Base /conde Atualizada!";
-          setTimeout(() => { btn.innerHTML = origText; }, 2200);
-          return;
+          if (data && data.db) {
+            DB = data.db;
+            updateHeaderCounters();
+            preNormalizeLexicon();
+            buildReverseIndexChunked();
+            renderActiveTab();
+            setSourceLabel("Base Local Atualizada");
+            showToast("Base local atualizada.");
+            if (btn) {
+              btn.textContent = "Base Atualizada";
+              setTimeout(() => { btn.textContent = origText; btn.disabled = false; }, 1800);
+            }
+            return;
+          }
         }
       } catch (_) {}
 
-      // Tentar sincronizar direto da URL da nuvem (GitHub Raw / Google Drive) se configurada
       const savedCloudUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
       if (savedCloudUrl) {
         try {
@@ -3368,47 +3155,74 @@
               preNormalizeLexicon();
               buildReverseIndexChunked();
               renderActiveTab();
-              document.getElementById("conn-status").textContent = "Nuvem Online (Git/Drive)";
-              btn.innerHTML = "✓ Sincronizado da Nuvem!";
-              setTimeout(() => { btn.innerHTML = origText; }, 2200);
+              setSourceLabel("Nuvem Online");
+              showToast("Sincronizado da nuvem.");
+              if (btn) {
+                btn.textContent = "Sincronizado";
+                setTimeout(() => { btn.textContent = origText; btn.disabled = false; }, 1800);
+              }
               return;
             }
           }
         } catch (_) {}
       }
 
-      location.reload();
+      showToast("Nenhuma fonte externa disponível; usando base atual.");
+      if (btn) {
+        btn.textContent = origText || "Sincronizar Base";
+        btn.disabled = false;
+      }
     }
 
-    function openCloudConfigModal() {
+    function openSettingsModal() {
       const currentUrl = localStorage.getItem("CONDE_CLOUD_URL") || "";
-      document.getElementById("modal-title").textContent = "☁️ Configurar Banco de Dados Online (GitHub / Google Drive)";
+      const isAndroid = Boolean(window.AndroidCondeBridge);
+      document.getElementById("modal-title").textContent = "Ajustes";
       document.getElementById("modal-body").innerHTML = `
-        <p style="margin-bottom:0.85rem;color:var(--text-secondary);">
-          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 246.737 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
-        </p>
-        <div style="margin-bottom:1rem;">
-          <label style="display:block;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">
-            URL Pública do <code>dicionario_formas_expandidas.json</code> (GitHub Raw ou Link do Google Drive):
+        <div class="settings-section">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+            <div>
+              <div style="font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">Origem Ativa</div>
+              <strong id="settings-conn-status" style="color:var(--emerald);font-size:0.95rem;">${escapeHtml(window.__condeSourceLabel || "Embutido Offline")}</strong>
+            </div>
+            <button class="btn btn-gold" id="settings-sync-btn" onclick="syncWithCondeBackend(this)">Sincronizar Base</button>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <label for="cloud-url-input" style="display:block;font-weight:600;color:var(--gold);margin-bottom:0.4rem;">
+            Sincronização Online (Opcional)
           </label>
           <input
             type="text"
             id="cloud-url-input"
             class="input-field"
             value="${currentUrl.replace(/"/g, '&quot;')}"
-            placeholder="Ex.: https://raw.githubusercontent.com/SEU_USUARIO/conde-treppio/main/docs/dicionario_formas_expandidas.json"
+            placeholder="URL direta do JSON (GitHub Raw ou Google Drive)"
           />
-          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.35rem;">
-            Aceita tanto links diretos do GitHub (<code>raw.githubusercontent.com/...</code>) quanto links de compartilhamento do Google Drive (<code>https://drive.google.com/file/d/.../view</code>).
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.35rem;">
+            O dicionário funciona offline por padrão. Informe uma URL pública apenas se desejar carregar atualizações remotas automaticamente.
           </p>
+          <div style="display:flex;gap:0.65rem;flex-wrap:wrap;margin-top:0.75rem;">
+            <button class="btn btn-gold" onclick="saveCloudConfig()">Salvar e Atualizar</button>
+            <button class="btn" onclick="localStorage.removeItem('CONDE_CLOUD_URL');closeModal();initApp();">Restaurar Base Embutida</button>
+          </div>
         </div>
-        <div style="display:flex;gap:0.65rem;flex-wrap:wrap;">
-          <button class="btn btn-gold" onclick="saveCloudConfig()">💾 Salvar e Sincronizar Agora</button>
-          <button class="btn" onclick="localStorage.removeItem('CONDE_CLOUD_URL');closeModal();initApp();">Usar Base Embutida / Local</button>
-        </div>
+
+        ${!isAndroid ? `
+          <div class="settings-section ecosystem-pills-wrap">
+            <div style="font-size:0.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Versões para Download</div>
+            <div class="ecosystem-pills">
+              <a class="eco-pill" href="../Codice_Treppio_Conde.exe" download>Windows (.EXE)</a>
+              <a class="eco-pill" href="../Codice_Treppio_Conde.apk" download>Android (.APK)</a>
+              <a class="eco-pill" href="../dist/Codice_Treppio_Portatil.html" download>Portátil (.HTML)</a>
+            </div>
+          </div>
+        ` : ""}
       `;
       document.getElementById("detail-modal").classList.add("open");
     }
+    const openCloudConfigModal = openSettingsModal;
 
     async function saveCloudConfig() {
       const val = (document.getElementById("cloud-url-input")?.value || "").trim();
@@ -3460,7 +3274,7 @@
       const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
       const btn = document.getElementById("btn-voice-omni");
       if (!SpeechRec) {
-        showToast("🎙️ Dica: Use o botão 'Conversar por Voz (Whisper)' no Launcher Desktop!");
+        showToast("Busca por voz indisponível neste navegador.");
         return;
       }
       try {
@@ -3470,7 +3284,7 @@
         rec.maxAlternatives = 1;
         if (btn) {
           btn.classList.add("listening");
-          btn.innerHTML = "🔴 Ouvindo...";
+          btn.innerHTML = '<span class="mic-dot"></span><span>Ouvindo...</span>';
         }
         rec.onresult = (event) => {
           const transcript = (event.results[0][0].transcript || "").replace(/[.,!?]/g, "").trim();
@@ -3483,31 +3297,22 @@
             if (clearBtn) clearBtn.style.display = "inline-flex";
             renderReverseMatches(searchQuery);
             renderActiveTab();
-            showToast(`🎙️ Buscando por voz: "${transcript}"`);
+            showToast(`Buscando: "${transcript}"`);
           }
         };
         rec.onerror = () => {
-          showToast("⚠️ Não foi possível capturar o áudio do microfone.");
+          showToast("Não foi possível capturar o áudio do microfone.");
         };
         rec.onend = () => {
           if (btn) {
             btn.classList.remove("listening");
-            btn.innerHTML = "🎙️ Voz";
+            btn.innerHTML = `${ICON_MIC}<span>Voz</span>`;
           }
         };
         rec.start();
       } catch (e) {
-        showToast("⚠️ Microfone indisponível neste navegador.");
+        showToast("Microfone indisponível neste navegador.");
       }
-    }
-
-    function toggleHeroBanner() {
-      const hero = document.getElementById("imperial-hero");
-      const lbl = document.getElementById("btn-hero-collapse-label");
-      if (!hero) return;
-      const isCollapsed = hero.classList.toggle("collapsed");
-      localStorage.setItem("CONDE_HERO_COLLAPSED", isCollapsed ? "1" : "0");
-      if (lbl) lbl.textContent = isCollapsed ? "▼ Expandir Painel" : "▲ Recolher Painel";
     }
 
     function renderReverseMatches(q) {
@@ -3541,8 +3346,8 @@
             <div style="font-size:0.78rem;color:var(--text-primary);">${escapeHtml(m.meaning)}</div>
           </div>
           <div class="card-micro-actions">
-            <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(m.form)}" title="Ouvir pronúncia">🔊</button>
-            <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(m.form)}">📋</button>
+            <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(m.form)}" title="Ouvir pronúncia">${ICON_SPEAK}</button>
+            <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(m.form)}" title="Copiar">${ICON_COPY}</button>
             <button class="btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(m.actionType)}" data-arg2="${escapeHtmlAttr(m.actionKey)}">
               Ver Paradigma →
             </button>
@@ -3622,10 +3427,10 @@
       if (!el) return;
       if (el.style.display === "none" || !el.style.display) {
         el.style.display = "block";
-        if (btn) btn.innerHTML = "▲ Ocultar 18 Formas & Derivações";
+        if (btn) btn.innerHTML = `${ICON_CHEVRON_UP}<span>Ocultar formas</span>`;
       } else {
         el.style.display = "none";
-        if (btn) btn.innerHTML = "📋 Ver 18 Formas & Derivações";
+        if (btn) btn.innerHTML = `${ICON_CHEVRON_DOWN}<span>Ver formas e derivações</span>`;
       }
     }
 
@@ -3669,35 +3474,15 @@
     }
 
     function renderDictHub(container) {
-      const nCount = Object.keys(DB.substantivos || {}).length;
-      const aCount = Object.keys(DB.adjetivos || {}).length;
-      const advCount = Object.keys(DB.adverbios || {}).length;
-      const pCount = Object.keys(DB.particulas_e_afixos || {}).length;
-      const dCount = Object.keys(DB.registro_diacronico_e_variantes || {}).length;
-
       const subhubBar = `
         <div class="subhub-bar">
-          <button class="subhub-chip ${dictSubtab==='nouns'?'active':''}" onclick="setDictSubtab('nouns')">
-            🏛️ Substantivos (${nCount})
-          </button>
-          <button class="subhub-chip ${dictSubtab==='adjectives'?'active':''}" onclick="setDictSubtab('adjectives')">
-            ✨ Adjetivos (${aCount})
-          </button>
-          <button class="subhub-chip ${dictSubtab==='adverbs'?'active':''}" onclick="setDictSubtab('adverbs')">
-            🧭 Advérbios (${advCount})
-          </button>
-          <button class="subhub-chip ${dictSubtab==='pronouns'?'active':''}" onclick="setDictSubtab('pronouns')">
-            👑 Pronomes (7)
-          </button>
-          <button class="subhub-chip ${dictSubtab==='numerals'?'active':''}" onclick="setDictSubtab('numerals')">
-            🔢 Numerais (12)
-          </button>
-          <button class="subhub-chip ${dictSubtab==='particles'?'active':''}" onclick="setDictSubtab('particles')">
-            🔗 Partículas (${pCount})
-          </button>
-          <button class="subhub-chip ${dictSubtab==='diachronic'?'active':''}" onclick="setDictSubtab('diachronic')">
-            📜 Diacrônico (${dCount})
-          </button>
+          <button class="subhub-chip ${dictSubtab==='nouns'?'active':''}" onclick="setDictSubtab('nouns')">Substantivos</button>
+          <button class="subhub-chip ${dictSubtab==='adjectives'?'active':''}" onclick="setDictSubtab('adjectives')">Adjetivos</button>
+          <button class="subhub-chip ${dictSubtab==='adverbs'?'active':''}" onclick="setDictSubtab('adverbs')">Advérbios</button>
+          <button class="subhub-chip ${dictSubtab==='pronouns'?'active':''}" onclick="setDictSubtab('pronouns')">Pronomes</button>
+          <button class="subhub-chip ${dictSubtab==='numerals'?'active':''}" onclick="setDictSubtab('numerals')">Numerais</button>
+          <button class="subhub-chip ${dictSubtab==='particles'?'active':''}" onclick="setDictSubtab('particles')">Partículas</button>
+          <button class="subhub-chip ${dictSubtab==='diachronic'?'active':''}" onclick="setDictSubtab('diachronic')">Variantes</button>
         </div>
       `;
 
@@ -3734,12 +3519,8 @@
     function renderGrammarHub(container) {
       const subhubBar = `
         <div class="subhub-bar">
-          <button class="subhub-chip ${grammarSubtab==='gnlt'?'active':''}" onclick="setGrammarSubtab('gnlt')">
-            📜 GNLT — Gramática Normativa (8 Capítulos)
-          </button>
-          <button class="subhub-chip ${grammarSubtab==='corpus'?'active':''}" onclick="setGrammarSubtab('corpus')">
-            📖 Haly'itror (Ainulindalë) & Corpus Litúrgico
-          </button>
+          <button class="subhub-chip ${grammarSubtab==='gnlt'?'active':''}" onclick="setGrammarSubtab('gnlt')">Gramática Normativa</button>
+          <button class="subhub-chip ${grammarSubtab==='corpus'?'active':''}" onclick="setGrammarSubtab('corpus')">Textos e Corpus</button>
         </div>
       `;
 
@@ -3753,7 +3534,7 @@
       }
     }
 
-    // --- ABA I: SUBSTANTIVOS (COM PAGINAÇÃO PROGRESSIVA, MODO RESUMIDO/DETALHADO E ÁUDIO/CÓPIA) ---
+    // --- ABA I: SUBSTANTIVOS ---
     function renderNounsTab(container) {
       const entries = Object.entries(DB.substantivos || {});
       const letters = ["ALL", ..."ABCDEFGHIKLMNOPRSTVXY".split("")];
@@ -3781,9 +3562,9 @@
 
       container.innerHTML = `
         <div class="filter-bar">
-          <div class="card-view-toggle" title="Modo de exibição dos cartões">
-            <button class="card-view-btn ${cardViewMode==='compact'?'active':''}" onclick="setCardViewMode('compact')">📱 Resumido</button>
-            <button class="card-view-btn ${cardViewMode==='full'?'active':''}" onclick="setCardViewMode('full')">📋 Detalhado</button>
+          <div class="card-view-toggle" title="Modo de exibição">
+            <button class="card-view-btn ${cardViewMode==='compact'?'active':''}" onclick="setCardViewMode('compact')">Resumido</button>
+            <button class="card-view-btn ${cardViewMode==='full'?'active':''}" onclick="setCardViewMode('full')">Detalhado</button>
           </div>
           <div class="alpha-bar">
             ${letters.map(l => `
@@ -3793,15 +3574,14 @@
             `).join("")}
           </div>
           <div style="display:flex;gap:0.4rem;align-items:center;">
-            <button class="btn ${selectedDeclFilter==='ALL'?'btn-gold':''}" data-action="select-decl" data-arg="ALL">Todas (${entries.length})</button>
-            <button class="btn ${selectedDeclFilter==='1'?'btn-gold':''}" data-action="select-decl" data-arg="1">1ª Decl. (-e/-a)</button>
-            <button class="btn ${selectedDeclFilter==='2'?'btn-gold':''}" data-action="select-decl" data-arg="2">2ª Decl. (Consonantal)</button>
+            <button class="btn ${selectedDeclFilter==='ALL'?'btn-gold':''}" data-action="select-decl" data-arg="ALL">Todas</button>
+            <button class="btn ${selectedDeclFilter==='1'?'btn-gold':''}" data-action="select-decl" data-arg="1">1ª Decl.</button>
+            <button class="btn ${selectedDeclFilter==='2'?'btn-gold':''}" data-action="select-decl" data-arg="2">2ª Decl.</button>
           </div>
         </div>
 
-        <div style="margin-bottom:0.75rem;font-size:0.84rem;color:var(--text-secondary);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
-          <span>Exibindo <strong>${visibleSlice.length}</strong> de <strong>${filtered.length}</strong> substantivos filtrados (cada verbete com 8 casos declinados + 10 derivações sufixais).</span>
-          <span style="font-size:0.78rem;color:var(--gold);">💡 Clique em 🔊 para ouvir a pronúncia ou em 📋 para copiar.</span>
+        <div style="margin-bottom:0.75rem;font-size:0.8rem;color:var(--text-muted);">
+          <span>Exibindo <strong>${visibleSlice.length}</strong> de <strong>${filtered.length}</strong></span>
         </div>
 
         <div class="cards-grid">
@@ -3819,9 +3599,9 @@
                     <span class="etym-text" style="margin-left:0.4rem;">${obj.etimologia}</span>
                   </div>
                   <div class="card-micro-actions">
-                    <button class="micro-btn" data-action="speak" data-arg="${attrLemma}" title="Ouvir pronúncia Tréppia">🔊</button>
-                    <button class="micro-btn" data-action="copy" data-arg="${attrLemma}" data-msg="Copiado: ${attrLemma}" title="Copiar lema">📋</button>
-                    <button class="micro-btn" data-action="open-noun" data-arg="${attrLemma}" title="Inspecionar paradigma completo">🔍</button>
+                    <button class="micro-btn" data-action="speak" data-arg="${attrLemma}" title="Ouvir pronúncia">${ICON_SPEAK}</button>
+                    <button class="micro-btn" data-action="copy" data-arg="${attrLemma}" data-msg="Copiado: ${attrLemma}" title="Copiar lema">${ICON_COPY}</button>
+                    <button class="micro-btn" data-action="open-noun" data-arg="${attrLemma}" title="Ver ficha completa">${ICON_SEARCH}</button>
                     <span class="pos-badge ${badgeClass}">${obj.declinacao}ª Decl.</span>
                   </div>
                 </div>
@@ -3834,7 +3614,7 @@
                     <div class="compact-case-item"><span>Nom. Pl</span><strong>${f["Nom.Pl"]}</strong></div>
                   </div>
                   <button class="btn-expand-forms" id="btn-toggle-${cardId}" onclick="toggleCardForms('${cardId}')">
-                    📋 Ver 18 Formas & Derivações
+                    ${ICON_CHEVRON_DOWN}<span>Ver formas e derivações</span>
                   </button>
                 ` : ""}
 
@@ -3880,7 +3660,7 @@
         ${remaining > 0 ? `
           <div class="load-more-container">
             <button class="btn-load-more" onclick="loadMoreNouns()">
-              ⬇ Carregar mais substantivos (+${Math.min(60, remaining)} de ${remaining} restantes)
+              Carregar mais (+${Math.min(60, remaining)})
             </button>
           </div>
         ` : ""}
@@ -3894,13 +3674,13 @@
       const attrLemma = escapeHtmlAttr(lemma);
       document.getElementById("modal-title").innerHTML = `
         <span>${lemma} — Substantivo (${obj.declinacao}ª Declinação)</span>
-        <button class="micro-btn" style="margin-left:0.6rem;" data-action="speak" data-arg="${attrLemma}">🔊 Ouvir</button>
-        <button class="micro-btn" data-action="copy" data-arg="${attrLemma}">📋 Copiar</button>
+        <button class="micro-btn" style="margin-left:0.6rem;" data-action="speak" data-arg="${attrLemma}">${ICON_SPEAK} Ouvir</button>
+        <button class="micro-btn" data-action="copy" data-arg="${attrLemma}">${ICON_COPY} Copiar</button>
       `;
       document.getElementById("modal-body").innerHTML = `
         <p style="font-size:1.05rem;margin-bottom:0.5rem;"><strong>Significado:</strong> ${obj.significado}</p>
         <p style="margin-bottom:1rem;"><span class="etym-text">Etimologia: ${obj.etimologia}</span></p>
-        <h4 style="color:var(--gold);margin-bottom:0.5rem;">1. Paradigma Casual Completo (Reforma Vocalizada + Haplologia V8.4)</h4>
+        <h4 style="color:var(--gold);margin-bottom:0.5rem;">Flexão Casual</h4>
         <table class="data-table" style="margin-bottom:1.25rem;">
           <thead><tr><th>Caso</th><th>Singular</th><th>Plural</th></tr></thead>
           <tbody>
@@ -3910,7 +3690,7 @@
             <tr><td><strong>Acusativo (Obj. Direto / ad, in)</strong></td><td style="font-family:var(--font-mono);">${f["Acu.Sg"]}</td><td style="font-family:var(--font-mono);">${f["Acu.Pl"]}</td></tr>
           </tbody>
         </table>
-        <h4 style="color:var(--gold);margin-bottom:0.5rem;">2. Matriz Derivacional Endógena (10 Sufixos Produtivos)</h4>
+        <h4 style="color:var(--gold);margin-bottom:0.5rem;">Derivações</h4>
         <div class="deriv-pills">
           <span class="deriv-pill">Adjetivo (-a): <strong>${f["Adj(-a)"]}</strong></span>
           <span class="deriv-pill">Advérbio Modal (-vë): <strong>${f["Adv(-vë)"]}</strong></span>
@@ -3976,10 +3756,10 @@
             ${currentAxisData ? `
               <div style="margin-bottom:1rem;">
                 <h2 style="font-family:var(--font-serif);color:var(--gold-bright);font-size:1.5rem;">
-                  Família Verbal Quadripartite da Raiz <code>${selectedVerbRoot}-</code>
+                  Raiz <code>${selectedVerbRoot}-</code>
                 </h2>
                 <p style="font-size:0.86rem;color:var(--text-secondary);">
-                  Clique em qualquer um dos <strong>4 Estados Ontológicos</strong> abaixo para inspecionar sua tabela completa de <strong>114 formas flexionadas e derivadas</strong>.
+                  Selecione um aspecto para consultar a conjugação completa.
                 </p>
               </div>
 
@@ -4019,11 +3799,10 @@
                 <div style="padding:0.9rem 1.1rem;border-bottom:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
                   <div>
                     <strong style="color:var(--gold-bright);font-size:1.05rem;">
-                      Conjugação Integral (114 Formas): ${currentAxisData.conjugation["Infinitivo(-ur)"]} (${currentAxisKey})
+                      Conjugação: ${currentAxisData.conjugation["Infinitivo(-ur)"]} (${currentAxisKey})
                     </strong>
                     <span style="color:var(--text-secondary);font-size:0.84rem;margin-left:0.5rem;">— ${currentAxisData.meaning}</span>
                   </div>
-                  <span class="etym-text">Equação: ${currentAxisData.stem}- + TEMPO + (-ke) + (-se) + (-m, -s, ∅, -n, -t)</span>
                 </div>
                 <table class="data-table">
                   <thead>
@@ -4157,7 +3936,7 @@
 
       container.innerHTML = `
         <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
-          5.1. Pronomes Pessoais (Com Lei do Pro-Drop Compulsório no Nominativo)
+          Pronomes Pessoais
         </h3>
         <div class="data-table-wrapper" style="margin-bottom:1.75rem;">
           <table class="data-table">
@@ -4185,7 +3964,7 @@
         </div>
 
         <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
-          5.2. Pronomes Demonstrativos Dêiticos (Declinados nos 8 Casos/Números)
+          Pronomes Demonstrativos
         </h3>
         <div class="data-table-wrapper">
           <table class="data-table">
@@ -4306,7 +4085,7 @@
               <tr>
                 <th>Forma Documentada</th>
                 <th>Estatuto Diacrônico / Sociolinguístico</th>
-                <th>Equivalente Canônico (Era Clássica V8.4)</th>
+                <th>Equivalente Canônico</th>
                 <th>Análise Filológica e Ocorrência nos Manuais</th>
               </tr>
             </thead>
@@ -4329,8 +4108,8 @@
     function renderCorpusTab(container) {
       const texts = DB.corpus_canonico || [];
       container.innerHTML = `
-        <div style="margin-bottom:1rem;background:var(--bg-secondary);padding:0.85rem 1.15rem;border-radius:10px;border:1px solid var(--border-gold);">
-          <strong>💡 Leitor Filológico Interativo:</strong> Clique em <strong>qualquer palavra em Tréppio</strong> nas orações canônicas ou nos movimentos do <em>Haly'itror (Ainulindalë)</em> abaixo para acionar automaticamente o reconhecimento morfológico no dicionário!
+        <div style="margin-bottom:1rem;font-size:0.86rem;color:var(--text-secondary);">
+          Clique em qualquer palavra em tréppio para abrir sua ficha.
         </div>
         <div style="display:flex;flex-direction:column;gap:1.1rem;">
           ${texts.map(t => {
@@ -4344,7 +4123,7 @@
                 <div class="card-header">
                   <span class="lemma-title" style="font-size:1.15rem;">${t.titulo}</span>
                   <div class="card-micro-actions">
-                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(t.treppio)}" title="Ouvir passagem">🔊</button>
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(t.treppio)}" title="Ouvir passagem">${ICON_SPEAK}</button>
                     <span class="pos-badge badge-adv">${t.categoria}</span>
                   </div>
                 </div>
@@ -4370,17 +4149,17 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // --- ABA X: SIMULADOR MORFOFONOLÓGICO AO VIVO (26 LEIS DE SÂNDI + HAPLOLOGIA SILÁBICA V8.4) ---
+    // --- ABA X: SIMULADOR MORFOFONOLÓGICO AO VIVO ---
     function renderLabTab(container) {
       container.innerHTML = `
         <div class="lab-grid">
           <div class="entry-card">
             <div class="card-header">
-              <span class="lemma-title">1. Simulador de Sandi Consonantal e Haplologia V8.4</span>
-              <span class="pos-badge badge-adv">26 Leis + Haplologia</span>
+              <span class="lemma-title">Simulador de Sândi e Haplologia</span>
+              <span class="pos-badge badge-adv">Fonotática</span>
             </div>
             <p style="font-size:0.86rem;color:var(--text-secondary);">
-              Teste o encontro de quaisquer dois morfemas e a Haplologia Silábica Estrita (<code>S_i[0] == S_{i+1}[0]</code> — ex.: <code>vevar</code>, <code>haly + litror</code>, <code>kor + nir</code>, <code>tok + te</code>, <code>tep + gar</code>, <code>od + adur</code>, <code>gald + ba</code>).
+              Combine dois morfemas para visualizar a assimilação consonantal e o apóstrofo de haplologia (ex.: <code>vevar</code>, <code>haly + litror</code>, <code>kor + nir</code>, <code>tok + te</code>, <code>tep + gar</code>).
             </p>
             <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.5rem;align-items:center;margin-top:0.5rem;">
               <input class="input-field" id="sandhi-left" value="haly" oninput="runSandhiLab()" placeholder="Morfema 1 (ex: haly, kor)" />
@@ -4392,11 +4171,11 @@
 
           <div class="entry-card">
             <div class="card-header">
-              <span class="lemma-title">2. Gerador Instantâneo de Verbo nos 4 Eixos</span>
-              <span class="pos-badge badge-verb">Matriz Quadripartite</span>
+              <span class="lemma-title">Gerador Verbal</span>
+              <span class="pos-badge badge-verb">4 Aspectos</span>
             </div>
             <p style="font-size:0.86rem;color:var(--text-secondary);">
-              Digite qualquer raiz verbal para gerar em tempo real os 4 eixos ontológicos e suas mutações de Passado (<code>-ra</code>), Futuro (<code>-ru</code>) e Imperfeito (<code>-ba</code>) já com haplologia.
+              Digite uma raiz verbal para gerar os 4 aspectos em Presente, Passado (<code>-ra</code>), Futuro (<code>-ru</code>) e Imperfeito (<code>-ba</code>).
             </p>
             <input class="input-field" id="lab-verb-root" value="dur" oninput="runVerbLab()" placeholder="Raiz verbal (ex: dur, dak, doot, sfar, kit, galdex)" style="margin-top:0.5rem;" />
             <div id="verb-lab-result" style="margin-top:0.75rem;"></div>
@@ -4486,11 +4265,11 @@
           <div>
             <div style="font-size:0.78rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;">Transcrição Fonética Contínua (IPA)</div>
             <div style="font-family:var(--font-mono);font-size:1.25rem;color:var(--gold-bright);font-weight:700;margin-top:0.2rem;">[${fullIpa}]</div>
-            ${normalized !== text ? `<div style="font-size:0.84rem;color:var(--emerald);margin-top:0.25rem;">Forma com Haplologia Estrita V8.4: <strong>${normalized}</strong></div>` : ""}
+            ${normalized !== text ? `<div style="font-size:0.84rem;color:var(--emerald);margin-top:0.25rem;">Forma com apóstrofo: <strong>${normalized}</strong></div>` : ""}
           </div>
           <div class="card-micro-actions">
-            <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normalized)}">🔊 Ouvir Pronúncia</button>
-            <button class="btn" data-action="copy" data-arg="[${escapeHtmlAttr(fullIpa)}]" data-msg="IPA copiado!">📋 Copiar IPA</button>
+            <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normalized)}">${ICON_SPEAK} Ouvir Pronúncia</button>
+            <button class="btn" data-action="copy" data-arg="[${escapeHtmlAttr(fullIpa)}]" data-msg="IPA copiado!">${ICON_COPY} Copiar IPA</button>
           </div>
         </div>
         <div class="cards-grid">
@@ -4502,8 +4281,8 @@
                   ${raw !== hap ? `<span class="pos-badge badge-noun1" style="margin-left:0.4rem;">antes: ${raw}</span>` : ""}
                 </div>
                 <div class="card-micro-actions">
-                  <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(hap)}" title="Ouvir palavra">🔊</button>
-                  <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(meta.ipa)}" title="Copiar IPA">📋</button>
+                  <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(hap)}" title="Ouvir palavra">${ICON_SPEAK}</button>
+                  <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(meta.ipa)}" title="Copiar IPA">${ICON_COPY}</button>
                 </div>
               </div>
               <div style="font-family:var(--font-mono);font-size:1.05rem;color:var(--emerald);font-weight:700;">${meta.ipa}</div>
@@ -4530,14 +4309,14 @@
       const ipaRows = [
         ["G / g", "/ɡ/", "Sempre velar oclusiva sonora como em «guitarra» / «gato», nunca /ʒ/.", "giza (/ˈɡi.za/), teggar, Hal'gáltte"],
         ["S / s", "/s/", "Sempre fricativa surda como em «sapato» / «sol», nunca /z/ intervocálico.", "esur (/eˈsuɾ/), rase (/ˈra.se/), oxes"],
-        ["' (Apóstrofo)", "[ʔ]", "Haplologia Silábica Estrita (S_i[0] == S_{i+1}[0]): cai a consoante inicial repetida da 2ª sílaba.", "ve'ar, ve'aril, Tepy'atte, doote'i"],
+        ["' (Apóstrofo)", "[ʔ]", "Haplologia silábica: quando duas sílabas seguidas começam pela mesma consoante, cai a consoante da 2ª sílaba.", "ve'ar, ve'aril, Tepy'atte, doote'i"],
         ["X / x", "/x/", "Fricativa velar surda aspirada (como «j» espanhol forte).", "xer (/ˈxɛɾ/), oxe (/ˈɔ.xe/)"],
         ["R / r vs. rr", "/ɾ/ • /r/", "Vibrante simples alveolar (r) ou vibrante múltipla geminada (rr).", "kor (/ˈkɔɾ/), durru (/duˈru/)"],
         ["J / j", "/j/", "Semivogal palatal descendente (dativos -ej, -ij, -aj).", "oxej (/ˈɔ.xɛj/), Pattej (/ˈpat.tɛj/)"],
         ["Y / y", "/i/", "Vogal alta anterior fechada (nunca semivogal inglesa).", "Treppênia, Haly'itror, myga"],
         ["Ë / ë", "/ə/", "Diérese modal: marca vogal final neutra articulada separadamente.", "mobavë (/mɔˈba.və/), tonkravë"],
         ["Á É Í Ó Ú Ý", "Tônica", "Acento agudo indica vogal tônica fora da penúltima ou distinção de Vé.", "Vé (/ˈve/), Trátte (/ˈtrat.te/), avur'é"],
-        ["Geminadas (tt, dd, ll, mm, nn, bb, gg)", "tː dː lː mː...", "Consoantes duplas geradas pelas 26 Leis de Sândi articulam-se alongadas.", "teggar, vellir, durba/durbba, sfammir"]
+        ["Geminadas (tt, dd, ll, mm, nn, bb, gg)", "tː dː lː mː...", "Consoantes duplas de sândi articulam-se alongadas.", "teggar, vellir, durba/durbba, sfammir"]
       ];
 
       container.innerHTML = `
@@ -4545,31 +4324,31 @@
           <div class="ipa-rule-card">
             <div class="ipa-key-badge">G / g → /ɡ/ (Guitarra)</div>
             <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
-              Em Tréppio, a letra <strong>G</strong> tem <strong>SEMPRE som duro velar /ɡ/</strong> (como em <em>guitarra</em> ou <em>guerra</em>) diante de <strong>todas</strong> as vogais — inclusive <code>ge</code>, <code>gi</code>, <code>gy</code>, <code>gë</code>. Jamais se pronuncia como /ʒ/.
+              Em Tréppio, a letra <strong>G</strong> tem <strong>sempre som duro /ɡ/</strong> (como em <em>guitarra</em>) diante de todas as vogais — inclusive <code>ge</code>, <code>gi</code>, <code>gy</code>, <code>gë</code>. Jamais soa como /ʒ/.
             </p>
             <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
-              <button class="quick-chip" data-action="ipa-example" data-arg="giza">🔊 giza (/ˈɡi.za/)</button>
-              <button class="quick-chip" data-action="ipa-example" data-arg="gelur">🔊 gelur (/ˈɡe.luɾ/)</button>
-              <button class="quick-chip" data-action="ipa-example" data-arg="teggar">🔊 teggar (/ˈtɛɡːaɾ/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="giza">giza (/ˈɡi.za/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="gelur">gelur (/ˈɡe.luɾ/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="teggar">teggar (/ˈtɛɡːaɾ/)</button>
             </div>
           </div>
 
           <div class="ipa-rule-card">
             <div class="ipa-key-badge">S / s → /s/ (Sapato)</div>
             <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
-              A letra <strong>S</strong> tem <strong>SEMPRE som sibilante surdo /s/</strong> (como em <em>sapato</em> ou <em>massa</em>), mesmo entre vogais ou em início/fim de sílaba. Jamais sonoriza para /z/.
+              A letra <strong>S</strong> tem <strong>sempre som surdo /s/</strong> (como em <em>sapato</em>), mesmo entre vogais ou em fim de sílaba. Jamais sonoriza para /z/.
             </p>
             <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
-              <button class="quick-chip" data-action="ipa-example" data-arg="esur">🔊 esur (/eˈsuɾ/)</button>
-              <button class="quick-chip" data-action="ipa-example" data-arg="rase">🔊 rase (/ˈra.se/)</button>
-              <button class="quick-chip" data-action="ipa-example" data-arg="Metuses">🔊 Metuses (/meˈtu.ses/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="esur">esur (/eˈsuɾ/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="rase">rase (/ˈra.se/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="Metuses">Metuses (/meˈtu.ses/)</button>
             </div>
           </div>
 
           <div class="ipa-rule-card">
             <div class="ipa-key-badge">' → [ʔ] (Haplologia Silábica)</div>
             <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
-              Quando o ataque consonantal de uma sílaba repete a primeira consoante da sílaba imediatamente anterior (<code>S_i[0] == S_{i+1}[0]</code>), a consoante repetida cai dando lugar ao apóstrofo <code>'</code> (máximo 1 por palavra; geminadas de Sândi intactas).
+              Quando duas sílabas seguidas começam pela mesma consoante, a consoante da segunda sílaba cai dando lugar ao apóstrofo <code>'</code> (máximo 1 por palavra; geminadas permanecem intactas).
             </p>
             <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
               <button class="quick-chip" data-action="ipa-example" data-arg="vevar ve'ar">vevar → ve'ar</button>
@@ -4581,8 +4360,7 @@
 
         <div class="entry-card" style="margin-bottom:1.15rem;">
           <div class="card-header">
-            <span class="lemma-title">🎙️ Analisador Silábico, IPA & Síntese Vocal Tréppia</span>
-            <span class="pos-badge badge-adv">V8.4 Ao Vivo</span>
+            <span class="lemma-title">Analisador Fonético e Síntese Vocal</span>
           </div>
           <input
             type="text"
@@ -4815,10 +4593,10 @@
         outEl.innerHTML = `
           <div class="entry-card" style="margin-bottom:1rem;border-color:var(--border-gold);">
             <div class="card-header">
-              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">👑 Equivalente em Tréppio</span>
+              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">Equivalente em Tréppio</span>
               <div class="card-micro-actions">
-                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(composedTreppio)}">🔊 Ouvir Tréppio</button>
-                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(composedTreppio)}" data-msg="Tradução copiada!">📋 Copiar</button>
+                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(composedTreppio)}">${ICON_SPEAK} Ouvir</button>
+                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(composedTreppio)}" data-msg="Tradução copiada!">${ICON_COPY} Copiar</button>
               </div>
             </div>
             <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold-bright);margin:0.35rem 0;">${composedTreppio || "—"}</div>
@@ -4834,7 +4612,7 @@
           </div>
 
           <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
-            Verbetes Correspondentes em Tréppio (${globalCands.length})
+            Verbetes Correspondentes (${globalCands.length})
           </h3>
           <div class="cards-grid">
             ${globalCands.length ? globalCands.map(({ item }) => `
@@ -4845,9 +4623,9 @@
                     <span class="pos-badge badge-noun1" style="margin-left:0.4rem;">${item.pos}</span>
                   </div>
                   <div class="card-micro-actions">
-                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(item.treppio)}" title="Ouvir">🔊</button>
-                    <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(item.treppio)}" title="Copiar">📋</button>
-                    ${item.actionType !== "grammar" ? `<button class="micro-btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(item.actionType)}" data-arg2="${escapeHtmlAttr(item.actionKey)}" title="Abrir paradigma">🔍</button>` : ""}
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(item.treppio)}" title="Ouvir">${ICON_SPEAK}</button>
+                    <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(item.treppio)}" title="Copiar">${ICON_COPY}</button>
+                    ${item.actionType !== "grammar" ? `<button class="micro-btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(item.actionType)}" data-arg2="${escapeHtmlAttr(item.actionKey)}" title="Abrir ficha">${ICON_SEARCH}</button>` : ""}
                   </div>
                 </div>
                 <div class="gloss-text">${item.ptRaw}</div>
@@ -4857,7 +4635,7 @@
           </div>
         `;
       } else {
-        // TR -> PT: usa reverseIndex completo (todas as 7 classes + 246.737 formas) + Corpus Canônico
+        // TR -> PT: usa reverseIndex completo + Corpus
         const normQ = applyHaplologyTextJS(qRaw).trim();
         const corpusExact = (DB.corpus_canonico || []).filter(c => (c.treppio || "").toLowerCase().includes(normQ.toLowerCase()));
         const tokens = qRaw.split(/\s+/).filter(Boolean);
@@ -4881,15 +4659,15 @@
         outEl.innerHTML = `
           <div class="entry-card" style="margin-bottom:1rem;border-color:var(--border-gold);">
             <div class="card-header">
-              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">🇧🇷 Glosa Morfológica em Português</span>
+              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">Glosa em Português</span>
               <div class="card-micro-actions">
-                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normQ)}">🔊 Ouvir Tréppio</button>
-                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(glossSummary)}" data-msg="Glosa copiada!">📋 Copiar</button>
+                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normQ)}">${ICON_SPEAK} Ouvir</button>
+                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(glossSummary)}" data-msg="Glosa copiada!">${ICON_COPY} Copiar</button>
               </div>
             </div>
             ${corpusExact.length ? `
               <div style="background:rgba(16,185,129,0.08);border:1px solid var(--emerald);border-radius:10px;padding:0.75rem 0.9rem;margin-bottom:0.65rem;">
-                <div style="font-size:0.78rem;color:var(--emerald);font-weight:700;">📜 Passagem Oficial no Corpus Canônico (${escapeHtml(corpusExact[0].titulo)}):</div>
+                <div style="font-size:0.78rem;color:var(--emerald);font-weight:700;">Correspondência no Corpus (${escapeHtml(corpusExact[0].titulo)}):</div>
                 <div style="font-size:1.05rem;margin-top:0.2rem;">${escapeHtml(corpusExact[0].portugues)}</div>
               </div>
             ` : ""}
@@ -4897,7 +4675,7 @@
           </div>
 
           <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
-            Análise Interlinear Palavra-a-Palavra (Todas as 7 Classes + IPA)
+            Análise Palavra a Palavra
           </h3>
           <div class="cards-grid">
             ${analysisList.map(a => `
@@ -4908,7 +4686,7 @@
                     ${a.ipa ? `<span style="font-family:var(--font-mono);color:var(--emerald);font-size:0.85rem;margin-left:0.45rem;">${escapeHtml(a.ipa.ipa)}</span>` : ""}
                   </div>
                   <div class="card-micro-actions">
-                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(a.hap || a.raw)}">🔊</button>
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(a.hap || a.raw)}" title="Ouvir">${ICON_SPEAK}</button>
                   </div>
                 </div>
                 ${a.matches.length ? a.matches.slice(0, 3).map(m => `
@@ -4920,7 +4698,7 @@
                     <div style="font-size:0.86rem;margin-top:0.25rem;"><strong>Lema:</strong> <code>${escapeHtml(m.lemma)}</code> • <strong>Função:</strong> ${escapeHtml(m.tag)}</div>
                     <div class="gloss-text" style="margin-top:0.15rem;">${escapeHtml(m.meaning)}</div>
                   </div>
-                `).join("") : `<div style="color:var(--text-secondary);font-size:0.88rem;">Vocábulo não localizado diretamente nas 246.737 formas indexadas.</div>`}
+                `).join("") : `<div style="color:var(--text-secondary);font-size:0.88rem;">Vocábulo não localizado no índice.</div>`}
               </article>
             `).join("")}
           </div>
@@ -4938,15 +4716,15 @@
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
             <div>
               <h2 style="font-family:var(--font-serif);color:var(--gold-bright);font-size:1.5rem;">
-                🔄 Tradutor Bilíngue Tréppio ↔ Português
+                Tradutor Bilíngue
               </h2>
               <p style="font-size:0.88rem;color:var(--text-secondary);">
-                Indexa todas as 7 classes gramaticais (Substantivos, Verbos Quadripartites, Adjetivos, Advérbios, Pronomes, Numerais, Partículas) + Corpus Canônico e Variantes Diacrônicas.
+                Traduza palavras ou frases entre português e tréppio.
               </p>
             </div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
-              <button class="btn ${translatorDirection === 'pt-tr' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('pt-tr')">🇧🇷 Português → Tréppio</button>
-              <button class="btn ${translatorDirection === 'tr-pt' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('tr-pt')">👑 Tréppio → Português</button>
+              <button class="btn ${translatorDirection === 'pt-tr' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('pt-tr')">Português → Tréppio</button>
+              <button class="btn ${translatorDirection === 'tr-pt' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('tr-pt')">Tréppio → Português</button>
             </div>
           </div>
 
@@ -5025,16 +4803,16 @@
       container.innerHTML = `
         <div class="gnlt-container">
           <div class="gnlt-top-card">
-            <h2 class="gnlt-title">📜 Gramática Normativa da Língua Tréppia (GNLT)</h2>
-            <p class="gnlt-subtitle">Cânone Filológico e Normativo Oficial do Trepiano Clássico | Chancelaria Imperial do Tréppio</p>
+            <h2 class="gnlt-title">Gramática Normativa</h2>
+            <p class="gnlt-subtitle">Regras fonéticas, declinações, conjugação e sintaxe do tréppio</p>
             
             <div class="gnlt-controls-bar">
               <div class="gnlt-edition-selector">
                 <button class="gnlt-edition-btn ${gnltEdition === 'v81' ? 'active' : ''}" onclick="setGnltEdition('v81')">
-                  ✨ Edição Unificada V8.1 (Canônica)
+                  Edição Canônica
                 </button>
                 <button class="gnlt-edition-btn ${gnltEdition === 'base' ? 'active' : ''}" onclick="setGnltEdition('base')">
-                  🏛️ Documento Base Original
+                  Texto Original
                 </button>
               </div>
 
@@ -5055,7 +4833,7 @@
             </div>
           </div>
 
-          ${gnltQuery ? `<div style="font-size:0.9rem;color:var(--gold);margin-top:-0.5rem;">Filtrando GNLT por: "<strong>${gnltQuery}</strong>" (${filtered.length} capítulos encontrados)</div>` : ''}
+          ${gnltQuery ? `<div style="font-size:0.9rem;color:var(--gold);margin-top:-0.5rem;">Filtrando gramática por: "<strong>${gnltQuery}</strong>" (${filtered.length} capítulos encontrados)</div>` : ''}
 
           <div style="display:flex;flex-direction:column;gap:1.5rem;">
             ${filtered.map(c => {
@@ -5068,8 +4846,8 @@
                       <span>Capítulo ${c.num}.</span> ${c.title}
                     </h3>
                     <div style="display:flex;align-items:center;gap:0.75rem;">
-                      <span class="gnlt-badge">${gnltEdition === 'v81' ? 'V8.1 Unificada' : 'Base Canônica'}</span>
-                      <span style="color:var(--text-muted);font-size:0.85rem;">Alternar ▾</span>
+                      <span class="gnlt-badge">${gnltEdition === 'v81' ? 'Canônica' : 'Original'}</span>
+                      <span style="color:var(--text-muted);font-size:0.85rem;">Alternar</span>
                     </div>
                   </div>
                   <div class="gnlt-card-body" id="${cardId}">
@@ -5143,12 +4921,12 @@
 
     function renderDialoguesTab(container) {
       container.innerHTML = `
-        <div style="margin-bottom:1.25rem;background:var(--bg-secondary);padding:1.15rem 1.5rem;border-radius:12px;border:1px solid var(--border-gold);box-shadow:var(--shadow);">
-          <h2 style="font-family:var(--font-serif);color:var(--gold-bright);font-size:1.6rem;margin-bottom:0.4rem;">
-            💬 Diálogos Práticos e Conversação Cotidiana (Ecos de Uma Vida Perdida)
+        <div style="margin-bottom:1.15rem;">
+          <h2 style="font-family:var(--font-serif);color:var(--gold-bright);font-size:1.5rem;margin-bottom:0.25rem;">
+            Diálogos Cotidianos
           </h2>
-          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;">
-            Cânone de conversação prática da <strong>Era Clássica V8.4</strong>: sintaxe V2, dativo vocalizado e rigor morfofonológico (26 Leis de Sândi + Haplologia Silábica). Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar suas raízes, casos e IPA nas 246.737 formas!
+          <p style="color:var(--text-secondary);font-size:0.88rem;">
+            Clique em qualquer palavra em tréppio para consultar sua análise.
           </p>
         </div>
 
@@ -5157,10 +4935,9 @@
             <div class="gnlt-chapter-card">
               <div class="gnlt-card-header">
                 <div>
-                  <h3 style="font-size:1.2rem;color:var(--gold-bright);">${d.titulo}</h3>
+                  <h3 style="font-size:1.15rem;color:var(--gold-bright);">${d.titulo}</h3>
                   <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.2rem;">${d.subtitulo}</div>
                 </div>
-                <span class="gnlt-badge">Tréppio Clássico V8.4</span>
               </div>
               <div class="gnlt-card-body" style="display:flex;flex-direction:column;gap:1rem;">
                 ${d.falas.map(f => {
@@ -5172,10 +4949,10 @@
                   return `
                     <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:0.9rem 1.15rem;">
                       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;gap:0.5rem;flex-wrap:wrap;">
-                        <span style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;">👤 ${f.autor}</span>
+                        <span style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;">${f.autor}</span>
                         <div class="card-micro-actions">
-                          <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(f.treppio)}" title="Ouvir frase completa em Tréppio">🔊 Ouvir Fala</button>
-                          <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(f.treppio)}" data-msg="Fala copiada!" title="Copiar frase em Tréppio">📋 Copiar</button>
+                          <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(f.treppio)}" title="Ouvir frase">${ICON_SPEAK} Ouvir</button>
+                          <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(f.treppio)}" data-msg="Fala copiada!" title="Copiar frase">${ICON_COPY} Copiar</button>
                         </div>
                       </div>
                       <div style="font-family:var(--font-serif);font-size:1.15rem;color:var(--gold-bright);line-height:1.6;">
@@ -5199,7 +4976,13 @@
       const html = document.documentElement;
       const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
       html.setAttribute("data-theme", next);
-      document.getElementById("btn-theme").textContent = next === "dark" ? "☀ Modo Pergaminho" : "🌙 Modo Obsidiana";
+      const btn = document.getElementById("btn-theme");
+      if (btn) {
+        btn.innerHTML = next === "dark" ? ICON_SUN : ICON_MOON;
+        const label = next === "dark" ? "Alternar para modo claro" : "Alternar para modo escuro";
+        btn.title = label;
+        btn.setAttribute("aria-label", label);
+      }
     }
 
     function closeModal() {
@@ -5281,7 +5064,7 @@
     window.addEventListener("DOMContentLoaded", initApp);
 
     if (!window.AndroidCondeBridge && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      navigator.serviceWorker.register('sw.js?v=9.0.0', { updateViaCache: 'none' })
+      navigator.serviceWorker.register('sw.js?v=10.0.0', { updateViaCache: 'none' })
         .then(function(reg) {
           reg.update();
           reg.addEventListener('updatefound', function() {
@@ -5289,7 +5072,7 @@
             if (newWorker) {
               newWorker.addEventListener('statechange', function() {
                 if (newWorker.state === 'activated') {
-                  console.log('[SW] Novo Service Worker V9.0 ativado.');
+                  console.log('[SW] Service Worker ativo.');
                 }
               });
             }
@@ -5344,7 +5127,7 @@
 
     function speakTreppio(text) {
       if (!text) return;
-      showToast(`🔊 Pronunciando (G=/ɡ/, S=/s/): ${text}`);
+      showToast(`Pronunciando: ${text}`);
       // 1º: Ponte Nativa Android WebView (TextToSpeech nativo do sistema Android)
       if (window.AndroidCondeBridge && typeof window.AndroidCondeBridge.speak === "function") {
         try {
@@ -5403,34 +5186,34 @@
     }
   </script>
 
-  <!-- BARRA DE NAVEGAÇÃO INFERIOR PARA DISPOSITIVOS MÓVEIS (ANDROID APK / PWA) -->
+  <!-- BARRA DE NAVEGAÇÃO INFERIOR PARA DISPOSITIVOS MÓVEIS -->
   <nav class="mobile-bottom-nav">
     <button class="mobile-nav-btn active" data-mobile-hub="dict" onclick="switchHub('dict')">
-      <span class="mobile-nav-icon">🔍</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg></span>
       <span class="mobile-nav-label">Dicionário</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="verbs" onclick="switchHub('verbs')">
-      <span class="mobile-nav-icon">⚔️</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
       <span class="mobile-nav-label">Verbos</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="phonetics" onclick="switchHub('phonetics')">
-      <span class="mobile-nav-icon">🎙️</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></span>
       <span class="mobile-nav-label">Pronúncia</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="translator" onclick="switchHub('translator')">
-      <span class="mobile-nav-icon">🔄</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span>
       <span class="mobile-nav-label">Tradutor</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="dialogues" onclick="switchHub('dialogues')">
-      <span class="mobile-nav-icon">💬</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
       <span class="mobile-nav-label">Diálogos</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="grammar" onclick="switchHub('grammar')">
-      <span class="mobile-nav-icon">📜</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg></span>
       <span class="mobile-nav-label">Gramática</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="lab" onclick="switchHub('lab')">
-      <span class="mobile-nav-icon">⚗️</span>
+      <span class="mobile-nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg></span>
       <span class="mobile-nav-label">Sandi</span>
     </button>
   </nav>

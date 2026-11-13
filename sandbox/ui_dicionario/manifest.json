@@ -1,7 +1,7 @@
 {
-  "name": "Códice Lexicográfico Imperial da Língua Tréppia (V9.0)",
+  "name": "Códice Tréppio",
   "short_name": "Códice Tréppio",
-  "description": "Dicionário Geral da Língua Tréppia (246.737 formas), Brasão Vetorizado, Alfabeto Fonético IPA (G=/ɡ/, S=/s/) e Tradutor Bilíngue TR ↔ PT.",
+  "description": "Dicionário, gramática, pronúncia IPA e tradutor bilíngue da língua tréppia.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#09090b",
