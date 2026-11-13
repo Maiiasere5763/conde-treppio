@@ -1,41 +1,140 @@
 # -*- coding: utf-8 -*-
 """
 lexico_expansao_v8_1.py
-Módulo de Expansão Lexical Endógena da Língua Tréppia (Era Clássica V8.3 — O Conde).
-100% construído sobre as raízes primárias canônicas do Tréppio e as 21 Leis de Sandi Consonantal.
-Diretrizes Fonotáticas V8.3:
+Módulo de Expansão Lexical Endógena da Língua Tréppia (Era Clássica V8.4 — O Conde).
+100% construído sobre as raízes primárias canônicas do Tréppio, 26 Leis de Sandi Consonantal,
+Lei da Haplologia Silábica Estrita (S_i[0] == S_{i+1}[0]) e Fonologia (G=/ɡ/, S=/s/).
+Diretrizes Fonotáticas V8.4:
 1) PROIBIÇÃO ABSOLUTA DE CLUSTERS CONSONANTAIS INICIAIS (#CC...): Todas as palavras iniciam em CV... ou V...
 2) LIMITE MÁXIMO DE SIMILARIDADE ROMÂNICA/GRECO-LATINA ELEVADO PARA <= 70%.
+3) HAPLOLOGIA SILÁBICA: Quando duas sílabas consecutivas iniciam pela mesma consoante (não geminada),
+   a consoante inicial da sílaba subsequente cai dando lugar ao apóstrofo (').
 """
 
-def _join_sandi(left: str, right: str) -> str:
-    if not left: return right
-    if not right: return left
-    if left[-1] in 'ae' and right[0] in 'aeiouy': left_stem = left[:-1]
-    else: left_stem = left
-    if not left_stem: return right
-    if left_stem.endswith('r') and right.startswith('n'): return left_stem[:-1] + 'ld' + right[1:]
-    if left_stem.endswith('l') and right.startswith('n'): return left_stem[:-1] + 'll' + right[1:]
-    if left_stem.endswith('n') and right.startswith('l'): return left_stem[:-1] + 'll' + right[1:]
-    if left_stem.endswith('mn') and right.startswith('n'): return left_stem[:-2] + 'm' + right[1:]
-    if left_stem.endswith('n') and right.startswith('n'): return left_stem[:-1] + 'm' + right[1:]
-    if left_stem.endswith('n') and right.startswith('r'): return left_stem[:-1] + 'nn' + right[1:]
-    if left_stem.endswith('t') and right.startswith('d'): return left_stem[:-1] + 'dd' + right[1:]
-    if (left_stem.endswith('d') or left_stem.endswith('k')) and right.startswith('t'): return left_stem[:-1] + 'tt' + right[1:]
-    if left_stem.endswith('s') and right.startswith('r'): return left_stem[:-1] + 'ss' + right[1:]
-    if left_stem.endswith('d') and right.startswith('s'): return left_stem[:-1] + 'ss' + right[1:]
-    if left_stem.endswith('z') and right.startswith('r'): return left_stem[:-1] + 'zz' + right[1:]
-    if (left_stem.endswith('m') and right.startswith('r')) or (left_stem.endswith('r') and right.startswith('m')): return left_stem[:-1] + 'mm' + right[1:]
-    if left_stem.endswith('ld') and right.startswith('b'): return left_stem[:-2] + 'lbb' + right[1:]
-    if (left_stem.endswith('k') or left_stem.endswith('t') or left_stem.endswith('f')) and right.startswith('b'): return left_stem[:-1] + 'bb' + right[1:]
-    if left_stem.endswith('n') and right.startswith('b'): return left_stem[:-1] + 'mb' + right[1:]
-    if left_stem.endswith('p') and right.startswith('g'): return left_stem[:-1] + 'gg' + right[1:]
-    if left_stem.endswith('t') and right.startswith('k'): return left_stem[:-1] + 'kk' + right[1:]
-    if left_stem.endswith('x') and right.startswith('r'): return left_stem[:-1] + 'rr' + right[1:]
-    if left_stem.endswith('v') and right.startswith('t'): return left_stem[:-1] + 'pt' + right[1:]
-    if left_stem.endswith('k') and right.startswith('l'): return left_stem[:-1] + 'll' + right[1:]
-    if left_stem.endswith('b') and right.startswith('p'): return left_stem[:-1] + 'bb' + right[1:]
-    return left_stem + right
+_HAPLO_VOWELS = set("aeiouyáéíóúýäëïöü")
+_HAPLO_ONSETS = {
+    "bl", "br", "dr", "fl", "fr", "gl", "gr", "kl", "kr", "pl", "pr", "sf", "tr"
+}
+_HAPLO_EXEMPT = {
+    "Jesus", "Maria", "Giovanni", "Sprezzatura", "Christus", "Kristus", "Pontius", "Pilatus", "Eä", "Ilúvatar", "Ainur", "Valar"
+}
+
+
+def _syllabify_treppio(part: str) -> list[str]:
+    """Segmenta uma palavra (ou subpalavra sem apóstrofo) em sílabas fonotáticas Tréppio."""
+    n = len(part)
+    if not n:
+        return []
+    runs = []
+    idx = 0
+    while idx < n:
+        if part[idx].lower() in _HAPLO_VOWELS:
+            s = idx
+            while idx < n and part[idx].lower() in _HAPLO_VOWELS:
+                idx += 1
+            runs.append((s, idx))
+        else:
+            idx += 1
+    if not runs:
+        return [part]
+    bounds = [0]
+    for r_i in range(len(runs) - 1):
+        c_start = runs[r_i][1]
+        c_end = runs[r_i + 1][0]
+        clust = part[c_start:c_end].lower()
+        if len(clust) <= 1:
+            bounds.append(c_start)
+        elif len(clust) == 2:
+            if clust[0] != clust[1] and clust in _HAPLO_ONSETS:
+                bounds.append(c_start)
+            else:
+                bounds.append(c_start + 1)
+        else:
+            if clust[-2:] in _HAPLO_ONSETS and clust[-2] != clust[-1]:
+                bounds.append(c_end - 2)
+            else:
+                bounds.append(c_end - 1)
+    bounds.append(n)
+    return [part[bounds[i]:bounds[i + 1]] for i in range(len(bounds) - 1)]
+
+
+def _apply_haplology(word: str) -> str:
+    """Aplica a Lei da Haplologia Silábica: S_i[0] == S_{i+1}[0] -> extirpa S_{i+1}[0] com '."""
+    if not word or " " in word or len(word) < 4 or word in _HAPLO_EXEMPT or "'" in word:
+        return word
+    punct = ""
+    w = word
+    if w[-1] in "!?.,;:":
+        punct = w[-1]
+        w = w[:-1]
+    if len(w) < 4 or "'" in w:
+        return word
+    syls = _syllabify_treppio(w)
+    if len(syls) < 2:
+        return word
+    out = [syls[0]]
+    changed = False
+    for i in range(1, len(syls)):
+        prev_s = out[-1]
+        curr_s = syls[i]
+        c1 = prev_s[0].lower()
+        c2 = curr_s[0].lower()
+        is_c1_cons = c1 not in _HAPLO_VOWELS and c1.isalpha()
+        is_c2_cons = c2 not in _HAPLO_VOWELS and c2.isalpha()
+        is_gem = prev_s[-1].lower() == c2
+        if not changed and is_c1_cons and is_c2_cons and c1 == c2 and not is_gem:
+            rem = curr_s[1:]
+            if rem and (rem[0].lower() in _HAPLO_VOWELS or (curr_s[:2].lower() in _HAPLO_ONSETS and c2 == "d" and prev_s.lower().endswith("da"))):
+                out.append("'" + rem)
+                changed = True
+                continue
+        out.append(curr_s)
+    return "".join(out) + punct
+
+
+def _join_sandi(left: str, right: str, apply_haplo: bool = True) -> str:
+    if not left:
+        return right
+    if not right:
+        return left
+    if left == "Vé" and right not in ("y", "i", "om", "o", "ye", "oi", "os"):
+        left_clean = "ve"
+    else:
+        left_clean = left
+    if left_clean == "od" and right.startswith("ad"):
+        res = "oda'" + right[2:]
+        return _apply_haplology(res) if apply_haplo else res
+    if left_clean[-1] in "ae" and right[0] in "aeiouy":
+        left_stem = left_clean[:-1]
+    else:
+        left_stem = left_clean
+    if not left_stem:
+        return right
+    if left_stem.endswith("r") and right.startswith("n"): res = left_stem[:-1] + "ld" + right[1:]
+    elif left_stem.endswith("l") and right.startswith("n"): res = left_stem[:-1] + "ll" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("l"): res = left_stem[:-1] + "ll" + right[1:]
+    elif left_stem.endswith("mn") and right.startswith("n"): res = left_stem[:-2] + "m" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("n"): res = left_stem[:-1] + "m" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("r"): res = left_stem[:-1] + "nn" + right[1:]
+    elif left_stem.endswith("t") and right.startswith("d"): res = left_stem[:-1] + "dd" + right[1:]
+    elif (left_stem.endswith("d") or left_stem.endswith("k")) and right.startswith("t"): res = left_stem[:-1] + "tt" + right[1:]
+    elif left_stem.endswith("s") and right.startswith("r"): res = left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("d") and right.startswith("s"): res = left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("z") and right.startswith("r"): res = left_stem[:-1] + "zz" + right[1:]
+    elif (left_stem.endswith("m") and right.startswith("r")) or (left_stem.endswith("r") and right.startswith("m")): res = left_stem[:-1] + "mm" + right[1:]
+    elif left_stem.endswith("ld") and right.startswith("b"): res = left_stem[:-2] + "lbb" + right[1:]
+    elif (left_stem.endswith("k") or left_stem.endswith("t") or left_stem.endswith("f")) and right.startswith("b"): res = left_stem[:-1] + "bb" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("b"): res = left_stem[:-1] + "mb" + right[1:]
+    elif left_stem.endswith("p") and right.startswith("g"): res = left_stem[:-1] + "gg" + right[1:]
+    elif left_stem.endswith("t") and right.startswith("k"): res = left_stem[:-1] + "kk" + right[1:]
+    elif left_stem.endswith("x") and right.startswith("r"): res = left_stem[:-1] + "rr" + right[1:]
+    elif left_stem.endswith("r") and (right.startswith("ra") or right.startswith("ru")): res = left_stem + right
+    elif left_stem.endswith("v") and right.startswith("t"): res = left_stem[:-1] + "pt" + right[1:]
+    elif left_stem.endswith("k") and right.startswith("l"): res = left_stem[:-1] + "ll" + right[1:]
+    elif left_stem.endswith("s") and right.startswith("s"): res = left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("b") and right.startswith("p"): res = left_stem[:-1] + "bb" + right[1:]
+    else: res = left_stem + right
+    return _apply_haplology(res) if apply_haplo else res
 
 EXPANSAO_VERB_ROOTS = [
     ('belk', 'relampejar, faiscar no céu', 'cessar os relâmpagos, serenar o éter', 'relampejar repetidamente', 'voltar a cessar os relâmpagos'),
@@ -1804,20 +1903,37 @@ EXPANSAO_ADVERBS_ESPECIAIS = [
     ('vorviste', 1, 'garganta colossal esculpida pelo rio na rocha dura', 'vorv- + este, termina em -e (1 decl)'),
 ]
 
-EXPANSAO_NOUNS = list(EXPANSAO_NOUNS_PRIMARIOS)
+EXPANSAO_RAW_NOUN_MAP = {}
+EXPANSAO_RAW_ADJ_STEMS = {}
+
+def _normalize_noun_entry(item):
+    raw_l, decl, mean, etym = item
+    hap_l = _apply_haplology(raw_l)
+    if hap_l != raw_l:
+        EXPANSAO_RAW_NOUN_MAP[hap_l] = raw_l
+    return (hap_l, decl, mean, etym)
+
+EXPANSAO_NOUNS = [_normalize_noun_entry(x) for x in EXPANSAO_NOUNS_PRIMARIOS]
 EXPANSAO_ADJECTIVES = []
-EXPANSAO_ADVERBS = list(EXPANSAO_ADVERBS_ESPECIAIS)
+EXPANSAO_ADVERBS = [(_apply_haplology(adv), subc, etym, mean) for adv, subc, etym, mean in EXPANSAO_ADVERBS_ESPECIAIS]
 
 for _root, _pos_mean, _priv_mean, _iter_mean, _itpr_mean in EXPANSAO_VERB_ROOTS:
     _base_action = _pos_mean.split(',')[0].strip()
-    _n_or = f'{_root}or'
-    EXPANSAO_NOUNS.append((_n_or, 2, f'ato ou efeito de {_base_action}', f'{_root}- + -or'))
-    _n_tek = _join_sandi(_root, 'tek')
-    EXPANSAO_NOUNS.append((_n_tek, 2, f'instrumento ou meio para {_base_action}', f'{_root}- + -tek'))
-    _n_ia = f'{_root}ia'
-    EXPANSAO_NOUNS.append((_n_ia, 1, f'lugar, recinto ou oficina de {_base_action}', f'{_root}- + -ia'))
-    _adj = f'{_root}a'
-    _sup = _join_sandi(_root, 'n')
+    for _sfx, _decl, _desc in (
+        ('or', 2, 'ato ou efeito de'),
+        ('tek', 2, 'instrumento ou meio para'),
+        ('ia', 1, 'lugar, recinto ou oficina de'),
+    ):
+        _raw_n = _join_sandi(_root, _sfx, apply_haplo=False)
+        _hap_n = _apply_haplology(_raw_n)
+        if _hap_n != _raw_n:
+            EXPANSAO_RAW_NOUN_MAP[_hap_n] = _raw_n
+        EXPANSAO_NOUNS.append((_hap_n, _decl, f'{_desc} {_base_action}', f'{_root}- + -{_sfx}'))
+    _adj_raw = _join_sandi(_root, 'a', apply_haplo=False)
+    _adj = _apply_haplology(_adj_raw)
+    if _adj != _adj_raw:
+        EXPANSAO_RAW_ADJ_STEMS[_adj] = _root
+    _sup = _join_sandi(_root, 'n', apply_haplo=True)
     EXPANSAO_ADJECTIVES.append((_adj, f'relativo ou propenso a {_base_action}', f'maer {_adj}', _sup))
-    _adv = f'{_adj}vë'
+    _adv = _apply_haplology(_join_sandi(_adj_raw, 'vë', apply_haplo=False))
     EXPANSAO_ADVERBS.append((_adv, 'Modal Derivado (-vë com diérese)', f'{_adj} + -vë', f'de modo a {_base_action}'))

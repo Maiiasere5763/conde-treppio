@@ -1,7 +1,7 @@
 # ==============================================================================
 # compilar_apk.ps1
 # Compilador e Empacotador do Aplicativo Android (Codice_Treppio_Conde.apk)
-# Integração da Matriz Quadripartite e Léxico /conde V8.1
+# Integração da Matriz Quadripartite e Léxico /conde V8.4
 # ==============================================================================
 $ErrorActionPreference = "Continue"
 

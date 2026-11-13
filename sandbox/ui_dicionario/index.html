@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#07090e" />
-  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.2. Edição Filológica Completa com 109.013 formas, Matriz Verbal Quadripartite, GNLT e Diálogos de Ecos." />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="Códice Lexicográfico Imperial da Língua Tréppia — Era Clássica V8.4. Edição Filológica Completa com 246.737 formas, Alfabeto Fonético (G=/ɡ/, S=/s/), Tradutor Bilíngue TR ↔ PT, Matriz Verbal Quadripartite e GNLT." />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png" href="icon-512.png" />
-  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.2)</title>
+  <title>Códice Lexicográfico Imperial — Dicionário Geral do Tréppio (Era Clássica V8.4)</title>
 
   <!-- Google Fonts: Inter (UI Sans & Display), Cinzel (Imperial Serif), Playfair Display (Editorial), JetBrains Mono (Philology/Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2212,9 +2212,147 @@
     }
     @media (max-width: 560px) {
       .hero-bento-grid {
-        grid-template-columns: 1fr) !important;
+        grid-template-columns: 1fr !important;
       }
     }
+
+    /* Ajustes Mobile Bottom Nav para 7 abas em 360px+ */
+    @media (max-width: 768px) {
+      .mobile-bottom-nav {
+        padding: 0 2px !important;
+        gap: 0 !important;
+      }
+      .mobile-nav-btn {
+        min-width: 0;
+        padding: 0 2px;
+        gap: 2px;
+      }
+      .mobile-nav-icon {
+        font-size: 1.05rem;
+      }
+      .mobile-nav-label {
+        font-size: 0.56rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+    }
+
+    /* Hub Pronúncia & IPA + Hub Tradutor TR <-> PT */
+    .ipa-rule-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.15rem;
+    }
+    .ipa-rule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+    }
+    .ipa-key-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--gold-bright);
+      margin-bottom: 0.45rem;
+    }
+    [data-theme="light"] .ipa-key-badge {
+      background: rgba(9, 9, 11, 0.06);
+      border-color: rgba(9, 9, 11, 0.14);
+      color: #09090b;
+    }
+    .ipa-syllables-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.65rem 0;
+    }
+    .ipa-syl-chip {
+      font-family: var(--font-mono);
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      font-size: 0.95rem;
+    }
+    .ipa-syl-chip.stressed {
+      border-color: var(--gold-bright);
+      color: var(--gold-bright);
+      font-weight: 800;
+    }
+    .ipa-syl-chip.haplo {
+      border-color: var(--emerald);
+      background: rgba(16, 185, 129, 0.08);
+    }
+    .translator-shell {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+    .translator-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+    }
+    .translator-textarea {
+      width: 100%;
+      min-height: 112px;
+      resize: vertical;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.8rem 0.9rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+    .translator-output-main {
+      min-height: 112px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-gold);
+      border-radius: 10px;
+      padding: 0.85rem 0.95rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--gold-bright);
+      margin-top: 0.5rem;
+    }
+    .translator-token-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+    }
+    .translator-token-chip {
+      display: inline-flex;
+      flex-direction: column;
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      cursor: pointer;
+      font-size: 0.82rem;
+    }
+    .translator-token-chip.known {
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+    .translator-token-chip.unknown {
+      border-style: dashed;
+      opacity: 0.72;
     }
 
   </style>
@@ -2223,7 +2361,7 @@
     if ('caches' in window) {
       caches.keys().then(function(names) {
         names.forEach(function(name) {
-          if (name !== 'treppio-v8-2-cache-editorial') {
+          if (name !== 'treppio-v8-4-cache-editorial') {
             console.log('[CacheBuster] Purgando cache legado:', name);
             caches.delete(name);
           }
@@ -2234,7 +2372,7 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V8.2) -->
+  <!-- CABEÇALHO IMPERIAL COMPACTO (TOP COMMAND BAR V8.4) -->
   <header class="imperial-header">
     <div class="header-top">
       <div class="brand-block">
@@ -2242,7 +2380,7 @@
         <div class="brand-title">
           <h1>
             Códice Imperial Tréppio
-            <span class="brand-edition-pill">Era Clássica V8.2</span>
+            <span class="brand-edition-pill">Era Clássica V8.4</span>
           </h1>
         </div>
       </div>
@@ -2287,22 +2425,28 @@
         <span class="kbd-hint">Tecla /</span>
       </div>
 
-      <!-- 5 HUBS PRINCIPAIS E COESOS -->
+      <!-- 7 HUBS PRINCIPAIS E COESOS -->
       <nav class="nav-tabs" id="main-tabs">
         <button class="tab-btn active" data-hub="dict" onclick="switchHub('dict')">
           🔍 I. Dicionário Geral <span class="tab-count" id="hub-cnt-dict">246.737</span>
         </button>
         <button class="tab-btn" data-hub="verbs" onclick="switchHub('verbs')">
-          ⚔️ II. Conjugador Verbal <span class="tab-count" id="hub-cnt-verbs">1048 Verbos</span>
+          ⚔️ II. Conjugador Verbal <span class="tab-count" id="hub-cnt-verbs">1.768 Verbos</span>
+        </button>
+        <button class="tab-btn" data-hub="phonetics" onclick="switchHub('phonetics')">
+          🎙️ III. Pronúncia & IPA <span class="tab-count">G=/ɡ/ • S=/s/</span>
+        </button>
+        <button class="tab-btn" data-hub="translator" onclick="switchHub('translator')">
+          🔄 IV. Tradutor TR ↔ PT <span class="tab-count">Bilíngue</span>
         </button>
         <button class="tab-btn" data-hub="dialogues" onclick="switchHub('dialogues')">
-          💬 III. Diálogos Práticos <span class="tab-count">5 Cenas</span>
+          💬 V. Diálogos Práticos <span class="tab-count">5 Cenas</span>
         </button>
         <button class="tab-btn" data-hub="grammar" onclick="switchHub('grammar')">
-          📜 IV. Gramática & Corpus <span class="tab-count">GNLT + Ainulindalë</span>
+          📜 VI. Gramática & Corpus <span class="tab-count">GNLT + Haly'itror</span>
         </button>
         <button class="tab-btn" data-hub="lab" onclick="switchHub('lab')">
-          ⚗️ V. Laboratório Sandi V8.2
+          ⚗️ VII. Laboratório Sandi V8.4
         </button>
       </nav>
     </div>
@@ -2324,22 +2468,22 @@
         <div class="hero-bento-grid">
           <div class="hero-bento-card">
             <div class="hero-bento-label">Formas Flexionadas e Derivadas</div>
-            <div class="hero-bento-value" id="hero-stat-forms">170.294</div>
-            <div class="hero-bento-meta">0 Colisões Homonímicas • 22 Leis de Sândi</div>
+            <div class="hero-bento-value" id="hero-stat-forms">246.737</div>
+            <div class="hero-bento-meta">0 Colisões Homonímicas • 26 Leis de Sândi</div>
           </div>
           <div class="hero-bento-card">
             <div class="hero-bento-label">Substantivos Canônicos</div>
-            <div class="hero-bento-value" id="hero-stat-nouns">1.104</div>
+            <div class="hero-bento-value" id="hero-stat-nouns">2.109</div>
             <div class="hero-bento-meta">8 Casos (Sg/Pl) + 10 Sufixos Derivacionais</div>
           </div>
           <div class="hero-bento-card">
             <div class="hero-bento-label">Matriz Verbal Quadripartite</div>
-            <div class="hero-bento-value" id="hero-stat-verbs">1.048</div>
+            <div class="hero-bento-value" id="hero-stat-verbs">1.768</div>
             <div class="hero-bento-meta">4 Eixos Ontológicos × 114 Formas Finitas</div>
           </div>
           <div class="hero-bento-card">
             <div class="hero-bento-label">Adjetivos & Advérbios</div>
-            <div class="hero-bento-value"><span id="hero-stat-adjs">266</span> <span style="font-size:0.9rem;color:var(--text-secondary);">/</span> <span id="hero-stat-advs">583</span></div>
+            <div class="hero-bento-value"><span id="hero-stat-adjs">446</span> <span style="font-size:0.9rem;color:var(--text-secondary);">/</span> <span id="hero-stat-advs">1.202</span></div>
             <div class="hero-bento-meta">Comparativo, Superlativo (-n/-ni) e Modal (-vë)</div>
           </div>
         </div>
@@ -2355,7 +2499,7 @@
             <button class="quick-chip" onclick="quickSearch('poke xuna')">🐕 Cão Loiro</button>
             <button class="quick-chip" onclick="quickSearch('teggar')">🏰 Castelo (teggar)</button>
             <button class="quick-chip" onclick="quickSearch('Patte ny')">📜 Pai Nosso</button>
-            <button class="quick-chip" onclick="quickSearch('Halylitror')">🎶 Ainulindalë</button>
+            <button class="quick-chip" data-action="quick-search" data-arg="Haly'itror">🎶 Haly'itror</button>
           </div>
 
           <div class="ecosystem-pills">
@@ -2389,7 +2533,7 @@
   </div>
 
   <!-- CARREGAMENTO DO BANCO DE DADOS GERADO PELO /CONDE -->
-  <script src="dados_dicionario_conde.js?v=8.2.0"></script>
+  <script src="dados_dicionario_conde.js?v=8.4.0"></script>
   <script>
     // Estado Global da Aplicação
     let DB = window.CONDE_DB || null;
@@ -2406,59 +2550,236 @@
     let nounDisplayLimit = 60;
     let omniDebounceTimer = null;
     let reverseIndex = new Map(); // forma_minuscula -> lista de descritores morfológicos
+    let ptTranslatorIndex = null;
+    let ipaInputText = "Haly'itror giza in oxej: falde, Vé, rase, ve'ar et Tepy'atte.";
+    let translatorDirection = "pt-tr"; // "pt-tr" | "tr-pt"
+    let translatorQuery = "pão e água na casa";
 
-    // 1. Motor Morfofonológico em JS (Espelho Fiel das 22 Leis de Sandi da V8.3)
-    function joinMorphemesJS(left, right) {
-      if (!left) return right;
-      if (!right) return left;
-      let leftClean = (left === "Vé" && !["y","i","om","o","ye","oi","os"].includes(right)) ? "ve" : left;
-      if (leftClean === "od" && right.startsWith("ad")) {
-        return "oda'" + right.slice(2);
-      }
-      let leftStem = ("ae".includes(leftClean.slice(-1)) && "aeiouy".includes(right[0]))
-        ? leftClean.slice(0, -1)
-        : leftClean;
-      if (!leftStem) return right;
+    const HAPLO_VOWELS = new Set("aeiouyáéíóúýäëïöü".split(""));
+    const HAPLO_ONSETS = new Set(["bl", "br", "dr", "fl", "fr", "gl", "gr", "kl", "kr", "pl", "pr", "sf", "tr"]);
+    const HAPLO_EXEMPT = new Set([
+      "Jesus", "Maria", "Giovanni", "Sprezzatura", "Christus", "Kristus",
+      "Pontius", "Pilatus", "Eä", "Ilúvatar", "Ainur", "Valar"
+    ]);
 
-      if (leftStem.endsWith("r") && right.startsWith("n")) return leftStem.slice(0, -1) + "ld" + right.slice(1);
-      if (leftStem.endsWith("l") && right.startsWith("n")) return leftStem.slice(0, -1) + "ll" + right.slice(1);
-      if (leftStem.endsWith("n") && right.startsWith("l")) return leftStem.slice(0, -1) + "ll" + right.slice(1);
-      if (leftStem.endsWith("mn") && right.startsWith("n")) return leftStem.slice(0, -2) + "m" + right.slice(1);
-      if (leftStem.endsWith("n") && right.startsWith("n")) return leftStem.slice(0, -1) + "m" + right.slice(1);
-      if (leftStem.endsWith("n") && right.startsWith("r")) return leftStem.slice(0, -1) + "nn" + right.slice(1);
-      if (leftStem.endsWith("t") && right.startsWith("d")) return leftStem.slice(0, -1) + "dd" + right.slice(1);
-      if ((leftStem.endsWith("d") || leftStem.endsWith("k")) && right.startsWith("t")) return leftStem.slice(0, -1) + "tt" + right.slice(1);
-      if (leftStem.endsWith("s") && right.startsWith("r")) return leftStem.slice(0, -1) + "ss" + right.slice(1);
-      if (leftStem.endsWith("d") && right.startsWith("s")) return leftStem.slice(0, -1) + "ss" + right.slice(1);
-      if (leftStem.endsWith("z") && right.startsWith("r")) return leftStem.slice(0, -1) + "zz" + right.slice(1);
-      if ((leftStem.endsWith("m") && right.startsWith("r")) || (leftStem.endsWith("r") && right.startsWith("m"))) return leftStem.slice(0, -1) + "mm" + right.slice(1);
-      if (leftStem.endsWith("ld") && right.startsWith("b")) return leftStem.slice(0, -2) + "lbb" + right.slice(1);
-      if ((leftStem.endsWith("k") || leftStem.endsWith("t") || leftStem.endsWith("f")) && right.startsWith("b")) return leftStem.slice(0, -1) + "bb" + right.slice(1);
-      if (leftStem.endsWith("n") && right.startsWith("b")) return leftStem.slice(0, -1) + "mb" + right.slice(1);
-      if (leftStem.endsWith("p") && right.startsWith("g")) return leftStem.slice(0, -1) + "gg" + right.slice(1);
-      if (leftStem.endsWith("t") && right.startsWith("k")) return leftStem.slice(0, -1) + "kk" + right.slice(1);
-      if (leftStem.endsWith("x") && right.startsWith("r")) return leftStem.slice(0, -1) + "rr" + right.slice(1);
-      if (leftStem.endsWith("v") && right.startsWith("t")) return leftStem.slice(0, -1) + "pt" + right.slice(1);
-      if (leftStem.endsWith("k") && right.startsWith("l")) return leftStem.slice(0, -1) + "ll" + right.slice(1);
-      if (leftStem.endsWith("b") && right.startsWith("p")) return leftStem.slice(0, -1) + "bb" + right.slice(1);
-      return leftStem + right;
+    function escapeHtmlAttr(str) {
+      return String(str == null ? "" : str)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
     }
 
-    // 2. Construção do Índice Morfológico Reverso sobre as 109.013 Formas
+    function stripPtAccents(str) {
+      return String(str || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+    }
+
+    // 1. Motor Morfofonológico em JS (26 Leis de Sandi + Haplologia Silábica Estrita V8.4)
+    function syllabifyTreppioJS(part) {
+      const n = part ? part.length : 0;
+      if (!n) return [];
+      const runs = [];
+      let idx = 0;
+      while (idx < n) {
+        if (HAPLO_VOWELS.has(part[idx].toLowerCase())) {
+          const s = idx;
+          while (idx < n && HAPLO_VOWELS.has(part[idx].toLowerCase())) idx++;
+          runs.push([s, idx]);
+        } else {
+          idx++;
+        }
+      }
+      if (!runs.length) return [part];
+      const bounds = [0];
+      for (let i = 0; i < runs.length - 1; i++) {
+        const cStart = runs[i][1];
+        const cEnd = runs[i + 1][0];
+        const clust = part.slice(cStart, cEnd).toLowerCase();
+        if (clust.length <= 1) {
+          bounds.push(cStart);
+        } else if (clust.length === 2) {
+          if (clust[0] !== clust[1] && HAPLO_ONSETS.has(clust)) bounds.push(cStart);
+          else bounds.push(cStart + 1);
+        } else {
+          const tail = clust.slice(-2);
+          if (HAPLO_ONSETS.has(tail) && tail[0] !== tail[1]) bounds.push(cEnd - 2);
+          else bounds.push(cEnd - 1);
+        }
+      }
+      bounds.push(n);
+      const syls = [];
+      for (let i = 0; i < bounds.length - 1; i++) {
+        syls.push(part.slice(bounds[i], bounds[i + 1]));
+      }
+      return syls;
+    }
+
+    function applyHaplologyJS(word) {
+      if (!word || word.includes(" ") || word.length < 4 || HAPLO_EXEMPT.has(word) || word.includes("'")) {
+        return word;
+      }
+      let punct = "";
+      let w = word;
+      if ("!?.,;:".includes(w[w.length - 1])) {
+        punct = w[w.length - 1];
+        w = w.slice(0, -1);
+      }
+      if (w.length < 4 || w.includes("'")) return word;
+      const syls = syllabifyTreppioJS(w);
+      if (syls.length < 2) return word;
+      const out = [syls[0]];
+      let changed = false;
+      for (let i = 1; i < syls.length; i++) {
+        const prevS = out[out.length - 1];
+        const currS = syls[i];
+        const c1 = prevS[0].toLowerCase();
+        const c2 = currS[0].toLowerCase();
+        const isC1Cons = !HAPLO_VOWELS.has(c1) && /[a-z]/i.test(c1);
+        const isC2Cons = !HAPLO_VOWELS.has(c2) && /[a-z]/i.test(c2);
+        const isGem = prevS[prevS.length - 1].toLowerCase() === c2;
+        if (!changed && isC1Cons && isC2Cons && c1 === c2 && !isGem) {
+          const rem = currS.slice(1);
+          if (rem && (HAPLO_VOWELS.has(rem[0].toLowerCase()) || (HAPLO_ONSETS.has(currS.slice(0, 2).toLowerCase()) && c2 === "d" && prevS.toLowerCase().endsWith("da")))) {
+            out.push("'" + rem);
+            changed = true;
+            continue;
+          }
+        }
+        out.push(currS);
+      }
+      return out.join("") + punct;
+    }
+
+    function applyHaplologyTextJS(text) {
+      if (!text) return text;
+      return text.replace(/[A-Za-zÁÉÍÓÚÝáéíóúýÄËÏÖÜäëïöü']+/g, m => applyHaplologyJS(m));
+    }
+
+    function joinMorphemesJS(left, right, applyHaplo = true) {
+      if (!left) return applyHaplo ? applyHaplologyJS(right) : right;
+      if (!right) return applyHaplo ? applyHaplologyJS(left) : left;
+      const leftClean = (left === "Vé" && !["y", "i", "om", "o", "ye", "oi", "os"].includes(right)) ? "ve" : left;
+      if (leftClean === "od" && right.startsWith("ad")) {
+        const odRes = "oda'" + right.slice(2);
+        return applyHaplo ? applyHaplologyJS(odRes) : odRes;
+      }
+      const leftStem = ("ae".includes(leftClean.slice(-1)) && "aeiouy".includes(right[0]))
+        ? leftClean.slice(0, -1)
+        : leftClean;
+      if (!leftStem) return applyHaplo ? applyHaplologyJS(right) : right;
+
+      let res = null;
+      if (leftStem.endsWith("r") && right.startsWith("n")) res = leftStem.slice(0, -1) + "ld" + right.slice(1);
+      else if (leftStem.endsWith("l") && right.startsWith("n")) res = leftStem.slice(0, -1) + "ll" + right.slice(1);
+      else if (leftStem.endsWith("n") && right.startsWith("l")) res = leftStem.slice(0, -1) + "ll" + right.slice(1);
+      else if (leftStem.endsWith("mn") && right.startsWith("n")) res = leftStem.slice(0, -2) + "m" + right.slice(1);
+      else if (leftStem.endsWith("n") && right.startsWith("n")) res = leftStem.slice(0, -1) + "m" + right.slice(1);
+      else if (leftStem.endsWith("n") && right.startsWith("r")) res = leftStem.slice(0, -1) + "nn" + right.slice(1);
+      else if (leftStem.endsWith("t") && right.startsWith("d")) res = leftStem.slice(0, -1) + "dd" + right.slice(1);
+      else if ((leftStem.endsWith("d") || leftStem.endsWith("k")) && right.startsWith("t")) res = leftStem.slice(0, -1) + "tt" + right.slice(1);
+      else if (leftStem.endsWith("s") && right.startsWith("r")) res = leftStem.slice(0, -1) + "ss" + right.slice(1);
+      else if (leftStem.endsWith("d") && right.startsWith("s")) res = leftStem.slice(0, -1) + "ss" + right.slice(1);
+      else if (leftStem.endsWith("z") && right.startsWith("r")) res = leftStem.slice(0, -1) + "zz" + right.slice(1);
+      else if ((leftStem.endsWith("m") && right.startsWith("r")) || (leftStem.endsWith("r") && right.startsWith("m"))) res = leftStem.slice(0, -1) + "mm" + right.slice(1);
+      else if (leftStem.endsWith("ld") && right.startsWith("b")) res = leftStem.slice(0, -2) + "lbb" + right.slice(1);
+      else if ((leftStem.endsWith("k") || leftStem.endsWith("t") || leftStem.endsWith("f")) && right.startsWith("b")) res = leftStem.slice(0, -1) + "bb" + right.slice(1);
+      else if (leftStem.endsWith("n") && right.startsWith("b")) res = leftStem.slice(0, -1) + "mb" + right.slice(1);
+      else if (leftStem.endsWith("p") && right.startsWith("g")) res = leftStem.slice(0, -1) + "gg" + right.slice(1);
+      else if (leftStem.endsWith("t") && right.startsWith("k")) res = leftStem.slice(0, -1) + "kk" + right.slice(1);
+      else if (leftStem.endsWith("x") && right.startsWith("r")) res = leftStem.slice(0, -1) + "rr" + right.slice(1);
+      else if (leftStem.endsWith("v") && right.startsWith("t")) res = leftStem.slice(0, -1) + "pt" + right.slice(1);
+      else if (leftStem.endsWith("k") && right.startsWith("l")) res = leftStem.slice(0, -1) + "ll" + right.slice(1);
+      else if (leftStem.endsWith("b") && right.startsWith("p")) res = leftStem.slice(0, -1) + "bb" + right.slice(1);
+      else res = leftStem + right;
+      return applyHaplo ? applyHaplologyJS(res) : res;
+    }
+
+    function syllableToIpaJS(syl) {
+      let s = syl.toLowerCase();
+      let out = "";
+      for (let i = 0; i < s.length; i++) {
+        const ch = s[i];
+        const next = s[i + 1] || "";
+        if (ch === "'") { out += "ʔ"; continue; }
+        if (ch === "r" && next === "r") { out += "r"; i++; continue; }
+        if (ch === next && "tdkbgpszmfln".includes(ch)) {
+          const mapC = { g: "ɡ", r: "ɾ" };
+          const cIpa = mapC[ch] || ch;
+          out += cIpa + "ː";
+          i++;
+          continue;
+        }
+        const ipaMap = {
+          a: "a", á: "a", e: "e", é: "e", ë: "ə", i: "i", í: "i",
+          o: "ɔ", ó: "o", u: "u", ú: "u", y: "i", ý: "i", ä: "ɛ", ï: "i", ö: "ø", ü: "y",
+          g: "ɡ", s: "s", x: "x", r: "ɾ", j: "j", v: "v", z: "z", k: "k",
+          t: "t", d: "d", p: "p", b: "b", f: "f", m: "m", n: "n", l: "l"
+        };
+        out += ipaMap[ch] || ch;
+      }
+      return out;
+    }
+
+    function analyzeTreppioWord(word) {
+      const clean = String(word || "").replace(/[.,;:!?()[\]"“”]/g, "").trim();
+      if (!clean) return null;
+      const segs = clean.split("'");
+      const syllables = [];
+      segs.forEach((seg, sIdx) => {
+        if (!seg) return;
+        const parts = syllabifyTreppioJS(seg);
+        parts.forEach((p, pIdx) => {
+          syllables.push((sIdx > 0 && pIdx === 0 ? "'" : "") + p);
+        });
+      });
+      if (!syllables.length) syllables.push(clean);
+
+      let stressedIdx = syllables.findIndex(s => /[áéíóúýÁÉÍÓÚÝ]/.test(s));
+      if (stressedIdx < 0) {
+        stressedIdx = syllables.length > 1 ? syllables.length - 2 : 0;
+      }
+      const ipaParts = syllables.map((s, idx) => {
+        const raw = syllableToIpaJS(s);
+        return idx === stressedIdx ? "ˈ" + raw.replace("ʔ", "ʔ") : raw;
+      });
+      const notes = [];
+      if (/[gG]/.test(clean)) notes.push("G = /ɡ/ (guitarra, nunca /ʒ/)");
+      if (/[sS]/.test(clean)) notes.push("S = /s/ (sapato, nunca /z/)");
+      if (/[xX]/.test(clean)) notes.push("X = /x/ (fricativa velar)");
+      if (clean.includes("'")) notes.push("' = haplologia silábica [ʔ]");
+      if (/[ëË]/.test(clean)) notes.push("ë = vogal modal /ə/");
+      return {
+        word: clean,
+        syllables,
+        stressedIdx,
+        hasHaplology: clean.includes("'"),
+        hasG: /[gG]/.test(clean),
+        hasS: /[sS]/.test(clean),
+        ipa: "/" + ipaParts.join(".") + "/",
+        notes
+      };
+    }
+
+    // 2. Construção do Índice Morfológico Reverso sobre Todas as 7 Classes e 246.737 Formas
     function buildReverseIndex() {
       reverseIndex.clear();
+      ptTranslatorIndex = null;
       if (!DB) return;
 
       const addRev = (formStr, info) => {
         if (!formStr) return;
-        const clean = formStr.replace(/[!?]/g, "").trim().toLowerCase();
+        const clean = String(formStr).replace(/[!?]/g, "").trim().toLowerCase();
         if (!clean) return;
         if (!reverseIndex.has(clean)) reverseIndex.set(clean, []);
         const arr = reverseIndex.get(clean);
         if (arr.length < 8) arr.push(info);
       };
 
-      // Indexar Substantivos (8 casos + 10 derivados)
+      // Substantivos (8 casos + 10 derivados)
       for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
         for (const [k, val] of Object.entries(obj.formas || {})) {
           addRev(val, {
@@ -2473,7 +2794,7 @@
         }
       }
 
-      // Indexar Adjetivos
+      // Adjetivos
       for (const [adj, obj] of Object.entries(DB.adjetivos || {})) {
         for (const [k, val] of Object.entries(obj)) {
           if (k === "Significado") continue;
@@ -2489,7 +2810,99 @@
         }
       }
 
-      // Indexar Verbos Quadripartites (272 verbos x 114 formas)
+      // Advérbios
+      for (const [adv, obj] of Object.entries(DB.adverbios || {})) {
+        addRev(adv, {
+          form: adv,
+          lemma: adv,
+          category: "Advérbio",
+          tag: obj.subclasse || "Advérbio",
+          meaning: obj.significado || "",
+          actionType: "adv",
+          actionKey: adv
+        });
+      }
+
+      // Pronomes Pessoais e Demonstrativos
+      for (const [pKey, pObj] of Object.entries(DB.pronomes || {})) {
+        const baseDesc = pObj.esfera || pKey;
+        for (const [caseK, rawForms] of Object.entries(pObj)) {
+          if (caseK === "esfera") continue;
+          String(rawForms).split("/").forEach(rawPart => {
+            const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
+            if (tok) {
+              addRev(tok, {
+                form: tok,
+                lemma: pKey,
+                category: "Pronome",
+                tag: caseK,
+                meaning: `${pKey} — ${baseDesc}`,
+                actionType: "pron",
+                actionKey: pKey
+              });
+            }
+          });
+        }
+      }
+
+      // Numerais Cardinais e Ordinais
+      for (const [numK, nObj] of Object.entries(DB.numerais || {})) {
+        for (const [fKey, fVal] of Object.entries(nObj)) {
+          if (fKey === "compostos") continue;
+          String(fVal).split("/").forEach(rawPart => {
+            const tok = rawPart.replace(/\([^)]*\)/g, "").trim();
+            if (tok) {
+              addRev(tok, {
+                form: tok,
+                lemma: nObj.cardinal || numK,
+                category: "Numeral",
+                tag: `${numK} (${fKey})`,
+                meaning: `Numeral ${numK}: cardinal ${nObj.cardinal}, ordinal ${(nObj.ordinal || "").replace(/\([^)]*\)/g, "").trim()}`,
+                actionType: "num",
+                actionKey: numK
+              });
+            }
+          });
+        }
+      }
+
+      // Partículas, Preposições e Conjunções
+      for (const [pTok, pObj] of Object.entries(DB.particulas_e_afixos || {})) {
+        String(pTok).split("/").forEach(sub => {
+          const cleanSub = sub.replace(/\([^)]*\)/g, "").trim();
+          if (cleanSub && !cleanSub.startsWith("-") && !cleanSub.endsWith("-")) {
+            addRev(cleanSub, {
+              form: cleanSub,
+              lemma: pTok,
+              category: pObj.classe || "Partícula",
+              tag: "Invariável",
+              meaning: pObj.descricao || "",
+              actionType: "part",
+              actionKey: pTok
+            });
+          }
+        });
+      }
+
+      // Registro Diacrônico e Variantes Cristalizadas (Metuses, Durrum, Zo es, etc.)
+      for (const [vTok, vObj] of Object.entries(DB.registro_diacronico_e_variantes || {})) {
+        String(vTok).split("/").forEach(sub => {
+          const cleanSub = sub.trim();
+          if (cleanSub) {
+            addRev(cleanSub, {
+              form: cleanSub,
+              lemma: vTok,
+              category: vObj.estatuto || "Variante",
+              tag: vObj.equivalente_canonico || "",
+              meaning: vObj.analise || "",
+              actionType: "diac",
+              actionKey: vTok
+            });
+          }
+        });
+      }
+
+      // Verbos Quadripartites (442 raízes x 4 eixos x 114 formas)
       const persons = ["1ª Sg (-m)", "2ª Sg (-s)", "3ª Sg/Pl (∅)", "1ª Pl (-n)", "2ª Pl (-t)"];
       for (const [root, axes] of Object.entries(DB.verbos_quadripartite || {})) {
         for (const [axisLabel, axisObj] of Object.entries(axes)) {
@@ -2731,7 +3144,7 @@
       document.getElementById("modal-title").textContent = "☁️ Configurar Banco de Dados Online (GitHub / Google Drive)";
       document.getElementById("modal-body").innerHTML = `
         <p style="margin-bottom:0.85rem;color:var(--text-secondary);">
-          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 109.013 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
+          O Códice Lexicográfico Imperial funciona <strong>100% offline</strong> com as 246.737 formas já embutidas, mas pode se alimentar automaticamente de um link online do <strong>GitHub</strong> ou do <strong>Google Drive</strong> sempre que você ou seus amigos abrirem o aplicativo.
         </p>
         <div style="margin-bottom:1rem;">
           <label style="display:block;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">
@@ -2887,9 +3300,9 @@
             <div style="font-size:0.78rem;color:var(--text-primary);">${m.meaning}</div>
           </div>
           <div class="card-micro-actions">
-            <button class="micro-btn" onclick="speakTreppio('${m.form.replace(/'/g, "\'")}')" title="Ouvir pronúncia">🔊</button>
-            <button class="micro-btn" onclick="copyToClipboard('${m.form.replace(/'/g, "\'")}')">📋</button>
-            <button class="btn" onclick="jumpToEntry('${m.actionType}', '${m.actionKey.replace(/'/g, "\'")}')">
+            <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(m.form)}" title="Ouvir pronúncia">🔊</button>
+            <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(m.form)}">📋</button>
+            <button class="btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(m.actionType)}" data-arg2="${escapeHtmlAttr(m.actionKey)}">
               Ver Paradigma →
             </button>
           </div>
@@ -2905,6 +3318,16 @@
         switchHub("verbs");
       } else if (type === "adj") {
         switchHub("dict", "adjectives");
+      } else if (type === "adv") {
+        switchHub("dict", "adverbs");
+      } else if (type === "pron") {
+        switchHub("dict", "pronouns");
+      } else if (type === "num") {
+        switchHub("dict", "numerals");
+      } else if (type === "part") {
+        switchHub("dict", "particles");
+      } else if (type === "diac") {
+        switchHub("dict", "diachronic");
       }
     }
 
@@ -2983,6 +3406,12 @@
           break;
         case "verbs":
           renderVerbsTab(container);
+          break;
+        case "phonetics":
+          renderPhoneticsTab(container);
+          break;
+        case "translator":
+          renderTranslatorTab(container);
           break;
         case "dialogues":
           renderDialoguesTab(container);
@@ -3068,7 +3497,7 @@
             📜 GNLT — Gramática Normativa (8 Capítulos)
           </button>
           <button class="subhub-chip ${grammarSubtab==='corpus'?'active':''}" onclick="setGrammarSubtab('corpus')">
-            📖 Halylitror (Ainulindalë) & Corpus Litúrgico
+            📖 Haly'itror (Ainulindalë) & Corpus Litúrgico
           </button>
         </div>
       `;
@@ -3111,15 +3540,15 @@
           </div>
           <div class="alpha-bar">
             ${letters.map(l => `
-              <button class="alpha-btn ${selectedLetter === l ? 'active' : ''}" onclick="selectedLetter='${l}';nounDisplayLimit=60;renderActiveTab()">
+              <button class="alpha-btn ${selectedLetter === l ? 'active' : ''}" data-action="select-letter" data-arg="${escapeHtmlAttr(l)}">
                 ${l === 'ALL' ? 'Todos' : l}
               </button>
             `).join("")}
           </div>
           <div style="display:flex;gap:0.4rem;align-items:center;">
-            <button class="btn ${selectedDeclFilter==='ALL'?'btn-gold':''}" onclick="selectedDeclFilter='ALL';nounDisplayLimit=60;renderActiveTab()">Todas (${entries.length})</button>
-            <button class="btn ${selectedDeclFilter==='1'?'btn-gold':''}" onclick="selectedDeclFilter='1';nounDisplayLimit=60;renderActiveTab()">1ª Decl. (-e/-a)</button>
-            <button class="btn ${selectedDeclFilter==='2'?'btn-gold':''}" onclick="selectedDeclFilter='2';nounDisplayLimit=60;renderActiveTab()">2ª Decl. (Consonantal)</button>
+            <button class="btn ${selectedDeclFilter==='ALL'?'btn-gold':''}" data-action="select-decl" data-arg="ALL">Todas (${entries.length})</button>
+            <button class="btn ${selectedDeclFilter==='1'?'btn-gold':''}" data-action="select-decl" data-arg="1">1ª Decl. (-e/-a)</button>
+            <button class="btn ${selectedDeclFilter==='2'?'btn-gold':''}" data-action="select-decl" data-arg="2">2ª Decl. (Consonantal)</button>
           </div>
         </div>
 
@@ -3132,20 +3561,20 @@
           ${visibleSlice.map(([lemma, obj], idx) => {
             const f = obj.formas;
             const badgeClass = obj.declinacao === 1 ? "badge-noun1" : "badge-noun2";
-            const safeLemma = lemma.replace(/'/g, "\'");
+            const attrLemma = escapeHtmlAttr(lemma);
             const cardId = "noun-forms-" + idx;
             const isFull = cardViewMode === "full";
             return `
               <article class="entry-card">
                 <div class="card-header">
                   <div>
-                    <span class="lemma-title" style="cursor:pointer;" onclick="openNounModal('${safeLemma}')">${lemma}</span>
+                    <span class="lemma-title" style="cursor:pointer;" data-action="open-noun" data-arg="${attrLemma}">${lemma}</span>
                     <span class="etym-text" style="margin-left:0.4rem;">${obj.etimologia}</span>
                   </div>
                   <div class="card-micro-actions">
-                    <button class="micro-btn" onclick="speakTreppio('${safeLemma}')" title="Ouvir pronúncia Tréppia">🔊</button>
-                    <button class="micro-btn" onclick="copyToClipboard('${safeLemma}', 'Copiado: ${safeLemma}')" title="Copiar lema">📋</button>
-                    <button class="micro-btn" onclick="openNounModal('${safeLemma}')" title="Inspecionar paradigma completo">🔍</button>
+                    <button class="micro-btn" data-action="speak" data-arg="${attrLemma}" title="Ouvir pronúncia Tréppia">🔊</button>
+                    <button class="micro-btn" data-action="copy" data-arg="${attrLemma}" data-msg="Copiado: ${attrLemma}" title="Copiar lema">📋</button>
+                    <button class="micro-btn" data-action="open-noun" data-arg="${attrLemma}" title="Inspecionar paradigma completo">🔍</button>
                     <span class="pos-badge ${badgeClass}">${obj.declinacao}ª Decl.</span>
                   </div>
                 </div>
@@ -3215,16 +3644,16 @@
       const obj = (DB.substantivos || {})[lemma];
       if (!obj) return;
       const f = obj.formas;
-      const safeLemma = lemma.replace(/'/g, "\'");
+      const attrLemma = escapeHtmlAttr(lemma);
       document.getElementById("modal-title").innerHTML = `
         <span>${lemma} — Substantivo (${obj.declinacao}ª Declinação)</span>
-        <button class="micro-btn" style="margin-left:0.6rem;" onclick="speakTreppio('${safeLemma}')">🔊 Ouvir</button>
-        <button class="micro-btn" onclick="copyToClipboard('${safeLemma}')">📋 Copiar</button>
+        <button class="micro-btn" style="margin-left:0.6rem;" data-action="speak" data-arg="${attrLemma}">🔊 Ouvir</button>
+        <button class="micro-btn" data-action="copy" data-arg="${attrLemma}">📋 Copiar</button>
       `;
       document.getElementById("modal-body").innerHTML = `
         <p style="font-size:1.05rem;margin-bottom:0.5rem;"><strong>Significado:</strong> ${obj.significado}</p>
         <p style="margin-bottom:1rem;"><span class="etym-text">Etimologia: ${obj.etimologia}</span></p>
-        <h4 style="color:var(--gold);margin-bottom:0.5rem;">1. Paradigma Casual Completo (Reforma Vocalizada V8.2)</h4>
+        <h4 style="color:var(--gold);margin-bottom:0.5rem;">1. Paradigma Casual Completo (Reforma Vocalizada + Haplologia V8.4)</h4>
         <table class="data-table" style="margin-bottom:1.25rem;">
           <thead><tr><th>Caso</th><th>Singular</th><th>Plural</th></tr></thead>
           <tbody>
@@ -3285,8 +3714,9 @@
             <div class="verb-roots-list">
               ${filteredRoots.map(([r, axes]) => {
                 const posAxis = axes["1. Positivo"] || Object.values(axes)[0];
+                const attrR = escapeHtmlAttr(r);
                 return `
-                  <button class="verb-root-item ${r === selectedVerbRoot ? 'active' : ''}" onclick="selectedVerbRoot='${r}';renderActiveTab()">
+                  <button class="verb-root-item ${r === selectedVerbRoot ? 'active' : ''}" data-action="select-verb" data-arg="${attrR}">
                     <strong>${r}- (${posAxis.conjugation["Infinitivo(-ur)"]})</strong>
                     <span>${posAxis.meaning}</span>
                   </button>
@@ -3313,7 +3743,7 @@
                   const pt = c["Participio(8_Casos)"];
                   const dn = c["Derivados.Nominais"];
                   return `
-                    <div class="axis-card ${idx === selectedVerbAxisIdx ? 'active-axis' : ''}" style="cursor:pointer;" onclick="selectedVerbAxisIdx=${idx};renderActiveTab()">
+                    <div class="axis-card ${idx === selectedVerbAxisIdx ? 'active-axis' : ''}" style="cursor:pointer;" data-action="select-axis" data-arg="${idx}">
                       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
                         <span class="pos-badge badge-verb">${axKey}</span>
                         <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--gold);">Inf: <strong>${c["Infinitivo(-ur)"]}</strong> | Imp: <strong>${c["Imperativo(Raiz)"]}</strong></span>
@@ -3629,7 +4059,7 @@
               <tr>
                 <th>Forma Documentada</th>
                 <th>Estatuto Diacrônico / Sociolinguístico</th>
-                <th>Equivalente Canônico (Era Clássica V8.2)</th>
+                <th>Equivalente Canônico (Era Clássica V8.4)</th>
                 <th>Análise Filológica e Ocorrência nos Manuais</th>
               </tr>
             </thead>
@@ -3648,25 +4078,28 @@
       `;
     }
 
-    // --- ABA IX: CORPUS CANÔNICO & HALYLITROR INTERATIVO ---
+    // --- ABA IX: CORPUS CANÔNICO & HALY'ITROR INTERATIVO ---
     function renderCorpusTab(container) {
       const texts = DB.corpus_canonico || [];
       container.innerHTML = `
         <div style="margin-bottom:1rem;background:var(--bg-secondary);padding:0.85rem 1.15rem;border-radius:10px;border:1px solid var(--border-gold);">
-          <strong>💡 Leitor Filológico Interativo:</strong> Clique em <strong>qualquer palavra em Tréppio</strong> nas orações canônicas ou nos movimentos do <em>Halylitror (Ainulindalë)</em> abaixo para acionar automaticamente o reconhecimento morfológico no dicionário!
+          <strong>💡 Leitor Filológico Interativo:</strong> Clique em <strong>qualquer palavra em Tréppio</strong> nas orações canônicas ou nos movimentos do <em>Haly'itror (Ainulindalë)</em> abaixo para acionar automaticamente o reconhecimento morfológico no dicionário!
         </div>
         <div style="display:flex;flex-direction:column;gap:1.1rem;">
           ${texts.map(t => {
             const tokenized = t.treppio.split(/(\s+)/).map(tok => {
               if (/^\s+$/.test(tok)) return tok;
               const cleanWord = tok.replace(/[.,;:!?]/g, "");
-              return `<span class="corpus-word" onclick="inspectCorpusWord('${cleanWord.replace(/'/g, "\\'")}')">${tok}</span>`;
+              return `<span class="corpus-word" data-action="inspect-corpus" data-arg="${escapeHtmlAttr(cleanWord)}">${tok}</span>`;
             }).join("");
             return `
               <article class="entry-card">
                 <div class="card-header">
                   <span class="lemma-title" style="font-size:1.15rem;">${t.titulo}</span>
-                  <span class="pos-badge badge-adv">${t.categoria}</span>
+                  <div class="card-micro-actions">
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(t.treppio)}" title="Ouvir passagem">🔊</button>
+                    <span class="pos-badge badge-adv">${t.categoria}</span>
+                  </div>
                 </div>
                 <div style="font-family:var(--font-serif);font-size:1.12rem;line-height:1.75;color:var(--gold-bright);padding:0.4rem 0;">
                   ${tokenized}
@@ -3690,22 +4123,22 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // --- ABA X: SIMULADOR MORFOFONOLÓGICO AO VIVO (22 LEIS DE SÂNDI + DECLINADOR/CONJUGADOR) ---
+    // --- ABA X: SIMULADOR MORFOFONOLÓGICO AO VIVO (26 LEIS DE SÂNDI + HAPLOLOGIA SILÁBICA V8.4) ---
     function renderLabTab(container) {
       container.innerHTML = `
         <div class="lab-grid">
           <div class="entry-card">
             <div class="card-header">
-              <span class="lemma-title">1. Simulador de Sandi Consonantal e Haplologia V8.3</span>
-              <span class="pos-badge badge-adv">22 Leis Ativas</span>
+              <span class="lemma-title">1. Simulador de Sandi Consonantal e Haplologia V8.4</span>
+              <span class="pos-badge badge-adv">26 Leis + Haplologia</span>
             </div>
             <p style="font-size:0.86rem;color:var(--text-secondary);">
-              Teste o encontro de quaisquer dois morfemas (ex.: <code>kor + nir</code>, <code>tok + te</code>, <code>tep + gar</code>, <code>od + adur</code>, <code>gald + ba</code>, <code>letut + ka</code>).
+              Teste o encontro de quaisquer dois morfemas e a Haplologia Silábica Estrita (<code>S_i[0] == S_{i+1}[0]</code> — ex.: <code>vevar</code>, <code>haly + litror</code>, <code>kor + nir</code>, <code>tok + te</code>, <code>tep + gar</code>, <code>od + adur</code>, <code>gald + ba</code>).
             </p>
             <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.5rem;align-items:center;margin-top:0.5rem;">
-              <input class="input-field" id="sandhi-left" value="kor" oninput="runSandhiLab()" placeholder="Morfema 1 (ex: kor)" />
+              <input class="input-field" id="sandhi-left" value="haly" oninput="runSandhiLab()" placeholder="Morfema 1 (ex: haly, kor)" />
               <span style="font-weight:700;color:var(--gold);">+</span>
-              <input class="input-field" id="sandhi-right" value="nir" oninput="runSandhiLab()" placeholder="Morfema 2 (ex: nir)" />
+              <input class="input-field" id="sandhi-right" value="litror" oninput="runSandhiLab()" placeholder="Morfema 2 (ex: litror, nir)" />
             </div>
             <div id="sandhi-result" style="margin-top:0.75rem;padding:0.85rem;background:var(--bg-secondary);border-radius:8px;font-family:var(--font-mono);font-size:1.1rem;color:var(--gold-bright);"></div>
           </div>
@@ -3716,9 +4149,9 @@
               <span class="pos-badge badge-verb">Matriz Quadripartite</span>
             </div>
             <p style="font-size:0.86rem;color:var(--text-secondary);">
-              Digite qualquer raiz verbal para gerar em tempo real os 4 eixos ontológicos e suas mutações de Passado (<code>-ra</code>), Futuro (<code>-ru</code>) e Imperfeito (<code>-ba</code>).
+              Digite qualquer raiz verbal para gerar em tempo real os 4 eixos ontológicos e suas mutações de Passado (<code>-ra</code>), Futuro (<code>-ru</code>) e Imperfeito (<code>-ba</code>) já com haplologia.
             </p>
-            <input class="input-field" id="lab-verb-root" value="dur" oninput="runVerbLab()" placeholder="Raiz verbal (ex: dur, dak, sfar, kit, galdex)" style="margin-top:0.5rem;" />
+            <input class="input-field" id="lab-verb-root" value="dur" oninput="runVerbLab()" placeholder="Raiz verbal (ex: dur, dak, doot, sfar, kit, galdex)" style="margin-top:0.5rem;" />
             <div id="verb-lab-result" style="margin-top:0.75rem;"></div>
           </div>
         </div>
@@ -3730,10 +4163,14 @@
     function runSandhiLab() {
       const l = (document.getElementById("sandhi-left")?.value || "").trim();
       const r = (document.getElementById("sandhi-right")?.value || "").trim();
-      const out = joinMorphemesJS(l, r);
+      const sandiOnly = joinMorphemesJS(l, r, false);
+      const out = joinMorphemesJS(l, r, true);
       const resEl = document.getElementById("sandhi-result");
       if (resEl) {
-        resEl.innerHTML = `${l || "∅"} + ${r || "∅"} → <strong style="color:var(--emerald);font-size:1.3rem;">${out}</strong>`;
+        const haploTag = (out !== sandiOnly)
+          ? ` <span style="font-size:0.78rem;color:var(--text-secondary);">(pré-haplologia: <code>${sandiOnly}</code>)</span>`
+          : "";
+        resEl.innerHTML = `${l || "∅"} + ${r || "∅"} → <strong style="color:var(--emerald);font-size:1.3rem;">${out}</strong>${haploTag}`;
       }
     }
 
@@ -3762,16 +4199,522 @@
             ${rows.map(([label, st]) => `
               <tr>
                 <th>${label}</th>
-                <td>${st}ur</td>
-                <td>${joinMorphemesJS(st, "u")}m</td>
-                <td>${joinMorphemesJS(st, "ra")}m</td>
-                <td>${joinMorphemesJS(st, "ru")}m</td>
-                <td>${joinMorphemesJS(st, "ba")}m</td>
+                <td>${joinMorphemesJS(st, "ur", true)}</td>
+                <td>${joinMorphemesJS(joinMorphemesJS(st, "u", false), "m", true)}</td>
+                <td>${joinMorphemesJS(joinMorphemesJS(st, "ra", false), "m", true)}</td>
+                <td>${joinMorphemesJS(joinMorphemesJS(st, "ru", false), "m", true)}</td>
+                <td>${joinMorphemesJS(joinMorphemesJS(st, "ba", false), "m", true)}</td>
               </tr>
             `).join("")}
           </tbody>
         </table>
       `;
+    }
+
+    // --- ABA XI: PRONÚNCIA & ALFABETO FONÉTICO (IPA + SÂNDI HAPLOLÓGICO) ---
+    function handleIpaInput(val) {
+      ipaInputText = val || "";
+      renderIpaLiveOutput();
+    }
+
+    function renderIpaLiveOutput() {
+      const outEl = document.getElementById("ipa-live-output");
+      if (!outEl) return;
+      const text = (ipaInputText || "").trim();
+      if (!text) {
+        outEl.innerHTML = `<span style="color:var(--text-secondary);">Digite palavras ou frases em Tréppio acima para analisar sílabas, acentuação, haplologia e transcrição IPA.</span>`;
+        return;
+      }
+      const normalized = applyHaplologyTextJS(text);
+      const rawWords = text.split(/\s+/).filter(Boolean);
+      const analyses = rawWords.map(w => {
+        const cleanRaw = w.replace(/[.,;:!?()[\]"“”]/g, "");
+        const hap = applyHaplologyJS(cleanRaw);
+        return { raw: cleanRaw, hap, meta: analyzeTreppioWord(hap) };
+      }).filter(x => x.meta);
+
+      const fullIpa = analyses.map(x => x.meta.ipa.slice(1, -1)).join(" ");
+      outEl.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.65rem;margin-bottom:0.85rem;padding:0.85rem 1rem;background:var(--bg-secondary);border-radius:12px;border:1px solid var(--border-gold);">
+          <div>
+            <div style="font-size:0.78rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;">Transcrição Fonética Contínua (IPA)</div>
+            <div style="font-family:var(--font-mono);font-size:1.25rem;color:var(--gold-bright);font-weight:700;margin-top:0.2rem;">[${fullIpa}]</div>
+            ${normalized !== text ? `<div style="font-size:0.84rem;color:var(--emerald);margin-top:0.25rem;">Forma com Haplologia Estrita V8.4: <strong>${normalized}</strong></div>` : ""}
+          </div>
+          <div class="card-micro-actions">
+            <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normalized)}">🔊 Ouvir Pronúncia</button>
+            <button class="btn" data-action="copy" data-arg="[${escapeHtmlAttr(fullIpa)}]" data-msg="IPA copiado!">📋 Copiar IPA</button>
+          </div>
+        </div>
+        <div class="cards-grid">
+          ${analyses.map(({ raw, hap, meta }) => `
+            <div class="entry-card">
+              <div class="card-header">
+                <div>
+                  <span class="lemma-title">${hap}</span>
+                  ${raw !== hap ? `<span class="pos-badge badge-noun1" style="margin-left:0.4rem;">antes: ${raw}</span>` : ""}
+                </div>
+                <div class="card-micro-actions">
+                  <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(hap)}" title="Ouvir palavra">🔊</button>
+                  <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(meta.ipa)}" title="Copiar IPA">📋</button>
+                </div>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:1.05rem;color:var(--emerald);font-weight:700;">${meta.ipa}</div>
+              <div class="ipa-syllables-row">
+                ${meta.syllables.map((s, sIdx) => `
+                  <span class="ipa-syl-chip ${sIdx === meta.stressedIdx ? "stressed" : ""} ${s.includes("'") ? "haplo" : ""}">
+                    ${s}${sIdx === meta.stressedIdx ? " ′" : ""}
+                  </span>
+                `).join("")}
+              </div>
+              ${meta.notes.length ? `
+                <div style="font-size:0.78rem;color:var(--text-secondary);display:flex;flex-wrap:wrap;gap:0.35rem;">
+                  ${meta.notes.map(n => `<span class="deriv-pill">${n}</span>`).join("")}
+                </div>
+              ` : ""}
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderPhoneticsTab(container) {
+      const examples = ["Haly'itror", "giza", "esur", "rase", "Tepy'atte", "ve'ar", "avur'é", "doote'i", "Hal'gáltte", "Kat'om", "teggar", "xer"];
+      const ipaRows = [
+        ["G / g", "/ɡ/", "Sempre velar oclusiva sonora como em «guitarra» / «gato», nunca /ʒ/.", "giza (/ˈɡi.za/), teggar, Hal'gáltte"],
+        ["S / s", "/s/", "Sempre fricativa surda como em «sapato» / «sol», nunca /z/ intervocálico.", "esur (/eˈsuɾ/), rase (/ˈra.se/), oxes"],
+        ["' (Apóstrofo)", "[ʔ]", "Haplologia Silábica Estrita (S_i[0] == S_{i+1}[0]): cai a consoante inicial repetida da 2ª sílaba.", "ve'ar, ve'aril, Tepy'atte, doote'i"],
+        ["X / x", "/x/", "Fricativa velar surda aspirada (como «j» espanhol forte).", "xer (/ˈxɛɾ/), oxe (/ˈɔ.xe/)"],
+        ["R / r vs. rr", "/ɾ/ • /r/", "Vibrante simples alveolar (r) ou vibrante múltipla geminada (rr).", "kor (/ˈkɔɾ/), durru (/duˈru/)"],
+        ["J / j", "/j/", "Semivogal palatal descendente (dativos -ej, -ij, -aj).", "oxej (/ˈɔ.xɛj/), Pattej (/ˈpat.tɛj/)"],
+        ["Y / y", "/i/", "Vogal alta anterior fechada (nunca semivogal inglesa).", "Treppênia, Haly'itror, myga"],
+        ["Ë / ë", "/ə/", "Diérese modal: marca vogal final neutra articulada separadamente.", "mobavë (/mɔˈba.və/), tonkravë"],
+        ["Á É Í Ó Ú Ý", "Tônica", "Acento agudo indica vogal tônica fora da penúltima ou distinção de Vé.", "Vé (/ˈve/), Trátte (/ˈtrat.te/), avur'é"],
+        ["Geminadas (tt, dd, ll, mm, nn, bb, gg)", "tː dː lː mː...", "Consoantes duplas geradas pelas 26 Leis de Sândi articulam-se alongadas.", "teggar, vellir, durba/durbba, sfammir"]
+      ];
+
+      container.innerHTML = `
+        <div class="ipa-rule-banner">
+          <div class="ipa-rule-card">
+            <div class="ipa-key-badge">G / g → /ɡ/ (Guitarra)</div>
+            <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
+              Em Tréppio, a letra <strong>G</strong> tem <strong>SEMPRE som duro velar /ɡ/</strong> (como em <em>guitarra</em> ou <em>guerra</em>) diante de <strong>todas</strong> as vogais — inclusive <code>ge</code>, <code>gi</code>, <code>gy</code>, <code>gë</code>. Jamais se pronuncia como /ʒ/.
+            </p>
+            <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
+              <button class="quick-chip" data-action="ipa-example" data-arg="giza">🔊 giza (/ˈɡi.za/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="gelur">🔊 gelur (/ˈɡe.luɾ/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="teggar">🔊 teggar (/ˈtɛɡːaɾ/)</button>
+            </div>
+          </div>
+
+          <div class="ipa-rule-card">
+            <div class="ipa-key-badge">S / s → /s/ (Sapato)</div>
+            <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
+              A letra <strong>S</strong> tem <strong>SEMPRE som sibilante surdo /s/</strong> (como em <em>sapato</em> ou <em>massa</em>), mesmo entre vogais ou em início/fim de sílaba. Jamais sonoriza para /z/.
+            </p>
+            <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
+              <button class="quick-chip" data-action="ipa-example" data-arg="esur">🔊 esur (/eˈsuɾ/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="rase">🔊 rase (/ˈra.se/)</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="Metuses">🔊 Metuses (/meˈtu.ses/)</button>
+            </div>
+          </div>
+
+          <div class="ipa-rule-card">
+            <div class="ipa-key-badge">' → [ʔ] (Haplologia Silábica)</div>
+            <p style="font-size:0.9rem;color:var(--text-primary);line-height:1.55;">
+              Quando o ataque consonantal de uma sílaba repete a primeira consoante da sílaba imediatamente anterior (<code>S_i[0] == S_{i+1}[0]</code>), a consoante repetida cai dando lugar ao apóstrofo <code>'</code> (máximo 1 por palavra; geminadas de Sândi intactas).
+            </p>
+            <div style="margin-top:0.6rem;display:flex;gap:0.4rem;flex-wrap:wrap;">
+              <button class="quick-chip" data-action="ipa-example" data-arg="vevar ve'ar">vevar → ve'ar</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="avurvé avur'é">avurvé → avur'é</button>
+              <button class="quick-chip" data-action="ipa-example" data-arg="Halylitror Haly'itror">Halylitror → Haly'itror</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry-card" style="margin-bottom:1.15rem;">
+          <div class="card-header">
+            <span class="lemma-title">🎙️ Analisador Silábico, IPA & Síntese Vocal Tréppia</span>
+            <span class="pos-badge badge-adv">V8.4 Ao Vivo</span>
+          </div>
+          <input
+            type="text"
+            class="input-field"
+            id="ipa-input"
+            value="${escapeHtmlAttr(ipaInputText)}"
+            oninput="handleIpaInput(this.value)"
+            placeholder="Digite qualquer palavra ou frase em Tréppio (ex.: Haly'itror, giza, esur, ve'ar, doote'i)..."
+            style="margin-top:0.4rem;"
+          />
+          <div class="search-quick-chips" style="margin-top:0.65rem;">
+            <span class="quick-chip-label">Amostras:</span>
+            ${examples.map(ex => `<button class="quick-chip" data-action="ipa-example" data-arg="${escapeHtmlAttr(ex)}">${ex}</button>`).join("")}
+          </div>
+          <div id="ipa-live-output" style="margin-top:0.85rem;"></div>
+        </div>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Grafema</th>
+                <th>Valor IPA</th>
+                <th>Regra Articulatória Oficial</th>
+                <th>Exemplos Canônicos</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${ipaRows.map(([g, ipa, desc, exs]) => `
+                <tr>
+                  <td style="font-family:var(--font-mono);font-weight:800;color:var(--gold-bright);">${g}</td>
+                  <td style="font-family:var(--font-mono);color:var(--emerald);font-weight:700;">${ipa}</td>
+                  <td>${desc}</td>
+                  <td style="font-family:var(--font-mono);font-size:0.86rem;">${exs}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+      renderIpaLiveOutput();
+    }
+
+    // --- ABA XII: TRADUTOR BILÍNGUE COMPLETO (PORTUGUÊS <-> TRÉPPIO) ---
+    const PT_FUNCTION_WORDS = [
+      { pt: "não", treppio: "ne", pos: "Advérbio Negativo", detail: "Negação factual pré-verbal (nunca usar antes do nome sem verbo)." },
+      { pt: "nao", treppio: "ne", pos: "Advérbio Negativo", detail: "Negação factual pré-verbal." },
+      { pt: "e", treppio: "et", pos: "Conjunção", detail: "Conjunção aditiva ('e')." },
+      { pt: "ou", treppio: "u", pos: "Conjunção", detail: "Conjunção alternativa ('ou')." },
+      { pt: "que", treppio: "ke", pos: "Conjunção / Relativo", detail: "Pronome relativo / conjunção integrante ('que, o qual')." },
+      { pt: "como", treppio: "ko", pos: "Conjunção", detail: "Comparação / modo ('como, assim como')." },
+      { pt: "se", treppio: "so", pos: "Conjunção", detail: "Condicional ('se')." },
+      { pt: "em", treppio: "in", pos: "Preposição", detail: "In (+ Acus. movimento / + Dat. posição estática ou temporal)." },
+      { pt: "no", treppio: "in", pos: "Preposição", detail: "In + Dativo / Acusativo." },
+      { pt: "na", treppio: "in", pos: "Preposição", detail: "In + Dativo / Acusativo." },
+      { pt: "para", treppio: "ad", pos: "Preposição", detail: "Ad + Acusativo (direção) ou Infinitivo -ur (finalidade)." },
+      { pt: "a", treppio: "ad", pos: "Preposição", detail: "Ad + Acusativo / Dativo sintético sem preposição." },
+      { pt: "ao", treppio: "ad", pos: "Preposição", detail: "Ad + Acusativo." },
+      { pt: "de", treppio: "ex", pos: "Preposição / Genitivo", detail: "Ex + Dativo (origem/procedência) ou Caso Genitivo (-y/-dy)." },
+      { pt: "do", treppio: "ex", pos: "Preposição / Genitivo", detail: "Ex + Dativo ou Genitivo (-y/-dy)." },
+      { pt: "da", treppio: "ex", pos: "Preposição / Genitivo", detail: "Ex + Dativo ou Genitivo (-y/-dy)." },
+      { pt: "sob", treppio: "ponu", pos: "Preposição", detail: "Ponu (sob o poder/jurisdição de)." },
+      { pt: "debaixo", treppio: "ponu", pos: "Preposição", detail: "Ponu." },
+      { pt: "eu", treppio: "eo", pos: "Pronome Pessoal", detail: "1ª Pessoa Sg (em regra omitida por pro-drop verbal em -m)." },
+      { pt: "tu", treppio: "to", pos: "Pronome Pessoal", detail: "2ª Pessoa Sg (pro-drop verbal em -s)." },
+      { pt: "voce", treppio: "to", pos: "Pronome Pessoal", detail: "2ª Pessoa Sg." },
+      { pt: "ele", treppio: "kan", pos: "Pronome Demonstrativo", detail: "Kan (3ª Dêixe: ele / aquele)." },
+      { pt: "nos", treppio: "no", pos: "Pronome Pessoal", detail: "1ª Pessoa Pl (pro-drop verbal em -n)." },
+      { pt: "vos", treppio: "vo", pos: "Pronome Pessoal", detail: "2ª Pessoa Pl (pro-drop verbal em -t)." },
+      { pt: "meu", treppio: "ey", pos: "Pronome Possessivo", detail: "Genitivo de eo: pós-posto ao substantivo (mon ey)." },
+      { pt: "minha", treppio: "ey", pos: "Pronome Possessivo", detail: "Genitivo de eo: pós-posto." },
+      { pt: "teu", treppio: "ty", pos: "Pronome Possessivo", detail: "Genitivo de to: pós-posto (sukor ty)." },
+      { pt: "tua", treppio: "ty", pos: "Pronome Possessivo", detail: "Genitivo de to: pós-posto." },
+      { pt: "nosso", treppio: "ny", pos: "Pronome Possessivo", detail: "Genitivo de no: pós-posto (Patte ny)." },
+      { pt: "nossa", treppio: "ny", pos: "Pronome Possessivo", detail: "Genitivo de no: pós-posto." },
+      { pt: "vosso", treppio: "vy", pos: "Pronome Possessivo", detail: "Genitivo de vo: pós-posto (mon vy)." },
+      { pt: "este", treppio: "san", pos: "Demonstrativo", detail: "1ª Dêixe (este/isto)." },
+      { pt: "esse", treppio: "tan", pos: "Demonstrativo", detail: "2ª Dêixe (esse/isso)." },
+      { pt: "aquele", treppio: "kan", pos: "Demonstrativo", detail: "3ª Dêixe (aquele/aquilo)." },
+      { pt: "hoje", treppio: "sambel", pos: "Advérbio", detail: "San + bel (nb -> mb): hoje, neste dia." },
+      { pt: "agora", treppio: "santonk", pos: "Advérbio", detail: "San + tonkre: agora, neste instante." },
+      { pt: "onde", treppio: "alim", pos: "Advérbio", detail: "Onde / outrora." },
+      { pt: "sim", treppio: "yo", pos: "Advérbio", detail: "Afirmação prática ('sim, certamente')." },
+      { pt: "assim", treppio: "zo", pos: "Advérbio Modal", detail: "Deste modo; 'Zo es' = Assim sê / Amém." },
+      { pt: "amem", treppio: "Zo es", pos: "Fórmula Litúrgica", detail: "Imperativo cósmico de fechamento." },
+      { pt: "bom dia", treppio: "Moba'el", pos: "Saudação Canônica", detail: "Moba + bel (haplologia)." },
+      { pt: "boa noite", treppio: "Mobanir", pos: "Saudação Canônica", detail: "Moba + nir." },
+      { pt: "pai nosso", treppio: "Patte ny", pos: "Oração Canônica", detail: "Abertura do Pai Nosso Tréppio." },
+      { pt: "ave maria", treppio: "Metuses Maria", pos: "Oração Canônica", detail: "Saudação cristalizada da Ave Maria." }
+    ];
+
+    function ensurePtTranslatorIndex() {
+      if (ptTranslatorIndex) return ptTranslatorIndex;
+      const list = [];
+      const pushEntry = (treppio, ptRaw, pos, detail, actionType, actionKey, boost = 0) => {
+        if (!treppio || !ptRaw) return;
+        const ptNorm = stripPtAccents(ptRaw).trim();
+        const words = ptNorm.split(/[^a-z0-9]+/).filter(Boolean);
+        list.push({
+          treppio,
+          ptRaw,
+          ptNorm,
+          words,
+          pos,
+          detail: detail || "",
+          actionType,
+          actionKey,
+          boost
+        });
+      };
+
+      PT_FUNCTION_WORDS.forEach(fn => {
+        pushEntry(fn.treppio, fn.pt, fn.pos, fn.detail, "part", fn.treppio, 45);
+      });
+
+      for (const [lemma, obj] of Object.entries(DB.substantivos || {})) {
+        pushEntry(lemma, obj.significado || "", `Substantivo (${obj.declinacao}ª Decl.)`, obj.etimologia || "", "noun", lemma, 10);
+      }
+      for (const [root, axes] of Object.entries(DB.verbos_quadripartite || {})) {
+        for (const [axLabel, axObj] of Object.entries(axes)) {
+          const inf = axObj.conjugation["Infinitivo(-ur)"];
+          pushEntry(inf, axObj.meaning || "", `Verbo [${axLabel}]`, `Raiz ${root}- | Imp: ${axObj.conjugation["Imperativo(Raiz)"]}`, "verb", root, axLabel.startsWith("1.") ? 12 : 4);
+        }
+      }
+      for (const [adj, obj] of Object.entries(DB.adjetivos || {})) {
+        pushEntry(adj, obj.Significado || "", "Adjetivo", `Comp: ${obj["Comparativo"] || "—"} | Sup: ${obj["Superlativo.Sg(-n)"] || "—"}`, "adj", adj, 8);
+      }
+      for (const [adv, obj] of Object.entries(DB.adverbios || {})) {
+        pushEntry(adv, obj.significado || "", `Advérbio (${obj.subclasse || "Modal"})`, obj.etimologia || "", "adv", adv, 6);
+      }
+      for (const [pKey, pObj] of Object.entries(DB.pronomes || {})) {
+        const desc = pObj.esfera ? `${pKey}: ${pObj.esfera}` : pKey;
+        const formTxt = pObj.Nom ? pObj.Nom.replace(/\([^)]*\)/g, "").trim() : pKey;
+        pushEntry(formTxt, desc, "Pronome", JSON.stringify(pObj).slice(0, 120), "pron", pKey, 15);
+      }
+      for (const [nKey, nObj] of Object.entries(DB.numerais || {})) {
+        pushEntry(`${nObj.cardinal} / ${nObj.ordinal}`, `numero ${nKey} (${nObj.cardinal}, ${nObj.ordinal})`, "Numeral", nObj.compostos || "", "num", nKey, 14);
+      }
+      for (const [pTok, pObj] of Object.entries(DB.particulas_e_afixos || {})) {
+        pushEntry(pTok, pObj.descricao || "", pObj.classe || "Partícula/Afixo", pObj.classe || "", "part", pTok, 18);
+      }
+      for (const [dTok, dObj] of Object.entries(DB.registro_diacronico_e_variantes || {})) {
+        pushEntry(`${dTok} → ${dObj.equivalente_canonico || ""}`, dObj.analise || "", dObj.estatuto || "Variante", dObj.equivalente_canonico || "", "diac", dTok, 2);
+      }
+      (DB.corpus_canonico || []).forEach((cObj, idx) => {
+        pushEntry(cObj.treppio || "", cObj.portugues || "", `Corpus (${cObj.categoria})`, cObj.titulo || `Texto #${idx + 1}`, "grammar", String(idx), 5);
+      });
+
+      ptTranslatorIndex = list;
+      return ptTranslatorIndex;
+    }
+
+    function lookupBestPtTokenCandidates(ptToken, idxList, limit = 12) {
+      const q = stripPtAccents(ptToken).trim();
+      if (!q) return [];
+      const qStem = q.length > 4 ? q.replace(/(s|es|os|as|mente|coes|cao|ado|ada|ar|er|ir)$/, "") : q;
+      const scored = [];
+      for (const item of idxList) {
+        let score = 0;
+        const head = (item.ptNorm.split(/[,;(]/)[0] || "").trim();
+        if (item.ptNorm === q) score = 140;
+        else if (head === q) score = 128;
+        else if (head && head.split(/[^a-z0-9]+/).includes(q)) score = 105 - Math.min(20, item.words.length);
+        else if (item.words.includes(q)) score = 85 - Math.min(25, item.words.length * 2);
+        else if (qStem.length >= 3 && item.words.some(w => w === qStem || w.startsWith(qStem))) score = 62 - Math.min(20, item.words.length);
+        else if (q.length >= 3 && item.ptNorm.includes(q)) score = 40;
+        if (score > 0) {
+          scored.push({ score: score + item.boost, item });
+        }
+      }
+      scored.sort((a, b) => b.score - a.score);
+      const seen = new Set();
+      const unique = [];
+      for (const s of scored) {
+        const k = s.item.treppio + "|" + s.item.pos;
+        if (seen.has(k)) continue;
+        seen.add(k);
+        unique.push(s);
+        if (unique.length >= limit) break;
+      }
+      return unique;
+    }
+
+    function setTranslatorDirection(dir) {
+      translatorDirection = dir;
+      if (dir === "tr-pt" && (!translatorQuery.trim() || translatorQuery === "pão e água na casa")) {
+        translatorQuery = "Faldem et Véom pasum in oxej";
+      } else if (dir === "pt-tr" && translatorQuery === "Faldem et Véom pasum in oxej") {
+        translatorQuery = "pão e água na casa";
+      }
+      renderActiveTab();
+    }
+
+    function handleTranslatorInput(val) {
+      translatorQuery = val || "";
+      renderTranslatorResults();
+    }
+
+    function renderTranslatorResults() {
+      const outEl = document.getElementById("translator-results-area");
+      if (!outEl) return;
+      const qRaw = (translatorQuery || "").trim();
+      if (!qRaw) {
+        outEl.innerHTML = `<div class="entry-card" style="color:var(--text-secondary);">Digite uma palavra ou frase para traduzir instantaneamente entre Português e Tréppio.</div>`;
+        return;
+      }
+
+      if (translatorDirection === "pt-tr") {
+        const idxList = ensurePtTranslatorIndex();
+        const qNorm = stripPtAccents(qRaw);
+        const directPhrase = idxList.filter(it => it.ptNorm === qNorm);
+        const tokens = qNorm.split(/\s+/).map(t => t.replace(/[.,;:!?()[\]"“”]/g, "")).filter(Boolean);
+        const ptStopSkips = new Set(["o", "os", "um", "uma", "uns", "umas", "com", "por", "pelo", "pela"]);
+        const tokenMappings = tokens.map(tok => {
+          if (ptStopSkips.has(tok)) return { tok, skip: true, best: null, candidates: [] };
+          const cands = lookupBestPtTokenCandidates(tok, idxList, 6);
+          return { tok, skip: false, best: cands[0] ? cands[0].item : null, candidates: cands };
+        });
+
+        const composedTreppio = (directPhrase.length && directPhrase[0].boost >= 40)
+          ? directPhrase[0].treppio
+          : tokenMappings.map(tm => tm.skip ? "" : (tm.best ? tm.best.treppio.split("/")[0].trim() : `[${tm.tok}?]`)).filter(Boolean).join(" ");
+
+        const globalCands = lookupBestPtTokenCandidates(qRaw, idxList, 36);
+        const ipaObj = analyzeTreppioWord(composedTreppio.replace(/\[[^\]]+\]/g, "").trim());
+
+        outEl.innerHTML = `
+          <div class="entry-card" style="margin-bottom:1rem;border-color:var(--border-gold);">
+            <div class="card-header">
+              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">👑 Equivalente em Tréppio</span>
+              <div class="card-micro-actions">
+                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(composedTreppio)}">🔊 Ouvir Tréppio</button>
+                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(composedTreppio)}" data-msg="Tradução copiada!">📋 Copiar</button>
+              </div>
+            </div>
+            <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold-bright);margin:0.35rem 0;">${composedTreppio || "—"}</div>
+            ${ipaObj ? `<div style="font-family:var(--font-mono);font-size:0.9rem;color:var(--emerald);">IPA: ${ipaObj.ipa}</div>` : ""}
+            <div class="translator-token-row">
+              ${tokenMappings.filter(tm => !tm.skip).map(tm => `
+                <div class="translator-token-chip ${tm.best ? "known" : "unknown"}" ${tm.best && tm.best.actionType !== "grammar" ? `data-action="jump-entry" data-arg="${escapeHtmlAttr(tm.best.actionType)}" data-arg2="${escapeHtmlAttr(tm.best.actionKey)}"` : ""}>
+                  <span style="font-size:0.72rem;color:var(--text-secondary);">${tm.tok}</span>
+                  <strong style="color:${tm.best ? "var(--gold-bright)" : "var(--text-secondary)"};">${tm.best ? tm.best.treppio : "sem verbete"}</strong>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
+            Verbetes Correspondentes em Tréppio (${globalCands.length})
+          </h3>
+          <div class="cards-grid">
+            ${globalCands.length ? globalCands.map(({ item }) => `
+              <article class="entry-card">
+                <div class="card-header">
+                  <div>
+                    <span class="lemma-title">${item.treppio}</span>
+                    <span class="pos-badge badge-noun1" style="margin-left:0.4rem;">${item.pos}</span>
+                  </div>
+                  <div class="card-micro-actions">
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(item.treppio)}" title="Ouvir">🔊</button>
+                    <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(item.treppio)}" title="Copiar">📋</button>
+                    ${item.actionType !== "grammar" ? `<button class="micro-btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(item.actionType)}" data-arg2="${escapeHtmlAttr(item.actionKey)}" title="Abrir paradigma">🔍</button>` : ""}
+                  </div>
+                </div>
+                <div class="gloss-text">${item.ptRaw}</div>
+                ${item.detail ? `<div class="etym-text">${item.detail}</div>` : ""}
+              </article>
+            `).join("") : `<div class="entry-card">Nenhum verbete encontrado para <strong>${qRaw}</strong>. Tente buscar pelo radical em português (ex.: "pão", "água", "amar", "fogo", "estrela").</div>`}
+          </div>
+        `;
+      } else {
+        // TR -> PT: usa reverseIndex completo (todas as 7 classes + 246.737 formas) + Corpus Canônico
+        const normQ = applyHaplologyTextJS(qRaw).trim();
+        const corpusExact = (DB.corpus_canonico || []).filter(c => (c.treppio || "").toLowerCase().includes(normQ.toLowerCase()));
+        const tokens = qRaw.split(/\s+/).filter(Boolean);
+        const analysisList = tokens.map(rawTok => {
+          const clean = rawTok.replace(/[.,;:!?()[\]"“”]/g, "");
+          const low = clean.toLowerCase();
+          const hap = applyHaplologyJS(clean);
+          let matches = reverseIndex.get(low) || reverseIndex.get(hap.toLowerCase()) || [];
+          const ipa = analyzeTreppioWord(hap);
+          return { raw: clean, hap, matches, ipa };
+        });
+
+        const glossSummary = analysisList.map(a => {
+          if (!a.matches.length) return `[${a.raw}?]`;
+          const m = a.matches[0];
+          const shortMean = (m.meaning || "").split(/[,;(]/)[0].trim();
+          return shortMean || m.lemma;
+        }).join(" ");
+
+        outEl.innerHTML = `
+          <div class="entry-card" style="margin-bottom:1rem;border-color:var(--border-gold);">
+            <div class="card-header">
+              <span class="lemma-title" style="font-size:1.25rem;color:var(--gold-bright);">🇧🇷 Glosa Morfológica em Português</span>
+              <div class="card-micro-actions">
+                <button class="btn btn-gold" data-action="speak" data-arg="${escapeHtmlAttr(normQ)}">🔊 Ouvir Tréppio</button>
+                <button class="btn" data-action="copy" data-arg="${escapeHtmlAttr(glossSummary)}" data-msg="Glosa copiada!">📋 Copiar</button>
+              </div>
+            </div>
+            ${corpusExact.length ? `
+              <div style="background:rgba(16,185,129,0.08);border:1px solid var(--emerald);border-radius:10px;padding:0.75rem 0.9rem;margin-bottom:0.65rem;">
+                <div style="font-size:0.78rem;color:var(--emerald);font-weight:700;">📜 Passagem Oficial no Corpus Canônico (${corpusExact[0].titulo}):</div>
+                <div style="font-size:1.05rem;margin-top:0.2rem;">${corpusExact[0].portugues}</div>
+              </div>
+            ` : ""}
+            <div style="font-size:1.25rem;color:var(--text-primary);font-weight:600;margin:0.35rem 0;">${glossSummary || "—"}</div>
+          </div>
+
+          <h3 style="color:var(--gold-bright);font-family:var(--font-serif);margin-bottom:0.65rem;">
+            Análise Interlinear Palavra-a-Palavra (Todas as 7 Classes + IPA)
+          </h3>
+          <div class="cards-grid">
+            ${analysisList.map(a => `
+              <article class="entry-card">
+                <div class="card-header">
+                  <div>
+                    <span class="lemma-title">${a.hap || a.raw}</span>
+                    ${a.ipa ? `<span style="font-family:var(--font-mono);color:var(--emerald);font-size:0.85rem;margin-left:0.45rem;">${a.ipa.ipa}</span>` : ""}
+                  </div>
+                  <div class="card-micro-actions">
+                    <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(a.hap || a.raw)}">🔊</button>
+                  </div>
+                </div>
+                ${a.matches.length ? a.matches.slice(0, 3).map(m => `
+                  <div style="padding:0.45rem 0;border-top:1px dashed var(--border-color);">
+                    <div style="display:flex;justify-content:space-between;align-items:center;gap:0.4rem;">
+                      <span class="pos-badge badge-verb">${m.category}</span>
+                      <button class="micro-btn" data-action="jump-entry" data-arg="${escapeHtmlAttr(m.actionType)}" data-arg2="${escapeHtmlAttr(m.actionKey)}">Paradigma →</button>
+                    </div>
+                    <div style="font-size:0.86rem;margin-top:0.25rem;"><strong>Lema:</strong> <code>${m.lemma}</code> • <strong>Função:</strong> ${m.tag}</div>
+                    <div class="gloss-text" style="margin-top:0.15rem;">${m.meaning}</div>
+                  </div>
+                `).join("") : `<div style="color:var(--text-secondary);font-size:0.88rem;">Vocábulo não localizado diretamente nas 246.737 formas indexadas.</div>`}
+              </article>
+            `).join("")}
+          </div>
+        `;
+      }
+    }
+
+    function renderTranslatorTab(container) {
+      const ptSamples = ["pão", "água", "fogo", "estrela", "coração", "no céu", "bom dia", "pão e água na casa"];
+      const trSamples = ["Faldem et Véom pasum", "Patte ny, ke in xeri esu", "Moba'el, Tepy'atte", "Haly'itror"];
+      const activeSamples = translatorDirection === "pt-tr" ? ptSamples : trSamples;
+
+      container.innerHTML = `
+        <div class="entry-card" style="margin-bottom:1.1rem;border-color:var(--border-gold);">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+            <div>
+              <h2 style="font-family:var(--font-serif);color:var(--gold-bright);font-size:1.5rem;">
+                🔄 Tradutor Bilíngue Tréppio ↔ Português
+              </h2>
+              <p style="font-size:0.88rem;color:var(--text-secondary);">
+                Indexa todas as 7 classes gramaticais (Substantivos, Verbos Quadripartites, Adjetivos, Advérbios, Pronomes, Numerais, Partículas) + Corpus Canônico e Variantes Diacrônicas.
+              </p>
+            </div>
+            <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+              <button class="btn ${translatorDirection === 'pt-tr' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('pt-tr')">🇧🇷 Português → Tréppio</button>
+              <button class="btn ${translatorDirection === 'tr-pt' ? 'btn-gold' : ''}" onclick="setTranslatorDirection('tr-pt')">👑 Tréppio → Português</button>
+            </div>
+          </div>
+
+          <textarea
+            id="translator-input"
+            class="translator-textarea"
+            oninput="handleTranslatorInput(this.value)"
+            placeholder="${translatorDirection === 'pt-tr' ? 'Digite uma palavra ou frase em português (ex.: pão, água, fogo, estrela, eu preciso de pão)...' : 'Digite palavras ou frases em Tréppio (ex.: Faldem et Véom pasum, Haly\'itror, ve\'ar)...'}"
+          >${translatorQuery}</textarea>
+
+          <div class="search-quick-chips" style="margin-top:0.65rem;">
+            <span class="quick-chip-label">Sugestões:</span>
+            ${activeSamples.map(s => `<button class="quick-chip" data-action="translate-example" data-arg="${escapeHtmlAttr(s)}">${s}</button>`).join("")}
+          </div>
+        </div>
+
+        <div id="translator-results-area"></div>
+      `;
+      renderTranslatorResults();
     }
 
 
@@ -3897,11 +4840,11 @@
         titulo: "Cena I: Chegada à Estalagem sob a Nevasca (Talles in Rixej)",
         subtitulo: "Diálogo de acolhida no calor da lareira de pedra após travessia na nevasca",
         falas: [
-          { autor: "Tepypatte (Estalajadeiro)", treppio: "Moba'el ad ti, ynte! Avurvé et fer in rixej vurba. Tep ny vuran esu!", pt: "Bom dia a ti, viajante! Gelo e vento rugiam na serra. Nossa casa está aquecida!" },
-          { autor: "Ynte (Viajante)", treppio: "Moba'el, Tepypatte! Faldem et luttorom vurom pasum. Avur in vari em fassa.", pt: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me." },
-          { autor: "Tepypatte (Estalajadeiro)", treppio: "In takej faldem et garvokom mobum! In vurrexi karem tor!", pt: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!" },
+          { autor: "Tepy'atte (Estalajadeiro)", treppio: "Moba'el ad ti, ynte! Avur'é et fer in rixej vurba. Tep ny vuran esu!", pt: "Bom dia a ti, viajante! Gelo e vento rugiam na serra. Nossa casa está aquecida!" },
+          { autor: "Ynte (Viajante)", treppio: "Moba'el, Tepy'atte! Faldem et luttorom vurom pasum. Avur in vari em fassa.", pt: "Bom dia, senhor da estalagem! Preciso de pão e carne assada quente. O frio na estrada castigou-me." },
+          { autor: "Tepy'atte (Estalajadeiro)", treppio: "In takej faldem et garvokom mobum! In vurrexi karem tor!", pt: "À mesa sirvo pão fresco e uma caneca de cerveja escura! Toma um assento junto à lareira!" },
           { autor: "Ynte (Viajante)", treppio: "Mobavë letum: faletom in tepi toruska? Vesdakoi falur pasum.", pt: "Peço-te com cortesia: tens um leito vago na casa? Após a ceia, repousar preciso." },
-          { autor: "Tepypatte (Estalajadeiro)", treppio: "Torum! Falet vuran in faliaj esu. Zelta verreoi paror parru.", pt: "Tenho-o! Um leito aquecido aguarda no aposento. Por três moedas de bronze acertaremos o valor." }
+          { autor: "Tepy'atte (Estalajadeiro)", treppio: "Torum! Falet vuran in faliaj esu. Zelta verreoi paror parru.", pt: "Tenho-o! Um leito aquecido aguarda no aposento. Por três moedas de bronze acertaremos o valor." }
         ]
       },
       {
@@ -3954,7 +4897,7 @@
             💬 Diálogos Práticos e Conversação Cotidiana (Ecos de Uma Vida Perdida)
           </h2>
           <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;">
-            Resultado de <strong>1.500 anos de evolução da Era Antiga para a Clássica V8.1</strong>: a linguagem prática do dia a dia no cenário de <em>Ecos de Uma Vida Perdida</em> com sintaxe V2, dativo vocalizado e rigor eufônico canônico. Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar instantaneamente suas raízes e casos no léxico de 109.013 formas!
+            Cânone de conversação prática da <strong>Era Clássica V8.4</strong>: sintaxe V2, dativo vocalizado e rigor morfofonológico (26 Leis de Sândi + Haplologia Silábica). Clique em <strong>qualquer vocábulo em Tréppio</strong> para inspecionar suas raízes, casos e IPA nas 246.737 formas!
           </p>
         </div>
 
@@ -3966,22 +4909,22 @@
                   <h3 style="font-size:1.2rem;color:var(--gold-bright);">${d.titulo}</h3>
                   <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.2rem;">${d.subtitulo}</div>
                 </div>
-                <span class="gnlt-badge">Trepiano Clássico V8.1</span>
+                <span class="gnlt-badge">Tréppio Clássico V8.4</span>
               </div>
               <div class="gnlt-card-body" style="display:flex;flex-direction:column;gap:1rem;">
                 ${d.falas.map(f => {
                   const tokenized = f.treppio.split(/(\s+)/).map(tok => {
                     if (/^\s+$/.test(tok)) return tok;
                     const clean = tok.replace(/[.,;:!?]/g, "");
-                    return `<span class="corpus-word" onclick="inspectCorpusWord('${clean.replace(/'/g, "\\'")}')">${tok}</span>`;
+                    return `<span class="corpus-word" data-action="inspect-corpus" data-arg="${escapeHtmlAttr(clean)}">${tok}</span>`;
                   }).join("");
                   return `
                     <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:8px;padding:0.9rem 1.15rem;">
                       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;gap:0.5rem;flex-wrap:wrap;">
                         <span style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;">👤 ${f.autor}</span>
                         <div class="card-micro-actions">
-                          <button class="micro-btn" onclick="speakTreppio('${f.treppio.replace(/'/g, "\'")}')" title="Ouvir frase completa em Tréppio">🔊 Ouvir Fala</button>
-                          <button class="micro-btn" onclick="copyToClipboard('${f.treppio.replace(/'/g, "\'")}', 'Fala copiada!')" title="Copiar frase em Tréppio">📋 Copiar</button>
+                          <button class="micro-btn" data-action="speak" data-arg="${escapeHtmlAttr(f.treppio)}" title="Ouvir frase completa em Tréppio">🔊 Ouvir Fala</button>
+                          <button class="micro-btn" data-action="copy" data-arg="${escapeHtmlAttr(f.treppio)}" data-msg="Fala copiada!" title="Copiar frase em Tréppio">📋 Copiar</button>
                         </div>
                       </div>
                       <div style="font-family:var(--font-serif);font-size:1.15rem;color:var(--gold-bright);line-height:1.6;">
@@ -4013,7 +4956,8 @@
     }
 
     window.addEventListener("keydown", (e) => {
-      if (e.key === "/" && document.activeElement.tagName !== "INPUT") {
+      const tag = document.activeElement ? document.activeElement.tagName : "";
+      if (e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA") {
         e.preventDefault();
         document.getElementById("omni-input").focus();
       } else if (e.key === "Escape") {
@@ -4021,10 +4965,72 @@
       }
     });
 
+    // Delegação global segura para vocábulos com apóstrofos ('ve'ar', 'Tepy'atte', 'Haly'itror', etc.)
+    document.addEventListener("click", (e) => {
+      const el = e.target.closest("[data-action]");
+      if (!el) return;
+      const action = el.dataset.action;
+      const arg = el.dataset.arg || "";
+      const arg2 = el.dataset.arg2 || "";
+      const msg = el.dataset.msg || "";
+      switch (action) {
+        case "speak":
+          speakTreppio(arg);
+          break;
+        case "copy":
+          copyToClipboard(arg, msg || undefined);
+          break;
+        case "open-noun":
+          openNounModal(arg);
+          break;
+        case "jump-entry":
+          jumpToEntry(arg, arg2);
+          break;
+        case "inspect-corpus":
+          inspectCorpusWord(arg);
+          break;
+        case "quick-search":
+          quickSearch(arg);
+          break;
+        case "select-verb":
+          selectedVerbRoot = arg;
+          renderActiveTab();
+          break;
+        case "select-letter":
+          selectedLetter = arg;
+          nounDisplayLimit = 60;
+          renderActiveTab();
+          break;
+        case "select-decl":
+          selectedDeclFilter = arg;
+          nounDisplayLimit = 60;
+          renderActiveTab();
+          break;
+        case "select-axis":
+          selectedVerbAxisIdx = Number(arg) || 0;
+          renderActiveTab();
+          break;
+        case "ipa-example": {
+          ipaInputText = arg;
+          const inp = document.getElementById("ipa-input");
+          if (inp) inp.value = arg;
+          renderIpaLiveOutput();
+          break;
+        }
+        case "translate-example": {
+          translatorQuery = arg;
+          const inp = document.getElementById("translator-input");
+          if (inp) inp.value = arg;
+          renderTranslatorResults();
+          break;
+        }
+      }
+    });
+
     window.addEventListener("DOMContentLoaded", initApp);
 
-        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-      navigator.serviceWorker.register('sw.js?v=8.2.0', { updateViaCache: 'none' })
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('sw.js?v=8.4.0', { updateViaCache: 'none' })
         .then(function(reg) {
           reg.update();
           reg.addEventListener('updatefound', function() {
@@ -4032,7 +5038,7 @@
             if (newWorker) {
               newWorker.addEventListener('statechange', function() {
                 if (newWorker.state === 'activated') {
-                  console.log('[SW] Novo Service Worker V8.2 ativado.');
+                  console.log('[SW] Novo Service Worker V8.4 ativado.');
                 }
               });
             }
@@ -4041,10 +5047,53 @@
         .catch(function() {});
     }
 
-    // 8. Utilitários Interativos Modernos: Toast, Cópia e Síntese Fonética do Tréppio (Web Speech + Ponte Nativa Android APK)
+    // 8. Utilitários Interativos Modernos: Toast, Cópia e Síntese Fonética (G=/ɡ/, S=/s/, Haplologia [ʔ])
+    let cachedSpeechVoices = [];
+    function refreshSpeechVoices() {
+      if ('speechSynthesis' in window) {
+        cachedSpeechVoices = window.speechSynthesis.getVoices() || [];
+      }
+    }
+    if ('speechSynthesis' in window) {
+      refreshSpeechVoices();
+      window.speechSynthesis.onvoiceschanged = refreshSpeechVoices;
+    }
+
+    // Regras fonéticas estritas para motor pt-BR: G=/ɡ/ (guitarra), S=/s/ (sapato), '=[ʔ]
+    function toTreppioTtsPtBr(text) {
+      return String(text || "")
+        .replace(/'/g, " ")
+        .replace(/([gG]+)(?=[eéëiíyýEÉËIÍYÝ])/g, "$1u")
+        .replace(/([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])s([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])/g, "$1ss$2")
+        .replace(/([yY])/g, m => (m === "Y" ? "I" : "i"))
+        .replace(/ë/g, "ê")
+        .replace(/Ë/g, "Ê");
+    }
+
+    // Para fallback italiano (it-IT): gh antes de e/i preserva /ɡ/, ss intervocálico preserva /s/
+    function toTreppioTtsItIt(text) {
+      return String(text || "")
+        .replace(/'/g, " ")
+        .replace(/([gG]+)(?=[eéëiíyýEÉËIÍYÝ])/g, "$1h")
+        .replace(/([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])s([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])/g, "$1ss$2")
+        .replace(/ë/g, "e");
+    }
+
+    function pickPreferredTtsVoice() {
+      if (!cachedSpeechVoices.length) refreshSpeechVoices();
+      const lower = v => (v.lang || "").toLowerCase();
+      return (
+        cachedSpeechVoices.find(v => lower(v) === "pt-br") ||
+        cachedSpeechVoices.find(v => lower(v).startsWith("pt")) ||
+        cachedSpeechVoices.find(v => lower(v).startsWith("it")) ||
+        cachedSpeechVoices.find(v => lower(v).startsWith("es")) ||
+        null
+      );
+    }
+
     function speakTreppio(text) {
       if (!text) return;
-      showToast(`🔊 Pronunciando: ${text}`);
+      showToast(`🔊 Pronunciando (G=/ɡ/, S=/s/): ${text}`);
       // 1º: Ponte Nativa Android WebView (TextToSpeech nativo do sistema Android)
       if (window.AndroidCondeBridge && typeof window.AndroidCondeBridge.speak === "function") {
         try {
@@ -4052,14 +5101,16 @@
           return;
         } catch (_) {}
       }
-      // 2º: Web Speech API (Desktop / Mobile Browser)
+      // 2º: Web Speech API (Desktop / Mobile Browser) — prioriza pt-BR com normalizador estrito G=/ɡ/, S=/s/
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.rate = 0.88;
+      const targetVoice = pickPreferredTtsVoice();
+      const useIt = targetVoice && (targetVoice.lang || "").toLowerCase().startsWith("it");
+      const spoken = useIt ? toTreppioTtsItIt(text) : toTreppioTtsPtBr(text);
+      const utter = new SpeechSynthesisUtterance(spoken);
+      utter.lang = targetVoice ? targetVoice.lang : "pt-BR";
+      utter.rate = 0.86;
       utter.pitch = 1.0;
-      const voices = window.speechSynthesis.getVoices();
-      const targetVoice = voices.find(v => v.lang.startsWith('it') || v.lang.startsWith('la') || v.lang.startsWith('es') || v.lang.startsWith('pt'));
       if (targetVoice) utter.voice = targetVoice;
       window.speechSynthesis.speak(utter);
     }
@@ -4109,7 +5160,15 @@
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="verbs" onclick="switchHub('verbs')">
       <span class="mobile-nav-icon">⚔️</span>
-      <span class="mobile-nav-label">Conjugador</span>
+      <span class="mobile-nav-label">Verbos</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="phonetics" onclick="switchHub('phonetics')">
+      <span class="mobile-nav-icon">🎙️</span>
+      <span class="mobile-nav-label">Pronúncia</span>
+    </button>
+    <button class="mobile-nav-btn" data-mobile-hub="translator" onclick="switchHub('translator')">
+      <span class="mobile-nav-icon">🔄</span>
+      <span class="mobile-nav-label">Tradutor</span>
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="dialogues" onclick="switchHub('dialogues')">
       <span class="mobile-nav-icon">💬</span>
@@ -4121,7 +5180,7 @@
     </button>
     <button class="mobile-nav-btn" data-mobile-hub="lab" onclick="switchHub('lab')">
       <span class="mobile-nav-icon">⚗️</span>
-      <span class="mobile-nav-label">Lab Sandi</span>
+      <span class="mobile-nav-label">Sandi</span>
     </button>
   </nav>
 

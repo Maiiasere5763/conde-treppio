@@ -124,7 +124,7 @@ def extract_gnlt_payload(root_dir: str) -> dict:
 
     return {
         "title": "Gramática Normativa da Língua Tréppia (GNLT)",
-        "subtitulo": "Cânone Gramatical da Era Clássica V8.1 | Chancelaria Imperial",
+        "subtitulo": "Cânone Gramatical da Era Clássica V8.4 | Chancelaria Imperial",
         "intro_base": intro_base,
         "intro_v81": intro_v81,
         "capitulos": unified_chapters
@@ -141,17 +141,48 @@ aplicando rigorosamente as 21 Leis de Sandi Consonantal, Haplologia e Reforma Vo
 
 import os
 import json
+import shutil
+import sys as _sys
+
+_SANDBOX_DIR = os.path.dirname(os.path.abspath(__file__))
+if _SANDBOX_DIR not in _sys.path:
+    _sys.path.insert(0, _SANDBOX_DIR)
+
+from lexico_expansao_v8_1 import (
+    _syllabify_treppio,
+    _apply_haplology as apply_haplology,
+    EXPANSAO_VERB_ROOTS,
+    EXPANSAO_NOUNS,
+    EXPANSAO_ADJECTIVES,
+    EXPANSAO_ADVERBS,
+    EXPANSAO_RAW_NOUN_MAP,
+    EXPANSAO_RAW_ADJ_STEMS,
+)
+
+RAW_NOUN_MAP = dict(EXPANSAO_RAW_NOUN_MAP)
+RAW_ADJ_STEMS = dict(EXPANSAO_RAW_ADJ_STEMS)
+RAW_ADJ_MAP = {k: f"{v}a" for k, v in EXPANSAO_RAW_ADJ_STEMS.items()}
+
+_TREPPIO_WORD_RE = re.compile(r"[A-Za-zÁÉÍÓÚÝáéíóúýÄËÏÖÜäëïöü']+")
+
+
+def apply_haplology_text(text: str) -> str:
+    """Aplica a lei de haplologia silábica a todos os vocábulos Tréppio em um texto."""
+    if not text:
+        return text
+    return _TREPPIO_WORD_RE.sub(lambda m: apply_haplology(m.group(0)), text)
+
 
 # ==============================================================================
-# 1. MOTOR MORFOFONOLÓGICO (21 LEIS DE SANDI CONSONANTAL + HAPLOLOGIA V8.1)
+# 1. MOTOR MORFOFONOLÓGICO (26 LEIS DE SANDI CONSONANTAL + HAPLOLOGIA SILÁBICA V8.4)
 # ==============================================================================
 
-def join_morphemes(left: str, right: str) -> str:
-    """Une dois morfemas aplicando todas as leis de sandi consonantal e haplologia da V8.1."""
+def join_morphemes(left: str, right: str, apply_haplo: bool = True) -> str:
+    """Une dois morfemas aplicando todas as leis de sandi consonantal e haplologia silábica (V8.4)."""
     if not left:
-        return right
+        return apply_haplology(right) if apply_haplo else right
     if not right:
-        return left
+        return apply_haplology(left) if apply_haplo else left
 
     # Remover acento agudo de Vé quando aglutinado no interior de composto
     if left == "Vé" and right not in ("y", "i", "om", "o", "ye", "oi", "os"):
@@ -161,102 +192,109 @@ def join_morphemes(left: str, right: str) -> str:
 
     # Haplologia dental (od + ad... -> oda'...)
     if left_clean == "od" and right.startswith("ad"):
-        return "oda'" + right[2:]
+        res = "oda'" + right[2:]
+        return apply_haplology(res) if apply_haplo else res
 
-    # Se left termina em vogal e right começa em vogal (elidir vogal temática -e/-a diante de sufixo vocálico)
+    # Se left termina em vogal temática -a/-e e right começa em vogal, elidir antes do sufixo
     if left_clean[-1] in "ae" and right[0] in "aeiouy":
         left_stem = left_clean[:-1]
     else:
         left_stem = left_clean
 
     if not left_stem:
-        return right
+        return apply_haplology(right) if apply_haplo else right
 
     # Regras de Sandi Consonantal na fronteira left_stem + right
+    res = None
     # 1. rn -> ld
     if left_stem.endswith("r") and right.startswith("n"):
-        return left_stem[:-1] + "ld" + right[1:]
+        res = left_stem[:-1] + "ld" + right[1:]
     # 2. ln -> ll
-    if left_stem.endswith("l") and right.startswith("n"):
-        return left_stem[:-1] + "ll" + right[1:]
+    elif left_stem.endswith("l") and right.startswith("n"):
+        res = left_stem[:-1] + "ll" + right[1:]
     # 3. nl -> ll
-    if left_stem.endswith("n") and right.startswith("l"):
-        return left_stem[:-1] + "ll" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("l"):
+        res = left_stem[:-1] + "ll" + right[1:]
     # 4. nn / mn / nm -> m
-    if left_stem.endswith("mn") and right.startswith("n"):
-        return left_stem[:-2] + "m" + right[1:]
-    if left_stem.endswith("n") and right.startswith("n"):
-        return left_stem[:-1] + "m" + right[1:]
+    elif left_stem.endswith("mn") and right.startswith("n"):
+        res = left_stem[:-2] + "m" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("n"):
+        res = left_stem[:-1] + "m" + right[1:]
     # 5. nr -> nn
-    if left_stem.endswith("n") and right.startswith("r"):
-        return left_stem[:-1] + "nn" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("r"):
+        res = left_stem[:-1] + "nn" + right[1:]
     # 6. td -> dd
-    if left_stem.endswith("t") and right.startswith("d"):
-        return left_stem[:-1] + "dd" + right[1:]
+    elif left_stem.endswith("t") and right.startswith("d"):
+        res = left_stem[:-1] + "dd" + right[1:]
     # 7. dt / kt -> tt
-    if (left_stem.endswith("d") or left_stem.endswith("k")) and right.startswith("t"):
-        return left_stem[:-1] + "tt" + right[1:]
+    elif (left_stem.endswith("d") or left_stem.endswith("k")) and right.startswith("t"):
+        res = left_stem[:-1] + "tt" + right[1:]
     # 8. sr -> ss
-    if left_stem.endswith("s") and right.startswith("r"):
-        return left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("s") and right.startswith("r"):
+        res = left_stem[:-1] + "ss" + right[1:]
     # 9. ds -> ss
-    if left_stem.endswith("d") and right.startswith("s"):
-        return left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("d") and right.startswith("s"):
+        res = left_stem[:-1] + "ss" + right[1:]
     # 10. zr -> zz
-    if left_stem.endswith("z") and right.startswith("r"):
-        return left_stem[:-1] + "zz" + right[1:]
+    elif left_stem.endswith("z") and right.startswith("r"):
+        res = left_stem[:-1] + "zz" + right[1:]
     # 11. mr / rm -> mm
-    if (left_stem.endswith("m") and right.startswith("r")) or (left_stem.endswith("r") and right.startswith("m")):
-        return left_stem[:-1] + "mm" + right[1:]
+    elif (left_stem.endswith("m") and right.startswith("r")) or (left_stem.endswith("r") and right.startswith("m")):
+        res = left_stem[:-1] + "mm" + right[1:]
     # 12. ldb -> lbb
-    if left_stem.endswith("ld") and right.startswith("b"):
-        return left_stem[:-2] + "lbb" + right[1:]
+    elif left_stem.endswith("ld") and right.startswith("b"):
+        res = left_stem[:-2] + "lbb" + right[1:]
     # 13. kb / tb / fb -> bb
-    if (left_stem.endswith("k") or left_stem.endswith("t") or left_stem.endswith("f")) and right.startswith("b"):
-        return left_stem[:-1] + "bb" + right[1:]
+    elif (left_stem.endswith("k") or left_stem.endswith("t") or left_stem.endswith("f")) and right.startswith("b"):
+        res = left_stem[:-1] + "bb" + right[1:]
     # 14. nb -> mb
-    if left_stem.endswith("n") and right.startswith("b"):
-        return left_stem[:-1] + "mb" + right[1:]
+    elif left_stem.endswith("n") and right.startswith("b"):
+        res = left_stem[:-1] + "mb" + right[1:]
     # 15. pg -> gg
-    if left_stem.endswith("p") and right.startswith("g"):
-        return left_stem[:-1] + "gg" + right[1:]
+    elif left_stem.endswith("p") and right.startswith("g"):
+        res = left_stem[:-1] + "gg" + right[1:]
     # 16. tk -> kk
-    if left_stem.endswith("t") and right.startswith("k"):
-        return left_stem[:-1] + "kk" + right[1:]
+    elif left_stem.endswith("t") and right.startswith("k"):
+        res = left_stem[:-1] + "kk" + right[1:]
     # 17. xr -> rr
-    if left_stem.endswith("x") and right.startswith("r"):
-        return left_stem[:-1] + "rr" + right[1:]
+    elif left_stem.endswith("x") and right.startswith("r"):
+        res = left_stem[:-1] + "rr" + right[1:]
     # 18. r + ra/ru -> rra/rru
-    if left_stem.endswith("r") and (right.startswith("ra") or right.startswith("ru")):
-        return left_stem + right
+    elif left_stem.endswith("r") and (right.startswith("ra") or right.startswith("ru")):
+        res = left_stem + right
     # 19. vt -> pt
-    if left_stem.endswith("v") and right.startswith("t"):
-        return left_stem[:-1] + "pt" + right[1:]
+    elif left_stem.endswith("v") and right.startswith("t"):
+        res = left_stem[:-1] + "pt" + right[1:]
     # 20. kl -> ll
-    if left_stem.endswith("k") and right.startswith("l"):
-        return left_stem[:-1] + "ll" + right[1:]
-    # 21. ss -> ç (em fronteira morfológica interna)
-    if left_stem.endswith("s") and right.startswith("s"):
-        return left_stem[:-1] + "ss" + right[1:]
+    elif left_stem.endswith("k") and right.startswith("l"):
+        res = left_stem[:-1] + "ll" + right[1:]
+    # 21. ss -> ss (em fronteira morfológica interna)
+    elif left_stem.endswith("s") and right.startswith("s"):
+        res = left_stem[:-1] + "ss" + right[1:]
     # 22. bp -> bb
-    if left_stem.endswith("b") and right.startswith("p"):
-        return left_stem[:-1] + "bb" + right[1:]
+    elif left_stem.endswith("b") and right.startswith("p"):
+        res = left_stem[:-1] + "bb" + right[1:]
+    else:
+        res = left_stem + right
 
-    return left_stem + right
+    return apply_haplology(res) if apply_haplo else res
 
 
 def decline_noun(lemma: str, decl: int) -> dict[str, str]:
-    """Declina um substantivo nos 8 casos/números canônicos e gera suas derivações sufixais."""
+    """Declina um substantivo nos 8 casos/números canônicos e gera suas derivações sufixais com haplologia."""
+    raw_lemma = RAW_NOUN_MAP.get(lemma, lemma)
+    hap_lemma = apply_haplology(raw_lemma)
+
     if decl == 1:
         # 1ª Declinação: Temas em -e (ou -a/-i) e variantes tônicas (-é/-ë)
-        if lemma.endswith("e") or lemma.endswith("a") or lemma.endswith("é") or lemma.endswith("ë"):
-            stem = lemma[:-1]
-            v = "e" if lemma[-1] in ("e", "é", "ë") else lemma[-1]
+        if raw_lemma.endswith("e") or raw_lemma.endswith("a") or raw_lemma.endswith("é") or raw_lemma.endswith("ë"):
+            stem = raw_lemma[:-1]
+            v = "e" if raw_lemma[-1] in ("e", "é", "ë") else raw_lemma[-1]
         else:
-            stem = lemma
+            stem = raw_lemma
             v = "e"
-        cases = {
-            "Nom.Sg": lemma,
+        raw_cases = {
+            "Nom.Sg": raw_lemma,
             "Gen.Sg": f"{stem}{v}dy",
             "Dat.Sg": f"{stem}{v}j",
             "Acu.Sg": f"{stem}{v}m",
@@ -268,10 +306,10 @@ def decline_noun(lemma: str, decl: int) -> dict[str, str]:
         base_stem = stem
     else:
         # 2ª Declinação: Temas Consonantais (Reforma Vocalizada do Dativo V8.1: -i / -oi)
-        stem = lemma
+        stem = raw_lemma
         # Subgrupo Dai: dai -> dao, daoi, daos
-        if lemma == "dai":
-            cases = {
+        if raw_lemma == "dai":
+            raw_cases = {
                 "Nom.Sg": "dai",
                 "Gen.Sg": "daiy",
                 "Dat.Sg": "daii",
@@ -281,24 +319,24 @@ def decline_noun(lemma: str, decl: int) -> dict[str, str]:
                 "Dat.Pl": "daoi",
                 "Acu.Pl": "daos",
             }
-        elif lemma.endswith("ti") or lemma.endswith("ro") or lemma.endswith("lo") or lemma.endswith("oi"):
+        elif raw_lemma.endswith("ti") or raw_lemma.endswith("ro") or raw_lemma.endswith("lo") or raw_lemma.endswith("oi"):
             # Formas já plurais coletivas (ex.: Halo, Ittakazeti, Dotakazeti, Rukroro, kuroi)
-            b = lemma[:-2] if lemma.endswith("ti") else lemma[:-1]
-            if lemma.endswith("ti"):
+            b = raw_lemma[:-2] if raw_lemma.endswith("ti") else raw_lemma[:-1]
+            if raw_lemma.endswith("ti"):
                 # Particípio plural em -eti (Nom.Sg -et)
-                s = lemma[:-1]
-                cases = {
+                s = raw_lemma[:-1]
+                raw_cases = {
                     "Nom.Sg": s,
                     "Gen.Sg": f"{s}y",
                     "Dat.Sg": f"{s}i",
                     "Acu.Sg": f"{s}om",
-                    "Nom.Pl": lemma,
+                    "Nom.Pl": raw_lemma,
                     "Gen.Pl": f"{s}ye",
                     "Dat.Pl": f"{s}oi",
                     "Acu.Pl": f"{s}os",
                 }
             else:
-                cases = {
+                raw_cases = {
                     "Nom.Sg": b,
                     "Gen.Sg": f"{b}y",
                     "Dat.Sg": f"{b}i",
@@ -309,7 +347,7 @@ def decline_noun(lemma: str, decl: int) -> dict[str, str]:
                     "Acu.Pl": f"{b}os",
                 }
         else:
-            cases = {
+            raw_cases = {
                 "Nom.Sg": stem,
                 "Gen.Sg": f"{stem}y",
                 "Dat.Sg": f"{stem}i",
@@ -321,55 +359,63 @@ def decline_noun(lemma: str, decl: int) -> dict[str, str]:
             }
         base_stem = stem
 
+    cases = {k: apply_haplology_text(val) for k, val in raw_cases.items()}
+
     # Transformações Derivacionais Potenciais do Radical Nominal
-    clean_root = "v" if lemma.lower() in ("vé", "ve") else base_stem.replace("vé", "v").lower()
-    if lemma in ("fea", "le"):
-        clean_root = lemma
+    clean_root = "v" if raw_lemma.lower() in ("vé", "ve") else base_stem.replace("vé", "v").lower()
+    if raw_lemma in ("fea", "le"):
+        clean_root = raw_lemma
     elif clean_root.endswith("e") or clean_root.endswith("a"):
         clean_root = clean_root[:-1]
 
-    ag_form = lemma if (lemma.endswith("te") or lemma.endswith("tte")) else join_morphemes(clean_root, "te")
-    inst_form = lemma if lemma.endswith("tek") else join_morphemes(clean_root.rstrip("t") if clean_root.endswith("tt") else clean_root, "tek")
-    lug_form = lemma if lemma.endswith("ia") else f"{clean_root}ia"
-    abst_form = lemma if clean_root.endswith("or") else f"{clean_root}or"
-    dim_form = lemma if clean_root.endswith("il") else f"{clean_root}il"
-    aum_form = lemma if clean_root.endswith("gar") else join_morphemes(clean_root, "gar")
-    adj_form = "va" if lemma == "Vé" else (lemma if lemma.endswith("a") else f"{clean_root}a")
-    adv_form = "vavë" if lemma == "Vé" else f"{adj_form}vë"
+    ag_raw = raw_lemma if (raw_lemma.endswith("te") or raw_lemma.endswith("tte")) else join_morphemes(clean_root, "te", apply_haplo=False)
+    inst_raw = raw_lemma if raw_lemma.endswith("tek") else join_morphemes(clean_root.rstrip("t") if clean_root.endswith("tt") else clean_root, "tek", apply_haplo=False)
+    lug_raw = raw_lemma if raw_lemma.endswith("ia") else f"{clean_root}ia"
+    abst_raw = raw_lemma if clean_root.endswith("or") else f"{clean_root}or"
+    dim_raw = raw_lemma if clean_root.endswith("il") else f"{clean_root}il"
+    aum_raw = raw_lemma if clean_root.endswith("gar") else join_morphemes(clean_root, "gar", apply_haplo=False)
+    adj_raw = "va" if raw_lemma == "Vé" else (raw_lemma if raw_lemma.endswith("a") else f"{clean_root}a")
+    adv_raw = "vavë" if raw_lemma == "Vé" else f"{adj_raw}vë"
 
     derivations = {
-        "Adj(-a)": adj_form,
-        "Adv(-vë)": adv_form,
-        "Superl.Sg(-n)": join_morphemes(clean_root, "n"),
-        "Superl.Pl(-ni)": join_morphemes(clean_root, "ni"),
-        "Lugar(-ia)": lug_form,
-        "Agente(-te)": ag_form,
-        "Abstrato(-or)": abst_form,
-        "Instrum(-tek)": inst_form,
-        "Dimin(-il)": dim_form,
-        "Aument(-gar)": aum_form,
+        "Adj(-a)": apply_haplology_text(adj_raw),
+        "Adv(-vë)": apply_haplology_text(adv_raw),
+        "Superl.Sg(-n)": apply_haplology_text(join_morphemes(clean_root, "n", apply_haplo=False)),
+        "Superl.Pl(-ni)": apply_haplology_text(join_morphemes(clean_root, "ni", apply_haplo=False)),
+        "Lugar(-ia)": apply_haplology_text(lug_raw),
+        "Agente(-te)": apply_haplology_text(ag_raw),
+        "Abstrato(-or)": apply_haplology_text(abst_raw),
+        "Instrum(-tek)": apply_haplology_text(inst_raw),
+        "Dimin(-il)": apply_haplology_text(dim_raw),
+        "Aument(-gar)": apply_haplology_text(aum_raw),
     }
+    cases["Nom.Sg"] = hap_lemma if raw_lemma == cases["Nom.Sg"] or decl == 1 else cases["Nom.Sg"]
     return {**cases, **derivations}
 
 
 def inflect_adjective(adj: str, meaning: str, comp: str = "", superl_override: str = "") -> dict[str, str]:
     """Transforma um adjetivo em todos os seus graus, advérbio modal (-vë) e declinação nominalizada."""
-    stem = adj[:-1] if (adj.endswith("a") or adj.endswith("e")) else adj
-    superl_sg = superl_override if superl_override else join_morphemes(stem, "n")
-    superl_pl = f"{superl_sg}i" if not superl_sg.endswith("i") else superl_sg
-    comparative = comp if comp else f"maer {adj}"
-    adv = f"{adj}vë" if adj.endswith("a") else f"{stem}avë"
-    abstr = f"{stem}or"
-    verb_fact = f"in{stem}ur" if not stem.startswith("l") else f"il{stem}ur"
+    raw_adj = RAW_ADJ_MAP.get(adj, adj)
+    stem = RAW_ADJ_STEMS.get(adj, raw_adj[:-1] if (raw_adj.endswith("a") or raw_adj.endswith("e")) else raw_adj)
+    hap_adj = apply_haplology(raw_adj)
+    is_vocal = raw_adj.endswith("a") or raw_adj.endswith("e")
+
+    raw_superl_sg = superl_override if superl_override else join_morphemes(stem, "n", apply_haplo=False)
+    superl_sg = apply_haplology(raw_superl_sg)
+    superl_pl = apply_haplology(f"{raw_superl_sg}i" if not raw_superl_sg.endswith("i") else raw_superl_sg)
+    comparative = apply_haplology_text(comp) if comp else f"maer {hap_adj}"
+    adv = apply_haplology(f"{raw_adj}vë" if raw_adj.endswith("a") else f"{stem}avë")
+    abstr = apply_haplology(f"{stem}or")
+
     return {
-        "Positivo.Sg": adj,
-        "Gen.Sg": f"{adj}dy" if adj.endswith("a") or adj.endswith("e") else f"{adj}y",
-        "Dat.Sg": f"{adj}j" if adj.endswith("a") or adj.endswith("e") else f"{adj}i",
-        "Acu.Sg": f"{adj}m" if adj.endswith("a") or adj.endswith("e") else f"{adj}om",
-        "Nom.Pl": f"{adj}r" if adj.endswith("a") or adj.endswith("e") else f"{adj}o",
-        "Gen.Pl": f"{adj}dye" if adj.endswith("a") or adj.endswith("e") else f"{adj}ye",
-        "Dat.Pl": f"{adj}rj" if adj.endswith("a") or adj.endswith("e") else f"{adj}oi",
-        "Acu.Pl": f"{adj}s" if adj.endswith("a") or adj.endswith("e") else f"{adj}os",
+        "Positivo.Sg": hap_adj,
+        "Gen.Sg": apply_haplology(f"{raw_adj}dy" if is_vocal else f"{raw_adj}y"),
+        "Dat.Sg": apply_haplology(f"{raw_adj}j" if is_vocal else f"{raw_adj}i"),
+        "Acu.Sg": apply_haplology(f"{raw_adj}m" if is_vocal else f"{raw_adj}om"),
+        "Nom.Pl": apply_haplology(f"{raw_adj}r" if is_vocal else f"{raw_adj}o"),
+        "Gen.Pl": apply_haplology(f"{raw_adj}dye" if is_vocal else f"{raw_adj}ye"),
+        "Dat.Pl": apply_haplology(f"{raw_adj}rj" if is_vocal else f"{raw_adj}oi"),
+        "Acu.Pl": apply_haplology(f"{raw_adj}s" if is_vocal else f"{raw_adj}os"),
         "Comparativo": comparative,
         "Superl.Sg(-n)": superl_sg,
         "Superl.Pl(-ni)": superl_pl,
@@ -418,39 +464,39 @@ def conjugate_stem_all_109(stem: str) -> dict[str, any]:
     ]
     forms = {}
     for t_name, t_suf in tenses:
-        base_t = join_morphemes(stem, t_suf)
+        base_t = join_morphemes(stem, t_suf, apply_haplo=False)
         act_list = []
         pas_list = []
         for p_name, p_suf in persons:
-            act_form = base_t + p_suf
-            pas_form = base_t + "se" + p_suf
+            act_form = apply_haplology(base_t + p_suf)
+            pas_form = apply_haplology(base_t + "se" + p_suf)
             act_list.append(act_form)
             pas_list.append(pas_form)
         forms[f"{t_name}.Ativa"] = act_list
         forms[f"{t_name}.Passiva"] = pas_list
 
     # Formas Nominais e Imperativo
-    inf = f"{stem}ur"
-    imp = stem.capitalize() + "!"
-    part_sg = f"{stem}et"
+    inf = apply_haplology(f"{stem}ur")
+    imp = apply_haplology(stem.capitalize()) + "!"
+    part_sg_raw = f"{stem}et"
     part_cases = {
-        "Nom.Sg": part_sg,
-        "Gen.Sg": f"{part_sg}y",
-        "Dat.Sg": f"{part_sg}i",
-        "Acu.Sg": f"{part_sg}om",
-        "Nom.Pl": f"{part_sg}i",
-        "Gen.Pl": f"{part_sg}ye",
-        "Dat.Pl": f"{part_sg}oi",
-        "Acu.Pl": f"{part_sg}os",
+        "Nom.Sg": apply_haplology(part_sg_raw),
+        "Gen.Sg": apply_haplology(f"{part_sg_raw}y"),
+        "Dat.Sg": apply_haplology(f"{part_sg_raw}i"),
+        "Acu.Sg": apply_haplology(f"{part_sg_raw}om"),
+        "Nom.Pl": apply_haplology(f"{part_sg_raw}i"),
+        "Gen.Pl": apply_haplology(f"{part_sg_raw}ye"),
+        "Dat.Pl": apply_haplology(f"{part_sg_raw}oi"),
+        "Acu.Pl": apply_haplology(f"{part_sg_raw}os"),
     }
     # Interrogativo 2ª Pl Presente (tk -> kk)
-    interrog_2pl = join_morphemes(f"{stem}ut", "ka") + "?"
+    interrog_2pl = apply_haplology(join_morphemes(f"{stem}ut", "ka", apply_haplo=False)) + "?"
     # Derivados Nominais do Verbo
     deriv = {
-        "Agente(-te)": join_morphemes(stem, "te"),
-        "Abstrato(-or)": f"{stem}or",
-        "Instrum(-tek)": join_morphemes(stem, "tek"),
-        "Lugar(-ia)": f"{stem}ia",
+        "Agente(-te)": join_morphemes(stem, "te", apply_haplo=True),
+        "Abstrato(-or)": apply_haplology(f"{stem}or"),
+        "Instrum(-tek)": join_morphemes(stem, "tek", apply_haplo=True),
+        "Lugar(-ia)": apply_haplology(f"{stem}ia"),
     }
     forms["Infinitivo(-ur)"] = inf
     forms["Imperativo(Raiz)"] = imp
@@ -1187,16 +1233,26 @@ VERB_ROOTS.extend([
 
 # Integração da Expansão Lexical de Grande Escala V8.1 (O Conde)
 import sys as _sys
-_sandbox_dir = os.path.dirname(os.path.abspath(__file__))
-if _sandbox_dir not in _sys.path:
-    _sys.path.insert(0, _sandbox_dir)
-from lexico_expansao_v8_1 import (
-    EXPANSAO_VERB_ROOTS,
-    EXPANSAO_NOUNS,
-    EXPANSAO_ADJECTIVES,
-    EXPANSAO_ADVERBS,
-)
+def _normalize_base_noun(item):
+    raw_l, decl, mean, etym = item
+    hap_l = apply_haplology(raw_l)
+    if hap_l != raw_l:
+        RAW_NOUN_MAP[hap_l] = raw_l
+    return (hap_l, decl, mean, etym)
 
+
+def _normalize_base_adj(item):
+    raw_a, mean, comp, sup_ov = item
+    hap_a = apply_haplology(raw_a)
+    if hap_a != raw_a:
+        RAW_ADJ_MAP[hap_a] = raw_a
+        RAW_ADJ_STEMS[hap_a] = raw_a[:-1] if (raw_a.endswith("a") or raw_a.endswith("e")) else raw_a
+    raw_sup = sup_ov if sup_ov else ""
+    return (hap_a, mean, apply_haplology_text(comp) if comp else "", apply_haplology(raw_sup) if raw_sup else "")
+
+
+NOUNS = [_normalize_base_noun(x) for x in NOUNS]
+ADJECTIVES = [_normalize_base_adj(x) for x in ADJECTIVES]
 NOUNS.extend(EXPANSAO_NOUNS)
 ADJECTIVES.extend(EXPANSAO_ADJECTIVES)
 VERB_ROOTS.extend(EXPANSAO_VERB_ROOTS)
@@ -1252,13 +1308,15 @@ ADVERBS = [
 ]
 # Adicionar todos os advérbios modais em -vë gerados a partir de cada adjetivo
 for adj, meaning, _, _ in ADJECTIVES:
-    stem = adj[:-1] if (adj.endswith("a") or adj.endswith("e")) else adj
-    adv_form = f"{adj}vë" if adj.endswith("a") else f"{stem}avë"
+    raw_adj = RAW_ADJ_MAP.get(adj, adj)
+    stem = RAW_ADJ_STEMS.get(adj, raw_adj[:-1] if (raw_adj.endswith("a") or raw_adj.endswith("e")) else raw_adj)
+    adv_form = apply_haplology(f"{raw_adj}vë" if raw_adj.endswith("a") else f"{stem}avë")
     ADVERBS.append((adv_form, "Modal Regulado (-vë com diérese)", f"{adj} + -vë", f"de modo {meaning.split(',')[0]}"))
 
-# Adicionar advérbios especiais do Halylitror e da Expansão V8.1
+# Adicionar advérbios especiais do Haly'itror e da Expansão V8.1/V8.4
 ADVERBS.append(("rukraletavë", "Modal Composto (-vë)", "rukraleta + -vë", "em altíssima voz, com clamor trovejante"))
 ADVERBS.extend(EXPANSAO_ADVERBS)
+ADVERBS = [(apply_haplology(adv), subc, etym, mean) for adv, subc, etym, mean in ADVERBS]
 ADVERBS = _dedup_by_first(ADVERBS)
 ADVERBS.sort(key=lambda x: x[0])
 
@@ -1281,9 +1339,9 @@ NUMERALS = [
     ("1", "id", "Itta (dt -> tt)", "Itte / Itta", "Ittady / Itty", "Ittaj / Itti", "Ittam / Ittom", "idda (id+da: único)"),
     ("2", "do", "Dota", "Dote / Dota", "Dotady / Doty", "Dotaj / Doti", "Dotam / Dotom", "Dokrom (20), Dotakazeti"),
     ("3", "zel", "Zelta", "Zelte / Zelta", "Zeltady / Zelty", "Zeltej / Zelti", "Zeltam / Zeltom", "Zelkrom (30)"),
-    ("4", "kat", "Katta (tt)", "Katte / Katta", "Kattady / Katty", "Kattaj / Katti", "Kattam / Kattom", "Katkom (40)"),
+    ("4", "kat", "Katta (tt)", "Katte / Katta", "Kattady / Katty", "Kattaj / Katti", "Kattam / Kattom", "Kat'om (40)"),
     ("5", "vex", "Vexta", "Vexte / Vexta", "Vextady / Vexty", "Vextaj / Vexti", "Vextam / Vextom", "Vexkrom (50)"),
-    ("6", "tir", "Tirta", "Tirte / Tirta", "Tirtady / Tirty", "Tirtaj / Tirti", "Tirtam / Tirtom", "Tirkrom (60)"),
+    ("6", "tir", "Tir'a", "Tir'e / Tir'a", "Tir'ady / Tir'y", "Tir'aj / Tir'i", "Tir'am / Tir'om", "Tirkrom (60)"),
     ("7", "san", "Santa", "Sante / Santa", "Santady / Santy", "Santaj / Santi", "Santam / Santom", "Sankrom (70)"),
     ("8", "nyr", "Nyrta (Ablaut de nir)", "Nyrte / Nyrta", "Nyrtady / Nyrty", "Nyrtaj / Nyrti", "Nyrtam / Nyrtom", "Nyrkrom (80)"),
     ("9", "nev", "Nepta (vt -> pt)", "Nepte / Nepta", "Neptady / Nepty", "Neptaj / Nepti", "Neptam / Neptom", "Nevkrom (90)"),
@@ -1314,11 +1372,11 @@ PARTICLES_AND_AFFIXES = [
     ("-te", "Sufixo Derivacional de Agente", "Forma substantivos de agente ou ofício; dispara dt/kt -> tt (Kratte, Trátte, Totte, Tette, galtte, saitte, mirte, litrte)."),
     ("-or / -re", "Sufixo Derivacional de Abstração e Obra", "Forma substantivos abstratos ou resultados de ação na 2ª Declinação (belor, mobor, litror, daior, isor, tekor, krador)."),
     ("-tek", "Sufixo Derivacional de Instrumento", "Forma substantivos de ferramenta ou utensílio na 2ª Declinação; dispara dt/kt -> tt (lettek, litrtek, tettek, sfartek, saittek)."),
-    ("-il", "Sufixo Derivacional Diminutivo", "Forma diminutivos ou afetivos na 2ª Declinação (tepil, koril, vevaril)."),
+    ("-il", "Sufixo Derivacional Diminutivo", "Forma diminutivos ou afetivos na 2ª Declinação (tepil, koril, ve'aril)."),
     ("-gar / -ar / -on", "Sufixo Derivacional Aumentativo e Solene", "Forma aumentativos monumentais na 2ª Declinação; dispara pg -> gg (teggar, litrgar, oxegar, karegar, mirgar, rixegar)."),
     ("-n / -ni", "Sufixo do Superlativo Absoluto Orgânico", "Acoplado à raiz no singular (-n) e plural (-ni); dispara rn -> ld (mild, kold, feld), ln -> ll (bell, vell, fill) e nn/mn -> m (nemm)."),
-    ("-vë", "Sufixo Adverbial Modal com Diérese", "Único morfema com trema diferencial na V8.1; converte adjetivos em advérbios de modo (mobavë, kuravë, elfavë, rukravë)."),
-    ("-ta", "Sufixo de Numeral Ordinal", "Converte cardinais em ordinais; dispara dt -> tt (Itta) e vt -> pt (Nepta)."),
+    ("-vë", "Sufixo Adverbial Modal com Diérese", "Único morfema com trema diferencial na V8.4; converte adjetivos em advérbios de modo (mobavë, kuravë, elfavë, rukravë)."),
+    ("-ta", "Sufixo de Numeral Ordinal", "Converte cardinais em ordinais; dispara dt -> tt (Itta), vt -> pt (Nepta) e haplologia silábica quando t..t.. (Tir'a)."),
 ]
 
 # 2.8. REGISTRO DIACRÔNICO, FÓRMULAS LITÚRGICAS CRISTALIZADAS, VARIANTES PLEBEIAS (C/Ç) E FORMAS PRÉ-SÍNCRESE
@@ -1383,12 +1441,12 @@ def generate_all_files():
     }
 
     md_lines = []
-    md_lines.append("# Dicionário Geral e Códice Flexional Exaustivo da Língua Tréppia (Era Clássica V8.1 — Sandbox)\n")
+    md_lines.append("# Dicionário Geral e Códice Flexional Exaustivo da Língua Tréppia (Era Clássica V8.4 — Sandbox)\n")
     md_lines.append("**Autor:** O Conde (Assistente Filológico e Glotopoético do Tréppio)  ")
     md_lines.append("**Estatuto Documental:** Compilação Integral em Ambiente de Sandbox (`D:\\Conde_Treppio\\sandbox\\`)\n")
     md_lines.append("> [!IMPORTANT]")
     md_lines.append("> **Arquitetura Deste Dicionário Integral:**")
-    md_lines.append(f"> Este códice reúne **todos os verbetes existentes no idioma Tréppio (V8.1)** separados estritamente por classe gramatical (**{len(NOUNS)} Substantivos e Nomes Próprios**, **{len(ADJECTIVES)} Adjetivos**, **{len(ADVERBS)} Advérbios**, **Pronomes Pessoais e Demonstrativos**, **Numerais**, **Preposições/Conjunções/Partículas/Afixos**, e **{len(VERB_ROOTS)} Raízes Verbais Primárias** projetadas nos **4 Eixos da Matriz Quadripartite = {len(VERB_ROOTS)*4} Verbos Independentes**). Cada verbete foi submetido ao motor morfofonológico das 21 Leis de Sandi Consonantal e Haplologia para exibir todas as suas terminações flexionais e derivacionais possíveis.\n")
+    md_lines.append(f"> Este códice reúne **todos os verbetes existentes no idioma Tréppio (V8.4)** separados estritamente por classe gramatical (**{len(NOUNS)} Substantivos e Nomes Próprios**, **{len(ADJECTIVES)} Adjetivos**, **{len(ADVERBS)} Advérbios**, **Pronomes Pessoais e Demonstrativos**, **Numerais**, **Preposições/Conjunções/Partículas/Afixos**, e **{len(VERB_ROOTS)} Raízes Verbais Primárias** projetadas nos **4 Eixos da Matriz Quadripartite = {len(VERB_ROOTS)*4} Verbos Independentes**). Cada verbete foi submetido ao motor morfofonológico das 26 Leis de Sandi Consonantal e Haplologia Silábica (`'`) para exibir todas as suas terminações flexionais e derivacionais possíveis.\n")
     md_lines.append("---\n")
 
     # --------------------------------------------------------------------------
@@ -1667,6 +1725,12 @@ def generate_all_files():
         }
     ]
 
+    full_json_db["metadata"]["title"] = "Dicionário Geral e Códice Morfológico Exaustivo da Língua Tréppia (Era Clássica V8.4)"
+
+    for entry in full_json_db["corpus_canonico"]:
+        entry["titulo"] = entry["titulo"].replace("ODomínio", "O Domínio").replace("Halylitror", "Haly'itror")
+        entry["treppio"] = apply_haplology_text(entry["treppio"])
+
     full_json_db["metadata"]["total_expanded_word_forms"] = total_word_forms
     full_json_db["gnlt"] = extract_gnlt_payload(root_dir)
 
@@ -1711,13 +1775,17 @@ def generate_all_files():
         with open(ui_index_path, "r", encoding="utf-8") as f:
             html_template = f.read()
 
-        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + dicionario_formas_expandidas.json)
+        # 1. Salvar site completo em docs/ (GitHub Pages: index.html + dados_dicionario_conde.js + dicionario_formas_expandidas.json + PWA)
         with open(os.path.join(docs_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html_template)
         with open(os.path.join(docs_dir, "dados_dicionario_conde.js"), "w", encoding="utf-8") as f:
             f.write("window.CONDE_DB = " + json_compact_str + ";\n")
         with open(os.path.join(docs_dir, "dicionario_formas_expandidas.json"), "w", encoding="utf-8") as f:
             f.write(json_compact_str)
+        for pwa_asset in ("sw.js", "manifest.json", "icon-512.png"):
+            src_asset = os.path.join(ui_dir, pwa_asset)
+            if os.path.exists(src_asset):
+                shutil.copy2(src_asset, os.path.join(docs_dir, pwa_asset))
 
         # 2. Gerar arquivo único 100% autocontido (dist/Codice_Treppio_Portatil.html) para envio a amigos / Google Drive
         inline_script = f"<script>window.CONDE_DB = {json_compact_str};</script>"
@@ -1740,11 +1808,105 @@ def generate_all_files():
                 except OSError:
                     pass
 
+    _update_treppio_base_dictionary(root_dir, full_json_db)
+
     print(f"=== GERAÇÃO CONCLUÍDA COM SUCESSO ===")
     print(f" -> Dicionário Geral Markdown: {sandbox_md_path} ({os.path.getsize(sandbox_md_path):,} bytes)")
     print(f" -> Códice Verbal Exaustivo:   {verbs_md_path} ({os.path.getsize(verbs_md_path):,} bytes)")
     print(f" -> Banco JSON de Formas:      {json_path} ({os.path.getsize(json_path):,} bytes)")
     print(f" -> Total de formas flexionadas e derivadas geradas e validadas: {total_word_forms:,}")
+
+
+def _update_treppio_base_dictionary(root_dir: str, db: dict) -> None:
+    """Atualiza a Seção IX de treppio_base.md com o catálogo completo de lemas e classes fechadas."""
+    base_path = os.path.join(root_dir, "treppio_base.md")
+    if not os.path.exists(base_path):
+        return
+    with open(base_path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    m = db["metadata"]
+    subs = db["substantivos"]
+    adjs = db["adjetivos"]
+    advs = db["adverbios"]
+    verbs = db["verbos_quadripartite"]
+    prons = db["pronomes"]
+    nums = db["numerais"]
+    parts = db["particulas_e_afixos"]
+
+    lines = [
+        "<!-- BEGIN_DICTIONARY_CONDE -->",
+        "## IX. Dicionário Geral Integral da Língua Tréppia (Era Clássica V8.4)",
+        "",
+        (
+            f"> **Inventário Canônico:** {m['nouns_count']} substantivos ({len(subs)} lemas), "
+            f"{m['adjectives_count']} adjetivos, {m['adverbs_count']} advérbios, "
+            f"{m['verb_roots_count']} raízes verbais ({m['verb_stems_quadripartite']} verbos quadripartites), "
+            f"**{m['total_expanded_word_forms']:,} formas flexionadas e derivadas** (com haplologia silábica `'`)."
+        ),
+        "",
+        f"### IX.1. Substantivos ({len(subs)})",
+    ]
+    for lemma in sorted(subs.keys(), key=str.lower):
+        info = subs[lemma]
+        nom_pl = info["formas"].get("Nom.Pl", "")
+        lines.append(f"- **{lemma}** ({info['declinacao']}ª, pl. *{nom_pl}*) — {info['significado']} `[{info['etimologia']}]`")
+
+    lines.append("")
+    lines.append(f"### IX.2. Adjetivos ({len(adjs)})")
+    for adj in sorted(adjs.keys(), key=str.lower):
+        info = adjs[adj]
+        lines.append(
+            f"- **{adj}** — {info['Significado']} *(comp: {info['Comparativo']} | sup: {info['Superl.Sg(-n)']} | adv: {info['Adv.Modal(-vë)']})*"
+        )
+
+    lines.append("")
+    lines.append(f"### IX.3. Advérbios ({len(advs)})")
+    for adv in sorted(advs.keys(), key=str.lower):
+        info = advs[adv]
+        lines.append(f"- **{adv}** ({info['subclasse']}) — {info['significado']} `[{info['etimologia']}]`")
+
+    lines.append("")
+    lines.append(f"### IX.4. Raízes Verbais — Matriz Quadripartite ({len(verbs)} raízes = {len(verbs)*4} verbos)")
+    for root in sorted(verbs.keys(), key=str.lower):
+        axes = verbs[root]
+        pos = axes.get("1. Positivo", {})
+        priv = axes.get("2. Privativo (a-)", {})
+        it = axes.get("3. Iterativo (o-/od-)", {})
+        itp = axes.get("4. Iter.-Privativo (od-a-)", {})
+        lines.append(
+            f"- **{root}-** (*Pos:* `{pos.get('stem','')}-` {pos.get('meaning','')} | "
+            f"*Priv:* `{priv.get('stem','')}-` {priv.get('meaning','')} | "
+            f"*Iter:* `{it.get('stem','')}-` {it.get('meaning','')} | "
+            f"*It.-Priv:* `{itp.get('stem','')}-` {itp.get('meaning','')})"
+        )
+
+    lines.append("")
+    lines.append("### IX.5. Pronomes, Numerais e Partículas/Afixos")
+    for pk, pv in prons.items():
+        if "Nom" in pv:
+            lines.append(f"- **Pron. {pk}**: Nom `{pv['Nom']}` | Gen `{pv['Gen']}` | Acu `{pv['Acu']}` | Dat `{pv['Dat']}`")
+        else:
+            lines.append(f"- **Dem. {pk}** ({pv.get('esfera','')}): Nom.Sg `{pv.get('Nom.Sg','')}`, Gen `{pv.get('Gen.Sg','')}`, Dat `{pv.get('Dat.Sg','')}`, Acu `{pv.get('Acu.Sg','')}` | Pl `{pv.get('Nom.Pl','')}`")
+    for nk, nv in nums.items():
+        lines.append(f"- **Num. {nk}**: card. `{nv['cardinal']}` | ord. `{nv['ordinal']}` | comps: {nv['compostos']}")
+    for mk, mv in parts.items():
+        lines.append(f"- **{mk}** ({mv['classe']}) — {mv['descricao']}")
+    lines.append("<!-- END_DICTIONARY_CONDE -->")
+
+    block = "\n".join(lines) + "\n"
+    begin_tag = "<!-- BEGIN_DICTIONARY_CONDE -->"
+    end_tag = "<!-- END_DICTIONARY_CONDE -->"
+    if begin_tag in text and end_tag in text:
+        pre = text.split(begin_tag, 1)[0].rstrip()
+        post = text.split(end_tag, 1)[1].lstrip("\r\n")
+        new_text = pre + "\n\n" + block + ("\n" + post if post else "")
+    else:
+        new_text = text.rstrip() + "\n\n" + block
+
+    with open(base_path, "w", encoding="utf-8") as f:
+        f.write(new_text)
+
 
 if __name__ == "__main__":
     generate_all_files()

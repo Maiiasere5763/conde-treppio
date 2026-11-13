@@ -1,4 +1,4 @@
-name: Compilar APK Android (Códice Tréppio V8.1)
+name: Compilar APK Android (Códice Tréppio V8.4)
 
 on:
   push:
@@ -62,13 +62,13 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v8.1.0-apk
-          name: "Códice Tréppio V8.1 — APK para Android"
+          tag_name: v8.4.0-apk
+          name: "Códice Tréppio V8.4 — APK para Android"
           body: |
-            ### Códice Lexicográfico Imperial da Língua Tréppia (Era Clássica V8.1)
+            ### Códice Lexicográfico Imperial da Língua Tréppia (Era Clássica V8.4)
             - **Arquivo**: `Codice_Treppio_Conde.apk`
-            - **Total de Formas**: 46.531 formas flexionadas e derivadas da Matriz Quadripartite.
-            - **Inventário Filológico**: 380 substantivos, 336 verbos quadripartites, 82 adjetivos, 84 advérbios, GNLT (8 capítulos) e Diálogos de Ecos (1.500 anos).
+            - **Total de Formas**: 246.737 formas flexionadas e derivadas da Matriz Quadripartite com haplogia silábica normativa.
+            - **Inventário Filológico**: 2.109 substantivos, 1.768 verbos quadripartites (442 raízes), 446 adjetivos, 1.202 advérbios, Pronúncia & IPA (`G=/ɡ/` guitarra, `S=/s/` sapato), Tradutor Bilíngue (`TR ↔ PT`), GNLT e Diálogos de Ecos.
             - **Design**: Visual Obsidian/Parchment de luxo com tipografia clássica imperial (Cinzel, Playfair Display, Inter, JetBrains Mono).
             - **Compatibilidade**: Android 7.0 até Android 15+.
             - **Offline-First**: Funciona sem internet com sincronização opcional via GitHub / Google Drive.

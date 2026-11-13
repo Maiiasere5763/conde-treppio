@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 r"""
 validar_sandi_e_colisoes.py
-Auditor Fonotático, Morfofonológico (21 Leis de Sandi), Anti-Colisão Homofônica
-e Filtro Algorítmico Anti-Romanismo (Limite Máximo de 50% de Similaridade)
-para a Expansão Lexical da Língua Tréppia (Era Clássica V8.2 — O Conde).
+Auditor Fonotático, Morfofonológico (26 Leis de Sandi + Haplologia Silábica),
+Anti-Colisão Homofônica e Filtro Anti-Romanismo
+para a Expansão Lexical da Língua Tréppia (Era Clássica V8.4 — O Conde).
 """
 import os
 import re
 import sys
+import json
 import unicodedata
 from difflib import SequenceMatcher
 
@@ -17,7 +18,7 @@ import lexico_expansao_v8_1 as exp
 
 FORBIDDEN_CLUSTERS = re.compile(r"rn|nl|nr|dt|kt|pg|tk|ds|zr|mr|sr|ln|bp")
 FORBIDDEN_GRAPHEMES = re.compile(r"c|ç|q|w|lh|nh|ch|j")
-INITIAL_CLUSTER = re.compile(r"^[^aeiouyAEIOUY\W_]{2,}")
+INITIAL_CLUSTER = re.compile(r"^[^aeiouyAEIOUYáéíóúýäëïöüÁÉÍÓÚÝÄËÏÖÜ'\W_]{2,}")
 ROMANCE_SIMILARITY_THRESHOLD = 0.70
 PURGADOS = {
     "mandur", "bibur", "panna", "broda", "karna", "kamin", "husa", "stuba",
@@ -57,8 +58,12 @@ def _strip_accents(s: str) -> str:
 
 
 def _normalize_treppio_stem(lemma: str) -> str:
-    s = _strip_accents(lemma.lower().replace("'", ""))
+    s_acc = _strip_accents(lemma.lower())
+    s = s_acc.replace("'", "")
     for suf in ("gar", "ttek", "tek", "ia", "or", "il", "tte", "te", "et", "ve", "ur"):
+        if s_acc.endswith("'" + suf) and len(s_acc) >= len(suf) + 3:
+            s = s_acc[:-(len(suf) + 1)].replace("'", "")
+            break
         if len(s) >= len(suf) + 3 and s.endswith(suf):
             s = s[:-len(suf)]
             break
@@ -97,17 +102,18 @@ def check_romance_similarity(lemma: str, meaning: str) -> tuple[float, str]:
 
 
 def run_audit():
-    print("=== INICIANDO AUDITORIA FILOLÓGICA, FONOTÁTICA E ANTI-ROMÂNICA DO CONDE (V8.2) ===")
+    print("=== INICIANDO AUDITORIA FILOLÓGICA, FONOTÁTICA, HAPLOLÓGICA E ANTI-ROMÂNICA DO CONDE (V8.4) ===")
 
     exp_nouns_set = {x[0].lower() for x in exp.EXPANSAO_NOUNS}
     exp_adjs_set = {x[0].lower() for x in exp.EXPANSAO_ADJECTIVES}
     exp_verbs_set = {x[0].lower() for x in exp.EXPANSAO_VERB_ROOTS}
     exp_advs_set = {x[0].lower() for x in exp.EXPANSAO_ADVERBS}
+    exp_adj_advs = {gen.inflect_adjective(a[0], "")["Adv.Modal(-vë)"].lower() for a in exp.EXPANSAO_ADJECTIVES}
 
     existing_nouns = {x[0].lower() for x in gen.NOUNS} - exp_nouns_set
     existing_adjs = {x[0].lower() for x in gen.ADJECTIVES} - exp_adjs_set
     existing_verbs = {x[0].lower() for x in gen.VERB_ROOTS} - exp_verbs_set
-    existing_advs = {x[0].lower() for x in gen.ADVERBS} - exp_advs_set - {f"{a}vë" for a in exp_adjs_set}
+    existing_advs = {x[0].lower() for x in gen.ADVERBS} - exp_advs_set - exp_adj_advs
     all_existing_lemmas = existing_nouns | existing_adjs | existing_verbs | existing_advs
 
     errors = []
@@ -227,13 +233,12 @@ def run_audit():
     print(f"  [OK] {na} Adjetivos Qualificativos ({na} × 13 transformações = {na * 13:,} formas adjetivais)")
     print(f"  [OK] {nadv} Advérbios Modais e Sintáticos (-vë)")
     print("  [OK] 0 Clusters Consonantais Iniciais (#CC... estritamente banidos)")
-    print("  [OK] 0 Encontros Consonantais Proibidos (22 Leis de Sandi 100% respeitadas, incluindo bp -> bb)")
+    print("  [OK] 0 Encontros Consonantais Proibidos (26 Leis de Sandi 100% respeitadas, incluindo bp -> bb)")
     print("  [OK] 0 Grafemas Proibidos (c, ç, q, w, lh, nh, ch, j não-dativo)")
     print("  [OK] 0 Lexemas com Similaridade Românica/Greco-Latina > 70% (Tolerância Românica 70% aprovada)")
     print("  [OK] 0 Colisões Homofônicas com o Corpus Canônico Existente")
 
-    # 5. Validar JSON Compilado Final (Dinâmico para expansões horárias)
-    import json
+    # 5. Validar JSON Compilado Final + Auditoria Integral de Haplologia Silábica
     json_p = r"D:\Conde_Treppio\dicionario_formas_expandidas.json"
     if os.path.exists(json_p):
         with open(json_p, "r", encoding="utf-8") as f:
@@ -245,10 +250,65 @@ def run_audit():
         assert m["verb_roots_count"] == len(db["verbos_quadripartite"]) >= 202
         assert m["verb_stems_quadripartite"] == m["verb_roots_count"] * 4
         assert m["total_expanded_word_forms"] >= 109013
+
+        haplo_forms_checked = 0
+        double_apostr = 0
+        pending_haplo = []
+
+        def _check_haplo_token(tok: str, ctx: str):
+            nonlocal haplo_forms_checked, double_apostr
+            for part in re.findall(r"[A-Za-zÁÉÍÓÚÝáéíóúýÄËÏÖÜäëïöü']+", tok):
+                haplo_forms_checked += 1
+                if part.count("'") > 1:
+                    double_apostr += 1
+                    errors.append(f"[DUPLO APÓSTROFO] {part} ({ctx})")
+                expected = gen.apply_haplology(part)
+                if expected != part:
+                    pending_haplo.append((ctx, part, expected))
+                    errors.append(f"[HAPLOLOGIA PENDENTE] {part} -> {expected} ({ctx})")
+
         for s_lemma, s_info in db["substantivos"].items():
             if s_lemma.lower().endswith(("e", "é", "ë")) and s_info["declinacao"] != 1:
                 errors.append(f"[JSON DECLINAÇÃO INCORRETA] {s_lemma} (decl={s_info['declinacao']})")
+            _check_haplo_token(s_lemma, "subst.lema")
+            for fk, fv in s_info["formas"].items():
+                _check_haplo_token(fv, f"subst:{s_lemma}.{fk}")
+
+        for a_lemma, a_info in db["adjetivos"].items():
+            _check_haplo_token(a_lemma, "adj.lema")
+            for fk, fv in a_info.items():
+                if fk != "Significado":
+                    _check_haplo_token(fv, f"adj:{a_lemma}.{fk}")
+
+        for adv_lemma in db["adverbios"].keys():
+            _check_haplo_token(adv_lemma, "adv.lema")
+
+        for root, axes in db["verbos_quadripartite"].items():
+            _check_haplo_token(root, "verbo.raiz")
+            for ax_name, ax_obj in axes.items():
+                conj = ax_obj["conjugation"]
+                _check_haplo_token(conj["Infinitivo(-ur)"], f"v:{root}.{ax_name}.inf")
+                _check_haplo_token(conj["Imperativo(Raiz)"], f"v:{root}.{ax_name}.imp")
+                _check_haplo_token(conj["Interrogativo.2Pl(-ka)"], f"v:{root}.{ax_name}.int")
+                for k, vlist in conj.items():
+                    if isinstance(vlist, list):
+                        for wf in vlist:
+                            _check_haplo_token(wf, f"v:{root}.{ax_name}.{k}")
+                    elif isinstance(vlist, dict):
+                        for dk, dv in vlist.items():
+                            _check_haplo_token(dv, f"v:{root}.{ax_name}.{k}.{dk}")
+
+        for idx_c, c_entry in enumerate(db.get("corpus_canonico", [])):
+            _check_haplo_token(c_entry.get("treppio", ""), f"corpus[{idx_c}]")
+
+        if errors:
+            print(f"FALHA NA AUDITORIA JSON/HAPLOLOGIA ({len(errors)} erros encontrados):")
+            for e in errors[:30]:
+                print("  ->", e)
+            sys.exit(1)
+
         print(f"  [OK] Regra da 1ª Declinação: 100% dos substantivos terminados em -e/-é/-ë alocados na 1ª Declinação")
+        print(f"  [OK] Auditoria Haplológica Integral: {haplo_forms_checked:,} formas inspecionadas | 0 duplos apóstrofos | 0 pendências de haplologia | idempotência 100%")
         print(f"  [OK] JSON Compilado Validado: {m['total_expanded_word_forms']:,} formas, {m['nouns_count']} substantivos, {m['verb_stems_quadripartite']} verbos quadripartites.")
         for sample_r in ["belk", "darp", "blam", "veyn", "vlir"]:
             if sample_r in db["verbos_quadripartite"]:

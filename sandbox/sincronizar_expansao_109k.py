@@ -40,13 +40,20 @@ def main():
         src = f.read()
 
     src = re.sub(r'(<strong id="stat-forms">)[\d\.]+(</strong>)', rf"\g<1>{forms_pt}\2", src)
-    src = re.sub(r'(<strong id="stat-nouns">)\d+(</strong>)', rf"\g<1>{nouns_c}\2", src)
-    src = re.sub(r'(<strong id="stat-verbs">)\d+(</strong>)', rf"\g<1>{verbs_c}\2", src)
-    src = re.sub(r'(<strong id="stat-adjs">)\d+(</strong>)', rf"\g<1>{adjs_c}\2", src)
+    src = re.sub(r'(<strong id="stat-nouns">)[\d\.]+(</strong>)', rf"\g<1>{nouns_c}\2", src)
+    src = re.sub(r'(<strong id="stat-verbs">)[\d\.]+(</strong>)', rf"\g<1>{verbs_c}\2", src)
+    src = re.sub(r'(<strong id="stat-adjs">)[\d\.]+(</strong>)', rf"\g<1>{adjs_c}\2", src)
+    src = re.sub(r'(<strong id="hero-stat-forms">)[\d\.]+(</strong>)', rf"\g<1>{forms_pt}\2", src)
+    src = re.sub(r'(<strong id="hero-stat-nouns">)[\d\.]+(</strong>)', rf"\g<1>{nouns_c}\2", src)
+    src = re.sub(r'(<strong id="hero-stat-verbs">)[\d\.]+(</strong>)', rf"\g<1>{verbs_c}\2", src)
+    src = re.sub(r'(<strong id="hero-stat-adjs">)[\d\.]+(</strong>)', rf"\g<1>{adjs_c}\2", src)
     src = re.sub(r'(<span class="tab-count" id="hub-cnt-dict">)[\d\.]+(</span>)', rf"\g<1>{forms_pt}\2", src)
-    src = re.sub(r'(Conjugador Verbal <span class="tab-count">)\d+ Verbos(</span>)', rf"\g<1>{verbs_c} Verbos\2", src)
+    src = re.sub(r'(<span class="tab-count" id="hub-cnt-verbs">)\d+ Verbos(</span>)', rf"\g<1>{verbs_c} Verbos\2", src)
+    src = re.sub(r'(Conjugador Verbal <span class="tab-count"[^>]*>)\d+ Verbos(</span>)', rf"\g<1>{verbs_c} Verbos\2", src)
     src = re.sub(r'Buscar em [\d\.]+ formas', f"Buscar em {forms_pt} formas", src)
     src = re.sub(r'm\.total_expanded_word_forms \|\| \d+', f"m.total_expanded_word_forms || {forms_raw}", src)
+    src = re.sub(r'(<meta name="description" content="[^"]*?)[\d\.]+ formas([^"]*">)', rf"\g<1>{forms_pt} formas\2", src)
+    src = re.sub(r'(<div id="hero-bento-sub"[^>]*>.*?<strong>)[\d\.]+ formas', rf"\g<1>{forms_pt} formas", src)
 
     with open(ui_path, "w", encoding="utf-8") as f:
         f.write(src)
@@ -65,7 +72,7 @@ def main():
         f.write(rd)
     print(f"[OK] README atualizado dinamicamente: {readme_path}")
 
-    # 4. Reexecutar generate_all_files() para propagar o HTML atualizado para docs/, dist/ e android_apk/
+    # 4. Reexecutar generate_all_files() para propagar o HTML atualizado para docs/, dist/, android_apk/ e treppio_base.md
     gen.generate_all_files()
 
     # 5. Sincronizar com G:\Meu Drive\Conde_Treppio e skills/conde
@@ -78,10 +85,17 @@ def main():
 
     rel_files = [
         "README.md",
+        "SKILL.md",
+        "treppio_base.md",
+        "gramatica_normativa_base.md",
+        "adendo_edicao_unificada_v8_1.md",
         "dicionario_formas_expandidas.json",
         r"docs\index.html",
         r"docs\dados_dicionario_conde.js",
         r"docs\dicionario_formas_expandidas.json",
+        r"docs\sw.js",
+        r"docs\manifest.json",
+        r"docs\icon-512.png",
         r"dist\Codice_Treppio_Portatil.html",
         r"sandbox\fila_temas_expansao_horaria.json",
         r"sandbox\lexico_expansao_v8_1.py",
@@ -93,6 +107,10 @@ def main():
         r"sandbox\dicionario_exaustivo\verbos_matriz_quadripartite_completa.md",
         r"sandbox\ui_dicionario\index.html",
         r"sandbox\ui_dicionario\dados_dicionario_conde.js",
+        r"sandbox\ui_dicionario\sw.js",
+        r"sandbox\ui_dicionario\manifest.json",
+        r"sandbox\launcher_exe\LauncherConde.cs",
+        r"sandbox\android_apk\app\src\main\java\com\conde\treppio\MainActivity.java",
     ]
 
     for tgt in targets:

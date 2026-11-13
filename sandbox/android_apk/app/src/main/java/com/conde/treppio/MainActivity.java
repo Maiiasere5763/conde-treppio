@@ -46,12 +46,12 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Estilização das barras de sistema (Obsidiana Soberana #06080d)
+        // Estilização das barras de sistema (Obsidiana Soberana #09090b)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#06080d"));
-            window.setNavigationBarColor(Color.parseColor("#06080d"));
+            window.setStatusBarColor(Color.parseColor("#09090b"));
+            window.setNavigationBarColor(Color.parseColor("#09090b"));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 View decor = window.getDecorView();
                 decor.setSystemUiVisibility(0);
@@ -66,10 +66,10 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         // Container raiz com WebView + Splash Overlay Nativo (Ouro Imperial & Obsidiana)
         FrameLayout rootLayout = new FrameLayout(this);
-        rootLayout.setBackgroundColor(Color.parseColor("#06080d"));
+        rootLayout.setBackgroundColor(Color.parseColor("#09090b"));
 
         mWebView = new WebView(this);
-        mWebView.setBackgroundColor(Color.parseColor("#06080d"));
+        mWebView.setBackgroundColor(Color.parseColor("#09090b"));
         rootLayout.addView(mWebView, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
@@ -158,7 +158,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             }
         });
 
-        // Carregar o Códice V8.2 autocontido dos assets locais
+        // Carregar o Códice V8.4 autocontido dos assets locais
         mWebView.loadUrl("file:///android_asset/index.html");
     }
 
@@ -166,7 +166,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         LinearLayout splash = new LinearLayout(this);
         splash.setOrientation(LinearLayout.VERTICAL);
         splash.setGravity(Gravity.CENTER);
-        splash.setBackgroundColor(Color.parseColor("#06080d"));
+        splash.setBackgroundColor(Color.parseColor("#09090b"));
         int pad = dpToPx(32);
         splash.setPadding(pad, pad, pad, pad);
 
@@ -192,7 +192,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         splash.addView(title, titleLp);
 
         TextView sub = new TextView(this);
-        sub.setText("Era Clássica V8.2 • 153.005+ Formas Validadas");
+        sub.setText("Era Clássica V8.4 • 246.737 Formas Validadas");
         sub.setTextColor(Color.parseColor("#9da9c5"));
         sub.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
         sub.setGravity(Gravity.CENTER);
@@ -215,12 +215,35 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         return Math.round(dp * getResources().getDisplayMetrics().density);
     }
 
+    private boolean mTtsPtBr = true;
+
+    private String normalizeTreppioForTts(String text, boolean isPtBr) {
+        if (text == null || text.isEmpty()) return "";
+        String s = text.replace("'", " ");
+        s = s.replace("y", "i").replace("Y", "I")
+             .replace("ë", "ê").replace("Ë", "Ê");
+        if (isPtBr) {
+            s = java.util.regex.Pattern.compile("([gG]+)(?=[eéèêiíîEÉÈÊIÍÎ])")
+                .matcher(s).replaceAll("$1u");
+        } else {
+            s = java.util.regex.Pattern.compile("([gG]+)(?=[eéèêiíîEÉÈÊIÍÎ])")
+                .matcher(s).replaceAll("$1h");
+        }
+        s = java.util.regex.Pattern.compile("(?<=[aeiouáéíóúâêîôûàèìòùäïöüAEIOUÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÄÏÖÜ])s(?=[aeiouáéíóúâêîôûàèìòùäïöüAEIOUÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÄÏÖÜ])")
+            .matcher(s).replaceAll("ss");
+        s = java.util.regex.Pattern.compile("(?<=[aeiouáéíóúâêîôûàèìòùäïöüAEIOUÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÄÏÖÜ])S(?=[aeiouáéíóúâêîôûàèìòùäïöüAEIOUÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÄÏÖÜ])")
+            .matcher(s).replaceAll("SS");
+        return s;
+    }
+
     @Override
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS && mTts != null) {
-            int res = mTts.setLanguage(new Locale("it", "IT"));
+            int res = mTts.setLanguage(new Locale("pt", "BR"));
+            mTtsPtBr = true;
             if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
-                mTts.setLanguage(new Locale("pt", "BR"));
+                mTts.setLanguage(new Locale("it", "IT"));
+                mTtsPtBr = false;
             }
             mTts.setSpeechRate(0.88f);
             mTtsReady = true;
@@ -238,10 +261,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                         mWebView.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
                     }
                     if (mTtsReady && mTts != null) {
+                        String spoken = normalizeTreppioForTts(text, mTtsPtBr);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            mTts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "conde_utt");
+                            mTts.speak(spoken, TextToSpeech.QUEUE_FLUSH, null, "conde_utt");
                         } else {
-                            mTts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+                            mTts.speak(spoken, TextToSpeech.QUEUE_FLUSH, null);
                         }
                     }
                 }

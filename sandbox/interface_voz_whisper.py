@@ -165,9 +165,18 @@ class CondeVoiceBrain:
         return text.strip()
 
 
+def to_treppio_tts_pt_br(token: str) -> str:
+    """Converte um vocábulo Tréppio para aproximação fonética em TTS pt-BR (G=/g/ guitarra, S=/s/ sapato, X=/x/)."""
+    w = re.sub(r"([gG])(?=[eiyéíêýEIYÉÍÊÝ])", lambda m: m.group(1) + "u", token.replace("'", " "))
+    w = re.sub(r"([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])s([aeiouyáéíóúýäëïöüAEIOUYÁÉÍÓÚÝÄËÏÖÜ])", r"\1ss\2", w)
+    w = w.replace("x", "rr").replace("X", "Rr").replace("ë", "é").replace("Ë", "É")
+    return w
+
+
 def speak_text_aloud(text: str, voice: str = "pt-BR-AntonioNeural"):
     """Fala a resposta em voz alta usando Edge-TTS Neural (com fallback para SAPI nativo do Windows)."""
-    clean_txt = CondeVoiceBrain._clean_for_speech(text)
+    norm_txt = re.sub(r"`([^`\n]+)`", lambda m: " ".join(to_treppio_tts_pt_br(tok) for tok in m.group(1).split()), text)
+    clean_txt = CondeVoiceBrain._clean_for_speech(norm_txt)
     if not clean_txt:
         return
 

@@ -1,9 +1,9 @@
-// Service Worker do Códice Tréppio (V8.1 - Interface Intuitiva 5 Hubs)
-const CACHE_NAME = 'treppio-v8-1-cache-v2-intuitivo';
+// Service Worker do Códice Tréppio (V8.4 - Haplologia Silábica, Pronúncia IPA & Tradutor TR-PT)
+const CACHE_NAME = 'treppio-v8-4-cache-editorial';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './dados_dicionario_conde.js?v=8.1.1',
+  './dados_dicionario_conde.js?v=8.4.0',
   './dicionario_formas_expandidas.json',
   './manifest.json',
   './icon-512.png'

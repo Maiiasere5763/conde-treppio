@@ -1,7 +1,7 @@
 # ==============================================================================
 # compilar_launcher_exe.ps1
 # Compila o Executável Portátil Nativo (Codice_Treppio_Conde.exe) embutindo a UI
-# e as 37.769 formas do banco de dados do /conde como recursos internos.
+# e as formas do banco de dados do /conde como recursos internos (V8.4).
 # ==============================================================================
 $ErrorActionPreference = "Stop"
 
@@ -26,6 +26,17 @@ $JsonRes = Join-Path $SandboxDir "dicionario_exaustivo\dicionario_formas_expandi
 $OutExe = Join-Path $DistDir "Codice_Treppio_Conde.exe"
 $RootExe = Join-Path $RootDir "Codice_Treppio_Conde.exe"
 
+$SpeechDll = Get-ChildItem "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Speech" -Recurse -Filter "System.Speech.dll" -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
+$RefArgs = @(
+    "/r:System.dll",
+    "/r:System.Drawing.dll",
+    "/r:System.Windows.Forms.dll",
+    "/r:System.Web.Extensions.dll"
+)
+if ($SpeechDll -and (Test-Path $SpeechDll)) {
+    $RefArgs += "/r:$SpeechDll"
+}
+
 Write-Host "=== [2/3] Compilando Executavel Nativo Windows (Codice_Treppio_Conde.exe) ===" -ForegroundColor Cyan
 & $CscPath `
     /nologo `
@@ -34,9 +45,7 @@ Write-Host "=== [2/3] Compilando Executavel Nativo Windows (Codice_Treppio_Conde
     "/out:$OutExe" `
     "/resource:$HtmlRes,index.html" `
     "/resource:$JsonRes,dicionario_formas_expandidas.json" `
-    /r:System.dll `
-    /r:System.Drawing.dll `
-    /r:System.Windows.Forms.dll `
+    @RefArgs `
     $CsSource
 
 if ($LASTEXITCODE -ne 0) {

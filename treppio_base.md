@@ -1,4 +1,4 @@
-# Base de Conhecimento Oficial da Língua Tréppia (Era Clássica Consolidada V8.1)
+# Base de Conhecimento Oficial da Língua Tréppia (Era Clássica Consolidada V8.4)
 
 ## 1. Ontologia, Tipologia e Diacronia (Síncrese de Treppênia)
 * **Tipologia**: Língua sintético-aglutinante de alta densidade morfológica. Equilibra um sistema nominal flexional de matriz clássica (4 casos, 2 declinações) com um sistema verbal estritamente aglutinante e matematicamente previsível.
@@ -7,7 +7,12 @@
 
 ---
 
-## 2. Fonologia, Ortografia Regulada e Sociolinguística
+## 2. Fonologia, Alfabeto Fonético (IPA), Ortografia Regulada e Sociolinguística
+* **Regras Imutáveis de Pronúncia (`G` e `S`)**:
+  * **`G / g` = SEMPRE `/ɡ/`** (oclusiva velar sonora, exatamente como em *"guitarra"*, *"gole"*), inclusive antes de `e, i, y, ë` (*gelur* `/ˈɡɛ.luɾ/`, *gizor* `/ˈɡi.zoɾ/`) — **jamais `/ʒ/`**.
+  * **`S / s` = SEMPRE `/s/`** (fricativa alveolar surda, exatamente como em *"sapato"*, *"massa"*), inclusive entre vogais ou em posição final (*esu* `/ˈɛ.su/`, *rase* `/ˈɾa.se/`, *esur* `/ˈɛ.suɾ/`) — **jamais `/z/`**.
+  * **Inventário Vocálico**: `a /a/`, `e /ɛ~e/`, `i /i/`, `o /ɔ~o/`, `u /u/`, `y /ɨ~ɪ/`, `ë /ɛ/` (em hiato demarcativo `-vë`), `é /ɛ/` (tônico em `Vé` e derivados).
+  * **Demais Consoantes (IPA)**: `p /p/`, `b /b/`, `t /t/`, `d /d/`, `k /k/`, `f /f/`, `v /v/`, `z /z/`, `x /x/` (fricativa velar surda, como *ch* alemão em *Bach*), `h /h/`, `m /m/`, `n /n/`, `l /l/`, `r /ɾ/` (tepe), `rr /r/` (vibrante múltipla), `j /j/` (semivogal dativa), `' [ʔ]` (hiato haplológico).
 * **Clivagem Gráfica Sociolinguística (`K/S` vs. `C/Ç`)**:
   * **Registro Culto / Chancelaria**: Impõe o uso estrito de **K** (`/k/`) e **S** (`/s/`), como em *Korikeste*, *Koryvela*, *rase*, *mektep*.
   * **Registro Popular / Plebeu**: Substitui graficamente por **C** e **Ç**, como em *Coriceçte*, *Coryvela*, *raçe*, *mectep*.
@@ -23,7 +28,7 @@
 
 ## 3. Morfofonologia e Leis de Purificação Fonotática (Sandi Consonantal)
 
-### 3.1. Tabela Universal das 21 Mutações Consonantais Obrigatórias (V8.1)
+### 3.1. Tabela Universal das 26 Mutações Consonantais Obrigatórias (V8.4)
 | Mutação | Fenômeno Diacrônico | Aplicação Canônica Unificada |
 | :--- | :--- | :--- |
 | **rn → ld** | Fortição e Dissimilação Líquida | *far-* + *-ne* → **falde** (pão); *mir* + *-n* → **mild** (preciosíssimo); *kor* + *-ni* → **koldi**; *vur* + *nir* → **vuldir** (verão); *sukor* + *-n* → **sukold** |
@@ -33,30 +38,27 @@
 | **nn / mn / nm → m** | Simplificação de Geminada Nasal | *nemn* + *-n* → **nemm** (memória invicta); *lan* + *nir* → **lamir** (noite de luar) |
 | **td → dd** | Assimilação de Vozeamento Dental | *lete* + *da* → **ledda** (palavra ideal/mandamento); *let-* + *-dur-* → **-dd-** |
 | **dt / kt → tt** | Fortição e Geminação Dental | *krad-* + *-te* → **Kratte** (Criador); *trak-* + *-te* → **Trátte** (Comandante); *id* + *-ta* → **Itta** (primeiro); *a-gald-te* → **Agáltte**; *dak* + *-te* → **datte** |
-| **ss → ç** | Sinalização Gráfica Sibilante | Choque de sibilantes morfológicas → **-ç-** |
+| **ss → ss** | Preservação Sibilante Surda | Fronteira de sibilantes mantém geminação culta **-ss-** (`/sː/`, jamais `/z/`, variante plebeia `-ç-`) |
 | **sr → ss** | Assimilação Fricativa Alveolar | *fas-* + *-ra* → **fassa** (padeceu); *es-* + *-ra/-ru* → **essa / essu**; *aes-* + *-ra* → **aessam**; *kos-* + *-ra* → **kossa**; *pas-* + *-ra* → **passa** |
 | **ds → ss** | Assimilação Sibilante Regressiva | *mad-* + *su* → **massu** (útero, ventre) |
 | **zr → zz** | Mutação Fricativa Vozeada | *kaz-* + *-ra/-ru* → **kazza** (viveu/viverá); *akaz-* → **akazza**; *okaz-* → **okazza**; *agiz-* → **agizza** (odiou/odiará) |
 | **mr / rm → mm** | Geminação Labial Absoluta | *kom-* + *-ra/-ru* → **komma / kommu**; *akom-* → **akommam**; *kam-* → **kamma**; *mek* + *sfar* + *mir* → **mexfammir** (adaga) |
-| **kb → bb** | Assimilação Labial Regressiva Total | *mak-* + *-ba* → **mabbam** (comia); *atok-* + *-ba* → **atobbam** (desgovernava) *(Retifica oficialmente o antigo vozeamento parcial kb → gb, mantido apenas como variante histórica em tabelas de transição como magbam/togbam/dagbam/tragbam)* |
-| **tb / fb → bb** | Assimilação Labial no Imperfeito | *akit-* + *-ba* → **akibbam**; *kit-* + *-ba* → **kibbam**; *let-* + *-ba* → **lebbam**; *alet-* + *-ba* → **alebbam**; *met-* + *-ba* → **mebbam**; *mollet-* + *-ba* → **mollebbam**; *illot-* + *-ba* → **illobbam**; *doot-* + *-ba* → **doobbam**; *elf-* + *-ba* → **elbbam**; *aelf-* + *-ba* → **aelbbam**; *sif-* + *-ba* → **sibbam** |
-| **ldb → lbb / nb → mb** | Assimilação de Cluster no Imperfeito | *gald-* + *-ba* → **galbbam**; *agald-* + *-ba* → **agalbbam**; *lan-* + *-ba* → **lambam**; *alan-* + *-ba* → **alambam**; *yn-* + *-ba* → **ymbam**; *kel'un-* + *-ba* → **kel'umbam** |
+| **kb → bb** | Assimilação Labial Regressiva Total | *mak-* + *-ba* → **mabbam** (comia); *atok-* + *-ba* → **atobbam** (desgovernava) |
+| **tb / fb → bb** | Assimilação Labial no Imperfeito | *akit-* + *-ba* → **akibbam**; *kit-* + *-ba* → **kibbam**; *let-* + *-ba* → **lebbam**; *elf-* + *-ba* → **elbbam**; *sif-* + *-ba* → **sibbam** |
+| **ldb → lbb / nb → mb** | Assimilação de Cluster no Imperfeito | *gald-* + *-ba* → **galbbam**; *lan-* + *-ba* → **lambam**; *yn-* + *-ba* → **ymbam**; *kel'un-* + *-ba* → **kel'umbam** |
 | **pg → gg** | Assimilação Vozeada Regressiva | *tep* + *-gar* → **teggar** (fortaleza, palácio) |
 | **tk → kk** | Ensurdecimento e Coalescência Velar | *letut* + *-ka* → **letukka?** (vós falais?) |
-| **xr → rr** | Isoglossa Velar-Vibrante Nobre | *kelex-* + *-ra/-ru* → **kelerra / kelerru**; *akelex-* → **akelerra**; *galdex-* → **galderra**; *agaldex-* → **agalderra**; *torex-* → **torerra**; *atorex-* → **atorerra** |
-| **r + ra/ru → rra/rru** | Geminação Vibrante Absoluta | *dur-* → **durram / durrum**; *adur-* → **adurram / adurrum**; *sfar-* → **sfarram / sfarrum**; *asfar-* → **asfarram / asfarrum**; *mir-* → **mirram / mirrum**; *amir-* → **amirram / amirrum**; *bar-* → **barram / barrum**; *gir-* → **girram / girrum**; *par-* → **parram / parrum**; *skor-* → **skorram / skorrum**; *tor-* → **torram / torrum**; *litr-* → **litrram / litrrum** |
+| **xr → rr** | Isoglossa Velar-Vibrante Nobre | *kelex-* + *-ra/-ru* → **kelerra / kelerru**; *galdex-* → **galderra**; *torex-* → **torerra** |
+| **r + ra/ru → rra/rru** | Geminação Vibrante Absoluta | *dur-* → **durram / durrum**; *sfar-* → **sfarram / sfarrum**; *mir-* → **mirram / mirrum**; *litr-* → **litrram / litrrum** |
 | **vt → pt** | Ensurdecimento Labiodental Ordinal | *nev* + *-ta* → **Nepta** (nono) |
-| **kj / kl → x / ll** | Palatalização Dativa Sideral e Assimilação Oclusiva-Líquida | *vok* + *-j* → **vox** (dativo sideral arcaico); *vok* + *lita* → **Volleta** (assimilação oclusiva-líquida `kl → ll`) |
+| **kj / kl → x / ll** | Palatalização Dativa e Assimilação Oclusiva-Líquida | *vok* + *-j* → **vox** (dativo sideral arcaico); *vok* + *lita* → **Volleta** |
+| **bp → bb** | Assimilação Labial Oclusiva Total | *gob-* + *paror* → **gobbaror**; *gob* + *pilk* → **gobbilk** |
 
-### 3.2. Lei da Haplologia e Estatuto Apostrófico (`'`)
-* Quando o *onset* (ataque consonantal) de uma sílaba subsequente é idêntico ao da sílaba precedente na fronteira morfológica, ou quando a última consoante coincide com a primeira seguinte, ocorre síncope marcada obrigatoriamente pelo apóstrofo (`'`):
-  * **Lan’ani** (*lan lani*, em luz absoluta).
-  * **Moba’el** (*moba bel*, bom dia).
-  * **Kel'un-** (*kel kun*, escoltar).
-  * **Oda'ur-** (*od-adur-*, voltar a obscurecer).
-  * **Kúr'ete** (*kura lete*, a falsa palavra).
-  * **Hal'gáltte** (*hal gald te*, o Pastor Sagrado).
-  * **idda** (*id* + *da*, fusão haplógica cristalizada sem apóstrofo: "único, imutavelmente o um").
+### 3.2. Lei Estrita da Haplologia Silábica e Estatuto Apostrófico (`'`)
+* **Regra Única (Ataque Silábico Consecutivo)**: O apóstrofo (`'`) aplica-se **exclusivamente** quando a **primeira letra (ataque consonantal / *onset*) de uma sílaba `Sᵢ`** coincide com a **primeira letra da sílaba imediatamente subsequente `Sᵢ₊₁`** (`Sᵢ[0] == Sᵢ₊₁[0]`). Nesse caso, suprime-se o ataque de `Sᵢ₊₁` com apóstrofo (`'`):
+  * **Proteção de Geminadas de Sandi**: Quando `Sᵢ` termina em consoante idêntica ao ataque de `Sᵢ₊₁` (como *tt, ll, dd, ss, rr, mm, bb, gg, kk, nn* em *Totter*, *Kratte*, *fassa*, *mirra*, *durrum*), a geminada canônica é integralmente preservada (exceto na fusão dental *od + ad... → oda'...*). Máximo de 1 apóstrofo por vocábulo.
+  * **Exemplos Nominais e Derivados**: *vevar* → **ve'ar**; *vevaril* → **ve'aril**; *avurvé* → **avur'é**; *velvé* → **vel'é**; *Halylitror* → **Haly'itror**; *Treppenína* → **Treppení'a**; *keldande* → **keldan'e**; *kilka* → **kil'a**.
+  * **Exemplos Flexionais e Compostos**: *dooteti* → **doote'i**; *balkukes* → **balku'es**; *beva-vë* → **beva'ë**; *tir-ta* → **Tir'a**; *Lan’ani* (*lan lani*); *Moba’el* (*moba bel*); *Kel'un-* (*kel kun*); *Oda'ur-* (*od-adur-*); *Kúr'ete* (*kura lete*); *Hal'gáltte* (*hal gald te*); *idda* (*id + da*, cristalizado sem apóstrofo).
 
 ### 3.3. Lei da Epêntese Dental Restitutiva (`o-` / `od-`)
 * Derivado do desgaste orgânico do advérbio *zo*, o prefixo iterativo de repetição, retorno ou ressurreição bifurca-se para impedir hiatos:
@@ -117,21 +119,21 @@ Regula a substância material e divide-se nos subgrupos **Kor** (*kor*, *mon*, *
 * **3**: **zel** → **Zelta** (Dat. Sg. fem./litúrgico: *zeltej*)
 * **4**: **kat** → **Katta** (`tt`)
 * **5**: **vex** → **Vexta**
-* **6**: **tir** → **Tirta**
+* **6**: **tir** → **Tir'a** (haplologia silábica pós-dental: *tir-ta* → *Tir'a*)
 * **7**: **san** → **Santa**
 * **8**: **nyr** → **Nyrta** (Ablaut metafônico de *nir*, noite)
 * **9**: **nev** → **Nepta** (`vt → pt`)
 * **10**: **krom** → **Kromta**
-* **Dezenas, Centenas e Milhares**: **Dokrom** (20), **Zelkrom** (30), **Katkom** (40), **Dygum** (100), **Myga** (1000).
+* **Dezenas, Centenas e Milhares**: **Dokrom** (20), **Zelkrom** (30), **Kat'om** (40), **Dygum** (100), **Myga** (1000).
 
 ### 4.6. Maquinário Derivacional (Sufixos Produtivos) e Lei de Composição Diacrônica
 * **-ia (Lugar / Topônimo)**: *Treppênia*, *Varkaria*, *Halyvaria*, *Mirypalkia*, *Xerypalkia*, *Vepalkia*, *feria*, *tepia*, *elfia*, *kosia*, *kitia*, *molletia*.
 * **-te (Agente / Profissão)**: *mir* + *-te* → **mirte** (ourives); *vok* + *-te* → **vocte** (executor); *oxe* + *-te* → **oxte** (guerreiro); *krad-* + *-te* → **Kratte** (Criador, `dt → tt`); *trak-* + *-te* → **Trátte** (Comandante, `kt → tt`); *tok-* + *-te* → **Totte** (Regente/Vala, `kt → tt`); *tek-* + *-te* → **Tette** (Artífice/Aulë, `kt → tt`); *mollet-* + *-te* → **mollette** (juiz); *litr-* + *-te* → **litrte** (cantor).
 * **-or / -re (Qualidade Abstrata / Obra)**: *bel* + *-or* → **belor** (claridade abstrata); *ir* + *dur* → **irdor** (resplendor ancestral); **mobor** (graça abstrata); **litror** (música); **daior** (pensamento); **isor** (sabedoria); **vulor** (propósito); **tekor** (obra).
 * **-tek (Instrumento)**: *let-* + *-tek* → **lettek** (megafone/trombeta); *litr-* + *-tek* → **litrtek** (instrumento musical); *tek-* + *-tek* → **tettek** (malho de forja, `kt → tt`); *sfar-* + *-tek* → **sfartek** (escudo).
-* **-il (Diminutivo / Afetivo)**: *tep* + *-il* → **tepil** (cabana, tenda); *vevar* + *-il* → **vevaril** (riacho).
+* **-il (Diminutivo / Afetivo)**: *tep* + *-il* → **tepil** (cabana, tenda); *ve'ar* + *-il* → **ve'aril** (riacho).
 * **-gar / -ar / -on (Aumentativo / Solene)**: *tep* + *-gar* → **teggar** (palácio, fortaleza, `pg → gg`); *litr-* + *-gar* → **litrgar** (Grande Música); *oxe* + *-gar* → **oxegar** (globo terrestre/continente); *kare* + *-gar* → **karegar** (trono supremo).
-* **Lei de Composição Nominal Diacrônica (Preferência Clássico-Genitiva por Eufonia)**: Na formação de nomes compostos eruditos e teônimos cosmogônicos, prefere-se a **camada clássico-genitiva** com a vogal **-y-** do primeiro elemento antes de consoante para evitar encontros oclusivos ásperos (**Oratypatte**, **Halylitror**, **Halyteggar**, **Halyvur**, **Ferytrátte**, em simetria com *Koryvela*, *Mirypalkia*, *Xerypalkia* e *Halyvaria*), empregando-se a aglutinação direta antes de vogal (**Oratoxe**, `< orat + oxe`) ou em contatos líquidos/oclusivos eufônicos (**Halvur**, **Halteggar**, **Fertrátte**, **Vétrátte**, **Tektrátte**).
+* **Lei de Composição Nominal Diacrônica (Preferência Clássico-Genitiva por Eufonia)**: Na formação de nomes compostos eruditos e teônimos cosmogônicos, prefere-se a **camada clássico-genitiva** com a vogal **-y-** do primeiro elemento antes de consoante para evitar encontros oclusivos ásperos (**Oratypatte**, **Haly'itror**, **Halyteggar**, **Halyvur**, **Ferytrátte**, em simetria com *Koryvela*, *Mirypalkia*, *Xerypalkia* e *Halyvaria*), empregando-se a aglutinação direta antes de vogal (**Oratoxe**, `< orat + oxe`) ou em contatos líquidos/oclusivos eufônicos (**Halvur**, **Halteggar**, **Fertrátte**, **Vétrátte**, **Tektrátte**).
 
 ---
 
@@ -171,7 +173,7 @@ Resultantes de síncope vocálica e monotongação histórica (remoção da voga
 3. **Indicativo Pretérito Imperfeito (`-ba`)**: Ação contínua ou habitual no passado; dispara mutações labiais (*kb → bb*, *tb/fb → bb*, *nb → mb*, *ldb → lbb*).
 4. **Indicativo Durativo (`-ai`)**: Ação progressiva ou estado prolongado (*galdaim...*).
 5. **Indicativo Futuro Simples (`-ru`)**: Único futuro canônico (abolido permanentemente o antigo Futuro Solene *-u'u*); dispara as mesmas mutações em vibrante do passado, incluindo a geminação vibrante absoluta `r + ru → rru` (*durrum*, *sfarrum*, *mirrum*).
-6. **Subjuntivo Presente (`-uke`)**: Potencialidade, desejo ou hipótese presente (*esuke*, *keladuke*; Passiva: *tekukese*).
+6. **Subjuntivo Presente (`-uke`)**: Potencialidade, desejo ou hipótese presente (*esuke*, *keladuke*; Passiva: *teku'ese*).
 7. **Subjuntivo Passado (`-rake`)**: Hipótese pregressa.
 8. **Subjuntivo Imperfeito (`-bake`)**: Condição irreal passada (*galbbakem...*).
 9. **Subjuntivo Durativo (`-aike`)**: Continuidade hipotética.
@@ -232,20 +234,4275 @@ Resultantes de síncope vocálica e monotongação histórica (remoção da voga
 
 ### 8.3. As Quatro Grandes Orações do Corpus Canônico
 * **Patte Ny (Pai Nosso)**:
-  `Patte ny, ke in xeri esu. Elfet esuke mon vy. Karan vy ad noj [noi] keladuke. Vule vy tekukese, in oxej ko in xeri. Falde ny ad noj [noi] sambel mob! Akit faltes ny, ko no akitun kuroi ny. Et ex lakej noj [noi] sfar! Zo es.`
+  `Patte ny, ke in xeri esu. Elfet esuke mon vy. Karan vy ad noj [noi] keladuke. Vule vy teku'ese, in oxej ko in xeri. Falde ny ad noj [noi] sambel mob! Akit faltes ny, ko no akitun kuroi ny. Et ex lakej noj [noi] sfar! Zo es.`
 * **Metuses Maria (Ave Maria)**:
   `Metuses Maria, lana mety. Gyos in tij [ti] esu. To mobanavet in kranoi esu. Et mobanavet fel massuy vy esu, Jesus. Haly Maria, mad Gyosy, let ad noj [noi], kuroi. Santonk et in tonkrej akazury ny. Zo es.` *(Nota: "Metuses" e "lana mety" são cristalizações litúrgicas arcaicas preservadas por dogma).*
 * **Mete Pattej (Glória ao Pai)**:
   `Mete Pattej, et Feli, et Hali. Ko esba in fili, et santonk, et in atonkrej. Zo es.`
 * **Skorum (O Símbolo dos Apóstolos / O Credo)**:
   `Skorum in Gyosi Pattej, Tráttej in oratom, Kratte xery et oxedy. Et in Jesus Kristus, Feli idda vy, Tráttej ny, ke madet esba ex Hali Hali, kazza ex akuraj Mariaj, fassa ponu Pontius Pilatus, teket in kori, akazet et koset esba, ad Veloxem ynna, okazza in zeltej beli, ad xeros ynna, in dattej Gyosy Pattej esu, ex Kani keladru ad molletur kazetos et akazetos. Skorum in Hali Hali, in Halkelej, in kindrej lexery, in akitur faltedye, in okazur vokory, in kazur atonkrej. Zo es.`
-* **Halylitror (Ainulindalë: A Música dos Espíritos Sagrados)**:
-  Promovido integralmente ao Corpus Canônico (Seção 8.5 de `gramatica_normativa_base.md` e `adendo_edicao_unificada_v8_1.md`) em 12 Movimentos, juntamente com os radicais primários restaurados **orat** (o Todo) e **vur** (fogo/chama) e os 108 vocábulos endógenos (tais como **Oratypatte**, **Halylitror**, **Oratoxe**, **Halo / Elfhalo**, **Daifelo**, **Totter / Rukroro**, **Lanrukra**, **Kurlan**, **Ferytrátte**, **Vétrátte**, **Tektrátte / Tette**, **Halyteggar**, **Halyvur**, **Ittakazeti**, **Dotakazeti**, **litror**, **litrgar**, **leddalitror**, **alitror**, **daior**, **isor**, **mirakosor**, **avur**, **avurvé**, **fervé**, **filoxe**, **vevar**, **karegar**, **tepia**, **illanur**, **alitrur**, **odalitrur**, **daiur / oda'aiur**, **isur**, **inur**, **vurur / avurur** e **atekur**).
+* **Haly'itror (Ainulindalë: A Música dos Espíritos Sagrados)**:
+  Promovido integralmente ao Corpus Canônico (Seção 8.5 de `gramatica_normativa_base.md` e `adendo_edicao_unificada_v8_1.md`) em 12 Movimentos, juntamente com os radicais primários restaurados **orat** (o Todo) e **vur** (fogo/chama) e os vocábulos endógenos (tais como **Oratypatte**, **Haly'itror**, **Oratoxe**, **Halo / Elfhalo**, **Daifelo**, **Totter / Rukroro**, **Lanrukra**, **Kurlan**, **Ferytrátte**, **Vétrátte**, **Tektrátte / Tette**, **Halyteggar**, **Halyvur**, **Ittakazeti**, **Dotakazeti**, **litror**, **litrgar**, **leddalitror**, **alitror**, **daior**, **isor**, **mirakosor**, **avur**, **avur'é**, **fervé**, **filoxe**, **ve'ar**, **karegar**, **tepia**, **illanur**, **alitrur**, **odalitrur**, **daiur / oda'aiur**, **isur**, **inur**, **vurur / avurur** e **atekur**).
+
+<!-- QUICK_GRAMMAR_END -->
 
 ---
 
-## 9. Códice Lexicográfico Unificado (A-Z)
-* **Substantivos, Topônimos e Casas Nobres**: **Agáltte** (Falso Pastor), **akura** (virgem, incorrupta), **Alvarok** (Rito Escarlate), **Aralani** (Casa da Coroa), **Arume** (Império), **atonkre** (eternidade), **Banánna / Mibanánna** (adaptação fonotática botânica de fruto meridional), **baxi** (gato), **bel / bely** (dia), **belor** (claridade abstrata), **Calaiva** (Casa de Lan'ani), **Celia** (Região da Coroa), **dai / dao** (ideia, estrela abstrata), **dak** (mão direita), **datte** (a Direita), **doote** (tédio), **edel** (nobreza), **enulfe** (confusão, baderna), **Erzmira** (Casa da Joia, regentes de Mirypalkia), **fain** (pirata), **falde** (pão), **falte** (ofensa, dívida moral), **fas** (dor), **fassukor / façucor** (tristeza, melancolia, de *fas + sukor*), **fea** (sol), **fel** (filho), **fer / fery** (vento), **Ferylinde** (Casa do Vento, regentes de Ferykrope/Ferychope), **fil** (cerne, abismo, princípio), **fila** (tristeza proto-tréppia), **filia bely / filia lany / filia miry / filia nemrey** (sintagmas genitivos v5.1: profundidade de dia/luz/joia/memória), **Flibuste** (Casa de Celia, navegação), **garvé** (oceano, *gar + vé*), **gassfammir** (espada longa), **Gyos** (Deus, substitui o arcaico *Theus* e *vane*), **hal / haly** (espírito, sopro sagrado), **Hal'gáltte** (Pastor Sagrado), **Halkele** (Igreja, Santa Assembleia), **Hállemme** (Memória Sagrada), **Halyvar / Halyvaria** (Bosque Sagrado / Fronteiras Sagradas), **idda** (único, *id + da*), **irdor** (resplendor dos antigos, *ir + dur*), **kade** (monte, colina), **karan** (reino, domínio), **kare** (cadeira), **Karytírë** (Casa dos Passos, regentes de Xerypalkia), **kindre / kindro** (família, comunhão), **kor / kory** (árvore), **Korikeste** (Casa da Árvore), **Koryvela / Coryvela** (Floresta de Treppênia, *kory + vela*), **kran / krany / kranoi** (mulher / mulheres), **Kratte** (Criador, *krad- + -te*), **kron / krony** (homem), **krope** (campina, planície), **kue** (cor vermelha), **kul** (laranja, cor do açafrão), **kulav** (casa de campo), **Kurdor** (homens-mortos / carne corrompida, *kor + dur*), **kuroi** (pecadores), **Kúr'ete** (Falsa Palavra), **lake** (mal), **lamir** (noite clara de luar, *lan + nir*), **lan / lany** (luz; superl. *lan'an / lan'ani*), **lauri** (ouro; sintagmas v5.1: *Lauri bely, Lauri day, Lauri nemrey, Lauri suy*), **le** (luz elementar), **ledda** (palavra ideal, mandamento, *lete + da*), **lete** (palavra), **lettek** (megafone/instrumento de fala), **lexe / lexer** (estrela / Os Santos), **mad** (mãe), **massu** (útero, ventre, *mad + su*), **mektep / mectep** (casebre), **mete** (glória), **mexfammir** (adaga ritual, *mek + sfar + mir*), **mir** (joia ou olho), **mirte** (ourives), **Mirypalkia / Mirypalk** (Cinturão das Gemas), **mixi** (pessoa, cidadão), **Moba'el** (bom dia, *moba + bel*), **mobor / mobory** (graça abstrata), **mollete** (sentença, julgamento), **mollette** (juiz, magistrado), **mon** (nome, substitui *nomo*), **mone** (meia), **Nemkura** (memória corrompida), **nemre / nemry** (memória; superl. *nemm / nemni*), **Nesu** (o nada absoluto, *ne + su*), **nir** (noite), **nirkron** (espião, herege, *nir + kron*), **nuvíke** (demônio do poço escarlate), **oxe** (chão, terra), **oxte** (guerreiro), **paise** (lugar), **palk** (passo, cinturão geográfico), **Patte** (Pai), **piskre** (idiota), **poke** (animal), **rase / raçe** (língua, idioma), **rixe** (montanha), **Rixelaka / Rixelac** (Os Picos Gélidos, *rixe + laka*), **rose** (burro, jumento), **sfammir** (espada), **sife** (história), **sin** (mão esquerda), **sinte** (a Esquerda), **sotim** (rosto, face), **Sprezzatura** (Casa do Caminho, senhores de Varkar / Giovanni Sprezzatura), **su / suy** (núcleo, cerne), **sukor / sukory** (coração, *su + kor*; superl. *sukold*), **take** (mesa), **teggar** (palácio, fortaleza, *tep + -gar*), **tep** (casa), **tepil** (cabana, tenda, *tep + -il*), **Tóldemme** (Refúgio Sacrificial), **tonkre** (tempo, hora), **Trátte** (Comandante, Senhor, *trak- + -te*), **Treppênia** (Capital do Condado), **Treppenín / Treppeníno / Treppenína** (gentílico/vassalo de Treppenwitz), **Treppenwitz** (Casa Condal de Treppênia e Yamakoz), **Tréppia / Tréppio** (Terra do Norte / língua e cidadão), **tul** (loucura), **var / vary** (caminho), **Varkar / Varkaria** (Labirinto de Encruzilhadas, feudo dos Sprezzatura), **varte** (encontro, cruzamento), **Vé** (água), **Ve'el** (Domínio das Sombras), **veike** (jardim), **veksixi** (chuva, tempestade costeira), **vel** (sombra benigna), **vellir** (noite sem estrelas, *vel + nir*), **Veloxe** (Submundo, Infernos, *vel + oxe*), **Velsu** (O Exânime, *vel + su*), **velvé** (águas sombrias / Porto das Sombras, *vel + vé*), **Vepalkia / Vêpalk** (Faixa dos Vaus), **Véporos** (Casa das Águas), **verre** (bronze), **vocte** (executor, açougueiro, *vok + -te*), **vok** (sangue), **Vokát / Vokátte** (Guia de Sangue), **vokor** (carne viva, músculo irrigado), **Vokkura** (carne/sangue corrompido, homens-mortos), **Volleta** (órgão viril diminuto, *vok + lita*, `kl → ll`), **vuldir** (verão, noite quente, *vur + nir*), **vule** (vontade), **xer / xere** (céu, firmamento), **Xerypalkia / Xerypalk** (Serras do Firmamento), **xun** (cor amarela imperial), **Yamakoz** (Cidade Imortal / título de Giovanni Sprezzatura).
-* **Adjetivos**: **alota** (horrendo), **amocte** (esfomeado, *a-mak-te*), **aruma** (imperial), **atola** (feio), **barsexi** (irritante), **bela** (diurno), **bell** (diurníssimo), **da / daia** (relativo à ideia/estrela), **edela** (nobre), **elfa** (sacro, sagrado), **faina** (pirateado, ilegal), **gura** (chato), **hoka** (tolo, ignorante), **ilora** (estelar, sideral), **isa** (inteligente), **kindra** (familiar), **koldi** (superl. pl. de árvore), **kora** (amadeirado), **krana / krona** (feminino / masculino), **kua** (avermelhado), **kul** (laranja, cor do açafrão), **kula** (alaranjado), **kura / krer / kuran** (corrompido / pior / péssimo), **laka** (mau, perverso), **lana / lany** (luminoso, cheio), **laura** (dourado), **leta** (verbal), **lexa** (estelar, divino), **lita** (diminuto, curto), **lota / tola** (belo / bonito), **meta** (glorioso), **mild / mildi** (preciosíssimo), **mira** (precioso), **moba / maer / moban** (bom / melhor / ótimo), **nemra** (memorial), **nira** (noturno), **piskra** (idiota), **poka** (selvagem), **rixa** (montanhoso), **rosa** (burro), **rukra** (forte), **sua** (nuclear), **sukora** (cardíaco), **tonkra** (temporal), **tula** (louco), **va** (molhado, sincopado de *Vé*), **vara** (viário), **vela** (sombrio), **verra** (abronzeado), **xera** (celeste), **xuna** (loiro, amarelado).
-* **Verbos no Infinitivo Absoluto (`-ur`)**: **adurur** (obscurecer), **aelfur** (profanar), **aesur** (deixar de ser), **afasu** / **afasur** (aliviar dor), **agaldexur** (reembainhar), **agaldur** (abandonar custódia), **agirur** (diminuir), **agizur** (odiar / esquecer cognitivamente), **akazur** (perecer, morrer), **akeladur** (afastar-se), **akelexur** (estagnar, ficar preso), **akel'unur** (abandonar escolta), **akitur** (perdoar institucionalmente / rasurar), **akomur** (privar de fluidos), **akosur** (expor), **akradur** (destruir, descriar), **alanur** (obliterar a luz), **aletur** (silenciar violentamente), **amakur** (esfomear), **amirur** (cegar), **asaidur** (embotar lâmina), **asfarur** (aniquilar), **askorur** (descrer), **atokur** (desgovernar), **atolur** (desfigurar), **atorexur** (restituir à força), **atrakur** (retrair), **barur** (irritar), **dakur** (flanquear à direita), **dootur** (entediar-se), **durur** (brilhar), **elfur** (sacralizar), **esur** (ser/estar), **fasur** (padecer), **galdexur** (sacar, desembainhar), **galdur** (carregar, guardar), **gelur** (transladar, levar), **girur** (crescer), **gizur** (amar), **illotur** (embelezar), **intulur** (enlouquecer), **kamur** (embriagar), **kazur** (viver), **keladur** (aproximar-se), **kelexur** (escapar), **kelur** (mover em conjunto), **kel'unur** (escoltar), **kitur** (escrever), **komur** (beber), **kosur** (esconder), **kradur** (criar), **lakanavur** (amaldiçoar), **lanur** (emanar luz), **letur** (falar), **litrur** (vibrar), **makur** (comer), **metur** (glorificar), **mirur** (ver, vigiar), **mobanavur** (bendizer, abençoar), **mobur** (beneficiar, dar), **molletur** (julgar), **navur** (transformar, tornar-se), **odesur** (restituir estado), **okazur** (ressuscitar), **okradur** (recriar), **osfarur** (voltar a proteger), **otrakur** (recuar), **parur** (merecer), **pasur** (precisar), **saidur** (afiar), **sfarur** (proteger), **sifur** (contar histórias), **sinur** (flanquear à esquerda), **skorur** (crer), **tekur** (fazer, fabricar), **tokur** (governar), **torexur** (tomar à força), **torur** (possuir), **trakur** (marchar), **ynur** (andar).
+<!-- BEGIN_DICTIONARY_CONDE -->
+## IX. Dicionário Geral Integral da Língua Tréppia (Era Clássica V8.4)
 
+> **Inventário Canônico:** 2109 substantivos (2109 lemas), 446 adjetivos, 1202 advérbios, 442 raízes verbais (1768 verbos quadripartites), **246,737 formas flexionadas e derivadas** (com haplologia silábica `'`).
+
+### IX.1. Substantivos (2109)
+- **aelfor** (2ª, pl. *aelforo*) — sacrilégio, profanação, mácula litúrgica `[aelf- + -or]`
+- **afasvé** (1ª, pl. *afasver*) — remédio específico para neutralizar veneno ou peçonha `[afas- (aliviar dor/veneno) + Vé]`
+- **agildirlan** (2ª, pl. *agildirlano*) — lua minguante, quarto minguante `[agir- (minguar) + nirlan (lua), rn -> ld]`
+- **agizor** (2ª, pl. *agizoro*) — ódio, aversão volitiva, oblívio deliberado `[agiz- + -or]`
+- **Agáltte** (1ª, pl. *Agáltter*) — O Falso Pastor (exônimo erodido de Hal'gáltte) `[a- + gald- + -te (dt -> tt)]`
+- **aisor** (2ª, pl. *aisoro*) — incompreensão, ignorância cognitiva `[a- + is- + -or]`
+- **akaz'oril** (2ª, pl. *akaz'orilo*) — erva-de-lobo de flor azul e raiz venenosa `[akaz- (matar) + koril (erva)]`
+- **akazvokor** (2ª, pl. *akazvokoro*) — morte e escurecimento de tecido por falta de sangue `[akaz- (morrer) + vokor (carne)]`
+- **akelexrixil** (2ª, pl. *akelexrixilo*) — deslocamento de um osso para fora de sua junta `[akelex- + rixil]`
+- **akindror** (2ª, pl. *akindroro*) — discórdia, contenda, cisão, guerra cósmica `[a- + kindr- + -or]`
+- **akitia** (1ª, pl. *akitiar*) — tribunal de clemência, câmara de anistia `[akit- + -ia]`
+- **akitor** (2ª, pl. *akitoro*) — anistia imperial, indulto, remissão formal `[akit- + -or]`
+- **akitte** (1ª, pl. *akitter*) — magistrado do perdão, censor cartorial `[akit- + -te]`
+- **akosor** (2ª, pl. *akosoro*) — revelação, manifestação visível, desvelamento `[akos- + -or]`
+- **akrador** (2ª, pl. *akradoro*) — destruição, ruína, descriação `[akrad- + -or]`
+- **akrazor** (2ª, pl. *akrazoro*) — pranto, lamento `[a- + kraz- + -or]`
+- **akura** (1ª, pl. *akurar*) — virgem, incorrupta, imaculada `[a- + kura]`
+- **aldor** (2ª, pl. *aldoro*) — tocha de breu, archote de resina para iluminar o caminho `[raiz al- (luz) + -dor (instrumento)]`
+- **alen** (2ª, pl. *aleno*) — saudação matinal, bom dia, claridade benfazeja `[al- (luz) + -en]`
+- **aler'itror** (2ª, pl. *aler'itroro*) — repouso harmônico que conclui uma frase musical `[aler- (concluir) + litror]`
+- **aletor** (2ª, pl. *aletoro*) — silêncio absoluto, censura, cessação do som `[alet- + -or]`
+- **alfrin** (2ª, pl. *alfrino*) — janela de postigo, fresta de luz da cabana `[al- (luz) + frin- (abertura)]`
+- **alitror** (2ª, pl. *alitroro*) — dissonância, discórdia musical, tumulto sonoro `[a- + litr- + -or]`
+- **allin** (2ª, pl. *allino*) — lamparina de óleo, candeia modesta da cabeceira `[al- (luz) + -in (diminutivo)]`
+- **Alvarok** (2ª, pl. *Alvaroko*) — Rito Escarlate, genocídio (exônimo de Tóldemme) `[Halyvar Voka erodido]`
+- **alveg** (2ª, pl. *alvego*) — alqueire de madeira com ferragem calibrada para medir grãos `[alv- + -eg]`
+- **alves** (2ª, pl. *alveso*) — aurora boreal, claridade mística no céu nublado de inverno `[al- (luz) + ves- (noite)]`
+- **alyror** (2ª, pl. *alyro'o*) — desespero `[a- + lyr- + -or]`
+- **ametor** (2ª, pl. *ametoro*) — vergonha, humilhação, opróbrio `[amet- + -or]`
+- **amiror** (2ª, pl. *amiro'o*) — cegueira física ou espiritual, treva nos olhos `[amir- + -or]`
+- **anyttek** (2ª, pl. *anytteko*) — fechadura, tranca `[a- + nyk- + -tek, kt -> tt]`
+- **apette** (1ª, pl. *apetter*) — remendão, consertador de utensílios `[a- + pek- + -te, kt -> tt]`
+- **Aralani** (1ª, pl. *Aralanier*) — Casa da Coroa (Grande Casa Imperial) `[ar- + lan-]`
+- **Arume** (1ª, pl. *Arumer*) — Império, domínio imperial supremo `[raiz arum-]`
+- **asfaror** (2ª, pl. *asfaro'o*) — aniquilação total, expurgo bélico, devastação `[asfar- + -or]`
+- **asfarte** (1ª, pl. *asfarter*) — destruidor, tropa de extermínio, aniquilador `[asfar- + -te]`
+- **askoror** (2ª, pl. *askoro'o*) — apostasia, heresia, incredulidade `[askor- + -or]`
+- **askorte** (1ª, pl. *askorter*) — apóstata, infiel, renegado `[askor- + -te]`
+- **atekor** (2ª, pl. *atekoro*) — desfazimento de obra, sabotagem, ruína `[atek- + -or]`
+- **atokor** (2ª, pl. *atokoro*) — anarquia, sedição, crise de desgoverno `[atok- + -or]`
+- **atonkrbel** (2ª, pl. *atonkrbelo*) — dia sagrado fora do mês no fim do ano solar `[atonkre (fora do tempo) + bel (dia)]`
+- **atonkre** (1ª, pl. *atonkrer*) — eternidade, sempiternidade, fora do tempo `[a- + tonkre]`
+- **atotte** (1ª, pl. *atotter*) — usurpador, tirano ilegítimo, rebelde `[atok- + -te (kt -> tt)]`
+- **avellir'an** (2ª, pl. *avellir'ano*) — eclipse lunar, sombra sobre a lua `[avel- + nirlan (lua), ln -> ll]`
+- **avottek** (2ª, pl. *avotteko*) — laço apertado sobre um membro para conter sangramento `[avok- (estancar sangue) + -tek, kt -> tt]`
+- **avur** (2ª, pl. *avuro*) — frio extremo, geada amarga, algidez `[a- + vur]`
+- **avur'é** (1ª, pl. *avur'er*) — gelo, água congelada, cristal de geada `[avur + Vé]`
+- **avurfeabel** (2ª, pl. *avurfeabelo*) — solstício de inverno, dia do sol gélido `[avur (frio) + feabel (solstício)]`
+- **avurfelil** (2ª, pl. *avurfeli'o*) — baga ácida escarlate dos charcos gelados `[avur (gelo) + felil (fruto)]`
+- **avurferpoke** (1ª, pl. *avurferpoker*) — ave das serras com pés emplumados contra a neve `[avur (frio) + ferpoke]`
+- **avurfrelor** (2ª, pl. *avurfreloro*) — tremor súbito do corpo acompanhado de sensação de frio `[avur (frio) + frelor (tremor)]`
+- **avurkoril** (2ª, pl. *avurkorilo*) — vegetação cinzenta que reveste penhascos gélidos `[avur (gelo) + koril (planta)]`
+- **avurpokegar** (2ª, pl. *avurpokegaro*) — grande fera branca dos mares gelados `[avur (gelo) + pokegar (fera)]`
+- **azalor** (2ª, pl. *azaloro*) — dívida pendente, inadimplência `[a- + zal- + -or]`
+- **balke** (1ª, pl. *balker*) — leira canteiro de terra aplainada e pronta para o plantio `[raiz primária balk- + -e]`
+- **balkia** (1ª, pl. *balkiar*) — lugar, recinto ou oficina de palpitar o coração `[balk- + -ia]`
+- **balkor** (2ª, pl. *balkoro*) — ato ou efeito de palpitar o coração `[balk- + -or]`
+- **balpia** (1ª, pl. *balpiar*) — lugar, recinto ou oficina de medir o tempo pelo gotejamento constante da clepsidra de bronze `[balp- + -ia]`
+- **balpor** (2ª, pl. *balporo*) — ato ou efeito de medir o tempo pelo gotejamento constante da clepsidra de bronze `[balp- + -or]`
+- **balptek** (2ª, pl. *balpteko*) — instrumento ou meio para medir o tempo pelo gotejamento constante da clepsidra de bronze `[balp- + -tek]`
+- **balttek** (2ª, pl. *baltteko*) — instrumento ou meio para palpitar o coração `[balk- + -tek]`
+- **bapia** (1ª, pl. *bapiar*) — lugar, recinto ou oficina de adiantar barras de prata como crédito `[bap- + -ia]`
+- **bapor** (2ª, pl. *baporo*) — ato ou efeito de adiantar barras de prata como crédito `[bap- + -or]`
+- **baptek** (2ª, pl. *bapteko*) — instrumento ou meio para adiantar barras de prata como crédito `[bap- + -tek]`
+- **barattekor** (2ª, pl. *barattekoro*) — arte de erguer muros de pedra aparelhada `[brik- (assentar pedra) + tekor, kt -> tt]`
+- **baskande** (1ª, pl. *baskander*) — avó guardiã dos cantos de ninar e bálsamos de ervas `[bask- + ande, termina em -e (1 decl)]`
+- **baskele** (1ª, pl. *baskeler*) — estaleiro naval com rampas de lançamento de madeira `[bask- (madeira) + kele (porto), termina em -e (1 decl)]`
+- **baxi** (1ª, pl. *baxier*) — gato, felino doméstico `[raiz bax-]`
+- **bel** (2ª, pl. *belo*) — dia, claridade solar `[raiz primária bel]`
+- **belkia** (1ª, pl. *belkiar*) — lugar, recinto ou oficina de relampejar `[belk- + -ia]`
+- **belkor** (2ª, pl. *belkoro*) — ato ou efeito de relampejar `[belk- + -or]`
+- **bellexe** (1ª, pl. *bellexer*) — estrela d'alva, astro anunciador da manhã `[bel (dia) + lexe (estrela)]`
+- **belor** (2ª, pl. *beloro*) — claridade abstrata, esplendor diurno `[bel + -or]`
+- **belpia** (1ª, pl. *belpiar*) — lugar, recinto ou oficina de intercalar os dias sagrados fora do mês `[belp- + -ia]`
+- **belpor** (2ª, pl. *belporo*) — ato ou efeito de intercalar os dias sagrados fora do mês `[belp- + -or]`
+- **belptek** (2ª, pl. *belpteko*) — instrumento ou meio para intercalar os dias sagrados fora do mês `[belp- + -tek]`
+- **belttek** (2ª, pl. *beltteko*) — instrumento ou meio para relampejar `[belk- + -tek]`
+- **belvar** (2ª, pl. *belvaro*) — jornada, um dia de caminho `[bel + var]`
+- **beptek** (2ª, pl. *bepteko*) — instrumento ou meio para ancorar a nau em porto seguro `[bev- + -tek]`
+- **berkia** (1ª, pl. *berkiar*) — lugar, recinto ou oficina de rachar o gelo na primavera `[berk- + -ia]`
+- **berkor** (2ª, pl. *berkoro*) — ato ou efeito de rachar o gelo na primavera `[berk- + -or]`
+- **berpia** (1ª, pl. *berpiar*) — lugar, recinto ou oficina de caldear veios de enxofre mineral `[berp- + -ia]`
+- **berpil** (2ª, pl. *berpilo*) — pó fino amarelo extraído para compostos de forja `[raiz berp- + -il]`
+- **berpin** (2ª, pl. *berpino*) — veio amarelo de enxofre nativo incrustado na rocha `[raiz berp- + -in]`
+- **berpor** (2ª, pl. *berporo*) — ato ou efeito de caldear veios de enxofre mineral `[berp- + -or]`
+- **berptek** (2ª, pl. *berpteko*) — instrumento ou meio para caldear veios de enxofre mineral `[berp- + -tek]`
+- **berpur** (2ª, pl. *berpuro*) — pedra de enxofre em crosta vulcânica amarelada `[raiz berp- + -ur]`
+- **berttek** (2ª, pl. *bertteko*) — instrumento ou meio para rachar o gelo na primavera `[berk- + -tek]`
+- **bevia** (1ª, pl. *beviar*) — lugar, recinto ou oficina de ancorar a nau em porto seguro `[bev- + -ia]`
+- **bevor** (2ª, pl. *bevoro*) — ato ou efeito de ancorar a nau em porto seguro `[bev- + -or]`
+- **bikia** (1ª, pl. *bikiar*) — lugar, recinto ou oficina de embalar o berço da criança `[bik- + -ia]`
+- **bikor** (2ª, pl. *bikoro*) — ato ou efeito de embalar o berço da criança `[bik- + -or]`
+- **bilkia** (1ª, pl. *bilkiar*) — lugar, recinto ou oficina de autenticar com selo de cera real `[bilk- + -ia]`
+- **bilkor** (2ª, pl. *bilkoro*) — ato ou efeito de autenticar com selo de cera real `[bilk- + -or]`
+- **bilpia** (1ª, pl. *bilpiar*) — lugar, recinto ou oficina de meditar em silêncio contemplativo `[bilp- + -ia]`
+- **bilpor** (2ª, pl. *bilporo*) — ato ou efeito de meditar em silêncio contemplativo `[bilp- + -or]`
+- **bilptek** (2ª, pl. *bilpteko*) — instrumento ou meio para meditar em silêncio contemplativo `[bilp- + -tek]`
+- **bilttek** (2ª, pl. *biltteko*) — instrumento ou meio para autenticar com selo de cera real `[bilk- + -tek]`
+- **bilynkitor** (2ª, pl. *bilynkitoro*) — manifesto de carga assinado pelos inspetores do porto `[blyn- + kitor]`
+- **bilynverre** (1ª, pl. *bilynverrer*) — lacre de chumbo com sinete atado à saca de mercadoria `[blyn- + verre]`
+- **biria** (1ª, pl. *biriar*) — lugar, recinto ou oficina de decifrar inscrição arcaica pré-Síncrese `[bir- + -ia]`
+- **birkia** (1ª, pl. *birkiar*) — lugar, recinto ou oficina de assentar tijolos ou blocos de pedra `[birk- + -ia]`
+- **birkor** (2ª, pl. *birkoro*) — ato ou efeito de assentar tijolos ou blocos de pedra `[birk- + -or]`
+- **biror** (2ª, pl. *biro'o*) — ato ou efeito de decifrar inscrição arcaica pré-Síncrese `[bir- + -or]`
+- **birpia** (1ª, pl. *birpiar*) — lugar, recinto ou oficina de assar pães no forno de pedra comunitário `[birp- + -ia]`
+- **birpor** (2ª, pl. *birporo*) — ato ou efeito de assar pães no forno de pedra comunitário `[birp- + -or]`
+- **birptek** (2ª, pl. *birpteko*) — instrumento ou meio para assar pães no forno de pedra comunitário `[birp- + -tek]`
+- **birtek** (2ª, pl. *birteko*) — instrumento ou meio para decifrar inscrição arcaica pré-Síncrese `[bir- + -tek]`
+- **birttek** (2ª, pl. *birtteko*) — instrumento ou meio para assentar tijolos ou blocos de pedra `[birk- + -tek]`
+- **bittek** (2ª, pl. *bitteko*) — instrumento ou meio para embalar o berço da criança `[bik- + -tek]`
+- **bodor** (2ª, pl. *bodoro*) — resposta `[bod- + -or]`
+- **borpede** (1ª, pl. *borpeder*) — patriarca ancião que preside as reuniões de linhagem `[borp- + ede, termina em -e (1 decl)]`
+- **borpia** (1ª, pl. *borpiar*) — lugar, recinto ou oficina de selar o cavalo de guerra com armação de couro e estribos de bronze `[borp- + -ia]`
+- **borpor** (2ª, pl. *borporo*) — ato ou efeito de selar o cavalo de guerra com armação de couro e estribos de bronze `[borp- + -or]`
+- **borptek** (2ª, pl. *borpteko*) — instrumento ou meio para selar o cavalo de guerra com armação de couro e estribos de bronze `[borp- + -tek]`
+- **bossuletor** (2ª, pl. *bossuletoro*) — canto em que o coro responde ao versículo do cantor `[bod- (responder) + suletor, ds -> ss]`
+- **bulkia** (1ª, pl. *bulkiar*) — lugar, recinto ou oficina de curtir o couro em tanino de casca `[bulk- + -ia]`
+- **bulkor** (2ª, pl. *bulkoro*) — ato ou efeito de curtir o couro em tanino de casca `[bulk- + -or]`
+- **bulttek** (2ª, pl. *bultteko*) — instrumento ou meio para curtir o couro em tanino de casca `[bulk- + -tek]`
+- **burkia** (1ª, pl. *burkiar*) — lugar, recinto ou oficina de inventariar o espólio da Casa `[burk- + -ia]`
+- **burkor** (2ª, pl. *burkoro*) — ato ou efeito de inventariar o espólio da Casa `[burk- + -or]`
+- **burttek** (2ª, pl. *burtteko*) — instrumento ou meio para inventariar o espólio da Casa `[burk- + -tek]`
+- **bylkia** (1ª, pl. *bylkiar*) — lugar, recinto ou oficina de timbrar o lacre de chumbo nas sacas `[bylk- + -ia]`
+- **bylkor** (2ª, pl. *bylkoro*) — ato ou efeito de timbrar o lacre de chumbo nas sacas `[bylk- + -or]`
+- **bylttek** (2ª, pl. *byltteko*) — instrumento ou meio para timbrar o lacre de chumbo nas sacas `[bylk- + -tek]`
+- **Calaiva** (1ª, pl. *Calaivar*) — Casa de Lan'ani (Grande Casa Nobre) `[topônimo/linhagem]`
+- **Celia** (1ª, pl. *Celiar*) — Região da Coroa (berço da Síncrese de Celia) `[topônimo imperial]`
+- **dai** (2ª, pl. *dao*) — ideia, pensamento, estrela abstrata `[raiz primária dai (Pl. dao)]`
+- **Daifel** (2ª, pl. *Daifelo*) — Filho do Pensamento (Ainur gerados por Oratypatte) `[dai + fel (Pl. Daifelo)]`
+- **Daifelo** (2ª, pl. *Daifelo*) — Os Filhos do Pensamento (plural solene de Daifel) `[dai + felo]`
+- **daior** (2ª, pl. *daioro*) — pensamento, mente criadora, meditação `[dai + -or]`
+- **daiosfar** (2ª, pl. *daiosfaro*) — caixa óssea que protege o cérebro e a mente `[daior (mente) + sfar (defesa)]`
+- **dak** (2ª, pl. *dako*) — mão direita, flanco destro `[raiz primária dak]`
+- **dakil** (2ª, pl. *dakilo*) — tigela de madeira torneada, prato fundo de refeição `[dak- (comer) + -il (recipiente)]`
+- **dakkor** (2ª, pl. *dakkoro*) — alimento diário, refeição farta, sustento `[raiz dak- (consumir/alimentar) + -or]`
+- **dakkoril** (2ª, pl. *dakkorilo*) — cogumelo comestível carnudo dos bosques de pinho `[dak- (comer) + koril (planta)]`
+- **dakshuxil** (2ª, pl. *dakshuxilo*) — agasalho de mão em camurça macia para cavaleiros `[dak + huxil, ks -> ks]`
+- **daktake** (1ª, pl. *daktaker*) — mesa de refeição maciça, bancada rústica de carvalho `[dak- (comer/refeição) + take (mesa)]`
+- **dakvokor** (2ª, pl. *dakvokoro*) — cavidade muscular que digere o alimento `[dak- (comer) + vokor]`
+- **dakvul** (2ª, pl. *dakvulo*) — fome, apetite voraz do viajante na nevasca `[dak- (comer) + vul- (desejo/anseio)]`
+- **dalbia** (1ª, pl. *dalbiar*) — lugar, recinto ou oficina de decantar vinho maduro em ânfora lacrada com resina de zimbro `[dalb- + -ia]`
+- **dalbor** (2ª, pl. *dalboro*) — ato ou efeito de decantar vinho maduro em ânfora lacrada com resina de zimbro `[dalb- + -or]`
+- **dalbtek** (2ª, pl. *dalbteko*) — instrumento ou meio para decantar vinho maduro em ânfora lacrada com resina de zimbro `[dalb- + -tek]`
+- **dalia** (1ª, pl. *daliar*) — lugar, recinto ou oficina de apregoar lotes e peças no mercado público `[dal- + -ia]`
+- **dalor** (2ª, pl. *daloro*) — ato ou efeito de apregoar lotes e peças no mercado público `[dal- + -or]`
+- **dalpia** (1ª, pl. *dalpiar*) — lugar, recinto ou oficina de descer materiais no poço por guincho `[dalp- + -ia]`
+- **dalpil** (2ª, pl. *dalpilo*) — caçamba reforçada de tiras de ferro para içar minério `[raiz dalp- + -il]`
+- **dalpin** (2ª, pl. *dalpino*) — descida de mineiros em gaiola de viga suspensa por cordas `[raiz dalp- + -in]`
+- **dalpor** (2ª, pl. *dalporo*) — ato ou efeito de descer materiais no poço por guincho `[dalp- + -or]`
+- **dalptek** (2ª, pl. *dalpteko*) — instrumento ou meio para descer materiais no poço por guincho `[dalp- + -tek]`
+- **dalpur** (2ª, pl. *dalpuro*) — guincho de tambor de madeira movido a manivela dupla `[raiz dalp- + -ur]`
+- **daltek** (2ª, pl. *dalteko*) — instrumento ou meio para apregoar lotes e peças no mercado público `[dal- + -tek]`
+- **daralitrtek** (2ª, pl. *daralitrteko*) — instrumento de arco de três cordas dos menestréis `[drak- (friccionar/arco) + litrtek]`
+- **daravokor** (2ª, pl. *daravokoro*) — cordão fibroso que prende o músculo ao osso `[drak- (tracionar) + vokor (carne)]`
+- **darpelitrgar** (2ª, pl. *darpelitrgaro*) — grande tambor hemisférico de cobre e pele de montaria `[darp- (ribombar) + litrgar]`
+- **darpelitril** (2ª, pl. *darpelitrilo*) — tambor cilíndrico portátil tocado em marcha `[darp- (bater) + litril]`
+- **darpelitrsu** (2ª, pl. *darpelitrsuo*) — haste interna de ferro que percute a borda do sino `[darp- + litr + su (cerne)]`
+- **darpia** (1ª, pl. *darpiar*) — lugar, recinto ou oficina de trovejar `[darp- + -ia]`
+- **darpilve** (1ª, pl. *darpilver*) — dote nupcial composto de gado e sementes selecionadas `[darp- + ilve, termina em -e (1 decl)]`
+- **darpor** (2ª, pl. *darporo*) — ato ou efeito de trovejar `[darp- + -or]`
+- **darptek** (2ª, pl. *darpteko*) — instrumento ou meio para trovejar `[darp- + -tek]`
+- **daspia** (1ª, pl. *daspiar*) — lugar, recinto ou oficina de açular cães de rastro no rastro de cervo real `[dasp- + -ia]`
+- **daspor** (2ª, pl. *dasporo*) — ato ou efeito de açular cães de rastro no rastro de cervo real `[dasp- + -or]`
+- **dasptek** (2ª, pl. *daspteko*) — instrumento ou meio para açular cães de rastro no rastro de cervo real `[dasp- + -tek]`
+- **datte** (1ª, pl. *datter*) — a Direita (assento de honra e poder) `[dak + -te (kt -> tt)]`
+- **delia** (1ª, pl. *deliar*) — lugar, recinto ou oficina de fortificar trincheira ou paliçada `[del- + -ia]`
+- **delkia** (1ª, pl. *delkiar*) — lugar, recinto ou oficina de serpentear em meandros lentos pelas planicies aluviais `[delk- + -ia]`
+- **delkor** (2ª, pl. *delkoro*) — ato ou efeito de serpentear em meandros lentos pelas planicies aluviais `[delk- + -or]`
+- **delor** (2ª, pl. *deloro*) — ato ou efeito de fortificar trincheira ou paliçada `[del- + -or]`
+- **delpia** (1ª, pl. *delpiar*) — lugar, recinto ou oficina de arar gleba fértil da planície `[delp- + -ia]`
+- **delpor** (2ª, pl. *delporo*) — ato ou efeito de arar gleba fértil da planície `[delp- + -or]`
+- **delptek** (2ª, pl. *delpteko*) — instrumento ou meio para arar gleba fértil da planície `[delp- + -tek]`
+- **delpur** (2ª, pl. *delpuro*) — arado pesado de relha de ferro e aiveca de carvalho `[raiz delp- + -ur]`
+- **deltek** (2ª, pl. *delteko*) — instrumento ou meio para fortificar trincheira ou paliçada `[del- + -tek]`
+- **delttek** (2ª, pl. *deltteko*) — instrumento ou meio para serpentear em meandros lentos pelas planicies aluviais `[delk- + -tek]`
+- **derkia** (1ª, pl. *derkiar*) — lugar, recinto ou oficina de engolir `[derk- + -ia]`
+- **derkor** (2ª, pl. *derkoro*) — ato ou efeito de engolir `[derk- + -or]`
+- **derpia** (1ª, pl. *derpiar*) — lugar, recinto ou oficina de tornear madeira ou marfim `[derp- + -ia]`
+- **derpor** (2ª, pl. *derporo*) — ato ou efeito de tornear madeira ou marfim `[derp- + -or]`
+- **derptek** (2ª, pl. *derpteko*) — instrumento ou meio para tornear madeira ou marfim `[derp- + -tek]`
+- **derttek** (2ª, pl. *dertteko*) — instrumento ou meio para engolir `[derk- + -tek]`
+- **dikia** (1ª, pl. *dikiar*) — lugar, recinto ou oficina de temperar o assado com ervas da serra `[dik- + -ia]`
+- **dikor** (2ª, pl. *dikoro*) — ato ou efeito de temperar o assado com ervas da serra `[dik- + -or]`
+- **dikxia** (1ª, pl. *dikxiar*) — lugar, recinto ou oficina de calçar botas encouraçadas para a neve `[dikx- + -ia]`
+- **dikxor** (2ª, pl. *dikxoro*) — ato ou efeito de calçar botas encouraçadas para a neve `[dikx- + -or]`
+- **dikxtek** (2ª, pl. *dikxteko*) — instrumento ou meio para calçar botas encouraçadas para a neve `[dikx- + -tek]`
+- **dilkia** (1ª, pl. *dilkiar*) — lugar, recinto ou oficina de acreditar embaixador junto à corte `[dilk- + -ia]`
+- **dilkor** (2ª, pl. *dilkoro*) — ato ou efeito de acreditar embaixador junto à corte `[dilk- + -or]`
+- **dilptek** (2ª, pl. *dilpteko*) — instrumento ou meio para solidificar em crosta vitrea e agulhas polares `[dilv- + -tek]`
+- **dilttek** (2ª, pl. *diltteko*) — instrumento ou meio para acreditar embaixador junto à corte `[dilk- + -tek]`
+- **dilvia** (1ª, pl. *dilviar*) — lugar, recinto ou oficina de solidificar em crosta vitrea e agulhas polares `[dilv- + -ia]`
+- **dilvor** (2ª, pl. *dilvoro*) — ato ou efeito de solidificar em crosta vitrea e agulhas polares `[dilv- + -or]`
+- **dimia** (1ª, pl. *dimiar*) — lugar, recinto ou oficina de venerar relíquia dos antigos `[dim- + -ia]`
+- **dimor** (2ª, pl. *dimoro*) — ato ou efeito de venerar relíquia dos antigos `[dim- + -or]`
+- **dimtek** (2ª, pl. *dimteko*) — instrumento ou meio para venerar relíquia dos antigos `[dim- + -tek]`
+- **diria** (1ª, pl. *diriar*) — lugar, recinto ou oficina de salmodiar em versículos alternados `[dir- + -ia]`
+- **dirkia** (1ª, pl. *dirkiar*) — lugar, recinto ou oficina de esculpir estátua em mármore ou rocha `[dirk- + -ia]`
+- **dirkor** (2ª, pl. *dirkoro*) — ato ou efeito de esculpir estátua em mármore ou rocha `[dirk- + -or]`
+- **diror** (2ª, pl. *diro'o*) — ato ou efeito de salmodiar em versículos alternados `[dir- + -or]`
+- **dirpia** (1ª, pl. *dirpiar*) — lugar, recinto ou oficina de esporear o corcel a galope `[dirp- + -ia]`
+- **dirpor** (2ª, pl. *dirporo*) — ato ou efeito de esporear o corcel a galope `[dirp- + -or]`
+- **dirptek** (2ª, pl. *dirpteko*) — instrumento ou meio para esporear o corcel a galope `[dirp- + -tek]`
+- **dirtek** (2ª, pl. *dirteko*) — instrumento ou meio para salmodiar em versículos alternados `[dir- + -tek]`
+- **dirttek** (2ª, pl. *dirtteko*) — instrumento ou meio para esculpir estátua em mármore ou rocha `[dirk- + -tek]`
+- **dittek** (2ª, pl. *ditteko*) — instrumento ou meio para temperar o assado com ervas da serra `[dik- + -tek]`
+- **dofea** (1ª, pl. *dofear*) — falso sol espelhado nas nuvens de gelo `[do (dois) + fea (sol)]`
+- **dolpia** (1ª, pl. *dolpiar*) — lugar, recinto ou oficina de consagrar rito de maioridade do jovem com unção de óleo `[dolp- + -ia]`
+- **dolpil** (2ª, pl. *dolpilo*) — amuleto protetor de osso entalhado concedido na maioridade `[raiz dolp- + -il]`
+- **dolpin** (2ª, pl. *dolpino*) — unção sagrada com óleo perfumado na passagem para a idade adulta `[raiz dolp- + -in]`
+- **dolpor** (2ª, pl. *dolporo*) — ato ou efeito de consagrar rito de maioridade do jovem com unção de óleo `[dolp- + -or]`
+- **dolptek** (2ª, pl. *dolpteko*) — instrumento ou meio para consagrar rito de maioridade do jovem com unção de óleo `[dolp- + -tek]`
+- **dolpur** (2ª, pl. *dolpuro*) — vaso cônico de bronze que guarda o óleo dos ritos de passagem `[raiz dolp- + -ur]`
+- **don** (2ª, pl. *dono*) — dom, dádiva soberana (Arcaísmo Litúrgico cristalizado no Halylitror IV: donoi; forma clássica endógena: moboril) `[fóssil litúrgico do Halylitror]`
+- **doote** (1ª, pl. *dooter*) — tédio, fastio, apatia `[raiz doot-]`
+- **dorkia** (1ª, pl. *dorkiar*) — lugar, recinto ou oficina de afivelar o cinturão de montaria com correia `[dork- + -ia]`
+- **dorkor** (2ª, pl. *dorkoro*) — ato ou efeito de afivelar o cinturão de montaria com correia `[dork- + -or]`
+- **dorpia** (1ª, pl. *dorpiar*) — lugar, recinto ou oficina de promulgar edito imperial solene `[dorp- + -ia]`
+- **dorpil** (2ª, pl. *dorpilo*) — selo em miniatura de bronze para chancelar cópias do edito `[raiz dorp- + -il]`
+- **dorpin** (2ª, pl. *dorpino*) — bando ou pregão público do edito na praça da corte `[raiz dorp- + -in]`
+- **dorpor** (2ª, pl. *dorporo*) — ato ou efeito de promulgar edito imperial solene `[dorp- + -or]`
+- **dorptek** (2ª, pl. *dorpteko*) — instrumento ou meio para promulgar edito imperial solene `[dorp- + -tek]`
+- **dorpur** (2ª, pl. *dorpuro*) — pergaminho com edito imperial promulgado pelo chanceler `[raiz dorp- + -ur]`
+- **dorttek** (2ª, pl. *dortteko*) — instrumento ou meio para afivelar o cinturão de montaria com correia `[dork- + -tek]`
+- **Dotakazeti** (2ª, pl. *Dotakazeti*) — Os Segundos Nascidos, Sucessores (Homens) `[dota + kazeti]`
+- **dratte** (1ª, pl. *dratter*) — carreteiro, condutor de trenó `[drak- + -te, kt -> tt]`
+- **drattek** (2ª, pl. *dratteko*) — corda de reboque, arreio `[drak- + -tek, kt -> tt]`
+- **drinet** (2ª, pl. *drineto*) — pinheiro silvestre, conífera alta das encostas `[drin- (madeira/resina) + -et]`
+- **dulpia** (1ª, pl. *dulpiar*) — lugar, recinto ou oficina de acumular camadas espessas de nevasca nas encostas altas `[dulp- + -ia]`
+- **dulpor** (2ª, pl. *dulporo*) — ato ou efeito de acumular camadas espessas de nevasca nas encostas altas `[dulp- + -or]`
+- **dulptek** (2ª, pl. *dulpteko*) — instrumento ou meio para acumular camadas espessas de nevasca nas encostas altas `[dulp- + -tek]`
+- **durkia** (1ª, pl. *durkiar*) — lugar, recinto ou oficina de cobrar tributo ou dízimo imperial `[durk- + -ia]`
+- **durkor** (2ª, pl. *durkoro*) — ato ou efeito de cobrar tributo ou dízimo imperial `[durk- + -or]`
+- **durptek** (2ª, pl. *durpteko*) — instrumento ou meio para fluir em leito subterraneo escavando saloes cegos `[durv- + -tek]`
+- **durtek** (2ª, pl. *durteko*) — martelo de ferreiro, marreta pesada de forja `[dur- (bater) + tek- (forja)]`
+- **durttek** (2ª, pl. *durtteko*) — instrumento ou meio para cobrar tributo ou dízimo imperial `[durk- + -tek]`
+- **durvia** (1ª, pl. *durviar*) — lugar, recinto ou oficina de fluir em leito subterraneo escavando saloes cegos `[durv- + -ia]`
+- **durvor** (2ª, pl. *durvoro*) — ato ou efeito de fluir em leito subterraneo escavando saloes cegos `[durv- + -or]`
+- **durxveltek** (2ª, pl. *durxvelteko*) — trombeta reta de prata de som claro e agudo `[dur- (brilhar) + xveltek]`
+- **edel** (2ª, pl. *edelo*) — nobreza, aristocracia de sangue `[raiz primária edel]`
+- **edelbroxtor** (2ª, pl. *edelbroxtoro*) — emblema bordado com armas da Casa Nobre sobre o peito `[edel + brox + -tor]`
+- **edelpoke** (1ª, pl. *edelpoker*) — cervo real de galhada ramificada das florestas `[edel (nobre) + poke (animal)]`
+- **edelyhuxkade** (1ª, pl. *edelyhuxkader*) — touca de damasco com enfeites para mulheres `[edely + hux + kade]`
+- **eirag** (2ª, pl. *eirago*) — terreiro lajeado de pedra plana batida para a debulha `[raiz primária eir- + -ag]`
+- **Elfhalo** (2ª, pl. *Elfhalo*) — Os Espíritos Sagrados (Ainur) `[elfa + halo]`
+- **elfia** (1ª, pl. *elfiar*) — santuário, capela, recinto consagrado `[elf- + -ia]`
+- **elfkitor** (2ª, pl. *elfkitoro*) — grande códice iluminado contendo os cantos do ano sagrado `[elf- (sacro) + kitor (códice)]`
+- **elfor** (2ª, pl. *elforo*) — santidade, pureza ritual, consagração `[elf- + -or]`
+- **elftek** (2ª, pl. *elfteko*) — vaso sagrado, cálice ritual, relíquia `[elf- + -tek]`
+- **enulfe** (1ª, pl. *enulfer*) — confusão, tumulto, baderna, caos `[raiz enulf-]`
+- **Erzmira** (1ª, pl. *Erzmirar*) — Casa da Joia (regentes de Mirypalkia) `[erz- + mir + -a]`
+- **fadia** (1ª, pl. *fadiar*) — lugar, recinto ou oficina de conferir o manifesto de carga da nau `[fad- + -ia]`
+- **fador** (2ª, pl. *fadoro*) — ato ou efeito de conferir o manifesto de carga da nau `[fad- + -or]`
+- **fain** (2ª, pl. *faino*) — pirata, corsário, saqueador marítimo `[raiz primária fain]`
+- **falbia** (1ª, pl. *falbiar*) — lugar, recinto ou oficina de calcinar cinzas vegetais em cadinho refratário `[falb- + -ia]`
+- **falbil** (2ª, pl. *falbilo*) — cinza purificada de plantas alpinas rica em potassa `[raiz falb- + -il]`
+- **falbin** (2ª, pl. *falbino*) — purificação de sais alcalinos por queima em brasa `[raiz falb- + -in]`
+- **falbite** (1ª, pl. *falbiter*) — espátula de osso polido para raspar pó do cadinho `[falb- + -ite]`
+- **falbor** (2ª, pl. *falboro*) — ato ou efeito de calcinar cinzas vegetais em cadinho refratário `[falb- + -or]`
+- **falbtek** (2ª, pl. *falbteko*) — instrumento ou meio para calcinar cinzas vegetais em cadinho refratário `[falb- + -tek]`
+- **falbur** (2ª, pl. *falburo*) — cadinho de grafite resistente ao fogo do maçarico `[raiz falb- + -ur]`
+- **falde** (1ª, pl. *falder*) — pão, alimento consagrado de trigo `[far- + -ne (rn -> ld)]`
+- **falet** (2ª, pl. *faleto*) — leito macio, cama de palha e mantas de dormir `[raiz fal- (repousar) + -et]`
+- **falia** (1ª, pl. *faliar*) — quarto de dormir, aposento `[fal- + -ia]`
+- **falkia** (1ª, pl. *falkiar*) — lugar, recinto ou oficina de podar galhos secos de árvores frutíferas `[falk- + -ia]`
+- **falkor** (2ª, pl. *falkoro*) — ato ou efeito de podar galhos secos de árvores frutíferas `[falk- + -or]`
+- **falkur** (2ª, pl. *falkuro*) — podão curvo de cabo longo para árvores frutíferas `[raiz falk- + -ur]`
+- **falmkoril** (2ª, pl. *falmkorilo*) — erva calmante das encostas úmidas para o sono `[fal- (dormir) + koril (erva)]`
+- **falpia** (1ª, pl. *falpiar*) — lugar, recinto ou oficina de cochilar suavemente `[falp- + -ia]`
+- **falpoke** (1ª, pl. *falpoker*) — roedor das serras que dorme todo o inverno em tocas `[fal- (dormir) + poke (animal)]`
+- **falpor** (2ª, pl. *falporo*) — ato ou efeito de cochilar suavemente `[falp- + -or]`
+- **falptek** (2ª, pl. *falpteko*) — instrumento ou meio para cochilar suavemente `[falp- + -tek]`
+- **falte** (1ª, pl. *falter*) — ofensa, dívida moral, pecado, transgressão `[raiz falt-]`
+- **falttek** (2ª, pl. *faltteko*) — instrumento ou meio para podar galhos secos de árvores frutíferas `[falk- + -tek]`
+- **fapia** (1ª, pl. *fapiar*) — lugar, recinto ou oficina de mergulhar no hemisfério inferior sob a terra `[fap- + -ia]`
+- **fapor** (2ª, pl. *faporo*) — ato ou efeito de mergulhar no hemisfério inferior sob a terra `[fap- + -or]`
+- **faptek** (2ª, pl. *fapteko*) — instrumento ou meio para mergulhar no hemisfério inferior sob a terra `[fap- + -tek]`
+- **farbia** (1ª, pl. *farbiar*) — lugar, recinto ou oficina de vadear leitos rasos cruzando bancos de cascalho firme `[farb- + -ia]`
+- **farbor** (2ª, pl. *farboro*) — ato ou efeito de vadear leitos rasos cruzando bancos de cascalho firme `[farb- + -or]`
+- **farbtek** (2ª, pl. *farbteko*) — instrumento ou meio para vadear leitos rasos cruzando bancos de cascalho firme `[farb- + -tek]`
+- **fardia** (1ª, pl. *fardiar*) — lugar, recinto ou oficina de prestar testemunho solene em juízo `[fard- + -ia]`
+- **fardil** (2ª, pl. *fardilo*) — resumo juramentado de testemunho lavrado pelo escrivão `[raiz fard- + -il]`
+- **fardin** (2ª, pl. *fardino*) — depoimento prestado sob juramento sagrado sobre as tábuas `[raiz fard- + -in]`
+- **fardole** (1ª, pl. *fardoler*) — fórmula solene de juramento repetida perante o tribunal `[fard- + -ole]`
+- **fardor** (2ª, pl. *fardoro*) — ato ou efeito de prestar testemunho solene em juízo `[fard- + -or]`
+- **fardur** (2ª, pl. *farduro*) — termo solene de inquirição de testemunhas da causa `[raiz fard- + -ur]`
+- **farhux** (2ª, pl. *farhuxo*) — pano leve e fresco de verão fiado de caules secos `[far + hux]`
+- **farkrope** (1ª, pl. *farkroper*) — campo de trigo, seara, terras aráveis `[far- + krope]`
+- **farte** (1ª, pl. *farter*) — agricultor, lavrador de trigo, moleiro `[far- + -te]`
+- **fartepia** (1ª, pl. *fartepiar*) — celeiro subterrâneo revestido de pedra para guardar trigo `[far (trigo) + tepia]`
+- **farttek** (2ª, pl. *fartteko*) — instrumento ou meio para prestar testemunho solene em juízo `[fard- + -tek]`
+- **farvé** (1ª, pl. *farver*) — cerveja de trigo `[far- + Vé]`
+- **fas** (2ª, pl. *faso*) — dor, sofrimento físico, suplício `[raiz primária fas]`
+- **faskoril** (2ª, pl. *faskorilo*) — erva de pelos ardentes que queima a pele `[fas (ardor/dor) + koril (erva)]`
+- **faspia** (1ª, pl. *faspiar*) — lugar, recinto ou oficina de soltar queixume de dor ou esforço `[fasp- + -ia]`
+- **faspokegar** (2ª, pl. *faspokegaro*) — javali silvestre de presas curvas das matas `[fas (ferir) + pokegar (fera)]`
+- **faspor** (2ª, pl. *fasporo*) — ato ou efeito de soltar queixume de dor ou esforço `[fasp- + -or]`
+- **fasptek** (2ª, pl. *faspteko*) — instrumento ou meio para soltar queixume de dor ou esforço `[fasp- + -tek]`
+- **fassukor** (2ª, pl. *fassukoro*) — tristeza profunda, melancolia, luto `[fas + sukor]`
+- **fattek** (2ª, pl. *fatteko*) — instrumento ou meio para conferir o manifesto de carga da nau `[fad- + -tek]`
+- **fea** (1ª, pl. *fear*) — sol, astro rei `[raiz primária fea]`
+- **feabel** (2ª, pl. *feabelo*) — solstício, meio-dia solar, zênite `[fea + bel]`
+- **feabelvar** (2ª, pl. *feabelvaro*) — linha do meio-dia, arco norte-sul do céu `[feabel (meio-dia) + var (linha/caminho)]`
+- **feakade** (1ª, pl. *feakader*) — solstício de verão, ápice da jornada solar `[fea (sol) + kade (cume/ápice)]`
+- **fealan** (2ª, pl. *fealano*) — alvorada, aurora, clarão do sol nascente `[fea + lan]`
+- **feapia** (1ª, pl. *feapiar*) — lugar, recinto ou oficina de projetar a sombra solar no relógio de pedra `[feap- + -ia]`
+- **feapor** (2ª, pl. *feaporo*) — ato ou efeito de projetar a sombra solar no relógio de pedra `[feap- + -or]`
+- **feaptek** (2ª, pl. *feapteko*) — instrumento ou meio para projetar a sombra solar no relógio de pedra `[feap- + -tek]`
+- **feaveltek** (2ª, pl. *feavelteko*) — gnômon, haste do relógio de sol `[fea (sol) + vel (sombra) + -tek]`
+- **fel** (2ª, pl. *felo*) — filho, descendente legítimo `[raiz primária fel]`
+- **feldir** (2ª, pl. *feldiro*) — outono, estação dos ventos noturnos `[fer + nir (rn -> ld)]`
+- **feldirkor** (2ª, pl. *feldirkoro*) — larício de agulhas douradas no outono `[feldir (outono) + kor (árvore)]`
+- **felkia** (1ª, pl. *felkiar*) — lugar, recinto ou oficina de trançar cordas de cânhamo ou crina `[felk- + -ia]`
+- **felkor** (2ª, pl. *felkoro*) — ato ou efeito de trançar cordas de cânhamo ou crina `[felk- + -or]`
+- **felttek** (2ª, pl. *feltteko*) — instrumento ou meio para trançar cordas de cânhamo ou crina `[felk- + -tek]`
+- **fenil** (2ª, pl. *fenilo*) — fardo prensado de capim seco e trevo doce aromático `[raiz primária fen- + -il]`
+- **fer** (2ª, pl. *fero*) — vento, ar em movimento, sopro atmosférico `[raiz primária fer]`
+- **feria** (1ª, pl. *feriar*) — atmosfera, regiões superiores do ar, éter `[fer + -ia]`
+- **ferkia** (1ª, pl. *ferkiar*) — lugar, recinto ou oficina de estremecer de calafrio ou emoção `[ferk- + -ia]`
+- **ferkor** (2ª, pl. *ferkoro*) — ato ou efeito de estremecer de calafrio ou emoção `[ferk- + -or]`
+- **ferkrope'oke** (1ª, pl. *ferkrope'oker*) — ave escura de cauda em lira dos bosques de pinho `[krope + ferpoke]`
+- **ferlitrgar** (2ª, pl. *ferlitrgaro*) — fole de couro que alimenta de ar o grande órgão `[fer (ar) + litrgar]`
+- **ferlitrtek** (2ª, pl. *ferlitrteko*) — instrumento tubular de madeira ou prata tocado pelo sopro `[fer (sopro/vento) + litrtek]`
+- **ferpia** (1ª, pl. *ferpiar*) — lugar, recinto ou oficina de inspirar fundo o ar nos pulmões `[ferp- + -ia]`
+- **ferpokegar** (2ª, pl. *ferpokegaro*) — ave real de voo velocíssimo usada na caça nobre `[fer (vento) + pokegar]`
+- **ferpor** (2ª, pl. *ferporo*) — ato ou efeito de inspirar fundo o ar nos pulmões `[ferp- + -or]`
+- **ferptek** (2ª, pl. *ferpteko*) — instrumento ou meio para inspirar fundo o ar nos pulmões `[ferp- + -tek]`
+- **fertek** (2ª, pl. *ferteko*) — fole de forja `[fer + -tek]`
+- **Fertrátte** (1ª, pl. *Fertrátter*) — Manwë, Senhor dos Ventos (forma radical de Ferytrátte) `[fer + Trátte]`
+- **ferttek** (2ª, pl. *fertteko*) — instrumento ou meio para estremecer de calafrio ou emoção `[ferk- + -tek]`
+- **fervokor** (2ª, pl. *fervokoro*) — órgão esponjoso do peito responsável pelo fôlego `[fer (ar/fôlego) + vokor (órgão)]`
+- **fervé** (1ª, pl. *ferver*) — nuvem, névoa, vapor atmosférico `[fer + Vé (Pl. ferveo)]`
+- **Ferykrope** (1ª, pl. *Ferykroper*) — Campina dos Ventos (feudo da Casa Ferylinde; vulg. Ferychope) `[fery + krope]`
+- **Ferylinde** (1ª, pl. *Ferylinder*) — Casa do Vento (regentes de Ferykrope) `[fery + linde]`
+- **Ferytrátte** (1ª, pl. *Ferytrátter*) — Manwë, Senhor dos Ventos (var. Fertrátte) `[fery + Trátte]`
+- **fexia** (1ª, pl. *fexiar*) — lugar, recinto ou oficina de chover fino `[fex- + -ia]`
+- **fexor** (2ª, pl. *fexoro*) — ato ou efeito de chover fino `[fex- + -or]`
+- **fextek** (2ª, pl. *fexteko*) — instrumento ou meio para chover fino `[fex- + -tek]`
+- **fikia** (1ª, pl. *fikiar*) — lugar, recinto ou oficina de ensinar a gramática normativa `[fik- + -ia]`
+- **fikor** (2ª, pl. *fikoro*) — ato ou efeito de ensinar a gramática normativa `[fik- + -or]`
+- **fil** (2ª, pl. *filo*) — cerne, abismo, princípio primordial `[raiz primária fil]`
+- **fila** (1ª, pl. *filar*) — tristeza ancestral proto-tréppia `[fil + -a]`
+- **fildia** (1ª, pl. *fildiar*) — lugar, recinto ou oficina de encordoar o arco de guerra `[fild- + -ia]`
+- **fildor** (2ª, pl. *fildoro*) — ato ou efeito de encordoar o arco de guerra `[fild- + -or]`
+- **filia** (1ª, pl. *filiar*) — profundidade abissal, âmago `[fil + -ia]`
+- **filkade** (1ª, pl. *filkader*) — nadir, ponto abissal oposto ao zênite `[fil (abismo) + kade (ponto)]`
+- **filkor** (2ª, pl. *filkoro*) — caule subterrâneo que armazena sustento no inverno `[fil (cerne/fundo) + kor (planta)]`
+- **filkosia** (1ª, pl. *filkosiar*) — poço subterrâneo fechado por alçapão no piso `[fil (abismo) + kosia]`
+- **filox** (2ª, pl. *filoxo*) — floresta de coníferas, bosque de pinheiros nevado `[fil- (árvore) + ox- (terra)]`
+- **filoxe** (1ª, pl. *filoxer*) — vale profundo, cavidade da terra, depressão `[fil + oxe]`
+- **filoxetep** (2ª, pl. *filoxetepo*) — recinto subterrâneo abobadado sob o piso do santuário `[fil (subterrâneo) + oxe + tep]`
+- **filpia** (1ª, pl. *filpiar*) — lugar, recinto ou oficina de cintilar como estrela ou aurora boreal `[filp- + -ia]`
+- **filpor** (2ª, pl. *filporo*) — ato ou efeito de cintilar como estrela ou aurora boreal `[filp- + -or]`
+- **filptek** (2ª, pl. *filpteko*) — instrumento ou meio para cintilar como estrela ou aurora boreal `[filp- + -tek]`
+- **filrixil** (2ª, pl. *filrixilo*) — substância vital no interior dos ossos longos `[fil (cerne) + rixil (osso)]`
+- **filteggar** (2ª, pl. *filteggaro*) — abóbada subterrânea à prova de impacto sob a muralha `[fil (subterrâneo) + teggar]`
+- **filttek** (2ª, pl. *filtteko*) — instrumento ou meio para encordoar o arco de guerra `[fild- + -tek]`
+- **filvande** (1ª, pl. *filvander*) — filho de coração adotado com plenos direitos de herança `[fil- + vande, termina em -e (1 decl)]`
+- **filveia** (1ª, pl. *filveiar*) — reservatório subterrâneo abobadado para águas da chuva `[fil (fundo) + veia (cisterna)]`
+- **filvé** (1ª, pl. *filver*) — abismo marinho, profundezas das águas `[fil + Vé]`
+- **filyhuxil** (2ª, pl. *filyhuxilo*) — forro acolchoado usado sob o peitoral de combate `[fily + huxil]`
+- **fimia** (1ª, pl. *fimiar*) — lugar, recinto ou oficina de arbitrar litígio entre Casas Nobres `[fim- + -ia]`
+- **fimor** (2ª, pl. *fimoro*) — ato ou efeito de arbitrar litígio entre Casas Nobres `[fim- + -or]`
+- **fimtek** (2ª, pl. *fimteko*) — instrumento ou meio para arbitrar litígio entre Casas Nobres `[fim- + -tek]`
+- **fipia** (1ª, pl. *fipiar*) — lugar, recinto ou oficina de varrer a cinza da lareira `[fip- + -ia]`
+- **fipor** (2ª, pl. *fiporo*) — ato ou efeito de varrer a cinza da lareira `[fip- + -or]`
+- **fiptek** (2ª, pl. *fipteko*) — instrumento ou meio para varrer a cinza da lareira `[fip- + -tek]`
+- **firkia** (1ª, pl. *firkiar*) — lugar, recinto ou oficina de destilar essência de ervas alpinas `[firk- + -ia]`
+- **firkor** (2ª, pl. *firkoro*) — ato ou efeito de destilar essência de ervas alpinas `[firk- + -or]`
+- **firttek** (2ª, pl. *firtteko*) — instrumento ou meio para destilar essência de ervas alpinas `[firk- + -tek]`
+- **firxia** (1ª, pl. *firxiar*) — lugar, recinto ou oficina de incensar o altar nos ritos solenes `[firx- + -ia]`
+- **firxor** (2ª, pl. *firxoro*) — ato ou efeito de incensar o altar nos ritos solenes `[firx- + -or]`
+- **firxtek** (2ª, pl. *firxteko*) — instrumento ou meio para incensar o altar nos ritos solenes `[firx- + -tek]`
+- **fisia** (1ª, pl. *fisiar*) — lugar, recinto ou oficina de pregar botões de osso na túnica `[fis- + -ia]`
+- **fisor** (2ª, pl. *fisoro*) — ato ou efeito de pregar botões de osso na túnica `[fis- + -or]`
+- **fistek** (2ª, pl. *fisteko*) — instrumento ou meio para pregar botões de osso na túnica `[fis- + -tek]`
+- **fittek** (2ª, pl. *fitteko*) — instrumento ou meio para ensinar a gramática normativa `[fik- + -tek]`
+- **Flibuste** (1ª, pl. *Flibuster*) — Casa de Celia (senhores da navegação) `[linhagem nobre]`
+- **foladkitor** (2ª, pl. *foladkitoro*) — quitação definitiva registrada após liquidação de débito `[flod- + kitor]`
+- **folbia** (1ª, pl. *folbiar*) — lugar, recinto ou oficina de exalar vapores termais aquecidos pelo calor das profundezas `[folb- + -ia]`
+- **folbor** (2ª, pl. *folboro*) — ato ou efeito de exalar vapores termais aquecidos pelo calor das profundezas `[folb- + -or]`
+- **folbtek** (2ª, pl. *folbteko*) — instrumento ou meio para exalar vapores termais aquecidos pelo calor das profundezas `[folb- + -tek]`
+- **folkia** (1ª, pl. *folkiar*) — lugar, recinto ou oficina de quitar débito no livro de contas `[folk- + -ia]`
+- **folkor** (2ª, pl. *folkoro*) — ato ou efeito de quitar débito no livro de contas `[folk- + -or]`
+- **folttek** (2ª, pl. *foltteko*) — instrumento ou meio para quitar débito no livro de contas `[folk- + -tek]`
+- **folve** (1ª, pl. *folver*) — folhagem caduca varrida dos pomares para cobertura morta `[folv- + -e]`
+- **font** (2ª, pl. *fonto*) — fonte, manancial (Arcaísmo Litúrgico cristalizado no Halylitror VI/IX: fontom; forma clássica endógena: vefil) `[fóssil litúrgico do Halylitror]`
+- **fratror** (2ª, pl. *fratroro*) — irmão cósmico (Arcaísmo Litúrgico cristalizado no Halylitror IV/IX: fratroi; forma clássica endógena: kindrfel) `[fóssil litúrgico do Halylitror]`
+- **fulkia** (1ª, pl. *fulkiar*) — lugar, recinto ou oficina de sussurrar ao ouvido `[fulk- + -ia]`
+- **fulkor** (2ª, pl. *fulkoro*) — ato ou efeito de sussurrar ao ouvido `[fulk- + -or]`
+- **fullitrsulet** (2ª, pl. *fullitrsuleto*) — corda ou tubo grave que soa nota contínua de fundo `[fil (grave/fundo) + litr + sulet]`
+- **fulptek** (2ª, pl. *fulpteko*) — instrumento ou meio para jorrar jatos de vapor escaldante em geiseres ritmicos `[fulv- + -tek]`
+- **fulttek** (2ª, pl. *fultteko*) — instrumento ou meio para sussurrar ao ouvido `[fulk- + -tek]`
+- **fulvia** (1ª, pl. *fulviar*) — lugar, recinto ou oficina de jorrar jatos de vapor escaldante em geiseres ritmicos `[fulv- + -ia]`
+- **fulvor** (2ª, pl. *fulvoro*) — ato ou efeito de jorrar jatos de vapor escaldante em geiseres ritmicos `[fulv- + -or]`
+- **furkia** (1ª, pl. *furkiar*) — lugar, recinto ou oficina de arar a terra `[furk- + -ia]`
+- **furkor** (2ª, pl. *furkoro*) — ato ou efeito de arar a terra `[furk- + -or]`
+- **furpia** (1ª, pl. *furpiar*) — lugar, recinto ou oficina de arrendar terras da Coroa `[furp- + -ia]`
+- **furpor** (2ª, pl. *furporo*) — ato ou efeito de arrendar terras da Coroa `[furp- + -or]`
+- **furptek** (2ª, pl. *furpteko*) — instrumento ou meio para arrendar terras da Coroa `[furp- + -tek]`
+- **furttek** (2ª, pl. *furtteko*) — instrumento ou meio para arar a terra `[furk- + -tek]`
+- **galdia** (1ª, pl. *galdiar*) — guarnição, arsenal, tesouraria fortificada `[gald- + -ia]`
+- **galkin** (2ª, pl. *galkino*) — tinta escura indelével extraída de nozes de carvalho e ferro `[galk- + -in]`
+- **galkur** (2ª, pl. *galkuro*) — almofariz de pedra para triturar cinzas e minerais de cor `[galk- + -ur]`
+- **galpia** (1ª, pl. *galpiar*) — lugar, recinto ou oficina de operar aríete e maquinismos pesados de quebra de muralhas `[galp- + -ia]`
+- **galpor** (2ª, pl. *galporo*) — ato ou efeito de operar aríete e maquinismos pesados de quebra de muralhas `[galp- + -or]`
+- **galptek** (2ª, pl. *galpteko*) — instrumento ou meio para operar aríete e maquinismos pesados de quebra de muralhas `[galp- + -tek]`
+- **galptorke** (1ª, pl. *galptorker*) — tufão oceânico de ventos circulares violentos `[galp- (vento) + torke (redemoinho), termina em -e (1 decl)]`
+- **galtte** (1ª, pl. *galtter*) — custódio secular, intendente de fortaleza `[gald- + -te (dt -> tt)]`
+- **galvure** (1ª, pl. *galvurer*) — vela mestra triangular de linho cru reforçado `[gal- (vento) + vure (pano), termina em -e (1 decl)]`
+- **garfin** (2ª, pl. *garfino*) — ancinho de dentes de freixo para juntar restolho `[garf- + -in]`
+- **garva** (1ª, pl. *garvar*) — água pura potável, água fresca de degelo `[raiz garv- (fluir/nascente) + -a]`
+- **garvelanvé** (1ª, pl. *garvelanver*) — líquido límpido de cinzas para clarear fibras cruas `[garvé + lan + Vé]`
+- **garvelitror** (2ª, pl. *garvelitroro*) — música dos oceanos, sinfonia das águas `[garvé + litror]`
+- **garveoxe** (1ª, pl. *garveoxer*) — sal marinho e de rocha, cristal para conservar carnes e queijos `[garvé (oceano) + oxe (terra/cristal)]`
+- **garvepokegar** (2ª, pl. *garvepokegaro*) — grande ave pescadora das costas rochosas `[garvé (mar) + pokegar]`
+- **garvlut** (2ª, pl. *garvluto*) — peixe de rio gélido, pesca das montanhas `[garv- (água viva/rio) + lut- (pesca/caça)]`
+- **garvok** (2ª, pl. *garvoko*) — caneca de cerâmica, taça de estanho da estalagem `[garv- (beber) + -ok (recipiente)]`
+- **garvvul** (2ª, pl. *garvvulo*) — sede ardente, garganta seca pelo vento da serra `[garv- (beber) + vul- (desejo/anseio)]`
+- **garvé** (1ª, pl. *garver*) — oceano, mar aberto, grande massa de água `[gar + Vé]`
+- **gasia** (1ª, pl. *gasiar*) — lugar, recinto ou oficina de enfardar peças de veludo para a viagem `[gas- + -ia]`
+- **gasor** (2ª, pl. *gasoro*) — ato ou efeito de enfardar peças de veludo para a viagem `[gas- + -or]`
+- **gaspia** (1ª, pl. *gaspiar*) — lugar, recinto ou oficina de celebrar banquete de noivado entre clãs aliados `[gasp- + -ia]`
+- **gaspil** (2ª, pl. *gaspilo*) — pão trançado de cevada e mel partido no banquete nupcial `[raiz gasp- + -il]`
+- **gaspin** (2ª, pl. *gaspino*) — banquete de compromisso e noivado celebrado ao pôr do sol `[raiz gasp- + -in]`
+- **gaspor** (2ª, pl. *gasporo*) — ato ou efeito de celebrar banquete de noivado entre clãs aliados `[gasp- + -or]`
+- **gasporde** (1ª, pl. *gasporder*) — testemunha jurada do pacto matrimonial `[gasp- + orde, termina em -e (1 decl)]`
+- **gasptek** (2ª, pl. *gaspteko*) — instrumento ou meio para celebrar banquete de noivado entre clãs aliados `[gasp- + -tek]`
+- **gaspur** (2ª, pl. *gaspuro*) — taça cerimonial de dois bocais compartilhada pelos noivos `[raiz gasp- + -ur]`
+- **gassfammir** (2ª, pl. *gassfammiro*) — espada longa de guerra, montante `[gar + sfammir]`
+- **gastek** (2ª, pl. *gasteko*) — instrumento ou meio para enfardar peças de veludo para a viagem `[gas- + -tek]`
+- **gavel** (2ª, pl. *gavelo*) — braçada de trigo recém-cortado ainda frouxo antes de atar `[raiz primária gav- + -el]`
+- **gelmtek** (2ª, pl. *gelmteko*) — pederneira, isqueiro de mecha `[gelm- + -tek]`
+- **geptek** (2ª, pl. *gepteko*) — instrumento ou meio para remar contra a correnteza `[gev- + -tek]`
+- **gevia** (1ª, pl. *geviar*) — lugar, recinto ou oficina de remar contra a correnteza `[gev- + -ia]`
+- **gevor** (2ª, pl. *gevoro*) — ato ou efeito de remar contra a correnteza `[gev- + -or]`
+- **gikia** (1ª, pl. *gikiar*) — lugar, recinto ou oficina de abotoar o manto com fivela de prata `[gik- + -ia]`
+- **gikor** (2ª, pl. *gikoro*) — ato ou efeito de abotoar o manto com fivela de prata `[gik- + -or]`
+- **gikxia** (1ª, pl. *gikxiar*) — lugar, recinto ou oficina de prensar bagas silvestres para vinho `[gikx- + -ia]`
+- **gikxor** (2ª, pl. *gikxoro*) — ato ou efeito de prensar bagas silvestres para vinho `[gikx- + -or]`
+- **gikxtek** (2ª, pl. *gikxteko*) — instrumento ou meio para prensar bagas silvestres para vinho `[gikx- + -tek]`
+- **gildirlan** (2ª, pl. *gildirlano*) — lua crescente, quarto crescente lunar `[gir- (crescer) + nirlan (lua), rn -> ld]`
+- **gildyke** (1ª, pl. *gildyker*) — porta de duas folhas monumentais chapeadas em bronze `[gir- + nyke (portal), rn -> ld]`
+- **gilkia** (1ª, pl. *gilkiar*) — lugar, recinto ou oficina de piscar os olhos `[gilk- + -ia]`
+- **gilkor** (2ª, pl. *gilkoro*) — ato ou efeito de piscar os olhos `[gilk- + -or]`
+- **gilpia** (1ª, pl. *gilpiar*) — lugar, recinto ou oficina de escalar escarpa ou muralha com gancho `[gilp- + -ia]`
+- **gilpor** (2ª, pl. *gilporo*) — ato ou efeito de escalar escarpa ou muralha com gancho `[gilp- + -or]`
+- **gilptek** (2ª, pl. *gilpteko*) — instrumento ou meio para escalar escarpa ou muralha com gancho `[gilp- + -tek]`
+- **gilttek** (2ª, pl. *giltteko*) — instrumento ou meio para piscar os olhos `[gilk- + -tek]`
+- **gimia** (1ª, pl. *gimiar*) — lugar, recinto ou oficina de contemplar a harmonia das esferas `[gim- + -ia]`
+- **gimor** (2ª, pl. *gimoro*) — ato ou efeito de contemplar a harmonia das esferas `[gim- + -or]`
+- **gimtek** (2ª, pl. *gimteko*) — instrumento ou meio para contemplar a harmonia das esferas `[gim- + -tek]`
+- **Giovanni Sprezzatura** (1ª, pl. *Giovanni Sprezzaturar*) — Conde de Varkaria, 'O Yamakoz' `[antropônimo condal]`
+- **girarlitrtek** (2ª, pl. *girarlitrteko*) — grande harpa triangular de trinta cordas douradas `[grir- (dedilhar) + litrtek]`
+- **girbel** (2ª, pl. *girbelo*) — primavera, estação do crescimento diurno `[gir- + bel]`
+- **girkia** (1ª, pl. *girkiar*) — lugar, recinto ou oficina de cinzelar inscrição na lápide `[girk- + -ia]`
+- **girkor** (2ª, pl. *girkoro*) — ato ou efeito de cinzelar inscrição na lápide `[girk- + -or]`
+- **giror** (2ª, pl. *giro'o*) — crescimento, desenvolvimento, florescimento `[gir- + -or]`
+- **girpia** (1ª, pl. *girpiar*) — lugar, recinto ou oficina de dedilhar as cordas da harpa `[girp- + -ia]`
+- **girpor** (2ª, pl. *girporo*) — ato ou efeito de dedilhar as cordas da harpa `[girp- + -or]`
+- **girptek** (2ª, pl. *girpteko*) — instrumento ou meio para dedilhar as cordas da harpa `[girp- + -tek]`
+- **girsulet** (2ª, pl. *girsuleto*) — longo ornamento melódico cantado sobre uma única sílaba `[gir- (elevar) + sulet (voz)]`
+- **girttek** (2ª, pl. *girtteko*) — instrumento ou meio para cinzelar inscrição na lápide `[girk- + -tek]`
+- **girvartek** (2ª, pl. *girvarteko*) — ponte de madeira erguida por correntes sobre o fosso `[gir- (erguer) + vartek (ponte)]`
+- **girvepoke** (1ª, pl. *girvepoker*) — peixe de carne rosada que salta cachoeiras na desova `[gir- (saltar/subir) + vepoke (peixe)]`
+- **giry'ixil** (2ª, pl. *giry'ixilo*) — osso anelar que compõe a coluna espinhal `[gir- (erguer) + rixil (osso)]`
+- **gittek** (2ª, pl. *gitteko*) — instrumento ou meio para abotoar o manto com fivela de prata `[gik- + -tek]`
+- **gizor** (2ª, pl. *gizoro*) — amor devocional, afeição, caridade `[giz- + -or]`
+- **gobbalkil** (2ª, pl. *gobbalkilo*) — imposto territorial cobrado por caravana nos caminhos `[gob + palk + -il, bp -> bb]`
+- **gobbaror** (2ª, pl. *gobbaro'o*) — preço justo acordado, cotação de troca em mercado `[gob- (negociar) + paror (preço), bp -> bb]`
+- **gobbilk** (2ª, pl. *gobbilko*) — marca impressa pelo martelo do cunhador na face da moeda `[gob + pilk, bp -> bb]`
+- **gobdaia** (1ª, pl. *gobdaiar*) — ofício ou mestria de avaliar o valor de artigos raros `[gob + daia]`
+- **gobdaite** (1ª, pl. *gobdaiter*) — avaliador juramentado que estipula o preço justo `[gob + daite]`
+- **gobdvaltor** (2ª, pl. *gobdvaltoro*) — pregoeiro público que anuncia a venda de navios e cargas `[gob + dval- + -tor]`
+- **gobhuxgar** (2ª, pl. *gobhuxgaro*) — saco reforçado de couro cru e lona para moedas e barras `[gob + huxgar]`
+- **gobia** (1ª, pl. *gobiar*) — mercado, feira `[gob- + -ia]`
+- **gobkaran** (2ª, pl. *gobkarano*) — distrito murado onde se realizam as feiras francas `[gob + karan]`
+- **gobkindril** (2ª, pl. *gobkindrilo*) — sociedade mercantil de mercadores unidos sob juramento `[gob + kindr- + -il]`
+- **gobkitil** (2ª, pl. *gobkitilo*) — tábua encerada com recibo selado da transação comercial `[gob + kitil]`
+- **gobkosia** (1ª, pl. *gobkosiar*) — sala forte abobadada onde se guardam os cofres do erário `[gob + kosia]`
+- **gobmirkil** (2ª, pl. *gobmirkilo*) — mostruário de amostras de seda e especiarias da banca `[gob + mirkil]`
+- **gobor** (2ª, pl. *goboro*) — troca, negócio `[gob- + -or]`
+- **gobsiftek** (2ª, pl. *gobsifteko*) — livro de assentamento de débitos e créditos mercantis `[gob + siftek]`
+- **gobtake** (1ª, pl. *gobtaker*) — mesa de câmbio de moedas na feira livre `[gob + take]`
+- **gobte** (1ª, pl. *gobter*) — mercador, negociante, mascate `[gob- + -te]`
+- **gobteggar** (2ª, pl. *gobteggaro*) — posto fiscal fortificado na entrada da ponte ou desfiladeiro `[gob + teggar]`
+- **gobtepia** (1ª, pl. *gobtepiar*) — estalagem de beira de estrada, albergue de viajantes `[gob- (comércio) + tepia (morada)]`
+- **gobvartek** (2ª, pl. *gobvarteko*) — rota protegida por guarnições condais para mercadores `[gob + vartek]`
+- **gobynte** (1ª, pl. *gobynter*) — mercador de caravana, negociante itinerante `[gob- (comerciar) + ynte (viajante)]`
+- **golkia** (1ª, pl. *golkiar*) — lugar, recinto ou oficina de congelar a superfície `[golk- + -ia]`
+- **golkor** (2ª, pl. *golkoro*) — ato ou efeito de congelar a superfície `[golk- + -or]`
+- **golpia** (1ª, pl. *golpiar*) — lugar, recinto ou oficina de fundir metal no cadinho ardente `[golp- + -ia]`
+- **golpor** (2ª, pl. *golporo*) — ato ou efeito de fundir metal no cadinho ardente `[golp- + -or]`
+- **golptek** (2ª, pl. *golpteko*) — instrumento ou meio para fundir metal no cadinho ardente `[golp- + -tek]`
+- **golttek** (2ª, pl. *goltteko*) — instrumento ou meio para congelar a superfície `[golk- + -tek]`
+- **gondia** (1ª, pl. *gondiar*) — lugar, recinto ou oficina de enxertar ramo frutífero em cavalo vigoroso `[gond- + -ia]`
+- **gondil** (2ª, pl. *gondilo*) — fita de linho encerada para atar enxertos `[raiz gond- + -il]`
+- **gondor** (2ª, pl. *gondoro*) — ato ou efeito de enxertar ramo frutífero em cavalo vigoroso `[gond- + -or]`
+- **gondur** (2ª, pl. *gonduro*) — tronco enxertado com múltiplos brotos de variedades raras `[gond- + -ur]`
+- **gonttek** (2ª, pl. *gontteko*) — instrumento ou meio para enxertar ramo frutífero em cavalo vigoroso `[gond- + -tek]`
+- **gordil** (2ª, pl. *gordilo*) — placa de barro cozido revestida de esmalte reluzente `[gord- + -il]`
+- **gordin** (2ª, pl. *gordino*) — aplicação de verniz mineral antes da queima final `[gord- + -in]`
+- **gordur** (2ª, pl. *gorduro*) — moedor de pedra para triturar pigmentos minerais `[gord- + -ur]`
+- **gorfulve** (1ª, pl. *gorfulver*) — berço suspenso de vime forrado com lã cardada `[gor- + fulve, termina em -e (1 decl)]`
+- **gorkia** (1ª, pl. *gorkiar*) — lugar, recinto ou oficina de erodir a pedra pela água ou vento `[gork- + -ia]`
+- **gorkor** (2ª, pl. *gorkoro*) — ato ou efeito de erodir a pedra pela água ou vento `[gork- + -or]`
+- **gorpia** (1ª, pl. *gorpiar*) — lugar, recinto ou oficina de extrair minério da rocha com ponteira `[gorp- + -ia]`
+- **gorpil** (2ª, pl. *gorpilo*) — cinzel fino de entalhe para retirar amostras de veio `[raiz gorp- + -il]`
+- **gorpin** (2ª, pl. *gorpino*) — frente de lavra subterrânea aberta no maciço rochoso `[raiz gorp- + -in]`
+- **gorpor** (2ª, pl. *gorporo*) — ato ou efeito de extrair minério da rocha com ponteira `[gorp- + -or]`
+- **gorptake** (1ª, pl. *gorptaker*) — bancada pesada de percussão para ensaio de dureza de minérios `[gorp- + take]`
+- **gorptek** (2ª, pl. *gorpteko*) — instrumento ou meio para extrair minério da rocha com ponteira `[gorp- + -tek]`
+- **gorpur** (2ª, pl. *gorpuro*) — ponteira pesada de ferro temperado para desbaste de rocha `[raiz gorp- + -ur]`
+- **gorttek** (2ª, pl. *gortteko*) — instrumento ou meio para erodir a pedra pela água ou vento `[gork- + -tek]`
+- **gulkia** (1ª, pl. *gulkiar*) — lugar, recinto ou oficina de notificar oficialmente por arauto `[gulk- + -ia]`
+- **gulkor** (2ª, pl. *gulkoro*) — ato ou efeito de notificar oficialmente por arauto `[gulk- + -or]`
+- **gulttek** (2ª, pl. *gultteko*) — instrumento ou meio para notificar oficialmente por arauto `[gulk- + -tek]`
+- **gurkia** (1ª, pl. *gurkiar*) — lugar, recinto ou oficina de emancipar servo ou vassalo `[gurk- + -ia]`
+- **gurkor** (2ª, pl. *gurkoro*) — ato ou efeito de emancipar servo ou vassalo `[gurk- + -or]`
+- **gurttek** (2ª, pl. *gurtteko*) — instrumento ou meio para emancipar servo ou vassalo `[gurk- + -tek]`
+- **Gyos** (2ª, pl. *Gyoso*) — Deus, Espírito Supremo (substitui Theus/vane) `[teônimo sagrado]`
+- **Gyos Idda** (2ª, pl. *Gyos Iddao*) — Eru, o Único, Criador Supremo Incriado `[Gyos + idda]`
+- **habte** (1ª, pl. *habter*) — anfitrião, acolhedor de viajantes `[hab- + -te]`
+- **hal** (2ª, pl. *halo*) — espírito, sopro sagrado (Pl. Halo: Ainur) `[raiz primária hal]`
+- **Hal'gáltte** (1ª, pl. *Hal'gáltter*) — O Pastor Sagrado (endônimo cerimonial) `[hal + gald + -te (haplologia + dt -> tt)]`
+- **halfas** (2ª, pl. *halfaso*) — temor reverencial, assombro sagrado (equivalente clássico endógeno do arcaísmo litúrgico timor) `[hal (espírito) + fas (comoção/tremor)]`
+- **Halkele** (1ª, pl. *Halkeler*) — Igreja, Santa Assembleia, Comunhão `[hal + kel- + -e]`
+- **halkoxe** (1ª, pl. *halkoxer*) — pegada na neve fresca, rastro de viajante no solo `[halk- (passo) + oxe (chão/solo)]`
+- **halkvar** (2ª, pl. *halkvaro*) — estrada de pedra, trilha batida na neve, rota montanhesa `[halk- (caminhar) + var (caminho)]`
+- **hallen** (2ª, pl. *halleno*) — gratidão, agradecimento, bênção recebida `[hal- (sagrado/luz) + -en]`
+- **Hallitror** (2ª, pl. *Hallitroro*) — Ainulindalë (forma radical assimilada ll de Halylitror) `[hal + litror (nl/ll)]`
+- **Halo** (2ª, pl. *Halo*) — Os Espíritos Sagrados, Ainur (plural solene de hal) `[hal + -o]`
+- **Halteggar** (2ª, pl. *Halteggaro*) — Salões Atemporais (forma radical de Halyteggar) `[hal + teggar]`
+- **Halvur** (2ª, pl. *Halvuro*) — Chama Imperecível, Fogo Secreto (forma radical de Halyvur) `[hal + vur]`
+- **halxia** (1ª, pl. *halxiar*) — lugar, recinto ou oficina de interpretar presságio sideral `[halx- + -ia]`
+- **halxor** (2ª, pl. *halxoro*) — ato ou efeito de interpretar presságio sideral `[halx- + -or]`
+- **halxtek** (2ª, pl. *halxteko*) — instrumento ou meio para interpretar presságio sideral `[halx- + -tek]`
+- **Haly'itror** (2ª, pl. *Haly'itroro*) — Ainulindalë, A Música dos Espíritos Sagrados (var. Hallitror) `[haly + litror]`
+- **Halyteggar** (2ª, pl. *Halyteggaro*) — Os Salões Atemporais (var. Halteggar) `[haly + teggar]`
+- **Halyvar** (2ª, pl. *Halyvaro*) — Bosque Sagrado `[haly + var]`
+- **Halyvaria** (1ª, pl. *Halyvariar*) — Fronteiras Sagradas, Terras do Bosque Sagrado `[haly + var + -ia]`
+- **Halyvur** (2ª, pl. *Halyvuro*) — A Chama Imperecível, Fogo Secreto (var. Halvur) `[haly + vur]`
+- **harpe** (1ª, pl. *harper*) — harpa (Arcaísmo Litúrgico cristalizado no Halylitror III: harper; forma clássica endógena: sulettek) `[fóssil litúrgico do Halylitror]`
+- **helptek** (2ª, pl. *helpteko*) — instrumento ou meio para contemplar a quietude eterna nos Salões Atemporais do Criador `[helv- + -tek]`
+- **helvia** (1ª, pl. *helviar*) — lugar, recinto ou oficina de contemplar a quietude eterna nos Salões Atemporais do Criador `[helv- + -ia]`
+- **helvor** (2ª, pl. *helvoro*) — ato ou efeito de contemplar a quietude eterna nos Salões Atemporais do Criador `[helv- + -or]`
+- **heskor** (2ª, pl. *heskoro*) — pergunta `[hesk- + -or]`
+- **holkia** (1ª, pl. *holkiar*) — lugar, recinto ou oficina de rachar o manto sob tensao formando fendas profundas `[holk- + -ia]`
+- **holkor** (2ª, pl. *holkoro*) — ato ou efeito de rachar o manto sob tensao formando fendas profundas `[holk- + -or]`
+- **holpia** (1ª, pl. *holpiar*) — lugar, recinto ou oficina de mergulhar em sono profundo com visões oníricas `[holp- + -ia]`
+- **holpor** (2ª, pl. *holporo*) — ato ou efeito de mergulhar em sono profundo com visões oníricas `[holp- + -or]`
+- **holptek** (2ª, pl. *holpteko*) — instrumento ou meio para mergulhar em sono profundo com visões oníricas `[holp- + -tek]`
+- **holttek** (2ª, pl. *holtteko*) — instrumento ou meio para rachar o manto sob tensao formando fendas profundas `[holk- + -tek]`
+- **hulbia** (1ª, pl. *hulbiar*) — lugar, recinto ou oficina de sitiar fortaleza erguendo trincheiras e circunvalação de cerco `[hulb- + -ia]`
+- **hulbor** (2ª, pl. *hulboro*) — ato ou efeito de sitiar fortaleza erguendo trincheiras e circunvalação de cerco `[hulb- + -or]`
+- **hulbtek** (2ª, pl. *hulbteko*) — instrumento ou meio para sitiar fortaleza erguendo trincheiras e circunvalação de cerco `[hulb- + -tek]`
+- **hurptek** (2ª, pl. *hurpteko*) — instrumento ou meio para ecoar e ressoar em abobadas subterraneas profundas `[hurv- + -tek]`
+- **hurvia** (1ª, pl. *hurviar*) — lugar, recinto ou oficina de ecoar e ressoar em abobadas subterraneas profundas `[hurv- + -ia]`
+- **hurvor** (2ª, pl. *hurvoro*) — ato ou efeito de ecoar e ressoar em abobadas subterraneas profundas `[hurv- + -or]`
+- **huxdrotil** (2ª, pl. *huxdrotilo*) — faixa de couro cru com tachas de bronze para a cintura `[hux + drot- + -il]`
+- **huxdrottek** (2ª, pl. *huxdrotteko*) — conjunto de tiras de couro e fechos para a montaria `[hux + drot- + -tek]`
+- **huxferlitrtek** (2ª, pl. *huxferlitrteko*) — instrumento de odre de couro com tubos melódicos `[hux (couro) + fer + litrtek]`
+- **huxgar** (2ª, pl. *huxgaro*) — capa, manto pesado de viagem `[hux- + -gar]`
+- **huxgarkastek** (2ª, pl. *huxgarkasteko*) — agulha grossa de osso para coser couro e feltro `[huxgar + kasktek]`
+- **huxil** (2ª, pl. *huxilo*) — camisa, túnica leve `[hux- + -il]`
+- **huxkadeil** (2ª, pl. *huxkadeilo*) — cobertura de cabeça de pele acolchoada contra vento `[hux + kade + -il]`
+- **huxkorvé** (1ª, pl. *huxkorver*) — mordente de resina para fixar tinturas em tecido `[hux + korvé]`
+- **huxkuevé** (1ª, pl. *huxkuever*) — tinta vermelha vegetal para tingimento de lã `[hux + kue + Vé]`
+- **huxlanpoke** (1ª, pl. *huxlanpoker*) — pequeno animal de inverno cuja pele alva veste reis `[hux (pele) + lan (alva) + poke]`
+- **huxlanvé** (1ª, pl. *huxlanver*) — preparado alvejante para clarear linho ao sol `[hux + lan + Vé]`
+- **huxnyketek** (2ª, pl. *huxnyketeko*) — gancho de latão que une as bordas do agasalho `[hux + nyketek]`
+- **huxor** (2ª, pl. *huxoro*) — roupa, vestimenta `[hux- + -or]`
+- **huxpalkil** (2ª, pl. *huxpalkilo*) — resguardo de couro ajustado sobre a canela e o pé `[hux + palk + -il]`
+- **huxpia** (1ª, pl. *huxpiar*) — lugar, recinto ou oficina de dobrar os linhos e cobertas na arca `[huxp- + -ia]`
+- **huxpor** (2ª, pl. *huxporo*) — ato ou efeito de dobrar os linhos e cobertas na arca `[huxp- + -or]`
+- **huxptek** (2ª, pl. *huxpteko*) — instrumento ou meio para dobrar os linhos e cobertas na arca `[huxp- + -tek]`
+- **huxyntek** (2ª, pl. *huxynteko*) — calçado alto de couro forrado de carneiro para a neve `[hux + yn- + -tek]`
+- **Hállemme** (1ª, pl. *Hállemmer*) — A Memória Sagrada (endônimo de Kúr'ete) `[hal + nemre (nl/nr -> ll/mm)]`
+- **idda** (2ª, pl. *iddao*) — o Único, imutavelmente o Um `[id + da (haplologia cristalizada)]`
+- **iddabellir** (2ª, pl. *iddabelliro*) — equinócio, igualdade entre dia e noite `[idda (igual) + bel (dia) + nir (noite), ln -> ll]`
+- **idkoril** (2ª, pl. *idkorilo*) — partícula reprodutiva das samambaias e musgos `[id (semente mínima) + koril]`
+- **idlitror** (2ª, pl. *idlitroro*) — canto solitário, solo, prelúdio individual `[id + litror]`
+- **illanor** (2ª, pl. *illanoro*) — iluminação interior, inspiração luminosa `[in- + lan- + -or (nl -> ll)]`
+- **illotor** (2ª, pl. *illotoro*) — adorno, ornamento, embelezamento criativo `[in- + lot- + -or (nl -> ll)]`
+- **illottoret** (2ª, pl. *illottoreto*) — faixa horizontal esculpida com relevos sob o beiral `[illot- (adornar) + toret]`
+- **inelfia** (1ª, pl. *inelfiar*) — pórtico vestíbulo situado à entrada do santuário `[in- (entrada) + elfia (santuário)]`
+- **innyketeggar** (2ª, pl. *innyketeggaro*) — fortim avançado circular que defende o portão `[in- + nyke + teggar]`
+- **intulor** (2ª, pl. *intuloro*) — furor, cólera ardente, ira desmedida `[intul- + -or]`
+- **irdor** (2ª, pl. *irdoro*) — resplendor dos antigos, glória ancestral `[ir + dur + -or]`
+- **islitrtek** (2ª, pl. *islitrteko*) — instrumento de ferro que emite a nota padrão de afinação `[is- (medir/saber) + litrtek]`
+- **isor** (2ª, pl. *isoro*) — sabedoria, inteligência, conhecimento `[is- + -or]`
+- **isskamil** (2ª, pl. *isskamilo*) — peso fracionário mínimo de latão para pesar pó de ouro `[id- + skam- + -il, ds -> ss]`
+- **Ittakazeti** (2ª, pl. *Ittakazeti*) — Os Primeiros Nascidos (Elfos / Quendi) `[itta + kazeti]`
+- **Jesus** (2ª, pl. *Jesu'o*) — Jesus (antropônimo litúrgico no Metuses Maria e Skorum) `[antropônimo sagrado]`
+- **kade** (1ª, pl. *kader*) — monte, colina, elevação `[raiz kad-]`
+- **kadeelfia** (1ª, pl. *kadeelfiar*) — galeria estreita em arcos sobre as naves laterais `[kade (alto) + elfia]`
+- **kadeferpoke** (1ª, pl. *kadeferpoker*) — ave pernalta cinzenta de canto sonoroso nos pântanos `[kade (alto) + ferpoke]`
+- **kadelitrtek** (2ª, pl. *kadelitrteko*) — peça de madeira que sustenta as cordas sobre o tampo `[kade (apoio) + litrtek]`
+- **kadenyke** (1ª, pl. *kadenyker*) — viga horizontal de pedra ou carvalho no topo da porta `[kade (topo) + nyke (porta)]`
+- **kaderixe** (1ª, pl. *kaderixer*) — topo esculpido de uma coluna onde pousa o arco `[kade (topo) + rixe (coluna)]`
+- **kadeteggar** (2ª, pl. *kadeteggaro*) — fortaleza real erguida no ponto mais alto da serra `[kade (alto) + teggar (fortaleza)]`
+- **kadetoret** (2ª, pl. *kadetoreto*) — moldura saliente superior no alto da fachada `[kade (topo) + toret]`
+- **kadexveltek** (2ª, pl. *kadexvelteko*) — longa trombeta reta de arauto com estandarte pendente `[kade + xveltek]`
+- **kadpia** (1ª, pl. *kadpiar*) — lugar, recinto ou oficina de medir a distância angular até o topo do céu `[kadp- + -ia]`
+- **kadpor** (2ª, pl. *kadporo*) — ato ou efeito de medir a distância angular até o topo do céu `[kadp- + -or]`
+- **kadptek** (2ª, pl. *kadpteko*) — instrumento ou meio para medir a distância angular até o topo do céu `[kadp- + -tek]`
+- **kalamtake** (1ª, pl. *kalamtaker*) — carteira inclinada de leitura com ranhuras para penas `[kalam- + take]`
+- **kalirvokor** (2ª, pl. *kalirvokoro*) — membrana tensa do ouvido que vibra com o som `[klir- (ouvir) + vokor]`
+- **kambel** (2ª, pl. *kambelo*) — pilha de adubo vegetal curtido e folhas secas `[kamb- + -el]`
+- **kambia** (1ª, pl. *kambiar*) — lugar, recinto ou oficina de adubar o solo com composto e cinzas `[kamb- + -ia]`
+- **kambor** (2ª, pl. *kamboro*) — ato ou efeito de adubar o solo com composto e cinzas `[kamb- + -or]`
+- **kambril** (2ª, pl. *kambrilo*) — estrumeira de compostagem fermentada e cinza vegetal `[raiz kamb- + -ril]`
+- **kambtek** (2ª, pl. *kambteko*) — instrumento ou meio para adubar o solo com composto e cinzas `[kamb- + -tek]`
+- **karan** (2ª, pl. *karano*) — reino, domínio soberano, jurisdição `[raiz primária karan]`
+- **kare** (1ª, pl. *karer*) — cadeira, assento `[raiz kar-]`
+- **karegar** (2ª, pl. *karegaro*) — trono supremo, sólio imperial ou divino `[kare + -gar]`
+- **karpate** (1ª, pl. *karpater*) — pacto de não-agressão ratificado pelo conselho de barões `[karp- + -ate]`
+- **karpia** (1ª, pl. *karpiar*) — lugar, recinto ou oficina de firmar aliança diplomática `[karp- + -ia]`
+- **karpil** (2ª, pl. *karpilo*) — medalha bipartida de prata trocada entre embaixadores aliados `[raiz karp- + -il]`
+- **karpin** (2ª, pl. *karpino*) — pacto solene de aliança e mútua defesa entre condados `[raiz karp- + -in]`
+- **karpor** (2ª, pl. *karporo*) — ato ou efeito de firmar aliança diplomática `[karp- + -or]`
+- **karptek** (2ª, pl. *karpteko*) — instrumento ou meio para firmar aliança diplomática `[karp- + -tek]`
+- **Karytírë** (1ª, pl. *Karytírer*) — Casa dos Passos (regentes de Xerypalkia) `[linhagem nobre]`
+- **kasia** (1ª, pl. *kasiar*) — lugar, recinto ou oficina de brotar manancial da rocha viva `[kas- + -ia]`
+- **kaskfnil** (2ª, pl. *kaskfnilo*) — peça redonda de osso torneado para abotoar vestes `[kask- + fnil-]`
+- **kaskmirtek** (2ª, pl. *kaskmirteko*) — resguardo de metal com covinhas para o dedo ao coser `[kask- + mir + -tek]`
+- **kasksaittek** (2ª, pl. *kasksaitteko*) — ferramenta de duas lâminas para corte de tecidos `[kask- + saittek]`
+- **kaskvokor** (2ª, pl. *kaskvokoro*) — costura cirúrgica das bordas de um corte profundo `[kask- (coser) + vokor (carne)]`
+- **kasor** (2ª, pl. *kasoro*) — ato ou efeito de brotar manancial da rocha viva `[kas- + -or]`
+- **kaspia** (1ª, pl. *kaspiar*) — lugar, recinto ou oficina de traçar letras caligráficas com pena de cálamo `[kasp- + -ia]`
+- **kaspil** (2ª, pl. *kaspilo*) — tinteiro duplo de osso para tinta negra e rubra `[raiz kasp- + -il]`
+- **kaspin** (2ª, pl. *kaspino*) — caligrafia formal em ducto cursivo da corte imperial `[raiz kasp- + -in]`
+- **kaspite** (1ª, pl. *kaspiter*) — navalhete afiado para talhar e abrir a fenda da pena `[kasp- + -ite]`
+- **kaspor** (2ª, pl. *kasporo*) — ato ou efeito de traçar letras caligráficas com pena de cálamo `[kasp- + -or]`
+- **kasptek** (2ª, pl. *kaspteko*) — instrumento ou meio para traçar letras caligráficas com pena de cálamo `[kasp- + -tek]`
+- **kaspur** (2ª, pl. *kaspuro*) — cálamo de cana talhada ou pena de ganso temperada `[raiz kasp- + -ur]`
+- **kastek** (2ª, pl. *kasteko*) — instrumento ou meio para brotar manancial da rocha viva `[kas- + -tek]`
+- **kastte** (1ª, pl. *kastter*) — alfaiate, costureiro `[kask- + -te, kt -> tt]`
+- **kasttek** (2ª, pl. *kastteko*) — agulha de coser `[kask- + -tek, kt -> tt]`
+- **katlitril** (2ª, pl. *katlitrilo*) — pandeiro quadrangular de pele com sementes internas `[kat (quatro) + litril]`
+- **kattonkrbel** (2ª, pl. *kattonkrbelo*) — ano de dia intercalado a cada quatro ciclos `[kat (quatro) + tonkre + bel]`
+- **kattsulette** (1ª, pl. *kattsuletter*) — escala fundamental de quatro notas sucessivas `[katta (quatro) + sulet]`
+- **kazor** (2ª, pl. *kazoro*) — vitalidade, existência encarnada, sopro vital `[kaz- + -or]`
+- **kel'unte** (1ª, pl. *kel'unter*) — batedor de escolta, guarda-costas imperial `[kel'un- + -te]`
+- **kelador** (2ª, pl. *keladoro*) — avanço de vanguarda, investida, aproximação `[kelad- + -or]`
+- **kelbia** (1ª, pl. *kelbiar*) — lugar, recinto ou oficina de tingir o estofo na tina de pigmento `[kelb- + -ia]`
+- **kelbor** (2ª, pl. *kelboro*) — ato ou efeito de tingir o estofo na tina de pigmento `[kelb- + -or]`
+- **kelbtek** (2ª, pl. *kelbteko*) — instrumento ou meio para tingir o estofo na tina de pigmento `[kelb- + -tek]`
+- **keldan'e** (1ª, pl. *keldan'er*) — cunhado ou aliado de sangue por casamento `[keld- + ande, termina em -e (1 decl)]`
+- **keldas** (2ª, pl. *keldaso*) — queijo curado de cabra das serras `[raiz keld- (coalhar/prensar) + -as]`
+- **keldia** (1ª, pl. *keldiar*) — lugar, recinto ou oficina de lapidar facetas de cristais no rebolo `[keld- + -ia]`
+- **keldil** (2ª, pl. *keldilo*) — pedra preciosa lapidada com facetas brilhantes `[raiz keld- + -il]`
+- **keldin** (2ª, pl. *keldino*) — lapidação geométrica de pedras preciosas em facetas `[raiz keld- + -in]`
+- **keldite** (1ª, pl. *kelditer*) — pinça fina de latão com mola para segurar gemas na lapidação `[keld- + -ite]`
+- **keldor** (2ª, pl. *keldoro*) — ato ou efeito de lapidar facetas de cristais no rebolo `[keld- + -or]`
+- **keldur** (2ª, pl. *kelduro*) — rebolo giratório de arenito com pó de esmeril `[raiz keld- + -ur]`
+- **kelferpoke** (1ª, pl. *kelferpoker*) — ave migratória que voa em formação de cunha `[kel (formação) + ferpoke]`
+- **kellexe** (1ª, pl. *kellexer*) — alinhamento de dois astros no mesmo grau sideral `[kel (junto) + lexe (astro)]`
+- **kellitrgar** (2ª, pl. *kellitrgaro*) — conjunto de sinos afinados na torre que tocam melodias `[kel (conjunto) + litrgar]`
+- **kellitror** (2ª, pl. *kellitroro*) — coro uníssono, polifonia, sinfonia coletiva `[kel- + litror]`
+- **kelor** (2ª, pl. *keloro*) — manobra tática, formação de marcha, estratégia `[kel- + -or]`
+- **kelpia** (1ª, pl. *kelpiar*) — lugar, recinto ou oficina de alinhar dois astros no mesmo grau sideral `[kelp- + -ia]`
+- **kelpor** (2ª, pl. *kelporo*) — ato ou efeito de alinhar dois astros no mesmo grau sideral `[kelp- + -or]`
+- **kelptek** (2ª, pl. *kelpteko*) — instrumento ou meio para alinhar dois astros no mesmo grau sideral `[kelp- + -tek]`
+- **kelttek** (2ª, pl. *keltteko*) — instrumento ou meio para lapidar facetas de cristais no rebolo `[keld- + -tek]`
+- **kelvuril** (2ª, pl. *kelvurilo*) — gota espessa de vidro colhida na ponta da haste `[kelvur- + -il]`
+- **kelvurin** (2ª, pl. *kelvurino*) — massa pastosa de areia e soda fundida no cadinho `[kelvur- + -in]`
+- **kelvurur** (2ª, pl. *kelvuru'o*) — forno circular de fusão de vidro com potes de argila `[kelvur- + -ur]`
+- **keptek** (2ª, pl. *kepteko*) — instrumento ou meio para escoltar caravana pelos passos alpinos `[kev- + -tek]`
+- **kerbia** (1ª, pl. *kerbiar*) — lugar, recinto ou oficina de revelar o desígnio soberano e o destino glorioso dos povos livres `[kerb- + -ia]`
+- **kerbor** (2ª, pl. *kerboro*) — ato ou efeito de revelar o desígnio soberano e o destino glorioso dos povos livres `[kerb- + -or]`
+- **kerbtek** (2ª, pl. *kerbteko*) — instrumento ou meio para revelar o desígnio soberano e o destino glorioso dos povos livres `[kerb- + -tek]`
+- **kerpia** (1ª, pl. *kerpiar*) — lugar, recinto ou oficina de granizar `[kerp- + -ia]`
+- **kerpor** (2ª, pl. *kerporo*) — ato ou efeito de granizar `[kerp- + -or]`
+- **kerptek** (2ª, pl. *kerpteko*) — instrumento ou meio para granizar `[kerp- + -tek]`
+- **kertte** (1ª, pl. *kertter*) — lenhador, talhador de madeira `[kerd- + -te, dt -> tt]`
+- **kerttek** (2ª, pl. *kertteko*) — machado de lenha `[kerd- + -tek, dt -> tt]`
+- **kevia** (1ª, pl. *keviar*) — lugar, recinto ou oficina de escoltar caravana pelos passos alpinos `[kev- + -ia]`
+- **kevor** (2ª, pl. *kevoro*) — ato ou efeito de escoltar caravana pelos passos alpinos `[kev- + -or]`
+- **kil'ia** (1ª, pl. *kil'iar*) — lugar, recinto ou oficina de ouvir com nitidez `[kilk- + -ia]`
+- **kil'or** (2ª, pl. *kil'oro*) — ato ou efeito de ouvir com nitidez `[kilk- + -or]`
+- **kildar** (2ª, pl. *kildaro*) — neve fresca acumulada, manto branco de inverno `[raiz kild- (frio/gelo) + -ar]`
+- **kildetoret** (2ª, pl. *kildetoreto*) — cobertura arqueada de pedra em berço ou nervuras `[kilde + toret (teto)]`
+- **kildhux** (2ª, pl. *kildhuxo*) — coberta pesada de três dobras para noites glaciais `[kild- + hux]`
+- **kildrix** (2ª, pl. *kildrixo*) — gelo compacto, geada cortante, carâmbanos de pedra `[kild- (gelo) + rix- (pedra)]`
+- **kilia** (1ª, pl. *kiliar*) — lugar, recinto ou oficina de engomar a gola plissada de Chancelaria `[kil- + -ia]`
+- **kilor** (2ª, pl. *kiloro*) — ato ou efeito de engomar a gola plissada de Chancelaria `[kil- + -or]`
+- **kiltek** (2ª, pl. *kilteko*) — instrumento ou meio para engomar a gola plissada de Chancelaria `[kil- + -tek]`
+- **kilttek** (2ª, pl. *kiltteko*) — instrumento ou meio para ouvir com nitidez `[kilk- + -tek]`
+- **kilttor** (2ª, pl. *kilttoro*) — manta pesada de lã, cobertura grossa contra a geada `[kild- (frio) + tor- (cobrir), dt -> tt]`
+- **kindar** (2ª, pl. *kindaro*) — família da lareira, clã do abrigo doméstico `[raiz kind- (laço/pacto) + -ar]`
+- **kindre** (1ª, pl. *kindrer*) — família, comunhão, irmandade (Pl. kindrer/kindro) `[raiz kindr-]`
+- **kindrfel** (2ª, pl. *kindrfelo*) — irmão, confrade de sangue ou espírito (equivalente clássico endógeno do arcaísmo litúrgico fratror) `[kindre (família/irmandade) + fel (filho)]`
+- **kindror** (2ª, pl. *kindroro*) — concórdia, paz duradoura, aliança fraterna `[kindr- + -or]`
+- **kindrrixevé** (1ª, pl. *kindrrixever*) — mistura de cal, areia e água que une as pedras `[kindr- (unir) + rixe + Vé]`
+- **kindrvokor** (2ª, pl. *kindrvokoro*) — feixe fibroso que mantém os ossos unidos na junta `[kindr- (unir) + vokor]`
+- **kir'ia** (1ª, pl. *kir'iar*) — lugar, recinto ou oficina de temperar o aço em água gélida `[kirk- + -ia]`
+- **kir'or** (2ª, pl. *kir'oro*) — ato ou efeito de temperar o aço em água gélida `[kirk- + -or]`
+- **kirbia** (1ª, pl. *kirbiar*) — lugar, recinto ou oficina de refratar a luz do sol em leque policromático através de cristal `[kirb- + -ia]`
+- **kirbor** (2ª, pl. *kirboro*) — ato ou efeito de refratar a luz do sol em leque policromático através de cristal `[kirb- + -or]`
+- **kirbtek** (2ª, pl. *kirbteko*) — instrumento ou meio para refratar a luz do sol em leque policromático através de cristal `[kirb- + -tek]`
+- **kiria** (1ª, pl. *kiriar*) — lugar, recinto ou oficina de transcrever códice em pergaminho limpo `[kir- + -ia]`
+- **kiror** (2ª, pl. *kiro'o*) — ato ou efeito de transcrever códice em pergaminho limpo `[kir- + -or]`
+- **kirpia** (1ª, pl. *kirpiar*) — lugar, recinto ou oficina de transmitir o anel de sinete ao primogênito `[kirp- + -ia]`
+- **kirpor** (2ª, pl. *kirporo*) — ato ou efeito de transmitir o anel de sinete ao primogênito `[kirp- + -or]`
+- **kirptek** (2ª, pl. *kirpteko*) — instrumento ou meio para transmitir o anel de sinete ao primogênito `[kirp- + -tek]`
+- **kirtek** (2ª, pl. *kirteko*) — instrumento ou meio para transcrever códice em pergaminho limpo `[kir- + -tek]`
+- **kirttek** (2ª, pl. *kirtteko*) — instrumento ou meio para temperar o aço em água gélida `[kirk- + -tek]`
+- **kitia** (1ª, pl. *kitiar*) — Arquivo Imperial, chancelaria de registros `[kit- + -ia]`
+- **kitil** (2ª, pl. *kitilo*) — carta, bilhete `[kit- + -il]`
+- **kitlitror** (2ª, pl. *kitlitroro*) — sinal gráfico de notação musical sobre o texto sacro `[kit- (escrever) + litror]`
+- **kitlitrtek** (2ª, pl. *kitlitrteko*) — estante giratória de madeira no centro do coro para o códice `[kitlitror + -tek]`
+- **kitor** (2ª, pl. *kitoro*) — escritura pública, código escrito, édito `[kit- + -or]`
+- **kitte** (1ª, pl. *kitter*) — escriba imperial, tabelião, notário `[kit- + -te]`
+- **kittek** (2ª, pl. *kitteko*) — estilete de inscrição, cálamo, cinzel `[kit- + -tek]`
+- **kladdor** (2ª, pl. *kladdoro*) — tranca de ferro, ferrolho de segurança contra o vento `[raiz klad- (fechar) + -or]`
+- **kolbia** (1ª, pl. *kolbiar*) — lugar, recinto ou oficina de lançar tributo régio sobre feudos vassalos `[kolb- + -ia]`
+- **kolbil** (2ª, pl. *kolbilo*) — recibo de quitação de tributo timbrado pela chancelaria `[raiz kolb- + -il]`
+- **kolbin** (2ª, pl. *kolbino*) — tributo anual em barras ou cereal devido pelos vassalos `[raiz kolb- + -in]`
+- **kolbor** (2ª, pl. *kolboro*) — ato ou efeito de lançar tributo régio sobre feudos vassalos `[kolb- + -or]`
+- **kolbtek** (2ª, pl. *kolbteko*) — instrumento ou meio para lançar tributo régio sobre feudos vassalos `[kolb- + -tek]`
+- **kolbur** (2ª, pl. *kolburo*) — rolo de cobrança do erário com as cotas de cada baronia `[raiz kolb- + -ur]`
+- **koldir** (2ª, pl. *koldiro*) — inverno silvático, estação da dormência `[kor + nir (rn -> ld)]`
+- **koldirkor** (2ª, pl. *koldirkoro*) — pinheiro boreal perene resistente ao inverno `[koldir (inverno) + kor (árvore)]`
+- **kolmia** (1ª, pl. *kolmiar*) — lugar, recinto ou oficina de polir lajes de mármore com areia `[kolm- + -ia]`
+- **kolmil** (2ª, pl. *kolmilo*) — laje polida com veios acinzentados para piso palaciano `[raiz kolm- + -il]`
+- **kolmin** (2ª, pl. *kolmino*) — polimento de cantaria de mármore com areia quartzosa `[raiz kolm- + -in]`
+- **kolmor** (2ª, pl. *kolmoro*) — ato ou efeito de polir lajes de mármore com areia `[kolm- + -or]`
+- **kolmtek** (2ª, pl. *kolmteko*) — instrumento ou meio para polir lajes de mármore com areia `[kolm- + -tek]`
+- **kolmude** (1ª, pl. *kolmuder*) — sala fechada da oficina onde os mestres realizam o corte fino de mármore `[kolm- + -ude]`
+- **kolmur** (2ª, pl. *kolmuro*) — bloco de mármore branco leitoso extraído da encosta `[raiz kolm- + -ur]`
+- **komia** (1ª, pl. *komiar*) — taberna, casa de beber `[kom- + -ia]`
+- **komor** (2ª, pl. *komoro*) — bebida, trago `[kom- + -or]`
+- **komtek** (2ª, pl. *komteko*) — copo, cálice cotidiano `[kom- + -tek]`
+- **kor** (2ª, pl. *koro*) — árvore, madeira viva `[raiz primária kor]`
+- **kor'ia** (1ª, pl. *kor'iar*) — lugar, recinto ou oficina de fosforecer em fogos azuis sobre os brejos na noite quieta `[kork- + -ia]`
+- **kor'or** (2ª, pl. *kor'oro*) — ato ou efeito de fosforecer em fogos azuis sobre os brejos na noite quieta `[kork- + -or]`
+- **korbeg** (2ª, pl. *korbego*) — espiga de cereal carregada de grãos firmes `[raiz korb- + -eg]`
+- **korbia** (1ª, pl. *korbiar*) — lugar, recinto ou oficina de engrenar dentes e pinhões de bronze em mecanismo de relojoaria `[korb- + -ia]`
+- **korbor** (2ª, pl. *korboro*) — ato ou efeito de engrenar dentes e pinhões de bronze em mecanismo de relojoaria `[korb- + -or]`
+- **korbtek** (2ª, pl. *korbteko*) — instrumento ou meio para engrenar dentes e pinhões de bronze em mecanismo de relojoaria `[korb- + -tek]`
+- **kordaktek** (2ª, pl. *kordakteko*) — colher de pau torneada, concha de sopa `[kor (madeira) + dak- (comer) + -tek]`
+- **korfelpoke** (1ª, pl. *korfelpoker*) — pequeno animal arborícola coletor de pinhões `[korfel (pinhão) + poke]`
+- **korgar** (2ª, pl. *korgaro*) — floresta densa, bosque ancestral `[kor + -gar]`
+- **korgarhux** (2ª, pl. *korgarhuxo*) — tecido grosso e resistente batido em água fervente `[korgar + hux]`
+- **korgarkuevé** (1ª, pl. *korgarkuever*) — extrato amadeirado escuro para escurecer tecidos `[korgar + kue + Vé]`
+- **korgarpoke** (1ª, pl. *korgarpoker*) — grande cervídeo de galhada espalmada dos pântanos `[korgar (floresta) + poke]`
+- **Korikeste** (1ª, pl. *Korikester*) — Casa da Árvore (Grande Casa Nobre) `[kori + keste]`
+- **koril** (2ª, pl. *korilo*) — arbusto, muda, pequena árvore `[kor + -il]`
+- **korlitrtek** (2ª, pl. *korlitrteko*) — alaúde de caixa abaulada de madeira nobre `[kor (madeira) + litrtek]`
+- **korlitrtoret** (2ª, pl. *korlitrtoreto*) — tampo de abeto fino que amplifica o som das cordas `[kor + litr + toret]`
+- **koronkoril** (2ª, pl. *koronkorilo*) — raiz antropomórfica dos ritos arcanos `[kron (homem) + koril (raiz)]`
+- **korpia** (1ª, pl. *korpiar*) — lugar, recinto ou oficina de fermentar levedura viva em massa de farinha fina `[korp- + -ia]`
+- **korpoke** (1ª, pl. *korpoker*) — caçador ágil dos ramos de pinheiros de pele macia `[kor (árvore) + poke (animal)]`
+- **korpor** (2ª, pl. *korporo*) — ato ou efeito de fermentar levedura viva em massa de farinha fina `[korp- + -or]`
+- **korptek** (2ª, pl. *korpteko*) — instrumento ou meio para fermentar levedura viva em massa de farinha fina `[korp- + -tek]`
+- **korsfar** (2ª, pl. *korsfaro*) — casca protetora externa do tronco das árvores `[kor (árvore) + sfar (proteção)]`
+- **korttek** (2ª, pl. *kortteko*) — instrumento ou meio para fosforecer em fogos azuis sobre os brejos na noite quieta `[kork- + -tek]`
+- **korvelitrtek** (2ª, pl. *korvelitrteko*) — instrumento de sopro rústico de palheta dupla `[kor + vel + litrtek]`
+- **korvok** (2ª, pl. *korvoko*) — entrecasca fibrosa que conduz a seiva da árvore `[kor (árvore) + vok (fluido vital)]`
+- **korvé** (1ª, pl. *korver*) — seiva, resina `[kor + Vé]`
+- **koryferpoke** (1ª, pl. *koryferpoker*) — ave de rapina ágil que caça entre as árvores `[kory (floresta) + ferpoke (ave)]`
+- **Koryvela** (1ª, pl. *Koryvelar*) — Floresta de Treppênia (vulgar: Coryvela) `[kory + vela]`
+- **kosia** (1ª, pl. *kosiar*) — cripta, sepulcro, necrópole, câmara secreta `[kos- + -ia]`
+- **kosor** (2ª, pl. *kosoro*) — segredo, mistério oculto, arcano `[kos- + -or]`
+- **kospil** (2ª, pl. *kospilo*) — coluna graduada para medição de calor em vaso líquido `[kosp- + -il]`
+- **kospur** (2ª, pl. *kospuro*) — banho de areia quente para aquecimento suave de retortas `[kosp- + -ur]`
+- **kradet** (2ª, pl. *kradeto*) — criança pequena, filho amado, rebento do lar `[raiz kradd- (nascer/gerar) + -et]`
+- **krador** (2ª, pl. *kradoro*) — Criação, gênese, ato criador `[krad- + -or]`
+- **kran** (2ª, pl. *krano*) — mulher, dama (Dat. Pl. kranoi) `[raiz primária kran]`
+- **kranil** (2ª, pl. *kranilo*) — menina `[kran + -il]`
+- **Kratte** (1ª, pl. *Kratter*) — O Criador, Artífice Supremo `[krad- + -te (dt -> tt)]`
+- **krazor** (2ª, pl. *krazoro*) — riso, alegria `[kraz- + -or]`
+- **Kristus** (2ª, pl. *Kristuso*) — Cristo, o Ungido (epíteto sagrado no Skorum) `[antropônimo sagrado]`
+- **kron** (2ª, pl. *krono*) — homem, varão, mortal (Pl. krono) `[raiz primária kron]`
+- **kronil** (2ª, pl. *kronilo*) — menino `[kron + -il]`
+- **krope** (1ª, pl. *kroper*) — campina, planície aberta (expurgado kropé) `[raiz krop-]`
+- **kropefil** (2ª, pl. *kropefilo*) — várzea abrigada entre serras, vale plano protegido `[krope (planície) + fil (depressão)]`
+- **kua'oril** (2ª, pl. *kua'orilo*) — cogumelo de chapéu rubro mosqueado `[kua (vermelho) + koril (planta)]`
+- **kuahuxgar** (2ª, pl. *kuahuxgaro*) — capa escarlate de gala forrada de pele contra o frio `[kua + huxgar]`
+- **kue** (1ª, pl. *kuer*) — cor vermelha, rubro, escarlate `[raiz ku-]`
+- **kue'itrixe** (1ª, pl. *kue'itrixer*) — pintura mural aplicada sobre o revestimento ainda úmido `[kue (cor) + kit- + rixe]`
+- **kue'oril** (2ª, pl. *kue'orilo*) — erva amarga de flor azul intenso dos prados altos `[kue (intenso) + koril (erva)]`
+- **kuefarhux** (2ª, pl. *kuefarhuxo*) — tira de seda rubra para atar cabelos de damas `[kue + farhux]`
+- **kuefelil** (2ª, pl. *kuefeli'o*) — amora silvestre de espinheiro `[kue (rubro) + felil (pequeno fruto)]`
+- **kuepoke** (1ª, pl. *kuepoker*) — animal astuto de cauda felpuda avermelhada `[kue (vermelho) + poke (animal)]`
+- **kuexia** (1ª, pl. *kuexiar*) — lugar, recinto ou oficina de corar a face de pudor ou rubor `[kuex- + -ia]`
+- **kuexor** (2ª, pl. *kuexoro*) — ato ou efeito de corar a face de pudor ou rubor `[kuex- + -or]`
+- **kuextek** (2ª, pl. *kuexteko*) — instrumento ou meio para corar a face de pudor ou rubor `[kuex- + -tek]`
+- **kul** (2ª, pl. *kulo*) — cor laranja, açafrão `[raiz primária kul]`
+- **kul'ia** (1ª, pl. *kul'iar*) — lugar, recinto ou oficina de encastoar gema em anel ou coroa `[kulk- + -ia]`
+- **kul'or** (2ª, pl. *kul'oro*) — ato ou efeito de encastoar gema em anel ou coroa `[kulk- + -or]`
+- **kulav** (2ª, pl. *kulavo*) — casa de campo, vila rústica `[raiz kulav]`
+- **kulpia** (1ª, pl. *kulpiar*) — lugar, recinto ou oficina de ajustar frete com os tropeiros da caravana `[kulp- + -ia]`
+- **kulpor** (2ª, pl. *kulporo*) — ato ou efeito de ajustar frete com os tropeiros da caravana `[kulp- + -or]`
+- **kulptek** (2ª, pl. *kulpteko*) — instrumento ou meio para ajustar frete com os tropeiros da caravana `[kulp- + -tek]`
+- **kulttek** (2ª, pl. *kultteko*) — instrumento ou meio para encastoar gema em anel ou coroa `[kulk- + -tek]`
+- **kulunmaldgar** (2ª, pl. *kulunmaldgaro*) — comboio de bestas de carga e tropeiros em marcha `[klun- + maldgar]`
+- **kuluntoret** (2ª, pl. *kuluntoreto*) — armação de madeira presa ao lombo do animal para fardos `[klun- + toret]`
+- **kur'ia** (1ª, pl. *kur'iar*) — lugar, recinto ou oficina de coroar o soberano no santuário `[kurk- + -ia]`
+- **kur'or** (2ª, pl. *kur'oro*) — ato ou efeito de coroar o soberano no santuário `[kurk- + -or]`
+- **kurafasor** (2ª, pl. *kurafasoro*) — acúmulo inflamado sob a pele que requer drenagem `[kura + fasor]`
+- **Kurdor** (2ª, pl. *Kurdoro*) — homens-mortos, carne corrompida `[kur- + dur]`
+- **Kurlan** (2ª, pl. *Kurlano*) — Melkor / Morgoth após a queda (Luz Corrompida) `[kur- + lan]`
+- **kuroi** (2ª, pl. *kuroo*) — pecadores, transgressores (Dat./Nom. Pl. de kura) `[kur- + -oi]`
+- **kurttek** (2ª, pl. *kurtteko*) — instrumento ou meio para coroar o soberano no santuário `[kurk- + -tek]`
+- **kus'ia** (1ª, pl. *kus'iar*) — lugar, recinto ou oficina de pleitear imunidade sob proteção de estandarte `[kusk- + -ia]`
+- **kus'in** (2ª, pl. *kus'ino*) — imunidade judicial concedida a embaixadores estrangeiros `[raiz kusk- + -in]`
+- **kus'or** (2ª, pl. *kus'oro*) — ato ou efeito de pleitear imunidade sob proteção de estandarte `[kusk- + -or]`
+- **kusttek** (2ª, pl. *kustteko*) — instrumento ou meio para pleitear imunidade sob proteção de estandarte `[kusk- + -tek]`
+- **kusttep** (2ª, pl. *kusttepo*) — recinto inviolável de chancelaria com direito sagrado de asilo `[raiz kusk- + tep, kt -> tt]`
+- **Kúr'ete** (1ª, pl. *Kúr'eter*) — A Falsa Palavra (exônimo de Hállemme) `[kura + lete (haplologia)]`
+- **lake** (1ª, pl. *laker*) — mal, perversidade, infortúnio `[raiz lak-]`
+- **lamir** (2ª, pl. *lamiro*) — noite clara de luar `[lan + nir (nn -> m)]`
+- **lamirlan** (2ª, pl. *lamirlano*) — lua cheia, plenilúnio de prata `[lan (luz/cheia) + nirlan (lua), nn -> m]`
+- **lammildykil** (2ª, pl. *lammildykilo*) — grande janela circular rendilhada na fachada `[lan (luz) + mir + nykil (janela), nm -> m, rn -> ld]`
+- **lammirlan** (2ª, pl. *lammirlano*) — halo luminoso de gelo ao redor da lua `[lan (luz) + mir + nirlan, nm -> m]`
+- **lan** (2ª, pl. *lano*) — luz, clarão sagrado `[raiz primária lan]`
+- **Lan'ani** (2ª, pl. *Lan'anio*) — em luz absoluta, plenitude luminosa `[lan + lani (haplologia)]`
+- **lanferpoke** (1ª, pl. *lanferpoker*) — ave noturna de plumagem branca imaculada do norte `[lan (alva) + ferpoke (ave)]`
+- **lanil** (2ª, pl. *lanilo*) — candeia, vela de sebo `[lan + -il]`
+- **lankor** (2ª, pl. *lankoro*) — bétula de casca alva prateada `[lan (luz/alva) + kor (árvore)]`
+- **lanmirtepia** (1ª, pl. *lanmirtepiar*) — galeria envidraçada voltada ao sul para o sol de inverno `[lan (luz) + mir + tepia]`
+- **lanoxetor** (2ª, pl. *lanoxetoro*) — massa branca fina de cal e pó de rocha para relevos `[lan (branco) + oxe + -tor]`
+- **Lanrukra** (1ª, pl. *Lanrukrar*) — Melkor em sua glória original (Luz e Poder) `[lan + rukra]`
+- **lantek** (2ª, pl. *lanteko*) — lanterna, lamparina `[lan + -tek]`
+- **lanvepoke** (1ª, pl. *lanvepoker*) — grande ave aquática alva de pescoço arqueado `[lan (alvo) + vepoke (ave d'água)]`
+- **lanverril** (2ª, pl. *lanverrilo*) — moeda de prata cunhada, metal claro de troca comercial `[lan (claro/prata) + verril (moeda)]`
+- **lanxeryvar** (2ª, pl. *lanxeryvaro*) — Via Láctea, estrada luminosa de estrelas no céu `[lan (luz) + xery (do céu) + var (caminho)]`
+- **lanybrapil** (2ª, pl. *lanybrapilo*) — lingote de prata marcado com o sinete da alfândega `[lan-y- + brap- + -il]`
+- **lanygobil** (2ª, pl. *lanygobilo*) — moeda de prata fina usada no comércio atacadista `[lan-y- + gob + -il]`
+- **lanyhuxgar** (2ª, pl. *lanyhuxgaro*) — capa alva de inverno debruada de penugem alva `[lany + huxgar]`
+- **lanyhuxil** (2ª, pl. *lanyhuxilo*) — túnica íntima alva lavada nos seixos do regato `[lany + huxil]`
+- **larfulve** (1ª, pl. *larfulver*) — lareira ancestral onde nunca se apaga a brasa da família `[lar- + fulve, termina em -e (1 decl)]`
+- **larptek** (2ª, pl. *larpteko*) — instrumento ou meio para erigir marcos miliários de cantaria na linha divisória dos reinos `[larv- + -tek]`
+- **lartande** (1ª, pl. *lartander*) — madrinha guardiã dos ritos de tear e costura `[lart- + ande, termina em -e (1 decl)]`
+- **lartia** (1ª, pl. *lartiar*) — lugar, recinto ou oficina de cozer cerâmica e barro em alta temperatura `[lart- + -ia]`
+- **lartil** (2ª, pl. *lartilo*) — tigela vidrada de faiança com esmalte azul cobalto `[raiz lart- + -il]`
+- **lartin** (2ª, pl. *lartino*) — vitrificação de esmalte brilhante sobre cerâmica `[raiz lart- + -in]`
+- **lartor** (2ª, pl. *lartoro*) — ato ou efeito de cozer cerâmica e barro em alta temperatura `[lart- + -or]`
+- **larttek** (2ª, pl. *lartteko*) — instrumento ou meio para cozer cerâmica e barro em alta temperatura `[lart- + -tek]`
+- **lartude** (1ª, pl. *lartuder*) — câmara do forno onde as peças esfriam devagar `[lart- + -ude]`
+- **lartur** (2ª, pl. *larturo*) — forno de alta temperatura revestido de tijolos refratários `[raiz lart- + -ur]`
+- **larvia** (1ª, pl. *larviar*) — lugar, recinto ou oficina de erigir marcos miliários de cantaria na linha divisória dos reinos `[larv- + -ia]`
+- **larvor** (2ª, pl. *larvoro*) — ato ou efeito de erigir marcos miliários de cantaria na linha divisória dos reinos `[larv- + -or]`
+- **laural** (2ª, pl. *lauralo*) — cerveja encorpada escura, hidromel espesso da taberna `[laur- (dourado) + al- (cereal)]`
+- **lauren** (2ª, pl. *laureno*) — moeda imperial de ouro, metal nobre de alto valor `[raiz laur- (ouro) + -en]`
+- **lauri** (1ª, pl. *laurier*) — ouro, metal nobre (Síncrese de Laurie) `[raiz laur-]`
+- **lauribrapil** (2ª, pl. *lauribrapilo*) — barra selada de ouro puro aceita como garantia de dívida `[lauri + brap- + -il]`
+- **lauribroxtor** (2ª, pl. *lauribroxtoro*) — fecho de metal áureo lavrado com brasão condal `[lauri + brox + -tor]`
+- **laurifnil** (2ª, pl. *laurifnilo*) — peça redonda de ouro cinzelado para abotoar mantos `[lauri + fnil-]`
+- **laurigobil** (2ª, pl. *laurigobilo*) — moeda de ouro de alto valor cunhada com a coroa condal `[lauri + gob + -il]`
+- **laurihuxil** (2ª, pl. *laurihuxilo*) — veste nobre tecida com fios dourados para ritos `[lauri + huxil]`
+- **laurikorvé** (1ª, pl. *laurikorver*) — resina fóssil translúcida cor de mel `[lauri (ouro) + korvé (resina)]`
+- **lauril** (2ª, pl. *laurilo*) — moeda de ouro `[lauri + -il]`
+- **lauritelgar** (2ª, pl. *lauritelgaro*) — tesouro acumulado em barras e moedas nos subterrâneos `[lauri + telgar]`
+- **laurivepoke** (1ª, pl. *laurivepoker*) — grande peixe encouraçado dos rios profundos `[lauri (nobre) + vepoke]`
+- **lauriznetil** (2ª, pl. *lauriznetilo*) — faixa estreita de ouro entretecida para orlar mantos `[lauri + znet- + -il]`
+- **le** (1ª, pl. *ler*) — luz elementar, raio luminoso `[raiz primária le]`
+- **ledda** (1ª, pl. *leddar*) — palavra ideal, mandamento, decreto `[lete + da (td -> dd)]`
+- **leddakitor** (2ª, pl. *leddakitoro*) — Código Imperial de Mandamentos, Constituição `[ledda + kitor]`
+- **leddalitror** (2ª, pl. *leddalitroro*) — tema musical diretor, Grande Tema `[ledda + litror]`
+- **lerkia** (1ª, pl. *lerkiar*) — lugar, recinto ou oficina de fiar a lã ou o linho no fuso `[lerk- + -ia]`
+- **lerkor** (2ª, pl. *lerkoro*) — ato ou efeito de fiar a lã ou o linho no fuso `[lerk- + -or]`
+- **lerpate** (1ª, pl. *lerpater*) — cláusula de perdão perpétuo aposta ao tratado de concórdia `[lerp- + -ate]`
+- **lerpia** (1ª, pl. *lerpiar*) — lugar, recinto ou oficina de indultar prisioneiro por clemência do soberano `[lerp- + -ia]`
+- **lerpil** (2ª, pl. *lerpilo*) — medalha de salvo-conduto entregue ao prisioneiro perdoado `[raiz lerp- + -il]`
+- **lerpin** (2ª, pl. *lerpino*) — comutação graciosa de pena concedida no dia de festa sagrada `[raiz lerp- + -in]`
+- **lerpor** (2ª, pl. *lerporo*) — ato ou efeito de indultar prisioneiro por clemência do soberano `[lerp- + -or]`
+- **lerptek** (2ª, pl. *lerpteko*) — instrumento ou meio para indultar prisioneiro por clemência do soberano `[lerp- + -tek]`
+- **lerpur** (2ª, pl. *lerpuro*) — carta régia de anistia e indulto assinada pelo soberano `[raiz lerp- + -ur]`
+- **lerttek** (2ª, pl. *lertteko*) — instrumento ou meio para fiar a lã ou o linho no fuso `[lerk- + -tek]`
+- **lete** (1ª, pl. *leter*) — palavra, vocábulo, voz articulada `[raiz let-]`
+- **letor** (2ª, pl. *letoro*) — eloquência, retórica de Chancelaria, discurso `[let- + -or]`
+- **lette** (1ª, pl. *letter*) — orador oficial, arauto, legado `[let- + -te]`
+- **lettek** (2ª, pl. *letteko*) — megafone, trombeta de comando, instrumento de voz `[let- + -tek]`
+- **lexe** (1ª, pl. *lexer*) — estrela; no plural (lexer): Os Santos `[raiz lex-]`
+- **lexefervé** (1ª, pl. *lexeferver*) — nuvem estelar profunda no firmamento `[lexe (estrela) + fervé (nuvem)]`
+- **lexekaran** (2ª, pl. *lexekarano*) — anel das constelações, cinturão sideral do ano `[lexe (estrela) + karan (domínio/anel)]`
+- **lexekitor** (2ª, pl. *lexekitoro*) — tábua calculada das posições dos astros `[lexe (estrela) + kitor (registro)]`
+- **lexemirttek** (2ª, pl. *lexemirtteko*) — astrolábio de latão, instrumento de medir estrelas `[lexe (estrela) + mir (olhar) + -tek]`
+- **lexevur** (2ª, pl. *lexevuro*) — cometa, astro errante de cabeleira ígnea `[lexe (estrela) + vur (fogo)]`
+- **lexpia** (1ª, pl. *lexpiar*) — lugar, recinto ou oficina de alinhar o quadrante com o meridiano `[lexp- + -ia]`
+- **lexpor** (2ª, pl. *lexporo*) — ato ou efeito de alinhar o quadrante com o meridiano `[lexp- + -or]`
+- **lexptek** (2ª, pl. *lexpteko*) — instrumento ou meio para alinhar o quadrante com o meridiano `[lexp- + -tek]`
+- **libkia** (1ª, pl. *libkiar*) — lugar, recinto ou oficina de balançar a face visível da lua `[libk- + -ia]`
+- **libkor** (2ª, pl. *libkoro*) — ato ou efeito de balançar a face visível da lua `[libk- + -or]`
+- **libttek** (2ª, pl. *libtteko*) — instrumento ou meio para balançar a face visível da lua `[libk- + -tek]`
+- **likia** (1ª, pl. *likiar*) — lugar, recinto ou oficina de defumar carnes no fumeiro de pinho `[lik- + -ia]`
+- **likor** (2ª, pl. *likoro*) — ato ou efeito de defumar carnes no fumeiro de pinho `[lik- + -or]`
+- **limia** (1ª, pl. *limiar*) — lugar, recinto ou oficina de hastear o estandarte imperial `[lim- + -ia]`
+- **limor** (2ª, pl. *limoro*) — ato ou efeito de hastear o estandarte imperial `[lim- + -or]`
+- **limtek** (2ª, pl. *limteko*) — instrumento ou meio para hastear o estandarte imperial `[lim- + -tek]`
+- **liria** (1ª, pl. *liriar*) — lugar, recinto ou oficina de modular a voz para o registro grave `[lir- + -ia]`
+- **lirkia** (1ª, pl. *lirkiar*) — lugar, recinto ou oficina de iluminar manuscrito com ouro e carmim `[lirk- + -ia]`
+- **lirkor** (2ª, pl. *lirkoro*) — ato ou efeito de iluminar manuscrito com ouro e carmim `[lirk- + -or]`
+- **liror** (2ª, pl. *liro'o*) — ato ou efeito de modular a voz para o registro grave `[lir- + -or]`
+- **lirtek** (2ª, pl. *lirteko*) — instrumento ou meio para modular a voz para o registro grave `[lir- + -tek]`
+- **lirttek** (2ª, pl. *lirtteko*) — instrumento ou meio para iluminar manuscrito com ouro e carmim `[lirk- + -tek]`
+- **liskia** (1ª, pl. *liskiar*) — lugar, recinto ou oficina de lamber `[lisk- + -ia]`
+- **liskor** (2ª, pl. *liskoro*) — ato ou efeito de lamber `[lisk- + -or]`
+- **listtek** (2ª, pl. *listteko*) — instrumento ou meio para lamber `[lisk- + -tek]`
+- **litadarptek** (2ª, pl. *litadarpteko*) — pequenos sinos de bronze presos em arco para marcar o compasso `[lita + darptek]`
+- **litapoke** (1ª, pl. *litapoker*) — pequeno cervídeo gracioso das clareiras `[lita (pequeno) + poke (animal)]`
+- **litarixil** (2ª, pl. *litarixilo*) — tecido flexível que reveste as juntas dos ossos `[lita (macio) + rixil]`
+- **litrgar** (2ª, pl. *litrgaro*) — Grande Música, Sinfonia Monumental `[litr- + -gar]`
+- **litrgartep** (2ª, pl. *litrgartepo*) — torre alta anexa ao templo onde pendem os sinos `[litrgar (sinos) + tep (torre)]`
+- **litrkoldykil** (2ª, pl. *litrkoldykilo*) — abertura circular entalhada no centro da caixa acústica `[litr + kor + nykil, rn -> ld]`
+- **litror** (2ª, pl. *litroro*) — música, melodia, vibração harmônica `[litr- + -or]`
+- **litrte** (1ª, pl. *litrter*) — cantor, músico, menestrel cósmico `[litr- + -te]`
+- **litrtek** (2ª, pl. *litrteko*) — instrumento musical, harpa, lira, órgão `[litr- + -tek]`
+- **littek** (2ª, pl. *litteko*) — instrumento ou meio para defumar carnes no fumeiro de pinho `[lik- + -tek]`
+- **lixia** (1ª, pl. *lixiar*) — casa de banho, lavadouro `[lix- + -ia]`
+- **lixtek** (2ª, pl. *lixteko*) — bacia, gamela de lavar `[lix- + -tek]`
+- **lixve'aril** (2ª, pl. *lixve'arilo*) — galeria subterrânea de pedra para escoamento urbano `[lix- (limpar) + vevaril]`
+- **lixvokor** (2ª, pl. *lixvokoro*) — grande órgão avermelhado que filtra o sangue `[lix- (purificar) + vokor]`
+- **lorbia** (1ª, pl. *lorbiar*) — lugar, recinto ou oficina de incrustar tésseras de vidro colorido e ouro em mosaico bizantino `[lorb- + -ia]`
+- **lorbor** (2ª, pl. *lorboro*) — ato ou efeito de incrustar tésseras de vidro colorido e ouro em mosaico bizantino `[lorb- + -or]`
+- **lorbtek** (2ª, pl. *lorbteko*) — instrumento ou meio para incrustar tésseras de vidro colorido e ouro em mosaico bizantino `[lorb- + -tek]`
+- **losil** (2ª, pl. *losilo*) — marca de chamada em forma de cruz para nota de margem `[los- + -il]`
+- **losin** (2ª, pl. *losino*) — nota explicativa marginal redigida em escrita diminuta `[los- + -in]`
+- **losur** (2ª, pl. *losuro*) — comentário doutrinário extenso inserido entre os fólios `[los- + -ur]`
+- **lotakoril** (2ª, pl. *lotakorilo*) — anel de pétalas coloridas da flor `[lota (belo) + koril (flor)]`
+- **lotor** (2ª, pl. *lotoro*) — beleza, esplendor estético, formosura `[lot- + -or]`
+- **luria** (1ª, pl. *luriar*) — lugar, recinto ou oficina de encobrir de neblina espessa `[lur- + -ia]`
+- **lurkia** (1ª, pl. *lurkiar*) — lugar, recinto ou oficina de confiscar bens para o erário `[lurk- + -ia]`
+- **lurkor** (2ª, pl. *lurkoro*) — ato ou efeito de confiscar bens para o erário `[lurk- + -or]`
+- **luror** (2ª, pl. *luro'o*) — ato ou efeito de encobrir de neblina espessa `[lur- + -or]`
+- **lurpia** (1ª, pl. *lurpiar*) — lugar, recinto ou oficina de depositar lodo fertil e vasa escura no leito aluvial `[lurp- + -ia]`
+- **lurpor** (2ª, pl. *lurporo*) — ato ou efeito de depositar lodo fertil e vasa escura no leito aluvial `[lurp- + -or]`
+- **lurptek** (2ª, pl. *lurpteko*) — instrumento ou meio para depositar lodo fertil e vasa escura no leito aluvial `[lurp- + -tek]`
+- **lurtek** (2ª, pl. *lurteko*) — instrumento ou meio para encobrir de neblina espessa `[lur- + -tek]`
+- **lurttek** (2ª, pl. *lurtteko*) — instrumento ou meio para confiscar bens para o erário `[lurk- + -tek]`
+- **luttor** (2ª, pl. *luttoro*) — carne assada na brasa, provisão de caça `[raiz lut- (caça/animal silvestre) + -or]`
+- **lyror** (2ª, pl. *lyro'o*) — esperança, espera `[lyr- + -or]`
+- **mad** (2ª, pl. *mado*) — mãe, matriz geradora `[raiz primária mad]`
+- **makia** (1ª, pl. *makiar*) — despensa, refeitório `[mak- + -ia]`
+- **makor** (2ª, pl. *makoro*) — refeição, alimento servido `[mak- + -or]`
+- **mald** (2ª, pl. *maldo*) — cavalo de montaria e carga, corcel resistente à neve `[mar- (montaria) + -n, rn -> ld]`
+- **malpia** (1ª, pl. *malpiar*) — lugar, recinto ou oficina de aparelhar o cavalo de viagem `[malp- + -ia]`
+- **malpor** (2ª, pl. *malporo*) — ato ou efeito de aparelhar o cavalo de viagem `[malp- + -or]`
+- **malptek** (2ª, pl. *malpteko*) — instrumento ou meio para aparelhar o cavalo de viagem `[malp- + -tek]`
+- **malttepia** (1ª, pl. *malttepiar*) — pavilhões abobadados de pedra para os corcéis imperiais `[mald (cavalo) + tepia, dt -> tt]`
+- **malxia** (1ª, pl. *malxiar*) — lugar, recinto ou oficina de domar corcel bravo pelas rédeas `[malx- + -ia]`
+- **malxor** (2ª, pl. *malxoro*) — ato ou efeito de domar corcel bravo pelas rédeas `[malx- + -or]`
+- **malxtek** (2ª, pl. *malxteko*) — instrumento ou meio para domar corcel bravo pelas rédeas `[malx- + -tek]`
+- **marfonte** (1ª, pl. *marfonter*) — ressurgência de água doce límpida em ilhota rochosa `[mar + fonte, termina em -e (1 decl)]`
+- **Maria** (1ª, pl. *Mariar*) — Santa Maria (antropônimo litúrgico no Metuses Maria e Skorum) `[antropônimo sagrado]`
+- **marleke** (1ª, pl. *marleker*) — maré cheia viva impulsionada pelo plenilúnio `[mar (mar) + leke (onda/fluxo), termina em -e (1 decl)]`
+- **marliste** (1ª, pl. *marlister*) — cordilheira de dunas brancas na foz do estuário `[mar + liste (areal), termina em -e (1 decl)]`
+- **marptek** (2ª, pl. *marpteko*) — instrumento ou meio para intuir a verdade oculta sob as aparências falsas `[marv- + -tek]`
+- **marvake** (1ª, pl. *marvaker*) — recife submarino escarpado de pedras afiadas `[mar (mar) + vake (dente), termina em -e (1 decl)]`
+- **marvia** (1ª, pl. *marviar*) — lugar, recinto ou oficina de intuir a verdade oculta sob as aparências falsas `[marv- + -ia]`
+- **marvor** (2ª, pl. *marvoro*) — ato ou efeito de intuir a verdade oculta sob as aparências falsas `[marv- + -or]`
+- **massu** (2ª, pl. *massuo*) — útero, ventre materno `[mad- + su (ds -> ss)]`
+- **matia** (1ª, pl. *matiar*) — lugar, recinto ou oficina de alvejar o linho na água de sol `[mat- + -ia]`
+- **mator** (2ª, pl. *matoro*) — ato ou efeito de alvejar o linho na água de sol `[mat- + -or]`
+- **mattek** (2ª, pl. *matteko*) — instrumento ou meio para alvejar o linho na água de sol `[mat- + -tek]`
+- **mekia** (1ª, pl. *mekiar*) — lugar, recinto ou oficina de emboscar o inimigo no desfiladeiro `[mek- + -ia]`
+- **mekor** (2ª, pl. *mekoro*) — ato ou efeito de emboscar o inimigo no desfiladeiro `[mek- + -or]`
+- **mektep** (2ª, pl. *mektepo*) — casebre, choupana plebeia (vulgar: mectep) `[mek + tep]`
+- **melbia** (1ª, pl. *melbiar*) — lugar, recinto ou oficina de gravar nome de primogênito no tronco da árvore genealógica de bronze `[melb- + -ia]`
+- **melbil** (2ª, pl. *melbilo*) — placa comemorativa do nascimento gravada com o nome do recém-nascido `[raiz melb- + -il]`
+- **melbin** (2ª, pl. *melbino*) — inscrição genealógica em tábua de cedro com o brasão do clã `[raiz melb- + -in]`
+- **melbor** (2ª, pl. *melboro*) — ato ou efeito de gravar nome de primogênito no tronco da árvore genealógica de bronze `[melb- + -or]`
+- **melbtek** (2ª, pl. *melbteko*) — instrumento ou meio para gravar nome de primogênito no tronco da árvore genealógica de bronze `[melb- + -tek]`
+- **melbur** (2ª, pl. *melburo*) — tronco genealógico entalhado que registra sete gerações `[raiz melb- + -ur]`
+- **melia** (1ª, pl. *meliar*) — lugar, recinto ou oficina de negociar trégua entre exércitos `[mel- + -ia]`
+- **melkia** (1ª, pl. *melkiar*) — lugar, recinto ou oficina de ondular o mar `[melk- + -ia]`
+- **melkor** (2ª, pl. *melkoro*) — ato ou efeito de ondular o mar `[melk- + -or]`
+- **melor** (2ª, pl. *meloro*) — ato ou efeito de negociar trégua entre exércitos `[mel- + -or]`
+- **melpia** (1ª, pl. *melpiar*) — lugar, recinto ou oficina de sorrir serenamente `[melp- + -ia]`
+- **melpor** (2ª, pl. *melporo*) — ato ou efeito de sorrir serenamente `[melp- + -or]`
+- **melptek** (2ª, pl. *melpteko*) — instrumento ou meio para sorrir serenamente `[melp- + -tek]`
+- **meltek** (2ª, pl. *melteko*) — instrumento ou meio para negociar trégua entre exércitos `[mel- + -tek]`
+- **melttek** (2ª, pl. *meltteko*) — instrumento ou meio para ondular o mar `[melk- + -tek]`
+- **merpia** (1ª, pl. *merpiar*) — lugar, recinto ou oficina de enfardar feno e atar gavelas com vencelete `[merp- + -ia]`
+- **merpil** (2ª, pl. *merpilo*) — vencelete de palha trançada para atar gavelas `[raiz merp- + -il]`
+- **merpor** (2ª, pl. *merporo*) — ato ou efeito de enfardar feno e atar gavelas com vencelete `[merp- + -or]`
+- **merptek** (2ª, pl. *merpteko*) — instrumento ou meio para enfardar feno e atar gavelas com vencelete `[merp- + -tek]`
+- **mete** (1ª, pl. *meter*) — glória, honra litúrgica `[raiz met-]`
+- **metor** (2ª, pl. *metoro*) — majestade, exultação, esplendor `[met- + -or]`
+- **metrin** (2ª, pl. *metrino*) — cadência ritmada de sílabas e tempos nos cantos antigos `[metr- + -in]`
+- **metrur** (2ª, pl. *metruro*) — estrofe poética estruturada conforme as leis da harmonia `[metr- + -ur]`
+- **mettek** (2ª, pl. *metteko*) — instrumento ou meio para emboscar o inimigo no desfiladeiro `[mek- + -tek]`
+- **mexfammir** (2ª, pl. *mexfammiro*) — adaga ritual, punhal curto `[mek + sfar + mir (rm -> mm)]`
+- **mi'ia** (1ª, pl. *mi'iar*) — lugar, recinto ou oficina de dedicar templo ou monumento a Gyos `[mim- + -ia]`
+- **mi'or** (2ª, pl. *mi'oro*) — ato ou efeito de dedicar templo ou monumento a Gyos `[mim- + -or]`
+- **milkia** (1ª, pl. *milkiar*) — lugar, recinto ou oficina de ordenhar o rebanho ao alvorecer `[milk- + -ia]`
+- **milkor** (2ª, pl. *milkoro*) — ato ou efeito de ordenhar o rebanho ao alvorecer `[milk- + -or]`
+- **milttek** (2ª, pl. *miltteko*) — instrumento ou meio para ordenhar o rebanho ao alvorecer `[milk- + -tek]`
+- **mimtek** (2ª, pl. *mimteko*) — instrumento ou meio para dedicar templo ou monumento a Gyos `[mim- + -tek]`
+- **miptek** (2ª, pl. *mipteko*) — instrumento ou meio para declamar epopeia em cadência clássica `[miv- + -tek]`
+- **mir** (2ª, pl. *miro*) — joia, gema preciosa; olho, olhar `[raiz primária mir]`
+- **mirakosor** (2ª, pl. *mirakosoro*) — Visão profética mostrada aos olhos `[mir- + akosor]`
+- **mirbaxi** (1ª, pl. *mirbaxier*) — felino montês de orelhas em penacho e vista aguda `[mir (visão) + baxi (felino)]`
+- **mirbia** (1ª, pl. *mirbiar*) — lugar, recinto ou oficina de refletir a imagem límpida em espelho côncavo de prata polida `[mirb- + -ia]`
+- **mirbor** (2ª, pl. *mirboro*) — ato ou efeito de refletir a imagem límpida em espelho côncavo de prata polida `[mirb- + -or]`
+- **mirbtek** (2ª, pl. *mirbteko*) — instrumento ou meio para refletir a imagem límpida em espelho côncavo de prata polida `[mirb- + -tek]`
+- **mirgar** (2ª, pl. *mirgaro*) — torre de vigia, atalaia monumental `[mir + -gar]`
+- **mirkia** (1ª, pl. *mirkiar*) — lugar, recinto ou oficina de orvalhar ao amanhecer `[mirk- + -ia]`
+- **mirkor** (2ª, pl. *mirkoro*) — ato ou efeito de orvalhar ao amanhecer `[mirk- + -or]`
+- **mirkron** (2ª, pl. *mirkrono*) — testemunha ocular, inspetor imperial `[mir + kron]`
+- **mirlanil** (2ª, pl. *mirlanilo*) — painel de vidros coloridos montados em chumbo `[mir (joia) + lanil (janela de luz)]`
+- **mirlanvokor** (2ª, pl. *mirlanvokoro*) — fundo sensível do olho onde se forma a imagem `[mir + lan (luz) + vokor]`
+- **miror** (2ª, pl. *miro'o*) — visão, contemplação intelectual, vigilância `[mir- + -or]`
+- **mirrixetor** (2ª, pl. *mirrixetoro*) — painel formado por pequenos cubos de pedra e vidro `[mir (joia) + rixe + -tor]`
+- **mirsu** (2ª, pl. *mirsuo*) — abertura central escura do olho por onde entra a luz `[mir (olho) + su (cerne)]`
+- **mirte** (1ª, pl. *mirter*) — ourives, lapidador de gemas `[mir + -te]`
+- **mirttek** (2ª, pl. *mirtteko*) — instrumento ou meio para orvalhar ao amanhecer `[mirk- + -tek]`
+- **mirvepoke** (1ª, pl. *mirvepoker*) — peixe pintado das águas cristalinas de degelo `[mir (pinta/joia) + vepoke]`
+- **mirvé** (1ª, pl. *mirver*) — lágrima `[mir + Vé]`
+- **mirxia** (1ª, pl. *mirxiar*) — lugar, recinto ou oficina de lustrar joia ou espelho metálico `[mirx- + -ia]`
+- **mirxor** (2ª, pl. *mirxoro*) — ato ou efeito de lustrar joia ou espelho metálico `[mirx- + -or]`
+- **mirxtek** (2ª, pl. *mirxteko*) — instrumento ou meio para lustrar joia ou espelho metálico `[mirx- + -tek]`
+- **Mirypalk** (2ª, pl. *Mirypalko*) — Passo das Joias (forma atemática de Mirypalkia) `[miry + palk]`
+- **Mirypalkia** (1ª, pl. *Mirypalkiar*) — Cinturão das Gemas (província de Erzmira) `[miry + palk + -ia]`
+- **mivia** (1ª, pl. *miviar*) — lugar, recinto ou oficina de declamar epopeia em cadência clássica `[miv- + -ia]`
+- **mivor** (2ª, pl. *mivoro*) — ato ou efeito de declamar epopeia em cadência clássica `[miv- + -or]`
+- **mixi** (1ª, pl. *mixier*) — pessoa, cidadão, indivíduo (Síncrese de Mixie) `[raiz mix-]`
+- **mixil** (2ª, pl. *mixilo*) — criança, pequena pessoa `[mixi + -il]`
+- **mixunkorfel** (2ª, pl. *mixunkorfelo*) — variedade botânica menor de fruto dourado meridional (coloquial: Mibanánna) `[mi + xunkorfel]`
+- **Moba'el** (2ª, pl. *Moba'elo*) — bom dia (saudação formal de Chancelaria) `[moba + bel (haplologia b-b)]`
+- **Mobafea** (1ª, pl. *Mobafear*) — bom sol, boa tarde (saudação vespertina) `[moba + fea]`
+- **mobalete** (1ª, pl. *mobaleter*) — por favor, cortesia, palavra benevolente (fórmula de pedido) `[moba + lete]`
+- **mobalitror** (2ª, pl. *mobalitroro*) — consonância, harmonia musical perfeita `[moba + litror]`
+- **Mobanir** (2ª, pl. *Mobaniro*) — boa noite (saudação noturna) `[moba + nir]`
+- **mobor** (2ª, pl. *moboro*) — graça abstrata, benevolência, favor divino `[mob- + -or]`
+- **moboril** (2ª, pl. *moborilo*) — dom, dádiva concedida, presente soberano (equivalente clássico endógeno do arcaísmo litúrgico don) `[mobor (graça/dádiva) + -il]`
+- **molbia** (1ª, pl. *molbiar*) — lugar, recinto ou oficina de mover pás e rodas d'água pela força da correnteza `[molb- + -ia]`
+- **molbor** (2ª, pl. *molboro*) — ato ou efeito de mover pás e rodas d'água pela força da correnteza `[molb- + -or]`
+- **molbtek** (2ª, pl. *molbteko*) — instrumento ou meio para mover pás e rodas d'água pela força da correnteza `[molb- + -tek]`
+- **moldan'e** (1ª, pl. *moldan'er*) — sogra respeitada mediadora dos conflitos de clã `[mold- + ande, termina em -e (1 decl)]`
+- **moldia** (1ª, pl. *moldiar*) — lugar, recinto ou oficina de sondar fendas e poços com prumo `[mold- + -ia]`
+- **moldil** (2ª, pl. *moldilo*) — archote mineral resinado para iluminar o fundo do poço `[raiz mold- + -il]`
+- **moldin** (2ª, pl. *moldino*) — sondagem vertical de poço para aferir profundidade `[raiz mold- + -in]`
+- **moldole** (1ª, pl. *moldoler*) — sinal sonoro ritmado de martelo para aviso de perigo na galeria `[mold- + -ole]`
+- **moldor** (2ª, pl. *moldoro*) — ato ou efeito de sondar fendas e poços com prumo `[mold- + -or]`
+- **moldur** (2ª, pl. *molduro*) — prumo de chumbo cônico atado a cordel graduado `[raiz mold- + -ur]`
+- **molia** (1ª, pl. *moliar*) — lugar, recinto ou oficina de medir tecidos por braças com a vara padrão `[mol- + -ia]`
+- **mollete** (1ª, pl. *molleter*) — sentença, julgamento, veredito `[mon + lete (nl -> ll)]`
+- **molletek** (2ª, pl. *molleteko*) — cetro judicial, balança de julgamento `[mollet- + -tek]`
+- **molletia** (1ª, pl. *molletiar*) — Corte Suprema, tribunal de justiça, fórum `[mollet- + -ia]`
+- **mollette** (1ª, pl. *molletter*) — juiz, magistrado imperial `[mollet- + -te]`
+- **molor** (2ª, pl. *moloro*) — ato ou efeito de medir tecidos por braças com a vara padrão `[mol- + -or]`
+- **molpia** (1ª, pl. *molpiar*) — lugar, recinto ou oficina de empunhar lança de torneio em carga contra a barreira `[molp- + -ia]`
+- **molpor** (2ª, pl. *molporo*) — ato ou efeito de empunhar lança de torneio em carga contra a barreira `[molp- + -or]`
+- **molptek** (2ª, pl. *molpteko*) — instrumento ou meio para empunhar lança de torneio em carga contra a barreira `[molp- + -tek]`
+- **moltek** (2ª, pl. *molteko*) — instrumento ou meio para medir tecidos por braças com a vara padrão `[mol- + -tek]`
+- **molttek** (2ª, pl. *moltteko*) — instrumento ou meio para sondar fendas e poços com prumo `[mold- + -tek]`
+- **molxia** (1ª, pl. *molxiar*) — lugar, recinto ou oficina de promulgar decreto da Chancelaria `[molx- + -ia]`
+- **molxor** (2ª, pl. *molxoro*) — ato ou efeito de promulgar decreto da Chancelaria `[molx- + -or]`
+- **molxtek** (2ª, pl. *molxteko*) — instrumento ou meio para promulgar decreto da Chancelaria `[molx- + -tek]`
+- **mon** (2ª, pl. *mono*) — nome, designação sagrada (substitui nomo) `[raiz primária mon]`
+- **mone** (1ª, pl. *moner*) — meia, vestimenta de pé `[raiz mon-]`
+- **mopia** (1ª, pl. *mopiar*) — lugar, recinto ou oficina de tecer no tear `[mop- + -ia]`
+- **mopor** (2ª, pl. *moporo*) — ato ou efeito de tecer no tear `[mop- + -or]`
+- **moptek** (2ª, pl. *mopteko*) — instrumento ou meio para tecer no tear `[mop- + -tek]`
+- **morfia** (1ª, pl. *morfiar*) — lugar, recinto ou oficina de sublimar sais e pós em vaso hermético `[morf- + -ia]`
+- **morfil** (2ª, pl. *morfilo*) — cristal pontiagudo de sal amoníaco purificado `[raiz morf- + -il]`
+- **morfin** (2ª, pl. *morfino*) — precipitação de cristais brilhantes em retorta fechada `[raiz morf- + -in]`
+- **morfinde** (1ª, pl. *morfinder*) — menina que atinge a puberdade e recebe a túnica de mulher `[morf- + inde, termina em -e (1 decl)]`
+- **morfor** (2ª, pl. *morforo*) — ato ou efeito de sublimar sais e pós em vaso hermético `[morf- + -or]`
+- **morftek** (2ª, pl. *morfteko*) — instrumento ou meio para sublimar sais e pós em vaso hermético `[morf- + -tek]`
+- **morfur** (2ª, pl. *morfuro*) — retorta de colo curvo para destilação a seco `[raiz morf- + -ur]`
+- **morkia** (1ª, pl. *morkiar*) — lugar, recinto ou oficina de desbravar galerias escuras tateando passagens com tochas e cordas `[mork- + -ia]`
+- **morkor** (2ª, pl. *morkoro*) — ato ou efeito de desbravar galerias escuras tateando passagens com tochas e cordas `[mork- + -or]`
+- **morttek** (2ª, pl. *mortteko*) — instrumento ou meio para desbravar galerias escuras tateando passagens com tochas e cordas `[mork- + -tek]`
+- **morvede** (1ª, pl. *morveder*) — matriarca respeitada guardiã das tradições domésticas `[morv- + ede, termina em -e (1 decl)]`
+- **movalyntek** (2ª, pl. *movalynteko*) — vara de madeira aferida pelo feitor para medir panos `[mvol- + yntek]`
+- **mukia** (1ª, pl. *mukiar*) — lugar, recinto ou oficina de franzir o cenho em concentração `[muk- + -ia]`
+- **mukor** (2ª, pl. *mukoro*) — ato ou efeito de franzir o cenho em concentração `[muk- + -or]`
+- **mulia** (1ª, pl. *muliar*) — lugar, recinto ou oficina de outorgar feudo ou título de nobreza `[mul- + -ia]`
+- **mulkia** (1ª, pl. *mulkiar*) — lugar, recinto ou oficina de arquivar nos rolos perpétuos `[mulk- + -ia]`
+- **mulkor** (2ª, pl. *mulkoro*) — ato ou efeito de arquivar nos rolos perpétuos `[mulk- + -or]`
+- **mullur** (2ª, pl. *mulluro*) — mó manual de pedra granítica para triturar amostras de colheita `[mull- + -ur]`
+- **mulor** (2ª, pl. *muloro*) — ato ou efeito de outorgar feudo ou título de nobreza `[mul- + -or]`
+- **multek** (2ª, pl. *multeko*) — instrumento ou meio para outorgar feudo ou título de nobreza `[mul- + -tek]`
+- **multtek** (2ª, pl. *multteko*) — instrumento ou meio para arquivar nos rolos perpétuos `[mulk- + -tek]`
+- **mundel** (2ª, pl. *mundelo*) — talude de terra erguido para reter água na várzea `[mund- + -el]`
+- **murdia** (1ª, pl. *murdiar*) — lugar, recinto ou oficina de proscrever infrator condenado ao desterro `[murd- + -ia]`
+- **murdil** (2ª, pl. *murdilo*) — marco divisório de pedra onde termina o asilo e começa o desterro `[raiz murd- + -il]`
+- **murdin** (2ª, pl. *murdino*) — decreto formal de banimento e proscrição territorial `[raiz murd- + -in]`
+- **murdor** (2ª, pl. *murdoro*) — ato ou efeito de proscrever infrator condenado ao desterro `[murd- + -or]`
+- **murdur** (2ª, pl. *murduro*) — carta de degredo eterno com advertência de morte ao réu `[raiz murd- + -ur]`
+- **murpia** (1ª, pl. *murpiar*) — lugar, recinto ou oficina de aferir limpidez de gemas na luz `[murp- + -ia]`
+- **murpin** (2ª, pl. *murpino*) — avaliação ótica de transparência e cor de gemas `[raiz murp- + -in]`
+- **murpor** (2ª, pl. *murporo*) — ato ou efeito de aferir limpidez de gemas na luz `[murp- + -or]`
+- **murptek** (2ª, pl. *murpteko*) — instrumento ou meio para aferir limpidez de gemas na luz `[murp- + -tek]`
+- **murttek** (2ª, pl. *murtteko*) — instrumento ou meio para proscrever infrator condenado ao desterro `[murd- + -tek]`
+- **muttek** (2ª, pl. *mutteko*) — instrumento ou meio para franzir o cenho em concentração `[muk- + -tek]`
+- **mygakoril** (2ª, pl. *mygakorilo*) — erva-dos-carpinteiros de folhas recortadas `[myga (mil) + koril (erva)]`
+- **nalbia** (1ª, pl. *nalbiar*) — lugar, recinto ou oficina de meditar em silêncio recolhido contemplando a alma `[nalb- + -ia]`
+- **nalbor** (2ª, pl. *nalboro*) — ato ou efeito de meditar em silêncio recolhido contemplando a alma `[nalb- + -or]`
+- **nalbtek** (2ª, pl. *nalbteko*) — instrumento ou meio para meditar em silêncio recolhido contemplando a alma `[nalb- + -tek]`
+- **nalpia** (1ª, pl. *nalpiar*) — lugar, recinto ou oficina de guarnecer desfiladeiros estratégicos e portelas de montanha `[nalp- + -ia]`
+- **nalpor** (2ª, pl. *nalporo*) — ato ou efeito de guarnecer desfiladeiros estratégicos e portelas de montanha `[nalp- + -or]`
+- **nalptek** (2ª, pl. *nalpteko*) — instrumento ou meio para guarnecer desfiladeiros estratégicos e portelas de montanha `[nalp- + -tek]`
+- **naspia** (1ª, pl. *naspiar*) — lugar, recinto ou oficina de navegar em mar aberto com vela mestra desfraldada `[nasp- + -ia]`
+- **naspil** (2ª, pl. *naspilo*) — bússola náutica de latão com agulha imantada em taça d’água `[raiz nasp- + -il]`
+- **naspin** (2ª, pl. *naspino*) — navegação em alto-mar sob orientação das estrelas e astrolábio `[raiz nasp- + -in]`
+- **naspor** (2ª, pl. *nasporo*) — ato ou efeito de navegar em mar aberto com vela mestra desfraldada `[nasp- + -or]`
+- **nasptek** (2ª, pl. *naspteko*) — instrumento ou meio para navegar em mar aberto com vela mestra desfraldada `[nasp- + -tek]`
+- **naspur** (2ª, pl. *naspuro*) — mastro principal de abeto com cesto de gávea reforçado `[raiz nasp- + -ur]`
+- **navelde** (1ª, pl. *navelder*) — tombadilho superior de ripas de pinho calafetadas `[nav- (nau) + velde (estrado), termina em -e (1 decl)]`
+- **navgarde** (1ª, pl. *navgarder*) — castelo de popa fortificado onde se guarda a bússola `[nav- + garde (torre/abrigo), termina em -e (1 decl)]`
+- **navkaste** (1ª, pl. *navkaster*) — convés intermediário onde ficam os bancos de remadores `[nav- + kaste, termina em -e (1 decl)]`
+- **navlase** (1ª, pl. *navlaser*) — porão inferior de carga para tonéis e mantimentos `[nav- + lase (fundo/oco), termina em -e (1 decl)]`
+- **navor** (2ª, pl. *navoro*) — transformação, feição, configuração, forma `[nav- + -or]`
+- **navpande** (1ª, pl. *navpander*) — quilha mestra inteiriça talhada em tronco único de carvalho `[nav- + pande (base/espinhaço), termina em -e (1 decl)]`
+- **navroste** (1ª, pl. *navroster*) — figura de proa esculpida em forma de dragão do mar `[nav- + roste (efígie), termina em -e (1 decl)]`
+- **navzorde** (1ª, pl. *navzorder*) — castelo de proa onde se aloja a tripulação de vigia `[nav- + zorde (guarda), termina em -e (1 decl)]`
+- **naxia** (1ª, pl. *naxiar*) — lugar, recinto ou oficina de escurecer no ocaso `[nax- + -ia]`
+- **naxor** (2ª, pl. *naxoro*) — ato ou efeito de escurecer no ocaso `[nax- + -or]`
+- **naxtek** (2ª, pl. *naxteko*) — instrumento ou meio para escurecer no ocaso `[nax- + -tek]`
+- **nekia** (1ª, pl. *nekiar*) — lugar, recinto ou oficina de esticar os membros `[nek- + -ia]`
+- **nekor** (2ª, pl. *nekoro*) — ato ou efeito de esticar os membros `[nek- + -or]`
+- **nelbia** (1ª, pl. *nelbiar*) — lugar, recinto ou oficina de julgar causas com retidão imparcial e justiça distributiva `[nelb- + -ia]`
+- **nelbor** (2ª, pl. *nelboro*) — ato ou efeito de julgar causas com retidão imparcial e justiça distributiva `[nelb- + -or]`
+- **nelbtek** (2ª, pl. *nelbteko*) — instrumento ou meio para julgar causas com retidão imparcial e justiça distributiva `[nelb- + -tek]`
+- **nelia** (1ª, pl. *neliar*) — lugar, recinto ou oficina de vadear o rio nos baixios `[nel- + -ia]`
+- **nelor** (2ª, pl. *neloro*) — ato ou efeito de vadear o rio nos baixios `[nel- + -or]`
+- **nelpia** (1ª, pl. *nelpiar*) — lugar, recinto ou oficina de farejar `[nelp- + -ia]`
+- **nelpor** (2ª, pl. *nelporo*) — ato ou efeito de farejar `[nelp- + -or]`
+- **nelptek** (2ª, pl. *nelpteko*) — instrumento ou meio para farejar `[nelp- + -tek]`
+- **neltek** (2ª, pl. *nelteko*) — instrumento ou meio para vadear o rio nos baixios `[nel- + -tek]`
+- **Nemkura** (1ª, pl. *Nemkurar*) — memória corrompida, esquecimento maldito `[nemre + kura]`
+- **nemme** (1ª, pl. *nemmer*) — memória, lembrança (variante geminada mr -> mm de nemre) `[nemr- (mr -> mm)]`
+- **nemre** (1ª, pl. *nemrer*) — memória, lembrança histórica (var. nemme) `[raiz nemr-]`
+- **nerkia** (1ª, pl. *nerkiar*) — lugar, recinto ou oficina de sublimar enxofre em crostas amarelas fumegantes `[nerk- + -ia]`
+- **nerkor** (2ª, pl. *nerkoro*) — ato ou efeito de sublimar enxofre em crostas amarelas fumegantes `[nerk- + -or]`
+- **nerpia** (1ª, pl. *nerpiar*) — lugar, recinto ou oficina de debater proposições dialéticas no conclave de sábios `[nerp- + -ia]`
+- **nerpil** (2ª, pl. *nerpilo*) — termo de ligação entre premissas no silogismo clássico `[raiz nerp- + -il]`
+- **nerpin** (2ª, pl. *nerpino*) — disputa dialética formal perante o colégio de mestres `[raiz nerp- + -in]`
+- **nerpole** (1ª, pl. *nerpoler*) — aprovação solene do plenário após a defesa do argumento `[nerp- + -ole]`
+- **nerpor** (2ª, pl. *nerporo*) — ato ou efeito de debater proposições dialéticas no conclave de sábios `[nerp- + -or]`
+- **nerptek** (2ª, pl. *nerpteko*) — instrumento ou meio para debater proposições dialéticas no conclave de sábios `[nerp- + -tek]`
+- **nerpur** (2ª, pl. *nerpuro*) — proposição demonstrativa encadeada em premissas e conclusão `[raiz nerp- + -ur]`
+- **nerttek** (2ª, pl. *nertteko*) — instrumento ou meio para sublimar enxofre em crostas amarelas fumegantes `[nerk- + -tek]`
+- **nesor** (2ª, pl. *nesoro*) — lar, morada acolhedora, habitação familiar `[raiz nes- (ser/morar) + -or]`
+- **Nesu** (2ª, pl. *Nesuo*) — o Nada absoluto, o Vazio abissal `[ne + su]`
+- **nettek** (2ª, pl. *netteko*) — instrumento ou meio para esticar os membros `[nek- + -tek]`
+- **ni'ia** (1ª, pl. *ni'iar*) — lugar, recinto ou oficina de trançar os cabelos em penteado nobre `[nin- + -ia]`
+- **ni'or** (2ª, pl. *ni'oro*) — ato ou efeito de trançar os cabelos em penteado nobre `[nin- + -or]`
+- **nikia** (1ª, pl. *nikiar*) — lugar, recinto ou oficina de entalhar relevo em madeira nobre `[nik- + -ia]`
+- **nikor** (2ª, pl. *nikoro*) — ato ou efeito de entalhar relevo em madeira nobre `[nik- + -or]`
+- **nintek** (2ª, pl. *ninteko*) — instrumento ou meio para trançar os cabelos em penteado nobre `[nin- + -tek]`
+- **niptek** (2ª, pl. *nipteko*) — instrumento ou meio para consagrar a fronte com bálsamo sagrado `[niv- + -tek]`
+- **nir** (2ª, pl. *niro*) — noite, escuridão noturna `[raiz primária nir]`
+- **nirbia** (1ª, pl. *nirbiar*) — lugar, recinto ou oficina de gotejar continuamente calcario formando estalactites no teto `[nirb- + -ia]`
+- **nirbor** (2ª, pl. *nirboro*) — ato ou efeito de gotejar continuamente calcario formando estalactites no teto `[nirb- + -or]`
+- **nirbtek** (2ª, pl. *nirbteko*) — instrumento ou meio para gotejar continuamente calcario formando estalactites no teto `[nirb- + -tek]`
+- **nirkoril** (2ª, pl. *nirkorilo*) — planta sombria de bagas negras soporíferas `[nir (noite) + koril (erva)]`
+- **nirkron** (2ª, pl. *nirkrono*) — espião, infiltrado, herege noturno `[nir + kron]`
+- **nirlan** (2ª, pl. *nirlano*) — lua `[nir + lan]`
+- **nirlankoril** (2ª, pl. *nirlankorilo*) — erva prateada lunar das veredas `[nirlan (lua) + koril (erva)]`
+- **nirmirpoke** (1ª, pl. *nirmirpoker*) — grande ave noturna de olhos dourados e voo silencioso `[nir (noite) + mir (olho) + poke]`
+- **nirpokegar** (2ª, pl. *nirpokegaro*) — grande lobo cinzento das matas boreais `[nir (noite) + pokegar (fera)]`
+- **nittek** (2ª, pl. *nitteko*) — instrumento ou meio para entalhar relevo em madeira nobre `[nik- + -tek]`
+- **nivia** (1ª, pl. *niviar*) — lugar, recinto ou oficina de consagrar a fronte com bálsamo sagrado `[niv- + -ia]`
+- **nivor** (2ª, pl. *nivoro*) — ato ou efeito de consagrar a fronte com bálsamo sagrado `[niv- + -or]`
+- **nopia** (1ª, pl. *nopiar*) — lugar, recinto ou oficina de semear grãos na terra lavrada `[nop- + -ia]`
+- **nopor** (2ª, pl. *noporo*) — ato ou efeito de semear grãos na terra lavrada `[nop- + -or]`
+- **noptek** (2ª, pl. *nopteko*) — instrumento ou meio para semear grãos na terra lavrada `[nop- + -tek]`
+- **norptek** (2ª, pl. *norpteko*) — instrumento ou meio para acionar martelos pesados de forja através de cames e eixo hidráulico `[norv- + -tek]`
+- **norvia** (1ª, pl. *norviar*) — lugar, recinto ou oficina de acionar martelos pesados de forja através de cames e eixo hidráulico `[norv- + -ia]`
+- **norvor** (2ª, pl. *norvoro*) — ato ou efeito de acionar martelos pesados de forja através de cames e eixo hidráulico `[norv- + -or]`
+- **nulia** (1ª, pl. *nuliar*) — lugar, recinto ou oficina de testemunhar sob juramento sagrado `[nul- + -ia]`
+- **nulor** (2ª, pl. *nuloro*) — ato ou efeito de testemunhar sob juramento sagrado `[nul- + -or]`
+- **nulpia** (1ª, pl. *nulpiar*) — lugar, recinto ou oficina de acumular bancos de neve alta `[nulp- + -ia]`
+- **nulpor** (2ª, pl. *nulporo*) — ato ou efeito de acumular bancos de neve alta `[nulp- + -or]`
+- **nulptek** (2ª, pl. *nulpteko*) — instrumento ou meio para acumular bancos de neve alta `[nulp- + -tek]`
+- **nultek** (2ª, pl. *nulteko*) — instrumento ou meio para testemunhar sob juramento sagrado `[nul- + -tek]`
+- **nurkia** (1ª, pl. *nurkiar*) — lugar, recinto ou oficina de ramificar em multiplos esteiros e barras de areia na foz `[nurk- + -ia]`
+- **nurkor** (2ª, pl. *nurkoro*) — ato ou efeito de ramificar em multiplos esteiros e barras de areia na foz `[nurk- + -or]`
+- **nurttek** (2ª, pl. *nurtteko*) — instrumento ou meio para ramificar em multiplos esteiros e barras de areia na foz `[nurk- + -tek]`
+- **nuvíke** (1ª, pl. *nuvíker*) — demônio do poço escarlate `[entidade abissal]`
+- **nyke** (1ª, pl. *nyker*) — porta `[nyk- + -e]`
+- **nykesotim** (2ª, pl. *nykesotimo*) — superfície semicircular esculpida acima do portal `[nyke (porta) + sotim (face)]`
+- **nyketek** (2ª, pl. *nyketeko*) — batente de porta espessa de carvalho, umbral fortificado `[nyke (porta) + -tek (estrutura)]`
+- **nykil** (2ª, pl. *nykilo*) — janela, portinhola `[nyke + -il]`
+- **nykilteggar** (2ª, pl. *nykilteggaro*) — pequena porta secundária dissimulada na muralha `[nykil (portinhola) + teggar]`
+- **nyrtsulet** (2ª, pl. *nyrtsuleto*) — intervalo perfeito de oito graus entre duas notas `[nyrta (oitavo) + sulet]`
+- **nyttek** (2ª, pl. *nytteko*) — chave `[nyk- + -tek, kt -> tt]`
+- **odlexe** (1ª, pl. *odlexer*) — posição de dois astros em lados opostos do céu `[od- (oposto) + lexe (astro)]`
+- **odmad** (2ª, pl. *odmado*) — avó, matriarca protetora do lar, guardiã da lareira `[od- (geração anterior) + mad (mãe)]`
+- **odpatte** (1ª, pl. *odpatter*) — avô, patriarca protetor do lar, chefe da morada `[od- (geração anterior) + Patte (pai)]`
+- **okazor** (2ª, pl. *okazoro*) — ressurreição, renascimento, restauração vital `[okaz- + -or]`
+- **orat** (2ª, pl. *orato*) — o Todo, a Totalidade, o Universo inteiro `[raiz de oratom (Skorum)]`
+- **orata** (1ª, pl. *oratar*) — totalidade dos seres, todos sem exceção (equivalente clássico endógeno do arcaísmo litúrgico todo) `[orat (o Todo) + -a]`
+- **oratisor** (2ª, pl. *oratisoro*) — ciência sagrada da arquitetura do universo `[orat (universo) + isor (sabedoria)]`
+- **Oratoxe** (1ª, pl. *Oratoxer*) — Arda / Eä, A Terra Integral, o Mundo Realizado `[orat + oxe]`
+- **Oratpatte** (1ª, pl. *Oratpatter*) — Ilúvatar, Pai do Todo (forma radical de Oratypatte) `[orat + Patte]`
+- **Oratypatte** (1ª, pl. *Oratypatter*) — Ilúvatar, O Pai do Todo (var. Oratpatte) `[oraty + Patte]`
+- **orvat** (2ª, pl. *orvato*) — pomar fechado de árvores frutíferas murado de pedra `[raiz orv- + -at]`
+- **ossuletor** (2ª, pl. *ossuletoro*) — canto sacro alternado entre dois coros no santuário `[od- (alternado) + suletor, ds -> ss]`
+- **otrakor** (2ª, pl. *otrakoro*) — retirada estratégica, recuo tático ordenado `[otrak- + -or]`
+- **ovok'ar** (2ª, pl. *ovok'aro*) — vaso que conduz o sangue de retorno ao coração `[o- (retorno) + vokvar]`
+- **oxe** (1ª, pl. *oxer*) — chão, terra, solo firme `[raiz ox-]`
+- **oxedak** (2ª, pl. *oxedako*) — pão de centeio rústico, broa de pedra, cereal cozido `[oxe- (terra/cereal) + dak- (alimento)]`
+- **oxefaspoke** (1ª, pl. *oxefaspoker*) — serpente peçonhenta de dorso em zigue-zague das pedras `[oxe (terra) + fas (veneno) + poke]`
+- **oxegar** (2ª, pl. *oxegaro*) — globo terrestre, continente, massa do mundo `[oxe + -gar]`
+- **oxekoril** (2ª, pl. *oxekorilo*) — tapete verde macio sobre rochas e troncos `[oxe (solo) + koril (planta)]`
+- **oxekuevé** (1ª, pl. *oxekuever*) — pasta terrosa avermelhada para dar tom às roupagens `[oxe + kue + Vé]`
+- **oxenyke** (1ª, pl. *oxenyker*) — degrau de pedra na base inferior da porta de entrada `[oxe (chão) + nyke (porta)]`
+- **oxepalkil** (2ª, pl. *oxepalkilo*) — ponto orbital mais próximo da Terra `[oxe (terra) + palk (passo) + -il]`
+- **oxepia** (1ª, pl. *oxepiar*) — lugar, recinto ou oficina de determinar o ângulo sobre a linha da terra `[oxep- + -ia]`
+- **oxepor** (2ª, pl. *oxeporo*) — ato ou efeito de determinar o ângulo sobre a linha da terra `[oxep- + -or]`
+- **oxeptek** (2ª, pl. *oxepteko*) — instrumento ou meio para determinar o ângulo sobre a linha da terra `[oxep- + -tek]`
+- **oxnave** (1ª, pl. *oxnaver*) — galera de guerra de quarenta remos com esporão de bronze `[ox- + nave (embarcação), termina em -e (1 decl)]`
+- **oxte** (1ª, pl. *oxter*) — guerreiro, soldado combatente `[oxe + -te]`
+- **oxtelitrtek** (2ª, pl. *oxtelitrteko*) — pequena flauta aguda que acompanha os tambores de marcha `[oxte (guerreiro) + litrtek]`
+- **oxéor** (2ª, pl. *oxéoro*) — guerra campal, campanha bélica em larga escala `[oxe/oxte + -or]`
+- **padil** (2ª, pl. *padilo*) — pá de madeira leve para jogar os grãos na brisa da eira `[pad- + -il]`
+- **paise** (1ª, pl. *paiser*) — lugar, região, localidade `[raiz pais-]`
+- **pal'ia** (1ª, pl. *pal'iar*) — lugar, recinto ou oficina de furar o couro com sovela de sapateiro `[palp- + -ia]`
+- **pal'or** (2ª, pl. *pal'oro*) — ato ou efeito de furar o couro com sovela de sapateiro `[palp- + -or]`
+- **palbia** (1ª, pl. *palbiar*) — lugar, recinto ou oficina de moderar desejos e apetites com temperança e serenidade interior `[palb- + -ia]`
+- **palbor** (2ª, pl. *palboro*) — ato ou efeito de moderar desejos e apetites com temperança e serenidade interior `[palb- + -or]`
+- **palbtek** (2ª, pl. *palbteko*) — instrumento ou meio para moderar desejos e apetites com temperança e serenidade interior `[palb- + -tek]`
+- **palk** (2ª, pl. *palko*) — passo, desfiladeiro, cinturão geográfico `[raiz primária palk]`
+- **palk'oke** (1ª, pl. *palk'oker*) — cabra alpina de longos chifres curvos em anéis `[palk (desfiladeiro) + poke]`
+- **palkin** (2ª, pl. *palkino*) — palha seca amarelada resultante da debulha do centeio `[raiz palk- + -in]`
+- **palptek** (2ª, pl. *palpteko*) — instrumento ou meio para furar o couro com sovela de sapateiro `[palp- + -tek]`
+- **paltek** (2ª, pl. *palteko*) — lagar de viga de carvalho e prensa de fuso para mosto `[raiz palt- + -ek]`
+- **paltia** (1ª, pl. *paltiar*) — lugar, recinto ou oficina de prensar frutos em lagar de viga para mosto `[palt- + -ia]`
+- **paltor** (2ª, pl. *paltoro*) — ato ou efeito de prensar frutos em lagar de viga para mosto `[palt- + -or]`
+- **paltteggar** (2ª, pl. *paltteggaro*) — obra angular avançada na esquina da muralha `[palk (ângulo) + teggar, kt -> tt]`
+- **palttek** (2ª, pl. *paltteko*) — instrumento ou meio para prensar frutos em lagar de viga para mosto `[palt- + -tek]`
+- **parbia** (1ª, pl. *parbiar*) — lugar, recinto ou oficina de estremecer as falhas geologicas em abalos tectonicos `[parb- + -ia]`
+- **parbor** (2ª, pl. *parboro*) — ato ou efeito de estremecer as falhas geologicas em abalos tectonicos `[parb- + -or]`
+- **parbtek** (2ª, pl. *parbteko*) — instrumento ou meio para estremecer as falhas geologicas em abalos tectonicos `[parb- + -tek]`
+- **paror** (2ª, pl. *paro'o*) — preço, valor merecido `[par- + -or]`
+- **Patte** (1ª, pl. *Patter*) — Pai (tratado com dativo misto Pattej no Corpus) `[raiz patt-]`
+- **pekrixil** (2ª, pl. *pekrixilo*) — quebra ou rachadura de um osso por impacto `[pek- (quebrar) + rixil (osso)]`
+- **pel'ia** (1ª, pl. *pel'iar*) — lugar, recinto ou oficina de modular o claro-escuro entre luz tênue e penumbra dramática `[pelp- + -ia]`
+- **pel'or** (2ª, pl. *pel'oro*) — ato ou efeito de modular o claro-escuro entre luz tênue e penumbra dramática `[pelp- + -or]`
+- **pelbia** (1ª, pl. *pelbiar*) — lugar, recinto ou oficina de soltar o falcão no ar retirando o caparão de couro `[pelb- + -ia]`
+- **pelbor** (2ª, pl. *pelboro*) — ato ou efeito de soltar o falcão no ar retirando o caparão de couro `[pelb- + -or]`
+- **pelbtek** (2ª, pl. *pelbteko*) — instrumento ou meio para soltar o falcão no ar retirando o caparão de couro `[pelb- + -tek]`
+- **peldia** (1ª, pl. *peldiar*) — lugar, recinto ou oficina de inundar a margem `[peld- + -ia]`
+- **peldor** (2ª, pl. *peldoro*) — ato ou efeito de inundar a margem `[peld- + -or]`
+- **pelia** (1ª, pl. *peliar*) — lugar, recinto ou oficina de sondar a profundidade do canal `[pel- + -ia]`
+- **pelor** (2ª, pl. *peloro*) — ato ou efeito de sondar a profundidade do canal `[pel- + -or]`
+- **pelptek** (2ª, pl. *pelpteko*) — instrumento ou meio para modular o claro-escuro entre luz tênue e penumbra dramática `[pelp- + -tek]`
+- **peltek** (2ª, pl. *pelteko*) — instrumento ou meio para sondar a profundidade do canal `[pel- + -tek]`
+- **pelttek** (2ª, pl. *peltteko*) — instrumento ou meio para inundar a margem `[peld- + -tek]`
+- **perkia** (1ª, pl. *perkiar*) — lugar, recinto ou oficina de tocar com os dedos `[perk- + -ia]`
+- **perkor** (2ª, pl. *perkoro*) — ato ou efeito de tocar com os dedos `[perk- + -or]`
+- **perttek** (2ª, pl. *pertteko*) — instrumento ou meio para tocar com os dedos `[perk- + -tek]`
+- **peskia** (1ª, pl. *peskiar*) — lugar, recinto ou oficina de enviar legação diplomática plenipotenciária `[pesk- + -ia]`
+- **peskin** (2ª, pl. *peskino*) — missão diplomática temporária enviada a soberano estrangeiro `[raiz pesk- + -in]`
+- **peskor** (2ª, pl. *peskoro*) — ato ou efeito de enviar legação diplomática plenipotenciária `[pesk- + -or]`
+- **peskur** (2ª, pl. *peskuro*) — credencial de embaixador plenipotenciário selada em ouro `[raiz pesk- + -ur]`
+- **pesttek** (2ª, pl. *pestteko*) — instrumento ou meio para enviar legação diplomática plenipotenciária `[pesk- + -tek]`
+- **pikia** (1ª, pl. *pikiar*) — lugar, recinto ou oficina de pôr a mesa para o banquete `[pik- + -ia]`
+- **pikor** (2ª, pl. *pikoro*) — ato ou efeito de pôr a mesa para o banquete `[pik- + -or]`
+- **pilkia** (1ª, pl. *pilkiar*) — lugar, recinto ou oficina de regatear o preço no bazar com o mercador `[pilk- + -ia]`
+- **pilkor** (2ª, pl. *pilkoro*) — ato ou efeito de regatear o preço no bazar com o mercador `[pilk- + -or]`
+- **pilttek** (2ª, pl. *piltteko*) — instrumento ou meio para regatear o preço no bazar com o mercador `[pilk- + -tek]`
+- **piria** (1ª, pl. *piriar*) — lugar, recinto ou oficina de demonstrar teorema ou verdade eterna `[pir- + -ia]`
+- **pirkia** (1ª, pl. *pirkiar*) — lugar, recinto ou oficina de refutar argumento com silogismo `[pirk- + -ia]`
+- **pirkor** (2ª, pl. *pirkoro*) — ato ou efeito de refutar argumento com silogismo `[pirk- + -or]`
+- **piror** (2ª, pl. *piro'o*) — ato ou efeito de demonstrar teorema ou verdade eterna `[pir- + -or]`
+- **pirtek** (2ª, pl. *pirteko*) — instrumento ou meio para demonstrar teorema ou verdade eterna `[pir- + -tek]`
+- **pirttek** (2ª, pl. *pirtteko*) — instrumento ou meio para refutar argumento com silogismo `[pirk- + -tek]`
+- **piskre** (1ª, pl. *piskrer*) — idiota, néscio, estúpido `[raiz piskr-]`
+- **pittek** (2ª, pl. *pitteko*) — instrumento ou meio para pôr a mesa para o banquete `[pik- + -tek]`
+- **poke** (1ª, pl. *poker*) — animal, besta, criatura irracional `[raiz pok-]`
+- **pokelitgar** (2ª, pl. *pokelitgaro*) — trompa de marfim ou chifre entalhado dos arautos `[poke + litrgar]`
+- **poketek** (2ª, pl. *poketeko*) — ferradura, arreio de animal `[poke + -tek]`
+- **pokil** (2ª, pl. *pokilo*) — filhote, cãozinho `[poke + -il]`
+- **polmia** (1ª, pl. *polmiar*) — lugar, recinto ou oficina de ventilar galerias profundas com foles `[polm- + -ia]`
+- **polmil** (2ª, pl. *polmilo*) — conduto de tábuas vedadas que leva ar puro ao fundo `[raiz polm- + -il]`
+- **polmin** (2ª, pl. *polmino*) — renovação de ar na mina por tubos de madeira furada `[raiz polm- + -in]`
+- **polmor** (2ª, pl. *polmoro*) — ato ou efeito de ventilar galerias profundas com foles `[polm- + -or]`
+- **polmtek** (2ª, pl. *polmteko*) — instrumento ou meio para ventilar galerias profundas com foles `[polm- + -tek]`
+- **polmur** (2ª, pl. *polmuro*) — grande fole duplo de couro acionado por balanço `[raiz polm- + -ur]`
+- **polptek** (2ª, pl. *polpteko*) — instrumento ou meio para traçar cartas corográficas e províncias imperiais em pergaminho `[polv- + -tek]`
+- **polvia** (1ª, pl. *polviar*) — lugar, recinto ou oficina de traçar cartas corográficas e províncias imperiais em pergaminho `[polv- + -ia]`
+- **polvor** (2ª, pl. *polvoro*) — ato ou efeito de traçar cartas corográficas e províncias imperiais em pergaminho `[polv- + -or]`
+- **pomil** (2ª, pl. *pomilo*) — maçã agreste de casca dura resistente ao inverno `[pom- + -il]`
+- **pontalde** (1ª, pl. *pontalder*) — túmulo ancestral de cantaria onde repousam as cinzas da linhagem `[pon- + talde, termina em -e (1 decl)]`
+- **pontede** (1ª, pl. *ponteder*) — passadiço de comando entre os castelos de proa e popa `[pon- (ligação) + tede (tabuado), termina em -e (1 decl)]`
+- **Pontius Pilatus** (2ª, pl. *Pontius Pilatuso*) — Pôncio Pilatos (antropônimo histórico no Skorum) `[antropônimo histórico]`
+- **por'ande** (1ª, pl. *por'ander*) — padrinho protetor jurado a cuidar da criança órfã `[porp- + ande, termina em -e (1 decl)]`
+- **por'ate** (1ª, pl. *por'ater*) — licença da corte para posse de forno de sopro `[porp- + -ate]`
+- **por'ia** (1ª, pl. *por'iar*) — lugar, recinto ou oficina de soprar pasta vítrea com cana de sopro `[porp- + -ia]`
+- **por'il** (2ª, pl. *por'ilo*) — ampola fina de vidro translúcido para bálsamos `[raiz porp- + -il]`
+- **por'in** (2ª, pl. *por'ino*) — conformação de vidro incandescente pela cana de sopro `[raiz porp- + -in]`
+- **por'or** (2ª, pl. *por'oro*) — ato ou efeito de soprar pasta vítrea com cana de sopro `[porp- + -or]`
+- **por'ur** (2ª, pl. *por'uro*) — tubo comprido de ferro usado pelo mestre vidreiro `[raiz porp- + -ur]`
+- **porkarde** (1ª, pl. *porkarder*) — banquete de despedida antes da partida do jovem para servir ao Império `[pork- + arde, termina em -e (1 decl)]`
+- **porkfeve** (1ª, pl. *porkfever*) — maré baixa que expõe o leito lodoso da baía `[pork- (maré) + feve (vazio/recuo), termina em -e (1 decl)]`
+- **porkia** (1ª, pl. *porkiar*) — lugar, recinto ou oficina de arpar cabos de amarração e içar velas ao vento `[pork- + -ia]`
+- **porkil** (2ª, pl. *porkilo*) — cadernal de três roldanas de buxo para redução de esforço `[raiz pork- + -il]`
+- **porkin** (2ª, pl. *porkino*) — içamento simultâneo de todo o velame em manobra de partida `[raiz pork- + -in]`
+- **porkor** (2ª, pl. *porkoro*) — ato ou efeito de arpar cabos de amarração e içar velas ao vento `[pork- + -or]`
+- **porkur** (2ª, pl. *porkuro*) — cabrestante giratório de convés para erguer âncoras e cordames `[raiz pork- + -ur]`
+- **porptek** (2ª, pl. *porpteko*) — instrumento ou meio para soprar pasta vítrea com cana de sopro `[porp- + -tek]`
+- **porsuk** (2ª, pl. *porsuko*) — taleiga de estopa de cânhamo para transporte de cereal `[por- + suk]`
+- **portade** (1ª, pl. *portader*) — dique seco fechado por comportas de madeira e ferro `[port- + ade, termina em -e (1 decl)]`
+- **porttek** (2ª, pl. *portteko*) — instrumento ou meio para arpar cabos de amarração e içar velas ao vento `[pork- + -tek]`
+- **pul'ia** (1ª, pl. *pul'iar*) — lugar, recinto ou oficina de calçar perneiras de lã trançada na neve `[pulp- + -ia]`
+- **pul'or** (2ª, pl. *pul'oro*) — ato ou efeito de calçar perneiras de lã trançada na neve `[pulp- + -or]`
+- **pulkia** (1ª, pl. *pulkiar*) — lugar, recinto ou oficina de indenizar dano causado em guerra `[pulk- + -ia]`
+- **pulkor** (2ª, pl. *pulkoro*) — ato ou efeito de indenizar dano causado em guerra `[pulk- + -or]`
+- **pulptek** (2ª, pl. *pulpteko*) — instrumento ou meio para calçar perneiras de lã trançada na neve `[pulp- + -tek]`
+- **pulttek** (2ª, pl. *pultteko*) — instrumento ou meio para indenizar dano causado em guerra `[pulk- + -tek]`
+- **purdek** (2ª, pl. *purdeko*) — grade de dentes de ferro para destorroar a leira `[raiz purd- + -ek]`
+- **purdia** (1ª, pl. *purdiar*) — lugar, recinto ou oficina de gradar o solo desmanchando torrões `[purd- + -ia]`
+- **purdor** (2ª, pl. *purdoro*) — ato ou efeito de gradar o solo desmanchando torrões `[purd- + -or]`
+- **purttek** (2ª, pl. *purtteko*) — instrumento ou meio para gradar o solo desmanchando torrões `[purd- + -tek]`
+- **rase** (1ª, pl. *raser*) — língua, idioma, vernáculo (vulgar: raçe) `[raiz ras-]`
+- **relia** (1ª, pl. *reliar*) — lugar, recinto ou oficina de acantonar a legião em acampamento `[rel- + -ia]`
+- **relkia** (1ª, pl. *relkiar*) — lugar, recinto ou oficina de ceifar o trigo maduro com foice `[relk- + -ia]`
+- **relkor** (2ª, pl. *relkoro*) — ato ou efeito de ceifar o trigo maduro com foice `[relk- + -or]`
+- **relor** (2ª, pl. *reloro*) — ato ou efeito de acantonar a legião em acampamento `[rel- + -or]`
+- **reltek** (2ª, pl. *relteko*) — instrumento ou meio para acantonar a legião em acampamento `[rel- + -tek]`
+- **relttek** (2ª, pl. *reltteko*) — instrumento ou meio para ceifar o trigo maduro com foice `[relk- + -tek]`
+- **rikia** (1ª, pl. *rikiar*) — lugar, recinto ou oficina de fermentar o hidromel em tonéis de carvalho `[rik- + -ia]`
+- **rikor** (2ª, pl. *rikoro*) — ato ou efeito de fermentar o hidromel em tonéis de carvalho `[rik- + -or]`
+- **rirkia** (1ª, pl. *rirkiar*) — lugar, recinto ou oficina de compor hino ou cânone polifônico `[rirk- + -ia]`
+- **rirkor** (2ª, pl. *rirkoro*) — ato ou efeito de compor hino ou cânone polifônico `[rirk- + -or]`
+- **rirttek** (2ª, pl. *rirtteko*) — instrumento ou meio para compor hino ou cânone polifônico `[rirk- + -tek]`
+- **rittek** (2ª, pl. *ritteko*) — instrumento ou meio para fermentar o hidromel em tonéis de carvalho `[rik- + -tek]`
+- **rixe** (1ª, pl. *rixer*) — montanha, pico rochoso `[raiz rix-]`
+- **rixegar** (2ª, pl. *rixegaro*) — cordilheira monumental, maciço alpino `[rixe + -gar]`
+- **rixekade** (1ª, pl. *rixekader*) — montanha escarpada, cume rochoso coberto de gelo `[rixe (montanha/rocha) + kade (cume)]`
+- **rixekadil** (2ª, pl. *rixekadilo*) — remate cônico ou piramidal no alto dos contrafortes `[rixe + kadil (pequeno pico)]`
+- **rixekare** (1ª, pl. *rixekarer*) — assento contínuo de pedra ao longo das paredes do salão `[rixe (pedra) + kare (assento)]`
+- **rixekor** (2ª, pl. *rixekoro*) — abeto alto das escarpas montanhesas `[rixe (montanha) + kor (árvore)]`
+- **rixekoria** (1ª, pl. *rixekoriar*) — pátio interno rodeado por galerias de colunas `[rixekor (coluna) + -ia]`
+- **Rixelaka** (1ª, pl. *Rixelakar*) — Os Picos Gélidos (cordilheira setentrional) `[rixe + laka]`
+- **rixepoke** (1ª, pl. *rixepoker*) — cabra montesa ágil que salta nos precipícios `[rixe (rocha) + poke (animal)]`
+- **rixepokegar** (2ª, pl. *rixepokegaro*) — urso pardo poderoso das cavernas montanhesas `[rixe (montanha) + pokegar (fera)]`
+- **rixil** (2ª, pl. *rixilo*) — seixo, pedrinha `[rixe + -il]`
+- **rixkia** (1ª, pl. *rixkiar*) — lugar, recinto ou oficina de desmoronar rochas `[rixk- + -ia]`
+- **rixkor** (2ª, pl. *rixkoro*) — ato ou efeito de desmoronar rochas `[rixk- + -or]`
+- **rixtor** (2ª, pl. *rixtoro*) — castelo de pedra, fortaleza montanhesa, torre de guarda `[rix- (rocha) + tor- (abrigo)]`
+- **rixtorr** (2ª, pl. *rixtorro*) — ponte de pedra sobre o abismo ou rio torrentoso `[rix- (pedra) + torr- (passagem)]`
+- **rixttek** (2ª, pl. *rixtteko*) — instrumento ou meio para desmoronar rochas `[rixk- + -tek]`
+- **ropor** (2ª, pl. *roporo*) — chamado, convocação `[rop- + -or]`
+- **rose** (1ª, pl. *roser*) — burro, jumento, besta de carga `[raiz ros-]`
+- **rukra'or** (2ª, pl. *rukra'oro*) — carvalho real de tronco venerável `[rukra (forte) + kor (árvore)]`
+- **rukralete** (1ª, pl. *rukraleter*) — voz potente, brado de comando, clamor `[rukra + lete]`
+- **rukralitrgar** (2ª, pl. *rukralitrgaro*) — grande órgão monumental de tubos de estanho e bronze `[rukra (potente) + litrgar]`
+- **rukravokor** (2ª, pl. *rukravokoro*) — feixe de carne contrátil que move o corpo `[rukra (força) + vokor (músculo)]`
+- **rukravokpoke** (1ª, pl. *rukravokpoker*) — predador feroz e incansável da taiga nevada `[rukra + vok + poke]`
+- **rukror** (2ª, pl. *rukroro*) — poder, potência, vigor soberano `[rukr- + -or]`
+- **Rukroro** (2ª, pl. *Rukroro*) — As Potências (designação solene dos Valar) `[rukror + -o]`
+- **rukxia** (1ª, pl. *rukxiar*) — lugar, recinto ou oficina de desafiar em duelo singular de honra `[rukx- + -ia]`
+- **rukxor** (2ª, pl. *rukxoro*) — ato ou efeito de desafiar em duelo singular de honra `[rukx- + -or]`
+- **rukxtek** (2ª, pl. *rukxteko*) — instrumento ou meio para desafiar em duelo singular de honra `[rukx- + -tek]`
+- **rulkia** (1ª, pl. *rulkiar*) — lugar, recinto ou oficina de auditar as contas do tesouro `[rulk- + -ia]`
+- **rulkor** (2ª, pl. *rulkoro*) — ato ou efeito de auditar as contas do tesouro `[rulk- + -or]`
+- **rulpia** (1ª, pl. *rulpiar*) — lugar, recinto ou oficina de bocejar de sono ou fadiga `[rulp- + -ia]`
+- **rulpor** (2ª, pl. *rulporo*) — ato ou efeito de bocejar de sono ou fadiga `[rulp- + -or]`
+- **rulptek** (2ª, pl. *rulpteko*) — instrumento ou meio para bocejar de sono ou fadiga `[rulp- + -tek]`
+- **rulttek** (2ª, pl. *rultteko*) — instrumento ou meio para auditar as contas do tesouro `[rulk- + -tek]`
+- **ruxet** (2ª, pl. *ruxeto*) — ensopado, prato cozido (particípio nominalizado) `[rux- + -et]`
+- **ruxia** (1ª, pl. *ruxiar*) — cozinha `[rux- + -ia]`
+- **ruxte** (1ª, pl. *ruxter*) — cozinheiro, mestre do caldeirão `[rux- + -te]`
+- **ruxtek** (2ª, pl. *ruxteko*) — caldeirão, panela de ferro `[rux- + -tek]`
+- **ruxvé** (1ª, pl. *ruxver*) — caldo quente, sopa nutritiva de raízes e legumes `[rux- (cozer) + Vé (água)]`
+- **safardyketek** (2ª, pl. *safardyketeko*) — grade pesada de ferro que desce verticalmente no portão `[sfar + nyketek (grade), rn -> ld -> safardyketek]`
+- **safarixegar** (2ª, pl. *safarixegaro*) — cinturão espesso de pedra que protege a fortaleza `[sfar (defesa) + rixegar (muralha)]`
+- **safarixil** (2ª, pl. *safarixilo*) — osso longo em arco entre o peito e o ombro `[sfar + rixil (osso)]`
+- **safarixilgar** (2ª, pl. *safarixilgaro*) — bloco maciço de pedra entre duas aberturas de parapeito `[sfar + rixilgar]`
+- **safarkadil** (2ª, pl. *safarkadilo*) — recorte dentado no parapeito superior das muralhas `[sfar (defesa) + kadil]`
+- **safarkor** (2ª, pl. *safarkoro*) — teixo longevo de madeira flexível para combate `[sfar (defesa) + kor (árvore)]`
+- **safarteprixe** (1ª, pl. *safarteprixer*) — pilar maciço adossado à parede externa para sustentação `[sfar + tep + rixe]`
+- **safartoret** (2ª, pl. *safartoreto*) — arco externo que escora o empuxo lateral das paredes `[sfar (escorar) + toret]`
+- **safarvaril** (2ª, pl. *safarvarilo*) — caminho de ronda no topo da muralha junto ao parapeito `[sfar (guarda) + varil (caminho)]`
+- **safarvefil** (2ª, pl. *safarvefilo*) — vala profunda escavada e inundada ao redor do castelo `[sfar + vefil (fosso d'água)]`
+- **saidlitril** (2ª, pl. *saidlitrilo*) — palheta de marfim ou pena para tangenciar as cordas `[said- + litril]`
+- **saidrixe** (1ª, pl. *saidrixer*) — bloco de pedra lavrado em faces retangulares perfeitas `[said- (talhar) + rixe (pedra)]`
+- **saidrixeil** (2ª, pl. *saidrixeilo*) — pedra talhada em cunha que forma a curva de um arco `[saidrixe + -il]`
+- **saikkoril** (2ª, pl. *saikkorilo*) — planta espinhosa roxa das encostas pedregosas `[said- (espinho/ferir) + koril, dk -> kk]`
+- **saithuxil** (2ª, pl. *saithuxilo*) — bainha de couro e veludo para lâmina de espada `[sfammir + huxil]`
+- **saitte** (1ª, pl. *saitter*) — armeiro, cuteleiro, forjador de lâminas `[said- + -te (dt -> tt)]`
+- **saittek** (2ª, pl. *saitteko*) — pedra de amolar, rebolo de campanha `[said- + -tek (dt -> tt)]`
+- **saittekhuxil** (2ª, pl. *saittekhuxilo*) — estojo de couro cru com reforço de metal para punhal `[saittek + huxil]`
+- **saitvepoke** (1ª, pl. *saitvepoker*) — peixe predador alongado dos lagos frios `[sfammir (espada) + vepoke]`
+- **sakamgar** (2ª, pl. *sakamgaro*) — balanço monumental de pórtico para aferir carretas no entreposto `[skam- + -gar]`
+- **sakampilk** (2ª, pl. *sakampilko*) — peso de chumbo ou bronze aferido pelo padrão ducal `[skam- + pilk]`
+- **sakamtoret** (2ª, pl. *sakamtoreto*) — haste transversal articulada do fiel da balança `[skam- + toret]`
+- **sakia** (1ª, pl. *sakiar*) — lugar, recinto ou oficina de raspar a moeda na pedra de toque para avaliar `[sak- + -ia]`
+- **sakor** (2ª, pl. *sakoro*) — ato ou efeito de raspar a moeda na pedra de toque para avaliar `[sak- + -or]`
+- **salbarde** (1ª, pl. *salbarder*) — aliança perpétua de defesa mútua selada por casamentos `[salb- + arde, termina em -e (1 decl)]`
+- **salbia** (1ª, pl. *salbiar*) — lugar, recinto ou oficina de atracar galera imperial em cais de cantaria com cabos de cânhamo `[salb- + -ia]`
+- **salbil** (2ª, pl. *salbilo*) — cabo grosso de cânhamo de amarração trançado a três cordões `[raiz salb- + -il]`
+- **salbin** (2ª, pl. *salbino*) — ancoragem segura em enseada abrigada de ventos fortes `[raiz salb- + -in]`
+- **salbor** (2ª, pl. *salboro*) — ato ou efeito de atracar galera imperial em cais de cantaria com cabos de cânhamo `[salb- + -or]`
+- **salbtek** (2ª, pl. *salbteko*) — instrumento ou meio para atracar galera imperial em cais de cantaria com cabos de cânhamo `[salb- + -tek]`
+- **salbur** (2ª, pl. *salburo*) — âncora imperial de quatro braços de ferro forjado e cepo de chumbo `[raiz salb- + -ur]`
+- **sallexe** (1ª, pl. *sallexer*) — aglomerado das Irmãs Luminosas no céu `[san (sete) + lexe (estrela), nl -> ll]`
+- **samia** (1ª, pl. *samiar*) — lugar, recinto ou oficina de pesar mercadorias na balança de dois pratos `[sam- + -ia]`
+- **samor** (2ª, pl. *samoro*) — ato ou efeito de pesar mercadorias na balança de dois pratos `[sam- + -or]`
+- **samtek** (2ª, pl. *samteko*) — instrumento ou meio para pesar mercadorias na balança de dois pratos `[sam- + -tek]`
+- **sarkia** (1ª, pl. *sarkiar*) — lugar, recinto ou oficina de adestrar falcão peregrino para caça de altitude `[sark- + -ia]`
+- **sarkor** (2ª, pl. *sarkoro*) — ato ou efeito de adestrar falcão peregrino para caça de altitude `[sark- + -or]`
+- **sarttek** (2ª, pl. *sartteko*) — instrumento ou meio para adestrar falcão peregrino para caça de altitude `[sark- + -tek]`
+- **sattek** (2ª, pl. *satteko*) — instrumento ou meio para raspar a moeda na pedra de toque para avaliar `[sak- + -tek]`
+- **savakrixe** (1ª, pl. *savakrixer*) — pedra negra basáltica para testar pureza de ligas `[svak- + rixe]`
+- **sekil** (2ª, pl. *sekilo*) — banquinho, mocho `[sek- + -il]`
+- **sekrixil** (2ª, pl. *sekrixilo*) — disco ósseo protetor da articulação do joelho `[sek- (dobrar/sentar) + rixil]`
+- **sektek** (2ª, pl. *sekteko*) — banco de madeira ou pedra, assento de espaldar alto `[sek- (assentar-se) + -tek (instrumento)]`
+- **selia** (1ª, pl. *seliar*) — lugar, recinto ou oficina de eclipsar um astro `[sel- + -ia]`
+- **selke** (1ª, pl. *selker*) — sementeira brotada com os primeiros rebentos verdes `[raiz selk- + -e]`
+- **sellave** (1ª, pl. *sellaver*) — barcaça costeira de fundo chato para transporte de grãos `[sel- + nave (ln -> ll), termina em -e (1 decl)]`
+- **selor** (2ª, pl. *seloro*) — ato ou efeito de eclipsar um astro `[sel- + -or]`
+- **selpate** (1ª, pl. *selpater*) — concessão condal de lavra de veio em encosta delimitada `[selp- + -ate]`
+- **selpia** (1ª, pl. *selpiar*) — lugar, recinto ou oficina de identificar filão na matriz de quartzo `[selp- + -ia]`
+- **selpil** (2ª, pl. *selpilo*) — veio fino de prata nativa ramificado na pedra `[raiz selp- + -il]`
+- **selpin** (2ª, pl. *selpino*) — filão rico de minério encaixado na fenda da rocha `[raiz selp- + -in]`
+- **selpor** (2ª, pl. *selporo*) — ato ou efeito de identificar filão na matriz de quartzo `[selp- + -or]`
+- **selptek** (2ª, pl. *selpteko*) — instrumento ou meio para identificar filão na matriz de quartzo `[selp- + -tek]`
+- **selpur** (2ª, pl. *selpuro*) — bloco matriz de quartzo leitoso pontilhado de ouro `[raiz selp- + -ur]`
+- **seltek** (2ª, pl. *selteko*) — instrumento ou meio para eclipsar um astro `[sel- + -tek]`
+- **semia** (1ª, pl. *semiar*) — lugar, recinto ou oficina de moer o grão entre mós de pedra `[sem- + -ia]`
+- **semor** (2ª, pl. *semoro*) — ato ou efeito de moer o grão entre mós de pedra `[sem- + -or]`
+- **semtek** (2ª, pl. *semteko*) — instrumento ou meio para moer o grão entre mós de pedra `[sem- + -tek]`
+- **serbia** (1ª, pl. *serbiar*) — lugar, recinto ou oficina de vicejar juncais espessos nas margens lodosas do charco `[serb- + -ia]`
+- **serbor** (2ª, pl. *serboro*) — ato ou efeito de vicejar juncais espessos nas margens lodosas do charco `[serb- + -or]`
+- **serbtek** (2ª, pl. *serbteko*) — instrumento ou meio para vicejar juncais espessos nas margens lodosas do charco `[serb- + -tek]`
+- **sfammir** (2ª, pl. *sfammiro*) — espada, lâmina de combate `[sfar + mir (rm -> mm)]`
+- **sfammirgar** (2ª, pl. *sfammirgaro*) — espadão de aço temperado, lâmina pesada de guarda `[sfammir (espada < sfar+mir) + -gar]`
+- **sfaror** (2ª, pl. *sfaro'o*) — defesa, salvaguarda, proteção militar `[sfar- + -or]`
+- **sfarpoke** (1ª, pl. *sfarpoker*) — cão guardião leal, sabujo doméstico de guarda `[sfar- (guardar/proteger) + poke (animal)]`
+- **sfarte** (1ª, pl. *sfarter*) — sentinela, guarda de muralha, defensor `[sfar- + -te]`
+- **sfartek** (2ª, pl. *sfarteko*) — escudo, égide, broquel, armadura `[sfar- + -tek]`
+- **si'ia** (1ª, pl. *si'iar*) — lugar, recinto ou oficina de bordar brasão da Casa no estandarte `[sis- + -ia]`
+- **si'or** (2ª, pl. *si'oro*) — ato ou efeito de bordar brasão da Casa no estandarte `[sis- + -or]`
+- **sife** (1ª, pl. *sifer*) — história, crônica, narrativa do tempo `[raiz sif-]`
+- **sifte** (1ª, pl. *sifter*) — cronista imperial, historiador oficial `[sif- + -te]`
+- **siftek** (2ª, pl. *sifteko*) — anais do Império, rolo de crônicas, códice `[sif- + -tek]`
+- **sikia** (1ª, pl. *sikiar*) — lugar, recinto ou oficina de forragear provisões no campo `[sik- + -ia]`
+- **sikor** (2ª, pl. *sikoro*) — ato ou efeito de forragear provisões no campo `[sik- + -or]`
+- **silbia** (1ª, pl. *silbiar*) — lugar, recinto ou oficina de pintar afrescos em têmpera e óleos sobre argamassa fresca de cal `[silb- + -ia]`
+- **silbor** (2ª, pl. *silboro*) — ato ou efeito de pintar afrescos em têmpera e óleos sobre argamassa fresca de cal `[silb- + -or]`
+- **silbtek** (2ª, pl. *silbteko*) — instrumento ou meio para pintar afrescos em têmpera e óleos sobre argamassa fresca de cal `[silb- + -tek]`
+- **silkia** (1ª, pl. *silkiar*) — lugar, recinto ou oficina de esmaltar cerâmica ao forno `[silk- + -ia]`
+- **silkor** (2ª, pl. *silkoro*) — ato ou efeito de esmaltar cerâmica ao forno `[silk- + -or]`
+- **silogin** (2ª, pl. *silogino*) — demonstração rigorosa da razão que exclui a contradição `[silog- + -in]`
+- **silttek** (2ª, pl. *siltteko*) — instrumento ou meio para esmaltar cerâmica ao forno `[silk- + -tek]`
+- **simia** (1ª, pl. *simiar*) — lugar, recinto ou oficina de entoar o Zo es de fechamento `[sim- + -ia]`
+- **simor** (2ª, pl. *simoro*) — ato ou efeito de entoar o Zo es de fechamento `[sim- + -or]`
+- **simtek** (2ª, pl. *simteko*) — instrumento ou meio para entoar o Zo es de fechamento `[sim- + -tek]`
+- **sin** (2ª, pl. *sino*) — mão esquerda, flanco sinistro `[raiz primária sin]`
+- **sinnixil** (2ª, pl. *sinnixilo*) — osso plano triangular da parte posterior do ombro `[sin (espádua) + rixil, nr -> nn]`
+- **sinnyke** (1ª, pl. *sinnyker*) — pilares laterais que ladeiam o vão da porta `[sin/dak (lado) + nyke]`
+- **sinte** (1ª, pl. *sinter*) — a Esquerda (direção ou ala) `[sin + -te]`
+- **siptek** (2ª, pl. *sipteko*) — instrumento ou meio para jejuar na vigília das estrelas `[siv- + -tek]`
+- **siria** (1ª, pl. *siriar*) — lugar, recinto ou oficina de clarear o céu após a tempestade `[sir- + -ia]`
+- **siror** (2ª, pl. *siro'o*) — ato ou efeito de clarear o céu após a tempestade `[sir- + -or]`
+- **sirtek** (2ª, pl. *sirteko*) — instrumento ou meio para clarear o céu após a tempestade `[sir- + -tek]`
+- **sistek** (2ª, pl. *sisteko*) — instrumento ou meio para bordar brasão da Casa no estandarte `[sis- + -tek]`
+- **sittek** (2ª, pl. *sitteko*) — instrumento ou meio para forragear provisões no campo `[sik- + -tek]`
+- **sivia** (1ª, pl. *siviar*) — lugar, recinto ou oficina de jejuar na vigília das estrelas `[siv- + -ia]`
+- **sivor** (2ª, pl. *sivoro*) — ato ou efeito de jejuar na vigília das estrelas `[siv- + -or]`
+- **skoror** (2ª, pl. *skoro'o*) — fé, crença dogmática, fidelidade espiritual `[skor- + -or]`
+- **skorte** (1ª, pl. *skorter*) — fiel, crente, iniciado nos mistérios `[skor- + -te]`
+- **solbia** (1ª, pl. *solbiar*) — lugar, recinto ou oficina de temperar caldos e assados com açafrão e especiarias da corte `[solb- + -ia]`
+- **solbor** (2ª, pl. *solboro*) — ato ou efeito de temperar caldos e assados com açafrão e especiarias da corte `[solb- + -or]`
+- **solbtek** (2ª, pl. *solbteko*) — instrumento ou meio para temperar caldos e assados com açafrão e especiarias da corte `[solb- + -tek]`
+- **solia** (1ª, pl. *soliar*) — lugar, recinto ou oficina de passar a lançadeira no tear de tecelão `[sol- + -ia]`
+- **solkia** (1ª, pl. *solkiar*) — lugar, recinto ou oficina de condenar réu a pena aflictiva `[solk- + -ia]`
+- **solkil** (2ª, pl. *solkilo*) — cédula de condenação afixada no pelourinho público `[raiz solk- + -il]`
+- **solkin** (2ª, pl. *solkino*) — pena privativa ou multa comutada fixada pelos juízes `[raiz solk- + -in]`
+- **solkine** (1ª, pl. *solkiner*) — notificação judicial de culpa intimada ao réu `[solk- + -ine]`
+- **solkor** (2ª, pl. *solkoro*) — ato ou efeito de condenar réu a pena aflictiva `[solk- + -or]`
+- **solkur** (2ª, pl. *solkuro*) — sentença condenatória irrevogável lavrada em pergaminho `[raiz solk- + -ur]`
+- **solor** (2ª, pl. *soloro*) — ato ou efeito de passar a lançadeira no tear de tecelão `[sol- + -or]`
+- **solpate** (1ª, pl. *solpater*) — cópia autêntica encadernada de decreto arquivada nos anais `[solp- + -ate]`
+- **solpia** (1ª, pl. *solpiar*) — lugar, recinto ou oficina de encadernar fólios em tábuas de carvalho e couro `[solp- + -ia]`
+- **solpil** (2ª, pl. *solpilo*) — fecho de bronze com mola articulada para fechar o livro `[raiz solp- + -il]`
+- **solpin** (2ª, pl. *solpino*) — costura de cadernos com fios encerados sobre tiras de couro `[raiz solp- + -in]`
+- **solpor** (2ª, pl. *solporo*) — ato ou efeito de encadernar fólios em tábuas de carvalho e couro `[solp- + -or]`
+- **solptek** (2ª, pl. *solpteko*) — instrumento ou meio para encadernar fólios em tábuas de carvalho e couro `[solp- + -tek]`
+- **solpur** (2ª, pl. *solpuro*) — tábua de madeira de carvalho que forma a capa do códice `[raiz solp- + -ur]`
+- **soltek** (2ª, pl. *solteko*) — instrumento ou meio para passar a lançadeira no tear de tecelão `[sol- + -tek]`
+- **solttek** (2ª, pl. *soltteko*) — instrumento ou meio para condenar réu a pena aflictiva `[solk- + -tek]`
+- **sopalkoril** (2ª, pl. *sopalkorilo*) — peça de tear que conduz o fio da trama `[spol- + koril]`
+- **sopaltake** (1ª, pl. *sopaltaker*) — bancada com liços para entretecer panos grossos `[spol- + take]`
+- **sopaltoret** (2ª, pl. *sopaltoreto*) — bastidor de madeira para esticar pano de agulha `[spol- + toret]`
+- **sotim** (2ª, pl. *sotimo*) — rosto, face, semblante (Síncrese de Sotime) `[raiz primária sotim]`
+- **sotimor** (2ª, pl. *sotimoro*) — semblante, matiz, cor aparente, aspecto `[sotim + -or]`
+- **Sprezzatura** (1ª, pl. *Sprezzaturar*) — Casa do Caminho (senhores de Varkaria) `[linhagem condal]`
+- **su** (2ª, pl. *suo*) — núcleo, cerne, essência interior `[raiz primária su]`
+- **suarateggar** (2ª, pl. *suarateggaro*) — torre central mais alta e último reduto do castelo `[sua (central) + teggar]`
+- **suelfia** (1ª, pl. *suelfiar*) — recinto semicircular abobadado ao fundo do altar `[su (cerne) + elfia (santuário)]`
+- **sukil** (2ª, pl. *sukilo*) — cacho denso de frutos ou bagas silvestres de pomar `[raiz suk- + -il]`
+- **sukor** (2ª, pl. *sukoro*) — coração, órgão vital e centro afetivo `[su + kor]`
+- **sukorfas** (2ª, pl. *sukorfaso*) — nostalgia profunda, pesadume no peito, saudade dos ecos do passado `[sukor (coração) + fas (dor)]`
+- **sukoror** (2ª, pl. *sukoro'o*) — coragem serena, firmeza de ânimo diante da tormenta `[sukor (coração) + -or (abstrato)]`
+- **sukorrixil** (2ª, pl. *sukorrixilo*) — osso chato central do peito onde se unem as costelas `[sukor (peito) + rixil]`
+- **sukorsfar** (2ª, pl. *sukorsfaro*) — arco ósseo que forma a caixa protetora do peito `[sukor (coração) + sfar (grade)]`
+- **sulbia** (1ª, pl. *sulbiar*) — lugar, recinto ou oficina de erguer comportas e canalizar água de açude para o moinho `[sulb- + -ia]`
+- **sulbor** (2ª, pl. *sulboro*) — ato ou efeito de erguer comportas e canalizar água de açude para o moinho `[sulb- + -or]`
+- **sulbtek** (2ª, pl. *sulbteko*) — instrumento ou meio para erguer comportas e canalizar água de açude para o moinho `[sulb- + -tek]`
+- **sulet** (2ª, pl. *suleto*) — timbre vocal, voz interior, acorde `[su + lete]`
+- **sulettek** (2ª, pl. *suletteko*) — harpa clássica, lira de cordas dedilhadas (equivalente clássico endógeno do arcaísmo litúrgico harpe) `[sulet (timbre/acorde) + -tek]`
+- **sulettor** (2ª, pl. *sulettoro*) — viola de arco, cordofone sustentado (equivalente clássico endógeno do arcaísmo litúrgico viole) `[sulet (timbre) + tor- (sustentar)]`
+- **suletvokor** (2ª, pl. *suletvokoro*) — órgão da garganta onde vibram as cordas da voz `[sulet (voz) + vokor]`
+- **sulia** (1ª, pl. *suliar*) — lugar, recinto ou oficina de suar pelo esforço da forja ou marcha `[sul- + -ia]`
+- **sulitrtek** (2ª, pl. *sulitrteko*) — instrumento antigo de braços curvos usado pelos poetas `[su (cerne) + litrtek]`
+- **sulkia** (1ª, pl. *sulkiar*) — lugar, recinto ou oficina de apelar à Corte Suprema `[sulk- + -ia]`
+- **sulkor** (2ª, pl. *sulkoro*) — ato ou efeito de apelar à Corte Suprema `[sulk- + -or]`
+- **sulor** (2ª, pl. *suloro*) — ato ou efeito de suar pelo esforço da forja ou marcha `[sul- + -or]`
+- **sultek** (2ª, pl. *sulteko*) — instrumento ou meio para suar pelo esforço da forja ou marcha `[sul- + -tek]`
+- **sulttek** (2ª, pl. *sultteko*) — instrumento ou meio para apelar à Corte Suprema `[sulk- + -tek]`
+- **sulvor** (2ª, pl. *sulvoro*) — cantiga, canção de ninar `[sulv- + -or]`
+- **suptek** (2ª, pl. *supteko*) — instrumento ou meio para demarcar fronteira com marcos de pedra `[suv- + -tek]`
+- **surkia** (1ª, pl. *surkiar*) — lugar, recinto ou oficina de precipitar em quedas de cataratas estrondosas pulverizando as aguas `[surk- + -ia]`
+- **surkor** (2ª, pl. *surkoro*) — ato ou efeito de precipitar em quedas de cataratas estrondosas pulverizando as aguas `[surk- + -or]`
+- **surpek** (2ª, pl. *surpeko*) — foice ceifeira de lâmina denteada de aço temperado `[raiz surp- + -ek]`
+- **surpia** (1ª, pl. *surpiar*) — lugar, recinto ou oficina de ceifar cereais maduros com foice curta `[surp- + -ia]`
+- **surpor** (2ª, pl. *surporo*) — ato ou efeito de ceifar cereais maduros com foice curta `[surp- + -or]`
+- **surptek** (2ª, pl. *surpteko*) — instrumento ou meio para ceifar cereais maduros com foice curta `[surp- + -tek]`
+- **surttek** (2ª, pl. *surtteko*) — instrumento ou meio para precipitar em quedas de cataratas estrondosas pulverizando as aguas `[surk- + -tek]`
+- **survin** (2ª, pl. *survino*) — tempo da ceifa comunitária com festa e cânticos de vale `[surp- + vin, pv -> v]`
+- **suteggar** (2ª, pl. *suteggaro*) — fortaleza central onde resiste a última guarnição `[su (núcleo) + teggar]`
+- **suvia** (1ª, pl. *suviar*) — lugar, recinto ou oficina de demarcar fronteira com marcos de pedra `[suv- + -ia]`
+- **suvor** (2ª, pl. *suvoro*) — ato ou efeito de demarcar fronteira com marcos de pedra `[suv- + -or]`
+- **take** (1ª, pl. *taker*) — mesa, tábua de banquete ou conselho `[raiz tak-]`
+- **takelitrtek** (2ª, pl. *takelitrteko*) — instrumento trapezoidal de cordas percutidas ou beliscadas `[take (tábua) + litrtek]`
+- **takia** (1ª, pl. *takiar*) — lugar, recinto ou oficina de arrematar lote no leilão de importados `[tak- + -ia]`
+- **takor** (2ª, pl. *takoro*) — ato ou efeito de arrematar lote no leilão de importados `[tak- + -or]`
+- **taldek** (2ª, pl. *taldeko*) — sacho estreito de mondar raízes invasoras `[raiz tald- + -ek]`
+- **taldia** (1ª, pl. *taldiar*) — lugar, recinto ou oficina de mondar ervas daninhas à enxada `[tald- + -ia]`
+- **taldin** (2ª, pl. *taldino*) — capina de verão entre as linhas de parreiras `[tald- + -in]`
+- **taldor** (2ª, pl. *taldoro*) — ato ou efeito de mondar ervas daninhas à enxada `[tald- + -or]`
+- **taliskitor** (2ª, pl. *taliskitoro*) — documento de fiança retido pelo juiz do comércio `[tlis- + kitor]`
+- **talp'ek** (2ª, pl. *talp'eko*) — instrumento ou meio para escorar galeria com esteios de madeira `[talp- + -tek]`
+- **talpia** (1ª, pl. *talpiar*) — lugar, recinto ou oficina de escorar galeria com esteios de madeira `[talp- + -ia]`
+- **talpil** (2ª, pl. *talpilo*) — cunha de madeira rija cravada no topo da escora `[raiz talp- + -il]`
+- **talpin** (2ª, pl. *talpino*) — conjunto de esteios e vigas de escoramento de teto `[raiz talp- + -in]`
+- **talpor** (2ª, pl. *talporo*) — ato ou efeito de escorar galeria com esteios de madeira `[talp- + -or]`
+- **talporde** (1ª, pl. *talporder*) — irmão caçula acolhido na lareira familiar `[talp- + orde, termina em -e (1 decl)]`
+- **talpur** (2ª, pl. *talpuro*) — tronco roliço de carvalho empregado como esteio vertical `[raiz talp- + -ur]`
+- **talttek** (2ª, pl. *taltteko*) — instrumento ou meio para mondar ervas daninhas à enxada `[tald- + -tek]`
+- **tap'ek** (2ª, pl. *tap'eko*) — instrumento ou meio para deslocar lentamente o polo dos equinócios `[tap- + -tek]`
+- **tapia** (1ª, pl. *tapiar*) — lugar, recinto ou oficina de deslocar lentamente o polo dos equinócios `[tap- + -ia]`
+- **tapor** (2ª, pl. *taporo*) — ato ou efeito de deslocar lentamente o polo dos equinócios `[tap- + -or]`
+- **tarkande** (1ª, pl. *tarkander*) — avô que ensina os nomes dos rios e serras aos netos `[tark- + ande, termina em -e (1 decl)]`
+- **tarkia** (1ª, pl. *tarkiar*) — lugar, recinto ou oficina de vedar fendas de gases com argamassa `[tark- + -ia]`
+- **tarkin** (2ª, pl. *tarkino*) — vedação de rachaduras na rocha contra gases asfixiantes `[raiz tark- + -in]`
+- **tarkor** (2ª, pl. *tarkoro*) — ato ou efeito de vedar fendas de gases com argamassa `[tark- + -or]`
+- **tarkur** (2ª, pl. *tarkuro*) — argamassa betuminosa insolúvel para tampamento de fendas `[raiz tark- + -ur]`
+- **tarp'ek** (2ª, pl. *tarp'eko*) — instrumento ou meio para sacudir a terra `[tarp- + -tek]`
+- **tarpia** (1ª, pl. *tarpiar*) — lugar, recinto ou oficina de sacudir a terra `[tarp- + -ia]`
+- **tarpor** (2ª, pl. *tarporo*) — ato ou efeito de sacudir a terra `[tarp- + -or]`
+- **tarttek** (2ª, pl. *tartteko*) — instrumento ou meio para vedar fendas de gases com argamassa `[tark- + -tek]`
+- **tarvis** (2ª, pl. *tarviso*) — colmo rijo de cereal carregado de grãos `[raiz tarv- + -is]`
+- **taspil** (2ª, pl. *taspilo*) — vaso bojudo de argila fina cozida para azeite `[tasp- + -il]`
+- **taspin** (2ª, pl. *taspino*) — modelagem de vasos na roda girada com o pé `[tasp- + -in]`
+- **taspur** (2ª, pl. *taspuro*) — torno giratório de madeira e pedra do oleiro `[tasp- + -ur]`
+- **tattek** (2ª, pl. *tatteko*) — instrumento ou meio para arrematar lote no leilão de importados `[tak- + -tek]`
+- **tavapkitor** (2ª, pl. *tavapkitoro*) — auto de arrematação lavrado ao final do leilão condal `[tvap- + kitor]`
+- **tavor** (2ª, pl. *tavoro*) — contagem, número, soma `[tav- + -or]`
+- **teggar** (2ª, pl. *teggaro*) — palácio, fortaleza monumental, corte `[tep + -gar (pg -> gg)]`
+- **tekor** (2ª, pl. *tekoro*) — obra, trabalho, labor construtivo, feitura `[tek- + -or]`
+- **Tektrátte** (1ª, pl. *Tektrátter*) — Aulë, Senhor das Obras e da Forja `[tek- + Trátte]`
+- **tel'ek** (2ª, pl. *tel'eko*) — instrumento ou meio para soprar brisa suave das colinas `[tel- + -tek]`
+- **telia** (1ª, pl. *teliar*) — lugar, recinto ou oficina de soprar brisa suave das colinas `[tel- + -ia]`
+- **telkia** (1ª, pl. *telkiar*) — lugar, recinto ou oficina de erguer viga mestra ou cumeeira `[telk- + -ia]`
+- **telkor** (2ª, pl. *telkoro*) — ato ou efeito de erguer viga mestra ou cumeeira `[telk- + -or]`
+- **telor** (2ª, pl. *teloro*) — ato ou efeito de soprar brisa suave das colinas `[tel- + -or]`
+- **telp'ek** (2ª, pl. *telp'eko*) — instrumento ou meio para sitiar fortaleza `[telp- + -tek]`
+- **telpia** (1ª, pl. *telpiar*) — lugar, recinto ou oficina de sitiar fortaleza `[telp- + -ia]`
+- **telpor** (2ª, pl. *telporo*) — ato ou efeito de sitiar fortaleza `[telp- + -or]`
+- **telttek** (2ª, pl. *teltteko*) — instrumento ou meio para erguer viga mestra ou cumeeira `[telk- + -tek]`
+- **tep** (2ª, pl. *tepo*) — casa, lar, edifício `[raiz primária tep]`
+- **tep'ek** (2ª, pl. *tep'eko*) — instrumento ou meio para orientar-se pela estrela polar `[tev- + -tek]`
+- **tepia** (1ª, pl. *tepiar*) — habitação, morada estabelecida, mansão `[tep + -ia]`
+- **tepil** (2ª, pl. *tepilo*) — cabana, tenda, abrigo humilde `[tep + -il]`
+- **teprixe** (1ª, pl. *teprixer*) — fuste cilíndrico de pedra que sustenta arcos e tetos `[tep (edifício) + rixe (rocha)]`
+- **tepsuia** (1ª, pl. *tepsuiar*) — pátio central aberto na entrada de um palácio `[tep (casa) + su (centro) + -ia]`
+- **Tepy'atte** (1ª, pl. *Tepy'atter*) — hospedeiro, senhor da estalagem, pai da casa `[tepy + Patte (Lei 6.5, camada clássico-genitiva)]`
+- **terkia** (1ª, pl. *terkiar*) — lugar, recinto ou oficina de vitrificar massas de silica fundida gerando obsidiana negra `[terk- + -ia]`
+- **terkor** (2ª, pl. *terkoro*) — ato ou efeito de vitrificar massas de silica fundida gerando obsidiana negra `[terk- + -or]`
+- **terp'ek** (2ª, pl. *terp'eko*) — instrumento ou meio para guardar reminiscências sagradas no fundo do coração `[terp- + -tek]`
+- **terpia** (1ª, pl. *terpiar*) — lugar, recinto ou oficina de guardar reminiscências sagradas no fundo do coração `[terp- + -ia]`
+- **terpor** (2ª, pl. *terporo*) — ato ou efeito de guardar reminiscências sagradas no fundo do coração `[terp- + -or]`
+- **terttek** (2ª, pl. *tertteko*) — instrumento ou meio para vitrificar massas de silica fundida gerando obsidiana negra `[terk- + -tek]`
+- **Tette** (1ª, pl. *Tetter*) — O Artífice, forjador, artesão `[tek- + -te (kt -> tt)]`
+- **tettek** (2ª, pl. *tetteko*) — malho de forja, bigorna, ferramenta `[tek- + -tek (kt -> tt)]`
+- **tevia** (1ª, pl. *teviar*) — lugar, recinto ou oficina de orientar-se pela estrela polar `[tev- + -ia]`
+- **tevor** (2ª, pl. *tevoro*) — ato ou efeito de orientar-se pela estrela polar `[tev- + -or]`
+- **tikia** (1ª, pl. *tikiar*) — lugar, recinto ou oficina de aquecer água para o banho de vapor `[tik- + -ia]`
+- **tikor** (2ª, pl. *tikoro*) — ato ou efeito de aquecer água para o banho de vapor `[tik- + -or]`
+- **til'ek** (2ª, pl. *til'eko*) — instrumento ou meio para reter penhor ou fiança até a entrega `[til- + -tek]`
+- **tilia** (1ª, pl. *tiliar*) — lugar, recinto ou oficina de reter penhor ou fiança até a entrega `[til- + -ia]`
+- **tilkia** (1ª, pl. *tilkiar*) — lugar, recinto ou oficina de jejuar por voto litúrgico `[tilk- + -ia]`
+- **tilkor** (2ª, pl. *tilkoro*) — ato ou efeito de jejuar por voto litúrgico `[tilk- + -or]`
+- **tilor** (2ª, pl. *tiloro*) — ato ou efeito de reter penhor ou fiança até a entrega `[til- + -or]`
+- **tilp'ek** (2ª, pl. *tilp'eko*) — instrumento ou meio para enganchar o manto com fecho de metal `[tilp- + -tek]`
+- **tilpia** (1ª, pl. *tilpiar*) — lugar, recinto ou oficina de enganchar o manto com fecho de metal `[tilp- + -ia]`
+- **tilpor** (2ª, pl. *tilporo*) — ato ou efeito de enganchar o manto com fecho de metal `[tilp- + -or]`
+- **tilttek** (2ª, pl. *tiltteko*) — instrumento ou meio para jejuar por voto litúrgico `[tilk- + -tek]`
+- **timor** (2ª, pl. *timoro*) — temor sagrado (Arcaísmo Litúrgico cristalizado no Halylitror VII: timorom; forma clássica endógena: halfas) `[fóssil litúrgico do Halylitror]`
+- **tir'ek** (2ª, pl. *tir'eko*) — instrumento ou meio para isolar a essência universal na mente `[tir- + -tek]`
+- **tiria** (1ª, pl. *tiriar*) — lugar, recinto ou oficina de isolar a essência universal na mente `[tir- + -ia]`
+- **tirkia** (1ª, pl. *tirkiar*) — lugar, recinto ou oficina de peneirar a farinha ou o ouro `[tirk- + -ia]`
+- **tirkor** (2ª, pl. *tirkoro*) — ato ou efeito de peneirar a farinha ou o ouro `[tirk- + -or]`
+- **tiror** (2ª, pl. *tiro'o*) — ato ou efeito de isolar a essência universal na mente `[tir- + -or]`
+- **tirttek** (2ª, pl. *tirtteko*) — instrumento ou meio para peneirar a farinha ou o ouro `[tirk- + -tek]`
+- **tisp'ek** (2ª, pl. *tisp'eko*) — instrumento ou meio para cardar a lã virgem em mechas macias `[tisv- + -tek]`
+- **tisvia** (1ª, pl. *tisviar*) — lugar, recinto ou oficina de cardar a lã virgem em mechas macias `[tisv- + -ia]`
+- **tisvor** (2ª, pl. *tisvoro*) — ato ou efeito de cardar a lã virgem em mechas macias `[tisv- + -or]`
+- **tittek** (2ª, pl. *titteko*) — instrumento ou meio para aquecer água para o banho de vapor `[tik- + -tek]`
+- **todo** (2ª, pl. *todoo*) — todos (Arcaísmo Litúrgico cristalizado no Halylitror II/IV: todos; forma clássica endógena: orata) `[fóssil litúrgico do Halylitror]`
+- **tokor** (2ª, pl. *tokoro*) — soberania, autoridade de Estado, regência `[tok- + -or]`
+- **tokx'ek** (2ª, pl. *tokx'eko*) — instrumento ou meio para reunir a corte suprema da Coroa `[tokx- + -tek]`
+- **tokxia** (1ª, pl. *tokxiar*) — lugar, recinto ou oficina de reunir a corte suprema da Coroa `[tokx- + -ia]`
+- **tokxor** (2ª, pl. *tokxoro*) — ato ou efeito de reunir a corte suprema da Coroa `[tokx- + -or]`
+- **tolkia** (1ª, pl. *tolkiar*) — lugar, recinto ou oficina de debulhar espigas com mangual na eira de pedra `[tolk- + -ia]`
+- **tolkor** (2ª, pl. *tolkoro*) — ato ou efeito de debulhar espigas com mangual na eira de pedra `[tolk- + -or]`
+- **tolkur** (2ª, pl. *tolkuro*) — mangual articulado com correia de couro para bater cereais `[raiz tolk- + -ur]`
+- **tolp'ek** (2ª, pl. *tolp'eko*) — instrumento ou meio para pautar fólios de velino com ponta de chumbo `[tolp- + -tek]`
+- **tolpia** (1ª, pl. *tolpiar*) — lugar, recinto ou oficina de pautar fólios de velino com ponta de chumbo `[tolp- + -ia]`
+- **tolpil** (2ª, pl. *tolpilo*) — compasso de pontas secas para medição das margens do fólio `[raiz tolp- + -il]`
+- **tolpin** (2ª, pl. *tolpino*) — traçado de linhas guias com ponta seca de chumbo `[raiz tolp- + -in]`
+- **tolpor** (2ª, pl. *tolporo*) — ato ou efeito de pautar fólios de velino com ponta de chumbo `[tolp- + -or]`
+- **tolpur** (2ª, pl. *tolpuro*) — régua graduada de madeira para alinhamento de colunas `[raiz tolp- + -ur]`
+- **tolttek** (2ª, pl. *toltteko*) — instrumento ou meio para debulhar espigas com mangual na eira de pedra `[tolk- + -tek]`
+- **tonkre** (1ª, pl. *tonkrer*) — tempo, hora, momento histórico `[raiz tonkr-]`
+- **tonkril** (2ª, pl. *tonkrilo*) — instante, momento `[tonkre + -il]`
+- **tonkrsiftek** (2ª, pl. *tonkrsifteko*) — códice anual das estações e fases da lua `[tonkre (tempo) + siftek (anais)]`
+- **tonp'ek** (2ª, pl. *tonp'eko*) — instrumento ou meio para calcular as tábuas celestes em pergaminho `[tonp- + -tek]`
+- **tonpia** (1ª, pl. *tonpiar*) — lugar, recinto ou oficina de calcular as tábuas celestes em pergaminho `[tonp- + -ia]`
+- **tonpor** (2ª, pl. *tonporo*) — ato ou efeito de calcular as tábuas celestes em pergaminho `[tonp- + -or]`
+- **torb'ek** (2ª, pl. *torb'eko*) — instrumento ou meio para assar caça nobre em espeto giratório sobre brasas aromáticas `[torb- + -tek]`
+- **torbia** (1ª, pl. *torbiar*) — lugar, recinto ou oficina de assar caça nobre em espeto giratório sobre brasas aromáticas `[torb- + -ia]`
+- **torbor** (2ª, pl. *torboro*) — ato ou efeito de assar caça nobre em espeto giratório sobre brasas aromáticas `[torb- + -or]`
+- **toret** (2ª, pl. *toreto*) — teto, telhado de ardósia, abrigo contra a neve `[raiz tor- (cobrir/proteger) + -et]`
+- **toretrixe** (1ª, pl. *toretrixer*) — viga mestra de pedra que pousa sobre os capitéis `[toret (teto) + rixe]`
+- **torexte** (1ª, pl. *torexter*) — sitiante, conquistador, tomador de praça `[torex- + -te]`
+- **torg'ek** (2ª, pl. *torg'eko*) — instrumento ou meio para interpor recurso perante os juízes `[torg- + -tek]`
+- **torgia** (1ª, pl. *torgiar*) — lugar, recinto ou oficina de interpor recurso perante os juízes `[torg- + -ia]`
+- **torgin** (2ª, pl. *torgino*) — recurso de apelação interposto perante o tribunal supremo `[raiz torg- + -in]`
+- **torgite** (1ª, pl. *torgiter*) — petição escrita de recurso entregue ao meirinho da corte `[torg- + -ite]`
+- **torgkitor** (2ª, pl. *torgkitoro*) — livro de apelações e agravos despachados pelo chanceler `[raiz torg- + kitor]`
+- **torgor** (2ª, pl. *torgoro*) — ato ou efeito de interpor recurso perante os juízes `[torg- + -or]`
+- **torpin** (2ª, pl. *torpino*) — figura de retórica baseada em mudança poética de sentido `[torp- + -in]`
+- **torpur** (2ª, pl. *torpuro*) — expressão figurada consagrada pela tradição dos sábios `[torp- + -ur]`
+- **tosp'ek** (2ª, pl. *tosp'eko*) — instrumento ou meio para enlaçar mãos de noivos com fita de seda carmesim `[tosp- + -tek]`
+- **tospia** (1ª, pl. *tospiar*) — lugar, recinto ou oficina de enlaçar mãos de noivos com fita de seda carmesim `[tosp- + -ia]`
+- **tospil** (2ª, pl. *tospilo*) — fita carmesim bordada com fios de prata do rito de união `[raiz tosp- + -il]`
+- **tospin** (2ª, pl. *tospino*) — entrelaçamento de fitas de seda que une as mãos dos noivos `[raiz tosp- + -in]`
+- **tospor** (2ª, pl. *tosporo*) — ato ou efeito de enlaçar mãos de noivos com fita de seda carmesim `[tosp- + -or]`
+- **tospur** (2ª, pl. *tospuro*) — arco cerimonial de galhos floridos sob o qual passam os noivos `[raiz tosp- + -ur]`
+- **Totte** (1ª, pl. *Totter*) — Vala, Poder ou Regente do Mundo (Pl. Totter) `[tok- + -te (kt -> tt)]`
+- **Totter** (1ª, pl. *Totterer*) — Os Poderes, Valar, Regentes do Mundo (plural de Totte) `[tok- + -te + -r]`
+- **Treppenwitz** (2ª, pl. *Treppenwitzo*) — Casa Condal soberana de Treppênia `[linhagem condal]`
+- **Treppení'a** (1ª, pl. *Treppení'ar*) — vassala ou gentílica feminina de Treppenwitz `[Treppen- + -ína]`
+- **Treppení'o** (2ª, pl. *Treppení'oo*) — vassalo ou gentílico masculino de Treppenwitz `[Treppen- + -íno]`
+- **Treppenín** (2ª, pl. *Treppení'o*) — vassalo ou gentílico de Treppenwitz `[gentílico]`
+- **Treppênia** (1ª, pl. *Treppêniar*) — Capital do Condado e sede da Chancelaria `[topônimo imperial]`
+- **Trátte** (1ª, pl. *Trátter*) — Comandante, Senhor Supremo `[trak- + -te (kt -> tt)]`
+- **Tréppia** (1ª, pl. *Tréppiar*) — Terra do Norte, nação tréppia `[topônimo nacional]`
+- **Tréppio** (2ª, pl. *Tréppioo*) — o idioma Tréppio; cidadão tréppio `[endônimo]`
+- **tukia** (1ª, pl. *tukiar*) — mina, escavação `[tuk- + -ia]`
+- **tukpoke** (1ª, pl. *tukpoker*) — animal escavador de listras alvinegras na face `[tuk- (cavar) + poke (animal)]`
+- **tul** (2ª, pl. *tulo*) — loucura, delírio, insânia `[raiz primária tul]`
+- **tulb'ek** (2ª, pl. *tulb'eko*) — instrumento ou meio para registrar ato oficial no cartório `[tulb- + -tek]`
+- **tulbia** (1ª, pl. *tulbiar*) — lugar, recinto ou oficina de registrar ato oficial no cartório `[tulb- + -ia]`
+- **tulbin** (2ª, pl. *tulbino*) — assento protocolar lavrado no grande cartório chancelar `[raiz tulb- + -in]`
+- **tulbkitor** (2ª, pl. *tulbkitoro*) — livro encadernado em couro com registros de atos e possessões `[raiz tulb- + kitor]`
+- **tulbor** (2ª, pl. *tulboro*) — ato ou efeito de registrar ato oficial no cartório `[tulb- + -or]`
+- **tulbur** (2ª, pl. *tulburo*) — fólio rubricado do protocolo oficial de atos régios `[raiz tulb- + -ur]`
+- **tulkia** (1ª, pl. *tulkiar*) — lugar, recinto ou oficina de exercer regência em nome do herdeiro `[tulk- + -ia]`
+- **tulkor** (2ª, pl. *tulkoro*) — ato ou efeito de exercer regência em nome do herdeiro `[tulk- + -or]`
+- **tulkoril** (2ª, pl. *tulkorilo*) — raiz tóxica das pastagens alpinas `[tul (delírio) + koril (erva)]`
+- **tullin** (2ª, pl. *tullino*) — caixa grande de madeira para depósito de farinha ou grão `[tull- + -in]`
+- **tulm'ek** (2ª, pl. *tulm'eko*) — instrumento ou meio para guardar e selecionar sementes-matrizes `[tulm- + -tek]`
+- **tulmia** (1ª, pl. *tulmiar*) — lugar, recinto ou oficina de guardar e selecionar sementes-matrizes `[tulm- + -ia]`
+- **tulmor** (2ª, pl. *tulmoro*) — ato ou efeito de guardar e selecionar sementes-matrizes `[tulm- + -or]`
+- **tulp'ek** (2ª, pl. *tulp'eko*) — instrumento ou meio para decompor materia vegetal em camadas espessas de turfa negra `[tulv- + -tek]`
+- **tulttek** (2ª, pl. *tultteko*) — instrumento ou meio para exercer regência em nome do herdeiro `[tulk- + -tek]`
+- **tulvia** (1ª, pl. *tulviar*) — lugar, recinto ou oficina de decompor materia vegetal em camadas espessas de turfa negra `[tulv- + -ia]`
+- **tulvor** (2ª, pl. *tulvoro*) — ato ou efeito de decompor materia vegetal em camadas espessas de turfa negra `[tulv- + -or]`
+- **tupkia** (1ª, pl. *tupkiar*) — lugar, recinto ou oficina de oscilar sutilmente o eixo da esfera `[tupk- + -ia]`
+- **tupkor** (2ª, pl. *tupkoro*) — ato ou efeito de oscilar sutilmente o eixo da esfera `[tupk- + -or]`
+- **tupttek** (2ª, pl. *tuptteko*) — instrumento ou meio para oscilar sutilmente o eixo da esfera `[tupk- + -tek]`
+- **tupx'ek** (2ª, pl. *tupx'eko*) — instrumento ou meio para disparar flecha ou dardo certeiro `[tupx- + -tek]`
+- **tupxia** (1ª, pl. *tupxiar*) — lugar, recinto ou oficina de disparar flecha ou dardo certeiro `[tupx- + -ia]`
+- **tupxnykil** (2ª, pl. *tupxnykilo*) — fresta vertical estreita na muralha para arqueiros `[tupx- (atirar flecha) + nykil]`
+- **tupxor** (2ª, pl. *tupxoro*) — ato ou efeito de disparar flecha ou dardo certeiro `[tupx- + -or]`
+- **turb'ek** (2ª, pl. *turb'eko*) — instrumento ou meio para armar torre móvel de assalto e catapultas de contrapeso no campo `[turb- + -tek]`
+- **turbia** (1ª, pl. *turbiar*) — lugar, recinto ou oficina de armar torre móvel de assalto e catapultas de contrapeso no campo `[turb- + -ia]`
+- **turbor** (2ª, pl. *turboro*) — ato ou efeito de armar torre móvel de assalto e catapultas de contrapeso no campo `[turb- + -or]`
+- **turkia** (1ª, pl. *turkiar*) — lugar, recinto ou oficina de morder `[turk- + -ia]`
+- **turkor** (2ª, pl. *turkoro*) — ato ou efeito de morder `[turk- + -or]`
+- **turlitrtek** (2ª, pl. *turlitrteko*) — instrumento de cordas com roda de madeira resinada `[tur- + litrtek]`
+- **turp'ek** (2ª, pl. *turp'eko*) — instrumento ou meio para ratificar tratado de aliança `[turp- + -tek]`
+- **turpia** (1ª, pl. *turpiar*) — lugar, recinto ou oficina de ratificar tratado de aliança `[turp- + -ia]`
+- **turpor** (2ª, pl. *turporo*) — ato ou efeito de ratificar tratado de aliança `[turp- + -or]`
+- **turttek** (2ª, pl. *turtteko*) — instrumento ou meio para morder `[turk- + -tek]`
+- **tutte** (1ª, pl. *tutter*) — mineiro, coveiro, cavador `[tuk- + -te, kt -> tt]`
+- **tuttek** (2ª, pl. *tutteko*) — pá, enxada `[tuk- + -tek, kt -> tt]`
+- **Tóldemme** (1ª, pl. *Tóldemmer*) — O Refúgio dos Antigos / Oferenda da Memória `[tor + nemre]`
+- **valbia** (1ª, pl. *valbiar*) — lugar, recinto ou oficina de drenar bolsões de água da galeria `[valb- + -ia]`
+- **valbin** (2ª, pl. *valbino*) — drenagem de água subterrânea por caleiras inclinadas `[raiz valb- + -in]`
+- **valbor** (2ª, pl. *valboro*) — ato ou efeito de drenar bolsões de água da galeria `[valb- + -or]`
+- **valborde** (1ª, pl. *valborder*) — oficiante do rito fúnebre que entoa a despedida dos ancestrais `[valb- + orde, termina em -e (1 decl)]`
+- **valbtek** (2ª, pl. *valbteko*) — instrumento ou meio para drenar bolsões de água da galeria `[valb- + -tek]`
+- **valbur** (2ª, pl. *valburo*) — bomba de pistão de madeira para esgotar poço inundado `[raiz valb- + -ur]`
+- **valkia** (1ª, pl. *valkiar*) — lugar, recinto ou oficina de julgar litígio em tribunal condal `[valk- + -ia]`
+- **valkin** (2ª, pl. *valkino*) — audiência de julgamento e conciliação perante os nobres `[raiz valk- + -in]`
+- **valkor** (2ª, pl. *valkoro*) — ato ou efeito de julgar litígio em tribunal condal `[valk- + -or]`
+- **valkude** (1ª, pl. *valkuder*) — cadeira lavrada de espaldar alto privativa do magistrado presidente `[valk- + -ude]`
+- **valkur** (2ª, pl. *valkuro*) — laudo arbitral assinado pelos juízes de paz `[raiz valk- + -ur]`
+- **vallin** (2ª, pl. *vallino*) — vala secundária de drenagem entre os canteiros `[raiz val- + -lin]`
+- **valpia** (1ª, pl. *valpiar*) — lugar, recinto ou oficina de abençoar união nupcial com imposição solene de mãos `[valp- + -ia]`
+- **valpil** (2ª, pl. *valpilo*) — anel de ouro batido sem emendas trocado nas bodas `[raiz valp- + -il]`
+- **valpin** (2ª, pl. *valpino*) — rito nupcial com imposição solene de mãos perante o clã `[raiz valp- + -in]`
+- **valpor** (2ª, pl. *valporo*) — ato ou efeito de abençoar união nupcial com imposição solene de mãos `[valp- + -or]`
+- **valptek** (2ª, pl. *valpteko*) — instrumento ou meio para abençoar união nupcial com imposição solene de mãos `[valp- + -tek]`
+- **valpur** (2ª, pl. *valpuro*) — altar de pedra polida onde se firmam os votos matrimoniais `[raiz valp- + -ur]`
+- **valttek** (2ª, pl. *valtteko*) — instrumento ou meio para julgar litígio em tribunal condal `[valk- + -tek]`
+- **valttor** (2ª, pl. *valttoro*) — tribunal superior de magistrados condais em sessão solene `[valk- + -tor, kt -> tt]`
+- **var** (2ª, pl. *varo*) — caminho, estrada, via `[raiz primária var]`
+- **varbia** (1ª, pl. *varbiar*) — lugar, recinto ou oficina de organizar comboios militares de suprimento `[varb- + -ia]`
+- **varbor** (2ª, pl. *varboro*) — ato ou efeito de organizar comboios militares de suprimento `[varb- + -or]`
+- **varbtek** (2ª, pl. *varbteko*) — instrumento ou meio para organizar comboios militares de suprimento `[varb- + -tek]`
+- **varil** (2ª, pl. *varilo*) — trilha, atalho `[var + -il]`
+- **varkaranil** (2ª, pl. *varkaranilo*) — salvo-conduto oficial selado permitindo trânsito livre `[var + karan + -il]`
+- **Varkaria** (1ª, pl. *Varkariar*) — Labirinto de Encruzilhadas (feudo de Sprezzatura) `[var + kar + -ia]`
+- **varkia** (1ª, pl. *varkiar*) — lugar, recinto ou oficina de acolchoar o forro da capa de viagem `[vark- + -ia]`
+- **varkor** (2ª, pl. *varkoro*) — ato ou efeito de acolchoar o forro da capa de viagem `[vark- + -or]`
+- **varpia** (1ª, pl. *varpiar*) — lugar, recinto ou oficina de afastar-se no ponto mais distante da órbita `[varp- + -ia]`
+- **varpor** (2ª, pl. *varporo*) — ato ou efeito de afastar-se no ponto mais distante da órbita `[varp- + -or]`
+- **varptek** (2ª, pl. *varpteko*) — instrumento ou meio para afastar-se no ponto mais distante da órbita `[varp- + -tek]`
+- **varte** (1ª, pl. *varter*) — encontro, cruzamento de vias `[var + -te]`
+- **varttek** (2ª, pl. *vartteko*) — instrumento ou meio para acolchoar o forro da capa de viagem `[vark- + -tek]`
+- **varxia** (1ª, pl. *varxiar*) — lugar, recinto ou oficina de patrulhar as fronteiras da serra `[varx- + -ia]`
+- **varxor** (2ª, pl. *varxoro*) — ato ou efeito de patrulhar as fronteiras da serra `[varx- + -or]`
+- **varxtek** (2ª, pl. *varxteko*) — instrumento ou meio para patrulhar as fronteiras da serra `[varx- + -tek]`
+- **ve'ar** (2ª, pl. *ve'aro*) — rio, correnteza fluvial, curso de água `[Vé + var]`
+- **ve'aril** (2ª, pl. *ve'arilo*) — riacho, córrego, arroio cristalino `[vevar + -il]`
+- **ve'arkor** (2ª, pl. *ve'arkoro*) — salgueiro chorão das margens de rio `[vevar (rio) + kor (árvore)]`
+- **ve'arpalkil** (2ª, pl. *ve'arpalkilo*) — taxa aduaneira sobre embarcações que descarregam no cais `[vevar + palk + -il]`
+- **ve'arpoke** (1ª, pl. *ve'arpoker*) — animal nadador ágil caçador de trutas nos rios `[vevar (rio) + poke (animal)]`
+- **ve'artek** (2ª, pl. *ve'arteko*) — canal sobre arcadas de pedra para conduzir água `[vevar (rio) + -tek (engenharia)]`
+- **ve'artekpoke** (1ª, pl. *ve'artekpoker*) — roedor que ergue diques de madeira nos riachos `[vevar (rio) + tek (erguer) + poke]`
+- **Ve'el** (2ª, pl. *Ve'elo*) — Domínio das Sombras (expurgado Vé'el) `[vel + el (haplologia)]`
+- **ve'okor** (2ª, pl. *ve'okoro*) — órgão par lombar que filtra os líquidos do corpo `[Vé (água) + vokor]`
+- **vefil** (2ª, pl. *vefilo*) — fonte, manancial, nascente de água viva (equivalente clássico endógeno do arcaísmo litúrgico font) `[Vé (água) + fil (cerne/origem)]`
+- **veike** (1ª, pl. *veiker*) — jardim, horto fechado `[raiz veik-]`
+- **veiketepia** (1ª, pl. *veiketepiar*) — pátio quadrangular rodeado de arcadas em mosteiro `[veike (jardim) + tepia]`
+- **vekor** (2ª, pl. *vekoro*) — amieiro das várzeas úmidas `[Vé (água) + kor (árvore)]`
+- **veksixi** (1ª, pl. *veksixier*) — chuva, tempestade costeira, aguaceiro `[ve + ksixi]`
+- **veksixil** (2ª, pl. *veksixilo*) — garoa, chuvisco `[veksixi + -il]`
+- **veksixitek** (2ª, pl. *veksixiteko*) — bica de pedra esculpida que lança a água do telhado `[veksixi (chuva) + -tek]`
+- **veksun** (2ª, pl. *veksuno*) — nevoeiro denso, bruma fria que encobre caminhos `[raiz veks- (névoa/chuva) + -un]`
+- **vel** (2ª, pl. *velo*) — sombra benigna, penumbra protetora `[raiz primária vel]`
+- **vel'okor** (2ª, pl. *vel'okoro*) — órgão situado sob as costelas esquerdas que renova o sangue `[vel + vokor]`
+- **vel'é** (1ª, pl. *vel'er*) — águas sombrias, Porto das Sombras `[vel + Vé]`
+- **velbel** (2ª, pl. *velbelo*) — crepúsculo, ocaso, entardecer `[vel + bel]`
+- **velfea** (1ª, pl. *velfear*) — eclipse solar, ocultação do disco do sol `[vel (sombra) + fea (sol)]`
+- **velfealan** (2ª, pl. *velfealano*) — penumbra entre a luz solar e a noite `[vel (sombra) + fealan (clarão)]`
+- **velferpoke** (1ª, pl. *velferpoker*) — grande ave de plumagem negra e grande inteligência `[vel (negro/sombra) + ferpoke]`
+- **velinil** (2ª, pl. *velinilo*) — raspadeira semicircular usada para amaciar o pergaminho `[velin- + -il]`
+- **velinin** (2ª, pl. *velini'o*) — folha alva e acetinada de pergaminho de vitela nobre `[velin- + -in]`
+- **velinur** (2ª, pl. *velinuro*) — armação de madeira onde a pele é raspada com lâmina curva `[velin- + -ur]`
+- **velkave** (1ª, pl. *velkaver*) — gaivota marinha de asas longas que prenuncia bonança `[vel- + kave (ave), termina em -e (1 decl)]`
+- **velkor** (2ª, pl. *velkoro*) — olmo frondoso de sombra espessa `[vel (sombra) + kor (árvore)]`
+- **velkoril** (2ª, pl. *velkorilo*) — cogumelo silvestre nascido após a chuva `[vel (sombra) + koril (planta)]`
+- **velkosia** (1ª, pl. *velkosiar*) — câmara prisional subterrânea nos alicerces da torre `[vel (treva) + kosia (câmara)]`
+- **velkropekor** (2ª, pl. *velkropekoro*) — feto de frondes rendilhadas da floresta úmida `[vel (sombra) + krope + kor]`
+- **velkuefel** (2ª, pl. *velkuefelo*) — baga azul-escura dos sub-bosques boreais `[vel (escuro) + kue + fel (fruto)]`
+- **vellexe** (1ª, pl. *vellexer*) — estrela vespertina, primeiro astro do entardecer `[vel (entardecer) + lexe (estrela)]`
+- **vellir** (2ª, pl. *velliro*) — noite sem estrelas, trevas absolutas `[vel + nir (ln -> ll)]`
+- **vellir'an** (2ª, pl. *vellir'ano*) — lua nova, novilúnio escuro `[vel (sombra) + nirlan (lua), ln -> ll]`
+- **Veloxe** (1ª, pl. *Veloxer*) — Submundo, Infernos, mansão dos mortos `[vel + oxe]`
+- **velpia** (1ª, pl. *velpiar*) — lugar, recinto ou oficina de encobrir estrela atrás do disco lunar `[velp- + -ia]`
+- **velpinde** (1ª, pl. *velpinder*) — véu de linho translúcido que recobre a fronte da noiva `[velp- + inde, termina em -e (1 decl)]`
+- **velpor** (2ª, pl. *velporo*) — ato ou efeito de encobrir estrela atrás do disco lunar `[velp- + -or]`
+- **velptek** (2ª, pl. *velpteko*) — instrumento ou meio para encobrir estrela atrás do disco lunar `[velp- + -tek]`
+- **Velsu** (2ª, pl. *Velsuo*) — O Exânime (entidade abissal) `[vel + su]`
+- **velyhuxgar** (2ª, pl. *velyhuxgaro*) — agasalho noturno de lã densa impermeável à nevasca `[vely + huxgar]`
+- **venposte** (1ª, pl. *venposter*) — biruta ou bandeirola de cúpula que indica o rumo do vento `[ven- + poste (marca), termina em -e (1 decl)]`
+- **ventarke** (1ª, pl. *ventarker*) — calmaria sufocante sem brisa no equador marítimo `[ven- + tarke (parada), termina em -e (1 decl)]`
+- **Vepalkia** (1ª, pl. *Vepalkiar*) — Faixa dos Vaus (província fluvial) `[Vé + palk + -ia]`
+- **verbil** (2ª, pl. *verbilo*) — líquido corrosivo transparente capaz de dissolver prata `[verb- + -il]`
+- **verbin** (2ª, pl. *verbino*) — dissolução de metais em banho de composto fumegante `[verb- + -in]`
+- **verbur** (2ª, pl. *verburo*) — frasco bojudo de vidro espesso vedado com cera `[verb- + -ur]`
+- **verkia** (1ª, pl. *verkiar*) — lugar, recinto ou oficina de fluir em corredeira rápida `[verk- + -ia]`
+- **verkor** (2ª, pl. *verkoro*) — ato ou efeito de fluir em corredeira rápida `[verk- + -or]`
+- **verpia** (1ª, pl. *verpiar*) — lugar, recinto ou oficina de fixar precedente normativo nos assentos `[verp- + -ia]`
+- **verpin** (2ª, pl. *verpino*) — costume jurídico imemorial admitido como norma na corte `[raiz verp- + -in]`
+- **verpor** (2ª, pl. *verporo*) — ato ou efeito de fixar precedente normativo nos assentos `[verp- + -or]`
+- **verptek** (2ª, pl. *verpteko*) — instrumento ou meio para fixar precedente normativo nos assentos `[verp- + -tek]`
+- **verpur** (2ª, pl. *verpuro*) — assento de jurisprudência fixado pelos magistrados antigos `[raiz verp- + -ur]`
+- **verre** (1ª, pl. *verrer*) — bronze, liga metálica militar `[raiz verr-]`
+- **verredarptek** (2ª, pl. *verredarpteko*) — par de discos de bronze entrechocados em ritos solenes `[verre (bronze) + darptek]`
+- **verregobil** (2ª, pl. *verregobilo*) — moeda miúda de bronze para o troco diário do feirante `[verre + gob + -il]`
+- **verrelitrtek** (2ª, pl. *verrelitrteko*) — trombeta curva de bronze das legiões imperiais `[verre (bronze) + litrtek]`
+- **verresaittek** (2ª, pl. *verresaitteko*) — faca afiada de mesa, punhal utilitário de caça `[verre (metal) + saittek (lâmina)]`
+- **verresfartek** (2ª, pl. *verresfarteko*) — escudo reforçado com metal, broquel de proteção `[verre (metal) + sfartek (escudo)]`
+- **verretette** (1ª, pl. *verretetter*) — ferreiro da bigorna, mestre forjador de metal `[verre (metal) + Tette (artífice)]`
+- **verreznetil** (2ª, pl. *verreznetilo*) — cordão trançado de bronze para atar capas de viagem `[verre + znet- + -il]`
+- **verril** (2ª, pl. *verrilo*) — moeda de bronze `[verre + -il]`
+- **verttek** (2ª, pl. *vertteko*) — instrumento ou meio para fluir em corredeira rápida `[verk- + -tek]`
+- **vesdak** (2ª, pl. *vesdako*) — ceia noturna, refeição acolhedora ao pé da lareira `[ves- (noite) + dak- (refeição)]`
+- **vesen** (2ª, pl. *veseno*) — boa noite, repouso noturno da lareira `[ves- (noite) + -en]`
+- **veskia** (1ª, pl. *veskiar*) — lugar, recinto ou oficina de joeirar os grãos ao vento no crivo raso `[vesk- + -ia]`
+- **veskil** (2ª, pl. *veskilo*) — crivo raso de vime trançado para joeirar ao vento `[raiz vesk- + -il]`
+- **veskor** (2ª, pl. *veskoro*) — ato ou efeito de joeirar os grãos ao vento no crivo raso `[vesk- + -or]`
+- **vespia** (1ª, pl. *vespiar*) — lugar, recinto ou oficina de entrar em êxtase místico de arroubo espiritual `[vesp- + -ia]`
+- **vespor** (2ª, pl. *vesporo*) — ato ou efeito de entrar em êxtase místico de arroubo espiritual `[vesp- + -or]`
+- **vesptek** (2ª, pl. *vespteko*) — instrumento ou meio para entrar em êxtase místico de arroubo espiritual `[vesp- + -tek]`
+- **vesttek** (2ª, pl. *vestteko*) — instrumento ou meio para joeirar os grãos ao vento no crivo raso `[vesk- + -tek]`
+- **Vetrátte** (1ª, pl. *Vetrátter*) — Ulmo, Senhor das Águas (variante gráfica de Vétrátte) `[ve + Trátte]`
+- **vextsulet** (2ª, pl. *vextsuleto*) — consonância perfeita de cinco graus na polifonia `[vexta (quinto) + sulet]`
+- **veynia** (1ª, pl. *veyniar*) — lugar, recinto ou oficina de velejar com vento de popa `[veyn- + -ia]`
+- **veynor** (2ª, pl. *veynoro*) — ato ou efeito de velejar com vento de popa `[veyn- + -or]`
+- **veyntek** (2ª, pl. *veynteko*) — instrumento ou meio para velejar com vento de popa `[veyn- + -tek]`
+- **vikia** (1ª, pl. *vikiar*) — lugar, recinto ou oficina de acender todas as arandelas do salão `[vik- + -ia]`
+- **vikor** (2ª, pl. *vikoro*) — ato ou efeito de acender todas as arandelas do salão `[vik- + -or]`
+- **vilbia** (1ª, pl. *vilbiar*) — lugar, recinto ou oficina de carvoejar hulha em veios subterrâneos `[vilb- + -ia]`
+- **vilbin** (2ª, pl. *vilbino*) — jazida de carvão fóssil denso em camadas horizontais `[raiz vilb- + -in]`
+- **vilbor** (2ª, pl. *vilboro*) — ato ou efeito de carvoejar hulha em veios subterrâneos `[vilb- + -or]`
+- **vilbtek** (2ª, pl. *vilbteko*) — instrumento ou meio para carvoejar hulha em veios subterrâneos `[vilb- + -tek]`
+- **vilbur** (2ª, pl. *vilburo*) — pedaço brilhante de antracito combustível de alta caloria `[raiz vilb- + -ur]`
+- **vildor** (2ª, pl. *vildoro*) — brasa incandescente, carvão ardente da lareira `[vur- + dur- (operante), sandi rn->ld]`
+- **vilkia** (1ª, pl. *vilkiar*) — lugar, recinto ou oficina de lacrimejar `[vilk- + -ia]`
+- **vilkkomor** (2ª, pl. *vilkkomoro*) — preparado líquido concentrado de ervas medicinais `[vilt- (curar) + komor (poção), tk -> kk]`
+- **vilkkoril** (2ª, pl. *vilkkorilo*) — erva-das-quedas de flor amarela para contusões `[vilt- (curar) + koril (erva), tk -> kk]`
+- **vilkkorvé** (1ª, pl. *vilkkorver*) — pomada resinosa aromática aplicada sobre chagas `[vilt- (curar) + korvé (bálsamo), tk -> kk]`
+- **vilkor** (2ª, pl. *vilkoro*) — ato ou efeito de lacrimejar `[vilk- + -or]`
+- **vilpia** (1ª, pl. *vilpiar*) — lugar, recinto ou oficina de aparar golpe com o escudo `[vilp- + -ia]`
+- **vilpor** (2ª, pl. *vilporo*) — ato ou efeito de aparar golpe com o escudo `[vilp- + -or]`
+- **vilptek** (2ª, pl. *vilpteko*) — instrumento ou meio para aparar golpe com o escudo `[vilp- + -tek]`
+- **viltor** (2ª, pl. *viltoro*) — cura revigorante, alívio de dor e cansaço `[raiz vilt- (curar) + -or]`
+- **viltsaittek** (2ª, pl. *viltsaitteko*) — pequena lâmina de dois gumes para incisões médicas `[vilt- (curar) + saittek (lâmina)]`
+- **vilttek** (2ª, pl. *viltteko*) — instrumento ou meio para lacrimejar `[vilk- + -tek]`
+- **viole** (1ª, pl. *violer*) — viola (Arcaísmo Litúrgico cristalizado no Halylitror III: violer; forma clássica endógena: sulettor) `[fóssil litúrgico do Halylitror]`
+- **virkia** (1ª, pl. *virkiar*) — lugar, recinto ou oficina de consagrar o cálice na elevação `[virk- + -ia]`
+- **virkor** (2ª, pl. *virkoro*) — ato ou efeito de consagrar o cálice na elevação `[virk- + -or]`
+- **virttek** (2ª, pl. *virtteko*) — instrumento ou meio para consagrar o cálice na elevação `[virk- + -tek]`
+- **viskhuxil** (2ª, pl. *viskhuxilo*) — tira de linho limpo para envolver membros feridos `[visk- (enfaixar) + huxil (pano)]`
+- **viskia** (1ª, pl. *viskiar*) — lugar, recinto ou oficina de enfaixar ferida `[visk- + -ia]`
+- **viskor** (2ª, pl. *viskoro*) — ato ou efeito de enfaixar ferida `[visk- + -or]`
+- **visttek** (2ª, pl. *vistteko*) — instrumento ou meio para enfaixar ferida `[visk- + -tek]`
+- **vittek** (2ª, pl. *vitteko*) — instrumento ou meio para acender todas as arandelas do salão `[vik- + -tek]`
+- **vok** (2ª, pl. *voko*) — sangue, fluido vital (Dat. arcaico sideral: vox) `[raiz primária vok]`
+- **vok'ar** (2ª, pl. *vok'aro*) — vaso pulsátil que leva sangue do coração ao corpo `[vok (sangue) + var (caminho)]`
+- **Vokkura** (1ª, pl. *Vokkurar*) — carne/sangue corrompido, mortos-vivos `[vok + kura]`
+- **vokor** (2ª, pl. *vokoro*) — carne viva, músculo irrigado, corpo `[vok + -or]`
+- **Vokátte** (1ª, pl. *Vokátter*) — O Guia de Sangue (exônimo plebeu: Vokát) `[vok + -átte]`
+- **volbia** (1ª, pl. *volbiar*) — lugar, recinto ou oficina de iluminar capitulares com pó de ouro e carmim `[volb- + -ia]`
+- **volbil** (2ª, pl. *volbilo*) — almofada de pelica usada para cortar lâminas de ouro `[raiz volb- + -il]`
+- **volbin** (2ª, pl. *volbino*) — aplicação de folha de ouro polida sobre gesso fino `[raiz volb- + -in]`
+- **volbor** (2ª, pl. *volboro*) — ato ou efeito de iluminar capitulares com pó de ouro e carmim `[volb- + -or]`
+- **volbtek** (2ª, pl. *volbteko*) — instrumento ou meio para iluminar capitulares com pó de ouro e carmim `[volb- + -tek]`
+- **volbude** (1ª, pl. *volbuder*) — sala bem iluminada reservada aos pintores de códices `[volb- + -ude]`
+- **volbur** (2ª, pl. *volburo*) — letra inicial pintada com figuras entrelaçadas e ouro `[raiz volb- + -ur]`
+- **volkia** (1ª, pl. *volkiar*) — lugar, recinto ou oficina de calafetar casco de nau com breu `[volk- + -ia]`
+- **volkor** (2ª, pl. *volkoro*) — ato ou efeito de calafetar casco de nau com breu `[volk- + -or]`
+- **Volleta** (1ª, pl. *Volletar*) — órgão viril diminuto (termo satírico) `[vok + lita (kl -> ll)]`
+- **volttek** (2ª, pl. *voltteko*) — instrumento ou meio para calafetar casco de nau com breu `[volk- + -tek]`
+- **vorbia** (1ª, pl. *vorbiar*) — lugar, recinto ou oficina de manter postos de muda com montarias descansadas nas estradas reais `[vorb- + -ia]`
+- **vorbor** (2ª, pl. *vorboro*) — ato ou efeito de manter postos de muda com montarias descansadas nas estradas reais `[vorb- + -or]`
+- **vorbtek** (2ª, pl. *vorbteko*) — instrumento ou meio para manter postos de muda com montarias descansadas nas estradas reais `[vorb- + -tek]`
+- **vorkia** (1ª, pl. *vorkiar*) — lugar, recinto ou oficina de expelir colunas de cinza e magma pela cratera aberta `[vork- + -ia]`
+- **vorkor** (2ª, pl. *vorkoro*) — ato ou efeito de expelir colunas de cinza e magma pela cratera aberta `[vork- + -or]`
+- **vorttek** (2ª, pl. *vortteko*) — instrumento ou meio para expelir colunas de cinza e magma pela cratera aberta `[vork- + -tek]`
+- **votte** (1ª, pl. *votter*) — executor, açougueiro, carrasco (vulgar: vocte) `[vok + -te (kt -> tt)]`
+- **vuldir** (2ª, pl. *vuldiro*) — verão, estação das noites quentes `[vur + nir (rn -> ld)]`
+- **vule** (1ª, pl. *vuler*) — vontade, arbítrio, determinação `[raiz vul-]`
+- **vulkia** (1ª, pl. *vulkiar*) — lugar, recinto ou oficina de cunhar moedas com a efígie real `[vulk- + -ia]`
+- **vulkor** (2ª, pl. *vulkoro*) — ato ou efeito de cunhar moedas com a efígie real `[vulk- + -or]`
+- **vulor** (2ª, pl. *vuloro*) — propósito, desígnio da vontade, anseio `[vul- + -or]`
+- **vulpia** (1ª, pl. *vulpiar*) — lugar, recinto ou oficina de estocar fardos no celeiro alfandegário `[vulp- + -ia]`
+- **vulpor** (2ª, pl. *vulporo*) — ato ou efeito de estocar fardos no celeiro alfandegário `[vulp- + -or]`
+- **vulptek** (2ª, pl. *vulpteko*) — instrumento ou meio para estocar fardos no celeiro alfandegário `[vulp- + -tek]`
+- **vulttek** (2ª, pl. *vultteko*) — instrumento ou meio para cunhar moedas com a efígie real `[vulk- + -tek]`
+- **vulupkosia** (1ª, pl. *vulupkosiar*) — câmara arejada e seca para armazenar grãos e fardos `[vlup- + kosia]`
+- **vuluptepia** (1ª, pl. *vuluptepiar*) — grande galpão de madeira e pedra para estocagem de sacas `[vlup- + tepia]`
+- **vur** (2ª, pl. *vuro*) — fogo, chama, brasa ardente `[raiz primária vur]`
+- **vuranvilttor** (2ª, pl. *vuranvilttoro*) — pasta quente de farinha e ervas aplicada sobre o peito `[vuran (quente) + viltor]`
+- **vurfasor** (2ª, pl. *vurfasoro*) — elevação anormal do calor do corpo na doença `[vur (fogo) + fasor (doença)]`
+- **vuria** (1ª, pl. *vuriar*) — fornalha, forja `[vur + -ia]`
+- **vurkia** (1ª, pl. *vurkiar*) — lugar, recinto ou oficina de jorrar água termal ou gêiser `[vurk- + -ia]`
+- **vurkor** (2ª, pl. *vurkoro*) — ato ou efeito de jorrar água termal ou gêiser `[vurk- + -or]`
+- **vurkorvé** (1ª, pl. *vurkorver*) — breu inflamável extraído dos pinheiros `[vur (fogo) + korvé (resina)]`
+- **vuror** (2ª, pl. *vuro'o*) — calor extremo, incandescência, conflagração `[vur + -or]`
+- **vuroxetep** (2ª, pl. *vuroxetepo*) — sistema de fornalhas sob o piso de pedra para aquecer salões `[vur (fogo) + oxe (piso) + tep]`
+- **vursaittek** (2ª, pl. *vursaitteko*) — ferro aquecido ao rubro para estancar hemorragias `[vur (fogo) + saittek]`
+- **vurtek** (2ª, pl. *vurteko*) — atiçador do fogo `[vur + -tek]`
+- **vurtep** (2ª, pl. *vurtepo*) — lareira de pedra, fogão a lenha, fogo central da morada `[vur (fogo) + tep (casa)]`
+- **vurttek** (2ª, pl. *vurtteko*) — instrumento ou meio para jorrar água termal ou gêiser `[vurk- + -tek]`
+- **Vé** (1ª, pl. *Ver*) — água (único substantivo com acento agudo diferencial) `[raiz primária Vé]`
+- **Véporos** (2ª, pl. *Véporoso*) — Casa das Águas (Grande Casa Nobre) `[Vé + poros]`
+- **vétek** (2ª, pl. *véteko*) — balde, vasilha de água `[Vé + -tek]`
+- **Vétrátte** (1ª, pl. *Vétrátter*) — Ulmo, Senhor das Águas e Oceanos (var. Vetrátte) `[Vé + Trátte]`
+- **Vêpalk** (2ª, pl. *Vêpalko*) — Passo das Águas (forma atemática de Vepalkia) `[Vé + palk]`
+- **xakia** (1ª, pl. *xakiar*) — lugar, recinto ou oficina de atingir o ponto culminante no céu `[xak- + -ia]`
+- **xakor** (2ª, pl. *xakoro*) — ato ou efeito de atingir o ponto culminante no céu `[xak- + -or]`
+- **xalbia** (1ª, pl. *xalbiar*) — lugar, recinto ou oficina de bater a nata até formar manteiga `[xalb- + -ia]`
+- **xalbor** (2ª, pl. *xalboro*) — ato ou efeito de bater a nata até formar manteiga `[xalb- + -or]`
+- **xalbtek** (2ª, pl. *xalbteko*) — instrumento ou meio para bater a nata até formar manteiga `[xalb- + -tek]`
+- **xalia** (1ª, pl. *xaliar*) — lugar, recinto ou oficina de afixar o broche de sinete na roupagem `[xal- + -ia]`
+- **xalor** (2ª, pl. *xaloro*) — ato ou efeito de afixar o broche de sinete na roupagem `[xal- + -or]`
+- **xaltek** (2ª, pl. *xalteko*) — instrumento ou meio para afixar o broche de sinete na roupagem `[xal- + -tek]`
+- **xarpia** (1ª, pl. *xarpiar*) — lugar, recinto ou oficina de tossir `[xarp- + -ia]`
+- **xarpor** (2ª, pl. *xarporo*) — ato ou efeito de tossir `[xarp- + -or]`
+- **xarptek** (2ª, pl. *xarpteko*) — instrumento ou meio para tossir `[xarp- + -tek]`
+- **xattek** (2ª, pl. *xatteko*) — instrumento ou meio para atingir o ponto culminante no céu `[xak- + -tek]`
+- **xedia** (1ª, pl. *xediar*) — lugar, recinto ou oficina de orlar a capa com pele alva de arminho `[xed- + -ia]`
+- **xedor** (2ª, pl. *xedoro*) — ato ou efeito de orlar a capa com pele alva de arminho `[xed- + -or]`
+- **xelor** (2ª, pl. *xeloro*) — nevada, tempestade de neve `[xel- + -or]`
+- **xelpia** (1ª, pl. *xelpiar*) — lugar, recinto ou oficina de rodopiar em redemoinho de vento `[xelp- + -ia]`
+- **xelpor** (2ª, pl. *xelporo*) — ato ou efeito de rodopiar em redemoinho de vento `[xelp- + -or]`
+- **xelptek** (2ª, pl. *xelpteko*) — instrumento ou meio para rodopiar em redemoinho de vento `[xelp- + -tek]`
+- **xelvelotakor** (2ª, pl. *xelvelotakoro*) — flor-das-neves aveludada e alva dos picos `[xelvé (neve) + lota (bela) + kor]`
+- **xelvemald** (2ª, pl. *xelvemaldo*) — cervídeo de trenó adaptado à tundra glacial `[xelvé (neve) + mald (montaria)]`
+- **xelvepoke** (1ª, pl. *xelvepoker*) — animal de pelagem alva mimética no inverno `[xelvé (neve) + poke (animal)]`
+- **xelveynte** (1ª, pl. *xelveynter*) — animal saltador de orelhas longas que embranquece na neve `[xelvé (neve) + ynte (corredor)]`
+- **xelvé** (1ª, pl. *xelver*) — neve `[xel- + Vé]`
+- **xeptek** (2ª, pl. *xepteko*) — instrumento ou meio para tocar o clarim de alvorada ou carga `[xev- + -tek]`
+- **xer** (2ª, pl. *xero*) — céu, firmamento superior (var. 1ª Decl. xere) `[raiz primária xer]`
+- **xere** (1ª, pl. *xerer*) — céu, firmamento (variante temática de 1ª Declinação de xer) `[raiz xer-]`
+- **xerkade** (1ª, pl. *xerkader*) — zênite, ponto culminante do firmamento `[xer (céu) + kade (topo)]`
+- **xerkadetep** (2ª, pl. *xerkadetepo*) — torre octogonal no topo do palácio para observar a serra `[xer (céu) + kade + tep]`
+- **xerkia** (1ª, pl. *xerkiar*) — lugar, recinto ou oficina de podar ramos secos da árvore `[xerk- + -ia]`
+- **xerkor** (2ª, pl. *xerkoro*) — ato ou efeito de podar ramos secos da árvore `[xerk- + -or]`
+- **xeroxe** (1ª, pl. *xeroxer*) — horizonte, linha onde o céu encontra a terra `[xer (céu) + oxe (terra)]`
+- **xerpokegar** (2ª, pl. *xerpokegaro*) — grande ave soberana dos picos mais altos `[xer (céu) + pokegar (ave real)]`
+- **xerrixe** (1ª, pl. *xerrixer*) — pedra caída do céu, meteorito sideral de forja `[xer (céu) + rixe (rocha)]`
+- **xertep** (2ª, pl. *xertepo*) — teto hemisférico monumental erguido sobre o salão `[xer (abóbada celeste) + tep]`
+- **xerttek** (2ª, pl. *xertteko*) — instrumento ou meio para podar ramos secos da árvore `[xerk- + -tek]`
+- **xervure** (1ª, pl. *xervurer*) — farol imperial de cantaria sobre penhasco costeiro `[xer- (alto) + vure (fogo/luz), termina em -e (1 decl)]`
+- **xervuril** (2ª, pl. *xervurilo*) — estrela cadente, bólido luminoso na noite `[xer (céu) + vuril (centelha de fogo)]`
+- **xerykorgar** (2ª, pl. *xerykorgaro*) — esfera de anéis metálicos que representa o cosmos `[xery (celeste) + kor (aro) + -gar]`
+- **xeryoxte** (1ª, pl. *xeryoxter*) — constelação do Guerreiro Celeste `[xery (do céu) + oxte (guerreiro)]`
+- **Xerypalk** (2ª, pl. *Xerypalko*) — Passo do Céu (forma atemática de Xerypalkia) `[xery + palk]`
+- **xerypalkgar** (2ª, pl. *xerypalkgaro*) — ponto orbital mais distante da Terra `[xery (celeste) + palk (passo) + -gar]`
+- **Xerypalkia** (1ª, pl. *Xerypalkiar*) — Serras do Firmamento (província de Karytírë) `[xery + palk + -ia]`
+- **xerypokegar** (2ª, pl. *xerypokegaro*) — constelação boreal do Grande Guardião do Norte `[xery (do céu) + pokegar (grande fera)]`
+- **xettek** (2ª, pl. *xetteko*) — instrumento ou meio para orlar a capa com pele alva de arminho `[xed- + -tek]`
+- **xevadhuxil** (2ª, pl. *xevadhuxilo*) — gola de arminho ajustada ao colarinho da túnica `[xved- + huxil]`
+- **xevia** (1ª, pl. *xeviar*) — lugar, recinto ou oficina de tocar o clarim de alvorada ou carga `[xev- + -ia]`
+- **xevor** (2ª, pl. *xevoro*) — ato ou efeito de tocar o clarim de alvorada ou carga `[xev- + -or]`
+- **xikia** (1ª, pl. *xikiar*) — lugar, recinto ou oficina de agasalhar o hóspede com peles perto do fogo `[xik- + -ia]`
+- **xikor** (2ª, pl. *xikoro*) — ato ou efeito de agasalhar o hóspede com peles perto do fogo `[xik- + -or]`
+- **xiria** (1ª, pl. *xiriar*) — lugar, recinto ou oficina de esconjurar sombra ou espírito impuro `[xir- + -ia]`
+- **xiror** (2ª, pl. *xiro'o*) — ato ou efeito de esconjurar sombra ou espírito impuro `[xir- + -or]`
+- **xirtek** (2ª, pl. *xirteko*) — instrumento ou meio para esconjurar sombra ou espírito impuro `[xir- + -tek]`
+- **xittek** (2ª, pl. *xitteko*) — instrumento ou meio para agasalhar o hóspede com peles perto do fogo `[xik- + -tek]`
+- **xullitrpoke** (1ª, pl. *xullitrpoker*) — inseto robusto revestido de penugem que poliniza sob o frio `[xun (amarelo) + litr (zumbir) + poke, nl -> ll]`
+- **xun** (2ª, pl. *xuno*) — cor amarela imperial, dourado solar (expurgado xün) `[raiz primária xun]`
+- **xunfealan** (2ª, pl. *xunfealano*) — arrebol dourado da aurora, rubor matinal `[xun (dourado) + fealan (aurora)]`
+- **xunferil** (2ª, pl. *xunferilo*) — pó dourado fecundo levado pelo vento `[xun (dourado) + fer (vento) + -il]`
+- **xunkorfel** (2ª, pl. *xunkorfelo*) — fruto dourado meridional (coloquial: Banánna) `[xun (amarelo) + kor (árvore) + fel (fruto)]`
+- **xunkoril** (2ª, pl. *xunkorilo*) — zimbro aromático de bagas azuladas das serras `[xun (aromático/dourado) + koril (arbusto)]`
+- **xunyhuxil** (2ª, pl. *xunyhuxilo*) — faixa de seda cor de ouro usada pelos arautos imperiais `[xuny + huxil]`
+- **xurkia** (1ª, pl. *xurkiar*) — lugar, recinto ou oficina de banir para além das fronteiras `[xurk- + -ia]`
+- **xurkor** (2ª, pl. *xurkoro*) — ato ou efeito de banir para além das fronteiras `[xurk- + -or]`
+- **xurttek** (2ª, pl. *xurtteko*) — instrumento ou meio para banir para além das fronteiras `[xurk- + -tek]`
+- **Yamakoz** (2ª, pl. *Yamakozo*) — Cidade Imortal / título de Giovanni Sprezzatura `[topônimo/título]`
+- **yarptek** (2ª, pl. *yarpteko*) — instrumento ou meio para agir com magnanimidade e nobreza de alma perdoando agravos `[yarv- + -tek]`
+- **yarvia** (1ª, pl. *yarviar*) — lugar, recinto ou oficina de agir com magnanimidade e nobreza de alma perdoando agravos `[yarv- + -ia]`
+- **yarvor** (2ª, pl. *yarvoro*) — ato ou efeito de agir com magnanimidade e nobreza de alma perdoando agravos `[yarv- + -or]`
+- **yelkia** (1ª, pl. *yelkiar*) — lugar, recinto ou oficina de estagnar em aguas placidas de espelho alpino `[yelk- + -ia]`
+- **yelkor** (2ª, pl. *yelkoro*) — ato ou efeito de estagnar em aguas placidas de espelho alpino `[yelk- + -or]`
+- **yelttek** (2ª, pl. *yeltteko*) — instrumento ou meio para estagnar em aguas placidas de espelho alpino `[yelk- + -tek]`
+- **yerbia** (1ª, pl. *yerbiar*) — lugar, recinto ou oficina de orientar rumos de marcha com agulha imantada em taça de bronze `[yerb- + -ia]`
+- **yerbor** (2ª, pl. *yerboro*) — ato ou efeito de orientar rumos de marcha com agulha imantada em taça de bronze `[yerb- + -or]`
+- **yerbtek** (2ª, pl. *yerbteko*) — instrumento ou meio para orientar rumos de marcha com agulha imantada em taça de bronze `[yerb- + -tek]`
+- **yerpia** (1ª, pl. *yerpiar*) — lugar, recinto ou oficina de guardar juramentos sagrados e lealdade inabalável ao suserano `[yerp- + -ia]`
+- **yerpor** (2ª, pl. *yerporo*) — ato ou efeito de guardar juramentos sagrados e lealdade inabalável ao suserano `[yerp- + -or]`
+- **yerptek** (2ª, pl. *yerpteko*) — instrumento ou meio para guardar juramentos sagrados e lealdade inabalável ao suserano `[yerp- + -tek]`
+- **ynnixil** (2ª, pl. *ynnixilo*) — osso frontal resistente da canela `[yn- (andar) + rixil, nr -> nn]`
+- **ynnixilgar** (2ª, pl. *ynnixilgaro*) — osso da coxa, o mais longo e forte do esqueleto `[yn- (andar) + rixilgar, nr -> nn]`
+- **ynte** (1ª, pl. *ynter*) — viajante, caminhante, andarilho `[yn- + -te]`
+- **yntek** (2ª, pl. *ynteko*) — cajado, bordão de viagem `[yn- + -tek]`
+- **yntekkor** (2ª, pl. *yntekkoro*) — freixo firme usado para hastes de lança e cajados `[yntek (cajado/haste) + kor (árvore)]`
+- **yolpia** (1ª, pl. *yolpiar*) — lugar, recinto ou oficina de entoar acordes celestiais na sinfonia cósmica do Halylitror `[yolp- + -ia]`
+- **yolpor** (2ª, pl. *yolporo*) — ato ou efeito de entoar acordes celestiais na sinfonia cósmica do Halylitror `[yolp- + -or]`
+- **yolptek** (2ª, pl. *yolpteko*) — instrumento ou meio para entoar acordes celestiais na sinfonia cósmica do Halylitror `[yolp- + -tek]`
+- **yulbia** (1ª, pl. *yulbiar*) — lugar, recinto ou oficina de deslizar lentamente em leito glacial esculpindo o vale `[yulb- + -ia]`
+- **yulbor** (2ª, pl. *yulboro*) — ato ou efeito de deslizar lentamente em leito glacial esculpindo o vale `[yulb- + -or]`
+- **yulbtek** (2ª, pl. *yulbteko*) — instrumento ou meio para deslizar lentamente em leito glacial esculpindo o vale `[yulb- + -tek]`
+- **yurpia** (1ª, pl. *yurpiar*) — lugar, recinto ou oficina de rodopiar em redemoinhos velozes nas confluencias de correntes `[yurp- + -ia]`
+- **yurpor** (2ª, pl. *yurporo*) — ato ou efeito de rodopiar em redemoinhos velozes nas confluencias de correntes `[yurp- + -or]`
+- **yurptek** (2ª, pl. *yurpteko*) — instrumento ou meio para rodopiar em redemoinhos velozes nas confluencias de correntes `[yurp- + -tek]`
+- **zalkia** (1ª, pl. *zalkiar*) — lugar, recinto ou oficina de cambiar moedas de diferentes cunhos `[zalk- + -ia]`
+- **zalkor** (2ª, pl. *zalkoro*) — ato ou efeito de cambiar moedas de diferentes cunhos `[zalk- + -or]`
+- **zalor** (2ª, pl. *zaloro*) — pagamento, quitação `[zal- + -or]`
+- **zalptek** (2ª, pl. *zalpteko*) — instrumento ou meio para renovar o cosmos após a consumação dos tempos na Segunda Canção `[zalv- + -tek]`
+- **zalte** (1ª, pl. *zalter*) — pagador, tesoureiro `[zal- + -te]`
+- **zalttek** (2ª, pl. *zaltteko*) — instrumento ou meio para cambiar moedas de diferentes cunhos `[zalk- + -tek]`
+- **zalvia** (1ª, pl. *zalviar*) — lugar, recinto ou oficina de renovar o cosmos após a consumação dos tempos na Segunda Canção `[zalv- + -ia]`
+- **zalvor** (2ª, pl. *zalvoro*) — ato ou efeito de renovar o cosmos após a consumação dos tempos na Segunda Canção `[zalv- + -or]`
+- **zardia** (1ª, pl. *zardiar*) — lugar, recinto ou oficina de abrir sessão solene do tribunal com bastão `[zard- + -ia]`
+- **zardor** (2ª, pl. *zardoro*) — ato ou efeito de abrir sessão solene do tribunal com bastão `[zard- + -or]`
+- **zardur** (2ª, pl. *zarduro*) — bastão de comando e marfim usado pelo juiz supremo da corte `[raiz zard- + -ur]`
+- **zarptek** (2ª, pl. *zarpteko*) — instrumento ou meio para acender a Chama Imperecível infundindo vida consciente na criação `[zarv- + -tek]`
+- **zarttek** (2ª, pl. *zartteko*) — instrumento ou meio para abrir sessão solene do tribunal com bastão `[zard- + -tek]`
+- **zarttep** (2ª, pl. *zarttepo*) — palácio de justiça com pórtico de colunas e tribunal `[raiz zard- + tep, dt -> tt]`
+- **zarvia** (1ª, pl. *zarviar*) — lugar, recinto ou oficina de acender a Chama Imperecível infundindo vida consciente na criação `[zarv- + -ia]`
+- **zarvor** (2ª, pl. *zarvoro*) — ato ou efeito de acender a Chama Imperecível infundindo vida consciente na criação `[zarv- + -or]`
+- **zasparde** (1ª, pl. *zasparder*) — acordo solene de herança partilhada em partes justas `[zasp- + arde, termina em -e (1 decl)]`
+- **zaspia** (1ª, pl. *zaspiar*) — lugar, recinto ou oficina de calafetar juntas do casco de carvalho com estopa e piche `[zasp- + -ia]`
+- **zaspil** (2ª, pl. *zaspilo*) — meada de estopa alcatroada pronta para vedação de frestas `[raiz zasp- + -il]`
+- **zaspin** (2ª, pl. *zaspino*) — calafetagem hermética das cavernas e tabuados do costado naval `[raiz zasp- + -in]`
+- **zaspor** (2ª, pl. *zasporo*) — ato ou efeito de calafetar juntas do casco de carvalho com estopa e piche `[zasp- + -or]`
+- **zasptek** (2ª, pl. *zaspteko*) — instrumento ou meio para calafetar juntas do casco de carvalho com estopa e piche `[zasp- + -tek]`
+- **zaspur** (2ª, pl. *zaspuro*) — maço de ferro pesado e cinzel de fenda do calafate naval `[raiz zasp- + -ur]`
+- **zeklitrtek** (2ª, pl. *zeklitrteko*) — peça torneada que gira para esticar e afinar a corda `[zek- + litrtek]`
+- **zelbande** (1ª, pl. *zelbander*) — jovem iniciado que retorna vitorioso da primeira caçada `[zelb- + ande, termina em -e (1 decl)]`
+- **zelbia** (1ª, pl. *zelbiar*) — lugar, recinto ou oficina de destilar vapores voláteis em serpentina `[zelb- + -ia]`
+- **zelbil** (2ª, pl. *zelbilo*) — redoma de vidro bojuda para retenção de vapores `[raiz zelb- + -il]`
+- **zelbin** (2ª, pl. *zelbino*) — condensação de espíritos e elixires no resfriador `[raiz zelb- + -in]`
+- **zelbole** (1ª, pl. *zelboler*) — borbulhar contínuo de vapor passando pelo condensador `[zelb- + -ole]`
+- **zelbor** (2ª, pl. *zelboro*) — ato ou efeito de destilar vapores voláteis em serpentina `[zelb- + -or]`
+- **zelbtek** (2ª, pl. *zelbteko*) — instrumento ou meio para destilar vapores voláteis em serpentina `[zelb- + -tek]`
+- **zelbur** (2ª, pl. *zelburo*) — alambique de cobre com serpentina de resfriamento `[raiz zelb- + -ur]`
+- **zelkia** (1ª, pl. *zelkiar*) — lugar, recinto ou oficina de cicatrizar a pele `[zelk- + -ia]`
+- **zelkor** (2ª, pl. *zelkoro*) — ato ou efeito de cicatrizar a pele `[zelk- + -or]`
+- **zelmia** (1ª, pl. *zelmiar*) — lugar, recinto ou oficina de semear grãos a lanço nos canteiros `[zelm- + -ia]`
+- **zelmil** (2ª, pl. *zelmilo*) — saco de lona tiracolo para semeadura a lanço `[raiz zelm- + -il]`
+- **zelmor** (2ª, pl. *zelmoro*) — ato ou efeito de semear grãos a lanço nos canteiros `[zelm- + -or]`
+- **zelmorde** (1ª, pl. *zelmorder*) — herdeiro primogênito designado guardião da casa `[zelm- + orde, termina em -e (1 decl)]`
+- **zelmtake** (1ª, pl. *zelmtaker*) — bancada de cantaria com pias para decantação `[zelm- + take]`
+- **zelmtede** (1ª, pl. *zelmteder*) — carta náutica de pergaminho traçada com rosas dos ventos `[zelm- + tede (registro), termina em -e (1 decl)]`
+- **zelmtek** (2ª, pl. *zelmteko*) — instrumento ou meio para semear grãos a lanço nos canteiros `[zelm- + -tek]`
+- **zelmvinde** (1ª, pl. *zelmvinder*) — nevoeiro marinho espesso que cega o timoneiro `[zelm- + vinde (bruma), termina em -e (1 decl)]`
+- **zelpia** (1ª, pl. *zelpiar*) — lugar, recinto ou oficina de gravar selo imperial de cera `[zelp- + -ia]`
+- **zelpil** (2ª, pl. *zelpilo*) — sinete portátil de bolso gravado com as armas do conde `[raiz zelp- + -il]`
+- **zelpine** (1ª, pl. *zelpiner*) — caixa de veludo forrada de estanho para guardar os sinetes `[zelp- + -ine]`
+- **zelpir** (2ª, pl. *zelpiro*) — chancela de chumbo pendente de fita de seda do diploma régio `[raiz zelp- + -ir]`
+- **zelpor** (2ª, pl. *zelporo*) — ato ou efeito de gravar selo imperial de cera `[zelp- + -or]`
+- **zelptek** (2ª, pl. *zelpteko*) — instrumento ou meio para gravar selo imperial de cera `[zelp- + -tek]`
+- **zelpvor** (2ª, pl. *zelpvoro*) — lacre escarlate de cera virgem e resina aromática `[raiz zelp- + -vor]`
+- **zelttek** (2ª, pl. *zeltteko*) — instrumento ou meio para cicatrizar a pele `[zelk- + -tek]`
+- **zelttoret** (2ª, pl. *zelttoreto*) — remate triangular da fachada de um santuário `[zelta (três/triângulo) + toret]`
+- **zelvande** (1ª, pl. *zelvander*) — nora acolhida com presentes na casa da nova família `[zel- + vande, termina em -e (1 decl)]`
+- **zenor** (2ª, pl. *zenoro*) — amigo fiel de travessia, companheiro leal de jornada `[raiz zen- (lealdade) + -or]`
+- **zerbia** (1ª, pl. *zerbiar*) — lugar, recinto ou oficina de pisar uvas maduras em lagar de cantaria `[zerb- + -ia]`
+- **zerbor** (2ª, pl. *zerboro*) — ato ou efeito de pisar uvas maduras em lagar de cantaria `[zerb- + -or]`
+- **zerbtek** (2ª, pl. *zerbteko*) — instrumento ou meio para pisar uvas maduras em lagar de cantaria `[zerb- + -tek]`
+- **zerdia** (1ª, pl. *zerdiar*) — lugar, recinto ou oficina de britar blocos de basalto na mina `[zerd- + -ia]`
+- **zerdil** (2ª, pl. *zerdilo*) — seixo pontiagudo de basalto resultante da quebra `[raiz zerd- + -il]`
+- **zerdin** (2ª, pl. *zerdino*) — britagem manual de rocha dura para lastro e fundações `[raiz zerd- + -in]`
+- **zerdor** (2ª, pl. *zerdoro*) — ato ou efeito de britar blocos de basalto na mina `[zerd- + -or]`
+- **zerdur** (2ª, pl. *zerduro*) — marreta de ferro nodular para quebrar blocos de basalto `[raiz zerd- + -ur]`
+- **zerpia** (1ª, pl. *zerpiar*) — lugar, recinto ou oficina de irrigar as várzeas por canais de água `[zerp- + -ia]`
+- **zerpir** (2ª, pl. *zerpiro*) — canal principal de rega cavado na encosta do vale `[raiz zerp- + -ir]`
+- **zerpor** (2ª, pl. *zerporo*) — ato ou efeito de irrigar as várzeas por canais de água `[zerp- + -or]`
+- **zerptek** (2ª, pl. *zerpteko*) — instrumento ou meio para irrigar as várzeas por canais de água `[zerp- + -tek]`
+- **zerttek** (2ª, pl. *zertteko*) — instrumento ou meio para britar blocos de basalto na mina `[zerd- + -tek]`
+- **zerveg** (2ª, pl. *zervego*) — sulco raso condutor de rega entre as plantas `[zerp- + vega, pv -> v]`
+- **zetia** (1ª, pl. *zetiar*) — lugar, recinto ou oficina de entretecer fios dourados no brocado real `[zet- + -ia]`
+- **zetor** (2ª, pl. *zetoro*) — ato ou efeito de entretecer fios dourados no brocado real `[zet- + -or]`
+- **zettek** (2ª, pl. *zetteko*) — instrumento ou meio para entretecer fios dourados no brocado real `[zet- + -tek]`
+- **zetul** (2ª, pl. *zetulo*) — compartimento telado para secagem e abrigo de sementes-matrizes `[raiz tulm- + ze-]`
+- **zikia** (1ª, pl. *zikiar*) — lugar, recinto ou oficina de celebrar bodas ou aliança entre famílias `[zik- + -ia]`
+- **zikor** (2ª, pl. *zikoro*) — ato ou efeito de celebrar bodas ou aliança entre famílias `[zik- + -or]`
+- **zilipnyke** (1ª, pl. *zilipnyker*) — cancela de madeira e ferro onde se cobra o pedágio `[zlip- + nyke]`
+- **ziliptette** (1ª, pl. *ziliptetter*) — arrecadador que cobra a tarifa de trânsito dos viandantes `[zlip- + tette]`
+- **zilkia** (1ª, pl. *zilkiar*) — lugar, recinto ou oficina de cobrar pedágio de passagem na ponte condal `[zilk- + -ia]`
+- **zilkor** (2ª, pl. *zilkoro*) — ato ou efeito de cobrar pedágio de passagem na ponte condal `[zilk- + -or]`
+- **zilttek** (2ª, pl. *ziltteko*) — instrumento ou meio para cobrar pedágio de passagem na ponte condal `[zilk- + -tek]`
+- **ziria** (1ª, pl. *ziriar*) — lugar, recinto ou oficina de afinar os tubos do grande órgão `[zir- + -ia]`
+- **ziror** (2ª, pl. *ziro'o*) — ato ou efeito de afinar os tubos do grande órgão `[zir- + -or]`
+- **zirtek** (2ª, pl. *zirteko*) — instrumento ou meio para afinar os tubos do grande órgão `[zir- + -tek]`
+- **zittek** (2ª, pl. *zitteko*) — instrumento ou meio para celebrar bodas ou aliança entre famílias `[zik- + -tek]`
+- **zolbia** (1ª, pl. *zolbiar*) — lugar, recinto ou oficina de escavar galerias subterrâneas de sapa e minas sob alicerces `[zolb- + -ia]`
+- **zolbor** (2ª, pl. *zolboro*) — ato ou efeito de escavar galerias subterrâneas de sapa e minas sob alicerces `[zolb- + -or]`
+- **zolbtek** (2ª, pl. *zolbteko*) — instrumento ou meio para escavar galerias subterrâneas de sapa e minas sob alicerces `[zolb- + -tek]`
+- **zoldia** (1ª, pl. *zoldiar*) — lugar, recinto ou oficina de ressoar o eco nos desfiladeiros `[zold- + -ia]`
+- **zoldor** (2ª, pl. *zoldoro*) — ato ou efeito de ressoar o eco nos desfiladeiros `[zold- + -or]`
+- **zolttek** (2ª, pl. *zoltteko*) — instrumento ou meio para ressoar o eco nos desfiladeiros `[zold- + -tek]`
+- **zorbia** (1ª, pl. *zorbiar*) — lugar, recinto ou oficina de agasalhar peregrinos oferecendo pão `[zorb- + -ia]`
+- **zorbor** (2ª, pl. *zorboro*) — ato ou efeito de agasalhar peregrinos oferecendo pão `[zorb- + -or]`
+- **zorbtek** (2ª, pl. *zorbteko*) — instrumento ou meio para agasalhar peregrinos oferecendo pão `[zorb- + -tek]`
+- **zorkia** (1ª, pl. *zorkiar*) — lugar, recinto ou oficina de lavar cascalho no crivo para gemas `[zork- + -ia]`
+- **zorkil** (2ª, pl. *zorkilo*) — fração densa de areia negra e pepitas retida no fundo `[raiz zork- + -il]`
+- **zorkin** (2ª, pl. *zorkino*) — bateamento de cascalho aurífero na correnteza do canal `[raiz zork- + -in]`
+- **zorkor** (2ª, pl. *zorkoro*) — ato ou efeito de lavar cascalho no crivo para gemas `[zork- + -or]`
+- **zorkur** (2ª, pl. *zorkuro*) — bateia circular de madeira para separar ouro e gemas `[raiz zork- + -ur]`
+- **zorpalde** (1ª, pl. *zorpalder*) — cortejo nupcial que caminha à luz de tochas pela aldeia `[zorp- + alde, termina em -e (1 decl)]`
+- **zorpia** (1ª, pl. *zorpiar*) — lugar, recinto ou oficina de singrar vagas revoltas com proa erguida `[zorp- + -ia]`
+- **zorpil** (2ª, pl. *zorpilo*) — leme de popa articulado por gonzos de ferro forjado `[raiz zorp- + -il]`
+- **zorpin** (2ª, pl. *zorpino*) — singradura veloz impulsionada por vento de feição favorável `[raiz zorp- + -in]`
+- **zorpor** (2ª, pl. *zorporo*) — ato ou efeito de singrar vagas revoltas com proa erguida `[zorp- + -or]`
+- **zorptek** (2ª, pl. *zorpteko*) — instrumento ou meio para singrar vagas revoltas com proa erguida `[zorp- + -tek]`
+- **zorpur** (2ª, pl. *zorpuro*) — proa afilada de carvalho com rostro de bronze para corte de vagas `[raiz zorp- + -ur]`
+- **zorttek** (2ª, pl. *zortteko*) — instrumento ou meio para lavar cascalho no crivo para gemas `[zork- + -tek]`
+- **zukia** (1ª, pl. *zukiar*) — lugar, recinto ou oficina de forjar elos de corrente ou cota `[zuk- + -ia]`
+- **zukor** (2ª, pl. *zukoro*) — ato ou efeito de forjar elos de corrente ou cota `[zuk- + -or]`
+- **zukxia** (1ª, pl. *zukxiar*) — lugar, recinto ou oficina de empenhar palavra ou penhor real `[zukx- + -ia]`
+- **zukxor** (2ª, pl. *zukxoro*) — ato ou efeito de empenhar palavra ou penhor real `[zukx- + -or]`
+- **zukxtek** (2ª, pl. *zukxteko*) — instrumento ou meio para empenhar palavra ou penhor real `[zukx- + -tek]`
+- **zulpia** (1ª, pl. *zulpiar*) — lugar, recinto ou oficina de percorrer as casas das constelações `[zulp- + -ia]`
+- **zulpor** (2ª, pl. *zulporo*) — ato ou efeito de percorrer as casas das constelações `[zulp- + -or]`
+- **zulptek** (2ª, pl. *zulpteko*) — instrumento ou meio para percorrer as casas das constelações `[zulp- + -tek]`
+- **zurbia** (1ª, pl. *zurbiar*) — lugar, recinto ou oficina de ensilar cereais em tulha elevada de madeira `[zurb- + -ia]`
+- **zurbil** (2ª, pl. *zurbilo*) — silo cilíndrico de madeira com assoalho ripado contra umidade `[raiz zurb- + -il]`
+- **zurbor** (2ª, pl. *zurboro*) — ato ou efeito de ensilar cereais em tulha elevada de madeira `[zurb- + -or]`
+- **zurbtek** (2ª, pl. *zurbteko*) — instrumento ou meio para ensilar cereais em tulha elevada de madeira `[zurb- + -tek]`
+- **zurptek** (2ª, pl. *zurpteko*) — instrumento ou meio para despencar em estrondo com massas de avalanche `[zurv- + -tek]`
+- **zurvia** (1ª, pl. *zurviar*) — lugar, recinto ou oficina de despencar em estrondo com massas de avalanche `[zurv- + -ia]`
+- **zurvor** (2ª, pl. *zurvoro*) — ato ou efeito de despencar em estrondo com massas de avalanche `[zurv- + -or]`
+- **zuttek** (2ª, pl. *zutteko*) — instrumento ou meio para forjar elos de corrente ou cota `[zuk- + -tek]`
+
+### IX.2. Adjetivos (446)
+- **aetika** — dissonante, estranho, alheio à harmonia *(comp: maer aetika | sup: aetikan | adv: aetikavë)*
+- **akraza** — choroso, triste *(comp: maer akraza | sup: akrazan | adv: akrazavë)*
+- **akura** — virgem, incorrupto, imaculado *(comp: maer akura | sup: akuran | adv: akuravë)*
+- **alixa** — sujo, maculado *(comp: maer alixa | sup: alixan | adv: alixavë)*
+- **alota** — horrendo, disforme, intolerável *(comp: maer alota | sup: alotan | adv: alotavë)*
+- **amaka** — faminto *(comp: maer amaka | sup: amakan | adv: amakavë)*
+- **amatte** — esfomeado, faminto (de amak- + -te, kt -> tt; vulgar: amocte) *(comp: maer amatte | sup: amatten | adv: amattavë)*
+- **amyga** — inumerável, incontável (var. amygata) *(comp: maer amyga | sup: amygan | adv: amygavë)*
+- **amygata** — inumerável, incontável (forma ordinalizada de Myga) *(comp: maer amygata | sup: amygatan | adv: amygatavë)*
+- **anyka** — fechado, trancado *(comp: maer anyka | sup: anykan | adv: anykavë)*
+- **apeka** — consertado, inteiro *(comp: maer apeka | sup: apekan | adv: apekavë)*
+- **aruma** — imperial, soberano *(comp: maer aruma | sup: aruman | adv: arumavë)*
+- **aruxa** — cru *(comp: maer aruxa | sup: aruxan | adv: aruxavë)*
+- **atola** — feio, desfigurado *(comp: maer atola | sup: atolan | adv: atolavë)*
+- **avura** — gélido, glacial, congelante *(comp: maer avura | sup: avuran | adv: avuravë)*
+- **azala** — devedor, em dívida *(comp: maer azala | sup: azalan | adv: azalavë)*
+- **balka** — relativo ou propenso a palpitar o coração *(comp: maer balka | sup: balkn | adv: balkavë)*
+- **balpa** — relativo ou propenso a medir o tempo pelo gotejamento constante da clepsidra de bronze *(comp: maer balpa | sup: balpn | adv: balpavë)*
+- **bapa** — relativo ou propenso a adiantar barras de prata como crédito *(comp: maer bapa | sup: bapn | adv: bapavë)*
+- **barsexi** — irritante, importuno *(comp: maer barsexi | sup: barsexin | adv: barsexiavë)*
+- **bela** — diurno, claro, relativo ao dia *(comp: maer bela | sup: bell | adv: belavë)*
+- **belka** — relativo ou propenso a relampejar *(comp: maer belka | sup: belkn | adv: belkavë)*
+- **belpa** — relativo ou propenso a intercalar os dias sagrados fora do mês *(comp: maer belpa | sup: belpn | adv: belpavë)*
+- **berka** — relativo ou propenso a rachar o gelo na primavera *(comp: maer berka | sup: berkn | adv: berkavë)*
+- **berpa** — relativo ou propenso a caldear veios de enxofre mineral *(comp: maer berpa | sup: berpn | adv: berpavë)*
+- **beva** — relativo ou propenso a ancorar a nau em porto seguro *(comp: maer beva | sup: bevn | adv: beva'ë)*
+- **bika** — relativo ou propenso a embalar o berço da criança *(comp: maer bika | sup: bikn | adv: bikavë)*
+- **bilka** — relativo ou propenso a autenticar com selo de cera real *(comp: maer bilka | sup: bilkn | adv: bilkavë)*
+- **bilpa** — relativo ou propenso a meditar em silêncio contemplativo *(comp: maer bilpa | sup: bilpn | adv: bilpavë)*
+- **bira** — relativo ou propenso a decifrar inscrição arcaica pré-Síncrese *(comp: maer bira | sup: bild | adv: biravë)*
+- **birka** — relativo ou propenso a assentar tijolos ou blocos de pedra *(comp: maer birka | sup: birkn | adv: birkavë)*
+- **birpa** — relativo ou propenso a assar pães no forno de pedra comunitário *(comp: maer birpa | sup: birpn | adv: birpavë)*
+- **borpa** — relativo ou propenso a selar o cavalo de guerra com armação de couro e estribos de bronze *(comp: maer borpa | sup: borpn | adv: borpavë)*
+- **bulka** — relativo ou propenso a curtir o couro em tanino de casca *(comp: maer bulka | sup: bulkn | adv: bulkavë)*
+- **burka** — relativo ou propenso a inventariar o espólio da Casa *(comp: maer burka | sup: burkn | adv: burkavë)*
+- **bylka** — relativo ou propenso a timbrar o lacre de chumbo nas sacas *(comp: maer bylka | sup: bylkn | adv: bylkavë)*
+- **da** — ideal, relativo à ideia (forma sincopada de daia em idda/ledda) *(comp: maer da | sup: dan | adv: davë)*
+- **daia** — ideal, estelar, relativo à ideia (var. da) *(comp: maer daia | sup: daian | adv: daiavë)*
+- **dakkan** — nutritivo, farto, substancioso e saboroso *(comp: maer dakkan | sup: dakkann | adv: dakkanavë)*
+- **dala** — relativo ou propenso a apregoar lotes e peças no mercado público *(comp: maer dala | sup: dall | adv: dalavë)*
+- **dalba** — relativo ou propenso a decantar vinho maduro em ânfora lacrada com resina de zimbro *(comp: maer dalba | sup: dalbn | adv: dalbavë)*
+- **dalpa** — relativo ou propenso a descer materiais no poço por guincho *(comp: maer dalpa | sup: dalpn | adv: dalpavë)*
+- **darpa** — relativo ou propenso a trovejar *(comp: maer darpa | sup: darpn | adv: darpavë)*
+- **daspa** — relativo ou propenso a açular cães de rastro no rastro de cervo real *(comp: maer daspa | sup: daspn | adv: daspavë)*
+- **dela** — relativo ou propenso a fortificar trincheira ou paliçada *(comp: maer dela | sup: dell | adv: delavë)*
+- **delka** — relativo ou propenso a serpentear em meandros lentos pelas planicies aluviais *(comp: maer delka | sup: delkn | adv: delkavë)*
+- **delpa** — relativo ou propenso a arar gleba fértil da planície *(comp: maer delpa | sup: delpn | adv: delpavë)*
+- **derka** — relativo ou propenso a engolir *(comp: maer derka | sup: derkn | adv: derkavë)*
+- **derpa** — relativo ou propenso a tornear madeira ou marfim *(comp: maer derpa | sup: derpn | adv: derpavë)*
+- **dika** — relativo ou propenso a temperar o assado com ervas da serra *(comp: maer dika | sup: dikn | adv: dikavë)*
+- **dikxa** — relativo ou propenso a calçar botas encouraçadas para a neve *(comp: maer dikxa | sup: dikxn | adv: dikxavë)*
+- **dilka** — relativo ou propenso a acreditar embaixador junto à corte *(comp: maer dilka | sup: dilkn | adv: dilkavë)*
+- **dilva** — relativo ou propenso a solidificar em crosta vitrea e agulhas polares *(comp: maer dilva | sup: dilvn | adv: dilva'ë)*
+- **dima** — relativo ou propenso a venerar relíquia dos antigos *(comp: maer dima | sup: dimn | adv: dimavë)*
+- **dira** — relativo ou propenso a salmodiar em versículos alternados *(comp: maer dira | sup: dild | adv: diravë)*
+- **dirka** — relativo ou propenso a esculpir estátua em mármore ou rocha *(comp: maer dirka | sup: dirkn | adv: dirkavë)*
+- **dirpa** — relativo ou propenso a esporear o corcel a galope *(comp: maer dirpa | sup: dirpn | adv: dirpavë)*
+- **dolpa** — relativo ou propenso a consagrar rito de maioridade do jovem com unção de óleo *(comp: maer dolpa | sup: dolpn | adv: dolpavë)*
+- **dorka** — relativo ou propenso a afivelar o cinturão de montaria com correia *(comp: maer dorka | sup: dorkn | adv: dorkavë)*
+- **dorpa** — relativo ou propenso a promulgar edito imperial solene *(comp: maer dorpa | sup: dorpn | adv: dorpavë)*
+- **drinan** — de madeira maciça, entalhado em carvalho *(comp: maer drinan | sup: drinann | adv: drina'avë)*
+- **dulpa** — relativo ou propenso a acumular camadas espessas de nevasca nas encostas altas *(comp: maer dulpa | sup: dulpn | adv: dulpavë)*
+- **durka** — relativo ou propenso a cobrar tributo ou dízimo imperial *(comp: maer durka | sup: durkn | adv: durkavë)*
+- **durva** — relativo ou propenso a fluir em leito subterraneo escavando saloes cegos *(comp: maer durva | sup: durvn | adv: durva'ë)*
+- **edela** — nobre, aristocrático *(comp: maer edela | sup: edell | adv: edelavë)*
+- **elfa** — sacro, sagrado, consagrado *(comp: maer elfa | sup: elfan | adv: elfavë)*
+- **fada** — relativo ou propenso a conferir o manifesto de carga da nau *(comp: maer fada | sup: fadn | adv: fadavë)*
+- **faina** — pirateado, ilícito, clandestino *(comp: maer faina | sup: fainan | adv: fainavë)*
+- **fala** — sonolento *(comp: maer fala | sup: falan | adv: falavë)*
+- **falba** — relativo ou propenso a calcinar cinzas vegetais em cadinho refratário *(comp: maer falba | sup: falbn | adv: falbavë)*
+- **falka** — relativo ou propenso a podar galhos secos de árvores frutíferas *(comp: maer falka | sup: falkn | adv: falkavë)*
+- **falpa** — relativo ou propenso a cochilar suavemente *(comp: maer falpa | sup: falpn | adv: falpavë)*
+- **fapa** — relativo ou propenso a mergulhar no hemisfério inferior sob a terra *(comp: maer fapa | sup: fapn | adv: fapavë)*
+- **farba** — relativo ou propenso a vadear leitos rasos cruzando bancos de cascalho firme *(comp: maer farba | sup: farbn | adv: farbavë)*
+- **farda** — relativo ou propenso a prestar testemunho solene em juízo *(comp: maer farda | sup: fardn | adv: fardavë)*
+- **faspa** — relativo ou propenso a soltar queixume de dor ou esforço *(comp: maer faspa | sup: faspn | adv: faspavë)*
+- **feapa** — relativo ou propenso a projetar a sombra solar no relógio de pedra *(comp: maer feapa | sup: feapn | adv: feapavë)*
+- **felka** — relativo ou propenso a trançar cordas de cânhamo ou crina *(comp: maer felka | sup: felkn | adv: felkavë)*
+- **fera** — ventoso, aéreo, tempestuoso *(comp: maer fera | sup: feld | adv: feravë)*
+- **ferka** — relativo ou propenso a estremecer de calafrio ou emoção *(comp: maer ferka | sup: ferkn | adv: ferkavë)*
+- **ferpa** — relativo ou propenso a inspirar fundo o ar nos pulmões *(comp: maer ferpa | sup: ferpn | adv: ferpavë)*
+- **fexa** — relativo ou propenso a chover fino *(comp: maer fexa | sup: fexn | adv: fexavë)*
+- **fika** — relativo ou propenso a ensinar a gramática normativa *(comp: maer fika | sup: fikn | adv: fikavë)*
+- **fila** — abissal, primordial, profundo *(comp: maer fila | sup: fill | adv: filavë)*
+- **filda** — relativo ou propenso a encordoar o arco de guerra *(comp: maer filda | sup: fildn | adv: fildavë)*
+- **filpa** — relativo ou propenso a cintilar como estrela ou aurora boreal *(comp: maer filpa | sup: filpn | adv: filpavë)*
+- **fima** — relativo ou propenso a arbitrar litígio entre Casas Nobres *(comp: maer fima | sup: fimn | adv: fimavë)*
+- **fipa** — relativo ou propenso a varrer a cinza da lareira *(comp: maer fipa | sup: fipn | adv: fipavë)*
+- **firka** — relativo ou propenso a destilar essência de ervas alpinas *(comp: maer firka | sup: firkn | adv: firkavë)*
+- **firxa** — relativo ou propenso a incensar o altar nos ritos solenes *(comp: maer firxa | sup: firxn | adv: firxavë)*
+- **fisa** — relativo ou propenso a pregar botões de osso na túnica *(comp: maer fisa | sup: fisn | adv: fisavë)*
+- **folba** — relativo ou propenso a exalar vapores termais aquecidos pelo calor das profundezas *(comp: maer folba | sup: folbn | adv: folbavë)*
+- **folka** — relativo ou propenso a quitar débito no livro de contas *(comp: maer folka | sup: folkn | adv: folkavë)*
+- **fulka** — relativo ou propenso a sussurrar ao ouvido *(comp: maer fulka | sup: fulkn | adv: fulkavë)*
+- **fulva** — relativo ou propenso a jorrar jatos de vapor escaldante em geiseres ritmicos *(comp: maer fulva | sup: fulvn | adv: fulva'ë)*
+- **furka** — relativo ou propenso a arar a terra *(comp: maer furka | sup: furkn | adv: furkavë)*
+- **furpa** — relativo ou propenso a arrendar terras da Coroa *(comp: maer furpa | sup: furpn | adv: furpavë)*
+- **galpa** — relativo ou propenso a operar aríete e maquinismos pesados de quebra de muralhas *(comp: maer galpa | sup: galpn | adv: galpavë)*
+- **garvan** — límpido, cristalino como água fresca de degelo *(comp: maer garvan | sup: garvann | adv: garvanavë)*
+- **gasa** — relativo ou propenso a enfardar peças de veludo para a viagem *(comp: maer gasa | sup: gasn | adv: gasavë)*
+- **gaspa** — relativo ou propenso a celebrar banquete de noivado entre clãs aliados *(comp: maer gaspa | sup: gaspn | adv: gaspavë)*
+- **geva** — relativo ou propenso a remar contra a correnteza *(comp: maer geva | sup: gevn | adv: geva'ë)*
+- **gika** — relativo ou propenso a abotoar o manto com fivela de prata *(comp: maer gika | sup: gikn | adv: gikavë)*
+- **gikxa** — relativo ou propenso a prensar bagas silvestres para vinho *(comp: maer gikxa | sup: gikxn | adv: gikxavë)*
+- **gilka** — relativo ou propenso a piscar os olhos *(comp: maer gilka | sup: gilkn | adv: gilkavë)*
+- **gilpa** — relativo ou propenso a escalar escarpa ou muralha com gancho *(comp: maer gilpa | sup: gilpn | adv: gilpavë)*
+- **gima** — relativo ou propenso a contemplar a harmonia das esferas *(comp: maer gima | sup: gimn | adv: gimavë)*
+- **girka** — relativo ou propenso a cinzelar inscrição na lápide *(comp: maer girka | sup: girkn | adv: girkavë)*
+- **girpa** — relativo ou propenso a dedilhar as cordas da harpa *(comp: maer girpa | sup: girpn | adv: girpavë)*
+- **goban** — justo no preço, correto na medida e no trato *(comp: maer goban | sup: gobann | adv: gobanavë)*
+- **golka** — relativo ou propenso a congelar a superfície *(comp: maer golka | sup: golkn | adv: golkavë)*
+- **golpa** — relativo ou propenso a fundir metal no cadinho ardente *(comp: maer golpa | sup: golpn | adv: golpavë)*
+- **gonda** — relativo ou propenso a enxertar ramo frutífero em cavalo vigoroso *(comp: maer gonda | sup: gondn | adv: gondavë)*
+- **gorka** — relativo ou propenso a erodir a pedra pela água ou vento *(comp: maer gorka | sup: gorkn | adv: gorkavë)*
+- **gorpa** — relativo ou propenso a extrair minério da rocha com ponteira *(comp: maer gorpa | sup: gorpn | adv: gorpavë)*
+- **gulka** — relativo ou propenso a notificar oficialmente por arauto *(comp: maer gulka | sup: gulkn | adv: gulkavë)*
+- **gura** — chato, enfadonho, maçante *(comp: maer gura | sup: guran | adv: guravë)*
+- **gurka** — relativo ou propenso a emancipar servo ou vassalo *(comp: maer gurka | sup: gurkn | adv: gurkavë)*
+- **haba** — hospitaleiro *(comp: maer haba | sup: haban | adv: habavë)*
+- **halkfasan** — fatigado da longa marcha, exausto na neve *(comp: maer halkfasan | sup: halkfasann | adv: halkfasanavë)*
+- **halvura** — imperecível, inflamado pelo fogo sagrado *(comp: maer halvura | sup: halvuran | adv: halvuravë)*
+- **halxa** — relativo ou propenso a interpretar presságio sideral *(comp: maer halxa | sup: halxn | adv: halxavë)*
+- **helva** — relativo ou propenso a contemplar a quietude eterna nos Salões Atemporais do Criador *(comp: maer helva | sup: helvn | adv: helva'ë)*
+- **hoka** — tolo, ignorante, néscio *(comp: maer hoka | sup: hokan | adv: hokavë)*
+- **holka** — relativo ou propenso a rachar o manto sob tensao formando fendas profundas *(comp: maer holka | sup: holkn | adv: holkavë)*
+- **holpa** — relativo ou propenso a mergulhar em sono profundo com visões oníricas *(comp: maer holpa | sup: holpn | adv: holpavë)*
+- **hulba** — relativo ou propenso a sitiar fortaleza erguendo trincheiras e circunvalação de cerco *(comp: maer hulba | sup: hulbn | adv: hulbavë)*
+- **hurva** — relativo ou propenso a ecoar e ressoar em abobadas subterraneas profundas *(comp: maer hurva | sup: hurvn | adv: hurva'ë)*
+- **huxa** — vestido, agasalhado *(comp: maer huxa | sup: huxan | adv: huxavë)*
+- **huxpa** — relativo ou propenso a dobrar os linhos e cobertas na arca *(comp: maer huxpa | sup: huxpn | adv: huxpavë)*
+- **idda** — único, exclusivo, indivisível *(comp: maer idda | sup: iddan | adv: iddavë)*
+- **ilora** — estelar, sideral, celeste *(comp: maer ilora | sup: iloran | adv: iloravë)*
+- **isa** — inteligente, sábio, perspicaz *(comp: maer isa | sup: isan | adv: isavë)*
+- **kadpa** — relativo ou propenso a medir a distância angular até o topo do céu *(comp: maer kadpa | sup: kadpn | adv: kadpavë)*
+- **kamba** — relativo ou propenso a adubar o solo com composto e cinzas *(comp: maer kamba | sup: kambn | adv: kambavë)*
+- **karpa** — relativo ou propenso a firmar aliança diplomática *(comp: maer karpa | sup: karpn | adv: karpavë)*
+- **kasa** — relativo ou propenso a brotar manancial da rocha viva *(comp: maer kasa | sup: kasn | adv: kasavë)*
+- **kaspa** — relativo ou propenso a traçar letras caligráficas com pena de cálamo *(comp: maer kaspa | sup: kaspn | adv: kaspavë)*
+- **katro** — poucos, raros, escassos (plural quantitativo) *(comp: maer katro | sup: katron | adv: katroavë)*
+- **kelba** — relativo ou propenso a tingir o estofo na tina de pigmento *(comp: maer kelba | sup: kelbn | adv: kelbavë)*
+- **kelda** — relativo ou propenso a lapidar facetas de cristais no rebolo *(comp: maer kelda | sup: keldn | adv: keldavë)*
+- **kelpa** — relativo ou propenso a alinhar dois astros no mesmo grau sideral *(comp: maer kelpa | sup: kelpn | adv: kelpavë)*
+- **kerba** — relativo ou propenso a revelar o desígnio soberano e o destino glorioso dos povos livres *(comp: maer kerba | sup: kerbn | adv: kerbavë)*
+- **kerpa** — relativo ou propenso a granizar *(comp: maer kerpa | sup: kerpn | adv: kerpavë)*
+- **keva** — relativo ou propenso a escoltar caravana pelos passos alpinos *(comp: maer keva | sup: kevn | adv: keva'ë)*
+- **kil'a** — relativo ou propenso a ouvir com nitidez *(comp: maer kil'a | sup: kilkn | adv: kil'avë)*
+- **kila** — relativo ou propenso a engomar a gola plissada de Chancelaria *(comp: maer kila | sup: kill | adv: kilavë)*
+- **kildan** — gélido, nevado, congelado pelo vento da serra *(comp: maer kildan | sup: kildann | adv: kildanavë)*
+- **kindra** — familiar, fraterno, comunitário *(comp: maer kindra | sup: kindran | adv: kindravë)*
+- **kir'a** — relativo ou propenso a temperar o aço em água gélida *(comp: maer kir'a | sup: kirkn | adv: kir'avë)*
+- **kira** — relativo ou propenso a transcrever códice em pergaminho limpo *(comp: maer kira | sup: kild | adv: kiravë)*
+- **kirba** — relativo ou propenso a refratar a luz do sol em leque policromático através de cristal *(comp: maer kirba | sup: kirbn | adv: kirbavë)*
+- **kirpa** — relativo ou propenso a transmitir o anel de sinete ao primogênito *(comp: maer kirpa | sup: kirpn | adv: kirpavë)*
+- **kolba** — relativo ou propenso a lançar tributo régio sobre feudos vassalos *(comp: maer kolba | sup: kolbn | adv: kolbavë)*
+- **kolma** — relativo ou propenso a polir lajes de mármore com areia *(comp: maer kolma | sup: kolmn | adv: kolmavë)*
+- **kor'a** — relativo ou propenso a fosforecer em fogos azuis sobre os brejos na noite quieta *(comp: maer kor'a | sup: korkn | adv: kor'avë)*
+- **kora** — amadeirado, arbóreo, silvestre *(comp: maer kora | sup: kold | adv: koravë)*
+- **korba** — relativo ou propenso a engrenar dentes e pinhões de bronze em mecanismo de relojoaria *(comp: maer korba | sup: korbn | adv: korbavë)*
+- **korpa** — relativo ou propenso a fermentar levedura viva em massa de farinha fina *(comp: maer korpa | sup: korpn | adv: korpavë)*
+- **krana** — feminino, mulheril *(comp: maer krana | sup: kranan | adv: kranavë)*
+- **kraza** — alegre, risonho *(comp: maer kraza | sup: krazan | adv: krazavë)*
+- **krona** — masculino, viril *(comp: maer krona | sup: kronan | adv: kronavë)*
+- **kua** — avermelhado, rubro, escarlate *(comp: maer kua | sup: kuan | adv: kuavë)*
+- **kuexa** — relativo ou propenso a corar a face de pudor ou rubor *(comp: maer kuexa | sup: kuexn | adv: kuexavë)*
+- **kul'a** — relativo ou propenso a encastoar gema em anel ou coroa *(comp: maer kul'a | sup: kulkn | adv: kul'avë)*
+- **kula** — alaranjado, cor de açafrão *(comp: maer kula | sup: kulan | adv: kulavë)*
+- **kulpa** — relativo ou propenso a ajustar frete com os tropeiros da caravana *(comp: maer kulpa | sup: kulpn | adv: kulpavë)*
+- **kur'a** — relativo ou propenso a coroar o soberano no santuário *(comp: maer kur'a | sup: kurkn | adv: kur'avë)*
+- **kura** — corrompido, degenerado, mau (Supleção Teológica) *(comp: krer | sup: kuran | adv: kuravë)*
+- **kus'a** — relativo ou propenso a pleitear imunidade sob proteção de estandarte *(comp: maer kus'a | sup: kuskn | adv: kus'avë)*
+- **laka** — mau, perverso, maligno *(comp: maer laka | sup: lakan | adv: lakavë)*
+- **lana** — luminoso, cheio, pleno de luz (var. lany) *(comp: maer lana | sup: lan'an | adv: lanavë)*
+- **lany** — cheio de luz, pleno (variante litúrgica de lana) *(comp: maer lany | sup: lan'an | adv: lanyavë)*
+- **larta** — relativo ou propenso a cozer cerâmica e barro em alta temperatura *(comp: maer larta | sup: lartn | adv: lartavë)*
+- **larva** — relativo ou propenso a erigir marcos miliários de cantaria na linha divisória dos reinos *(comp: maer larva | sup: larvn | adv: larva'ë)*
+- **laura** — dourado, áureo *(comp: maer laura | sup: lauran | adv: lauravë)*
+- **lerka** — relativo ou propenso a fiar a lã ou o linho no fuso *(comp: maer lerka | sup: lerkn | adv: lerkavë)*
+- **lerpa** — relativo ou propenso a indultar prisioneiro por clemência do soberano *(comp: maer lerpa | sup: lerpn | adv: lerpavë)*
+- **leta** — verbal, oratório, literal *(comp: maer leta | sup: letan | adv: letavë)*
+- **lexa** — estelar, santo, divino *(comp: maer lexa | sup: lexan | adv: lexavë)*
+- **lexpa** — relativo ou propenso a alinhar o quadrante com o meridiano *(comp: maer lexpa | sup: lexpn | adv: lexpavë)*
+- **libka** — relativo ou propenso a balançar a face visível da lua *(comp: maer libka | sup: libkn | adv: libkavë)*
+- **lika** — relativo ou propenso a defumar carnes no fumeiro de pinho *(comp: maer lika | sup: likn | adv: likavë)*
+- **lima** — relativo ou propenso a hastear o estandarte imperial *(comp: maer lima | sup: limn | adv: limavë)*
+- **lira** — relativo ou propenso a modular a voz para o registro grave *(comp: maer lira | sup: lild | adv: liravë)*
+- **lirka** — relativo ou propenso a iluminar manuscrito com ouro e carmim *(comp: maer lirka | sup: lirkn | adv: lirkavë)*
+- **liska** — relativo ou propenso a lamber *(comp: maer liska | sup: liskn | adv: liskavë)*
+- **lita** — diminuto, curto, suave, brando *(comp: maer lita | sup: litan | adv: litavë)*
+- **lixa** — limpo, lavado *(comp: maer lixa | sup: lixan | adv: lixavë)*
+- **lorba** — relativo ou propenso a incrustar tésseras de vidro colorido e ouro em mosaico bizantino *(comp: maer lorba | sup: lorbn | adv: lorbavë)*
+- **lota** — belo, formoso (metátese: tola) *(comp: maer lota | sup: lotan | adv: lotavë)*
+- **luda** — cheia, plena (adjetivo litúrgico arcaico no Metuses Maria) *(comp: maer luda | sup: ludan | adv: ludavë)*
+- **lura** — relativo ou propenso a encobrir de neblina espessa *(comp: maer lura | sup: luld | adv: luravë)*
+- **lurka** — relativo ou propenso a confiscar bens para o erário *(comp: maer lurka | sup: lurkn | adv: lurkavë)*
+- **lurpa** — relativo ou propenso a depositar lodo fertil e vasa escura no leito aluvial *(comp: maer lurpa | sup: lurpn | adv: lurpavë)*
+- **lyra** — esperançoso *(comp: maer lyra | sup: lyran | adv: lyravë)*
+- **maka** — saciado, bem alimentado *(comp: maer maka | sup: makan | adv: makavë)*
+- **malpa** — relativo ou propenso a aparelhar o cavalo de viagem *(comp: maer malpa | sup: malpn | adv: malpavë)*
+- **malxa** — relativo ou propenso a domar corcel bravo pelas rédeas *(comp: maer malxa | sup: malxn | adv: malxavë)*
+- **marva** — relativo ou propenso a intuir a verdade oculta sob as aparências falsas *(comp: maer marva | sup: marvn | adv: marva'ë)*
+- **mata** — relativo ou propenso a alvejar o linho na água de sol *(comp: maer mata | sup: matn | adv: matavë)*
+- **meka** — relativo ou propenso a emboscar o inimigo no desfiladeiro *(comp: maer meka | sup: mekn | adv: mekavë)*
+- **mela** — relativo ou propenso a negociar trégua entre exércitos *(comp: maer mela | sup: mell | adv: melavë)*
+- **melba** — relativo ou propenso a gravar nome de primogênito no tronco da árvore genealógica de bronze *(comp: maer melba | sup: melbn | adv: melbavë)*
+- **melka** — relativo ou propenso a ondular o mar *(comp: maer melka | sup: melkn | adv: melkavë)*
+- **melpa** — relativo ou propenso a sorrir serenamente *(comp: maer melpa | sup: melpn | adv: melpavë)*
+- **merpa** — relativo ou propenso a enfardar feno e atar gavelas com vencelete *(comp: maer merpa | sup: merpn | adv: merpavë)*
+- **meta** — glorioso, majestoso *(comp: maer meta | sup: metan | adv: metavë)*
+- **mi'a** — relativo ou propenso a dedicar templo ou monumento a Gyos *(comp: maer mi'a | sup: mimn | adv: mi'avë)*
+- **milka** — relativo ou propenso a ordenhar o rebanho ao alvorecer *(comp: maer milka | sup: milkn | adv: milkavë)*
+- **mira** — precioso, gemular, visual *(comp: maer mira | sup: mild | adv: miravë)*
+- **mirakosora** — admirável, prodigioso, maravilhoso *(comp: maer mirakosora | sup: mirakosoran | adv: mirakosoravë)*
+- **mirba** — relativo ou propenso a refletir a imagem límpida em espelho côncavo de prata polida *(comp: maer mirba | sup: mirbn | adv: mirbavë)*
+- **mirka** — relativo ou propenso a orvalhar ao amanhecer *(comp: maer mirka | sup: mirkn | adv: mirkavë)*
+- **mirxa** — relativo ou propenso a lustrar joia ou espelho metálico *(comp: maer mirxa | sup: mirxn | adv: mirxavë)*
+- **miva** — relativo ou propenso a declamar epopeia em cadência clássica *(comp: maer miva | sup: mivn | adv: miva'ë)*
+- **moba** — bom, harmonioso, justo (Supleção Teológica) *(comp: maer | sup: moban | adv: mobavë)*
+- **mola** — relativo ou propenso a medir tecidos por braças com a vara padrão *(comp: maer mola | sup: moll | adv: molavë)*
+- **molba** — relativo ou propenso a mover pás e rodas d'água pela força da correnteza *(comp: maer molba | sup: molbn | adv: molbavë)*
+- **molda** — relativo ou propenso a sondar fendas e poços com prumo *(comp: maer molda | sup: moldn | adv: moldavë)*
+- **molleta** — severo, austero, julgador *(comp: maer molleta | sup: molletan | adv: molletavë)*
+- **molpa** — relativo ou propenso a empunhar lança de torneio em carga contra a barreira *(comp: maer molpa | sup: molpn | adv: molpavë)*
+- **molxa** — relativo ou propenso a promulgar decreto da Chancelaria *(comp: maer molxa | sup: molxn | adv: molxavë)*
+- **mopa** — relativo ou propenso a tecer no tear *(comp: maer mopa | sup: mopn | adv: mopavë)*
+- **morfa** — relativo ou propenso a sublimar sais e pós em vaso hermético *(comp: maer morfa | sup: morfn | adv: morfavë)*
+- **morka** — relativo ou propenso a desbravar galerias escuras tateando passagens com tochas e cordas *(comp: maer morka | sup: morkn | adv: morkavë)*
+- **muka** — relativo ou propenso a franzir o cenho em concentração *(comp: maer muka | sup: mukn | adv: mukavë)*
+- **mula** — relativo ou propenso a outorgar feudo ou título de nobreza *(comp: maer mula | sup: mull | adv: mulavë)*
+- **mulka** — relativo ou propenso a arquivar nos rolos perpétuos *(comp: maer mulka | sup: mulkn | adv: mulkavë)*
+- **murda** — relativo ou propenso a proscrever infrator condenado ao desterro *(comp: maer murda | sup: murdn | adv: murdavë)*
+- **murpa** — relativo ou propenso a aferir limpidez de gemas na luz *(comp: maer murpa | sup: murpn | adv: murpavë)*
+- **nakad** — informe, nu, ainda não desabrochado *(comp: maer nakad | sup: nakadn | adv: nakadavë)*
+- **nalba** — relativo ou propenso a meditar em silêncio recolhido contemplando a alma *(comp: maer nalba | sup: nalbn | adv: nalbavë)*
+- **nalpa** — relativo ou propenso a guarnecer desfiladeiros estratégicos e portelas de montanha *(comp: maer nalpa | sup: nalpn | adv: nalpavë)*
+- **naspa** — relativo ou propenso a navegar em mar aberto com vela mestra desfraldada *(comp: maer naspa | sup: naspn | adv: naspavë)*
+- **naxa** — relativo ou propenso a escurecer no ocaso *(comp: maer naxa | sup: naxn | adv: naxavë)*
+- **neka** — relativo ou propenso a esticar os membros *(comp: maer neka | sup: nekn | adv: nekavë)*
+- **nela** — relativo ou propenso a vadear o rio nos baixios *(comp: maer nela | sup: nell | adv: nelavë)*
+- **nelba** — relativo ou propenso a julgar causas com retidão imparcial e justiça distributiva *(comp: maer nelba | sup: nelbn | adv: nelbavë)*
+- **nelpa** — relativo ou propenso a farejar *(comp: maer nelpa | sup: nelpn | adv: nelpavë)*
+- **nemra** — memorial, imemorial, histórico *(comp: maer nemra | sup: nemm | adv: nemravë)*
+- **nerka** — relativo ou propenso a sublimar enxofre em crostas amarelas fumegantes *(comp: maer nerka | sup: nerkn | adv: nerkavë)*
+- **nerpa** — relativo ou propenso a debater proposições dialéticas no conclave de sábios *(comp: maer nerpa | sup: nerpn | adv: nerpavë)*
+- **ni'a** — relativo ou propenso a trançar os cabelos em penteado nobre *(comp: maer ni'a | sup: nim | adv: ni'avë)*
+- **nika** — relativo ou propenso a entalhar relevo em madeira nobre *(comp: maer nika | sup: nikn | adv: nikavë)*
+- **nira** — noturno, escuro *(comp: maer nira | sup: niran | adv: niravë)*
+- **nirba** — relativo ou propenso a gotejar continuamente calcario formando estalactites no teto *(comp: maer nirba | sup: nirbn | adv: nirbavë)*
+- **nirlana** — lunar, enluarado *(comp: maer nirlana | sup: nirlanan | adv: nirlanavë)*
+- **niva** — relativo ou propenso a consagrar a fronte com bálsamo sagrado *(comp: maer niva | sup: nivn | adv: niva'ë)*
+- **nopa** — relativo ou propenso a semear grãos na terra lavrada *(comp: maer nopa | sup: nopn | adv: nopavë)*
+- **norva** — relativo ou propenso a acionar martelos pesados de forja através de cames e eixo hidráulico *(comp: maer norva | sup: norvn | adv: norva'ë)*
+- **nula** — relativo ou propenso a testemunhar sob juramento sagrado *(comp: maer nula | sup: null | adv: nulavë)*
+- **nulpa** — relativo ou propenso a acumular bancos de neve alta *(comp: maer nulpa | sup: nulpn | adv: nulpavë)*
+- **nurka** — relativo ou propenso a ramificar em multiplos esteiros e barras de areia na foz *(comp: maer nurka | sup: nurkn | adv: nurkavë)*
+- **nyka** — aberto *(comp: maer nyka | sup: nykan | adv: nykavë)*
+- **oxea** — terrestre, telúrico, terreno *(comp: maer oxea | sup: oxean | adv: oxeavë)*
+- **oxepa** — relativo ou propenso a determinar o ângulo sobre a linha da terra *(comp: maer oxepa | sup: oxepn | adv: oxepavë)*
+- **pal'a** — relativo ou propenso a furar o couro com sovela de sapateiro *(comp: maer pal'a | sup: palpn | adv: pal'avë)*
+- **palba** — relativo ou propenso a moderar desejos e apetites com temperança e serenidade interior *(comp: maer palba | sup: palbn | adv: palbavë)*
+- **palta** — relativo ou propenso a prensar frutos em lagar de viga para mosto *(comp: maer palta | sup: paltn | adv: paltavë)*
+- **parba** — relativo ou propenso a estremecer as falhas geologicas em abalos tectonicos *(comp: maer parba | sup: parbn | adv: parbavë)*
+- **peka** — quebrado, partido *(comp: maer peka | sup: pekan | adv: pekavë)*
+- **pel'a** — relativo ou propenso a modular o claro-escuro entre luz tênue e penumbra dramática *(comp: maer pel'a | sup: pelpn | adv: pel'avë)*
+- **pela** — relativo ou propenso a sondar a profundidade do canal *(comp: maer pela | sup: pell | adv: pelavë)*
+- **pelba** — relativo ou propenso a soltar o falcão no ar retirando o caparão de couro *(comp: maer pelba | sup: pelbn | adv: pelbavë)*
+- **pelda** — relativo ou propenso a inundar a margem *(comp: maer pelda | sup: peldn | adv: peldavë)*
+- **perka** — relativo ou propenso a tocar com os dedos *(comp: maer perka | sup: perkn | adv: perkavë)*
+- **peska** — relativo ou propenso a enviar legação diplomática plenipotenciária *(comp: maer peska | sup: peskn | adv: peskavë)*
+- **pika** — relativo ou propenso a pôr a mesa para o banquete *(comp: maer pika | sup: pikn | adv: pikavë)*
+- **pilka** — relativo ou propenso a regatear o preço no bazar com o mercador *(comp: maer pilka | sup: pilkn | adv: pilkavë)*
+- **pira** — relativo ou propenso a demonstrar teorema ou verdade eterna *(comp: maer pira | sup: pild | adv: piravë)*
+- **pirka** — relativo ou propenso a refutar argumento com silogismo *(comp: maer pirka | sup: pirkn | adv: pirkavë)*
+- **piskra** — idiota, estúpido *(comp: maer piskra | sup: piskran | adv: piskravë)*
+- **poka** — animal, selvagem, ferino *(comp: maer poka | sup: pokan | adv: pokavë)*
+- **polma** — relativo ou propenso a ventilar galerias profundas com foles *(comp: maer polma | sup: polmn | adv: polmavë)*
+- **polva** — relativo ou propenso a traçar cartas corográficas e províncias imperiais em pergaminho *(comp: maer polva | sup: polvn | adv: polva'ë)*
+- **por'a** — relativo ou propenso a soprar pasta vítrea com cana de sopro *(comp: maer por'a | sup: porpn | adv: por'avë)*
+- **porka** — relativo ou propenso a arpar cabos de amarração e içar velas ao vento *(comp: maer porka | sup: porkn | adv: porkavë)*
+- **pul'a** — relativo ou propenso a calçar perneiras de lã trançada na neve *(comp: maer pul'a | sup: pulpn | adv: pul'avë)*
+- **pulka** — relativo ou propenso a indenizar dano causado em guerra *(comp: maer pulka | sup: pulkn | adv: pulkavë)*
+- **purda** — relativo ou propenso a gradar o solo desmanchando torrões *(comp: maer purda | sup: purdn | adv: purdavë)*
+- **rela** — relativo ou propenso a acantonar a legião em acampamento *(comp: maer rela | sup: rell | adv: relavë)*
+- **relka** — relativo ou propenso a ceifar o trigo maduro com foice *(comp: maer relka | sup: relkn | adv: relkavë)*
+- **rika** — relativo ou propenso a fermentar o hidromel em tonéis de carvalho *(comp: maer rika | sup: rikn | adv: rikavë)*
+- **rirka** — relativo ou propenso a compor hino ou cânone polifônico *(comp: maer rirka | sup: rirkn | adv: rirkavë)*
+- **rixa** — montanhoso, alpino, escarpado *(comp: maer rixa | sup: rixan | adv: rixavë)*
+- **rixan** — pétreo, sólido como rocha, resistente *(comp: maer rixan | sup: rixann | adv: rixanavë)*
+- **rixka** — relativo ou propenso a desmoronar rochas *(comp: maer rixka | sup: rixkn | adv: rixkavë)*
+- **rosa** — asnar, teimoso, burro *(comp: maer rosa | sup: rosan | adv: rosavë)*
+- **rukra** — forte, poderoso, potente *(comp: maer rukra | sup: rukran | adv: rukravë)*
+- **rukraleta** — dotado de voz potente, altissonante, trovejante *(comp: maer rukraleta | sup: rukraletan | adv: rukraletavë)*
+- **rukxa** — relativo ou propenso a desafiar em duelo singular de honra *(comp: maer rukxa | sup: rukxn | adv: rukxavë)*
+- **rulka** — relativo ou propenso a auditar as contas do tesouro *(comp: maer rulka | sup: rulkn | adv: rulkavë)*
+- **rulpa** — relativo ou propenso a bocejar de sono ou fadiga *(comp: maer rulpa | sup: rulpn | adv: rulpavë)*
+- **ruxa** — cozido, assado *(comp: maer ruxa | sup: ruxan | adv: ruxavë)*
+- **saka** — relativo ou propenso a raspar a moeda na pedra de toque para avaliar *(comp: maer saka | sup: sakn | adv: sakavë)*
+- **salba** — relativo ou propenso a atracar galera imperial em cais de cantaria com cabos de cânhamo *(comp: maer salba | sup: salbn | adv: salbavë)*
+- **sama** — relativo ou propenso a pesar mercadorias na balança de dois pratos *(comp: maer sama | sup: samn | adv: samavë)*
+- **sarka** — relativo ou propenso a adestrar falcão peregrino para caça de altitude *(comp: maer sarka | sup: sarkn | adv: sarkavë)*
+- **sela** — relativo ou propenso a eclipsar um astro *(comp: maer sela | sup: sell | adv: selavë)*
+- **selpa** — relativo ou propenso a identificar filão na matriz de quartzo *(comp: maer selpa | sup: selpn | adv: selpavë)*
+- **sema** — relativo ou propenso a moer o grão entre mós de pedra *(comp: maer sema | sup: semn | adv: semavë)*
+- **serba** — relativo ou propenso a vicejar juncais espessos nas margens lodosas do charco *(comp: maer serba | sup: serbn | adv: serbavë)*
+- **si'a** — relativo ou propenso a bordar brasão da Casa no estandarte *(comp: maer si'a | sup: sisn | adv: si'avë)*
+- **sika** — relativo ou propenso a forragear provisões no campo *(comp: maer sika | sup: sikn | adv: sikavë)*
+- **silba** — relativo ou propenso a pintar afrescos em têmpera e óleos sobre argamassa fresca de cal *(comp: maer silba | sup: silbn | adv: silbavë)*
+- **silka** — relativo ou propenso a esmaltar cerâmica ao forno *(comp: maer silka | sup: silkn | adv: silkavë)*
+- **sima** — relativo ou propenso a entoar o Zo es de fechamento *(comp: maer sima | sup: simn | adv: simavë)*
+- **sira** — relativo ou propenso a clarear o céu após a tempestade *(comp: maer sira | sup: sild | adv: siravë)*
+- **siva** — relativo ou propenso a jejuar na vigília das estrelas *(comp: maer siva | sup: sivn | adv: siva'ë)*
+- **sola** — relativo ou propenso a passar a lançadeira no tear de tecelão *(comp: maer sola | sup: soll | adv: solavë)*
+- **solba** — relativo ou propenso a temperar caldos e assados com açafrão e especiarias da corte *(comp: maer solba | sup: solbn | adv: solbavë)*
+- **solka** — relativo ou propenso a condenar réu a pena aflictiva *(comp: maer solka | sup: solkn | adv: solkavë)*
+- **solpa** — relativo ou propenso a encadernar fólios em tábuas de carvalho e couro *(comp: maer solpa | sup: solpn | adv: solpavë)*
+- **sua** — nuclear, essencial, central *(comp: maer sua | sup: suan | adv: suavë)*
+- **sukora** — cardíaco, cordial, íntimo *(comp: maer sukora | sup: sukold | adv: sukoravë)*
+- **sukoran** — corajoso, de peito aquecido diante do perigo *(comp: maer sukoran | sup: sukorann | adv: sukoranavë)*
+- **sula** — relativo ou propenso a suar pelo esforço da forja ou marcha *(comp: maer sula | sup: sull | adv: sulavë)*
+- **sulba** — relativo ou propenso a erguer comportas e canalizar água de açude para o moinho *(comp: maer sulba | sup: sulbn | adv: sulbavë)*
+- **sulka** — relativo ou propenso a apelar à Corte Suprema *(comp: maer sulka | sup: sulkn | adv: sulkavë)*
+- **surka** — relativo ou propenso a precipitar em quedas de cataratas estrondosas pulverizando as aguas *(comp: maer surka | sup: surkn | adv: surkavë)*
+- **surpa** — relativo ou propenso a ceifar cereais maduros com foice curta *(comp: maer surpa | sup: surpn | adv: surpavë)*
+- **suva** — relativo ou propenso a demarcar fronteira com marcos de pedra *(comp: maer suva | sup: suvn | adv: suva'ë)*
+- **taka** — relativo ou propenso a arrematar lote no leilão de importados *(comp: maer taka | sup: takn | adv: takavë)*
+- **talda** — relativo ou propenso a mondar ervas daninhas à enxada *(comp: maer talda | sup: taldn | adv: taldavë)*
+- **talpa** — relativo ou propenso a escorar galeria com esteios de madeira *(comp: maer talpa | sup: talpn | adv: talpavë)*
+- **tapa** — relativo ou propenso a deslocar lentamente o polo dos equinócios *(comp: maer tapa | sup: tapn | adv: tapavë)*
+- **tarka** — relativo ou propenso a vedar fendas de gases com argamassa *(comp: maer tarka | sup: tarkn | adv: tarkavë)*
+- **tarpa** — relativo ou propenso a sacudir a terra *(comp: maer tarpa | sup: tarpn | adv: tarpavë)*
+- **tela** — relativo ou propenso a soprar brisa suave das colinas *(comp: maer tela | sup: tell | adv: telavë)*
+- **telka** — relativo ou propenso a erguer viga mestra ou cumeeira *(comp: maer telka | sup: telkn | adv: telkavë)*
+- **telpa** — relativo ou propenso a sitiar fortaleza *(comp: maer telpa | sup: telpn | adv: telpavë)*
+- **terka** — relativo ou propenso a vitrificar massas de silica fundida gerando obsidiana negra *(comp: maer terka | sup: terkn | adv: terkavë)*
+- **terpa** — relativo ou propenso a guardar reminiscências sagradas no fundo do coração *(comp: maer terpa | sup: terpn | adv: terpavë)*
+- **teva** — relativo ou propenso a orientar-se pela estrela polar *(comp: maer teva | sup: tevn | adv: teva'ë)*
+- **tika** — relativo ou propenso a aquecer água para o banho de vapor *(comp: maer tika | sup: tikn | adv: tikavë)*
+- **tila** — relativo ou propenso a reter penhor ou fiança até a entrega *(comp: maer tila | sup: till | adv: tilavë)*
+- **tilka** — relativo ou propenso a jejuar por voto litúrgico *(comp: maer tilka | sup: tilkn | adv: tilkavë)*
+- **tilpa** — relativo ou propenso a enganchar o manto com fecho de metal *(comp: maer tilpa | sup: tilpn | adv: tilpavë)*
+- **tira** — relativo ou propenso a isolar a essência universal na mente *(comp: maer tira | sup: tild | adv: tiravë)*
+- **tirka** — relativo ou propenso a peneirar a farinha ou o ouro *(comp: maer tirka | sup: tirkn | adv: tirkavë)*
+- **tisva** — relativo ou propenso a cardar a lã virgem em mechas macias *(comp: maer tisva | sup: tisvn | adv: tisva'ë)*
+- **tokxa** — relativo ou propenso a reunir a corte suprema da Coroa *(comp: maer tokxa | sup: tokxn | adv: tokxavë)*
+- **tola** — bonito, gracioso (variante de lota) *(comp: maer tola | sup: tolan | adv: tolavë)*
+- **tolka** — relativo ou propenso a debulhar espigas com mangual na eira de pedra *(comp: maer tolka | sup: tolkn | adv: tolkavë)*
+- **tolpa** — relativo ou propenso a pautar fólios de velino com ponta de chumbo *(comp: maer tolpa | sup: tolpn | adv: tolpavë)*
+- **tonkra** — temporal, secular, passageiro *(comp: maer tonkra | sup: tonkran | adv: tonkravë)*
+- **tonkrila** — breve, momentâneo *(comp: maer tonkrila | sup: tonkrilan | adv: tonkrilavë)*
+- **tonpa** — relativo ou propenso a calcular as tábuas celestes em pergaminho *(comp: maer tonpa | sup: tonpn | adv: tonpavë)*
+- **torba** — relativo ou propenso a assar caça nobre em espeto giratório sobre brasas aromáticas *(comp: maer torba | sup: torbn | adv: torbavë)*
+- **torga** — relativo ou propenso a interpor recurso perante os juízes *(comp: maer torga | sup: torgn | adv: torgavë)*
+- **tospa** — relativo ou propenso a enlaçar mãos de noivos com fita de seda carmesim *(comp: maer tospa | sup: tospn | adv: tospavë)*
+- **tula** — louco, insano, furioso *(comp: maer tula | sup: tull | adv: tulavë)*
+- **tulba** — relativo ou propenso a registrar ato oficial no cartório *(comp: maer tulba | sup: tulbn | adv: tulbavë)*
+- **tulka** — relativo ou propenso a exercer regência em nome do herdeiro *(comp: maer tulka | sup: tulkn | adv: tulkavë)*
+- **tulma** — relativo ou propenso a guardar e selecionar sementes-matrizes *(comp: maer tulma | sup: tulmn | adv: tulmavë)*
+- **tulva** — relativo ou propenso a decompor materia vegetal em camadas espessas de turfa negra *(comp: maer tulva | sup: tulvn | adv: tulva'ë)*
+- **tupka** — relativo ou propenso a oscilar sutilmente o eixo da esfera *(comp: maer tupka | sup: tupkn | adv: tupkavë)*
+- **tupxa** — relativo ou propenso a disparar flecha ou dardo certeiro *(comp: maer tupxa | sup: tupxn | adv: tupxavë)*
+- **turba** — relativo ou propenso a armar torre móvel de assalto e catapultas de contrapeso no campo *(comp: maer turba | sup: turbn | adv: turbavë)*
+- **turka** — relativo ou propenso a morder *(comp: maer turka | sup: turkn | adv: turkavë)*
+- **turpa** — relativo ou propenso a ratificar tratado de aliança *(comp: maer turpa | sup: turpn | adv: turpavë)*
+- **va** — molhado, aquático, líquido (sincopado de Vé) *(comp: maer va | sup: van | adv: va'ë)*
+- **valba** — relativo ou propenso a drenar bolsões de água da galeria *(comp: maer valba | sup: valbn | adv: valbavë)*
+- **valka** — relativo ou propenso a julgar litígio em tribunal condal *(comp: maer valka | sup: valkn | adv: valkavë)*
+- **valpa** — relativo ou propenso a abençoar união nupcial com imposição solene de mãos *(comp: maer valpa | sup: valpn | adv: valpavë)*
+- **vara** — viário, errante, relativo ao caminho *(comp: maer vara | sup: veld | adv: varavë)*
+- **varba** — relativo ou propenso a organizar comboios militares de suprimento *(comp: maer varba | sup: varbn | adv: varbavë)*
+- **varka** — relativo ou propenso a acolchoar o forro da capa de viagem *(comp: maer varka | sup: varkn | adv: varkavë)*
+- **varpa** — relativo ou propenso a afastar-se no ponto mais distante da órbita *(comp: maer varpa | sup: varpn | adv: varpavë)*
+- **varxa** — relativo ou propenso a patrulhar as fronteiras da serra *(comp: maer varxa | sup: varxn | adv: varxavë)*
+- **veksan** — brumoso, encoberto pela névoa fria *(comp: maer veksan | sup: veksann | adv: veksanavë)*
+- **vela** — sombrio, umbroso, velado *(comp: maer vela | sup: vell | adv: velavë)*
+- **velpa** — relativo ou propenso a encobrir estrela atrás do disco lunar *(comp: maer velpa | sup: velpn | adv: velpavë)*
+- **verka** — relativo ou propenso a fluir em corredeira rápida *(comp: maer verka | sup: verkn | adv: verkavë)*
+- **verpa** — relativo ou propenso a fixar precedente normativo nos assentos *(comp: maer verpa | sup: verpn | adv: verpavë)*
+- **verra** — abronzeado, brônzeo *(comp: maer verra | sup: verran | adv: verravë)*
+- **verran** — metálico, duro como lâmina de bronze e aço *(comp: maer verran | sup: verrann | adv: verranavë)*
+- **veska** — relativo ou propenso a joeirar os grãos ao vento no crivo raso *(comp: maer veska | sup: veskn | adv: veskavë)*
+- **vespa** — relativo ou propenso a entrar em êxtase místico de arroubo espiritual *(comp: maer vespa | sup: vespn | adv: vespavë)*
+- **veyna** — relativo ou propenso a velejar com vento de popa *(comp: maer veyna | sup: veym | adv: veynavë)*
+- **vika** — relativo ou propenso a acender todas as arandelas do salão *(comp: maer vika | sup: vikn | adv: vikavë)*
+- **vilba** — relativo ou propenso a carvoejar hulha em veios subterrâneos *(comp: maer vilba | sup: vilbn | adv: vilbavë)*
+- **vilka** — relativo ou propenso a lacrimejar *(comp: maer vilka | sup: vilkn | adv: vilkavë)*
+- **vilpa** — relativo ou propenso a aparar golpe com o escudo *(comp: maer vilpa | sup: vilpn | adv: vilpavë)*
+- **viltan** — curado, revigorado pela ceia e pelo sono *(comp: maer viltan | sup: viltann | adv: viltanavë)*
+- **virka** — relativo ou propenso a consagrar o cálice na elevação *(comp: maer virka | sup: virkn | adv: virkavë)*
+- **viska** — relativo ou propenso a enfaixar ferida *(comp: maer viska | sup: viskn | adv: viskavë)*
+- **volba** — relativo ou propenso a iluminar capitulares com pó de ouro e carmim *(comp: maer volba | sup: volbn | adv: volbavë)*
+- **volka** — relativo ou propenso a calafetar casco de nau com breu *(comp: maer volka | sup: volkn | adv: volkavë)*
+- **vorba** — relativo ou propenso a manter postos de muda com montarias descansadas nas estradas reais *(comp: maer vorba | sup: vorbn | adv: vorbavë)*
+- **vorka** — relativo ou propenso a expelir colunas de cinza e magma pela cratera aberta *(comp: maer vorka | sup: vorkn | adv: vorkavë)*
+- **vulka** — relativo ou propenso a cunhar moedas com a efígie real *(comp: maer vulka | sup: vulkn | adv: vulkavë)*
+- **vulpa** — relativo ou propenso a estocar fardos no celeiro alfandegário *(comp: maer vulpa | sup: vulpn | adv: vulpavë)*
+- **vuran** — aquecido pela lareira, acolhedor, fumegante *(comp: maer vuran | sup: vurann | adv: vuranavë)*
+- **vurka** — relativo ou propenso a jorrar água termal ou gêiser *(comp: maer vurka | sup: vurkn | adv: vurkavë)*
+- **vuro'a** — incandescente, flamejante, ígneo *(comp: maer vuro'a | sup: vuro'an | adv: vuro'avë)*
+- **xaka** — relativo ou propenso a atingir o ponto culminante no céu *(comp: maer xaka | sup: xakn | adv: xakavë)*
+- **xala** — relativo ou propenso a afixar o broche de sinete na roupagem *(comp: maer xala | sup: xall | adv: xalavë)*
+- **xalba** — relativo ou propenso a bater a nata até formar manteiga *(comp: maer xalba | sup: xalbn | adv: xalbavë)*
+- **xarpa** — relativo ou propenso a tossir *(comp: maer xarpa | sup: xarpn | adv: xarpavë)*
+- **xeda** — relativo ou propenso a orlar a capa com pele alva de arminho *(comp: maer xeda | sup: xedn | adv: xedavë)*
+- **xela** — nevado, coberto de neve *(comp: maer xela | sup: xelan | adv: xelavë)*
+- **xelpa** — relativo ou propenso a rodopiar em redemoinho de vento *(comp: maer xelpa | sup: xelpn | adv: xelpavë)*
+- **xera** — celeste, elevado, sideral *(comp: maer xera | sup: xeld | adv: xeravë)*
+- **xerka** — relativo ou propenso a podar ramos secos da árvore *(comp: maer xerka | sup: xerkn | adv: xerkavë)*
+- **xeva** — relativo ou propenso a tocar o clarim de alvorada ou carga *(comp: maer xeva | sup: xevn | adv: xeva'ë)*
+- **xika** — relativo ou propenso a agasalhar o hóspede com peles perto do fogo *(comp: maer xika | sup: xikn | adv: xikavë)*
+- **xira** — relativo ou propenso a esconjurar sombra ou espírito impuro *(comp: maer xira | sup: xild | adv: xiravë)*
+- **xuna** — loiro, amarelado, flavente *(comp: maer xuna | sup: xunan | adv: xunavë)*
+- **xurka** — relativo ou propenso a banir para além das fronteiras *(comp: maer xurka | sup: xurkn | adv: xurkavë)*
+- **yarva** — relativo ou propenso a agir com magnanimidade e nobreza de alma perdoando agravos *(comp: maer yarva | sup: yarvn | adv: yarva'ë)*
+- **yelka** — relativo ou propenso a estagnar em aguas placidas de espelho alpino *(comp: maer yelka | sup: yelkn | adv: yelkavë)*
+- **yerba** — relativo ou propenso a orientar rumos de marcha com agulha imantada em taça de bronze *(comp: maer yerba | sup: yerbn | adv: yerbavë)*
+- **yerpa** — relativo ou propenso a guardar juramentos sagrados e lealdade inabalável ao suserano *(comp: maer yerpa | sup: yerpn | adv: yerpavë)*
+- **yolpa** — relativo ou propenso a entoar acordes celestiais na sinfonia cósmica do Halylitror *(comp: maer yolpa | sup: yolpn | adv: yolpavë)*
+- **yulba** — relativo ou propenso a deslizar lentamente em leito glacial esculpindo o vale *(comp: maer yulba | sup: yulbn | adv: yulbavë)*
+- **yurpa** — relativo ou propenso a rodopiar em redemoinhos velozes nas confluencias de correntes *(comp: maer yurpa | sup: yurpn | adv: yurpavë)*
+- **zala** — pago, quite *(comp: maer zala | sup: zalan | adv: zalavë)*
+- **zalka** — relativo ou propenso a cambiar moedas de diferentes cunhos *(comp: maer zalka | sup: zalkn | adv: zalkavë)*
+- **zalva** — relativo ou propenso a renovar o cosmos após a consumação dos tempos na Segunda Canção *(comp: maer zalva | sup: zalvn | adv: zalva'ë)*
+- **zarda** — relativo ou propenso a abrir sessão solene do tribunal com bastão *(comp: maer zarda | sup: zardn | adv: zardavë)*
+- **zarva** — relativo ou propenso a acender a Chama Imperecível infundindo vida consciente na criação *(comp: maer zarva | sup: zarvn | adv: zarva'ë)*
+- **zaspa** — relativo ou propenso a calafetar juntas do casco de carvalho com estopa e piche *(comp: maer zaspa | sup: zaspn | adv: zaspavë)*
+- **zelba** — relativo ou propenso a destilar vapores voláteis em serpentina *(comp: maer zelba | sup: zelbn | adv: zelbavë)*
+- **zelka** — relativo ou propenso a cicatrizar a pele *(comp: maer zelka | sup: zelkn | adv: zelkavë)*
+- **zelma** — relativo ou propenso a semear grãos a lanço nos canteiros *(comp: maer zelma | sup: zelmn | adv: zelmavë)*
+- **zelpa** — relativo ou propenso a gravar selo imperial de cera *(comp: maer zelpa | sup: zelpn | adv: zelpavë)*
+- **zenan** — leal, fiel, amigo sincero de travessia *(comp: maer zenan | sup: zenann | adv: zena'avë)*
+- **zerba** — relativo ou propenso a pisar uvas maduras em lagar de cantaria *(comp: maer zerba | sup: zerbn | adv: zerbavë)*
+- **zerda** — relativo ou propenso a britar blocos de basalto na mina *(comp: maer zerda | sup: zerdn | adv: zerdavë)*
+- **zerpa** — relativo ou propenso a irrigar as várzeas por canais de água *(comp: maer zerpa | sup: zerpn | adv: zerpavë)*
+- **zeta** — relativo ou propenso a entretecer fios dourados no brocado real *(comp: maer zeta | sup: zetn | adv: zetavë)*
+- **zika** — relativo ou propenso a celebrar bodas ou aliança entre famílias *(comp: maer zika | sup: zikn | adv: zikavë)*
+- **zilka** — relativo ou propenso a cobrar pedágio de passagem na ponte condal *(comp: maer zilka | sup: zilkn | adv: zilkavë)*
+- **zira** — relativo ou propenso a afinar os tubos do grande órgão *(comp: maer zira | sup: zild | adv: ziravë)*
+- **zolba** — relativo ou propenso a escavar galerias subterrâneas de sapa e minas sob alicerces *(comp: maer zolba | sup: zolbn | adv: zolbavë)*
+- **zolda** — relativo ou propenso a ressoar o eco nos desfiladeiros *(comp: maer zolda | sup: zoldn | adv: zoldavë)*
+- **zorba** — relativo ou propenso a agasalhar peregrinos oferecendo pão *(comp: maer zorba | sup: zorbn | adv: zorbavë)*
+- **zorka** — relativo ou propenso a lavar cascalho no crivo para gemas *(comp: maer zorka | sup: zorkn | adv: zorkavë)*
+- **zorpa** — relativo ou propenso a singrar vagas revoltas com proa erguida *(comp: maer zorpa | sup: zorpn | adv: zorpavë)*
+- **zuka** — relativo ou propenso a forjar elos de corrente ou cota *(comp: maer zuka | sup: zukn | adv: zukavë)*
+- **zukxa** — relativo ou propenso a empenhar palavra ou penhor real *(comp: maer zukxa | sup: zukxn | adv: zukxavë)*
+- **zulpa** — relativo ou propenso a percorrer as casas das constelações *(comp: maer zulpa | sup: zulpn | adv: zulpavë)*
+- **zurba** — relativo ou propenso a ensilar cereais em tulha elevada de madeira *(comp: maer zurba | sup: zurbn | adv: zurbavë)*
+- **zurva** — relativo ou propenso a despencar em estrondo com massas de avalanche *(comp: maer zurva | sup: zurvn | adv: zurva'ë)*
+
+### IX.3. Advérbios (1202)
+- **aetikavë** (Modal Regulado (-vë com diérese)) — de modo dissonante `[aetika + -vë]`
+- **agirvë** (Modal Regressivo) — minguantemente, cada vez menos `[agir- + -vë]`
+- **ainuril** (2) — ainur + -il `[ordem sublime dos primeiros seres espirituais nascidos do pensamento do Um]`
+- **akrazavë** (Modal Regulado (-vë com diérese)) — de modo choroso `[akraza + -vë]`
+- **akuravë** (Modal Regulado (-vë com diérese)) — de modo virgem `[akura + -vë]`
+- **alenvë** (Temporal Matinal) — ao raiar da manhã, com o nascer do sol `[alen + -vë]`
+- **alim** (Temporal / Locativo) — onde; outrora, antes que `[raiz primária alim]`
+- **alixavë** (Modal Regulado (-vë com diérese)) — de modo sujo `[alixa + -vë]`
+- **alotavë** (Modal Regulado (-vë com diérese)) — de modo horrendo `[alota + -vë]`
+- **alvole** (1) — alvol- + -e, termina em -e (1 decl) `[quietude profunda das manhãs serenas sobre o lago alpino]`
+- **alvolon** (2) — alvol- + -on `[espelho cristalino refletindo as serras sem tremor]`
+- **amakavë** (Modal Regulado (-vë com diérese)) — de modo faminto `[amaka + -vë]`
+- **amattavë** (Modal Regulado (-vë com diérese)) — de modo esfomeado `[amatte + -vë]`
+- **amygatavë** (Modal Regulado (-vë com diérese)) — de modo inumerável `[amygata + -vë]`
+- **amygavë** (Modal Regulado (-vë com diérese)) — de modo inumerável `[amyga + -vë]`
+- **antebel** (Temporal Composto) — ontem, no dia anterior `[ante + bel (dia)]`
+- **anykavë** (Modal Regulado (-vë com diérese)) — de modo fechado `[anyka + -vë]`
+- **apekavë** (Modal Regulado (-vë com diérese)) — de modo consertado `[apeka + -vë]`
+- **arumavë** (Modal Regulado (-vë com diérese)) — de modo imperial `[aruma + -vë]`
+- **aruxavë** (Modal Regulado (-vë com diérese)) — de modo cru `[aruxa + -vë]`
+- **atolavë** (Modal Regulado (-vë com diérese)) — de modo feio `[atola + -vë]`
+- **atonk** (Temporal Perpétuo) — eternamente, para todo o sempre `[a- + tonkre]`
+- **avuravë** (Modal Regulado (-vë com diérese)) — de modo gélido `[avura + -vë]`
+- **azalavë** (Modal Regulado (-vë com diérese)) — de modo devedor `[azala + -vë]`
+- **balkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a palpitar o coração `[balka + -vë]`
+- **balpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a medir o tempo pelo gotejamento constante da clepsidra de bronze `[balpa + -vë]`
+- **balpeste** (1) — balp- + este, termina em -e (1 decl) `[filtro de gaze fina para purificar a água que entra na clepsidra]`
+- **balpeve** (1) — balp- + eve, termina em -e (1 decl) `[variação de leitura na clepsidra causada pelo frio intenso]`
+- **balpil** (2) — balp- + -il `[vaso cilíndrico de alabastro graduado com linhas de horas]`
+- **balpin** (2) — balp- + -in `[gotejamento rítmico do orifício de ouro da clepsidra]`
+- **balpon** (2) — balp- + -on `[flutuador de cortiça com haste indicadora de horas transcorridas]`
+- **balpur** (2) — balp- + -ur `[guardião do tempo que monitora as marcas horárias na água]`
+- **bam'ise** (1) — bambis- + -e, termina em -e (1 decl) `[camada marinha flutuante estendida ate o polo]`
+- **bam'isur** (2) — bambis- + -ur `[navegador de rotas polares ao redor das massas flutuantes]`
+- **bapavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a adiantar barras de prata como crédito `[bapa + -vë]`
+- **baregaste** (1) — bareg- + este, termina em -e (1 decl) `[pinguela de pranchas fixada para atravessar o atoleiro]`
+- **baregon** (2) — bareg- + -on `[estrado de vigas de carvalho fincado no solo da turfeira]`
+- **barsexiavë** (Modal Regulado (-vë com diérese)) — de modo irritante `[barsexi + -vë]`
+- **baskaste** (1) — bask- + aste, termina em -e (1 decl) `[tábua pesada de corte de madeira dura de oliveira]`
+- **baskorde** (1) — bask- + orde, termina em -e (1 decl) `[guarda-caça jurado que zela pelos limites imperiais]`
+- **batone** (1) — baton- + -e, termina em -e (1 decl) `[amarra entrançada tratada com betume para rapel abissal]`
+- **batonil** (2) — baton- + -il `[haste fosforescente que arde sem fumaca no ambiente fechado]`
+- **belavë** (Modal Regulado (-vë com diérese)) — de modo diurno `[bela + -vë]`
+- **belkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a relampejar `[belka + -vë]`
+- **belpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a intercalar os dias sagrados fora do mês `[belpa + -vë]`
+- **berkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a rachar o gelo na primavera `[berka + -vë]`
+- **berpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a caldear veios de enxofre mineral `[berpa + -vë]`
+- **beva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ancorar a nau em porto seguro `[beva + -vë]`
+- **bikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a embalar o berço da criança `[bika + -vë]`
+- **bilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a autenticar com selo de cera real `[bilka + -vë]`
+- **bilpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a meditar em silêncio contemplativo `[bilpa + -vë]`
+- **biravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a decifrar inscrição arcaica pré-Síncrese `[bira + -vë]`
+- **birkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a assentar tijolos ou blocos de pedra `[birka + -vë]`
+- **birke** (1) — birk- + -e, termina em -e (1 decl) `[banco aluvial de pedregulhos redondos onde atracam botes]`
+- **birkon** (2) — birk- + -on `[restinga de seixos polidos acumulados no remanso]`
+- **birpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a assar pães no forno de pedra comunitário `[birpa + -vë]`
+- **borke** (1) — bork- + -e, termina em -e (1 decl) `[margem alcantilada da grande fossa circundada por abismos]`
+- **borkon** (2) — bork- + -on `[depressao circular colossal formada pelo colapso de camara]`
+- **borpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a selar o cavalo de guerra com armação de couro e estribos de bronze `[borpa + -vë]`
+- **borpeste** (1) — borp- + este, termina em -e (1 decl) `[baú de folha de Flandres forrado para guardar especiarias raras]`
+- **borpil** (2) — raiz borp- + -il `[espora de ferro brunido com roseta de oito pontas]`
+- **borpin** (2) — raiz borp- + -in `[armação de sela estofada com crina e coberta de camurça]`
+- **borpur** (2) — raiz borp- + -ur `[par de estribos de bronze fundido fixados nos loro de couro]`
+- **borpvë** (Modal Equestre) — equestremente, com a firmeza de cavaleiro firmado nos estribos `[borp- + -vë]`
+- **bulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a curtir o couro em tanino de casca `[bulka + -vë]`
+- **burkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a inventariar o espólio da Casa `[burka + -vë]`
+- **bylkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a timbrar o lacre de chumbo nas sacas `[bylka + -vë]`
+- **daiavë** (Modal Regulado (-vë com diérese)) — de modo ideal `[daia + -vë]`
+- **dakkanavë** (Modal Regulado (-vë com diérese)) — de modo nutritivo `[dakkan + -vë]`
+- **dakkanvë** (Modal de Fartura) — com fartura, regaladamente `[dakkan + -vë]`
+- **dalavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a apregoar lotes e peças no mercado público `[dala + -vë]`
+- **dalbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a decantar vinho maduro em ânfora lacrada com resina de zimbro `[dalba + -vë]`
+- **dalbeste** (1) — dalb- + este, termina em -e (1 decl) `[esfumado suave obtido com a ponta dos dedos sobre a tinta fresca]`
+- **dalbil** (2) — raiz dalb- + -il `[jarro de estanho polido com bico afilado para servir à mesa]`
+- **dalbin** (2) — raiz dalb- + -in `[envelhecimento de vinho tinto em barricas de carvalho novo]`
+- **dalbur** (2) — raiz dalb- + -ur `[tonel bojudo de adega com aros de ferro batido e torneira de latão]`
+- **dalbvë** (Modal da Vinicultura) — maduramente, límpido e encorpado como vinho de guarda `[dalb- + -vë]`
+- **dalpande** (1) — dalp- + ande, termina em -e (1 decl) `[adega subterrânea fresca de paredes de cantaria abobadada]`
+- **dalpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a descer materiais no poço por guincho `[dalpa + -vë]`
+- **dalpeste** (1) — dalp- + este, termina em -e (1 decl) `[linha de cumeada de cordilheira que define o divisor de águas]`
+- **darpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a trovejar `[darpa + -vë]`
+- **darporde** (1) — darp- + orde, termina em -e (1 decl) `[mastim pesado guardião das coutadas imperiais]`
+- **daspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a açular cães de rastro no rastro de cervo real `[daspa + -vë]`
+- **daspeste** (1) — dasp- + este, termina em -e (1 decl) `[faca afiada de lâmina curva do mestre trincha real]`
+- **daspil** (2) — raiz dasp- + -il `[coleira larga de couro com cravos de prata do cão de guarda]`
+- **daspin** (2) — raiz dasp- + -in `[busca tenaz da matilha farejando o rastro pelo bosque]`
+- **daspur** (2) — raiz dasp- + -ur `[trompa curva de latão ou chifre que comanda a caçada]`
+- **daspvë** (Modal Cinegético) — cinegeticamente, em perseguição incansável pelo faro `[dasp- + -vë]`
+- **davë** (Modal Regulado (-vë com diérese)) — de modo ideal `[da + -vë]`
+- **delavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fortificar trincheira ou paliçada `[dela + -vë]`
+- **delbeste** (1) — delb- + este, termina em -e (1 decl) `[moenda dupla com mós de sílex para trituração fina de trigo]`
+- **delbin** (2) — delb- + -in `[amarelo-ocre luminoso extraído de argilas vulcânicas purificadas]`
+- **delkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a serpentear em meandros lentos pelas planicies aluviais `[delka + -vë]`
+- **delkeste** (1) — delk- + este, termina em -e (1 decl) `[varzea recortada por dezenas de laços e braços calmos]`
+- **delkeve** (1) — delk- + eve, termina em -e (1 decl) `[praia arenosa formada no lado interior de volta fluvial]`
+- **delkil** (2) — delk- + -il `[leme longo de popa usado para manobras em curvas fechadas]`
+- **delkin** (2) — delk- + -in `[meandro sinuoso que abraça peninsulas no vale fertil]`
+- **delkur** (2) — delk- + -ur `[hidrografo que acompanha a marcha da erosao nas margens]`
+- **delpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arar gleba fértil da planície `[delpa + -vë]`
+- **delpeste** (1) — delp- + este, termina em -e (1 decl) `[amuleto de osso de corvo esculpido para afugentar pavores noturnos]`
+- **delpeve** (1) — delp- + eve, termina em -e (1 decl) `[angústia inexplicável que aperta o peito antes da tempestade]`
+- **delpvë** (Modal Agrícola) — aradoramente, com tração firme de relha `[delp- + -vë]`
+- **derkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a engolir `[derka + -vë]`
+- **derpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tornear madeira ou marfim `[derpa + -vë]`
+- **derveste** (1) — derv- + este, termina em -e (1 decl) `[fonte inesgotável de águas vivas que brota aos pés do trono do Criador]`
+- **dikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a temperar o assado com ervas da serra `[dika + -vë]`
+- **dike** (1) — dik- + -e, termina em -e (1 decl) `[leito elevado que protege a planicie cultivada]`
+- **dikon** (2) — dik- + -on `[dique natural formado pelo deposito nas cheias]`
+- **dikxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calçar botas encouraçadas para a neve `[dikxa + -vë]`
+- **dilbeste** (1) — dilb- + este, termina em -e (1 decl) `[códice de ética e tratados de moral encadernado em marroquim]`
+- **dilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acreditar embaixador junto à corte `[dilka + -vë]`
+- **dilva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a solidificar em crosta vitrea e agulhas polares `[dilva + -vë]`
+- **dilve'e** (1) — dilv- + eve, termina em -e (1 decl) `[camada vitrea que recobre as superficies rochosas]`
+- **dilveste** (1) — dilv- + este, termina em -e (1 decl) `[abobada esculpida no interior da massa azulada]`
+- **dilvil** (2) — dilv- + -il `[estaca de ferro cravada para fixar cordas de descida]`
+- **dilvin** (2) — dilv- + -in `[torres pontiagudas de tom azulado na vertente inclinada]`
+- **dilvur** (2) — dilv- + -ur `[cortador de blocos cristalinos perenes nos vales frios]`
+- **dimavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a venerar relíquia dos antigos `[dima + -vë]`
+- **diravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a salmodiar em versículos alternados `[dira + -vë]`
+- **dirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a esculpir estátua em mármore ou rocha `[dirka + -vë]`
+- **dirpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a esporear o corcel a galope `[dirpa + -vë]`
+- **dolbeste** (1) — dolb- + este, termina em -e (1 decl) `[grelha de medição e desenho quadriculado para ampliar esboços no muro]`
+- **dolinde** (1) — dolind- + -e, termina em -e (1 decl) `[depressao circular em funil por onde a enxurrada some no solo]`
+- **dolindon** (2) — dolind- + -on `[oco monumental conectando os campos superiores aos rios escuros]`
+- **dolpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a consagrar rito de maioridade do jovem com unção de óleo `[dolpa + -vë]`
+- **dolpeste** (1) — dolp- + este, termina em -e (1 decl) `[concha profunda de prata usada pelo provador de pratos do rei]`
+- **dolpvë** (Modal Iniciático) — iniciaticamente, com unção solene de passagem `[dolp- + -vë]`
+- **dorkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a afivelar o cinturão de montaria com correia `[dorka + -vë]`
+- **dorpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a promulgar edito imperial solene `[dorpa + -vë]`
+- **dorpeve** (1) — dorp- + eve, termina em -e (1 decl) `[sinal de fumaça escura erguido no cume da colina para alertar emboscada]`
+- **dorpon** (2) — dorp- + -on `[depósito soterrado de água doce mantido em segredo dentro da fortaleza]`
+- **dorpvë** (Modal Decretal) — decretalmente, com a força de edito régio `[dorp- + -vë]`
+- **dorvon** (2) — dorv- + -on `[banquete anual de confraternização onde senhores e servos comem juntos]`
+- **drina'avë** (Modal Regulado (-vë com diérese)) — de modo de madeira maciça `[drinan + -vë]`
+- **dulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acumular camadas espessas de nevasca nas encostas altas `[dulpa + -vë]`
+- **dulpeste** (1) — dulp- + este, termina em -e (1 decl) `[campo aberto de horizonte perene em plato elevado]`
+- **dulpeve** (1) — dulp- + eve, termina em -e (1 decl) `[crosta quebradiça endurecida pelo vento matinal]`
+- **dulpil** (2) — dulp- + -il `[vara graduada de sondagem usada para medir profundidade]`
+- **dulpin** (2) — dulp- + -in `[acumulo estavel de flocos compactados no circo montanhoso]`
+- **dulpur** (2) — dulp- + -ur `[observador que afere a espessura da capa nival]`
+- **durkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cobrar tributo ou dízimo imperial `[durka + -vë]`
+- **durva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fluir em leito subterraneo escavando saloes cegos `[durva + -vë]`
+- **durve'e** (1) — durv- + eve, termina em -e (1 decl) `[queda oculta que despenca no escuro em caldeira abissal]`
+- **durveste** (1) — durv- + este, termina em -e (1 decl) `[garganta inundada ligando dois saloes da caverna]`
+- **durvil** (2) — durv- + -il `[sonda de chumbo usada para medir o fundo das lagoas escuras]`
+- **durvin** (2) — durv- + -in `[leito caudaloso subterraneo cortando as entranhas da serra]`
+- **durvur** (2) — durv- + -ur `[navegador que guia batelões de couro pelos canais cegos]`
+- **edelavë** (Modal Regulado (-vë com diérese)) — de modo nobre `[edela + -vë]`
+- **elfavë** (Modal Regulado (-vë com diérese)) — de modo sacro `[elfa + -vë]`
+- **eruvil** (2) — eru + -vil `[vontade suprema e desígnio inescrutável d’Aquele que É Único]`
+- **esfagne** (1) — esfagn- + -e, termina em -e (1 decl) `[manta macia de vegetais avermelhados na turfeira]`
+- **esfagnon** (2) — esfagn- + -on `[musgo aquoso esponjoso que retem imensa carga de umidade]`
+- **extep** (Locativo Exterior) — fora de casa, ao relento, no exterior `[ex + tep (casa)]`
+- **fadavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a conferir o manifesto de carga da nau `[fada + -vë]`
+- **fainavë** (Modal Regulado (-vë com diérese)) — de modo pirateado `[faina + -vë]`
+- **falavë** (Modal Regulado (-vë com diérese)) — de modo sonolento `[fala + -vë]`
+- **falbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calcinar cinzas vegetais em cadinho refratário `[falba + -vë]`
+- **falbeste** (1) — falb- + este, termina em -e (1 decl) `[balista leve montada sobre cavalete para tiro de precisão contra ameias]`
+- **falbeve** (1) — falb- + eve, termina em -e (1 decl) `[farinha finíssima de espelta peneirada em crivo de seda]`
+- **falbvande** (1) — falb- + vande, termina em -e (1 decl) `[águia dourada imperial que abate corças na montanha]`
+- **falbvë** (Modal Ígneo) — calcinadamente, purificado pelo fogo do cadinho `[falb- + -vë]`
+- **falkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a podar galhos secos de árvores frutíferas `[falka + -vë]`
+- **falpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cochilar suavemente `[falpa + -vë]`
+- **fane** (1) — fan- + -e, termina em -e (1 decl) `[barra de areia fina acumulada pela ressaca na saida]`
+- **fanon** (2) — fan- + -on `[leque de ilhas sedimentares na foz do rio principal]`
+- **fapavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a mergulhar no hemisfério inferior sob a terra `[fapa + -vë]`
+- **farbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a vadear leitos rasos cruzando bancos de cascalho firme `[farba + -vë]`
+- **farbeste** (1) — farb- + este, termina em -e (1 decl) `[estalagem estabelecida junto ao vau historico de caravanas]`
+- **farbeve** (1) — farb- + eve, termina em -e (1 decl) `[laje lisa submersa sobre a qual se apoiam as montarias]`
+- **farbil** (2) — farb- + -il `[cajado graduado para testar a firmeza do cascalho no vau]`
+- **farbin** (2) — farb- + -in `[vau pedregoso onde a agua permite passagem a pe]`
+- **farbur** (2) — farb- + -ur `[guia de tropeiros encarregado de apontar o vau seguro]`
+- **fardavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a prestar testemunho solene em juízo `[farda + -vë]`
+- **farve** (1) — farv- + -e, termina em -e (1 decl) `[fresta de ventilacao natural que renova o ar nas entranhas]`
+- **farvol** (2) — farv- + -ol `[duto vertical por onde sopra corrente ascendente de brisa pura]`
+- **faspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a soltar queixume de dor ou esforço `[faspa + -vë]`
+- **fasvë** (Modal Doloroso) — dolorosamente, a duras penas `[fas- + -vë]`
+- **feanorin** (2) — fea + norin `[espírito de fogo incriado destinado a grandes façanhas e tragédias]`
+- **feapavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a projetar a sombra solar no relógio de pedra `[feapa + -vë]`
+- **felkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a trançar cordas de cânhamo ou crina `[felka + -vë]`
+- **felpeste** (1) — felp- + este, termina em -e (1 decl) `[cunha de ferro dentada para calçar rodas de carretas pesadas em desfiladeiros]`
+- **felvon** (2) — felv- + -on `[resplendor dourado em torno da cabeça de divindades em mosaico]`
+- **feravë** (Modal Regulado (-vë com diérese)) — de modo ventoso `[fera + -vë]`
+- **ferkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a estremecer de calafrio ou emoção `[ferka + -vë]`
+- **ferpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a inspirar fundo o ar nos pulmões `[ferpa + -vë]`
+- **fexavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a chover fino `[fexa + -vë]`
+- **fikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ensinar a gramática normativa `[fika + -vë]`
+- **filavë** (Modal Regulado (-vë com diérese)) — de modo abissal `[fila + -vë]`
+- **fildavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a encordoar o arco de guerra `[filda + -vë]`
+- **filpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cintilar como estrela ou aurora boreal `[filpa + -vë]`
+- **filtonk** (Temporal Primordial) — no princípio dos tempos, desde a origem `[fil (cerne) + tonkre]`
+- **fimavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arbitrar litígio entre Casas Nobres `[fima + -vë]`
+- **fipavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a varrer a cinza da lareira `[fipa + -vë]`
+- **firisin** (2) — firis- + -in `[nevoa fina com prismas cintilando na alvorada gelida]`
+- **firisve** (1) — firisv- + -e, termina em -e (1 decl) `[poeira luminosa de cristais no ar gerando halos solares]`
+- **firkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a destilar essência de ervas alpinas `[firka + -vë]`
+- **firxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a incensar o altar nos ritos solenes `[firxa + -vë]`
+- **fisavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pregar botões de osso na túnica `[fisa + -vë]`
+- **foladvë** (Modal Liquidativo) — liquidamente, em quitação plena de débito `[folad- + -vë]`
+- **folbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a exalar vapores termais aquecidos pelo calor das profundezas `[folba + -vë]`
+- **folbeste** (1) — folb- + este, termina em -e (1 decl) `[camada aquecida naturalmente pela pedra viva]`
+- **folbeve** (1) — folb- + eve, termina em -e (1 decl) `[nevoa sulfurosa pairando sobre as margens da agua aquecida]`
+- **folbil** (2) — folb- + -il `[respiradouro natural expelindo colunas de ar morno]`
+- **folbin** (2) — folb- + -in `[caldeira termal aquecida por veios vulcanicos profundos]`
+- **folbur** (2) — folb- + -ur `[minerador que recolhe sais cristalizados nas frestas termais]`
+- **folkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a quitar débito no livro de contas `[folka + -vë]`
+- **fulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sussurrar ao ouvido `[fulka + -vë]`
+- **fulva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a jorrar jatos de vapor escaldante em geiseres ritmicos `[fulva + -vë]`
+- **fulve'e** (1) — fulv- + eve, termina em -e (1 decl) `[cortina de goticulas tepidas dispersas pelo sopro da serra]`
+- **fulveste** (1) — fulv- + este, termina em -e (1 decl) `[campo aberto repleto de patamares coloridos de silica]`
+- **fulvil** (2) — fulv- + -il `[coluna ascendente de agua fervente atingindo grande altura]`
+- **fulvin** (2) — fulv- + -in `[bacia de fonte termal fervilhante com depositos silicosos]`
+- **fulvur** (2) — fulv- + -ur `[batedor geotermal que afere os intervalos dos jorros]`
+- **furkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arar a terra `[furka + -vë]`
+- **furpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arrendar terras da Coroa `[furpa + -vë]`
+- **galparde** (1) — galp- + arde, termina em -e (1 decl) `[galope cerrado da cavalaria pesada que estremece a terra]`
+- **galpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a operar aríete e maquinismos pesados de quebra de muralhas `[galpa + -vë]`
+- **galpeste** (1) — galp- + este, termina em -e (1 decl) `[leque de penas usado pelo copeiro para avivar as brasas]`
+- **galpeve** (1) — galp- + eve, termina em -e (1 decl) `[chuva de piche ardente e óleo fervente lançada sobre os assaltantes]`
+- **galpil** (2) — galp- + -il `[viga mestra de carvalho revestida de ferro forjado do aríete]`
+- **galpin** (2) — galp- + -in `[embate violento da cabeça de bronze do aríete contra o portão]`
+- **galpon** (2) — galp- + -on `[rombo ou brecha aberta na cortina da muralha pelo impacto contínuo]`
+- **galporde** (1) — galp- + orde, termina em -e (1 decl) `[galo de rinha ou ave de vigia dos aviários reais]`
+- **galpur** (2) — galp- + -ur `[artífice artilheiro encarregado da manobra do aríete de choque]`
+- **galve** (1) — galv- + -e, termina em -e (1 decl) `[orla viscosa de vegetacao rasteira que cerca o atoleiro]`
+- **galvon** (2) — galv- + -on `[poco pantanoso escuro que engole quem pisa sem cautela]`
+- **garvanavë** (Modal Regulado (-vë com diérese)) — de modo límpido `[garvan + -vë]`
+- **gasavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enfardar peças de veludo para a viagem `[gasa + -vë]`
+- **gaspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a celebrar banquete de noivado entre clãs aliados `[gaspa + -vë]`
+- **gaspeste** (1) — gasp- + este, termina em -e (1 decl) `[candelabro de sete velas de cera de abelha da mesa de banquete]`
+- **gaspvë** (Modal Festivo) — festivamente, em banquete farto de aliança e concórdia `[gasp- + -vë]`
+- **gelbre** (1) — gelbr- + -e, termina em -e (1 decl) `[pulsaçao sismica que ecoa apos a queda de imenso rochedo de gelo]`
+- **gelbron** (2) — gelbr- + -on `[estrondo potente emitido pelo desmoronamento de uma muralha polar]`
+- **geva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a remar contra a correnteza `[geva + -vë]`
+- **gikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a abotoar o manto com fivela de prata `[gika + -vë]`
+- **gikxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a prensar bagas silvestres para vinho `[gikxa + -vë]`
+- **gilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a piscar os olhos `[gilka + -vë]`
+- **gilpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a escalar escarpa ou muralha com gancho `[gilpa + -vë]`
+- **gimavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a contemplar a harmonia das esferas `[gima + -vë]`
+- **girkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cinzelar inscrição na lápide `[girka + -vë]`
+- **girpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a dedilhar as cordas da harpa `[girpa + -vë]`
+- **girvë** (Modal Progressivo) — crescentemente, de modo ascendente `[gir- + -vë]`
+- **gobanavë** (Modal Regulado (-vë com diérese)) — de modo justo no preço `[goban + -vë]`
+- **gobanvë** (Modal de Justiça Comercial) — honestamente, por preço justo `[goban + -vë]`
+- **gobvë** (Modal Mercantil) — mercantilmente, a preço justo de mercado `[gob + -vë]`
+- **golkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a congelar a superfície `[golka + -vë]`
+- **golpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fundir metal no cadinho ardente `[golpa + -vë]`
+- **gondavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enxertar ramo frutífero em cavalo vigoroso `[gonda + -vë]`
+- **gorkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a erodir a pedra pela água ou vento `[gorka + -vë]`
+- **gorpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a extrair minério da rocha com ponteira `[gorpa + -vë]`
+- **gorpvë** (Modal Extrativo) — extrativamente, com impacto firme de ponteira `[gorp- + -vë]`
+- **gorve'e** (1) — gorv- + eve, termina em -e (1 decl) `[ruído de atrito seco entre bronze e ferro em engrenagem deslubrificada]`
+- **gulde** (1) — guld- + -e, termina em -e (1 decl) `[bacia de rocha clara cheia de agua cristalina imovel]`
+- **guldor** (2) — guld- + -or `[degrau de travertino formando bacias escalonadas]`
+- **gulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a notificar oficialmente por arauto `[gulka + -vë]`
+- **guravë** (Modal Regulado (-vë com diérese)) — de modo chato `[gura + -vë]`
+- **gurkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a emancipar servo ou vassalo `[gurka + -vë]`
+- **habavë** (Modal de Hospitalidade) — hospitaleiramente `[haba + -vë]`
+- **halkanvë** (Modal de Marcha) — a passo firme, marchando resolutamente `[halkan + -vë]`
+- **halkfasanavë** (Modal Regulado (-vë com diérese)) — de modo fatigado da longa marcha `[halkfasan + -vë]`
+- **halkon** (2) — halk- + -on `[recinto cavernoso profundo acumulando rocha em fusao]`
+- **halvuravë** (Modal Regulado (-vë com diérese)) — de modo imperecível `[halvura + -vë]`
+- **halxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a interpretar presságio sideral `[halxa + -vë]`
+- **haly'itrion** (2) — halylitro- + -on `[Grande Música Cósmica dos Ainur entoada perante o Ilúvatar]`
+- **haporve** (1) — haporv- + -e, termina em -e (1 decl) `[fumaca combustivel que borbulha nas pocas estagnadas]`
+- **haporvon** (2) — haporv- + -on `[bolsao subterraneo de ar inflamavel sob a capa lodosa]`
+- **hardive** (1) — hardiv- + -e, termina em -e (1 decl) `[massa granulada endurecida que se converte em manto denso]`
+- **hardivon** (2) — hardiv- + -on `[leito profundo e compacto preservado sob camadas novas]`
+- **helbeste** (1) — helb- + este, termina em -e (1 decl) `[relógio de sol horizontal com linhas horárias gravadas em mármore]`
+- **helosfe** (1) — helosf- + -e, termina em -e (1 decl) `[extensao aquatica cega onde vivem seres albinos]`
+- **helosfin** (2) — helosf- + -in `[abobada negra que encobre o espelho de aguas dormentes]`
+- **helpin** (2) — help- + -in `[azul-cobalto vítreo de alta saturação usado nos céus dos afrescos]`
+- **helva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a contemplar a quietude eterna nos Salões Atemporais do Criador `[helva + -vë]`
+- **helve'e** (1) — helv- + eve, termina em -e (1 decl) `[desolação gélida do Vazio exterior onde nada tem forma nem ser]`
+- **helveste** (1) — helv- + este, termina em -e (1 decl) `[limiar transcendental entre a eternidade incriada e o universo físico]`
+- **helvil** (2) — helv- + -il `[trono eterno esculpido em luz viva no centro dos Salões Atemporais]`
+- **helvin** (2) — helv- + -in `[contemplação extática da luz inacessível nos Salões Atemporais]`
+- **helvon** (2) — helv- + -on `[vasto recinto eterno que transcende as esferas e o firmamento]`
+- **helvur** (2) — helv- + -ur `[espírito primordial admitido à presença do Criador antes do tempo]`
+- **hokavë** (Modal Regulado (-vë com diérese)) — de modo tolo `[hoka + -vë]`
+- **holkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a rachar o manto sob tensao formando fendas profundas `[holka + -vë]`
+- **holkeste** (1) — holk- + este, termina em -e (1 decl) `[zona de fratura caotica onde o manto desce sobre rochas]`
+- **holkeve** (1) — holk- + eve, termina em -e (1 decl) `[fissura estreita e profunda na couraça viva]`
+- **holkil** (2) — holk- + -il `[ferramenta de aço com ponta afiada para esculpir degraus]`
+- **holkin** (2) — holk- + -in `[sistema de fendas transversais em manto alpino]`
+- **holkur** (2) — holk- + -ur `[guia de travessia que identifica gretas ocultas sob a neve]`
+- **holpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a mergulhar em sono profundo com visões oníricas `[holpa + -vë]`
+- **holpeste** (1) — holp- + este, termina em -e (1 decl) `[leito de madeira de cedro consagrado ao repouso e aos sonhos]`
+- **holpeve** (1) — holp- + eve, termina em -e (1 decl) `[pesadelo opressivo que sufoca a respiração na calada da noite]`
+- **holpil** (2) — holp- + -il `[incenso aromático de resinas silvestres queimado para induzir o sono]`
+- **holpin** (2) — holp- + -in `[visão onírica profética contemplada durante o sono profundo]`
+- **holpon** (2) — holp- + -on `[sono leve e inquieto entremeado de murmúrios e vislumbres]`
+- **holpur** (2) — holp- + -ur `[intérprete oficial de visões oníricas e pesadelos da corte]`
+- **hordite** (1) — hordit- + -e, termina em -e (1 decl) `[cone pequeno de escoria expulso ao redor de respiradouro]`
+- **horditor** (2) — hordit- + -or `[torre de basalto endurecido erguida por salpicos de fogo]`
+- **hulbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sitiar fortaleza erguendo trincheiras e circunvalação de cerco `[hulba + -vë]`
+- **hulbeste** (1) — hulb- + este, termina em -e (1 decl) `[reduto fortificado de campanha erguido no anel de cerco]`
+- **hulbeve** (1) — hulb- + eve, termina em -e (1 decl) `[fome e escassez extrema sofrida pela guarnição sitiada]`
+- **hulbil** (2) — hulb- + -il `[paliçada dupla de troncos pontiagudos de cerco]`
+- **hulbin** (2) — hulb- + -in `[cerco tático prolongado e circunvalação de praça forte]`
+- **hulbon** (2) — hulb- + -on `[trincheira em ziguezague cavada para aproximação segura]`
+- **hulbur** (2) — hulb- + -ur `[general comandante das operações de cerco e circunvalação]`
+- **hurva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ecoar e ressoar em abobadas subterraneas profundas `[hurva + -vë]`
+- **hurve'e** (1) — hurv- + eve, termina em -e (1 decl) `[sussurro continuo gerado pela passagem do ar nas fendas]`
+- **hurveste** (1) — hurv- + este, termina em -e (1 decl) `[catedral subterranea dotada de acustica solene]`
+- **hurvil** (2) — hurv- + -il `[diapasao de bronze usado para testar a acustica das camaras]`
+- **hurvin** (2) — hurv- + -in `[galeria de ressonancia natural onde os sons reverberam sete vezes]`
+- **hurvur** (2) — hurv- + -ur `[batedor que afere a profundeza da fossa pelo eco]`
+- **huxavë** (Modal Regulado (-vë com diérese)) — de modo vestido `[huxa + -vë]`
+- **huxpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a dobrar os linhos e cobertas na arca `[huxpa + -vë]`
+- **iddabel** (Temporal de Frequência) — diariamente, todos os dias sem falta `[idda + bel (dia)]`
+- **iddanir** (Temporal Noturno) — todas as noites, a cada vigília `[idda + nir (noite)]`
+- **iddavë** (Modal Regulado (-vë com diérese)) — de modo único `[idda + -vë]`
+- **idlete** (Modal de Uníssono) — a uma só voz, em uníssono `[id + lete (voz)]`
+- **iloravë** (Modal Regulado (-vë com diérese)) — de modo estelar `[ilora + -vë]`
+- **inbeli** (Modal / Locativo Público) — às claras, abertamente, à luz do dia `[in + beli (dia)]`
+- **indatte** (Locativo Direcional Destro) — à direita, pelo flanco destro `[in + datte (direita)]`
+- **insinte** (Locativo Direcional Sinistro) — à esquerda, pelo flanco sinistro `[in + sinte (esquerda)]`
+- **insotim** (Locativo Frontal) — de frente, face a face, perante `[in + sotim (rosto)]`
+- **intep** (Locativo Interior) — dentro de casa, sob o teto, no abrigo `[in + tep (casa)]`
+- **invar** (Locativo de Trânsito) — a caminho, em plena marcha, na estrada `[in + var (caminho)]`
+- **invel** (Modal / Locativo Oculto) — às ocultas, em segredo, na penumbra `[in + vel (sombra)]`
+- **isavë** (Modal Regulado (-vë com diérese)) — de modo inteligente `[isa + -vë]`
+- **issakamvë** (Modal Equitativo) — equitativamente, em balanço exato `[id + sakam- + -vë, ds -> ss]`
+- **issu** (Modal de Unidade) — unanimemente, num só coração `[id + su (cerne), ds -> ss]`
+- **kadpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a medir a distância angular até o topo do céu `[kadpa + -vë]`
+- **kal'ite** (1) — kalkit- + -e, termina em -e (1 decl) `[crosta brilhante de minerais puros nas paredes da gruta]`
+- **kal'iton** (2) — kalkit- + -on `[colunata solene unindo o teto e o chao da galeria magna]`
+- **kalame** (1) — kalam- + -e, termina em -e (1 decl) `[canavial espesso farfalhando ao vento do crepusculo]`
+- **kalamil** (2) — kalam- + -il `[haste oca de junco empregada como flauta ou canudo]`
+- **kalbeste** (1) — kalb- + este, termina em -e (1 decl) `[escritório de cartografia da chancelaria onde se guardam mapas secretos]`
+- **kalpeste** (1) — kalp- + este, termina em -e (1 decl) `[camada de verniz de âmbar e óleo de linhaça para proteger o afresco]`
+- **kambavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a adubar o solo com composto e cinzas `[kamba + -vë]`
+- **kan'ad** (Locativo Distante Superior) — lá no alto, naquele pico distante `[kan + kade]`
+- **kanfil** (Locativo Distante Profundo) — lá no fundo, naquele abismo `[kan + fil]`
+- **karazvë** (Modal Festivo) — jubilosamente, entre risos `[kraz- + -vë]`
+- **karosfer** (2) — karo- + -sfer `[abobada de massas congeladas perenes nas culminancias do mundo]`
+- **karpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a firmar aliança diplomática `[karpa + -vë]`
+- **karpeste** (1) — karp- + este, termina em -e (1 decl) `[cova de lobo com estacas pontiagudas disfarçada sob folhas secas]`
+- **karpon** (2) — karp- + -on `[trompa de bronze de som rouco usada para ordenar avanço geral]`
+- **karpte** (1) — karpt- + -e, termina em -e (1 decl) `[nicho funerario arcaico talhado na rocha viva]`
+- **karpton** (2) — karpt- + -on `[recinto murado naturalmente apos antigo abalo de montanha]`
+- **karpvë** (Modal Federativo) — aliançadamente, em mútua fidelidade pactuada `[karp- + -vë]`
+- **kartalde** (1) — kar- + talde, termina em -e (1 decl) `[palanque de madeira nobre de onde a corte assiste ao torneio]`
+- **kasavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a brotar manancial da rocha viva `[kasa + -vë]`
+- **kaspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a traçar letras caligráficas com pena de cálamo `[kaspa + -vë]`
+- **kaspvë** (Modal Caligráfico) — caligraficamente, com o traço cursivo e preciso do cálamo `[kasp- + -vë]`
+- **katarve** (1) — katarv- + -e, termina em -e (1 decl) `[cascata em degraus de rocha descendo pela ravina]`
+- **katarvon** (2) — katarv- + -on `[garganta profunda onde a agua cai em estrondo continuo]`
+- **katroavë** (Modal Regulado (-vë com diérese)) — de modo poucos `[katro + -vë]`
+- **kave** (1) — kav- + -e, termina em -e (1 decl) `[crosta leve e porosa sobre o fluxo de pedra liquida]`
+- **kavil** (2) — kav- + -il `[rocha esponjosa com bolhas de ar que flutua nas lagoas]`
+- **kebel** (Interrogativo Temporal) — quando? em que dia? `[ke + bel]`
+- **kelbade** (1) — kelb- + ade, termina em -e (1 decl) `[memória viva de todos os seres que existiram guardada na mente eterna]`
+- **kelbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tingir o estofo na tina de pigmento `[kelba + -vë]`
+- **kelbeste** (1) — kelb- + este, termina em -e (1 decl) `[válvula de retenção cônica de bronze que impede refluxo no tubo]`
+- **keldavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lapidar facetas de cristais no rebolo `[kelda + -vë]`
+- **keldvë** (Modal de Lapidação) — lapidadamente, em facetas polidas com simetria `[keld- + -vë]`
+- **kelpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a alinhar dois astros no mesmo grau sideral `[kelpa + -vë]`
+- **kelpin** (2) — kelp- + -in `[tradição oral de ética transmitida pelos contadores de histórias]`
+- **kelvë** (Modal Coletivo) — conjuntamente, em formação unida `[kel- + -vë]`
+- **kemixi** (Interrogativo Pessoal) — quem? `[ke + mixi]`
+- **kemyga** (Interrogativo de Quantidade) — quanto? quantos? (kemyga paror esu? = quanto custa?) `[ke + myga]`
+- **kerbade** (1) — kerb- + ade, termina em -e (1 decl) `[decreto soberano do destino promulgado perante todos os povos]`
+- **kerbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a revelar o desígnio soberano e o destino glorioso dos povos livres `[kerba + -vë]`
+- **kerbeste** (1) — kerb- + este, termina em -e (1 decl) `[sinete de honra impresso em atos de libertação de servos injustiçados]`
+- **kerbeve** (1) — kerb- + eve, termina em -e (1 decl) `[luto cósmico pelas vidas e belezas feridas na marcha do mundo]`
+- **kerbil** (2) — kerb- + -il `[rolo de pergaminho eterno selado com sete selos de diamante]`
+- **kerbin** (2) — kerb- + -in `[desenlace profético das eras e triunfo final da providência]`
+- **kerbon** (2) — kerb- + -on `[tecido inviolável da história onde cada vida é um fio de ouro]`
+- **kerbur** (2) — kerb- + -ur `[arauto dos destinos cósmicos encarregado de proclamar o fim dos tempos]`
+- **kerpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a granizar `[kerpa + -vë]`
+- **kesan** (Interrogativo Neutro) — o quê? que coisa? `[ke + san]`
+- **keva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a escoltar caravana pelos passos alpinos `[keva + -vë]`
+- **kil'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ouvir com nitidez `[kil'a + -vë]`
+- **kilavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a engomar a gola plissada de Chancelaria `[kila + -vë]`
+- **kildanavë** (Modal Regulado (-vë com diérese)) — de modo gélido `[kildan + -vë]`
+- **kildanvë** (Modal de Frio) — gélidamente, sob frio cortante `[kildan + -vë]`
+- **kindravë** (Modal Regulado (-vë com diérese)) — de modo familiar `[kindra + -vë]`
+- **kir'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a temperar o aço em água gélida `[kir'a + -vë]`
+- **kiravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a transcrever códice em pergaminho limpo `[kira + -vë]`
+- **kirbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a refratar a luz do sol em leque policromático através de cristal `[kirba + -vë]`
+- **kirbeste** (1) — kirb- + este, termina em -e (1 decl) `[câmara escura dotada de prisma para projeção de imagens solares]`
+- **kirbeve** (1) — kirb- + eve, termina em -e (1 decl) `[miragem trêmula de ar aquecido no horizonte da planície]`
+- **kirbil** (2) — kirb- + -il `[prisma triangular de cristal puro facetado para refração]`
+- **kirbin** (2) — kirb- + -in `[dispersão refratada da luz em arco-íris luminoso]`
+- **kirbon** (2) — kirb- + -on `[halo iridescente ou espectro de cores projetado na parede]`
+- **kirbur** (2) — kirb- + -ur `[mestre óptico artífice de lentes e prismas de cristal de rocha]`
+- **kirpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a transmitir o anel de sinete ao primogênito `[kirpa + -vë]`
+- **kolbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lançar tributo régio sobre feudos vassalos `[kolba + -vë]`
+- **kolmavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a polir lajes de mármore com areia `[kolma + -vë]`
+- **kolmvë** (Modal de Polimento) — polidamente, com lustro espelhado de mármore `[kolm- + -vë]`
+- **kolpeste** (1) — kolp- + este, termina em -e (1 decl) `[gnômon pontiagudo de bronze de relógio de sol sobre pedestal]`
+- **kolvin** (2) — kolv- + -in `[estrada real pavimentada de lajes polidas com valas laterais de drenagem]`
+- **kolviste** (1) — kolv- + -iste, termina em -e (1 decl) `[passagem natural que une bordas de fenda abissal]`
+- **kolvor** (2) — kolv- + -or `[arco suspenso por onde cruzam batedores de altitude]`
+- **kor'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fosforecer em fogos azuis sobre os brejos na noite quieta `[kor'a + -vë]`
+- **kor'este** (1) — kork- + este, termina em -e (1 decl) `[trecho traiçoeiro onde os fogos iludem os viandantes]`
+- **kor'eve** (1) — kork- + eve, termina em -e (1 decl) `[chama rapida que surge e se apaga num sopro na agua]`
+- **kor'il** (2) — kork- + -il `[lanterna de azeite com vidros protegidos para travessias]`
+- **kor'in** (2) — kork- + -in `[luz azulada de gas iluminado na escuridao dos brejos]`
+- **kor'ur** (2) — kork- + -ur `[vigilante noturno que afere as chamas errantes do charco]`
+- **koravë** (Modal Regulado (-vë com diérese)) — de modo amadeirado `[kora + -vë]`
+- **korbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a engrenar dentes e pinhões de bronze em mecanismo de relojoaria `[korba + -vë]`
+- **korbeste** (1) — korb- + este, termina em -e (1 decl) `[eixo estriado de transmissão de torque entre duas rodas dentadas]`
+- **korbeve** (1) — korb- + eve, termina em -e (1 decl) `[folga excessiva ou desgaste nos dentes da engrenagem]`
+- **korbil** (2) — korb- + -il `[roda dentada de bronze fosforoso de sessenta dentes]`
+- **korbin** (2) — korb- + -in `[engrenamento contínuo de roda dentada de bronze e pinhão]`
+- **korbon** (2) — korb- + -on `[trem de engrenagens montado em armação de ferro batido]`
+- **korbur** (2) — korb- + -ur `[mestre relojoeiro e artífice de engrenagens de precisão]`
+- **korpante** (1) — korp- + ante, termina em -e (1 decl) `[pão sovado de crosta estaladiça marcado com selo régio]`
+- **korpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fermentar levedura viva em massa de farinha fina `[korpa + -vë]`
+- **korpeste** (1) — korp- + este, termina em -e (1 decl) `[câmara de fogo secreto oculta no coração da terra primordial]`
+- **korpil** (2) — raiz korp- + -il `[pá chata de freixo para enfiar pães redondos no forno aquecido]`
+- **korpin** (2) — raiz korp- + -in `[levedação lenta de massa de farinha de trigo branco sob panos úmidos]`
+- **korpur** (2) — raiz korp- + -ur `[forno abobadado de alvenaria com lastro de tijolo refratário]`
+- **korpvë** (Modal da Panificação) — levedadamente, com a leveza de pão bem crescido `[korp- + -vë]`
+- **korve** (1) — korv- + -e, termina em -e (1 decl) `[fresta fumegante exalando nuvens quentes na colina]`
+- **korvin** (2) — korv- + -in `[guarnição de fronteira sediada em casamatas na muralha divisória]`
+- **korvol** (2) — korv- + -ol `[duto natural por onde sobem colunas de gas aquecido]`
+- **kranavë** (Modal Regulado (-vë com diérese)) — de modo feminino `[krana + -vë]`
+- **krazavë** (Modal de Alegria) — alegremente, com riso `[kraza + -vë]`
+- **kronavë** (Modal Regulado (-vë com diérese)) — de modo masculino `[krona + -vë]`
+- **kuavë** (Modal Regulado (-vë com diérese)) — de modo avermelhado `[kua + -vë]`
+- **kuexavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a corar a face de pudor ou rubor `[kuexa + -vë]`
+- **kul'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a encastoar gema em anel ou coroa `[kul'a + -vë]`
+- **kulavë** (Modal Regulado (-vë com diérese)) — de modo alaranjado `[kula + -vë]`
+- **kulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ajustar frete com os tropeiros da caravana `[kulpa + -vë]`
+- **kulvon** (2) — kulv- + -on `[téssera dourada feita com lâmina de ouro batido entre duas lâminas de vidro]`
+- **kur'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a coroar o soberano no santuário `[kur'a + -vë]`
+- **kuravë** (Modal Regulado (-vë com diérese)) — de modo corrompido `[kura + -vë]`
+- **kurvon** (2) — kurv- + -on `[renúncia voluntária a bens terrenos em busca de elevação ética]`
+- **kus'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pleitear imunidade sob proteção de estandarte `[kus'a + -vë]`
+- **lahare** (1) — lahar- + -e, termina em -e (1 decl) `[enxurrada de lodo e cinza que desce vales no degelo magmatico]`
+- **laharon** (2) — lahar- + -on `[camada petrificada de lama e cascalho em pe de encosta]`
+- **lakavë** (Modal Regulado (-vë com diérese)) — de modo mau `[laka + -vë]`
+- **lanavë** (Modal Regulado (-vë com diérese)) — de modo luminoso `[lana + -vë]`
+- **lanyavë** (Modal Regulado (-vë com diérese)) — de modo cheio de luz `[lany + -vë]`
+- **larbeste** (1) — larb- + este, termina em -e (1 decl) `[relicário de bronze que guarda cinzas de mártir da justiça]`
+- **larbon** (2) — larb- + -on `[palanque de comando fortificado de onde o condestável observa a batalha]`
+- **lartavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cozer cerâmica e barro em alta temperatura `[larta + -vë]`
+- **larteve** (1) — lart- + eve, termina em -e (1 decl) `[prato fundo de cerâmica vidrada decorado com folhas de videira]`
+- **lartvë** (Modal Cerâmico) — em alta têmpera, com a dureza da faiança cozida `[lart- + -vë]`
+- **larva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a erigir marcos miliários de cantaria na linha divisória dos reinos `[larva + -vë]`
+- **larve'e** (1) — larv- + eve, termina em -e (1 decl) `[disputa territorial acirrada em faixa de terra litigiosa]`
+- **larveste** (1) — larv- + este, termina em -e (1 decl) `[mojão de pedras sobrepostas erguido no cume de monte divisório]`
+- **larvil** (2) — larv- + -il `[marco miliário de granito polido gravado com a distância à capital]`
+- **larvin** (2) — larv- + -in `[demarcação solene da linha de fronteira entre dois impérios]`
+- **larvon** (2) — larv- + -on `[coluna monumental de fronteira com os brasões de duas nações]`
+- **larvur** (2) — larv- + -ur `[agrimensor juramentado da chancelaria encarregado das divisas]`
+- **lauravë** (Modal Regulado (-vë com diérese)) — de modo dourado `[laura + -vë]`
+- **lerkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fiar a lã ou o linho no fuso `[lerka + -vë]`
+- **lerpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a indultar prisioneiro por clemência do soberano `[lerpa + -vë]`
+- **lerpvë** (Modal Clemente) — clementemente, em anistia régia e perdão pleno `[lerp- + -vë]`
+- **letavë** (Modal Regulado (-vë com diérese)) — de modo verbal `[leta + -vë]`
+- **lexavë** (Modal Regulado (-vë com diérese)) — de modo estelar `[lexa + -vë]`
+- **lexpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a alinhar o quadrante com o meridiano `[lexpa + -vë]`
+- **libkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a balançar a face visível da lua `[libka + -vë]`
+- **likavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a defumar carnes no fumeiro de pinho `[lika + -vë]`
+- **limavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a hastear o estandarte imperial `[lima + -vë]`
+- **limne** (1) — limn- + -e, termina em -e (1 decl) `[ciencia e estudo dos ecossistemas de aguas paradas]`
+- **limnil** (2) — limn- + -il `[carta hidrografica detalhando bacias lacustres fechadas]`
+- **limpe** (1) — limp- + -e, termina em -e (1 decl) `[pelicula vegetal que recobre as folhas sob a superficie]`
+- **limpon** (2) — limp- + -on `[sedimento escuro e nutritivo que forra o fundo da lagoa]`
+- **liravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a modular a voz para o registro grave `[lira + -vë]`
+- **lirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a iluminar manuscrito com ouro e carmim `[lirka + -vë]`
+- **liskavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lamber `[liska + -vë]`
+- **lita'onk** (Temporal Breve) — por pouco tempo, provisoriamente `[lita + tonkre]`
+- **litavë** (Modal Regulado (-vë com diérese)) — de modo diminuto `[lita + -vë]`
+- **lixavë** (Modal Regulado (-vë com diérese)) — de modo limpo `[lixa + -vë]`
+- **lorbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a incrustar tésseras de vidro colorido e ouro em mosaico bizantino `[lorba + -vë]`
+- **lorbeste** (1) — lorb- + este, termina em -e (1 decl) `[massa adesiva de cal, pozolana e resina para assentar tésseras]`
+- **lorbeve** (1) — lorb- + eve, termina em -e (1 decl) `[cintilação dourada do fundo musivo quando iluminado por tochas]`
+- **lorbil** (2) — lorb- + -il `[martelina de aço e talhadeira afiada para cortar esmaltes vítreos]`
+- **lorbin** (2) — lorb- + -in `[composição musiva monumental cobrindo o teto da basílica]`
+- **lorbon** (2) — lorb- + -on `[mosaico pavimental geométrico em pedras calcárias preto e branco]`
+- **lorbur** (2) — lorb- + -ur `[mosaicista mestre no corte e assentamento de tésseras minúsculas]`
+- **lorvon** (2) — lorv- + -on `[roda de lanterna com fusos cilíndricos engrenada à coroa mestra]`
+- **lotavë** (Modal Regulado (-vë com diérese)) — de modo belo `[lota + -vë]`
+- **ludavë** (Modal Regulado (-vë com diérese)) — de modo cheia `[luda + -vë]`
+- **luravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a encobrir de neblina espessa `[lura + -vë]`
+- **lurkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a confiscar bens para o erário `[lurka + -vë]`
+- **lurpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a depositar lodo fertil e vasa escura no leito aluvial `[lurpa + -vë]`
+- **lurpeste** (1) — lurp- + este, termina em -e (1 decl) `[varzea aluvial que recolhe os sedimentos ricos da enchente]`
+- **lurpeve** (1) — lurp- + eve, termina em -e (1 decl) `[esteira escorregadia que cobre as lajes da margem]`
+- **lurpil** (2) — lurp- + -il `[vara de sondagem usada para medir a fundura da lama]`
+- **lurpin** (2) — lurp- + -in `[estrato fertil de limo escuro no leito do pantanal]`
+- **lurpur** (2) — lurp- + -ur `[remador que manobra chatas rasas pelas enseadas lamacentas]`
+- **lyravë** (Modal de Esperança) — esperançosamente `[lyra + -vë]`
+- **makavë** (Modal Regulado (-vë com diérese)) — de modo saciado `[maka + -vë]`
+- **malbeste** (1) — malb- + este, termina em -e (1 decl) `[tabela itinerária gravada em tabuletas de bronze com nomes de pousos]`
+- **malpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a aparelhar o cavalo de viagem `[malpa + -vë]`
+- **malxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a domar corcel bravo pelas rédeas `[malxa + -vë]`
+- **marbeste** (1) — marb- + este, termina em -e (1 decl) `[mansão imaterial nas altas esferas onde as almas puras aguardam o fim]`
+- **marpande** (1) — mar- + pande, termina em -e (1 decl) `[pântano costeiro de caça a aves aquáticas migratórias]`
+- **marpil** (2) — marp- + -il `[estilete de ponta de prata para desenho preliminar em pergaminho preparado]`
+- **marva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a intuir a verdade oculta sob as aparências falsas `[marva + -vë]`
+- **marve'e** (1) — marv- + eve, termina em -e (1 decl) `[presságio funesto revelado pelo voo desordenado das corujas]`
+- **marveste** (1) — marv- + este, termina em -e (1 decl) `[tábua inscrita com signos proféticos para decifrar augúrios]`
+- **marvil** (2) — marv- + -il `[espelho de obsidiana polida utilizado para escrutinar a intuição]`
+- **marvin** (2) — marv- + -in `[pressentimento certeiro que antecipa o desfecho de um perigo]`
+- **marvolde** (1) — mar- + volde, termina em -e (1 decl) `[lagoa rasa onde os corcéis saciam a sede após o galope]`
+- **marvon** (2) — marv- + -on `[augúrio favorável observado na disposição das nuvens ao poente]`
+- **marvur** (2) — marv- + -ur `[adivinho ou sábio dotado de intuição penetrante e discernimento]`
+- **marzorde** (1) — mar- + zorde, termina em -e (1 decl) `[guarda-costas montado que escolta o cortejo imperial na floresta]`
+- **matavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a alvejar o linho na água de sol `[mata + -vë]`
+- **mekavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a emboscar o inimigo no desfiladeiro `[meka + -vë]`
+- **melavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a negociar trégua entre exércitos `[mela + -vë]`
+- **melbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a gravar nome de primogênito no tronco da árvore genealógica de bronze `[melba + -vë]`
+- **melbeste** (1) — melb- + este, termina em -e (1 decl) `[livro encadernado em couro onde se copiam as receitas secretas]`
+- **melbvë** (Modal Genealógico) — genealogicamente, traçado com fidelidade aos antepassados `[melb- + -vë]`
+- **melkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ondular o mar `[melka + -vë]`
+- **melpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sorrir serenamente `[melpa + -vë]`
+- **melpin** (2) — melp- + -in `[piedade filial e reverência devida aos ancestrais e pais idosos]`
+- **melvil** (2) — melv- + -il `[pêndulo regulador de latão com lente de chumbo para marcação de cadência]`
+- **merpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enfardar feno e atar gavelas com vencelete `[merpa + -vë]`
+- **metavë** (Modal Regulado (-vë com diérese)) — de modo glorioso `[meta + -vë]`
+- **mi'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a dedicar templo ou monumento a Gyos `[mi'a + -vë]`
+- **milkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ordenhar o rebanho ao alvorecer `[milka + -vë]`
+- **mirakosoravë** (Modal Regulado (-vë com diérese)) — de modo admirável `[mirakosora + -vë]`
+- **miravë** (Modal Regulado (-vë com diérese)) — de modo precioso `[mira + -vë]`
+- **mirbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a refletir a imagem límpida em espelho côncavo de prata polida `[mirba + -vë]`
+- **mirbeste** (1) — mirb- + este, termina em -e (1 decl) `[lâmina polida de pirita ou bronze usada para concentrar raios solares]`
+- **mirbeve** (1) — mirb- + eve, termina em -e (1 decl) `[ilusão de ótica que faz lago parecer próximo no deserto]`
+- **mirbil** (2) — mirb- + -il `[espelho oval de prata sustentado por pedestal de bronze trabalhado]`
+- **mirbin** (2) — mirb- + -in `[reflexão especular perfeita sem refringência nem aberração]`
+- **mirbon** (2) — mirb- + -on `[brilho especular refletido que ilumina cantos escuros do salão]`
+- **mirbur** (2) — mirb- + -ur `[mestre espelheiro habilidoso no polimento de lâminas de prata]`
+- **mirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a orvalhar ao amanhecer `[mirka + -vë]`
+- **mirxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lustrar joia ou espelho metálico `[mirxa + -vë]`
+- **miva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a declamar epopeia em cadência clássica `[miva + -vë]`
+- **mobavë** (Modal Regulado (-vë com diérese)) — de modo bom `[moba + -vë]`
+- **molavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a medir tecidos por braças com a vara padrão `[mola + -vë]`
+- **molbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a mover pás e rodas d'água pela força da correnteza `[molba + -vë]`
+- **molbeste** (1) — molb- + este, termina em -e (1 decl) `[mancal de bronze banhado a óleo onde gira o eixo da roda d'água]`
+- **molbeve** (1) — molb- + eve, termina em -e (1 decl) `[estagnação do canal de moinho coberto de algas e limo]`
+- **molbil** (2) — molb- + -il `[pá curva de carvalho reforçada para impulso na água corrente]`
+- **molbin** (2) — molb- + -in `[rotação regular da grande roda d'água de pás imersas]`
+- **molbon** (2) — molb- + -on `[leito do canal forçado onde a água atinge as pás da roda]`
+- **molbur** (2) — molb- + -ur `[moleiro mestre encarregado da regulagem do fluxo da roda]`
+- **moldavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sondar fendas e poços com prumo `[molda + -vë]`
+- **moldvë** (Modal de Sondagem) — sondadoramente, com prumo cauteloso na escuridão `[mold- + -vë]`
+- **molletavë** (Modal Regulado (-vë com diérese)) — de modo severo `[molleta + -vë]`
+- **molletvë** (Modal Judicial) — justamente, segundo a sentença da lei `[mollet- + -vë]`
+- **molpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a empunhar lança de torneio em carga contra a barreira `[molpa + -vë]`
+- **molpeste** (1) — molp- + este, termina em -e (1 decl) `[saleiro maciço de bronze esculpido em forma de torre com tampa]`
+- **molpil** (2) — raiz molp- + -il `[pontalete embotado de madeira fixado na lança de treino]`
+- **molpin** (2) — raiz molp- + -in `[choque frontal de cavaleiros na liça do torneio imperial]`
+- **molpur** (2) — raiz molp- + -ur `[haste maciça de freixo com guarda de mão para o choque]`
+- **molpvë** (Modal de Choque) — impetuosamente, com a força de choque da lança de justa `[molp- + -vë]`
+- **molxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a promulgar decreto da Chancelaria `[molxa + -vë]`
+- **mopavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tecer no tear `[mopa + -vë]`
+- **morbin** (2) — morb- + -in `[preto de fumo denso obtido pela queima incompleta de resina de pinheiro]`
+- **morfaste** (1) — morf- + aste, termina em -e (1 decl) `[potro jovem de crina negra marcado a fogo]`
+- **morfavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sublimar sais e pós em vaso hermético `[morfa + -vë]`
+- **morfeve** (1) — morf- + eve, termina em -e (1 decl) `[leite de cabra talhado com flor de cardo para feitura de queijo]`
+- **morfvë** (Modal Sublimado) — sublimadamente, em cristais tênues de vapor `[morf- + -vë]`
+- **morkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a desbravar galerias escuras tateando passagens com tochas e cordas `[morka + -vë]`
+- **morkeste** (1) — mork- + este, termina em -e (1 decl) `[posto avancado montado em patamar seco de caverna]`
+- **morkeve** (1) — mork- + eve, termina em -e (1 decl) `[estreito aperto rochoso pelo qual se rasteja no chao]`
+- **morkil** (2) — mork- + -il `[lanterna blindada protegida contra umidade e correntes]`
+- **morkin** (2) — mork- + -in `[rede de corredores explorados e balizados com marcos]`
+- **morkol** (2) — mork- + -ol `[prisma poligonal de rocha escura e compacta]`
+- **morkole** (1) — morkol- + -e, termina em -e (1 decl) `[colunata de pilares simetricos erguida em falesia vulcanica]`
+- **morkur** (2) — mork- + -ur `[espeleologo que desbrava os labirintos subterraneos]`
+- **morosfe** (1) — morosf- + -e, termina em -e (1 decl) `[repartiçao pantanosa de aguas sombrias ladeada de arvores]`
+- **morosfin** (2) — morosf- + -in `[remanso quieto onde as aguas descansam sem correnteza]`
+- **morvane** (1) — morvan- + -e, termina em -e (1 decl) `[crista de detritos rochosos depositada na margem]`
+- **morvanon** (2) — morvan- + -on `[arco terminal de cascalho que retem lago alpino]`
+- **morve'e** (1) — morv- + eve, termina em -e (1 decl) `[ilusão fugaz dos sentidos que desvia o viajante da senda]`
+- **morveste** (1) — morv- + este, termina em -e (1 decl) `[véu diáfano de gaze com que os adivinhos cobrem os olhos na consulta]`
+- **morvil** (2) — morv- + -il `[filactério de pergaminho amarrado ao braço com preceitos de prudência]`
+- **morvin** (2) — morv- + -in `[região neutra ou terra de ninguém deixada sem cultivo entre dois reinos]`
+- **morvon** (2) — morv- + -on `[espírito ilusório ou sombra que habita o limiar entre o sono e a vigília]`
+- **mukavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a franzir o cenho em concentração `[muka + -vë]`
+- **mulavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a outorgar feudo ou título de nobreza `[mula + -vë]`
+- **mulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arquivar nos rolos perpétuos `[mulka + -vë]`
+- **murdavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a proscrever infrator condenado ao desterro `[murda + -vë]`
+- **murpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a aferir limpidez de gemas na luz `[murpa + -vë]`
+- **nakadavë** (Modal Regulado (-vë com diérese)) — de modo informe `[nakad + -vë]`
+- **nalbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a meditar em silêncio recolhido contemplando a alma `[nalba + -vë]`
+- **nalbeste** (1) — nalb- + este, termina em -e (1 decl) `[pedra chata sob a copa de um teixo usada para retiro espiritual]`
+- **nalbeve** (1) — nalb- + eve, termina em -e (1 decl) `[cela silenciosa e escura cavada na rocha para meditação solitária]`
+- **nalbil** (2) — nalb- + -il `[tapete de lã trançada sobre o qual o sábio se senta para meditar]`
+- **nalbin** (2) — nalb- + -in `[estado de meditação serena e recolhimento profundo do espírito]`
+- **nalbon** (2) — nalb- + -on `[silêncio absoluto que reina no santuário interior ao meio-dia]`
+- **nalbur** (2) — nalb- + -ur `[eremita solitário dedicado à meditação perpétua no ermo]`
+- **nalpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a guarnecer desfiladeiros estratégicos e portelas de montanha `[nalpa + -vë]`
+- **nalpeste** (1) — nalp- + este, termina em -e (1 decl) `[reduto de vigia empoleirado na rocha acima do passo de montanha]`
+- **nalpeve** (1) — nalp- + eve, termina em -e (1 decl) `[emboscada em garganta rochosa onde flecheiros dominam as alturas]`
+- **nalpil** (2) — nalp- + -il `[cancela dupla de ferro e vigas transversais fechando o passo]`
+- **nalpin** (2) — nalp- + -in `[bloqueio militar de garganta alpina impedindo passagem de tropas]`
+- **nalpon** (2) — nalp- + -on `[enclave montanhoso inacessível cercado por escarpas verticais]`
+- **nalpur** (2) — nalp- + -ur `[comandante de forte de desfiladeiro e sentinela das gargantas]`
+- **naspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a navegar em mar aberto com vela mestra desfraldada `[naspa + -vë]`
+- **naspvë** (Modal Náutico) — nauticamente, em rumo reto pelas estrelas `[nasp- + -vë]`
+- **navtorde** (1) — nav- + torde, termina em -e (1 decl) `[carreta pesada de transporte dos cães e provisões da caçada]`
+- **navzeste** (1) — nav- + zeste, termina em -e (1 decl) `[sela de gala bordada com fios de ouro para paradas imperiais]`
+- **naxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a escurecer no ocaso `[naxa + -vë]`
+- **ne** (Negação Prática Pré-Verbal) — não (negação factual antes do verbo) `[raiz primária ne]`
+- **ne'ufil** (2) — nenuf- + -il `[planta flutuante redonda ornada de flor alva perfumada]`
+- **ne'urve** (1) — nenurv- + -e, termina em -e (1 decl) `[tapete de vegetais aquaticos cobrindo a enseada calma]`
+- **nekavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a esticar os membros `[neka + -vë]`
+- **nelavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a vadear o rio nos baixios `[nela + -vë]`
+- **nelbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a julgar causas com retidão imparcial e justiça distributiva `[nelba + -vë]`
+- **nelbeste** (1) — nelb- + este, termina em -e (1 decl) `[banco dos juízes forrado de feltro escuro no fórum da cidade]`
+- **nelbeve** (1) — nelb- + eve, termina em -e (1 decl) `[clamor lancinante do oprimido que clama por reparação de dano]`
+- **nelbil** (2) — nelb- + -il `[balança de precisão de bronze com pratos suspensos por correntes de seda]`
+- **nelbin** (2) — nelb- + -in `[julgamento reto pautado na equidade e retidão moral]`
+- **nelbon** (2) — nelb- + -on `[tribunal de cantaria onde os anciãos proferem sentenças inapeláveis]`
+- **nelbur** (2) — nelb- + -ur `[magistrado incorruptível guardião da balança e das leis sagradas]`
+- **nelpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a farejar `[nelpa + -vë]`
+- **nemravë** (Modal Regulado (-vë com diérese)) — de modo memorial `[nemra + -vë]`
+- **nerkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sublimar enxofre em crostas amarelas fumegantes `[nerka + -vë]`
+- **nerkeste** (1) — nerk- + este, termina em -e (1 decl) `[platô de terraços amarelos onde a terra exala miasmas quentes]`
+- **nerkeve** (1) — nerk- + eve, termina em -e (1 decl) `[vapor acre e amarelado que colore os rochedos da serra]`
+- **nerkil** (2) — nerk- + -il `[espatula de bronze para retirar os prismas do solo aquecido]`
+- **nerkin** (2) — nerk- + -in `[deposito amarelo cintilante de cristais ao redor das frestas]`
+- **nerkur** (2) — nerk- + -ur `[minerador que raspa crostas douradas nas saidas fumegantes]`
+- **nerpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a debater proposições dialéticas no conclave de sábios `[nerpa + -vë]`
+- **nerpvë** (Modal Dialético) — dialeticamente, demonstrado por rigoroso silogismo `[nerp- + -vë]`
+- **nesuvë** (Modal Nulo) — em vão, inutilmente, para o nada `[nesu + -vë]`
+- **ni'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a trançar os cabelos em penteado nobre `[ni'a + -vë]`
+- **nikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a entalhar relevo em madeira nobre `[nika + -vë]`
+- **niravë** (Modal Regulado (-vë com diérese)) — de modo noturno `[nira + -vë]`
+- **nirbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a gotejar continuamente calcario formando estalactites no teto `[nirba + -vë]`
+- **nirbeste** (1) — nirb- + este, termina em -e (1 decl) `[salao colossal ornado por florestas de colunas calcareas]`
+- **nirbeve** (1) — nirb- + eve, termina em -e (1 decl) `[cortina mineral ondulada que recobre o paredao]`
+- **nirbil** (2) — nirb- + -il `[agulha de calcita translucida pendente da abobada umida]`
+- **nirbin** (2) — nirb- + -in `[coluna mineral espessa que cresce do solo da caverna]`
+- **nirbur** (2) — nirb- + -ur `[observador mineral que mede o crescimento milenar das colunas]`
+- **nirlanavë** (Modal Regulado (-vë com diérese)) — de modo lunar `[nirlana + -vë]`
+- **niva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a consagrar a fronte com bálsamo sagrado `[niva + -vë]`
+- **nopavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a semear grãos na terra lavrada `[nopa + -vë]`
+- **norbade** (1) — norb- + ade, termina em -e (1 decl) `[promessa solene de restauração gravada nas colunas dos Salões Atemporais]`
+- **norbeste** (1) — norb- + este, termina em -e (1 decl) `[prancheta de pergaminho do estado-maior contendo mapas de cerco]`
+- **norbil** (2) — norb- + -il `[verde-malaquita moído usado na roupagem dos santos do mural]`
+- **norpon** (2) — norp- + -on `[trégua solene para sepultamento dos guerreiros tombados na brecha]`
+- **norva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acionar martelos pesados de forja através de cames e eixo hidráulico `[norva + -vë]`
+- **norve'e** (1) — norv- + eve, termina em -e (1 decl) `[vibração violenta transmitida aos alicerces pela queda do pilão]`
+- **norveste** (1) — norv- + este, termina em -e (1 decl) `[bigorna pesada montada sobre cepo de carvalho sob o pilão mecânico]`
+- **norvil** (2) — norv- + -il `[came de madeira dura fixado no eixo giratório para erguer o martelo]`
+- **norvin** (2) — norv- + -in `[batimento compassado do martelo hidráulico sobre a bigorna]`
+- **norvon** (2) — norv- + -on `[árvore de cames transversal que comanda foles e marteletes]`
+- **norvur** (2) — norv- + -ur `[ferreiro operador do martelo mecânico acionado por água]`
+- **nulavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a testemunhar sob juramento sagrado `[nula + -vë]`
+- **nulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acumular bancos de neve alta `[nulpa + -vë]`
+- **nurkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ramificar em multiplos esteiros e barras de areia na foz `[nurka + -vë]`
+- **nurkeste** (1) — nurk- + este, termina em -e (1 decl) `[delta em leque aberto por onde o rio encontra o mar]`
+- **nurkeve** (1) — nurk- + eve, termina em -e (1 decl) `[ilha baixa de aluviao coberta de arbustos no delta]`
+- **nurkil** (2) — nurk- + -il `[prumo de medicao com nos de corda para aferir o calado]`
+- **nurkin** (2) — nurk- + -in `[braço terminal que desagua serenamente no oceano]`
+- **nurkur** (2) — nurk- + -ur `[pratico da barra que pilota barcas pelos bancos moveis]`
+- **nykavë** (Modal Regulado (-vë com diérese)) — de modo aberto `[nyka + -vë]`
+- **okazvë** (Modal Restitutivo) — renascidamente, com vigor restaurado `[okaz- + -vë]`
+- **oratvë** (Modal Integral) — integralmente, na totalidade, por inteiro `[orat + -vë]`
+- **oxeavë** (Modal Regulado (-vë com diérese)) — de modo terrestre `[oxea + -vë]`
+- **oxepavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a determinar o ângulo sobre a linha da terra `[oxepa + -vë]`
+- **oxkorse** (1) — ox- + korse, termina em -e (1 decl) `[corcel de batalha blindado com testeira de ferro]`
+- **oxparde** (1) — ox- + parde, termina em -e (1 decl) `[liça cercada de paliçadas de madeira onde ocorrem os duelos]`
+- **pal'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a furar o couro com sovela de sapateiro `[pal'a + -vë]`
+- **pal'este** (1) — palp- + este, termina em -e (1 decl) `[manta blindada de couros umedecidos que recobre o aríete]`
+- **palbade** (1) — palb- + ade, termina em -e (1 decl) `[cela de retiro espiritual onde o filósofo medita sobre as virtudes]`
+- **palbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a moderar desejos e apetites com temperança e serenidade interior `[palba + -vë]`
+- **palbeste** (1) — palb- + este, termina em -e (1 decl) `[tenda de campanha do estado-maior equipada com mesas cartográficas]`
+- **palbeve** (1) — palb- + eve, termina em -e (1 decl) `[angústia e ressaca moral provocadas pela quebra da sobriedade]`
+- **palbil** (2) — palb- + -il `[cálice de prata graduado usado para conter a moderação nas libações]`
+- **palbin** (2) — palb- + -in `[serenidade de ânimo e autodomínio alcançados pela temperança]`
+- **palbon** (2) — palb- + -on `[regra de vida e código ético monástico de sobriedade e jejum]`
+- **palbur** (2) — palb- + -ur `[sábio estoico admirado pelo comedimento e equanimidade]`
+- **paltavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a prensar frutos em lagar de viga para mosto `[palta + -vë]`
+- **palvade** (1) — palv- + ade, termina em -e (1 decl) `[dádiva misteriosa da mortalidade concedida aos homens como libertação]`
+- **palvil** (2) — palv- + -il `[guincho de tambor dentado acionado por manivela redutora]`
+- **palvon** (2) — palv- + -on `[sentença absolutória proferida após comprovação cabal de inocência]`
+- **parbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a estremecer as falhas geologicas em abalos tectonicos `[parba + -vë]`
+- **parbeste** (1) — parb- + este, termina em -e (1 decl) `[vale tectonico cercado por escarpas de falhas paralelas]`
+- **parbeve** (1) — parb- + eve, termina em -e (1 decl) `[oscilacao rapida e sutil que antecede o tremor potente]`
+- **parbil** (2) — parb- + -il `[haste pesada com contrapeso para registrar abalos do solo]`
+- **parbin** (2) — parb- + -in `[fenda no solo gerada pela separacao abrupta dos estratos]`
+- **parbur** (2) — parb- + -ur `[observador de sismos que escuta as pulsacoes da pedra]`
+- **pekavë** (Modal Regulado (-vë com diérese)) — de modo quebrado `[peka + -vë]`
+- **pel'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a modular o claro-escuro entre luz tênue e penumbra dramática `[pel'a + -vë]`
+- **pel'este** (1) — pelp- + este, termina em -e (1 decl) `[anteparo móvel de pergaminho para dosar a entrada de luz no ateliê]`
+- **pel'eve** (1) — pelp- + eve, termina em -e (1 decl) `[névoa crepuscular que altera a percepção das cores dos campos]`
+- **pel'il** (2) — pelp- + -il `[lápis de carvão de salgueiro para estudo de valores e sombras]`
+- **pel'in** (2) — pelp- + -in `[técnica de claro-escuro com transições suaves e atmosfera velada]`
+- **pel'on** (2) — pelp- + -on `[penumbra profunda onde os contornos das figuras se dissolvem]`
+- **pel'ur** (2) — pelp- + -ur `[pintor especialista em iluminação dramática e sombras aveludadas]`
+- **pelavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sondar a profundidade do canal `[pela + -vë]`
+- **pelbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a soltar o falcão no ar retirando o caparão de couro `[pelba + -vë]`
+- **pelbeste** (1) — pelb- + este, termina em -e (1 decl) `[escumadeira de latão com furos miúdos para purificar caldos]`
+- **pelbil** (2) — raiz pelb- + -il `[piouros e correias de couro com guizos amarrados aos tarsos da ave]`
+- **pelbin** (2) — raiz pelb- + -in `[lançamento do açor na direção do bando de patos selvagens]`
+- **pelbur** (2) — raiz pelb- + -ur `[luva grossa de couro de alce com punho reforçado do falcoeiro]`
+- **pelbvë** (Modal do Engodo) — certeiramente, acudindo ao chamado fiel do falcoeiro `[pelb- + -vë]`
+- **peldavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a inundar a margem `[pelda + -vë]`
+- **pelene** (1) — pelen- + -e, termina em -e (1 decl) `[teia delicada de fios dourados espalhada pela encosta]`
+- **pelenon** (2) — pelen- + -on `[filamento fino de vidro magmatico tecido pelo vento veloz]`
+- **pelvil** (2) — pelv- + -il `[alavanca de ferro de primeiro gênero usada para descolar moendas]`
+- **pelvon** (2) — pelv- + -on `[estreito desfiladeiro rochoso onde apenas um cavalo passa por vez]`
+- **perkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tocar com os dedos `[perka + -vë]`
+- **peskavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enviar legação diplomática plenipotenciária `[peska + -vë]`
+- **pikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pôr a mesa para o banquete `[pika + -vë]`
+- **pilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a regatear o preço no bazar com o mercador `[pilka + -vë]`
+- **piravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a demonstrar teorema ou verdade eterna `[pira + -vë]`
+- **pirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a refutar argumento com silogismo `[pirka + -vë]`
+- **piskravë** (Modal Regulado (-vë com diérese)) — de modo idiota `[piskra + -vë]`
+- **pokavë** (Modal Regulado (-vë com diérese)) — de modo animal `[poka + -vë]`
+- **polbeste** (1) — polb- + este, termina em -e (1 decl) `[mantelete móvel com frestas de tiro para arqueiros de aproximação]`
+- **polmavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ventilar galerias profundas com foles `[polma + -vë]`
+- **polva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a traçar cartas corográficas e províncias imperiais em pergaminho `[polva + -vë]`
+- **polve'e** (1) — polv- + eve, termina em -e (1 decl) `[distorção de escala nos confins do mapa por falta de agrimensura]`
+- **polveste** (1) — polv- + este, termina em -e (1 decl) `[mesa inclinada de carvalho onde o cosmógrafo desenha cartas]`
+- **polvil** (2) — polv- + -il `[compasso de bronze de duas pontas para medição de escalas em mapas]`
+- **polvin** (2) — polv- + -in `[traçado cartográfico preciso das bacias e cordilheiras]`
+- **polvon** (2) — polv- + -on `[mapa corográfico monumental desenhado em pele de vitelo velino]`
+- **polvur** (2) — polv- + -ur `[cartógrafo imperial responsável pelo mapeamento das províncias]`
+- **pontarde** (1) — pon- + tarde, termina em -e (1 decl) `[abrigo de caça construído de toras na clareira do bosque]`
+- **pontes'e** (1) — pon- + teste, termina em -e (1 decl) `[estribilho de cantaria para apear da montaria]`
+- **por'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a soprar pasta vítrea com cana de sopro `[por'a + -vë]`
+- **por'eve** (1) — porp- + eve, termina em -e (1 decl) `[massa folhada delicada assada em lâminas finas com manteiga]`
+- **por'orde** (1) — porp- + orde, termina em -e (1 decl) `[sabujo de orelhas caídas perito em rastro de sangue]`
+- **porkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arpar cabos de amarração e içar velas ao vento `[porka + -vë]`
+- **porkvë** (Modal Alçado) — velame desfraldado, em manobra rápida e coordenada `[pork- + -vë]`
+- **poro'oke** (1) — pororok- + -e, termina em -e (1 decl) `[onda potente de mare subindo o estuario contra a corrente]`
+- **poro'okon** (2) — pororok- + -on `[estrondo que avisa os pescadores da chegada da vaga]`
+- **porpvë** (Modal Vítreo) — vitreamente, com a leveza de vidro soprado `[porp- + -vë]`
+- **posbel** (Temporal Composto) — amanhã, no dia seguinte `[pos + bel (dia)]`
+- **potamil** (2) — potam- + -il `[registro cartografico dos caudais e regimes fluviais]`
+- **potamon** (2) — potam- + -on `[grande bacia hidrográfica que recolhe arroios de toda a serra]`
+- **pul'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calçar perneiras de lã trançada na neve `[pul'a + -vë]`
+- **pulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a indenizar dano causado em guerra `[pulka + -vë]`
+- **purdavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a gradar o solo desmanchando torrões `[purda + -vë]`
+- **purdvë** (Modal de Gradagem) — gradadoramente, em torrões desfeitos e solo nivelado `[purd- + -vë]`
+- **relavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acantonar a legião em acampamento `[rela + -vë]`
+- **relkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ceifar o trigo maduro com foice `[relka + -vë]`
+- **rikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fermentar o hidromel em tonéis de carvalho `[rika + -vë]`
+- **rimelil** (2) — rimel- + -il `[cristal ramificado fixado nas pedras pela brisa umida]`
+- **rimelve** (1) — rimelv- + -e, termina em -e (1 decl) `[cobertura prateada cintilante sobre os liquens articos]`
+- **ripil** (2) — rip- + -il `[ribeiro que nasce das geleiras e desce veloz]`
+- **ripolil** (2) — ripol- + -il `[peixinho veloz que nada em cardumes nas margens do lago]`
+- **ripolve** (1) — ripolv- + -e, termina em -e (1 decl) `[cardume brilhante que salta a tona para apanhar moscas]`
+- **ripve** (1) — ripv- + -e, termina em -e (1 decl) `[margem alcantilada de arroio sombreada por aveleiras]`
+- **rirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a compor hino ou cânone polifônico `[rirka + -vë]`
+- **rixanavë** (Modal Regulado (-vë com diérese)) — de modo pétreo `[rixan + -vë]`
+- **rixavë** (Modal Regulado (-vë com diérese)) — de modo montanhoso `[rixa + -vë]`
+- **rixkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a desmoronar rochas `[rixka + -vë]`
+- **rosavë** (Modal Regulado (-vë com diérese)) — de modo asnar `[rosa + -vë]`
+- **rukraletavë** (Modal Regulado (-vë com diérese)) — de modo dotado de voz potente `[rukraleta + -vë]`
+- **rukratonk** (Temporal Longo) — por longo tempo, duradouramente `[rukra + tonkre]`
+- **rukravë** (Modal Regulado (-vë com diérese)) — de modo forte `[rukra + -vë]`
+- **rukxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a desafiar em duelo singular de honra `[rukxa + -vë]`
+- **rulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a auditar as contas do tesouro `[rulka + -vë]`
+- **rulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a bocejar de sono ou fadiga `[rulpa + -vë]`
+- **ruxavë** (Modal Regulado (-vë com diérese)) — de modo cozido `[ruxa + -vë]`
+- **sakavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a raspar a moeda na pedra de toque para avaliar `[saka + -vë]`
+- **salbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a atracar galera imperial em cais de cantaria com cabos de cânhamo `[salba + -vë]`
+- **salbeste** (1) — salb- + este, termina em -e (1 decl) `[corda trançada de crina de cavalo usada nas molas de torção de catapultas]`
+- **salbvë** (Modal Seguro) — ancoradamente, firme contra as marés e correntes `[salb- + -vë]`
+- **salpeste** (1) — salp- + este, termina em -e (1 decl) `[têmpera à base de gema de ovo e vinagre branco para pintura de ícones]`
+- **salvon** (2) — salv- + -on `[pedágio alfandegário cobrado em pontes e passos de fronteira]`
+- **samavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pesar mercadorias na balança de dois pratos `[sama + -vë]`
+- **sambel** (Temporal Composto) — hoje, neste dia `[san (este) + bel (dia) (nb -> mb)]`
+- **sanfil** (Locativo Profundo) — aqui no fundo, nesta baixada `[san + fil (abismo)]`
+- **sankad** (Locativo Superior) — aqui no alto, neste cume `[san + kade (monte)]`
+- **santonk** (Temporal Composto) — agora, neste instante, no presente `[san (este) + tonkre (tempo)]`
+- **sarkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a adestrar falcão peregrino para caça de altitude `[sarka + -vë]`
+- **sarkeste** (1) — sark- + este, termina em -e (1 decl) `[gancho de açougue de ferro forjado para pendurar quartos de caça]`
+- **sarkil** (2) — raiz sark- + -il `[caparão de couro macio ornado de pluma que cobre os olhos da ave]`
+- **sarkin** (2) — raiz sark- + -in `[treinamento de ave de caça ao voo do engodo emplumado]`
+- **sarkur** (2) — raiz sark- + -ur `[poleiro circular de madeira encerada para falcões nobres]`
+- **sarkvë** (Modal de Falcoaria) — rapinamente, em mergulho veloz de falcão sobre a presa `[sark- + -vë]`
+- **sarpeve** (1) — sarp- + eve, termina em -e (1 decl) `[formação em cunha profunda de infantaria pesada para romper linhas]`
+- **sarvon** (2) — sarv- + -on `[muro de luz cristalina que separa o universo criado das trevas exteriores]`
+- **savak'ë** (Modal Comprobatório) — conforme ensaio da pedra de toque, puramente `[savak- + -vë]`
+- **selavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a eclipsar um astro `[sela + -vë]`
+- **selbeste** (1) — selb- + este, termina em -e (1 decl) `[capela votiva de reconciliação erguida no local onde inimigos fizeram as pazes]`
+- **sellaste** (1) — sel- + laste, termina em -e (1 decl) `[baia forrada de palha limpa das cavalariças imperiais]`
+- **selpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a identificar filão na matriz de quartzo `[selpa + -vë]`
+- **selvande** (1) — sel- + vande, termina em -e (1 decl) `[égua veloz de sela de linhagem desértica]`
+- **semavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a moer o grão entre mós de pedra `[sema + -vë]`
+- **serake** (1) — serak- + -e, termina em -e (1 decl) `[torre pontiaguda instavel em cascata inclinada]`
+- **serakin** (2) — serak- + -in `[labirinto de pilares pontiagudos em alta vertente]`
+- **serbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a vicejar juncais espessos nas margens lodosas do charco `[serba + -vë]`
+- **serbeste** (1) — serb- + este, termina em -e (1 decl) `[pantanal repleto de ilhotas flutuantes de raizes unidas]`
+- **serbeve** (1) — serb- + eve, termina em -e (1 decl) `[flor de junco ondulando ao sopro da brisa vespertina]`
+- **serbil** (2) — serb- + -il `[foice curta com ponta afiada para podar hastes submersas]`
+- **serbin** (2) — serb- + -in `[juncal denso que serve de abrigo para aves aquaticas]`
+- **serbur** (2) — serb- + -ur `[ceifador que tranca esteiras e amarras com palha flexivel]`
+- **si'avë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a bordar brasão da Casa no estandarte `[si'a + -vë]`
+- **sifone** (1) — sifon- + -e, termina em -e (1 decl) `[curva submersa que exige mergulho para transpor a galeria]`
+- **sifonil** (2) — sifon- + -il `[trecho de passagem totalmente submerso sob agua quieta]`
+- **sikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a forragear provisões no campo `[sika + -vë]`
+- **silbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pintar afrescos em têmpera e óleos sobre argamassa fresca de cal `[silba + -vë]`
+- **silbeste** (1) — silb- + este, termina em -e (1 decl) `[camada delgada de gesso fino e cola de osso que prepara a tela]`
+- **silbeve** (1) — silb- + eve, termina em -e (1 decl) `[desbotamento de pigmentos minerais expostos ao sol do meio-dia]`
+- **silbil** (2) — silb- + -il `[pincel fino de pelos de marta montado em haste de junco]`
+- **silbin** (2) — silb- + -in `[execução técnica de afresco com pigmentos fixados na cal viva]`
+- **silbon** (2) — silb- + -on `[painel pintado a têmpera de ovo sobre tábua de faia preparada]`
+- **silbur** (2) — silb- + -ur `[mestre muralista autor de grandes afrescos em cúpulas e abóbadas]`
+- **silkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a esmaltar cerâmica ao forno `[silka + -vë]`
+- **simavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a entoar o Zo es de fechamento `[sima + -vë]`
+- **siravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a clarear o céu após a tempestade `[sira + -vë]`
+- **siva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a jejuar na vigília das estrelas `[siva + -vë]`
+- **sofarvë** (Modal Defensivo) — em guarda, sob proteção armada `[sofar- + -vë]`
+- **sokorvë** (Modal Fiduciário) — fielmente, com fé inabalável `[sokor- + -vë]`
+- **solavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a passar a lançadeira no tear de tecelão `[sola + -vë]`
+- **solbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a temperar caldos e assados com açafrão e especiarias da corte `[solba + -vë]`
+- **solbeste** (1) — solb- + este, termina em -e (1 decl) `[pescoço de cisne e sifão de chumbo para esvaziamento automático]`
+- **solbil** (2) — raiz solb- + -il `[almofariz de pedra granítica com pilão para moer grãos de mostarda]`
+- **solbin** (2) — raiz solb- + -in `[preparo de molho nobre reduzido com vinho e tutano de boi]`
+- **solbur** (2) — raiz solb- + -ur `[caldeirão bojudo de bronze assentado sobre trempe de três pés]`
+- **solbvë** (Modal Gastronômico) — saborosamente, temperado com a justa medida de especiarias `[solb- + -vë]`
+- **solkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a condenar réu a pena aflictiva `[solka + -vë]`
+- **solpande** (1) — solp- + ande, termina em -e (1 decl) `[fogão de corte de tijolos com várias bocas de braseiro]`
+- **solpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a encadernar fólios em tábuas de carvalho e couro `[solpa + -vë]`
+- **solpeste** (1) — solp- + este, termina em -e (1 decl) `[jardim sombrio murado plantado de ciprestes para passeios solitários]`
+- **solpeve** (1) — solp- + eve, termina em -e (1 decl) `[melancolia profunda que entorpece a vontade do pensador]`
+- **solpon** (2) — solp- + -on `[humor temperamental melancólico e contemplativo do estudioso]`
+- **solpvë** (Modal de Encadernação) — encadernadamente, bem cosido entre capas protetoras `[solp- + -vë]`
+- **solte** (1) — solt- + -e, termina em -e (1 decl) `[oscilacao de mare que inunda as margens do esteiro]`
+- **solton** (2) — solt- + -on `[enseada de aguas salobras na desembocadura fluvial]`
+- **solvin** (2) — solv- + -in `[harmonia transcendente que integra até as dissonâncias na glória final]`
+- **sorbeste** (1) — sorb- + este, termina em -e (1 decl) `[cinábrio vermelho brilhante refinado com enxofre em fornalha]`
+- **sorbin** (2) — sorb- + -in `[topônimo antigo de língua extinta preservado no nome de montanha]`
+- **sorvin** (2) — sorv- + -in `[autômato mecânico articulado por contrapesos e correntes]`
+- **suavë** (Modal Regulado (-vë com diérese)) — de modo nuclear `[sua + -vë]`
+- **sukoranavë** (Modal Regulado (-vë com diérese)) — de modo corajoso `[sukoran + -vë]`
+- **sukoravë** (Modal Regulado (-vë com diérese)) — de modo cardíaco `[sukora + -vë]`
+- **sulavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a suar pelo esforço da forja ou marcha `[sula + -vë]`
+- **sulbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a erguer comportas e canalizar água de açude para o moinho `[sulba + -vë]`
+- **sulbeste** (1) — sulb- + este, termina em -e (1 decl) `[manivela de ferro e sarilho para içar a comporta pesada]`
+- **sulbeve** (1) — sulb- + eve, termina em -e (1 decl) `[infiltração perigosa e vazamento na base da represa de pedra]`
+- **sulbil** (2) — sulb- + -il `[comporta levadiça de pranchas grossas de cedro com cremalheira]`
+- **sulbin** (2) — sulb- + -in `[escoamento regulado de água através da comporta de alívio]`
+- **sulbon** (2) — sulb- + -on `[açude de retenção com vertedouro de cantaria aparelhada]`
+- **sulbur** (2) — sulb- + -ur `[guarda da represa responsável pela abertura das comportas]`
+- **sulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a apelar à Corte Suprema `[sulka + -vë]`
+- **sulvin** (2) — sulv- + -in `[marco geodésico no alto do pico mais alto para triangulação visual]`
+- **surkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a precipitar em quedas de cataratas estrondosas pulverizando as aguas `[surka + -vë]`
+- **surkeste** (1) — surk- + este, termina em -e (1 decl) `[mirante rochoso erguido sobre o despenhadeiro das aguas]`
+- **surkeve** (1) — surk- + eve, termina em -e (1 decl) `[nevoa fina e arco-iris permanente gerado pela queda]`
+- **surkil** (2) — surk- + -il `[anteparo de estacas de cedro para desviar madeiras]`
+- **surkin** (2) — surk- + -in `[catarata monumental despencando em paredao vertical]`
+- **surkur** (2) — surk- + -ur `[timoneiro de barcaça que evita a aproximacao das quedas]`
+- **surpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ceifar cereais maduros com foice curta `[surpa + -vë]`
+- **surpvë** (Modal de Ceifa) — ceifadoramente, em golpes certeiros de foice `[surp- + -vë]`
+- **suva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a demarcar fronteira com marcos de pedra `[suva + -vë]`
+- **takavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a arrematar lote no leilão de importados `[taka + -vë]`
+- **talagme** (1) — talagm- + -e, termina em -e (1 decl) `[formacao ereta de carbonato em relevo sobre o solo escuro]`
+- **talagmon** (2) — talagm- + -on `[pilar conico que brota verticalmente do assoalho calcario]`
+- **talatte** (1) — talatt- + -e, termina em -e (1 decl) `[ponta fina de calcita orvalhada por gotas constantes]`
+- **talatton** (2) — talatt- + -on `[agulha mineral pendente da abobada de galeria subterranea]`
+- **talbeste** (1) — talb- + este, termina em -e (1 decl) `[calha de madeira suspensa que conduz água até o topo da roda]`
+- **talbon** (2) — talb- + -on `[caminho de sirga às margens do rio para reboque de barcaças contra a corrente]`
+- **taldavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a mondar ervas daninhas à enxada `[talda + -vë]`
+- **talde** (1) — tald- + -e, termina em -e (1 decl) `[pequena lagoa alpina gerada pelo degelo das neves altas]`
+- **taldon** (2) — tald- + -on `[lago de circo de aguas azuladas represada por morena]`
+- **talisvë** (Modal Fiduciário Caucional) — sob caução, em garantia estipulada `[talis- + -vë]`
+- **talpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a escorar galeria com esteios de madeira `[talpa + -vë]`
+- **talpeste** (1) — talp- + este, termina em -e (1 decl) `[báculo de marfim que simboliza a autoridade moral do patriarca]`
+- **talpvë** (Modal de Escoramento) — escoradamente, sob esteios firmes de sustentação `[talp- + -vë]`
+- **tapavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a deslocar lentamente o polo dos equinócios `[tapa + -vë]`
+- **tarbade** (1) — tarb- + ade, termina em -e (1 decl) `[visão profética de esperança imutável concedida aos justos na aflição]`
+- **tarkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a vedar fendas de gases com argamassa `[tarka + -vë]`
+- **tarpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sacudir a terra `[tarpa + -vë]`
+- **tarpeste** (1) — tarp- + este, termina em -e (1 decl) `[pedra fundamental com inscrição régia assinalando a fundação da província]`
+- **tarve** (1) — tarv- + -e, termina em -e (1 decl) `[ondulacao do terreno provocada por choque sismico transversal]`
+- **tarvon** (2) — tarv- + -on `[bramido profundo que faz tremer as fundacoes das cidades]`
+- **tefrile** (1) — tefril- + -e, termina em -e (1 decl) `[chuva de cinzas e fragmentos escurecendo o firmamento]`
+- **tefrilon** (2) — tefril- + -on `[deposito denso de pedra leve empilhado pelos vendavais]`
+- **telavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a soprar brisa suave das colinas `[tela + -vë]`
+- **telbeste** (1) — telb- + este, termina em -e (1 decl) `[escora de andaime de madeira onde o pintor trabalha no teto]`
+- **telkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a erguer viga mestra ou cumeeira `[telka + -vë]`
+- **telpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a sitiar fortaleza `[telpa + -vë]`
+- **terkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a vitrificar massas de silica fundida gerando obsidiana negra `[terka + -vë]`
+- **terkeste** (1) — terk- + este, termina em -e (1 decl) `[recinto ancestral de lascamento de punhais de vidro escuro]`
+- **terkeve** (1) — terk- + eve, termina em -e (1 decl) `[lasca vitrea afiada que corta ao menor contato]`
+- **terkil** (2) — terk- + -il `[lamina cortante de brilho espelhado com gume finissimo]`
+- **terkin** (2) — terk- + -in `[veio denso de vidro negro incrustado na rocha escura]`
+- **terkur** (2) — terk- + -ur `[artesao que talha laminas e pontas de flecha de vidro escuro]`
+- **terpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a guardar reminiscências sagradas no fundo do coração `[terpa + -vë]`
+- **terpeste** (1) — terp- + este, termina em -e (1 decl) `[baú lacrado onde se guardam relíquias e cartas de antepassados]`
+- **terpeve** (1) — terp- + eve, termina em -e (1 decl) `[nostalgia dolorosa provocada pela recordação de eras remotas e dias passados]`
+- **terpil** (2) — terp- + -il `[códice de pergaminho onde se registram memórias e crônicas antigas]`
+- **terpin** (2) — terp- + -in `[reminiscência indelével gravada no âmago da memória]`
+- **terpon** (2) — terp- + -on `[monumento comemorativo de pedra erguido para preservar a memória]`
+- **terpur** (2) — terp- + -ur `[ancião guardião dos anais orais e reminiscências da linhagem]`
+- **terveste** (1) — terv- + este, termina em -e (1 decl) `[escudo grande de infantaria forrado de couro para proteção contra flechas]`
+- **tervin** (2) — terv- + -in `[pigmento vermelho carmesim extraído de insetos secos em corte]`
+- **tervon** (2) — terv- + -on `[dever sagrado de retribuição por benefício imerecido recebido]`
+- **teva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a orientar-se pela estrela polar `[teva + -vë]`
+- **tikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a aquecer água para o banho de vapor `[tika + -vë]`
+- **tilavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a reter penhor ou fiança até a entrega `[tila + -vë]`
+- **tilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a jejuar por voto litúrgico `[tilka + -vë]`
+- **tilpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enganchar o manto com fecho de metal `[tilpa + -vë]`
+- **tiravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a isolar a essência universal na mente `[tira + -vë]`
+- **tirkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a peneirar a farinha ou o ouro `[tirka + -vë]`
+- **tisva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cardar a lã virgem em mechas macias `[tisva + -vë]`
+- **tokvë** (Modal Soberano) — soberanamente, com autoridade imperial `[tok- + -vë]`
+- **tokxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a reunir a corte suprema da Coroa `[tokxa + -vë]`
+- **tolavë** (Modal Regulado (-vë com diérese)) — de modo bonito `[tola + -vë]`
+- **tolkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a debulhar espigas com mangual na eira de pedra `[tolka + -vë]`
+- **tolpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pautar fólios de velino com ponta de chumbo `[tolpa + -vë]`
+- **tolpeste** (1) — tolp- + este, termina em -e (1 decl) `[baluarte celestial erguido contra as incursões do Vazio]`
+- **tolpeve** (1) — tolp- + eve, termina em -e (1 decl) `[guarda noturna de sentinelas no perímetro externo das valas de cerco]`
+- **tolpvë** (Modal de Pautação) — pautadamente, seguindo linhas retas sem desvio `[tolp- + -vë]`
+- **tolve** (1) — tolv- + -e, termina em -e (1 decl) `[espuma alva levantada pela passagem rapida entre pedras]`
+- **tolveste** (1) — tolv- + este, termina em -e (1 decl) `[boia esférica de cobre conectada a alavanca para controle de nível]`
+- **tolvil** (2) — tolv- + -il `[trecho de corredeira salpicado de rochedos afiados]`
+- **tonkravë** (Modal Regulado (-vë com diérese)) — de modo temporal `[tonkra + -vë]`
+- **tonkrilavë** (Modal Temporal) — brevemente, num instante `[tonkrila + -vë]`
+- **tonpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calcular as tábuas celestes em pergaminho `[tonpa + -vë]`
+- **torbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a assar caça nobre em espeto giratório sobre brasas aromáticas `[torba + -vë]`
+- **torbil** (2) — raiz torb- + -il `[pingadeira de cobre estanhado que recolhe a gordura do assado]`
+- **torbin** (2) — raiz torb- + -in `[assado lento de cervo sobre leito de brasas de carvalho]`
+- **torbon** (2) — torb- + -on `[linha contínua de paliçadas erguida entre o fosso e a escarpa]`
+- **torbur** (2) — raiz torb- + -ur `[espeto comprido de ferro forjado girado por manivela dentada]`
+- **torbvë** (Modal do Assador) — suculentamente, assado em fogo brando no ponto certo `[torb- + -vë]`
+- **torgavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a interpor recurso perante os juízes `[torga + -vë]`
+- **torogon** (2) — torog- + -on `[ser diminuto adaptado a vida sem sol dos fundões minerais]`
+- **torpande** (1) — torp- + ande, termina em -e (1 decl) `[assadeira pesada de barro refratário com tampa vedada]`
+- **torvil** (2) — torv- + -il `[cinto de castidade e modéstia usado como voto voluntário de pureza]`
+- **torvon** (2) — torv- + -on `[casa de força do moinho onde convergem os canais de adução]`
+- **tospavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enlaçar mãos de noivos com fita de seda carmesim `[tospa + -vë]`
+- **tospeste** (1) — tosp- + este, termina em -e (1 decl) `[guirlanda de hera e louro pendurada nas vigas do salão nobre]`
+- **tospvë** (Modal de Laço) — enlaçadamente, em vínculo inquebrantável de afeição `[tosp- + -vë]`
+- **tufone** (1) — tufon- + -e, termina em -e (1 decl) `[camada de solo fertil empregada para enriquecer pomares]`
+- **tufonil** (2) — tufon- + -il `[resíduo petrificado de plantas sob as camadas milenares]`
+- **tulavë** (Modal Regulado (-vë com diérese)) — de modo louco `[tula + -vë]`
+- **tulbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a registrar ato oficial no cartório `[tulba + -vë]`
+- **tulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a exercer regência em nome do herdeiro `[tulka + -vë]`
+- **tulmavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a guardar e selecionar sementes-matrizes `[tulma + -vë]`
+- **tulva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a decompor materia vegetal em camadas espessas de turfa negra `[tulva + -vë]`
+- **tulve'e** (1) — tulv- + eve, termina em -e (1 decl) `[camada esponjosa de musgo que recobre o charco]`
+- **tulveste** (1) — tulv- + este, termina em -e (1 decl) `[vasta extensao aberta que se alarga pelos ermos cinzentos]`
+- **tulvil** (2) — tulv- + -il `[pa longa de corte reto usada para lavrar os fossos]`
+- **tulvin** (2) — tulv- + -in `[bloco cortado de turfa negra compacta para dessecaçao]`
+- **tulvur** (2) — tulv- + -ur `[cortador de turfa que extrai os blocos das camadas umidas]`
+- **tundre** (1) — tundr- + -e, termina em -e (1 decl) `[estepe polar aberta onde brotam musgos na curta estaçao morna]`
+- **tundril** (2) — tundr- + -il `[planicie pedregosa com solo permanentemente enrijecido]`
+- **tupkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a oscilar sutilmente o eixo da esfera `[tupka + -vë]`
+- **tupxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a disparar flecha ou dardo certeiro `[tupxa + -vë]`
+- **turbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a armar torre móvel de assalto e catapultas de contrapeso no campo `[turba + -vë]`
+- **turbeste** (1) — turb- + este, termina em -e (1 decl) `[báscula articulada com cesto de pedras do trabuco de cerco]`
+- **turbeve** (1) — turb- + eve, termina em -e (1 decl) `[névoa espessa de poeira e fumaça que cega os defensores nas ameias]`
+- **turbil** (2) — turb- + -il `[trabuco de contrapeso capaz de arremessar blocos de cantaria]`
+- **turbin** (2) — turb- + -in `[torre móvel de assalto armada com pranchas de pinho e ponte de desembarque]`
+- **turbon** (2) — turb- + -on `[arco balístico descrito por projétil incandescente arremessado]`
+- **turbur** (2) — turb- + -ur `[mestre de engenharia militar e balística de trabucos e manganelas]`
+- **turkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a morder `[turka + -vë]`
+- **turpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ratificar tratado de aliança `[turpa + -vë]`
+- **turpin** (2) — turp- + -in `[passaporte de pergaminho com salvo-conduto do regente para viajar]`
+- **va'ë** (Modal Regulado (-vë com diérese)) — de modo molhado `[va + -vë]`
+- **valbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a drenar bolsões de água da galeria `[valba + -vë]`
+- **valbeste** (1) — valb- + este, termina em -e (1 decl) `[paleta oval de nogueira polida com orifício para o polegar]`
+- **valinor** (2) — vali + -nor `[terra abençoada além dos mares ocidentais onde habitam os Imortais]`
+- **valk'ë** (Modal Arbitral) — arbitralmente, com discernimento de magistrado `[valk- + -vë]`
+- **valkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a julgar litígio em tribunal condal `[valka + -vë]`
+- **valp'ë** (Modal Nupcial) — solenemente, com imposição sagrada de bênção matrimonial `[valp- + -vë]`
+- **valpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a abençoar união nupcial com imposição solene de mãos `[valpa + -vë]`
+- **valpeste** (1) — valp- + este, termina em -e (1 decl) `[mesa comprida de banquete de pranchas de carvalho sobre cavaletes]`
+- **valpeve** (1) — valp- + eve, termina em -e (1 decl) `[discernimento lúcido e sereno na escolha entre dois males]`
+- **valpon** (2) — valp- + -on `[vertedouro lateral de emergência para escoar excesso de tromba d'água]`
+- **varavë** (Modal Regulado (-vë com diérese)) — de modo viário `[vara + -vë]`
+- **varbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a organizar comboios militares de suprimento `[varba + -vë]`
+- **varbeste** (1) — varb- + este, termina em -e (1 decl) `[tenda armazém impermeável de lona grossa para guardar sal e farinha]`
+- **varbeve** (1) — varb- + eve, termina em -e (1 decl) `[escassez de água e sede extrema durante marcha por terra árida]`
+- **varbil** (2) — varb- + -il `[carreta de carga de quatro rodas maciças reforçada com aros de ferro]`
+- **varbin** (2) — varb- + -in `[coluna de comboio militar de cem carretas de víveres e ferramentas]`
+- **varbon** (2) — varb- + -on `[entreposto fortificado de víveres e forragem na retaguarda do exército]`
+- **varbur** (2) — varb- + -ur `[intendente militar responsável pelo abastecimento e rações da campanha]`
+- **varkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acolchoar o forro da capa de viagem `[varka + -vë]`
+- **varpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a afastar-se no ponto mais distante da órbita `[varpa + -vë]`
+- **varxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a patrulhar as fronteiras da serra `[varxa + -vë]`
+- **veksanavë** (Modal Regulado (-vë com diérese)) — de modo brumoso `[veksan + -vë]`
+- **vel'on** (2) — velv- + -on `[torre de fumaça e fogueiras que transmite mensagens de fronteira à capital]`
+- **velavë** (Modal Regulado (-vë com diérese)) — de modo sombrio `[vela + -vë]`
+- **velbade** (1) — velb- + ade, termina em -e (1 decl) `[esperança inquebrantável (Estel) que persevera além da ruína de todos os mundos]`
+- **velbeste** (1) — velb- + este, termina em -e (1 decl) `[facho de breu e estopa amarrado na ponta de virotão incendiário]`
+- **velkarde** (1) — velk- + arde, termina em -e (1 decl) `[falcoeiro régio que carrega as aves no andor cerimonial]`
+- **velpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a encobrir estrela atrás do disco lunar `[velpa + -vë]`
+- **velpin** (2) — velp- + -in `[escape mecânico de âncora que converte rotação contínua em passos]`
+- **venfaste** (1) — ven- + faste, termina em -e (1 decl) `[rajada de vento frio que desvia o voo do falcão]`
+- **ventos'e** (1) — ven- + toste, termina em -e (1 decl) `[trombeta de prata de toque agudo que anuncia a caça abatida]`
+- **verkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fluir em corredeira rápida `[verka + -vë]`
+- **verpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a fixar precedente normativo nos assentos `[verpa + -vë]`
+- **verranavë** (Modal Regulado (-vë com diérese)) — de modo metálico `[verran + -vë]`
+- **verravë** (Modal Regulado (-vë com diérese)) — de modo abronzeado `[verra + -vë]`
+- **vesenvë** (Temporal Noturno) — à noite fechada, na hora do repouso `[vesen + -vë]`
+- **veskavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a joeirar os grãos ao vento no crivo raso `[veska + -vë]`
+- **vespavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a entrar em êxtase místico de arroubo espiritual `[vespa + -vë]`
+- **vespeste** (1) — vesp- + este, termina em -e (1 decl) `[cálice de cerâmica cerimonial do qual se bebe água de nascente pura]`
+- **vespeve** (1) — vesp- + eve, termina em -e (1 decl) `[transe febril de iluminação profética em vigília estática]`
+- **vespil** (2) — vesp- + -il `[óleo sagrado de unção que desperta a alma para o êxtase]`
+- **vespin** (2) — vesp- + -in `[arroubo místico de êxtase luminoso que arrebata a mente]`
+- **vespon** (2) — vesp- + -on `[canto entoado em voz baixa durante o arrebatamento da alma]`
+- **vespur** (2) — vesp- + -ur `[místico iluminado que atinge estados de êxtase contemplativo]`
+- **veynavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a velejar com vento de popa `[veyna + -vë]`
+- **vikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acender todas as arandelas do salão `[vika + -vë]`
+- **vilbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a carvoejar hulha em veios subterrâneos `[vilba + -vë]`
+- **vilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lacrimejar `[vilka + -vë]`
+- **vilpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a aparar golpe com o escudo `[vilpa + -vë]`
+- **viltanavë** (Modal Regulado (-vë com diérese)) — de modo curado `[viltan + -vë]`
+- **virkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a consagrar o cálice na elevação `[virka + -vë]`
+- **viskavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a enfaixar ferida `[viska + -vë]`
+- **volb'ë** (Modal de Iluminura) — iluminadamente, reluzindo em lâminas de ouro brunido `[volb- + -vë]`
+- **volbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a iluminar capitulares com pó de ouro e carmim `[volba + -vë]`
+- **volbeste** (1) — volb- + este, termina em -e (1 decl) `[estela votiva com os nomes dos cidadãos exemplares que viveram com honra]`
+- **volkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calafetar casco de nau com breu `[volka + -vë]`
+- **volkite** (1) — volkit- + -e, termina em -e (1 decl) `[camada de silte fertil propicia ao cultivo de cereais]`
+- **volkon** (2) — volk- + -on `[sedimento nutritivo espalhado sobre os campos apos o recuo da cheia]`
+- **volpeste** (1) — volp- + este, termina em -e (1 decl) `[balança de precisão de bronze que simboliza a equidade da alma]`
+- **volpeve** (1) — volp- + eve, termina em -e (1 decl) `[retirada tática organizada sob cobertura de arqueiros na retaguarda]`
+- **vor'iste** (1) — vorv- + este, termina em -e (1 decl) `[garganta colossal esculpida pelo rio na rocha dura]`
+- **vorbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a manter postos de muda com montarias descansadas nas estradas reais `[vorba + -vë]`
+- **vorbeste** (1) — vorb- + este, termina em -e (1 decl) `[alforge de couro cru impermeabilizado para transporte de decretos]`
+- **vorbeve** (1) — vorb- + eve, termina em -e (1 decl) `[fadiga extrema do correio que cavalga dia e noite sem descanso]`
+- **vorbil** (2) — vorb- + -il `[sinete de bronze com selo imperial que autoriza requisição de montarias]`
+- **vorbin** (2) — vorb- + -in `[serviço contínuo de correio real que liga as províncias à corte]`
+- **vorbon** (2) — vorb- + -on `[posto de muda fortificado com estábulos para quarenta cavalos]`
+- **vorbur** (2) — vorb- + -ur `[mestre de postas que administra as estalagens e coudelarias reais]`
+- **vorge** (1) — vorg- + -e, termina em -e (1 decl) `[fenda vertical alcantilada descendo aos niveis inferiores]`
+- **vorgon** (2) — vorg- + -on `[oco sem fundo cuja base se oculta nas sombras eternas]`
+- **vorkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a expelir colunas de cinza e magma pela cratera aberta `[vorka + -vë]`
+- **vorkeste** (1) — vork- + este, termina em -e (1 decl) `[depressao imensa no topo da serra abrigando lago de fogo]`
+- **vorkeve** (1) — vork- + eve, termina em -e (1 decl) `[avalanche incandescente de cinza descendo veloz pela ravina]`
+- **vorkil** (2) — vork- + -il `[pedra porosa e leve arremessada por explosao magmatica]`
+- **vorkin** (2) — vork- + -in `[camada espessa de po vulcanico acumulado nas vertentes]`
+- **vorkur** (2) — vork- + -ur `[sentinela do sopé que vigia os sinais da boca ardente]`
+- **vulbeste** (1) — vulb- + este, termina em -e (1 decl) `[caderno de campo do agrimensor encadernado em bezerro com anotações de azimute]`
+- **vulkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cunhar moedas com a efígie real `[vulka + -vë]`
+- **vulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a estocar fardos no celeiro alfandegário `[vulpa + -vë]`
+- **vulpin** (2) — vulp- + -in `[branco de chumbo opaco e luminoso usado nos pontos de brilho máximo]`
+- **vuranavë** (Modal Regulado (-vë com diérese)) — de modo aquecido pela lareira `[vuran + -vë]`
+- **vuranvë** (Modal de Aconchego) — calorosamente, ao calor da lareira `[vuran + -vë]`
+- **vurkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a jorrar água termal ou gêiser `[vurka + -vë]`
+- **vurmon** (2) — vur- + -mon `[leito de fogo liquido que avança devagar calcinando o solo]`
+- **vurmone** (1) — vurmon- + -e, termina em -e (1 decl) `[torrente de rocha derretida descendo as ravinas]`
+- **vuro'avë** (Modal Regulado (-vë com diérese)) — de modo incandescente `[vuro'a + -vë]`
+- **xakavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a atingir o ponto culminante no céu `[xaka + -vë]`
+- **xalavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a afixar o broche de sinete na roupagem `[xala + -vë]`
+- **xalbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a bater a nata até formar manteiga `[xalba + -vë]`
+- **xarpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tossir `[xarpa + -vë]`
+- **xedavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a orlar a capa com pele alva de arminho `[xeda + -vë]`
+- **xelavë** (Modal de Clima) — sob neve, nevadamente `[xela + -vë]`
+- **xelpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a rodopiar em redemoinho de vento `[xelpa + -vë]`
+- **xeravë** (Modal Regulado (-vë com diérese)) — de modo celeste `[xera + -vë]`
+- **xerkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a podar ramos secos da árvore `[xerka + -vë]`
+- **xertarde** (1) — xer- + tarde, termina em -e (1 decl) `[torre de vigia dos guardas-florestais da coutada]`
+- **xertes'e** (1) — xer- + teste, termina em -e (1 decl) `[suporte alto de ferro para tochas aromáticas no refeitório]`
+- **xeva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a tocar o clarim de alvorada ou carga `[xeva + -vë]`
+- **xikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a agasalhar o hóspede com peles perto do fogo `[xika + -vë]`
+- **xiravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a esconjurar sombra ou espírito impuro `[xira + -vë]`
+- **xunavë** (Modal Regulado (-vë com diérese)) — de modo loiro `[xuna + -vë]`
+- **xurkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a banir para além das fronteiras `[xurka + -vë]`
+- **yarbon** (2) — yarb- + -on `[marco de divisa fincado no vau do rio para orientar passagem de carretas]`
+- **yarva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a agir com magnanimidade e nobreza de alma perdoando agravos `[yarva + -vë]`
+- **yarve'e** (1) — yarv- + eve, termina em -e (1 decl) `[amargura de espírito que corrói aquele que não sabe perdoar]`
+- **yarveste** (1) — yarv- + este, termina em -e (1 decl) `[tribuna de graça onde o soberano concede perdão aos réus arrependidos]`
+- **yarvil** (2) — yarv- + -il `[manto de dignidade e honra que simboliza a generosidade régia]`
+- **yarvin** (2) — yarv- + -in `[nobreza de caráter e magnanimidade que eleva o espírito acima da vingança]`
+- **yarvon** (2) — yarv- + -on `[memorial erigido em louvor a ato heroico de perdão e beneficência]`
+- **yarvur** (2) — yarv- + -ur `[senhor magnânimo venerado pela clemência para com os vencidos]`
+- **yelkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a estagnar em aguas placidas de espelho alpino `[yelka + -vë]`
+- **yelkeste** (1) — yelk- + este, termina em -e (1 decl) `[patamar elevado com mirante voltado para a bacia lacustre]`
+- **yelkeve** (1) — yelk- + eve, termina em -e (1 decl) `[marola suave que quebra na praia pedregosa do lago]`
+- **yelkil** (2) — yelk- + -il `[espelho de madeira e bronze para avisos entre margens]`
+- **yelkin** (2) — yelk- + -in `[lago alpino limpido aninhado em circo de rocha pura]`
+- **yelkur** (2) — yelk- + -ur `[barqueiro de altitude que conduz botes pelas aguas calmas]`
+- **yerbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a orientar rumos de marcha com agulha imantada em taça de bronze `[yerba + -vë]`
+- **yerbeste** (1) — yerb- + este, termina em -e (1 decl) `[quadrante astronômico de latão com fio de prumo para latitude]`
+- **yerbeve** (1) — yerb- + eve, termina em -e (1 decl) `[desorientação em descampado sem marcos nem estrelas visíveis]`
+- **yerbil** (2) — yerb- + -il `[bússola de viagem de latão com agulha flutuante sobre água]`
+- **yerbin** (2) — yerb- + -in `[navegação terrestre guiada pelo norte magnético e pelas estrelas]`
+- **yerbon** (2) — yerb- + -on `[rosa dos ventos gravada em placa de osso indicando os dezesseis rumos]`
+- **yerbur** (2) — yerb- + -ur `[piloto de caravanas experiente na leitura de quadrantes e agulhas]`
+- **yerpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a guardar juramentos sagrados e lealdade inabalável ao suserano `[yerpa + -vë]`
+- **yerpeste** (1) — yerp- + este, termina em -e (1 decl) `[pedra de juramento onde os cavaleiros ajoelham para consagrar votos]`
+- **yerpeve** (1) — yerp- + eve, termina em -e (1 decl) `[vergonha infamante e desonra do traidor que quebrou a promessa]`
+- **yerpil** (2) — yerp- + -il `[anel de ouro com insígnia feudal entregue no ato de investidura]`
+- **yerpin** (2) — yerp- + -in `[lealdade inquebrantável mantida sob juramento perante os deuses]`
+- **yerpon** (2) — yerp- + -on `[tratado solene de fidelidade mútua assinado com sangue e cera]`
+- **yerpur** (2) — yerp- + -ur `[vassalo fidelíssimo pronto a dar a vida em defesa da palavra dada]`
+- **yo** (Afirmação Prática) — sim, certamente, com certeza `[partícula afirmativa arcaica]`
+- **yolbin** (2) — yolb- + -in `[perdão incondicional de dívida concedido no jubileu de libertação]`
+- **yolbute** (1) — yolbut- + -e, termina em -e (1 decl) `[abrigo escavado em bloco compacto contra tempestades]`
+- **yolbuton** (2) — yolbut- + -on `[aldeia temporaria de iglus em travessia de alta calota]`
+- **yolpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a entoar acordes celestiais na sinfonia cósmica do Halylitror `[yolpa + -vë]`
+- **yolpeste** (1) — yolp- + este, termina em -e (1 decl) `[estrado de luz cristalina onde se reúnem os coros celestes]`
+- **yolpeve** (1) — yolp- + eve, termina em -e (1 decl) `[dissonância áspera e tumultuosa introduzida pelo orgulho]`
+- **yolpil** (2) — yolp- + -il `[harpa etérea cujas cordas de luz vibram sem toque humano]`
+- **yolpin** (2) — yolp- + -in `[acorde primordial ressoando na polifonia do Halylitror]`
+- **yolpon** (2) — yolp- + -on `[sinfonia cósmica que sustenta a ordem e a beleza dos mundos]`
+- **yolpur** (2) — yolp- + -ur `[cantor celestial que lidera o coro dos seres angélicos]`
+- **yulbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a deslizar lentamente em leito glacial esculpindo o vale `[yulba + -vë]`
+- **yulbeste** (1) — yulb- + este, termina em -e (1 decl) `[leito em canal esculpido ao longo das eras pelo fluxo]`
+- **yulbeve** (1) — yulb- + eve, termina em -e (1 decl) `[esteira de atrito e po de rocha sob o peso do manto]`
+- **yulbil** (2) — yulb- + -il `[marco de pedra fixado no percurso de avanço lento]`
+- **yulbin** (2) — yulb- + -in `[esporao lateral de blocos transportados pelo fluxo]`
+- **yulbur** (2) — yulb- + -ur `[batedor que afere a taxa anual de avanço do manto]`
+- **yulpave** (1) — yulpav- + -e, termina em -e (1 decl) `[lufada violenta descendo das calotas para as gargantas]`
+- **yulpavon** (2) — yulpav- + -on `[vendaval polar continuo que forja dunas endurecidas]`
+- **yunke** (1) — yunk- + -e, termina em -e (1 decl) `[pontal de terra agudo entre dois rios que se juntam]`
+- **yunkon** (2) — yunk- + -on `[encontro solene de dois rios unindo seus destinos]`
+- **yurpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a rodopiar em redemoinhos velozes nas confluencias de correntes `[yurpa + -vë]`
+- **yurpeste** (1) — yurp- + este, termina em -e (1 decl) `[garganta estreita onde o encontro cria turbilhoes]`
+- **yurpeve** (1) — yurp- + eve, termina em -e (1 decl) `[espiral de espuma branca que gira na agua revolta]`
+- **yurpil** (2) — yurp- + -il `[boia sinalizadora de cortiça amarrada perto de sorvedouros]`
+- **yurpin** (2) — yurp- + -in `[redemoinho caudaloso no canal por onde as aguas descem]`
+- **yurpur** (2) — yurp- + -ur `[batedor experiente em desviar barcos de turbilhoes]`
+- **zalavë** (Modal Regulado (-vë com diérese)) — de modo pago `[zala + -vë]`
+- **zalbil** (2) — zalb- + -il `[almofariz de pórfiro e pilão para moer lápis-lazúli em pó ultramarino]`
+- **zalkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cambiar moedas de diferentes cunhos `[zalka + -vë]`
+- **zalpeve** (1) — zalp- + eve, termina em -e (1 decl) `[névoa de água vaporizada lançada pelas pás da roda do moinho]`
+- **zalva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a renovar o cosmos após a consumação dos tempos na Segunda Canção `[zalva + -vë]`
+- **zalve'e** (1) — zalv- + eve, termina em -e (1 decl) `[derradeiro suspiro da corrupção e das trevas banidas para sempre]`
+- **zalveste** (1) — zalv- + este, termina em -e (1 decl) `[nova abóbada celeste ornada com constelações imperecíveis]`
+- **zalvil** (2) — zalv- + -il `[clarim de luz cujo toque anuncia a aurora do mundo renovado]`
+- **zalvin** (2) — zalv- + -in `[renovação gloriosa de Arda e purificação final de toda matéria]`
+- **zalvon** (2) — zalv- + -on `[Grande Canção Final entoada em uníssono por todos os seres viventes]`
+- **zalvur** (2) — zalv- + -ur `[mestre da transfiguração cósmica que prepara a Segunda Canção]`
+- **zardavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a abrir sessão solene do tribunal com bastão `[zarda + -vë]`
+- **zarva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a acender a Chama Imperecível infundindo vida consciente na criação `[zarva + -vë]`
+- **zarve'e** (1) — zarv- + eve, termina em -e (1 decl) `[angústia existencial de quem busca a Chama no Vazio sem a encontrar]`
+- **zarveste** (1) — zarv- + este, termina em -e (1 decl) `[altar cósmico no cume do mundo onde a Chama desce em consagração]`
+- **zarvil** (2) — zarv- + -il `[cálice de fogo incorruptível que preserva o sopro primordial]`
+- **zarvin** (2) — zarv- + -in `[irradiação da Chama Imperecível no âmago do ser criado]`
+- **zarvon** (2) — zarv- + -on `[foco ardente de onde brotam todas as estrelas e almas imortais]`
+- **zarvur** (2) — zarv- + -ur `[guardião da Chama Sagrada e testemunha da emanação da vida]`
+- **zaspavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a calafetar juntas do casco de carvalho com estopa e piche `[zaspa + -vë]`
+- **zaspeste** (1) — zasp- + este, termina em -e (1 decl) `[cocho de madeira encerada para amassar e sovar o pão da tropa]`
+- **zaspvë** (Modal Estanque) — estanquetemente, sem frestas nem infiltração de água `[zasp- + -vë]`
+- **zelbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a destilar vapores voláteis em serpentina `[zelba + -vë]`
+- **zelbeste** (1) — zelb- + este, termina em -e (1 decl) `[bancada com gavetas horizontais largas para guardar rolos de mapas]`
+- **zelbeve** (1) — zelb- + eve, termina em -e (1 decl) `[licor de ervas da serra adoçado com mel de abelha silvestre]`
+- **zelbvë** (Modal Destilatório) — destiladamente, gota a gota em essência pura `[zelb- + -vë]`
+- **zelkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cicatrizar a pele `[zelka + -vë]`
+- **zelmande** (1) — zelm- + ande, termina em -e (1 decl) `[açor veloz de peito barrado caçador de perdizes]`
+- **zelmavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a semear grãos a lanço nos canteiros `[zelma + -vë]`
+- **zelmeste** (1) — zelm- + este, termina em -e (1 decl) `[toalha comprida de linho damascado alvejada ao sol]`
+- **zelmvarde** (1) — zelm- + varde, termina em -e (1 decl) `[bruma matinal que oculta a manada de veados]`
+- **zelmvë** (Modal de Semeadura) — semeadoramente, a lanço copioso e uniforme `[zelm- + -vë]`
+- **zelpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a gravar selo imperial de cera `[zelpa + -vë]`
+- **zelpvë** (Modal Autêntico) — chanceladamente, com sinete imperial inviolado `[zelp- + -vë]`
+- **zena'avë** (Modal Regulado (-vë com diérese)) — de modo leal `[zenan + -vë]`
+- **zenanvë** (Modal de Fidelidade) — lealmente, de coração amigo sincero `[zenan + -vë]`
+- **zerbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a pisar uvas maduras em lagar de cantaria `[zerba + -vë]`
+- **zerbil** (2) — raiz zerb- + -il `[cesto cônico de vime trançado usado na colheita das vinhas]`
+- **zerbin** (2) — raiz zerb- + -in `[prensagem solene de cachos de uva roxa no lagar imperial]`
+- **zerbon** (2) — zerb- + -on `[herança moral e ensinamentos transmitidos de geração a geração]`
+- **zerbur** (2) — raiz zerb- + -ur `[tanque de cantaria polida com bica de pedra para escoar o mosto]`
+- **zerbvë** (Modal da Vindima) — mosto puro, com a doçura de uvas pisadas a tempo `[zerb- + -vë]`
+- **zerdavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a britar blocos de basalto na mina `[zerda + -vë]`
+- **zerpande** (1) — zerp- + ande, termina em -e (1 decl) `[vinhedo em socalcos murados de pedra na encosta sul]`
+- **zerpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a irrigar as várzeas por canais de água `[zerpa + -vë]`
+- **zerpvë** (Modal de Irrigação) — irrigadoramente, com fluxo suave e contínuo de água `[zerp- + -vë]`
+- **zetavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a entretecer fios dourados no brocado real `[zeta + -vë]`
+- **zikavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a celebrar bodas ou aliança entre famílias `[zika + -vë]`
+- **zilkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a cobrar pedágio de passagem na ponte condal `[zilka + -vë]`
+- **ziravë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a afinar os tubos do grande órgão `[zira + -vë]`
+- **zo** (Afirmativo / Modal Cósmico) — assim, deste modo (em 'Zo es': Assim sê! / Amém) `[raiz primária zo (origem de o-/od-)]`
+- **zolbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a escavar galerias subterrâneas de sapa e minas sob alicerces `[zolba + -vë]`
+- **zolbeste** (1) — zolb- + este, termina em -e (1 decl) `[escora de madeira grossa usada para sustentar o teto do túnel de sapa]`
+- **zolbeve** (1) — zolb- + eve, termina em -e (1 decl) `[sufocação e terror dos mineiros soterrados em galeria colapsada]`
+- **zolbil** (2) — zolb- + -il `[alavanca pesada de ferro e picareta curta de mineiro de campanha]`
+- **zolbin** (2) — zolb- + -in `[galeria subterrânea de sapa escavada sob as fundações da torre]`
+- **zolbon** (2) — zolb- + -on `[colapso estrondoso de baluarte provocado pelo fogo nos esteios da mina]`
+- **zolbur** (2) — zolb- + -ur `[sapador experiente em escavação de galerias subterrâneas e contra-sapa]`
+- **zoldavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ressoar o eco nos desfiladeiros `[zolda + -vë]`
+- **zolpin** (2) — zolp- + -in `[aurora boreal com cortinas ondulantes de luz verde e violeta]`
+- **zorbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a agasalhar peregrinos oferecendo pão `[zorba + -vë]`
+- **zorbeste** (1) — zorb- + este, termina em -e (1 decl) `[fogão de pedra na lareira da estalagem onde ardem toras para o hóspede]`
+- **zorbeve** (1) — zorb- + eve, termina em -e (1 decl) `[solidão desamparada do viajor exposto à nevasca sem abrigo]`
+- **zorbil** (2) — zorb- + -il `[taça de boas-vindas oferecida ao recém-chegado com vinho e mel]`
+- **zorbin** (2) — zorb- + -in `[rito ancestral de hospitalidade e partilha do sal à mesa]`
+- **zorbon** (2) — zorb- + -on `[albergue de peregrinos mantido junto às portas da cidade fortificada]`
+- **zorbur** (2) — zorb- + -ur `[anfitrião generoso venerado pelo acolhimento irrestrito ao viandante]`
+- **zorkavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a lavar cascalho no crivo para gemas `[zorka + -vë]`
+- **zorpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a singrar vagas revoltas com proa erguida `[zorpa + -vë]`
+- **zorpeste** (1) — zorp- + este, termina em -e (1 decl) `[cinzário de pedra onde se queimam votos quebrados em penitência]`
+- **zorpeve** (1) — zorp- + eve, termina em -e (1 decl) `[remorso pungente que corrói o coração após um ato covarde]`
+- **zorpon** (2) — zorp- + -on `[penitência imposta pela própria consciência para lavar a culpa]`
+- **zorpvë** (Modal Impetuoso) — singrantemente, cortando as vagas com proa erguida `[zorp- + -vë]`
+- **zorve'e** (1) — zorv- + eve, termina em -e (1 decl) `[sombra passageira do mal consumida e desfeita na glória da aurora eterna]`
+- **zorvon** (2) — zorv- + -on `[patrulha de cavalaria ligeira enviada para queimar fontes de água inimigas]`
+- **zukavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a forjar elos de corrente ou cota `[zuka + -vë]`
+- **zukxavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a empenhar palavra ou penhor real `[zukxa + -vë]`
+- **zulbeste** (1) — zulb- + este, termina em -e (1 decl) `[tribunal de conciliação comunitária onde contendas são resolvidas por acordo]`
+- **zulbil** (2) — zulb- + -il `[trincha de madeira e tremonha que despeja grãos no olho da mó]`
+- **zulpavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a percorrer as casas das constelações `[zulpa + -vë]`
+- **zulpe** (1) — zulp- + -e, termina em -e (1 decl) `[labareda cerulea que arde sobre as pocas minerais aquecidas]`
+- **zulpil** (2) — zulp- + -il `[prisma mineral brilhante de cor dourada clara]`
+- **zulvin** (2) — zulv- + -in `[canto de triunfo entoado pelos povos reunidos na aurora da renovação]`
+- **zulvon** (2) — zulv- + -on `[consistência moral inabalável que resiste a lisonjas e ameaças]`
+- **zurbavë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a ensilar cereais em tulha elevada de madeira `[zurba + -vë]`
+- **zurva'ë** (Modal Regulado (-vë com diérese)) — de modo relativo ou propenso a despencar em estrondo com massas de avalanche `[zurva + -vë]`
+- **zurve'e** (1) — zurv- + eve, termina em -e (1 decl) `[nuvem turbilhonante em suspensao que precede o impacto]`
+- **zurveste** (1) — zurv- + este, termina em -e (1 decl) `[calha rochosa por onde descem as massas acumuladas]`
+- **zurvil** (2) — zurv- + -il `[trompa sonora de bronze que soa o alarme de descida]`
+- **zurvin** (2) — zurv- + -in `[cone de dejeçao formado pelos detritos de quedas sucessivas]`
+- **zurvur** (2) — zurv- + -ur `[vigia de desfiladeiro estacionado em abrigo de encosta]`
+
+### IX.4. Raízes Verbais — Matriz Quadripartite (442 raízes = 1768 verbos)
+- **balk-** (*Pos:* `balk-` palpitar o coração, pulsar forte | *Priv:* `abalk-` aquietar o batimento | *Iter:* `obalk-` pulsar aceleradamente | *It.-Priv:* `odabalk-` voltar a aquietar o pulso)
+- **balp-** (*Pos:* `balp-` medir o tempo pelo gotejamento constante da clepsidra de bronze | *Priv:* `abalp-` interromper a contagem do tempo obstruindo o orifício da clepsidra | *Iter:* `obalp-` aferir repetidamente as horas do dia e da noite pelo escoamento d'água | *It.-Priv:* `odabalp-` turvar a água da clepsidra desregulando o orifício de vazão)
+- **bap-** (*Pos:* `bap-` adiantar barras de prata como crédito | *Priv:* `abap-` exigir o pagamento à vista | *Iter:* `obap-` readiantar o adiantamento de feira | *It.-Priv:* `odabap-` voltar a suspender o crédito)
+- **bar-** (*Pos:* `bar-` irritar, importunar | *Priv:* `abar-` acalmar, apaziguar | *Iter:* `obar-` voltar a irritar | *It.-Priv:* `odabar-` voltar a apaziguar)
+- **belk-** (*Pos:* `belk-` relampejar, faiscar no céu | *Priv:* `abelk-` cessar os relâmpagos, serenar o éter | *Iter:* `obelk-` relampejar repetidamente | *It.-Priv:* `odabelk-` voltar a cessar os relâmpagos)
+- **belp-** (*Pos:* `belp-` intercalar os dias sagrados fora do mês | *Priv:* `abelp-` fechar o ano civil ordinário | *Iter:* `obelp-` reintercalar no ciclo quadrienal | *It.-Priv:* `odabelp-` voltar a contar o ano comum)
+- **berk-** (*Pos:* `berk-` rachar o gelo na primavera | *Priv:* `aberk-` soldar a placa glacial | *Iter:* `oberk-` rachar novamente o gelo | *It.-Priv:* `odaberk-` voltar a soldar o gelo)
+- **berp-** (*Pos:* `berp-` caldear veios de enxofre mineral | *Priv:* `aberp-` extinguir combustão de enxofre na mina | *Iter:* `oberp-` recaldear veios sulfurosos profundos | *It.-Priv:* `odaberp-` deixar enxofre inerte na rocha)
+- **bev-** (*Pos:* `bev-` ancorar a nau em porto seguro | *Priv:* `abev-` levar âncora, zarpar | *Iter:* `obev-` reancorar na enseada | *It.-Priv:* `odabev-` voltar a zarpar)
+- **bik-** (*Pos:* `bik-` embalar o berço da criança | *Priv:* `abik-` despertar o infante | *Iter:* `obik-` reembalar ao som de cantiga | *It.-Priv:* `odabik-` voltar a tirar do berço)
+- **bilk-** (*Pos:* `bilk-` autenticar com selo de cera real | *Priv:* `abilk-` romper o lacre oficial | *Iter:* `obilk-` resselar o pergaminho | *It.-Priv:* `odabilk-` voltar a violar o selo)
+- **bilp-** (*Pos:* `bilp-` meditar em silêncio contemplativo | *Priv:* `abilp-` dispersar a mente no mundo | *Iter:* `obilp-` remeditar sobre o dogma | *It.-Priv:* `odabilp-` voltar a distrair o espírito)
+- **bir-** (*Pos:* `bir-` decifrar inscrição arcaica pré-Síncrese | *Priv:* `abir-` criptografar em cifra secreta | *Iter:* `obir-` redecifrar o códice | *It.-Priv:* `odabir-` voltar a ocultar em cifra)
+- **birk-** (*Pos:* `birk-` assentar tijolos ou blocos de pedra | *Priv:* `abirk-` demolir alvenaria | *Iter:* `obirk-` reerguer parede de pedra | *It.-Priv:* `odabirk-` voltar a demolir)
+- **birp-** (*Pos:* `birp-` assar pães no forno de pedra comunitário | *Priv:* `abirp-` esfriar a fornada na grade | *Iter:* `obirp-` reassar o pão dormido | *It.-Priv:* `odabirp-` voltar a tirar do forno)
+- **bod-** (*Pos:* `bod-` responder, replicar | *Priv:* `abod-` negar resposta, emudecer | *Iter:* `obod-` responder de novo, treplicar | *It.-Priv:* `odabod-` voltar a negar resposta)
+- **borp-** (*Pos:* `borp-` selar o cavalo de guerra com armação de couro e estribos de bronze | *Priv:* `aborp-` desatar a sela e os arreios após a marcha | *Iter:* `oborp-` tornar a selar o corcel para nova surtida | *It.-Priv:* `odaborp-` deixar a montaria em pelo sem sela)
+- **bulk-** (*Pos:* `bulk-` curtir o couro em tanino de casca | *Priv:* `abulk-` deixar a pele crua | *Iter:* `obulk-` recurtir o couro | *It.-Priv:* `odabulk-` voltar a amaciar a pele)
+- **burk-** (*Pos:* `burk-` inventariar o espólio da Casa | *Priv:* `aburk-` dispersar a herança | *Iter:* `oburk-` reinventariar os bens | *It.-Priv:* `odaburk-` voltar a partilhar o acervo)
+- **bylk-** (*Pos:* `bylk-` timbrar o lacre de chumbo nas sacas | *Priv:* `abylk-` romper o chumbo da alfândega | *Iter:* `obylk-` retimbrar o fardo com carimbo | *It.-Priv:* `odabylk-` voltar a violar o lacre de chumbo)
+- **dai-** (*Pos:* `dai-` pensar, conceber na mente | *Priv:* `adai-` esvaziar pensamento, desconceber | *Iter:* `odai-` repensar, meditar de novo | *It.-Priv:* `oda'ai-` voltar a esvaziar o pensamento (oda'ai-))
+- **dak-** (*Pos:* `dak-` comer alimento sólido, nutrir-se | *Priv:* `adak-` jejuar, abster-se de comida | *Iter:* `odak-` comer habitualmente, merendar de novo | *It.-Priv:* `oda'ak-` quebrar o jejum, voltar a comer)
+- **dal-** (*Pos:* `dal-` apregoar lotes e peças no mercado público | *Priv:* `adal-` calar o pregão da praça | *Iter:* `odal-` reapregoar o lote restante | *It.-Priv:* `oda'al-` voltar a interromper o pregão)
+- **dalb-** (*Pos:* `dalb-` decantar vinho maduro em ânfora lacrada com resina de zimbro | *Priv:* `adalb-` turvar o vinho decantado com a borra | *Iter:* `odalb-` redecantar o mosto clarificado em nova vasilha | *It.-Priv:* `oda'alb-` deixar o vinho avinagrar em tonel destampado)
+- **dalp-** (*Pos:* `dalp-` descer materiais no poço por guincho | *Priv:* `adalp-` içar caçambas de minério à superfície | *Iter:* `odalp-` redescer ferramentas aos mineiros | *It.-Priv:* `oda'alp-` paralisar o guincho do poço)
+- **darp-** (*Pos:* `darp-` trovejar, ribombar nas serras | *Priv:* `adarp-` silenciar o trovão | *Iter:* `odarp-` trovejar continuamente | *It.-Priv:* `oda'arp-` voltar a silenciar o trovão)
+- **dasp-** (*Pos:* `dasp-` açular cães de rastro no rastro de cervo real | *Priv:* `adasp-` chamar a matilha com toque de trompa | *Iter:* `odasp-` reagrupar os sabujos dispersos na charneca | *It.-Priv:* `oda'asp-` perder o rastro da presa na floresta)
+- **del-** (*Pos:* `del-` fortificar trincheira ou paliçada | *Priv:* `adel-` desmantelar as defesas | *Iter:* `odel-` refortificar o reduto | *It.-Priv:* `oda'el-` voltar a abrir brecha)
+- **delk-** (*Pos:* `delk-` serpentear em meandros lentos pelas planicies aluviais | *Priv:* `adelk-` retificar o leito fluvial cortando canais retilineos | *Iter:* `odelk-` esculpir continuamente curvas sinuosas no solo fertil | *It.-Priv:* `oda'elk-` abandonar antigos braços de rio formando lagoas curvas)
+- **delp-** (*Pos:* `delp-` arar gleba fértil da planície | *Priv:* `adelp-` desarar o sulco aberto | *Iter:* `odelp-` rearar a gleba endurecida | *It.-Priv:* `oda'elp-` voltar a desarar a terra)
+- **derk-** (*Pos:* `derk-` engolir, deglutir o alimento | *Priv:* `aderk-` regurgitar, expelir | *Iter:* `oderk-` engolir repetidamente | *It.-Priv:* `oda'erk-` voltar a expelir)
+- **derp-** (*Pos:* `derp-` tornear madeira ou marfim | *Priv:* `aderp-` deixar a peça bruta | *Iter:* `oderp-` retornear com precisão | *It.-Priv:* `oda'erp-` voltar a desbastar)
+- **dik-** (*Pos:* `dik-` temperar o assado com ervas da serra | *Priv:* `adik-` servir a vianda simples | *Iter:* `odik-` retemperar o caldo | *It.-Priv:* `oda'ik-` voltar a suavizar o tempero)
+- **dikx-** (*Pos:* `dikx-` calçar botas encouraçadas para a neve | *Priv:* `adikx-` descalçar junto à lareira | *Iter:* `odikx-` recalçar para a marcha | *It.-Priv:* `oda'ikx-` voltar a descansar os pés)
+- **dilk-** (*Pos:* `dilk-` acreditar embaixador junto à corte | *Priv:* `adilk-` retirar as credenciais | *Iter:* `odilk-` reacreditar o legado | *It.-Priv:* `oda'ilk-` voltar a chamar o enviado)
+- **dilv-** (*Pos:* `dilv-` solidificar em crosta vitrea e agulhas polares | *Priv:* `adilv-` amolecer a superficie endurecida sob o sopro morno | *Iter:* `odilv-` cristalizar ciclicamente a geada sobre as rochas | *It.-Priv:* `oda'ilv-` dissolver as finas agulhas na calmaria termica)
+- **dim-** (*Pos:* `dim-` venerar relíquia dos antigos | *Priv:* `adim-` recolher a relíquia ao sacrário | *Iter:* `odim-` revenerar em procissão | *It.-Priv:* `oda'im-` voltar a velar o relicário)
+- **dir-** (*Pos:* `dir-` salmodiar em versículos alternados | *Priv:* `adir-` encerrar a salmodia | *Iter:* `odir-` ressalmodiar em coro | *It.-Priv:* `oda'ir-` voltar a calar o antifonário)
+- **dirk-** (*Pos:* `dirk-` esculpir estátua em mármore ou rocha | *Priv:* `adirk-` desfazer a efígie | *Iter:* `odirk-` reesculpir o monumento | *It.-Priv:* `oda'irk-` voltar a quebrar a estátua)
+- **dirp-** (*Pos:* `dirp-` esporear o corcel a galope | *Priv:* `adirp-` conter a montaria a passo | *Iter:* `odirp-` galopar novamente | *It.-Priv:* `oda'irp-` voltar a conter o cavalo)
+- **dolp-** (*Pos:* `dolp-` consagrar rito de maioridade do jovem com unção de óleo | *Priv:* `adolp-` desconsiderar o rito de passagem | *Iter:* `odolp-` reconsagrar a transição para a vida adulta | *It.-Priv:* `oda'olp-` profanar o rito de maioridade)
+- **doot-** (*Pos:* `doot-` entediar-se, enfadar-se | *Priv:* `adoot-` estimular, despertar interesse | *Iter:* `odoot-` voltar a entediar-se | *It.-Priv:* `oda'oot-` voltar a despertar do tédio (oda'oot-))
+- **dork-** (*Pos:* `dork-` afivelar o cinturão de montaria com correia | *Priv:* `adork-` desafivelar a cinta de couro | *Iter:* `odork-` reafivelar antes da cavalgada | *It.-Priv:* `oda'ork-` voltar a afrouxar o cinturão)
+- **dorp-** (*Pos:* `dorp-` promulgar edito imperial solene | *Priv:* `adorp-` revogar ou suspender edito imperial | *Iter:* `odorp-` reafirmar periodicamente éditos régios | *It.-Priv:* `oda'orp-` manter vácuo jurídico de edito revogado)
+- **drak-** (*Pos:* `drak-` puxar, arrastar, rebocar | *Priv:* `adrak-` soltar, largar a corda | *Iter:* `odrak-` puxar de novo | *It.-Priv:* `oda'rak-` voltar a soltar)
+- **dulp-** (*Pos:* `dulp-` acumular camadas espessas de nevasca nas encostas altas | *Priv:* `adulp-` varrer o acumulo limpando os desfiladeiros | *Iter:* `odulp-` nevar continuamente em tormentas brancas sucessivas | *It.-Priv:* `oda'ulp-` derreter ciclicamente os bancos no degelo primaveril)
+- **dur-** (*Pos:* `dur-` brilhar, resplandecer | *Priv:* `adur-` obscurecer, apagar brilho | *Iter:* `odur-` voltar a brilhar | *It.-Priv:* `oda'ur-` voltar a obscurecer (oda'ur-))
+- **durk-** (*Pos:* `durk-` cobrar tributo ou dízimo imperial | *Priv:* `adurk-` isentar de impostos | *Iter:* `odurk-` recobrar o fisco anual | *It.-Priv:* `oda'urk-` voltar a conceder isenção)
+- **durv-** (*Pos:* `durv-` fluir em leito subterraneo escavando saloes cegos | *Priv:* `adurv-` sumir em fenda impenetravel drenando a lagoa profunda | *Iter:* `odurv-` serpentear repetidamente atraves de labirintos de calcario | *It.-Priv:* `oda'urv-` ressurgir ciclicamente em nascentes termais de altitude)
+- **elf-** (*Pos:* `elf-` sacralizar, consagrar, santificar | *Priv:* `aelf-` profanar, dessacralizar | *Iter:* `odelf-` ressacralizar, reconsagrar | *It.-Priv:* `odaelf-` voltar a profanar)
+- **es-** (*Pos:* `es-` ser, estar, existir | *Priv:* `aes-` deixar de ser, inexistir | *Iter:* `odes-` restituir ao ser (odes-) | *It.-Priv:* `odaes-` voltar a inexistir (odaes-))
+- **fad-** (*Pos:* `fad-` conferir o manifesto de carga da nau | *Priv:* `afad-` dispensar a conferência aduaneira | *Iter:* `ofad-` reconferir item por item | *It.-Priv:* `odafad-` voltar a liberar sem conferência)
+- **fain-** (*Pos:* `fain-` piratear, saquear no mar | *Priv:* `afain-` proteger comércio naval | *Iter:* `ofain-` voltar a piratear | *It.-Priv:* `odafain-` voltar a proteger rota naval)
+- **fal-** (*Pos:* `fal-` repousar no leito, dormir serenamente | *Priv:* `afal-` velar à noite, vigiar sem dormir | *Iter:* `ofal-` dormir o sono habitual, tirar um cochilo | *It.-Priv:* `odafal-` despertar do repouso, encerrar o sono)
+- **falb-** (*Pos:* `falb-` calcinar cinzas vegetais em cadinho refratário | *Priv:* `afalb-` interromper a queima do composto mineral | *Iter:* `ofalb-` recalcinar os sais residuais | *It.-Priv:* `odafalb-` deixar o resíduo mineral impuro)
+- **falk-** (*Pos:* `falk-` podar galhos secos de árvores frutíferas | *Priv:* `afalk-` deixar a ramagem crescer sem poda | *Iter:* `ofalk-` repodar a copa no fim do inverno | *It.-Priv:* `odafalk-` voltar a desbastar os galhos)
+- **falp-** (*Pos:* `falp-` cochilar suavemente, dormitar | *Priv:* `afalp-` manter-se alerta | *Iter:* `ofalp-` tornar a cochilar | *It.-Priv:* `odafalp-` voltar a manter-se alerta)
+- **fap-** (*Pos:* `fap-` mergulhar no hemisfério inferior sob a terra | *Priv:* `afap-` ascender do fundo à aurora | *Iter:* `ofap-` remergulhar no hemisfério inferior | *It.-Priv:* `odafap-` voltar a emergir no oriente)
+- **far-** (*Pos:* `far-` cultivar trigo, alimentar com pão | *Priv:* `afar-` esterilizar solo | *Iter:* `ofar-` recultivar seara | *It.-Priv:* `odafar-` voltar a esterilizar)
+- **farb-** (*Pos:* `farb-` vadear leitos rasos cruzando bancos de cascalho firme | *Priv:* `afarb-` afundar em fossas traiçoeiras evitando a passagem a pe | *Iter:* `ofarb-` atravessar repetidamente correntes em rotas de comercio | *It.-Priv:* `odafarb-` sinalizar com marcos os trechos seguros de travessia)
+- **fard-** (*Pos:* `fard-` prestar testemunho solene em juízo | *Priv:* `afard-` recusar testemunho por impedimento | *Iter:* `ofard-` reiterar depoimentos em inquérito | *It.-Priv:* `odafard-` mentir continuadamente em falso testemunho)
+- **fas-** (*Pos:* `fas-` padecer, sofrer dor | *Priv:* `afas-` aliviar a dor, consolar | *Iter:* `ofas-` voltar a padecer | *It.-Priv:* `odafas-` voltar a aliviar a dor)
+- **fasp-** (*Pos:* `fasp-` soltar queixume de dor ou esforço | *Priv:* `afasp-` reprimir o queixume | *Iter:* `ofasp-` queixar-se continuamente | *It.-Priv:* `odafasp-` voltar a suportar em silêncio)
+- **feap-** (*Pos:* `feap-` projetar a sombra solar no relógio de pedra | *Priv:* `afeap-` apagar a sombra ao meio-dia | *Iter:* `ofeap-` reprojetar a sombra horária | *It.-Priv:* `odafeap-` voltar a anular a sombra)
+- **felk-** (*Pos:* `felk-` trançar cordas de cânhamo ou crina | *Priv:* `afelk-` destrançar o cabo | *Iter:* `ofelk-` retrançar a amarra | *It.-Priv:* `odafelk-` voltar a destrançar)
+- **fer-** (*Pos:* `fer-` soprar (o vento), ventar | *Priv:* `afer-` acalmar os ventos | *Iter:* `ofer-` voltar a soprar | *It.-Priv:* `odafer-` voltar a acalmar os ventos)
+- **ferk-** (*Pos:* `ferk-` estremecer de calafrio ou emoção | *Priv:* `aferk-` firmar os membros | *Iter:* `oferk-` estremecer de novo | *It.-Priv:* `odaferk-` voltar a firmar o corpo)
+- **ferp-** (*Pos:* `ferp-` inspirar fundo o ar nos pulmões | *Priv:* `aferp-` prender o fôlego, expirar | *Iter:* `oferp-` inspirar compassadamente | *It.-Priv:* `odaferp-` voltar a prender o fôlego)
+- **fex-** (*Pos:* `fex-` chover fino, garoar na campina | *Priv:* `afex-` estiar, secar a garoa | *Iter:* `ofex-` garoar intermitentemente | *It.-Priv:* `odafex-` voltar a estiar)
+- **fik-** (*Pos:* `fik-` ensinar a gramática normativa | *Priv:* `afik-` desaprender o vício plebeu | *Iter:* `ofik-` reensinar a doutrina culta | *It.-Priv:* `odafik-` voltar a corrigir a pronúncia)
+- **fild-** (*Pos:* `fild-` encordoar o arco de guerra | *Priv:* `afild-` afrouxar a corda do arco | *Iter:* `ofild-` reencordoar para o combate | *It.-Priv:* `odafild-` voltar a desarmar o arco)
+- **filp-** (*Pos:* `filp-` cintilar como estrela ou aurora boreal | *Priv:* `afilp-` apagar a cintilação | *Iter:* `ofilp-` recintilar no firmamento | *It.-Priv:* `odafilp-` voltar a apagar a cintilação)
+- **fim-** (*Pos:* `fim-` arbitrar litígio entre Casas Nobres | *Priv:* `afim-` abster-se de mediar | *Iter:* `ofim-` rearbitrar a contenda | *It.-Priv:* `odafim-` voltar a declinar o juízo)
+- **fip-** (*Pos:* `fip-` varrer a cinza da lareira | *Priv:* `afip-` espalhar brasa no borralho | *Iter:* `ofip-` revarrer o salão de pedra | *It.-Priv:* `odafip-` voltar a cobrir a brasa)
+- **firk-** (*Pos:* `firk-` destilar essência de ervas alpinas | *Priv:* `afirk-` diluir o elixir em água pura | *Iter:* `ofirk-` redestilar no alambique | *It.-Priv:* `odafirk-` voltar a suavizar a poção)
+- **firx-** (*Pos:* `firx-` incensar o altar nos ritos solenes | *Priv:* `afirx-` extinguir o turíbulo | *Iter:* `ofirx-` reincensar o santuário | *It.-Priv:* `odafirx-` voltar a recolher o incenso)
+- **fis-** (*Pos:* `fis-` pregar botões de osso na túnica | *Priv:* `afis-` despregar os botões do gibão | *Iter:* `ofis-` repregar com linha encerada | *It.-Priv:* `odafis-` voltar a soltar os botões)
+- **folb-** (*Pos:* `folb-` exalar vapores termais aquecidos pelo calor das profundezas | *Priv:* `afolb-` esfriar os respiradouros condensando o ar abissal | *Iter:* `ofolb-` borbulhar continuamente em poços minerais e caldeiras | *It.-Priv:* `odafolb-` dissipar as colunas de vapor restabelecendo a claridade)
+- **folk-** (*Pos:* `folk-` quitar débito no livro de contas | *Priv:* `afolk-` reabrir a dívida liquidada | *Iter:* `ofolk-` requitar as pendências fiscais | *It.-Priv:* `odafolk-` voltar a deixar em aberto a dívida)
+- **fulk-** (*Pos:* `fulk-` sussurrar ao ouvido, segredar | *Priv:* `afulk-` falar em voz plena | *Iter:* `ofulk-` sussurrar novamente | *It.-Priv:* `odafulk-` voltar a falar alto)
+- **fulv-** (*Pos:* `fulv-` jorrar jatos de vapor escaldante em geiseres ritmicos | *Priv:* `afulv-` silenciar o respiradouro esfriando a coluna hidrotermal | *Iter:* `ofulv-` pulsar em erupcoes termicas periodicas cobrindo o campo | *It.-Priv:* `odafulv-` reter temporariamente a pressao subterranea antes do jorro)
+- **furk-** (*Pos:* `furk-` arar a terra, abrir sulco no solo | *Priv:* `afurk-` deixar o campo em pousio | *Iter:* `ofurk-` rearar na nova estação | *It.-Priv:* `odafurk-` voltar a deixar em pousio)
+- **furp-** (*Pos:* `furp-` arrendar terras da Coroa | *Priv:* `afurp-` retomar a posse direta | *Iter:* `ofurp-` renovar o arrendamento | *It.-Priv:* `odafurp-` voltar a extinguir o foro)
+- **gald-** (*Pos:* `gald-` guardar, carregar, custodiar | *Priv:* `agald-` abandonar custódia, desguarnecer | *Iter:* `ogald-` re-guardar, reassumir guarda | *It.-Priv:* `odagald-` voltar a abandonar)
+- **galdex-** (*Pos:* `galdex-` sacar, desembainhar lâmina | *Priv:* `agaldex-` reembainhar, guardar arma | *Iter:* `ogaldex-` voltar a desembainhar | *It.-Priv:* `odagaldex-` voltar a reembainhar)
+- **galp-** (*Pos:* `galp-` operar aríete e maquinismos pesados de quebra de muralhas | *Priv:* `agalp-` desarmar o aríete retirando a viga de choque | *Iter:* `ogalp-` golpear repetidamente a muralha com o aríete de choque | *It.-Priv:* `odagalp-` danificar a viga de choque do aríete por sobrecarga)
+- **garv-** (*Pos:* `garv-` beber água pura, saciar a sede | *Priv:* `agarv-` abster-se de beber, passar sede | *Iter:* `ogarv-` bebericar repetidamente, sorver caneca a caneca | *It.-Priv:* `odagarv-` esvaziar a última gota da caneca)
+- **gas-** (*Pos:* `gas-` enfardar peças de veludo para a viagem | *Priv:* `agas-` desenfaixar os fardos de tecido | *Iter:* `ogas-` reenfardar na carruagem | *It.-Priv:* `odagas-` voltar a abrir os fardos de veludo)
+- **gasp-** (*Pos:* `gasp-` celebrar banquete de noivado entre clãs aliados | *Priv:* `agasp-` cancelar o banquete nupcial | *Iter:* `ogasp-` rencelebração anual do banquete de juramento | *It.-Priv:* `odagasp-` arruinar a festa de aliança dos clãs)
+- **gel-** (*Pos:* `gel-` transladar, levar, conduzir | *Priv:* `agel-` reter, imobilizar carga | *Iter:* `ogel-` retransladar, trazer de volta | *It.-Priv:* `odagel-` voltar a reter)
+- **gelm-** (*Pos:* `gelm-` acender a candeia, atear fogo à mecha | *Priv:* `agelm-` apagar a candeia | *Iter:* `ogelm-` reacender a candeia | *It.-Priv:* `odagelm-` voltar a apagar a candeia)
+- **gev-** (*Pos:* `gev-` remar contra a correnteza | *Priv:* `agev-` erguer os remos em descanso | *Iter:* `ogev-` remar em cadência dobrada | *It.-Priv:* `odagev-` voltar a recolher os remos)
+- **gik-** (*Pos:* `gik-` abotoar o manto com fivela de prata | *Priv:* `agik-` desafivelar a capa de viagem | *Iter:* `ogik-` reabotoar contra o vento | *It.-Priv:* `odagik-` voltar a soltar o manto)
+- **gikx-** (*Pos:* `gikx-` prensar bagas silvestres para vinho | *Priv:* `agikx-` recolher o bagaço | *Iter:* `ogikx-` reprensar a vindima | *It.-Priv:* `odagikx-` voltar a limpar o lagar)
+- **gilk-** (*Pos:* `gilk-` piscar os olhos, pestanejar | *Priv:* `agilk-` fitar com olhar fixo | *Iter:* `ogilk-` piscar continuamente | *It.-Priv:* `odagilk-` voltar a fitar sem piscar)
+- **gilp-** (*Pos:* `gilp-` escalar escarpa ou muralha com gancho | *Priv:* `agilp-` descer por corda à base | *Iter:* `ogilp-` reescalar o paredão | *It.-Priv:* `odagilp-` voltar a descer a encosta)
+- **gim-** (*Pos:* `gim-` contemplar a harmonia das esferas | *Priv:* `agim-` baixar os olhos à terra | *Iter:* `ogim-` recontemplar o firmamento | *It.-Priv:* `odagim-` voltar ao horizonte terreno)
+- **gir-** (*Pos:* `gir-` crescer, erguer-se, brotar | *Priv:* `agir-` diminuir, minguar, abater | *Iter:* `ogir-` voltar a crescer, reerguer | *It.-Priv:* `odagir-` voltar a diminuir)
+- **girk-** (*Pos:* `girk-` cinzelar inscrição na lápide | *Priv:* `agirk-` apagar o epígrafo | *Iter:* `ogirk-` recinzelar as letras | *It.-Priv:* `odagirk-` voltar a rasurar a pedra)
+- **girp-** (*Pos:* `girp-` dedilhar as cordas da harpa | *Priv:* `agirp-` abafar as cordas com a palma | *Iter:* `ogirp-` rededilhar o prelúdio | *It.-Priv:* `odagirp-` voltar a silenciar a lira)
+- **giz-** (*Pos:* `giz-` amar, estimar com devoção | *Priv:* `agiz-` odiar, esquecer volitivamente | *Iter:* `ogiz-` voltar a amar | *It.-Priv:* `odagiz-` voltar a odiar)
+- **gob-** (*Pos:* `gob-` trocar, negociar, mercadejar | *Priv:* `agob-` recusar a troca, desfazer negócio | *Iter:* `ogob-` renegociar | *It.-Priv:* `odagob-` voltar a desfazer o negócio)
+- **golk-** (*Pos:* `golk-` congelar a superfície, formar geada | *Priv:* `agolk-` degelar a crosta de frio | *Iter:* `ogolk-` recongelar pela geada | *It.-Priv:* `odagolk-` voltar a degelar)
+- **golp-** (*Pos:* `golp-` fundir metal no cadinho ardente | *Priv:* `agolp-` solidificar o lingote | *Iter:* `ogolp-` refundir a liga metálica | *It.-Priv:* `odagolp-` voltar a resfriar o molde)
+- **gond-** (*Pos:* `gond-` enxertar ramo frutífero em cavalo vigoroso | *Priv:* `agond-` desatar a ligadura do enxerto | *Iter:* `ogond-` reenxertar a variedade resistente | *It.-Priv:* `odagond-` voltar a desunir o ramo enxertado)
+- **gork-** (*Pos:* `gork-` erodir a pedra pela água ou vento | *Priv:* `agork-` sedimentar a rocha | *Iter:* `ogork-` reerodir o cânion | *It.-Priv:* `odagork-` voltar a sedimentar)
+- **gorp-** (*Pos:* `gorp-` extrair minério da rocha com ponteira | *Priv:* `agorp-` interromper a extração de minério | *Iter:* `ogorp-` reextrair minério nos veios antigos | *It.-Priv:* `odagorp-` voltar a abandonar a frente de lavra)
+- **gulk-** (*Pos:* `gulk-` notificar oficialmente por arauto | *Priv:* `agulk-` revogar a citação | *Iter:* `ogulk-` renotificar em praça pública | *It.-Priv:* `odagulk-` voltar a sustar o pregão)
+- **gurk-** (*Pos:* `gurk-` emancipar servo ou vassalo | *Priv:* `agurk-` sujeitar à servidão | *Iter:* `ogurk-` reemancipar por carta | *It.-Priv:* `odagurk-` voltar a sujeitar)
+- **hab-** (*Pos:* `hab-` acolher, hospedar o viajante | *Priv:* `ahab-` expulsar, negar abrigo | *Iter:* `ohab-` voltar a acolher | *It.-Priv:* `odahab-` voltar a negar abrigo)
+- **halk-** (*Pos:* `halk-` caminhar pela trilha, marchar na neve | *Priv:* `ahalk-` deter o passo, paralisar a marcha no frio | *Iter:* `ohalk-` caminhar continuamente, peregrinar pelas serras | *It.-Priv:* `odahalk-` dar o passo final e atingir o destino)
+- **halx-** (*Pos:* `halx-` interpretar presságio sideral | *Priv:* `ahalx-` velar o mistério dos astros | *Iter:* `ohalx-` reinterpretar a conjunção | *It.-Priv:* `odahalx-` voltar a fechar o prognóstico)
+- **helv-** (*Pos:* `helv-` contemplar a quietude eterna nos Salões Atemporais do Criador | *Priv:* `ahelv-` afastar os olhos da luz incriada decaindo no Vazio exterior | *Iter:* `ohelv-` permanecer em vigília reverente na presença da majestade eterna | *It.-Priv:* `odahelv-` vagar errante pelas trevas do Vazio sem encontrar repouso)
+- **hesk-** (*Pos:* `hesk-` perguntar, indagar | *Priv:* `ahesk-` calar a pergunta, não indagar | *Iter:* `ohesk-` perguntar de novo, insistir | *It.-Priv:* `odahesk-` voltar a calar a pergunta)
+- **holk-** (*Pos:* `holk-` rachar o manto sob tensao formando fendas profundas | *Priv:* `aholk-` selar fendas glaciais com pontes firmes | *Iter:* `oholk-` fender repetidamente a couraça dos vales rochosos | *It.-Priv:* `odaholk-` consolidar as fissuras em plano continuo e uniforme)
+- **holp-** (*Pos:* `holp-` mergulhar em sono profundo com visões oníricas | *Priv:* `aholp-` despertar do transe onírico para a vigília | *Iter:* `oholp-` remiscer visões oníricas repetidas no sono | *It.-Priv:* `odaholp-` perder o fio do sonho no despertar brusco)
+- **hulb-** (*Pos:* `hulb-` sitiar fortaleza erguendo trincheiras e circunvalação de cerco | *Priv:* `ahulb-` levantar o cerco militar retirando as trincheiras | *Iter:* `ohulb-` sitiar com cerco reforçado e trincheiras contínuas | *It.-Priv:* `odahulb-` abandonar as posições de cerco em desordem)
+- **hurv-** (*Pos:* `hurv-` ecoar e ressoar em abobadas subterraneas profundas | *Priv:* `ahurv-` abafar as reverberacoes nas galerias de pedra porosa | *Iter:* `ohurv-` bramir em ecos multiplos refletidos nos paredoes do abismo | *It.-Priv:* `odahurv-` amortecer gradualmente o eco ate o silencio mineral)
+- **hux-** (*Pos:* `hux-` vestir, cobrir com roupa | *Priv:* `ahux-` despir, desnudar | *Iter:* `ohux-` revestir, trocar de roupa | *It.-Priv:* `odahux-` voltar a despir)
+- **huxp-** (*Pos:* `huxp-` dobrar os linhos e cobertas na arca | *Priv:* `ahuxp-` estender a roupa ao sol | *Iter:* `ohuxp-` redobrar o enxoval | *It.-Priv:* `odahuxp-` voltar a desdobrar as mantas)
+- **illan-** (*Pos:* `illan-` iluminar por dentro, inspirar luz (in+lan) | *Priv:* `aillan-` apagar a luz interior | *Iter:* `odillan-` reiluminar internamente (odillan-) | *It.-Priv:* `odaillan-` voltar a apagar a luz interior)
+- **illot-** (*Pos:* `illot-` embelezar, adornar (in+lota) | *Priv:* `aillot-` desadornar, desfeiar | *Iter:* `odillot-` readornar, reembelezar (odillot-) | *It.-Priv:* `odaillot-` voltar a desadornar)
+- **in-** (*Pos:* `in-` iniciar, dar princípio a | *Priv:* `ain-` interromper início, abortar | *Iter:* `odin-` reiniciar, recomeçar (odin-) | *It.-Priv:* `odain-` voltar a interromper)
+- **intul-** (*Pos:* `intul-` enlouquecer, inflamar-se em furor | *Priv:* `aintul-` recobrar a razão, serenar | *Iter:* `odintul-` voltar a enlouquecer (odintul-) | *It.-Priv:* `odaintul-` voltar a serenar)
+- **is-** (*Pos:* `is-` compreender, saber, conhecer | *Priv:* `ais-` ignorar, desconhecer | *Iter:* `odis-` voltar a compreender (odis-) | *It.-Priv:* `odais-` voltar a ignorar)
+- **kadp-** (*Pos:* `kadp-` medir a distância angular até o topo do céu | *Priv:* `akadp-` perder a referência vertical | *Iter:* `okadp-` remedir a altura do astro | *It.-Priv:* `odakadp-` voltar a baixar o quadrante)
+- **kam-** (*Pos:* `kam-` embriagar, inebriar | *Priv:* `akam-` tornar sóbrio, desencantar | *Iter:* `okam-` voltar a embriagar | *It.-Priv:* `odakam-` voltar a tornar sóbrio)
+- **kamb-** (*Pos:* `kamb-` adubar o solo com composto e cinzas | *Priv:* `akamb-` desadubar terra excessivamente gorda | *Iter:* `okamb-` readubar antes da chuva de outono | *It.-Priv:* `odakamb-` voltar a expurgar o adubo)
+- **karp-** (*Pos:* `karp-` firmar aliança diplomática | *Priv:* `akarp-` romper tratado ou aliança de paz | *Iter:* `okarp-` renovar sucessivos pactos bilaterais | *It.-Priv:* `odakarp-` violar repetidamente termos de aliança)
+- **kas-** (*Pos:* `kas-` brotar manancial da rocha viva | *Priv:* `akas-` secar o olho d'água | *Iter:* `okas-` rebrotar na estação das chuvas | *It.-Priv:* `odakas-` voltar a secar o manancial)
+- **kask-** (*Pos:* `kask-` coser, costurar | *Priv:* `akask-` descoser, desfazer a costura | *Iter:* `okask-` recoser, remendar o pano | *It.-Priv:* `odakask-` voltar a descoser)
+- **kasp-** (*Pos:* `kasp-` traçar letras caligráficas com pena de cálamo | *Priv:* `akasp-` rasurar a escrita com raspadeira de osso | *Iter:* `okasp-` repassar os traços com tinta indelével | *It.-Priv:* `odakasp-` deixar o pergaminho sem caligrafia)
+- **kaz-** (*Pos:* `kaz-` viver, nascer, habitar | *Priv:* `akaz-` perecer, morrer, falecer | *Iter:* `okaz-` ressuscitar, renascer | *It.-Priv:* `odakaz-` voltar a perecer)
+- **kel-** (*Pos:* `kel-` mover em conjunto, manobrar | *Priv:* `akel-` dispersar, desbandar | *Iter:* `okel-` reagrupar em marcha | *It.-Priv:* `odakel-` voltar a dispersar)
+- **kel'un-** (*Pos:* `kel'un-` escoltar, acompanhar em guarda | *Priv:* `akel'un-` abandonar escolta | *Iter:* `okel'un-` reescoltar | *It.-Priv:* `odakel'un-` voltar a abandonar escolta)
+- **kelad-** (*Pos:* `kelad-` aproximar-se, vir, convocar | *Priv:* `akelad-` afastar-se, retirar-se | *Iter:* `okelad-` retornar, voltar a aproximar-se | *It.-Priv:* `odakelad-` voltar a afastar-se)
+- **kelb-** (*Pos:* `kelb-` tingir o estofo na tina de pigmento | *Priv:* `akelb-` descolorir o pano, desbotar | *Iter:* `okelb-` retingir na cor viva | *It.-Priv:* `odakelb-` voltar a desbotar o estofo)
+- **keld-** (*Pos:* `keld-` lapidar facetas de cristais no rebolo | *Priv:* `akeld-` desbastar cristal bruto sem facetas | *Iter:* `okeld-` relapidar gemas com brilho opaco | *It.-Priv:* `odakeld-` manter cristais em forma bruta)
+- **kelex-** (*Pos:* `kelex-` escapar, evadir-se | *Priv:* `akelex-` estagnar, ficar retido | *Iter:* `okelex-` voltar a escapar | *It.-Priv:* `odakelex-` voltar a ficar retido)
+- **kellitr-** (*Pos:* `kellitr-` cantar em coro, harmonizar em conjunto | *Priv:* `akellitr-` desfazer o coro | *Iter:* `okellitr-` reunir o coro novamente | *It.-Priv:* `odakellitr-` voltar a desfazer o coro)
+- **kelp-** (*Pos:* `kelp-` alinhar dois astros no mesmo grau sideral | *Priv:* `akelp-` afastar-se em oposição astral | *Iter:* `okelp-` realinhar em par sideral | *It.-Priv:* `odakelp-` voltar a separar as órbitas)
+- **kerb-** (*Pos:* `kerb-` revelar o desígnio soberano e o destino glorioso dos povos livres | *Priv:* `akerb-` ocultar o destino do mundo sob o véu de presságios funestos | *Iter:* `okerb-` desenrolar pacientemente as eras conforme a providência eterna | *It.-Priv:* `odakerb-` tentar alterar com arrogância as linhagens seladas no destino)
+- **kerd-** (*Pos:* `kerd-` cortar lenha, talhar madeira | *Priv:* `akerd-` emendar, unir o que foi cortado | *Iter:* `okerd-` recortar, aparar | *It.-Priv:* `odakerd-` voltar a emendar)
+- **kerp-** (*Pos:* `kerp-` granizar, chover pedras de gelo | *Priv:* `akerp-` cessar o granizo | *Iter:* `okerp-` voltar a granizar | *It.-Priv:* `odakerp-` voltar a cessar o granizo)
+- **kev-** (*Pos:* `kev-` escoltar caravana pelos passos alpinos | *Priv:* `akev-` dispersar o comboio | *Iter:* `okev-` reescoltar a travessia | *It.-Priv:* `odakev-` voltar a deixar sem escolta)
+- **kil-** (*Pos:* `kil-` engomar a gola plissada de Chancelaria | *Priv:* `akil-` desengomar com vapor de água | *Iter:* `okil-` reengomar a gola com amido | *It.-Priv:* `odakil-` voltar a desengomar o linho)
+- **kilk-** (*Pos:* `kilk-` ouvir com nitidez, escutar atento | *Priv:* `akilk-` ensurdecer ao ruído | *Iter:* `okilk-` escutar de novo com atenção | *It.-Priv:* `odakilk-` voltar a ignorar o som)
+- **kindr-** (*Pos:* `kindr-` unir em comunhão, aliar | *Priv:* `akindr-` cindir, criar discórdia | *Iter:* `okindr-` reunificar em aliança | *It.-Priv:* `odakindr-` voltar a cindir)
+- **kir-** (*Pos:* `kir-` transcrever códice em pergaminho limpo | *Priv:* `akir-` inutilizar fólio maculado | *Iter:* `okir-` retranscrever sem erro | *It.-Priv:* `odakir-` voltar a descartar a cópia)
+- **kirb-** (*Pos:* `kirb-` refratar a luz do sol em leque policromático através de cristal | *Priv:* `akirb-` bloquear a refração luminosa absorvendo o feixe em superfície opaca | *Iter:* `okirb-` refratar continuamente feixes irisados ao longo do dia | *It.-Priv:* `odakirb-` turvar o cristal prismático dispersando a luz em borrão cinzento)
+- **kirk-** (*Pos:* `kirk-` temperar o aço em água gélida | *Priv:* `akirk-` destemperar no fogo brando | *Iter:* `okirk-` retemperar a lâmina | *It.-Priv:* `odakirk-` voltar a destemperar)
+- **kirp-** (*Pos:* `kirp-` transmitir o anel de sinete ao primogênito | *Priv:* `akirp-` guardar as joias da linhagem | *Iter:* `okirp-` reconfirmar a sucessão | *It.-Priv:* `odakirp-` voltar a lacrar o cofre)
+- **kit-** (*Pos:* `kit-` escrever, lavrar em registro | *Priv:* `akit-` perdoar institucionalmente, rasurar | *Iter:* `okit-` reescrever, relavrar | *It.-Priv:* `odakit-` voltar a rasurar/perdoar)
+- **klad-** (*Pos:* `klad-` trancar a porta com ferrolho contra a tempestade | *Priv:* `aklad-` destrancar, abrir a porta para a luz | *Iter:* `oklad-` retrancar com segurança, fechar de novo | *It.-Priv:* `odaklad-` abrir a tranca após a tempestade passar)
+- **kolb-** (*Pos:* `kolb-` lançar tributo régio sobre feudos vassalos | *Priv:* `akolb-` isentar vassalo de tributos régios | *Iter:* `okolb-` arrecadar dízimos nas datas costumeiras | *It.-Priv:* `odakolb-` sonegar deliberadamente taxas devidas)
+- **kolm-** (*Pos:* `kolm-` polir lajes de mármore com areia | *Priv:* `akolm-` manter mármores em corte rústico | *Iter:* `okolm-` repolir tampos desgastados pelo tempo | *It.-Priv:* `odakolm-` deixar cantarias sem polimento)
+- **kom-** (*Pos:* `kom-` beber, sorver | *Priv:* `akom-` privar de fluidos, dar sede | *Iter:* `okom-` voltar a beber | *It.-Priv:* `odakom-` voltar a dar sede)
+- **korb-** (*Pos:* `korb-` engrenar dentes e pinhões de bronze em mecanismo de relojoaria | *Priv:* `akorb-` desencaixar as engrenagens desacoplando o eixo motor | *Iter:* `okorb-` manter o engrenamento perfeito dos eixos em rotação síncrona | *It.-Priv:* `odakorb-` esbagaçar os dentes de bronze das engrenagens por atrito seco)
+- **kork-** (*Pos:* `kork-` fosforecer em fogos azuis sobre os brejos na noite quieta | *Priv:* `akork-` extinguir a chama palida dispersando o gas dos brejos | *Iter:* `okork-` tremeluzir intermitentemente sobre as aguas paradas | *It.-Priv:* `odakork-` dissipar os vapores luminosos com a aurora matinal)
+- **korp-** (*Pos:* `korp-` fermentar levedura viva em massa de farinha fina | *Priv:* `akorp-` abafar a fermentação do pão de cevada | *Iter:* `okorp-` refermentar a massa com fermento de levedura maduro | *It.-Priv:* `odakorp-` deixar a massa ázima sem crescer)
+- **kos-** (*Pos:* `kos-` esconder, sepultar, escavar | *Priv:* `akos-` expor, revelar, transbordar | *Iter:* `okos-` reesconder, resepultar | *It.-Priv:* `odakos-` voltar a expor/revelar)
+- **krad-** (*Pos:* `krad-` criar, dar existência | *Priv:* `akrad-` destruir, descriar, arruinar | *Iter:* `okrad-` recriar, regenerar | *It.-Priv:* `odakrad-` voltar a destruir)
+- **kraz-** (*Pos:* `kraz-` rir, alegrar-se | *Priv:* `akraz-` chorar, lamentar | *Iter:* `okraz-` voltar a rir | *It.-Priv:* `odakraz-` voltar a chorar)
+- **kuex-** (*Pos:* `kuex-` corar a face de pudor ou rubor | *Priv:* `akuex-` empalidecer o semblante | *Iter:* `okuex-` tornar a corar | *It.-Priv:* `odakuex-` voltar a empalidecer)
+- **kulk-** (*Pos:* `kulk-` encastoar gema em anel ou coroa | *Priv:* `akulk-` desencastoar a pedra preciosa | *Iter:* `okulk-` reencastoar a joia | *It.-Priv:* `odakulk-` voltar a remover a gema)
+- **kulp-** (*Pos:* `kulp-` ajustar frete com os tropeiros da caravana | *Priv:* `akulp-` cancelar o transporte de carga | *Iter:* `okulp-` reajustar o frete por milha | *It.-Priv:* `odakulp-` voltar a cancelar o frete)
+- **kurk-** (*Pos:* `kurk-` coroar o soberano no santuário | *Priv:* `akurk-` abdicar do trono | *Iter:* `okurk-` reafirmar os votos da coroa | *It.-Priv:* `odakurk-` voltar a depor as insígnias)
+- **kusk-** (*Pos:* `kusk-` pleitear imunidade sob proteção de estandarte | *Priv:* `akusk-` recusar direito de asilo a criminoso | *Iter:* `okusk-` acolher fugitivos políticos no recinto imune | *It.-Priv:* `odakusk-` violar imunidade de legação estrangeira)
+- **lakanav-** (*Pos:* `lakanav-` amaldiçoar, votar ao mal | *Priv:* `alakanav-` desfazer maldição | *Iter:* `olakanav-` voltar a amaldiçoar | *It.-Priv:* `odalakanav-` voltar a desfazer maldição)
+- **lan-** (*Pos:* `lan-` emanar luz, alumiar | *Priv:* `alan-` obliterar a luz, eclipsar | *Iter:* `olan-` reiluminar, voltar a alumiar | *It.-Priv:* `odalan-` voltar a obliterar a luz)
+- **lart-** (*Pos:* `lart-` cozer cerâmica e barro em alta temperatura | *Priv:* `alart-` apagar o forno de queima de cerâmica | *Iter:* `olart-` recozer louça de faiança no forno | *It.-Priv:* `odalart-` deixar a argila crua sem queima)
+- **larv-** (*Pos:* `larv-` erigir marcos miliários de cantaria na linha divisória dos reinos | *Priv:* `alarv-` derrubar marcos de fronteira invadindo a jurisdição vizinha | *Iter:* `olarv-` inspecionar e restaurar periodicamente os marcos de divisa territorial | *It.-Priv:* `odalarv-` deslocar marcos de divisa à noite para anexar terras alheias)
+- **lerk-** (*Pos:* `lerk-` fiar a lã ou o linho no fuso | *Priv:* `alerk-` desfiar a meada | *Iter:* `olerk-` fiar novamente | *It.-Priv:* `odalerk-` voltar a desfiar)
+- **lerp-** (*Pos:* `lerp-` indultar prisioneiro por clemência do soberano | *Priv:* `alerp-` negar graça mantendo execução da pena | *Iter:* `olerp-` anistiar anualmente em jubileu régio | *It.-Priv:* `odalerp-` suspender regalias de anistia revogada)
+- **let-** (*Pos:* `let-` falar, dizer, proferir, chamar | *Priv:* `alet-` silenciar, calar | *Iter:* `olet-` reiterar a fala, repetir | *It.-Priv:* `odalet-` voltar a silenciar)
+- **lexp-** (*Pos:* `lexp-` alinhar o quadrante com o meridiano | *Priv:* `alexp-` desalinhar o limbo graduado | *Iter:* `olexp-` realinhar a alidade | *It.-Priv:* `odalexp-` voltar a recolher o instrumento)
+- **libk-** (*Pos:* `libk-` balançar a face visível da lua | *Priv:* `alibk-` ocultar a face posterior lunar | *Iter:* `olibk-` rebalançar em quadratura | *It.-Priv:* `odalibk-` voltar a esconder a borda lunar)
+- **lik-** (*Pos:* `lik-` defumar carnes no fumeiro de pinho | *Priv:* `alik-` hidratar a carne seca | *Iter:* `olik-` redefumar a provisão | *It.-Priv:* `odalik-` voltar a pôr de molho)
+- **lim-** (*Pos:* `lim-` hastear o estandarte imperial | *Priv:* `alim-` arriar o pavilhão | *Iter:* `olim-` rehastear a bandeira | *It.-Priv:* `odalim-` voltar a arriar o pendão)
+- **lir-** (*Pos:* `lir-` modular a voz para o registro grave | *Priv:* `alir-` elevar o canto ao agudo | *Iter:* `olir-` remodular a cadência | *It.-Priv:* `odalir-` voltar a subir o tom)
+- **lirk-** (*Pos:* `lirk-` iluminar manuscrito com ouro e carmim | *Priv:* `alirk-` deixar o fólio sem ornato | *Iter:* `olirk-` reiluminar a capitular | *It.-Priv:* `odalirk-` voltar a raspar a iluminura)
+- **lisk-** (*Pos:* `lisk-` lamber, provar com a língua | *Priv:* `alisk-` rejeitar ao paladar | *Iter:* `olisk-` provar repetidas vezes | *It.-Priv:* `odalisk-` voltar a rejeitar ao paladar)
+- **litr-** (*Pos:* `litr-` vibrar, cantar, soar em música | *Priv:* `alitr-` desafinar, semear dissonância | *Iter:* `olitr-` voltar a entoar, recantar | *It.-Priv:* `odalitr-` voltar a desafinar)
+- **lix-** (*Pos:* `lix-` lavar, limpar com água | *Priv:* `alix-` sujar, macular | *Iter:* `olix-` relavar, enxaguar | *It.-Priv:* `odalix-` voltar a sujar)
+- **lorb-** (*Pos:* `lorb-` incrustar tésseras de vidro colorido e ouro em mosaico bizantino | *Priv:* `alorb-` descolar as pedrinhas do mosaico por falha na argamassa | *Iter:* `olorb-` compor figuras sagradas assentando milhares de peças reluzentes | *It.-Priv:* `odalorb-` perder o alinhamento das tésseras deformando o desenho do mosaico)
+- **lur-** (*Pos:* `lur-` encobrir de neblina espessa | *Priv:* `alur-` dissipar a neblina | *Iter:* `olur-` reencobrir de bruma | *It.-Priv:* `odalur-` voltar a dissipar a neblina)
+- **lurk-** (*Pos:* `lurk-` confiscar bens para o erário | *Priv:* `alurk-` restituir o patrimônio | *Iter:* `olurk-` reconfiscar por traição | *It.-Priv:* `odalurk-` voltar a restituir os bens)
+- **lurp-** (*Pos:* `lurp-` depositar lodo fertil e vasa escura no leito aluvial | *Priv:* `alurp-` dragar os sedimentos desobstruindo o escoadouro natural | *Iter:* `olurp-` acumular sucessivas camadas de limo nutritivo apos cheias | *It.-Priv:* `odalurp-` carrear a vasa superficial deixando o cascalho limpo)
+- **lut-** (*Pos:* `lut-` caçar nas montanhas, rastrear animais silvestres | *Priv:* `alut-` abster-se da caça, poupar a presa | *Iter:* `olut-` caçar regularmente para abastecer a estalagem | *It.-Priv:* `odalut-` retornar da caçada com provisões)
+- **lyr-** (*Pos:* `lyr-` esperar, aguardar com esperança | *Priv:* `alyr-` desesperar, perder a esperança | *Iter:* `olyr-` voltar a esperar | *It.-Priv:* `odalyr-` voltar a desesperar)
+- **mad-** (*Pos:* `mad-` conceber no ventre, gerar (part. madet) | *Priv:* `amad-` abortar, tornar estéril | *Iter:* `omad-` voltar a conceber | *It.-Priv:* `odamad-` voltar a tornar estéril)
+- **mak-** (*Pos:* `mak-` comer, alimentar-se | *Priv:* `amak-` esfomear, privar de alimento | *Iter:* `omak-` voltar a comer | *It.-Priv:* `odamak-` voltar a esfomear)
+- **malp-** (*Pos:* `malp-` aparelhar o cavalo de viagem | *Priv:* `amalp-` desaparelhar a montaria cansada | *Iter:* `omalp-` reaparelhar para nova etapa | *It.-Priv:* `odamalp-` voltar a tirar o arreio)
+- **malx-** (*Pos:* `malx-` domar corcel bravo pelas rédeas | *Priv:* `amalx-` soltar o cavalo em liberdade | *Iter:* `omalx-` redomar a montaria | *It.-Priv:* `odamalx-` voltar a soltar as rédeas)
+- **marv-** (*Pos:* `marv-` intuir a verdade oculta sob as aparências falsas | *Priv:* `amarv-` enganar-se com as aparências superficiais do mundo | *Iter:* `omarv-` reconfirmar a intuição através do discernimento | *It.-Priv:* `odamarv-` desprezar a intuição interior com teimosia)
+- **mat-** (*Pos:* `mat-` alvejar o linho na água de sol | *Priv:* `amat-` escurecer o tecido ao relento | *Iter:* `omat-` realvejar no solstício | *It.-Priv:* `odamat-` voltar a escurecer o linho)
+- **mek-** (*Pos:* `mek-` emboscar o inimigo no desfiladeiro | *Priv:* `amek-` revelar a posição tática | *Iter:* `omek-` armar nova emboscada | *It.-Priv:* `odamek-` voltar a descobrir a guarda)
+- **mel-** (*Pos:* `mel-` negociar trégua entre exércitos | *Priv:* `amel-` romper o armistício | *Iter:* `omel-` renovar a trégua | *It.-Priv:* `odamel-` voltar a declarar hostilidades)
+- **melb-** (*Pos:* `melb-` gravar nome de primogênito no tronco da árvore genealógica de bronze | *Priv:* `amelb-` apagar linhagem desonrada da árvore genealógica | *Iter:* `omelb-` reescrever ramos familiares esquecidos | *It.-Priv:* `odamelb-` adulterar os registros de descendência)
+- **melk-** (*Pos:* `melk-` ondular o mar, formar vagas | *Priv:* `amelk-` aplainar a superfície marinha | *Iter:* `omelk-` ondular em ressaca | *It.-Priv:* `odamelk-` voltar a acalmar o mar)
+- **melp-** (*Pos:* `melp-` sorrir serenamente, comprazer-se | *Priv:* `amelp-` assumir semblante austero | *Iter:* `omelp-` sorrir outra vez | *It.-Priv:* `odamelp-` voltar à austeridade)
+- **merp-** (*Pos:* `merp-` enfardar feno e atar gavelas com vencelete | *Priv:* `amerp-` desatar os fardos de capim seco | *Iter:* `omerp-` reenfardar para abrigo no celeiro | *It.-Priv:* `odamerp-` voltar a desatar as gavelas)
+- **met-** (*Pos:* `met-` glorificar, regozijar-se, exaltar | *Priv:* `amet-` humilhar, envergonhar | *Iter:* `omet-` reglorificar, voltar a exaltar | *It.-Priv:* `odamet-` voltar a humilhar)
+- **milk-** (*Pos:* `milk-` ordenhar o rebanho ao alvorecer | *Priv:* `amilk-` desmamar o filhote | *Iter:* `omilk-` ordenhar novamente à tarde | *It.-Priv:* `odamilk-` voltar a encerrar a ordenha)
+- **mim-** (*Pos:* `mim-` dedicar templo ou monumento a Gyos | *Priv:* `amim-` desconsagrar ruína antiga | *Iter:* `omim-` rededicar o santuário | *It.-Priv:* `odamim-` voltar a encerrar o culto)
+- **mir-** (*Pos:* `mir-` ver, olhar, vigiar, contemplar | *Priv:* `amir-` cegar, tirar a visão | *Iter:* `omir-` rever, tornar a contemplar | *It.-Priv:* `odamir-` voltar a cegar)
+- **mirb-** (*Pos:* `mirb-` refletir a imagem límpida em espelho côncavo de prata polida | *Priv:* `amirb-` embaçar a superfície do espelho com névoa ou fuligem | *Iter:* `omirb-` espelhar com fidelidade os reflexos do aposento no espelho | *It.-Priv:* `odamirb-` riscar a lâmina de prata do espelho distorcendo o reflexo)
+- **mirk-** (*Pos:* `mirk-` orvalhar ao amanhecer | *Priv:* `amirk-` secar o orvalho pelo sol | *Iter:* `omirk-` reorvalhar | *It.-Priv:* `odamirk-` voltar a secar o orvalho)
+- **mirx-** (*Pos:* `mirx-` lustrar joia ou espelho metálico | *Priv:* `amirx-` fosquear a superfície | *Iter:* `omirx-` relustrar até espelhar | *It.-Priv:* `odamirx-` voltar a fosquear)
+- **miv-** (*Pos:* `miv-` declamar epopeia em cadência clássica | *Priv:* `amiv-` falar em prosa chã | *Iter:* `omiv-` redeclamar o canto heróico | *It.-Priv:* `odamiv-` voltar à locução comum)
+- **mob-** (*Pos:* `mob-` beneficiar, dar, conceder | *Priv:* `amob-` privar de favor, lesar | *Iter:* `omob-` voltar a conceder | *It.-Priv:* `odamob-` voltar a privar de favor)
+- **mobanav-** (*Pos:* `mobanav-` bendizer, abençoar | *Priv:* `amobanav-` retirar bênção | *Iter:* `omobanav-` voltar a abençoar | *It.-Priv:* `odamobanav-` voltar a retirar bênção)
+- **mol-** (*Pos:* `mol-` medir tecidos por braças com a vara padrão | *Priv:* `amol-` desmedir a peça de estofo | *Iter:* `omol-` remedir a vara de medição | *It.-Priv:* `odamol-` voltar a desmedir o tecido)
+- **molb-** (*Pos:* `molb-` mover pás e rodas d'água pela força da correnteza | *Priv:* `amolb-` travar a rotação da roda hidráulica estancando o curso | *Iter:* `omolb-` fazer girar continuamente as pás da roda de moinho | *It.-Priv:* `odamolb-` deixar a roda d'água apodrecer no canal seco)
+- **mold-** (*Pos:* `mold-` sondar fendas e poços com prumo | *Priv:* `amold-` suspender a sondagem de novos poços | *Iter:* `omold-` resondar galerias antigas alagadas | *It.-Priv:* `odamold-` abandonar poços sem medição)
+- **mollet-** (*Pos:* `mollet-` julgar, sentenciar (mon+let) | *Priv:* `amollet-` revogar juízo, absolver sem mérito | *Iter:* `omollet-` rejulgar, revisar processo | *It.-Priv:* `odamollet-` voltar a revogar juízo)
+- **molp-** (*Pos:* `molp-` empunhar lança de torneio em carga contra a barreira | *Priv:* `amolp-` recolher a haste da lança após o choque | *Iter:* `omolp-` tornar a carregar em justa de cavaleiros | *It.-Priv:* `odamolp-` errar o alvo na liça de combate)
+- **molx-** (*Pos:* `molx-` promulgar decreto da Chancelaria | *Priv:* `amolx-` ab-rogar lei antiga | *Iter:* `omolx-` repromulgar o édito | *It.-Priv:* `odamolx-` voltar a revogar a norma)
+- **mop-** (*Pos:* `mop-` tecer no tear, entrelaçar fios | *Priv:* `amop-` destecer a trama | *Iter:* `omop-` retecer o estofo | *It.-Priv:* `odamop-` voltar a destecer)
+- **morf-** (*Pos:* `morf-` sublimar sais e pós em vaso hermético | *Priv:* `amorf-` precipitar cristais no fundo do vaso | *Iter:* `omorf-` resublimar o sal purificado | *It.-Priv:* `odamorf-` dispersar o vapor sem condensar)
+- **mork-** (*Pos:* `mork-` desbravar galerias escuras tateando passagens com tochas e cordas | *Priv:* `amork-` perder-se nos meandros sem saida do labirinto de rocha | *Iter:* `omork-` mapear minuciosamente cada salao e garganta profunda | *It.-Priv:* `odamork-` retroceder com segurança seguindo o cabo de retorno)
+- **muk-** (*Pos:* `muk-` franzir o cenho em concentração | *Priv:* `amuk-` desanuviar a fronte | *Iter:* `omuk-` franzir a testa de novo | *It.-Priv:* `odamuk-` voltar a serenar a fronte)
+- **mul-** (*Pos:* `mul-` outorgar feudo ou título de nobreza | *Priv:* `amul-` revogar a mercê condal | *Iter:* `omul-` reconfirmar a carta de feudo | *It.-Priv:* `odamul-` voltar a cassar o título)
+- **mulk-** (*Pos:* `mulk-` arquivar nos rolos perpétuos | *Priv:* `amulk-` desentranhar o pergaminho | *Iter:* `omulk-` rearquivar na Chancelaria | *It.-Priv:* `odamulk-` voltar a extrair dos autos)
+- **murd-** (*Pos:* `murd-` proscrever infrator condenado ao desterro | *Priv:* `amurd-` revogar proscrição acolhendo o degredado | *Iter:* `omurd-` deportar bandos de foras-da-lei | *It.-Priv:* `odamurd-` manter desterro sem concessão de salvo-conduto)
+- **murp-** (*Pos:* `murp-` aferir limpidez de gemas na luz | *Priv:* `amurp-` avaliar pedras sem conferência | *Iter:* `omurp-` reaferir quilates de joias antigas | *It.-Priv:* `odamurp-` desconsiderar inclusões no cristal)
+- **nalb-** (*Pos:* `nalb-` meditar em silêncio recolhido contemplando a alma | *Priv:* `analb-` dispersar os pensamentos em algazarra ruidosa | *Iter:* `onalb-` recomeçar a meditação no silêncio da cela | *It.-Priv:* `odanalb-` turvar a meditação com vanglória vazia)
+- **nalp-** (*Pos:* `nalp-` guarnecer desfiladeiros estratégicos e portelas de montanha | *Priv:* `analp-` abandonar a guarda do desfiladeiro permitindo passagem clandestina | *Iter:* `onalp-` patrulhar as passagens rochosas da cordilheira dia e noite | *It.-Priv:* `odanalp-` ficar encurralado na garganta do desfiladeiro por corte da retaguarda)
+- **nasp-** (*Pos:* `nasp-` navegar em mar aberto com vela mestra desfraldada | *Priv:* `anasp-` fundear a embarcação em enseada protegida | *Iter:* `onasp-` manobrar repetidas vezes contra a vaga marítima | *It.-Priv:* `odanasp-` deixar a nau à deriva sem rumo)
+- **nav-** (*Pos:* `nav-` transformar, tornar-se, converter | *Priv:* `anav-` petrificar, impedir mutação | *Iter:* `onav-` retransformar | *It.-Priv:* `odanav-` voltar a impedir mutação)
+- **nax-** (*Pos:* `nax-` escurecer no ocaso, anoitecer | *Priv:* `anax-` clarear a alvorada | *Iter:* `onax-` voltar a anoitecer | *It.-Priv:* `odanax-` voltar a clarear)
+- **nek-** (*Pos:* `nek-` esticar os membros, espreguiçar-se | *Priv:* `anek-` encolher o corpo | *Iter:* `onek-` alongar-se novamente | *It.-Priv:* `odanek-` voltar a encolher-se)
+- **nel-** (*Pos:* `nel-` vadear o rio nos baixios | *Priv:* `anel-` recuar ante a cheia | *Iter:* `onel-` revadear a passagem | *It.-Priv:* `odanel-` voltar a deter-se na margem)
+- **nelb-** (*Pos:* `nelb-` julgar causas com retidão imparcial e justiça distributiva | *Priv:* `anelb-` corromper a balança da justiça favorecendo parentes ou subornos | *Iter:* `onelb-` pesar equitativamente direitos e deveres em cada julgamento | *It.-Priv:* `odanelb-` aplicar a letra fria da lei sem misericórdia cometendo iniquidade)
+- **nelp-** (*Pos:* `nelp-` farejar, sentir aroma ou perfume | *Priv:* `anelp-` perder o olfato | *Iter:* `onelp-` farejar a trilha novamente | *It.-Priv:* `odanelp-` voltar a perder o olfato)
+- **nemr-** (*Pos:* `nemr-` lembrar, recordar na memória (fut. nemnu, nr -> nn) | *Priv:* `anemr-` apagar da memória, olvidar | *Iter:* `onemr-` relembrar, comemorar | *It.-Priv:* `odanemr-` voltar a apagar da memória)
+- **nerk-** (*Pos:* `nerk-` sublimar enxofre em crostas amarelas fumegantes | *Priv:* `anerk-` apagar as chamas sulfurosas dissolvendo as crostas acidas | *Iter:* `onerk-` exalar continuamente vapores que tingem os rochedos | *It.-Priv:* `odanerk-` dispersar as fumaças sob o sopro dos ventos de altitude)
+- **nerp-** (*Pos:* `nerp-` debater proposições dialéticas no conclave de sábios | *Priv:* `anerp-` conceder a tese ao contendor na disputa | *Iter:* `onerp-` redebater os silogismos fundamentais | *It.-Priv:* `odanerp-` abandonar a controvérsia filosófica)
+- **nik-** (*Pos:* `nik-` entalhar relevo em madeira nobre | *Priv:* `anik-` alisar a superfície entalhada | *Iter:* `onik-` reentalhar o brasão | *It.-Priv:* `odanik-` voltar a alisar)
+- **nin-** (*Pos:* `nin-` trançar os cabelos em penteado nobre | *Priv:* `anin-` soltar as madeixas | *Iter:* `onin-` retrançar com fitas de ouro | *It.-Priv:* `odanin-` voltar a soltar os cabelos)
+- **nirb-** (*Pos:* `nirb-` gotejar continuamente calcario formando estalactites no teto | *Priv:* `anirb-` estancar o gotejamento secando a galeria subterranea | *Iter:* `onirb-` precipitar ciclicamente colunas minerais ao longo das eras | *It.-Priv:* `odanirb-` interromper e retomar o fluxo mineral no teto)
+- **niv-** (*Pos:* `niv-` consagrar a fronte com bálsamo sagrado | *Priv:* `aniv-` purificar a fronte com água | *Iter:* `oniv-` reconsagrar o iniciado | *It.-Priv:* `odaniv-` voltar a lavar a fronte)
+- **nop-** (*Pos:* `nop-` semear grãos na terra lavrada | *Priv:* `anop-` recolher a sementeira | *Iter:* `onop-` ressemeadura de primavera | *It.-Priv:* `odanop-` voltar a suspender o plantio)
+- **norv-** (*Pos:* `norv-` acionar martelos pesados de forja através de cames e eixo hidráulico | *Priv:* `anorv-` desengatar os martelos hidráulicos paralisando a forja | *Iter:* `onorv-` bater cadenciadamente sobre a bigorna com o martelo hidráulico | *It.-Priv:* `odanorv-` rachar a árvore de cames por descompasso no curso do rio)
+- **nul-** (*Pos:* `nul-` testemunhar sob juramento sagrado | *Priv:* `anul-` retratar o depoimento | *Iter:* `onul-` reafirmar o testemunho | *It.-Priv:* `odanul-` voltar a calar no tribunal)
+- **nulp-** (*Pos:* `nulp-` acumular bancos de neve alta | *Priv:* `anulp-` varrer a neve acumulada | *Iter:* `onulp-` reacumular neve na tormenta | *It.-Priv:* `odanulp-` voltar a limpar a neve)
+- **nurk-** (*Pos:* `nurk-` ramificar em multiplos esteiros e barras de areia na foz | *Priv:* `anurk-` afunilar a desembocadura num unico leito profundo | *Iter:* `onurk-` depositar continuamente aluavioes expandindo a terra firme | *It.-Priv:* `odanurk-` dragar as passagens mantendo canais navegaveis para barcos)
+- **nyk-** (*Pos:* `nyk-` abrir porta ou baú | *Priv:* `anyk-` fechar, trancar | *Iter:* `onyk-` reabrir | *It.-Priv:* `odanyk-` voltar a fechar)
+- **oub-** (*Pos:* `oub-` entoar em prelúdio, elevar cântico (imperf. oubba no Halylitror) | *Priv:* `aoub-` calar prelúdio | *Iter:* `odoub-` voltar a entoar prelúdio (odoub-) | *It.-Priv:* `odaoub-` voltar a calar prelúdio (odaoub-))
+- **ox-** (*Pos:* `ox-` guerrear, combater em campo | *Priv:* `aox-` pacificar o campo | *Iter:* `odox-` voltar a guerrear | *It.-Priv:* `odaox-` voltar a pacificar)
+- **oxep-** (*Pos:* `oxep-` determinar o ângulo sobre a linha da terra | *Priv:* `aoxep-` desviar da linha meridiana | *Iter:* `odoxep-` redeterminar a direção | *It.-Priv:* `odaoxep-` voltar a perder o rumo)
+- **palb-** (*Pos:* `palb-` moderar desejos e apetites com temperança e serenidade interior | *Priv:* `apalb-` entregar-se aos excessos desregrados perdendo o autodomínio | *Iter:* `opalb-` cultivar diariamente o comedimento em palavras, atos e hábitos | *It.-Priv:* `odapalb-` cair em hipocrisia austera que esconde vícios secretos)
+- **palp-** (*Pos:* `palp-` furar o couro com sovela de sapateiro | *Priv:* `apalp-` tapar o furo da sovela | *Iter:* `opalp-` refurar para o ponto duplo | *It.-Priv:* `odapalp-` voltar a desunir o couro)
+- **palt-** (*Pos:* `palt-` prensar frutos em lagar de viga para mosto | *Priv:* `apalt-` aliviar a prensa do lagar | *Iter:* `opalt-` reprensar o bagaço restante | *It.-Priv:* `odapalt-` voltar a desapertar o fuso)
+- **par-** (*Pos:* `par-` merecer, ser digno, ter parte em | *Priv:* `apar-` desmerecer, perder direito | *Iter:* `opar-` voltar a merecer | *It.-Priv:* `odapar-` voltar a desmerecer)
+- **parb-** (*Pos:* `parb-` estremecer as falhas geologicas em abalos tectonicos | *Priv:* `aparb-` acalmar os sismos estabilizando as placas rochosas | *Iter:* `oparb-` vibrar em tremores harmonicos anunciando a subida da lava | *It.-Priv:* `odaparb-` dissipar as ondas de choque atraves dos estratos)
+- **pas-** (*Pos:* `pas-` precisar, necessitar, desejar | *Priv:* `apas-` prescindir, dispensar | *Iter:* `opas-` voltar a precisar | *It.-Priv:* `odapas-` voltar a prescindir)
+- **pek-** (*Pos:* `pek-` quebrar, partir | *Priv:* `apek-` consertar, remendar | *Iter:* `opek-` voltar a quebrar | *It.-Priv:* `odapek-` voltar a consertar)
+- **pel-** (*Pos:* `pel-` sondar a profundidade do canal | *Priv:* `apel-` navegar às cegas sem prumo | *Iter:* `opel-` ressondar o fundo rochoso | *It.-Priv:* `odapel-` voltar a recolher a sonda)
+- **pelb-** (*Pos:* `pelb-` soltar o falcão no ar retirando o caparão de couro | *Priv:* `apelb-` recolher a ave na luva de camurça com o engodo | *Iter:* `opelb-` tornar a lançar a ave contra a garça em voo | *It.-Priv:* `odapelb-` perder a ave de vista nas nuvens)
+- **peld-** (*Pos:* `peld-` inundar a margem, transbordar o rio | *Priv:* `apeld-` baixar o nível das águas | *Iter:* `opeld-` reinundar na cheia | *It.-Priv:* `odapeld-` voltar a baixar as águas)
+- **pelp-** (*Pos:* `pelp-` modular o claro-escuro entre luz tênue e penumbra dramática | *Priv:* `apelp-` apagar os contrastes de sombra banhando a cena em luz chapada | *Iter:* `opelp-` esfumar gradualmente a transição entre o foco luminoso e a escuridão | *It.-Priv:* `odapelp-` enegrecer a composição pictórica com sombras pesadas e empastadas)
+- **perk-** (*Pos:* `perk-` tocar com os dedos, tatear | *Priv:* `aperk-` recolher a mão, abster-se de tocar | *Iter:* `operk-` tatear no escuro de novo | *It.-Priv:* `odaperk-` voltar a recolher a mão)
+- **pesk-** (*Pos:* `pesk-` enviar legação diplomática plenipotenciária | *Priv:* `apesk-` revogar embaixador em missão hostil | *Iter:* `opesk-` manter missões diplomáticas rotativas | *It.-Priv:* `odapesk-` interromper relações diplomáticas bilaterais)
+- **pik-** (*Pos:* `pik-` pôr a mesa para o banquete | *Priv:* `apik-` levantar a mesa após a ceia | *Iter:* `opik-` repor as taças e travessas | *It.-Priv:* `odapik-` voltar a recolher a baixela)
+- **pilk-** (*Pos:* `pilk-` regatear o preço no bazar com o mercador | *Priv:* `apilk-` aceitar o valor inicial sem regateio | *Iter:* `opilk-` regatear novamente o lote | *It.-Priv:* `odapilk-` voltar a fechar negócio sem regateio)
+- **pir-** (*Pos:* `pir-` demonstrar teorema ou verdade eterna | *Priv:* `apir-` pôr em dúvida metódica | *Iter:* `opir-` redemonstrar pela razão | *It.-Priv:* `odapir-` voltar a questionar a prova)
+- **pirk-** (*Pos:* `pirk-` refutar argumento com silogismo | *Priv:* `apirk-` conceder a premissa ao adversário | *Iter:* `opirk-` rerrefutar na disputa | *It.-Priv:* `odapirk-` voltar a anuir à tese)
+- **polm-** (*Pos:* `polm-` ventilar galerias profundas com foles | *Priv:* `apolm-` estagnar o ar nas galerias de fundo | *Iter:* `opolm-` reventilar frentes tomadas por fumaça | *It.-Priv:* `odapolm-` interromper o fluxo de ar fresco)
+- **polv-** (*Pos:* `polv-` traçar cartas corográficas e províncias imperiais em pergaminho | *Priv:* `apolv-` apagar limites e topônimos da carta desorientando os viajantes | *Iter:* `opolv-` atualizar continuamente o mapa com novas rotas e relevos explorados | *It.-Priv:* `odapolv-` desenhar relevos imprecisos na carta provocando extravio de caravanas)
+- **pork-** (*Pos:* `pork-` arpar cabos de amarração e içar velas ao vento | *Priv:* `apork-` arriar as velas e recolher cabos no tombadilho | *Iter:* `opork-` rearpar o velame após calmaria prolongada | *It.-Priv:* `odapork-` rasgar o velame por rajada de vento)
+- **porp-** (*Pos:* `porp-` soprar pasta vítrea com cana de sopro | *Priv:* `aporp-` resfriar o vidro antes da modelagem | *Iter:* `oporp-` soprar repetidas vezes a ampola | *It.-Priv:* `odaporp-` deixar a peça de vidro amorfa)
+- **pulk-** (*Pos:* `pulk-` indenizar dano causado em guerra | *Priv:* `apulk-` eximir de reparação | *Iter:* `opulk-` reindenizar em ouro | *It.-Priv:* `odapulk-` voltar a perdoar a dívida)
+- **pulp-** (*Pos:* `pulp-` calçar perneiras de lã trançada na neve | *Priv:* `apulp-` descalçar as perneiras | *Iter:* `opulp-` recalçar antes de sair ao frio | *It.-Priv:* `odapulp-` voltar a descalçar as perneiras)
+- **purd-** (*Pos:* `purd-` gradar o solo desmanchando torrões | *Priv:* `apurd-` desmanchar a gradagem das leiras | *Iter:* `opurd-` regradar a terra para o plantio | *It.-Priv:* `odapurd-` voltar a desfazer a leira gradada)
+- **rel-** (*Pos:* `rel-` acantonar a legião em acampamento | *Priv:* `arel-` desmontar as tendas de campanha | *Iter:* `orel-` reacantonar no inverno | *It.-Priv:* `odarel-` voltar a levantar acampamento)
+- **relk-** (*Pos:* `relk-` ceifar o trigo maduro com foice | *Priv:* `arelk-` poupar a seara verde | *Iter:* `orelk-` ceifar a segunda colheita | *It.-Priv:* `odarelk-` voltar a poupar a lavoura)
+- **rik-** (*Pos:* `rik-` fermentar o hidromel em tonéis de carvalho | *Priv:* `arik-` decantar a bebida límpida | *Iter:* `orik-` refermentar a safra | *It.-Priv:* `odarik-` voltar a engarrafar)
+- **rirk-** (*Pos:* `rirk-` compor hino ou cânone polifônico | *Priv:* `arirk-` improvisar sem regra | *Iter:* `orirk-` recompor a partitura | *It.-Priv:* `odarirk-` voltar a desfechar o improviso)
+- **rixk-** (*Pos:* `rixk-` desmoronar rochas, causar avalancha | *Priv:* `arixk-` estabilizar a encosta | *Iter:* `orixk-` desmoronar de novo | *It.-Priv:* `odarixk-` voltar a estabilizar a encosta)
+- **rop-** (*Pos:* `rop-` chamar, convocar pelo nome | *Priv:* `arop-` dispensar, mandar embora | *Iter:* `orop-` chamar de novo | *It.-Priv:* `odarop-` voltar a dispensar)
+- **rukx-** (*Pos:* `rukx-` desafiar em duelo singular de honra | *Priv:* `arukx-` recusar o desafio | *Iter:* `orukx-` redobrar o desafio | *It.-Priv:* `odarukx-` voltar a declinar o combate)
+- **rulk-** (*Pos:* `rulk-` auditar as contas do tesouro | *Priv:* `arulk-` encerrar a tomada de contas | *Iter:* `orulk-` reauditar os livros | *It.-Priv:* `odarulk-` voltar a arquivar o balanço)
+- **rulp-** (*Pos:* `rulp-` bocejar de sono ou fadiga | *Priv:* `arulp-` despertar a atenção | *Iter:* `orulp-` bocejar repetidamente | *It.-Priv:* `odarulp-` voltar a despertar)
+- **rux-** (*Pos:* `rux-` cozinhar ao fogo, assar no caldeirão | *Priv:* `arux-` deixar cru, retirar do fogo | *Iter:* `orux-` reaquecer a comida | *It.-Priv:* `odarux-` voltar a esfriar a comida)
+- **ruxp-** (*Pos:* `ruxp-` ferver o caldo, apurar sopa no caldeirão | *Priv:* `aruxp-` deixar o caldo frio, não ferver | *Iter:* `oruxp-` reaquecer o caldo, ferver de novo na panela | *It.-Priv:* `odaruxp-` tirar a panela do fogo no ponto exato)
+- **said-** (*Pos:* `said-` afiar, amolar, esculpir na rocha | *Priv:* `asaid-` embotar lâmina, cegar fio | *Iter:* `osaid-` reafiar, reesculpir | *It.-Priv:* `odasaid-` voltar a embotar)
+- **sak-** (*Pos:* `sak-` raspar a moeda na pedra de toque para avaliar | *Priv:* `asak-` deixar a moeda sem ensaio | *Iter:* `osak-` reensaiar a pureza do metal | *It.-Priv:* `odasak-` voltar a dispensar o toque)
+- **salb-** (*Pos:* `salb-` atracar galera imperial em cais de cantaria com cabos de cânhamo | *Priv:* `asalb-` desamarrar os cabos de proa e popa ao zarpar | *Iter:* `osalb-` reatracar as naus em fila protegida no quebra-mar | *It.-Priv:* `odasalb-` romper os cabos de atracação por força da ressaca)
+- **sam-** (*Pos:* `sam-` pesar mercadorias na balança de dois pratos | *Priv:* `asam-` aliviar o prato da balança | *Iter:* `osam-` repesar a mercadoria com precisão | *It.-Priv:* `odasam-` voltar a desbalancear os pratos)
+- **sark-** (*Pos:* `sark-` adestrar falcão peregrino para caça de altitude | *Priv:* `asark-` devolver a ave de rapina ao poleiro | *Iter:* `osark-` readestrar o açor arisco | *It.-Priv:* `odasark-` deixar o falcão indómito sem treino)
+- **sek-** (*Pos:* `sek-` sentar-se, assentar-se | *Priv:* `asek-` levantar-se, erguer-se do assento | *Iter:* `osek-` sentar-se de novo | *It.-Priv:* `odasek-` voltar a levantar-se)
+- **sel-** (*Pos:* `sel-` eclipsar um astro, ocultar o sol | *Priv:* `asel-` desvelar o disco solar | *Iter:* `osel-` reeclipsar no ciclo sideral | *It.-Priv:* `odasel-` voltar a desvelar o astro)
+- **selp-** (*Pos:* `selp-` identificar filão na matriz de quartzo | *Priv:* `aselp-` perder o veio metálico na falha | *Iter:* `oselp-` reidentificar veios em rocha dura | *It.-Priv:* `odaselp-` seguir veio estéril sem minério)
+- **sem-** (*Pos:* `sem-` moer o grão entre mós de pedra | *Priv:* `asem-` conservar o grão inteiro | *Iter:* `osem-` remoer até obter flor de farinha | *It.-Priv:* `odasem-` voltar a guardar o grão)
+- **serb-** (*Pos:* `serb-` vicejar juncais espessos nas margens lodosas do charco | *Priv:* `aserb-` ceifar os canaviais limpando acessos a atracadouros | *Iter:* `oserb-` entrelaçar continuamente raizes formando esteiras flutuantes | *It.-Priv:* `odaserb-` abrir canais estreitos atraves do labirinto de juncos)
+- **sfar-** (*Pos:* `sfar-` enxergar na bruma, avistar os caminhos | *Priv:* `asfar-` fechar os olhos, cegar temporariamente na neve | *Iter:* `osfar-` vigiar atentamente, contemplar de novo | *It.-Priv:* `odasfar-` interromper a vigília, descansar a vista)
+- **sif-** (*Pos:* `sif-` contar histórias, narrar crônica | *Priv:* `asif-` omitir crônica, silenciar história | *Iter:* `osif-` recontar história | *It.-Priv:* `odasif-` voltar a omitir crônica)
+- **sik-** (*Pos:* `sik-` forragear provisões no campo | *Priv:* `asik-` esgotar os víveres da tropa | *Iter:* `osik-` reforragear a região | *It.-Priv:* `odasik-` voltar a racionar víveres)
+- **silb-** (*Pos:* `silb-` pintar afrescos em têmpera e óleos sobre argamassa fresca de cal | *Priv:* `asilb-` raspar a pintura mural descascando o pigmento ressecado | *Iter:* `osilb-` retocar as camadas de cor do afresco mantendo o brilho dos tons | *It.-Priv:* `odasilb-` craquelar a camada pictórica por secagem rápida ou umidade excessiva)
+- **silk-** (*Pos:* `silk-` esmaltar cerâmica ao forno | *Priv:* `asilk-` deixar o barro poroso | *Iter:* `osilk-` reesmaltar a ânfora | *It.-Priv:* `odasilk-` voltar a tirar o verniz)
+- **sim-** (*Pos:* `sim-` entoar o Zo es de fechamento | *Priv:* `asim-` abrir o introito litúrgico | *Iter:* `osim-` reentoar o amém coral | *It.-Priv:* `odasim-` voltar a iniciar a prece)
+- **sin-** (*Pos:* `sin-` flanquear à esquerda | *Priv:* `asin-` desguarnecer a esquerda | *Iter:* `osin-` reordenar a esquerda | *It.-Priv:* `odasin-` voltar a desguarnecer a esquerda)
+- **sir-** (*Pos:* `sir-` clarear o céu após a tempestade | *Priv:* `asir-` toldar o firmamento de nuvens | *Iter:* `osir-` reclarear o horizonte | *It.-Priv:* `odasir-` voltar a toldar o céu)
+- **sis-** (*Pos:* `sis-` bordar brasão da Casa no estandarte | *Priv:* `asis-` desmanchar o ponto torto | *Iter:* `osis-` rebordar com fio de ouro | *It.-Priv:* `odasis-` voltar a desfazer o bordado)
+- **siv-** (*Pos:* `siv-` jejuar na vigília das estrelas | *Priv:* `asiv-` celebrar o ágape festivo | *Iter:* `osiv-` retomar a vigília sacra | *It.-Priv:* `odasiv-` voltar a abrir o banquete)
+- **skor-** (*Pos:* `skor-` crer, professar fé | *Priv:* `askor-` descrer, apostatar | *Iter:* `oskor-` voltar a crer | *It.-Priv:* `odaskor-` voltar a descrer)
+- **sol-** (*Pos:* `sol-` passar a lançadeira no tear de tecelão | *Priv:* `asol-` desarmar a teia do tear | *Iter:* `osol-` repassar a trama do pano | *It.-Priv:* `odasol-` voltar a desarmar a lançadeira)
+- **solb-** (*Pos:* `solb-` temperar caldos e assados com açafrão e especiarias da corte | *Priv:* `asolb-` dissipar o sabor pungente com caldo claro ou leite | *Iter:* `osolb-` retemperar o banquete nupcial com ervas frescas | *It.-Priv:* `odasolb-` deixar a comida insossa sem tempero)
+- **solk-** (*Pos:* `solk-` condenar réu a pena aflictiva | *Priv:* `asolk-` absolver réu de culpa e comutação | *Iter:* `osolk-` aplicar penas graduadas conforme reincidência | *It.-Priv:* `odasolk-` isentar sistematicamente infratores)
+- **solp-** (*Pos:* `solp-` encadernar fólios em tábuas de carvalho e couro | *Priv:* `asolp-` desencadernar os cadernos de velino | *Iter:* `osolp-` reencadernar o códice antigo com nervuras | *It.-Priv:* `odasolp-` deixar as folhas soltas sem costura)
+- **sul-** (*Pos:* `sul-` suar pelo esforço da forja ou marcha | *Priv:* `asul-` refrescar a epiderme | *Iter:* `osul-` suar abundantemente | *It.-Priv:* `odasul-` voltar a refrescar o corpo)
+- **sulb-** (*Pos:* `sulb-` erguer comportas e canalizar água de açude para o moinho | *Priv:* `asulb-` baixar as comportas estancando o fluxo d'água da represa | *Iter:* `osulb-` regular continuamente o nível d'água do canal de derivação | *It.-Priv:* `odasulb-` romper as comportas de madeira pela pressão da cheia)
+- **sulk-** (*Pos:* `sulk-` apelar à Corte Suprema | *Priv:* `asulk-` acatar a sentença inferior | *Iter:* `osulk-` recorrer novamente em graça | *It.-Priv:* `odasulk-` voltar a desistir do recurso)
+- **sulv-** (*Pos:* `sulv-` cantarolar, entoar baixinho | *Priv:* `asulv-` emudecer o canto | *Iter:* `osulv-` voltar a cantarolar | *It.-Priv:* `odasulv-` voltar a emudecer o canto)
+- **surk-** (*Pos:* `surk-` precipitar em quedas de cataratas estrondosas pulverizando as aguas | *Priv:* `asurk-` desviar o curso da torrente represando a cabeceira da garganta | *Iter:* `osurk-` rugir continuamente em cascatas sucessivas de montanha | *It.-Priv:* `odasurk-` moderar a furia das aguas nas bacias de amortecimento)
+- **surp-** (*Pos:* `surp-` ceifar cereais maduros com foice curta | *Priv:* `asurp-` deixar a espiga em pé na eira | *Iter:* `osurp-` receifar o trigo que restou no campo | *It.-Priv:* `odasurp-` voltar a suspender a ceifa)
+- **suv-** (*Pos:* `suv-` demarcar fronteira com marcos de pedra | *Priv:* `asuv-` apagar os limites territoriais | *Iter:* `osuv-` redemarcar a divisa | *It.-Priv:* `odasuv-` voltar a remover os marcos)
+- **tak-** (*Pos:* `tak-` arrematar lote no leilão de importados | *Priv:* `atak-` desistir do lance arrematado | *Iter:* `otak-` rearrematar em lance superior | *It.-Priv:* `odatak-` voltar a abrir mão do lote)
+- **tald-** (*Pos:* `tald-` mondar ervas daninhas à enxada | *Priv:* `atald-` deixar o mato crescer no canteiro | *Iter:* `otald-` remondar a linha de mudas novas | *It.-Priv:* `odatald-` voltar a abandonar a capina)
+- **talp-** (*Pos:* `talp-` escorar galeria com esteios de madeira | *Priv:* `atalp-` retirar escoras de galeria esgotada | *Iter:* `otalp-` reescorar tetos instáveis da mina | *It.-Priv:* `odatalp-` deixar galeria sem sustentação)
+- **tap-** (*Pos:* `tap-` deslocar lentamente o polo dos equinócios | *Priv:* `atap-` estabilizar o polo celeste | *Iter:* `otap-` redeslocar ao longo das eras | *It.-Priv:* `odatap-` voltar a fixar o polo)
+- **tark-** (*Pos:* `tark-` vedar fendas de gases com argamassa | *Priv:* `atark-` desvedar condutos de ar asfixiante | *Iter:* `otark-` revedar emboços rachados da mina | *It.-Priv:* `odatark-` deixar fendas de gás abertas)
+- **tarp-** (*Pos:* `tarp-` sacudir a terra, causar tremor | *Priv:* `atarp-` assentar o solo firme | *Iter:* `otarp-` tremer em réplicas | *It.-Priv:* `odatarp-` voltar a assentar o solo)
+- **tav-** (*Pos:* `tav-` contar, enumerar moedas ou dias | *Priv:* `atav-` perder a conta | *Iter:* `otav-` recontar, conferir | *It.-Priv:* `odatav-` voltar a perder a conta)
+- **tek-** (*Pos:* `tek-` forjar o ferro, lavrar a pedra, construir | *Priv:* `atek-` deixar a obra inacabada, desconstruir | *Iter:* `otek-` reforjar a lâmina, martelar repetidas vezes | *It.-Priv:* `odatek-` concluir a forja e temperar no aço)
+- **tel-** (*Pos:* `tel-` soprar brisa suave das colinas | *Priv:* `atel-` estagnar o ar em calmaria | *Iter:* `otel-` soprar brisa novamente | *It.-Priv:* `odatel-` voltar a estagnar o ar)
+- **telk-** (*Pos:* `telk-` erguer viga mestra ou cumeeira | *Priv:* `atelk-` desmontar o madeiramento | *Iter:* `otelk-` reerguer a estrutura do teto | *It.-Priv:* `odatelk-` voltar a desmontar)
+- **telp-** (*Pos:* `telp-` sitiar fortaleza, rodear muralha | *Priv:* `atelp-` levantar o sítio militar | *Iter:* `otelp-` ressitiar a praça-forte | *It.-Priv:* `odatelp-` voltar a levantar o sítio)
+- **terk-** (*Pos:* `terk-` vitrificar massas de silica fundida gerando obsidiana negra | *Priv:* `aterk-` quebrar a carapaça vitrea em laminas cortantes | *Iter:* `oterk-` resfriar em blocos de vidro vulcanico de brilho espelhado | *It.-Priv:* `odaterk-` polir as bordas afiadas sob o fluxo continuo de calor)
+- **terp-** (*Pos:* `terp-` guardar reminiscências sagradas no fundo do coração | *Priv:* `aterp-` desprezar o passado esquecendo as origens | *Iter:* `oterp-` reavivar a chama da memória esquecida | *It.-Priv:* `odaterp-` distorcer as reminiscências com amargura rancorosa)
+- **tev-** (*Pos:* `tev-` orientar-se pela estrela polar | *Priv:* `atev-` perder o rumo na cerração | *Iter:* `otev-` reorientar a rota sideral | *It.-Priv:* `odatev-` voltar a desviar do norte)
+- **tik-** (*Pos:* `tik-` aquecer água para o banho de vapor | *Priv:* `atik-` esvaziar a tina de madeira | *Iter:* `otik-` reaquecer as pedras do banho | *It.-Priv:* `odatik-` voltar a esfriar a tina)
+- **til-** (*Pos:* `til-` reter penhor ou fiança até a entrega | *Priv:* `atil-` liberar a caução retida | *Iter:* `otil-` reter novamente a garantia | *It.-Priv:* `odatil-` voltar a dispensar a fiança)
+- **tilk-** (*Pos:* `tilk-` jejuar por voto litúrgico | *Priv:* `atilk-` quebrar a abstinência ritual | *Iter:* `otilk-` retomar o jejum sacro | *It.-Priv:* `odatilk-` voltar a alimentar-se)
+- **tilp-** (*Pos:* `tilp-` enganchar o manto com fecho de metal | *Priv:* `atilp-` desenganchar o manto de lã | *Iter:* `otilp-` reenganchar com firmeza no ombro | *It.-Priv:* `odatilp-` voltar a soltar o fecho)
+- **tim-** (*Pos:* `tim-` temer, reverenciar com assombro sagrado | *Priv:* `atim-` perder o temor, ousar | *Iter:* `otim-` voltar a temer | *It.-Priv:* `odatim-` voltar a perder o temor)
+- **tir-** (*Pos:* `tir-` isolar a essência universal na mente | *Priv:* `atir-` particularizar no caso concreto | *Iter:* `otir-` reisolar o conceito puro | *It.-Priv:* `odatir-` voltar ao exemplo sensível)
+- **tirk-** (*Pos:* `tirk-` peneirar a farinha ou o ouro | *Priv:* `atirk-` misturar o cascalho | *Iter:* `otirk-` repeneirar com malha fina | *It.-Priv:* `odatirk-` voltar a misturar)
+- **tisv-** (*Pos:* `tisv-` cardar a lã virgem em mechas macias | *Priv:* `atisv-` desalihar a lã, embolotar | *Iter:* `otisv-` recardar mecha por mecha | *It.-Priv:* `odatisv-` voltar a embolotar a lã)
+- **tok-** (*Pos:* `tok-` governar, reger com soberania | *Priv:* `atok-` desgovernar, subverter ordem | *Iter:* `otok-` voltar a governar | *It.-Priv:* `odatok-` voltar a desgovernar)
+- **tokx-** (*Pos:* `tokx-` reunir a corte suprema da Coroa | *Priv:* `atokx-` dissolver a assembleia | *Iter:* `otokx-` reconvocar os dignitários | *It.-Priv:* `odatokx-` voltar a dissolver a sessão)
+- **tol-** (*Pos:* `tol-` formar com beleza, aformosear | *Priv:* `atol-` desfigurar, deformar | *Iter:* `otol-` reaformosear | *It.-Priv:* `odatol-` voltar a desfigurar)
+- **tolk-** (*Pos:* `tolk-` debulhar espigas com mangual na eira de pedra | *Priv:* `atolk-` suspender a debulha das espigas | *Iter:* `otolk-` redebulhar os feixes mais densos | *It.-Priv:* `odatolk-` voltar a interromper a debulha)
+- **tolp-** (*Pos:* `tolp-` pautar fólios de velino com ponta de chumbo | *Priv:* `atolp-` apagar a pauta do fólio com miolo de pão | *Iter:* `otolp-` repautar as colunas de texto com régua | *It.-Priv:* `odatolp-` escrever fora das linhas pautadas)
+- **tonp-** (*Pos:* `tonp-` calcular as tábuas celestes em pergaminho | *Priv:* `atonp-` errar o cômputo astral | *Iter:* `otonp-` recalcular as tábuas siderais | *It.-Priv:* `odatonp-` voltar a revisar o cálculo)
+- **tor-** (*Pos:* `tor-` possuir, deter, agarrar | *Priv:* `ator-` perder a posse, largar | *Iter:* `otor-` reaver, retomar posse | *It.-Priv:* `odator-` voltar a perder posse)
+- **torb-** (*Pos:* `torb-` assar caça nobre em espeto giratório sobre brasas aromáticas | *Priv:* `atorb-` retirar o assado do calor antes de tostar | *Iter:* `otorb-` tornar a assar carne maturada com ervas finas | *It.-Priv:* `odatorb-` queimar a carne no fogo direto)
+- **torex-** (*Pos:* `torex-` tomar à força, conquistar | *Priv:* `atorex-` restituir à força, devolver presa | *Iter:* `otorex-` retomar à força | *It.-Priv:* `odatorex-` voltar a restituir à força)
+- **torg-** (*Pos:* `torg-` interpor recurso perante os juízes | *Priv:* `atorg-` renunciar ao direito de apelação judicial | *Iter:* `otorg-` recorrer sucessivas vezes a instâncias superiores | *It.-Priv:* `odatorg-` protelar julgamento com recursos nulos)
+- **tosp-** (*Pos:* `tosp-` enlaçar mãos de noivos com fita de seda carmesim | *Priv:* `atosp-` desatar os laços do rito nupcial | *Iter:* `otosp-` reenlaçar pactos familiares de gerações | *It.-Priv:* `odatosp-` romper os laços cerimoniais)
+- **trak-** (*Pos:* `trak-` marchar, comandar vanguarda | *Priv:* `atrak-` retrair-se, hesitar | *Iter:* `otrak-` recuar taticamente (otrak-) | *It.-Priv:* `odatrak-` voltar a retrair-se)
+- **tuk-** (*Pos:* `tuk-` cavar, escavar a terra | *Priv:* `atuk-` aterrar, cobrir a cova | *Iter:* `otuk-` recavar | *It.-Priv:* `odatuk-` voltar a aterrar)
+- **tul-** (*Pos:* `tul-` delirar, perder a razão | *Priv:* `atul-` recobrar lucidez | *Iter:* `otul-` voltar a delirar | *It.-Priv:* `odatul-` voltar a recobrar lucidez)
+- **tulb-** (*Pos:* `tulb-` registrar ato oficial no cartório | *Priv:* `atulb-` expungir registro de ata por nulidade | *Iter:* `otulb-` assentar minutas dos conselhos régios | *It.-Priv:* `odatulb-` adulterar fólios do cartório régio)
+- **tulk-** (*Pos:* `tulk-` exercer regência em nome do herdeiro | *Priv:* `atulk-` entregar o cetro ao maior | *Iter:* `otulk-` reassumir a regência | *It.-Priv:* `odatulk-` voltar a passar o governo)
+- **tulm-** (*Pos:* `tulm-` guardar e selecionar sementes-matrizes | *Priv:* `atulm-` descartar sementes guardadas | *Iter:* `otulm-` reselecionar os grãos mais graúdos | *It.-Priv:* `odatulm-` voltar a misturar as matrizes)
+- **tulv-** (*Pos:* `tulv-` decompor materia vegetal em camadas espessas de turfa negra | *Priv:* `atulv-` secar a turfeira arejando os blocos para combustivel | *Iter:* `otulv-` fossilizar ciclicamente restos botanicos no lodo sem ar | *It.-Priv:* `odatulv-` revolver os estratos libertando vapores pantanosos)
+- **tupk-** (*Pos:* `tupk-` oscilar sutilmente o eixo da esfera | *Priv:* `atupk-` cessar a oscilação axial | *Iter:* `otupk-` reoscilar no ciclo lunar | *It.-Priv:* `odatupk-` voltar a deter a oscilação)
+- **tupx-** (*Pos:* `tupx-` disparar flecha ou dardo certeiro | *Priv:* `atupx-` reter o disparo na aljava | *Iter:* `otupx-` disparar em salva contínua | *It.-Priv:* `odatupx-` voltar a cessar os disparos)
+- **turb-** (*Pos:* `turb-` armar torre móvel de assalto e catapultas de contrapeso no campo | *Priv:* `aturb-` desmontar a torre móvel de cerco e catapultas | *Iter:* `oturb-` rearmar as catapultas de contrapeso com cordame novo | *It.-Priv:* `odaturb-` romper as cordas de torção das catapultas por mau uso)
+- **turk-** (*Pos:* `turk-` morder, mastigar com firmeza | *Priv:* `aturk-` afrouxar os dentes | *Iter:* `oturk-` mastigar lentamente | *It.-Priv:* `odaturk-` voltar a afrouxar a mordida)
+- **turp-** (*Pos:* `turp-` ratificar tratado de aliança | *Priv:* `aturp-` denunciar o pacto diplomático | *Iter:* `oturp-` reratificar a aliança | *It.-Priv:* `odaturp-` voltar a romper o tratado)
+- **valb-** (*Pos:* `valb-` drenar bolsões de água da galeria | *Priv:* `avalb-` inundar o nível inferior da mina | *Iter:* `ovalb-` redrenar galerias após chuvas fortes | *It.-Priv:* `odavalb-` permitir alagamento do poço)
+- **valk-** (*Pos:* `valk-` julgar litígio em tribunal condal | *Priv:* `avalk-` eximir-se de julgar causa suspeita | *Iter:* `ovalk-` presidir audiências costumeiras da corte | *It.-Priv:* `odavalk-` deixar querelas pendentes sem sentença)
+- **valp-** (*Pos:* `valp-` abençoar união nupcial com imposição solene de mãos | *Priv:* `avalp-` revogar juramento matrimonial perante o Conselho | *Iter:* `ovalp-` reafirmar votos nupciais em bodas sagradas | *It.-Priv:* `odavalp-` desonrar o matrimônio por quebra de aliança)
+- **varb-** (*Pos:* `varb-` organizar comboios militares de suprimento, carroças e víveres | *Priv:* `avarb-` dispersar as carroças de suprimento do exército | *Iter:* `ovarb-` reagrupar o comboio militar sob escolta cerrada | *It.-Priv:* `odavarb-` perder os víveres do comboio em atoleiro ou saque)
+- **vark-** (*Pos:* `vark-` acolchoar o forro da capa de viagem | *Priv:* `avark-` desacolchoar a roupagem | *Iter:* `ovark-` reacolchoar com penugem | *It.-Priv:* `odavark-` voltar a desacolchoar o forro)
+- **varp-** (*Pos:* `varp-` afastar-se no ponto mais distante da órbita | *Priv:* `avarp-` aproximar-se no ponto orbital mais próximo | *Iter:* `ovarp-` reatingir o extremo orbital | *It.-Priv:* `odavarp-` voltar a aproximar-se do centro)
+- **varx-** (*Pos:* `varx-` patrulhar as fronteiras da serra | *Priv:* `avarx-` recolher as sentinelas | *Iter:* `ovarx-` repatrulhar o perímetro | *It.-Priv:* `odavarx-` voltar a recolher a ronda)
+- **vel-** (*Pos:* `vel-` sombrear, cobrir de penumbra | *Priv:* `avel-` desvelar, dissipar sombra | *Iter:* `ovel-` voltar a sombrear | *It.-Priv:* `odavel-` voltar a dissipar sombra)
+- **velp-** (*Pos:* `velp-` encobrir estrela atrás do disco lunar | *Priv:* `avelp-` reemergir a estrela após a passagem | *Iter:* `ovelp-` reencobrir o astro | *It.-Priv:* `odavelp-` voltar a liberar o brilho estelar)
+- **verk-** (*Pos:* `verk-` fluir em corredeira rápida | *Priv:* `averk-` represar em águas paradas | *Iter:* `overk-` voltar a correr em cachoeira | *It.-Priv:* `odaverk-` voltar a represar)
+- **verp-** (*Pos:* `verp-` fixar precedente normativo nos assentos | *Priv:* `averp-` cassar precedente considerado iníquo | *Iter:* `overp-` compilar repertório de decisões judiciais | *It.-Priv:* `odaverp-` ignorar jurisprudência consolidada)
+- **vesk-** (*Pos:* `vesk-` joeirar os grãos ao vento no crivo raso | *Priv:* `avesk-` misturar a palha de volta ao cereal | *Iter:* `ovesk-` rejoeirar o lote selecionado | *It.-Priv:* `odavesk-` voltar a sujar os grãos)
+- **vesp-** (*Pos:* `vesp-` entrar em êxtase místico de arroubo espiritual | *Priv:* `avesp-` retornar do êxtase para os sentidos terrenos | *Iter:* `ovesp-` reexperimentar o arrebatamento do êxtase | *It.-Priv:* `odavesp-` cair em delírio desordenado após o êxtase)
+- **veyn-** (*Pos:* `veyn-` velejar com vento de popa | *Priv:* `aveyn-` colher as velas na tormenta | *Iter:* `oveyn-` velejar novamente ao largo | *It.-Priv:* `odaveyn-` voltar a colher o pano)
+- **vik-** (*Pos:* `vik-` acender todas as arandelas do salão | *Priv:* `avik-` apagar os archotes para o sono | *Iter:* `ovik-` reacender as luminárias | *It.-Priv:* `odavik-` voltar a deixar em penumbra)
+- **vilb-** (*Pos:* `vilb-` carvoejar hulha em veios subterrâneos | *Priv:* `avilb-` abafar queima de hulha na galeria | *Iter:* `ovilb-` recarvoejar jazidas fósseis profundas | *It.-Priv:* `odavilb-` deixar carvão fóssil intocado)
+- **vilk-** (*Pos:* `vilk-` lacrimejar, marejar os olhos | *Priv:* `avilk-` enxugar as lágrimas | *Iter:* `ovilk-` voltar a lacrimejar | *It.-Priv:* `odavilk-` voltar a enxugar o pranto)
+- **vilp-** (*Pos:* `vilp-` aparar golpe com o escudo | *Priv:* `avilp-` baixar a guarda na luta | *Iter:* `ovilp-` aparar sucessivos golpes | *It.-Priv:* `odavilp-` voltar a abrir a guarda)
+- **vilt-** (*Pos:* `vilt-` curar ferimento, sarar doente com bálsamo | *Priv:* `avilt-` adoecer, fraquejar o corpo | *Iter:* `ovilt-` recobrar gradualmente a saúde dia a dia | *It.-Priv:* `odavilt-` cicatrizar a marca definitiva)
+- **virk-** (*Pos:* `virk-` consagrar o cálice na elevação | *Priv:* `avirk-` purificar os vasos após o rito | *Iter:* `ovirk-` reconsagrar na festa | *It.-Priv:* `odavirk-` voltar a guardar o cálice)
+- **visk-** (*Pos:* `visk-` enfaixar ferida, aplicar atadura | *Priv:* `avisk-` desenfaixar o membro | *Iter:* `ovisk-` reenfaixar com linho limpo | *It.-Priv:* `odavisk-` voltar a retirar a atadura)
+- **vok-** (*Pos:* `vok-` sangrar, verter sangue | *Priv:* `avok-` estancar sangue | *Iter:* `ovok-` voltar a sangrar | *It.-Priv:* `odavok-` voltar a estancar sangue)
+- **volb-** (*Pos:* `volb-` iluminar capitulares com pó de ouro e carmim | *Priv:* `avolb-` deixar a capitular sem adorno de ouro | *Iter:* `ovolb-` reiluminar as vinhetas florais da margem | *It.-Priv:* `odavolb-` manter o texto sem iluminura)
+- **volk-** (*Pos:* `volk-` calafetar casco de nau com breu | *Priv:* `avolk-` abrir fresta no costado | *Iter:* `ovolk-` recalafetar a embarcação | *It.-Priv:* `odavolk-` voltar a desgastar o breu)
+- **vorb-** (*Pos:* `vorb-` manter postos de muda com montarias descansadas nas estradas reais | *Priv:* `avorb-` fechar as estalagens imperiais interrompendo o fluxo das mensagens | *Iter:* `ovorb-` revezar mensageiros e cavalos nos postos de muda a cada légua | *It.-Priv:* `odavorb-` esgotar as montarias de muda por falta de forragem e água nos postos)
+- **vork-** (*Pos:* `vork-` expelir colunas de cinza e magma pela cratera aberta | *Priv:* `avork-` selar o conduto com tampao de rocha basaltica | *Iter:* `ovork-` rugir em explosoes sucessivas lancando bombas de fogo | *It.-Priv:* `odavork-` amortecer as convulsoes magmaticas em repouso secular)
+- **vul-** (*Pos:* `vul-` querer, determinar pela vontade | *Priv:* `avul-` abster-se de querer, renunciar | *Iter:* `ovul-` voltar a determinar | *It.-Priv:* `odavul-` voltar a renunciar)
+- **vulk-** (*Pos:* `vulk-` cunhar moedas com a efígie real | *Priv:* `avulk-` recolher moeda desvalorizada | *Iter:* `ovulk-` recunhar a série áurea | *It.-Priv:* `odavulk-` voltar a fundir as moedas)
+- **vulp-** (*Pos:* `vulp-` estocar fardos no celeiro alfandegário | *Priv:* `avulp-` desestocar as mercadorias guardadas | *Iter:* `ovulp-` reestocar as sacas de especiarias | *It.-Priv:* `odavulp-` voltar a retirar do celeiro)
+- **vur-** (*Pos:* `vur-` aquecer com fogo, avivar a lareira | *Priv:* `avur-` apagar as chamas, deixar o fogo extinguir-se | *Iter:* `ovur-` reacender a lareira, soprar as brasas | *It.-Priv:* `odavur-` manter as brasas vivas sob as cinzas)
+- **vurk-** (*Pos:* `vurk-` jorrar água termal ou gêiser | *Priv:* `avurk-` estancar a nascente quente | *Iter:* `ovurk-` rejorrar das profundezas | *It.-Priv:* `odavurk-` voltar a estancar a fonte)
+- **xak-** (*Pos:* `xak-` atingir o ponto culminante no céu | *Priv:* `axak-` declinar rumo ao poente | *Iter:* `oxak-` reculminar no ciclo anual | *It.-Priv:* `odaxak-` voltar a declinar no horizonte)
+- **xal-** (*Pos:* `xal-` afixar o broche de sinete na roupagem | *Priv:* `axal-` desprender o broche da veste | *Iter:* `oxal-` reafixar no manto de gala | *It.-Priv:* `odaxal-` voltar a retirar o sinete)
+- **xalb-** (*Pos:* `xalb-` bater a nata até formar manteiga | *Priv:* `axalb-` desnatar o leite fresco | *Iter:* `oxalb-` rebater na batedeira | *It.-Priv:* `odaxalb-` voltar a separar o soro)
+- **xarp-** (*Pos:* `xarp-` tossir, limpar a garganta | *Priv:* `axarp-` acalmar a tosse | *Iter:* `oxarp-` tossir repetidamente | *It.-Priv:* `odaxarp-` voltar a acalmar a garganta)
+- **xed-** (*Pos:* `xed-` orlar a capa com pele alva de arminho | *Priv:* `axed-` desguarnecer a borda da capa | *Iter:* `oxed-` reorlar a bainha com pelica | *It.-Priv:* `odaxed-` voltar a desmanchar a orla)
+- **xel-** (*Pos:* `xel-` nevar, cair neve | *Priv:* `axel-` degelar, derreter a neve | *Iter:* `oxel-` voltar a nevar | *It.-Priv:* `odaxel-` voltar a degelar)
+- **xelp-** (*Pos:* `xelp-` rodopiar em redemoinho de vento | *Priv:* `axelp-` acalmar o turbilhão | *Iter:* `oxelp-` rodopiar novamente | *It.-Priv:* `odaxelp-` voltar a acalmar o turbilhão)
+- **xerk-** (*Pos:* `xerk-` podar ramos secos da árvore | *Priv:* `axerk-` deixar a copa silvestre | *Iter:* `oxerk-` repodar o pomar | *It.-Priv:* `odaxerk-` voltar a não podar)
+- **xev-** (*Pos:* `xev-` tocar o clarim de alvorada ou carga | *Priv:* `axev-` calar a trombeta de guerra | *Iter:* `oxev-` ressoar o toque de reunir | *It.-Priv:* `odaxev-` voltar a calar o clarim)
+- **xik-** (*Pos:* `xik-` agasalhar o hóspede com peles perto do fogo | *Priv:* `axik-` acompanhar o viajante à porta | *Iter:* `oxik-` reagasalhar na nevasca | *It.-Priv:* `odaxik-` voltar a despedir o amigo)
+- **xir-** (*Pos:* `xir-` esconjurar sombra ou espírito impuro | *Priv:* `axir-` invocar a proteção celeste | *Iter:* `oxir-` reesconjurar o recinto | *It.-Priv:* `odaxir-` voltar a selar o portal)
+- **xurk-** (*Pos:* `xurk-` banir para além das fronteiras | *Priv:* `axurk-` repatriar o exilado | *Iter:* `oxurk-` rebanir por reincidência | *It.-Priv:* `odaxurk-` voltar a conceder retorno)
+- **yarv-** (*Pos:* `yarv-` agir com magnanimidade e nobreza de alma perdoando agravos | *Priv:* `ayarv-` guardar ressentimento mesquinho negando clemência ao suplicante | *Iter:* `odyarv-` exercitar continuamente a generosidade e a grandeza de espírito | *It.-Priv:* `odayarv-` vangloriar-se de falsa generosidade para humilhar os dependentes)
+- **yelk-** (*Pos:* `yelk-` estagnar em aguas placidas de espelho alpino | *Priv:* `ayelk-` drenar o lago de circo esvaziando a bacia rochosa | *Iter:* `odyelk-` espelhar continuamente as nuvens e cumes nas aguas | *It.-Priv:* `odayelk-` agitar a superficie com ondas suaves de brisa)
+- **yerb-** (*Pos:* `yerb-` orientar rumos de marcha com agulha imantada em taça de bronze | *Priv:* `ayerb-` perder a orientação magnética em território de minérios densos | *Iter:* `odyerb-` calibrar o rumo da expedição a cada posto de observação geográfica | *It.-Priv:* `odayerb-` confundir o norte verdadeiro com o desvio magnético da agulha)
+- **yerp-** (*Pos:* `yerp-` guardar juramentos sagrados e lealdade inabalável ao suserano | *Priv:* `ayerp-` trair a confiança jurada quebrando a palavra de honra em segredo | *Iter:* `odyerp-` renovar e comprovar a fidelidade em tempos de paz e provação | *It.-Priv:* `odayerp-` fingir submissão leal enquanto trama usurpação e perfídia)
+- **yn-** (*Pos:* `yn-` andar, caminhar, entrar, descer | *Priv:* `ayn-` estancar o passo, deter-se | *Iter:* `odyn-` voltar a caminhar (odyn-) | *It.-Priv:* `odayn-` voltar a estancar o passo)
+- **yolp-** (*Pos:* `yolp-` entoar acordes celestiais na sinfonia cósmica do Halylitror | *Priv:* `ayolp-` introduzir dissonâncias ásperas perturbando a harmonia da música | *Iter:* `odyolp-` tecer continuamente novos contrapontos na grande canção primordial | *It.-Priv:* `odayolp-` insistir em discórdia ruidosa tentando afogar os temas sagrados)
+- **yulb-** (*Pos:* `yulb-` deslizar lentamente em leito glacial esculpindo o vale | *Priv:* `ayulb-` estacionar o fluxo glacial em barreiras de retençao | *Iter:* `odyulb-` avançar continuamente escavando circos de alta vertente | *It.-Priv:* `odayulb-` retroceder o leito libertando o terreno rochoso)
+- **yurp-** (*Pos:* `yurp-` rodopiar em redemoinhos velozes nas confluencias de correntes | *Priv:* `ayurp-` acalmar as turbulencias alinhando os fluxos paralelos | *Iter:* `odyurp-` girar ciclicamente seixos em caldeirões escavados na rocha | *It.-Priv:* `odayurp-` dissipar os vortices quando as correntes ganham amplitude)
+- **zal-** (*Pos:* `zal-` pagar, quitar uma dívida | *Priv:* `azal-` dever, ficar inadimplente | *Iter:* `ozal-` pagar de novo, reembolsar | *It.-Priv:* `odazal-` voltar a dever)
+- **zalk-** (*Pos:* `zalk-` cambiar moedas de diferentes cunhos | *Priv:* `azalk-` recusar o câmbio de moedas | *Iter:* `ozalk-` recambiar pelo valor justo | *It.-Priv:* `odazalk-` voltar a suspender o câmbio)
+- **zalv-** (*Pos:* `zalv-` renovar o cosmos após a consumação dos tempos na Segunda Canção | *Priv:* `azalv-` arrastar o mundo para o caos irremediável negando a redenção | *Iter:* `ozalv-` reconstituir com beleza redobrada tudo o que foi corrompido | *It.-Priv:* `odazalv-` abandonar a criação à ruína eterna sem esperança de aurora)
+- **zard-** (*Pos:* `zard-` abrir sessão solene do tribunal com bastão | *Priv:* `azard-` declarar impedimento de magistrado na sessão | *Iter:* `ozard-` conduzir audiências ordinárias das cortes | *It.-Priv:* `odazard-` desvirtuar solenidade do foro judicial)
+- **zarv-** (*Pos:* `zarv-` acender a Chama Imperecível infundindo vida consciente na criação | *Priv:* `azarv-` apagar a centelha vital deixando a matéria fria e inerte | *Iter:* `ozarv-` alimentar o fogo eterno do ser que sustenta todas as criaturas | *It.-Priv:* `odazarv-` desperdiçar a centelha espiritual em ambições corruptíveis)
+- **zasp-** (*Pos:* `zasp-` calafetar juntas do casco de carvalho com estopa e piche | *Priv:* `azasp-` remover o piche ressecado das frestas do tabuado | *Iter:* `ozasp-` recalafetar o costado inferior após viagem longa | *It.-Priv:* `odazasp-` deixar frestas no casco com infiltração de água)
+- **zelb-** (*Pos:* `zelb-` destilar vapores voláteis em serpentina | *Priv:* `azelb-` estancar o gotejamento do destilador | *Iter:* `ozelb-` redestilar o espírito purificado | *It.-Priv:* `odazelb-` perder a essência por superaquecimento)
+- **zelk-** (*Pos:* `zelk-` cicatrizar a pele, fechar corte | *Priv:* `azelk-` reabrir a chaga | *Iter:* `ozelk-` recicatrizar o tecido | *It.-Priv:* `odazelk-` voltar a abrir o ferimento)
+- **zelm-** (*Pos:* `zelm-` semear grãos a lanço nos canteiros | *Priv:* `azelm-` recolher as sementes lançadas | *Iter:* `ozelm-` resemear a leira falhada | *It.-Priv:* `odazelm-` voltar a desmanchar a semeadura)
+- **zelp-** (*Pos:* `zelp-` gravar selo imperial de cera | *Priv:* `azelp-` romper lacre ou violar correspondência | *Iter:* `ozelp-` chancelar em série códices oficiais | *It.-Priv:* `odazelp-` invalidar chancela régia de chumbo)
+- **zerb-** (*Pos:* `zerb-` pisar uvas maduras em lagar de cantaria | *Priv:* `azerb-` interromper a prensagem do mosto no lagar | *Iter:* `ozerb-` repisar o bagaço para extração de vinho secundário | *It.-Priv:* `odazerb-` deixar as uvas apodrecerem sem prensar)
+- **zerd-** (*Pos:* `zerd-` britar blocos de basalto na mina | *Priv:* `azerd-` acumular rocha bruta sem britagem | *Iter:* `ozerd-` rebritar pedregulhos para cascalho | *It.-Priv:* `odazerd-` deixar blocos sem britar)
+- **zerp-** (*Pos:* `zerp-` irrigar as várzeas por canais de água | *Priv:* `azerp-` desviar a água das leiras irrigadas | *Iter:* `ozerp-` reirrigar a plantação em estiagem | *It.-Priv:* `odazerp-` voltar a secar os regos)
+- **zet-** (*Pos:* `zet-` entretecer fios dourados no brocado real | *Priv:* `azet-` desfiar o bordado régio | *Iter:* `ozet-` reentretecer o estandarte | *It.-Priv:* `odazet-` voltar a desfiar os fios de ouro)
+- **zik-** (*Pos:* `zik-` celebrar bodas ou aliança entre famílias | *Priv:* `azik-` encerrar os festejos nupciais | *Iter:* `ozik-` comemorar o aniversário da união | *It.-Priv:* `odazik-` voltar à rotina após a festa)
+- **zilk-** (*Pos:* `zilk-` cobrar pedágio de passagem na ponte condal | *Priv:* `azilk-` isentar do tributo de trânsito | *Iter:* `ozilk-` recobrar a tarifa devida | *It.-Priv:* `odazilk-` voltar a franquear a passagem)
+- **zir-** (*Pos:* `zir-` afinar os tubos do grande órgão | *Priv:* `azir-` desafinar pela umidade | *Iter:* `ozir-` reafinar na oitava justa | *It.-Priv:* `odazir-` voltar a perder a afinação)
+- **zolb-** (*Pos:* `zolb-` escavar galerias subterrâneas de sapa e minas sob alicerces | *Priv:* `azolb-` abandonar a galeria de sapa tapando a entrada | *Iter:* `ozolb-` aprofundar a galeria subterrânea com esteios novos | *It.-Priv:* `odazolb-` provocar desabamento involuntário do túnel de sapa)
+- **zold-** (*Pos:* `zold-` ressoar o eco nos desfiladeiros | *Priv:* `azold-` abafar a acústica do vale | *Iter:* `ozold-` ecoar repetidas vezes | *It.-Priv:* `odazold-` voltar a abafar o eco)
+- **zorb-** (*Pos:* `zorb-` agasalhar peregrinos oferecendo pão, sal e proteção sob o teto | *Priv:* `azorb-` fechar as portas ao viajante cansado violando as leis da hospitalidade | *Iter:* `ozorb-` acolher generosamente todo hóspede que clama por asilo de honra | *It.-Priv:* `odazorb-` cobrar pedágio usurário do hóspede sob pretexto de hospedagem)
+- **zork-** (*Pos:* `zork-` lavar cascalho no crivo para gemas | *Priv:* `azork-` despejar cascalho lavado sem triagem | *Iter:* `ozork-` relavar rejeitos em busca de pedras | *It.-Priv:* `odazork-` descartar cascalho sem bateamento)
+- **zorp-** (*Pos:* `zorp-` singrar vagas revoltas com proa erguida | *Priv:* `azorp-` adernar a embarcação sob tempestade súbita | *Iter:* `ozorp-` singrar repetidamente correntes contrárias de maré | *It.-Priv:* `odazorp-` naufragar a embarcação sob vagalhão impetuoso)
+- **zuk-** (*Pos:* `zuk-` forjar elos de corrente ou cota | *Priv:* `azuk-` romper os elos da malha | *Iter:* `ozuk-` reforjar a malha de aço | *It.-Priv:* `odazuk-` voltar a romper os elos)
+- **zukx-** (*Pos:* `zukx-` empenhar palavra ou penhor real | *Priv:* `azukx-` resgatar a garantia dada | *Iter:* `ozukx-` reempenhar a honra | *It.-Priv:* `odazukx-` voltar a quitar o penhor)
+- **zul-** (*Pos:* `zul-` aferir peso na balança, medir mercadoria | *Priv:* `azul-` errar a medida, desnivelar a balança | *Iter:* `ozul-` reaferir o peso no mercado | *It.-Priv:* `odazul-` concluir a pesagem justa)
+- **zulp-** (*Pos:* `zulp-` percorrer as casas das constelações | *Priv:* `azulp-` sair da faixa eclíptica | *Iter:* `ozulp-` repercorrer o anel sideral | *It.-Priv:* `odazulp-` voltar a afastar-se da eclíptica)
+- **zurb-** (*Pos:* `zurb-` ensilar cereais em tulha elevada de madeira | *Priv:* `azurb-` desensilar para abastecer o moinho | *Iter:* `ozurb-` reensilar a reserva estratégica | *It.-Priv:* `odazurb-` voltar a esvaziar a tulha)
+- **zurv-** (*Pos:* `zurv-` despencar em estrondo com massas de avalanche | *Priv:* `azurv-` estabilizar os taludes evitando a descida das massas | *Iter:* `ozurv-` rugir em descidas continuas pelos corredores montanhosos | *It.-Priv:* `odazurv-` conter as massas instaveis em patamares seguros)
+
+### IX.5. Pronomes, Numerais e Partículas/Afixos
+- **Pron. 1ª Pessoa Singular (Eu)**: Nom `eo (pro-drop compulsório)` | Gen `ey` | Acu `em` | Dat `ej / ei`
+- **Pron. 2ª Pessoa Singular (Tu)**: Nom `to (pro-drop compulsório)` | Gen `ty` | Acu `tim` | Dat `tij / ti`
+- **Pron. 1ª Pessoa Plural (Nós)**: Nom `no (pro-drop compulsório)` | Gen `ny` | Acu `nom` | Dat `noj / noi`
+- **Pron. 2ª Pessoa Plural (Vós)**: Nom `vo (pro-drop compulsório)` | Gen `vy` | Acu `vom` | Dat `voj / voi`
+- **Dem. San** (1ª Deíxe (Este / Isto: próximo ao locutor)): Nom.Sg `San`, Gen `Sany`, Dat `Sani (arc. Sanj)`, Acu `Sanom` | Pl `Sano (1ª Decl. Saner)`
+- **Dem. Tan** (2ª Deíxe (Esse / Isso: próximo ao interlocutor ou anafórico)): Nom.Sg `Tan`, Gen `Tany`, Dat `Tani (arc. Tanj)`, Acu `Tanom` | Pl `Tano`
+- **Dem. Kan** (3ª Deíxe (Aquele / Aquilo / Ele: distante ou transcendente)): Nom.Sg `Kan`, Gen `Kany`, Dat `Kani (arc. Kanj)`, Acu `Kanom` | Pl `Kano`
+- **Num. 1**: card. `id` | ord. `Itta (dt -> tt)` | comps: idda (id+da: único)
+- **Num. 2**: card. `do` | ord. `Dota` | comps: Dokrom (20), Dotakazeti
+- **Num. 3**: card. `zel` | ord. `Zelta` | comps: Zelkrom (30)
+- **Num. 4**: card. `kat` | ord. `Katta (tt)` | comps: Kat'om (40)
+- **Num. 5**: card. `vex` | ord. `Vexta` | comps: Vexkrom (50)
+- **Num. 6**: card. `tir` | ord. `Tir'a` | comps: Tirkrom (60)
+- **Num. 7**: card. `san` | ord. `Santa` | comps: Sankrom (70)
+- **Num. 8**: card. `nyr` | ord. `Nyrta (Ablaut de nir)` | comps: Nyrkrom (80)
+- **Num. 9**: card. `nev` | ord. `Nepta (vt -> pt)` | comps: Nevkrom (90)
+- **Num. 10**: card. `krom` | ord. `Kromta` | comps: Dokrom (20), Zelkrom (30)
+- **Num. 100**: card. `Dygum` | ord. `Dygumta` | comps: Centena de Chancelaria
+- **Num. 1000**: card. `Myga` | ord. `Mygata` | comps: amyga / amygata (inumerável)
+- **ad** (Preposição Direcional e Final) — Rege obrigatoriamente Acusativo (direção: ad Veloxem, ad xeros) ou Infinitivo Absoluto em -ur (finalidade: ad molletur, ad kradur).
+- **ex** (Preposição de Origem e Proveniência) — Rege obrigatoriamente Dativo (ex lakej, ex Hali Hali, ex akuraj Mariaj, ex Kani). Em composição verbal: kelex-, galdex-, torex- (dispara xr -> rr no passado/futuro).
+- **in** (Preposição Bipolar (Movimento vs. Estado)) — Rege Acusativo para movimento/entrada (in Oratoxem, in oratom) e Dativo para posição estática ou temporal (in xeri, in oxej, in fili, in tonkrej). Em composição: in+lota -> illot-, in+lan -> illan- (nl -> ll).
+- **ponu** (Preposição de Subordinação) — Sob, debaixo do poder ou jurisdição de (ex.: fassa ponu Pontius Pilatus; ponu vulej vy).
+- **et** (Conjunção Coordenativa Aditiva) — E (une sintagmas nominais do mesmo caso ou orações coordenadas).
+- **u** (Conjunção Coordenativa Alternativa) — Ou (alternância lógica ou retórica).
+- **ke** (Conjunção Integrante e Pronome Relativo) — Que, o qual (invariável: Patte ny, ke in xeri esu; ad ke = para que, com Subjuntivo).
+- **ko** (Conjunção Comparativa e Temporal) — Como, assim como, enquanto, quando (in oxej ko in xeri; ko no akitun).
+- **so** (Conjunção Condicional e Concessiva) — Se (Realis com Indicativo; Irrealis com Subjuntivo em ambas as orações); desde que, embora.
+- **nam** (Conjunção Explicativa e Adversativa) — Pois, porque; mas, ora (em narrativa histórica e cosmogônica).
+- **ta** (Partícula Conclusiva e Adversativa) — Portanto, contudo, todavia, ainda assim.
+- **ante ke** (Locução Conjuntiva Temporal) — Antes que (rege Subjuntivo: ante ke Felo Oratypattedy okazbake).
+- **-ka** (Clítico Interrogativo Enclítico) — Aglutinado ao final do verbo conjugado sem alterar a ordem da frase (Miruska?; na 2ª Pl dispara tk -> kk: Letut + -ka -> Letukka?).
+- **a-** (Prefixo Verbal e Nominal Privativo) — 2º Eixo da Matriz Quadripartite: inverte organicamente a substância da ação ou qualidade (sfar- -> asfar-, giz- -> agiz-, kit- -> akit-, tonkre -> atonkre).
+- **o- / od-** (Prefixo Verbal Iterativo e Restitutivo) — 3º Eixo da Matriz Quadripartite (de zo): repetição, retorno ou ressurreição; o- antes de consoante (okaz-, osfar-), od- antes de vogal (odes-).
+- **od-a-** (Prefixo Verbal Iterativo-Privativo) — 4º Eixo da Matriz Quadripartite: repetição de ação negada (odasfar-, odakaz-); dispara haplologia dental antes de d- (od-a-dur- -> oda'ur-).
+- **-ia** (Sufixo Derivacional Toponímico e Locativo) — Forma substantivos de lugar, instituição ou província (Treppênia, Mirypalkia, molletia, kitia, tepia, elfia).
+- **-te** (Sufixo Derivacional de Agente) — Forma substantivos de agente ou ofício; dispara dt/kt -> tt (Kratte, Trátte, Totte, Tette, galtte, saitte, mirte, litrte).
+- **-or / -re** (Sufixo Derivacional de Abstração e Obra) — Forma substantivos abstratos ou resultados de ação na 2ª Declinação (belor, mobor, litror, daior, isor, tekor, krador).
+- **-tek** (Sufixo Derivacional de Instrumento) — Forma substantivos de ferramenta ou utensílio na 2ª Declinação; dispara dt/kt -> tt (lettek, litrtek, tettek, sfartek, saittek).
+- **-il** (Sufixo Derivacional Diminutivo) — Forma diminutivos ou afetivos na 2ª Declinação (tepil, koril, ve'aril).
+- **-gar / -ar / -on** (Sufixo Derivacional Aumentativo e Solene) — Forma aumentativos monumentais na 2ª Declinação; dispara pg -> gg (teggar, litrgar, oxegar, karegar, mirgar, rixegar).
+- **-n / -ni** (Sufixo do Superlativo Absoluto Orgânico) — Acoplado à raiz no singular (-n) e plural (-ni); dispara rn -> ld (mild, kold, feld), ln -> ll (bell, vell, fill) e nn/mn -> m (nemm).
+- **-vë** (Sufixo Adverbial Modal com Diérese) — Único morfema com trema diferencial na V8.4; converte adjetivos em advérbios de modo (mobavë, kuravë, elfavë, rukravë).
+- **-ta** (Sufixo de Numeral Ordinal) — Converte cardinais em ordinais; dispara dt -> tt (Itta), vt -> pt (Nepta) e haplologia silábica quando t..t.. (Tir'a).
+<!-- END_DICTIONARY_CONDE -->
