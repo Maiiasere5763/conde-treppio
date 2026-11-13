@@ -1,7 +1,0 @@
-com.conde.treppio.app-pngs-0 D:\Conde_Treppio\sandbox\android_apk\app\build\generated\res\pngs\release
-com.conde.treppio.app-resValues-1 D:\Conde_Treppio\sandbox\android_apk\app\build\generated\res\resValues\release
-com.conde.treppio.app-packageReleaseResources-2 D:\Conde_Treppio\sandbox\android_apk\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
-com.conde.treppio.app-packageReleaseResources-3 D:\Conde_Treppio\sandbox\android_apk\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
-com.conde.treppio.app-merged_res-4 D:\Conde_Treppio\sandbox\android_apk\app\build\intermediates\merged_res\release
-com.conde.treppio.app-main-5 D:\Conde_Treppio\sandbox\android_apk\app\src\main\res
-com.conde.treppio.app-release-6 D:\Conde_Treppio\sandbox\android_apk\app\src\release\res

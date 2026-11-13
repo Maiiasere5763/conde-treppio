@@ -1,9 +1,0 @@
-com.conde.treppio:drawable/ic_launcher = 0x7f020000
-com.conde.treppio:color/primary_dark = 0x7f010005
-com.conde.treppio:color/primary = 0x7f010004
-com.conde.treppio:style/AppTheme = 0x7f040000
-com.conde.treppio:string/app_name = 0x7f030000
-com.conde.treppio:color/accent = 0x7f010000
-com.conde.treppio:color/gold_bright = 0x7f010002
-com.conde.treppio:color/gold = 0x7f010001
-com.conde.treppio:color/obsidian = 0x7f010003

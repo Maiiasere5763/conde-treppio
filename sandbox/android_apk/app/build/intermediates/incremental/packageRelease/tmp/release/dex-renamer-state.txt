@@ -1,4 +1,0 @@
-#Fri Nov 13 12:57:21 BRT 2026
-base.0=D\:\\Conde_Treppio\\sandbox\\android_apk\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
